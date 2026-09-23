@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sName2Date — ファイル名の日付を撮影日時に</title>
+<meta name="description" content="撮影日時のない写真は、どこにも並びません。sName2Date はファイル名から日付を取り出し、どの写真管理ソフトも探す場所に書き込みます。">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/sname2date/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/sname2date/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/sname2date/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/sname2date/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/sname2date/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/sname2date/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/sname2date/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/sname2date/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/sname2date/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/sname2date/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/sname2date/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/sname2date/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/sname2date/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../ja/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../ja/#apps">アプリ</a>
+    <details class="sprache"><summary aria-label="言語">日本語</summary><div><a href="../../sname2date/" lang="en">English</a><a href="../../de/sname2date/" lang="de">Deutsch</a><a href="../../es/sname2date/" lang="es">Español</a><a href="../../fr/sname2date/" lang="fr">Français</a><a href="../../it/sname2date/" lang="it">Italiano</a><a href="../../ja/sname2date/" aria-current="true" lang="ja">日本語</a><a href="../../ko/sname2date/" lang="ko">한국어</a><a href="../../pt-br/sname2date/" lang="pt-BR">Português (Brasil)</a><a href="../../pt-pt/sname2date/" lang="pt-PT">Português (Portugal)</a><a href="../../ru/sname2date/" lang="ru">Русский</a><a href="../../zh-hans/sname2date/" lang="zh-Hans">简体中文</a><a href="../../zh-hant/sname2date/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <img src="../../assets/icons/AppIcon-sName2Date.png" width="128" height="128" alt="">
+    <div><h1>sName2Date</h1><p class="subtitle">ファイル名の日付を撮影日時に</p><span class="badge">近日公開 · 2026年10月</span></div>
+  </div>
+  <p class="promo">撮影日時のない写真は、どこにも並びません。sName2Date はファイル名から日付を取り出し、どの写真管理ソフトも探す場所に書き込みます。</p>
+  <div class="shots"><figure><img src="../../assets/shots/ja/sname2date-list.jpg" width="1440" height="900" alt="sName2Date — ファイル名の日付を撮影日時に" loading="lazy"></figure><figure><img src="../../assets/shots/ja/sname2date-preview.jpg" width="1440" height="900" alt="sName2Date — ファイル名の日付を撮影日時に" loading="lazy"></figure></div>
+  <div class="beschreibung">
+<p>多くの写真や動画は、日付をファイル名に持っています。ただし、プログラムが探す場所には入っていません。チャットやスキャナー、古い保存先から取り込んだ画像は IMG_20240115_103000.jpg や 休暇 15.01.2024.jpg のような名前になり、どの写真管理ソフトでも今日の日付で表示されます。</p>
+<p>sName2Date はファイル名から日付を読み取り、撮影日時としてファイルに書き込みます。まだ撮影日時がない場合は、新しく作成します。</p>
+<h2 class="kapitel">認識される表記</h2>
+<p>日付と時刻を、次のような一般的な形式で認識します。</p>
+<ul><li>2024-01-15 10-30-00</li><li>IMG_20240115_103000</li><li>IMG-20240115-WA0001</li><li>2024-01-15 · 2024 01 15 · 2024_01_15</li><li>15.01.2024 · 15-01-2024 · 15.01.24</li><li>January 15 2024 — 文字で綴られた月名</li><li>2016 04 · 04-2016 — 年と月だけ</li></ul>
+<p>文字で綴られた月名は、システムの言語と英語で、長い形も省略形も読み取られます。日本語の月は「1月」のように数字で書き、文字の並びではないため、日本語の月名は対象になりません。日本語のファイル名では上の数字の表記が使われ、英語の月名はいつでも読み取られます。</p>
+<p>名前に日付だけがあって時刻がないときは、時刻を補います。何時にするかは自分で決められます。日もないときはその月の1日とみなし、行にその旨が表示されます。名前に日付が複数あるときは、最初のものが選ばれます。日と月が入れ替え可能なときは設定に従いますが、該当するファイルには印が付き、黙って推測されることはありません。</p>
+<p>名前にまったく日付がないときは、行の右側で自分で入力します。入力できる範囲は、現存する最古の写真が撮られた 1826 年までさかのぼります。19世紀の写真をスキャンしたものも、昨日撮った写真と同じように日付を付けられます。</p>
+<h2 class="kapitel">変更されるもの</h2>
+<p>書き込まれるのは EXIF DateTimeOriginal と DateTimeDigitized、および TIFF DateTime、動画と音声ではコンテナ内の作成日時です。必要なら、ファイル自体の作成日と変更日も設定できます。</p>
+<p>画像データはそのままです。JPEG が再圧縮されることも、動画が再エンコードされることもありません。動画と音声ではたいていコンテナ内の数バイトを書き換えるだけなので、大きな動画でも一瞬で終わります。</p>
+<p>撮影日時を保持できるのは JPEG、PNG、TIFF、HEIC、GIF、動画形式の MP4、MOV、M4V、そして音声形式の M4A と M4B です。</p>
+<h2 class="kapitel">撮影日時を保持できないファイルも扱えます</h2>
+<p>PDF やテキストファイル、表計算には撮影日時の欄そのものがありません — それでもリストには入ります。sName2Date はそこでファイル自体の作成日と変更日を設定します。日付が届きうる唯一の場所だからです。行には、緑ではなくオレンジのチェックでそれが示されます。ここでは拡張子は関係ありません。PDF、テキスト、表計算、アーカイブ、どれでも構いません。</p>
+<p>ファイルにいっさい触れてほしくないときは、ウインドウ上部の「日付をファイルに書き込む」のチェックを外します。すると sName2Date は名前だけを ISO の表記にします。請求書 15.03.2024.pdf は 2024-03-15 12-00-00 請求書.pdf になります。Finder ではフォルダが日付順に並びます。必要なら、日付を先頭に移さず、名前の中にあった位置に残すこともできます。</p>
+<h2 class="kapitel">すべて元に戻せます</h2>
+<p>一度の実行は Cmd+Z で完全に取り消せます。撮影日時も、ファイルのタイムスタンプも、変更したファイル名もです。Cmd+Shift+Z でやり直せます。</p>
+<h2 class="kapitel">フォルダ全体</h2>
+<p>sName2Date はフォルダを丸ごと、下位のフォルダも含めて一度に扱い、すでに撮影日時のあるファイルを飛ばすこともできます。一度許可したフォルダは記憶され、二度と尋ねられません。</p>
+  </div>
+  <div class="note" id="lite"><p><strong>sName2Date Lite</strong> · 無料 — 一度に 1 つのファイルを扱う版。ファイル名の日付を撮影日時として写真、動画、録音に書き込み、手で設定し、名前をISO形式にそろえ、すべてを ⌘Z で取り消せます — sName2Date と同じ機能を、フォルダ全体を除いて備えています。</p></div>
+  <ul class="facts">
+    <li>macOS 12 以降が必要</li>
+    <li>25 言語に対応</li>
+    <li>サポート： <a href="mailto:SwiftAppsBavaria@gmx.net">SwiftAppsBavaria@gmx.net</a></li>
+  </ul>
+  <h2 class="section">その他のApp</h2>
+  <div class="apps"><a class="app-card" href="https://apps.apple.com/app/id6759445195"><img src="../../assets/icons/AppIcon-SwiftRename.png" width="64" height="64" alt=""><div><h3>SwiftRename</h3><p>ファイルを一括でリネーム。撮影日順、連番、または年別・月別フォルダへの振り分けも同時に行えます。</p></div></a><a class="app-card" href="https://apps.apple.com/app/id6791168695"><img src="../../assets/icons/AppIcon-sVectorLift.png" width="64" height="64" alt=""><div><h3>sVectorLift</h3><p>古いベクタークリップアートを開いて表示し、SVGとして保存 — CorelDRAW、Windows Metafile、CGM。</p></div></a><a class="app-card" href="../../ja/scollect/"><img src="../../assets/icons/AppIcon-sCollect.png" width="64" height="64" alt=""><div><span class="badge">2026年10月</span><h3>sCollect</h3><p>音楽、映画、オーディオブック、電子書籍などのコレクションをメディアライブラリで整理。一般的なフォーマットでは、すべての情報がデータベースだけでなくファイル自体のタグに書き込まれます — ID3v2.4に完全対応。MP3はiTunesやミュージック App向けにコピーとして書き出せ、複数のアーティストが切り捨てられることはありません。ライブラリ全体をiTunes XMLとして書き出すこともできます。ほぼすべてのフォーマットを、直接または外部プレーヤーで再生します。</p></div></a><div class="app-card"><img src="../../assets/icons/AppIcon-sCollectPlay.png" width="64" height="64" alt=""><div><span class="badge">2026年10月</span><h3>sCollectPlay</h3><p>メディアライブラリのためのプレーヤー。単にフォルダ、iTunes XML、またはsCollectライブラリから、音楽、映画、オーディオブック、ポッドキャストを再生 — ファイルのタグは一切変更されません。プレイリスト、音声トラック、字幕トラックに対応し、映画ではスローモーションとコマ送りも可能。MKV、AVI、DSDなど、macOSが自身で再生できないものは外部プレーヤーに渡します。</p></div></div><div class="app-card"><img src="../../assets/icons/AppIcon-sCollectPlayLite.png" width="64" height="64" alt=""><div><span class="badge">無料 · 2026年10月</span><h3>sCollectPlay Lite</h3><p>sCollectPlayの軽量版。フォルダ、iTunes XML、またはsCollectライブラリを開くだけで、音楽、映画、オーディオブック、ポッドキャストを再生 — プレイリスト、音声トラック、字幕トラック、スローモーション、コマ送りに対応。1セッションにつきソースは1つ。カラムブラウザ、独自のプレイリスト、最近使ったソースはフル版専用です。</p></div></div><div class="app-card"><img src="../../assets/icons/AppIcon-sBikeBridge.png" width="64" height="64" alt=""><div><span class="badge">近日公開</span><h3>sBikeBridge</h3><p>ポータルにアップロードせずにライドを分析。FIT形式で記録するあらゆるサイクルコンピュータのFITファイルに加え、GPXとTCXも読み込めます。ライドはMac上の専用ライブラリに保存 — 地図、パワー、心拍数、写真、メモ付きで、重複はインポート時に検出されます。年別・月別の指標と、距離、獲得標高、所要時間によるフィルタでライドを比較できます。地図は必要に応じてオフラインでも利用できます。</p></div></div></div>
+  <p><a href="../../ja/#apps">すべてのアプリ →</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../impressum.html">運営者情報</a><a href="../../privacy.html">ウェブサイトのプライバシー</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

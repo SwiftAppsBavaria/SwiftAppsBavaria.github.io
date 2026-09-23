@@ -1,26 +1,40 @@
-# SwiftAppsBavaria.github.io — Stand 2026-09-23, freigegeben
+# SwiftAppsBavaria.github.io — Stand 2026-09-23
 
-Familienseite der Mac-Apps; gedacht als **Marketing-URL** in App Store Connect
-(`https://swiftappsbavaria.github.io/scollect/`, `…/sname2date/`). Noch **nicht** auf GitHub.
+Familienwebsite der Mac-Apps, **12 Sprachen**. Dient als **Marketing-URL** in App Store Connect.
 
-## Aufbau
-- `index.html` — alle Apps, Reihenfolge und Texte wie `_GeneralSystemKit/StoreApps.swift` (englisch)
-- `scollect/`, `sname2date/` — je eine App-Seite: Untertitel, Werbetext, sechs Punkte aus der
-  Store-Beschreibung, zwei Bildschirmfotos, Anforderungen, „More apps“
-- `impressum.html`, `privacy.html` — **Platzhalter, vor Veröffentlichung ausfüllen und prüfen lassen**
-- `assets/` — `style.css` (keine Webfonts, kein JavaScript, nichts von außen), Symbole aus
-  `_GeneralSystemKit/Resources` (128 px, gerendert), Banner, Bildschirmfotos (JPEG aus `App Store/EN/Screenshots`)
+## Die Seiten werden ERZEUGT, nicht von Hand gepflegt
+
+```
+python3 ~/Documents/Claude/Xcode/_Shared/tools/website/build.py
+```
+
+Das Skript liegt im `_Shared`-Repo (nicht hier, damit keine lokalen Pfade öffentlich werden) und
+schreibt `index.html`, `scollect/`, `sname2date/` (Englisch, Wurzel) sowie `de/ … zh-hant/` neu.
+**Wer eine erzeugte Seite von Hand ändert, verliert die Änderung beim nächsten Lauf.** Quellen:
+
+| Inhalt | Quelle |
+|---|---|
+| Untertitel, Werbetext, Beschreibung | `App Store/<CODE>/Docs/DESCRIPTION_<CODE>.md` der App |
+| Bildschirmfotos (je Sprache) | `App Store/<CODE>/Screenshots/` der App |
+| App-Liste, Einzeiler, Symbole, „Kostenlos“ | `_GeneralSystemKit/StoreApps.swift` + dessen Paketkatalog |
+| Menü, Überschriften, Fußzeile | `_Shared/tools/website/texte.json` |
+
+Von Hand und nur deutsch/englisch: `impressum.html`, `privacy.html`, `assets/style.css`, `assets/banner.jpg`.
+
+## Marketing-URLs je Store-Sprache
+
+| Store | Adresse (sCollect / sName2Date) |
+|---|---|
+| EN | `https://swiftappsbavaria.github.io/scollect/` · `…/sname2date/` |
+| DE, ES, FR, IT, JA, KO, RU | `…/<sprache>/scollect/` — z. B. `…/de/scollect/` |
+| PT-BR, PT-PT | `…/pt-br/…`, `…/pt-pt/…` |
+| ZH-Hans, ZH-Hant | `…/zh-hans/…`, `…/zh-hant/…` |
 
 ## Regeln
-- **Store-Link nur für LIVE-Apps.** Prüfen: `curl -s "https://itunes.apple.com/lookup?id=<ID>&country=de"`.
-  Wird sCollect oder sName2Date live: Badge durch Link ersetzen, auf Start- und App-Seiten.
-- **Texte kommen aus den Store-Dateien** (`App Store/EN/Docs/DESCRIPTION_EN.md`) — wer dort ändert, zieht hier nach.
-- **Kein Preis im Text** (ändert sich ohne Review); „Free“ nur für Lite-Ausgaben, wie in `StoreApps`.
-- **„October 2026“ ist eine datierte Zusage** — sie steht hier so wie in `StoreApps`; verstreicht der Monat, beide nachziehen.
-
-## Offen vor dem Veröffentlichen
-1. ✅ Impressum: Anschrift eingetragen (2026-09-23). Impressum und Website-Datenschutz vor dem Freischalten prüfen lassen.
-2. Repo `SwiftAppsBavaria/SwiftAppsBavaria.github.io` anlegen, pushen, Pages einschalten
-   (Settings → Pages → Branch `main`, Ordner `/`).
-3. Auf den App-Seiten die Links zu Support und Datenschutz ergänzen, sobald die `*-privacy`-Repos
-   Pages eingeschaltet haben (derzeit bei keinem Repo der Familie).
+- **Store-Link nur für LIVE-Apps** — das Skript nimmt ihn aus `StoreApps` (`.imStore(id:)`). Wird eine App
+  live, dort umstellen und das Skript fahren. Die Links haben keine Länderkennung: Apple öffnet den Store
+  des Besuchers.
+- **„Oktober 2026“ ist eine datierte Zusage** (`texte.json` → `monat`), wie in `StoreApps`.
+- **Kein Preis im Text.**
+- ⚠️ `/scollect/` (diese Website) und `/sCollect/` (Datenschutz/Support, Repo `sCollect`) unterscheiden sich
+  nur im Großbuchstaben.

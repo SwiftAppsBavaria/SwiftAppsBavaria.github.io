@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sName2Date — 파일 이름의 날짜를 촬영 일시로</title>
+<meta name="description" content="촬영 일시가 없는 사진은 어디에도 제자리를 찾지 못합니다. sName2Date는 파일 이름에서 날짜를 꺼내 모든 사진 관리 프로그램이 찾는 자리에 기록합니다.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/sname2date/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/sname2date/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/sname2date/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/sname2date/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/sname2date/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/sname2date/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/sname2date/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/sname2date/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/sname2date/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/sname2date/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/sname2date/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/sname2date/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/sname2date/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../ko/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../ko/#apps">앱</a>
+    <details class="sprache"><summary aria-label="언어">한국어</summary><div><a href="../../sname2date/" lang="en">English</a><a href="../../de/sname2date/" lang="de">Deutsch</a><a href="../../es/sname2date/" lang="es">Español</a><a href="../../fr/sname2date/" lang="fr">Français</a><a href="../../it/sname2date/" lang="it">Italiano</a><a href="../../ja/sname2date/" lang="ja">日本語</a><a href="../../ko/sname2date/" aria-current="true" lang="ko">한국어</a><a href="../../pt-br/sname2date/" lang="pt-BR">Português (Brasil)</a><a href="../../pt-pt/sname2date/" lang="pt-PT">Português (Portugal)</a><a href="../../ru/sname2date/" lang="ru">Русский</a><a href="../../zh-hans/sname2date/" lang="zh-Hans">简体中文</a><a href="../../zh-hant/sname2date/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <img src="../../assets/icons/AppIcon-sName2Date.png" width="128" height="128" alt="">
+    <div><h1>sName2Date</h1><p class="subtitle">파일 이름의 날짜를 촬영 일시로</p><span class="badge">출시 예정 · 2026년 10월</span></div>
+  </div>
+  <p class="promo">촬영 일시가 없는 사진은 어디에도 제자리를 찾지 못합니다. sName2Date는 파일 이름에서 날짜를 꺼내 모든 사진 관리 프로그램이 찾는 자리에 기록합니다.</p>
+  <div class="shots"><figure><img src="../../assets/shots/ko/sname2date-list.jpg" width="1440" height="900" alt="sName2Date — 파일 이름의 날짜를 촬영 일시로" loading="lazy"></figure><figure><img src="../../assets/shots/ko/sname2date-preview.jpg" width="1440" height="900" alt="sName2Date — 파일 이름의 날짜를 촬영 일시로" loading="lazy"></figure></div>
+  <div class="beschreibung">
+<p>많은 사진과 동영상이 날짜를 파일 이름에 담고 있습니다. 하지만 프로그램이 날짜를 찾는 자리는 그곳이 아닙니다. 메신저 대화나 스캐너, 오래된 자료 보관함에서 가져온 사진은 IMG_20240115_103000.jpg나 휴가 15.01.2024.jpg 같은 이름을 달고 있고, 어떤 사진 관리 프로그램에서든 오늘 날짜로 표시됩니다.</p>
+<p>sName2Date는 파일 이름에서 날짜를 읽어 파일 안에 촬영 일시로 기록합니다. 아직 촬영 일시가 없으면 새로 만들어 넣습니다.</p>
+<h2 class="kapitel">인식하는 표기 형식</h2>
+<p>날짜와 시각의 흔한 표기들을 인식합니다. 예를 들면 다음과 같습니다.</p>
+<ul><li>2024-01-15 10-30-00</li><li>IMG_20240115_103000</li><li>IMG-20240115-WA0001</li><li>2024-01-15 · 2024 01 15 · 2024_01_15</li><li>15.01.2024 · 15-01-2024 · 15.01.24</li><li>January 15 2024 · 15 Jan. 2024 — 글자로 적은 달 이름</li><li>2016 04 · 04-2016 — 연도와 달만 있는 경우</li></ul>
+<p>글자로 적은 달 이름은 시스템 언어와 영어로, 긴 형태와 줄인 형태 모두 읽습니다. 한국어는 달을 1월처럼 숫자로 적으므로 글자로 된 달 이름이 없습니다. 따라서 이 규칙은 영어 이름에만 해당하며, 한국어 파일 이름의 날짜는 위에 든 숫자 표기로 적혀 있을 때 인식됩니다.</p>
+<p>이름에 날짜만 있으면 시각은 정해진 값으로 채워집니다. 어떤 값을 쓸지는 직접 정합니다. 날짜에서 일까지 빠져 있으면 그달의 1일로 보며, 목록의 해당 줄이 그 사실을 함께 알려 줍니다. 이름에 날짜가 여러 개 있으면 앞선 것이 이깁니다. 그리고 일과 달을 서로 바꿔 읽을 수 있는 경우에는 설정한 방식을 따르되, 해당 파일에는 따로 표시가 붙습니다. 조용히 넘겨짚지 않습니다.</p>
+<p>이름에 날짜가 아예 없으면 목록의 오른쪽 칸에 직접 입력하면 됩니다. 1826년까지 거슬러 올라갑니다. 현존하는 가장 오래된 사진이 찍힌 해입니다. 그러므로 19세기에 찍혀 스캔된 사진도 어제 찍은 사진과 똑같이 날짜를 붙일 수 있습니다.</p>
+<h2 class="kapitel">무엇이 바뀌는가</h2>
+<p>기록되는 항목은 EXIF DateTimeOriginal과 DateTimeDigitized, 그리고 TIFF DateTime이며, 동영상과 음성 녹음에서는 컨테이너 안의 생성 일시입니다. 원한다면 파일 자체의 생성일과 수정일도 함께 맞춥니다.</p>
+<p>이미지 데이터는 손대지 않습니다. JPEG를 다시 압축하지 않고, 동영상을 다시 인코딩하지 않습니다. 동영상과 음성 녹음에서는 대개 컨테이너의 몇 바이트만 고쳐 쓰므로, 용량이 큰 동영상도 순식간에 끝납니다.</p>
+<p>촬영 일시를 담을 수 있는 형식은 JPEG, PNG, TIFF, HEIC, GIF와 동영상 형식 MP4, MOV, M4V, 그리고 음성 형식 M4A, M4B입니다.</p>
+<h2 class="kapitel">촬영 일시를 담을 수 없는 파일도 함께</h2>
+<p>PDF나 텍스트 파일, 표 계산 문서에는 촬영 일시를 적을 칸 자체가 없습니다. 그래도 목록에는 들어옵니다. sName2Date는 그런 파일에 파일 자체의 생성일과 수정일을 설정합니다. 날짜가 남을 수 있는 유일한 자리이기 때문입니다. 해당 줄에는 그것이 초록색이 아니라 주황색 체크로 표시됩니다. 그러므로 여기서는 확장자를 가리지 않습니다. PDF, 텍스트, 표 계산, 압축 파일 등 무엇이든 됩니다.</p>
+<p>파일에 아예 손대지 않으려면 창 위쪽의 ‘날짜를 파일에 기록하기’ 체크를 해제하면 됩니다. 그러면 sName2Date는 이름만 ISO 표기로 고칩니다. 청구서 15.03.2024.pdf는 2024-03-15 12-00-00 청구서.pdf가 됩니다. Finder에서 그 폴더는 날짜순으로 정렬됩니다. 원한다면 날짜를 앞으로 옮기지 않고 이름 안의 원래 자리에 그대로 둘 수도 있습니다.</p>
+<h2 class="kapitel">모두 되돌릴 수 있습니다</h2>
+<p>한 번의 작업은 Cmd+Z로 온전히 되돌릴 수 있습니다. 촬영 일시, 파일의 시각 정보, 바뀐 파일 이름까지 모두 해당합니다. Cmd+Shift+Z로 다시 실행합니다.</p>
+<h2 class="kapitel">폴더 전체</h2>
+<p>sName2Date는 하위 폴더까지 포함한 폴더 전체를 한 번에 처리하고, 이미 촬영 일시가 있는 파일은 건너뛸 수 있습니다. 한 번 접근을 허용한 폴더는 기억해 두므로 다시 묻지 않습니다.</p>
+  </div>
+  <div class="note" id="lite"><p><strong>sName2Date Lite</strong> · 무료 — 한 번에 파일 하나를 다루는 버전: 파일 이름의 날짜를 촬영 일시로 사진, 동영상 또는 오디오 녹음에 기록하고, 직접 설정하고, 이름을 ISO 형식으로 바꾸고, 모든 것을 ⌘Z로 되돌립니다 — sName2Date와 같은 기능이지만 폴더 전체는 다루지 않습니다.</p></div>
+  <ul class="facts">
+    <li>macOS 12 이상 필요</li>
+    <li>25개 언어 지원</li>
+    <li>지원: <a href="mailto:SwiftAppsBavaria@gmx.net">SwiftAppsBavaria@gmx.net</a></li>
+  </ul>
+  <h2 class="section">다른 앱</h2>
+  <div class="apps"><a class="app-card" href="https://apps.apple.com/app/id6759445195"><img src="../../assets/icons/AppIcon-SwiftRename.png" width="64" height="64" alt=""><div><h3>SwiftRename</h3><p>파일 이름을 한꺼번에 변경합니다 — 카메라 촬영 날짜순, 연속 번호 매기기 또는 연도·월 폴더로 바로 정리.</p></div></a><a class="app-card" href="https://apps.apple.com/app/id6791168695"><img src="../../assets/icons/AppIcon-sVectorLift.png" width="64" height="64" alt=""><div><h3>sVectorLift</h3><p>오래된 벡터 클립아트를 열어 보고 SVG로 저장합니다 — CorelDRAW, Windows Metafile, CGM.</p></div></a><a class="app-card" href="../../ko/scollect/"><img src="../../assets/icons/AppIcon-sCollect.png" width="64" height="64" alt=""><div><span class="badge">2026년 10월</span><h3>sCollect</h3><p>음악, 영화, 오디오북, 전자책 및 기타 컬렉션을 하나의 미디어 라이브러리에서 정리합니다. 일반적인 형식에서는 모든 정보가 데이터베이스에만 저장되지 않고 파일 자체의 태그에 기록됩니다 — ID3v2.4를 완벽하게 지원합니다. MP3는 여러 아티스트가 잘리지 않도록 iTunes 및 음악 앱용 사본으로 내보낼 수 있으며, 전체 미디어 라이브러리는 iTunes XML로 내보낼 수 있습니다. 거의 모든 형식을 직접 또는 외부 플레이어를 통해 재생합니다.</p></div></a><div class="app-card"><img src="../../assets/icons/AppIcon-sCollectPlay.png" width="64" height="64" alt=""><div><span class="badge">2026년 10월</span><h3>sCollectPlay</h3><p>미디어 라이브러리를 위한 플레이어: 간단히 폴더, iTunes XML 또는 sCollect 미디어 라이브러리에서 음악, 영화, 오디오북, 팟캐스트를 재생합니다 — 이때 파일의 태그는 전혀 변경되지 않습니다. 재생 목록과 오디오 및 자막 트랙을 지원하며, 영화는 슬로 모션과 프레임 단위 이동도 가능합니다. MKV, AVI, DSD처럼 macOS가 직접 재생하지 못하는 형식은 외부 플레이어로 넘깁니다.</p></div></div><div class="app-card"><img src="../../assets/icons/AppIcon-sCollectPlayLite.png" width="64" height="64" alt=""><div><span class="badge">무료 · 2026년 10월</span><h3>sCollectPlay Lite</h3><p>sCollectPlay의 간결한 버전: 간단히 폴더, iTunes XML 또는 sCollect 미디어 라이브러리를 열어 음악, 영화, 오디오북, 팟캐스트를 재생합니다 — 재생 목록과 오디오 및 자막 트랙, 슬로 모션과 프레임 단위 이동을 지원합니다. 세션당 하나의 소스만 사용할 수 있으며, 열 브라우저, 사용자 재생 목록, 최근 사용한 소스는 정식 버전 전용입니다.</p></div></div><div class="app-card"><img src="../../assets/icons/AppIcon-sBikeBridge.png" width="64" height="64" alt=""><div><span class="badge">출시 예정</span><h3>sBikeBridge</h3><p>포털에 업로드하지 않고 자전거 라이딩을 분석합니다: 이 형식으로 기록하는 모든 사이클 컴퓨터의 FIT 파일과 GPX, TCX를 불러옵니다. 라이딩 기록은 Mac의 자체 라이브러리에 저장됩니다 — 지도, 파워, 심박수, 사진, 메모와 함께; 중복 항목은 가져오기 과정에서 인식됩니다. 연도별·월별 주요 지표와 거리, 상승 고도, 시간 필터로 라이딩을 비교할 수 있습니다. 원하면 지도를 오프라인으로도 사용할 수 있습니다.</p></div></div></div>
+  <p><a href="../../ko/#apps">모든 앱 →</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../impressum.html">법적 고지</a><a href="../../privacy.html">웹사이트 개인정보 보호</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

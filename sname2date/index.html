@@ -3,102 +3,73 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>sName2Date</title>
-<meta name="description" content="sName2Date — takes the date from the file name and writes it into photos, movies and audio recordings as the capture date.">
+<title>sName2Date — From file name to capture date</title>
+<meta name="description" content="Photos without a capture date sort themselves nowhere. sName2Date takes the date from the file name and writes it where every photo library looks for it.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/sname2date/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/sname2date/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/sname2date/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/sname2date/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/sname2date/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/sname2date/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/sname2date/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/sname2date/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/sname2date/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/sname2date/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/sname2date/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/sname2date/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/sname2date/">
 </head>
 <body>
 <header class="site"><div class="wrap">
   <a class="brand" href="../">SwiftAppsBavaria</a>
-  <nav><a href="../#apps">Apps</a><a href="../impressum.html">Legal Notice</a></nav>
+  <nav>
+    <a href="../#apps">Apps</a>
+    <details class="sprache"><summary aria-label="Language">English</summary><div><a href="../sname2date/" aria-current="true" lang="en">English</a><a href="../de/sname2date/" lang="de">Deutsch</a><a href="../es/sname2date/" lang="es">Español</a><a href="../fr/sname2date/" lang="fr">Français</a><a href="../it/sname2date/" lang="it">Italiano</a><a href="../ja/sname2date/" lang="ja">日本語</a><a href="../ko/sname2date/" lang="ko">한국어</a><a href="../pt-br/sname2date/" lang="pt-BR">Português (Brasil)</a><a href="../pt-pt/sname2date/" lang="pt-PT">Português (Portugal)</a><a href="../ru/sname2date/" lang="ru">Русский</a><a href="../zh-hans/sname2date/" lang="zh-Hans">简体中文</a><a href="../zh-hant/sname2date/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
 </div></header>
 
 <main class="wrap">
-  <!-- Texte aus sName2Date/App Store/EN/Docs/DESCRIPTION_EN.md — wer dort etwas ändert, zieht es hier nach.
-       Store-Link erst, wenn der Eintrag LIVE ist (am 2026-09-23 per lookup: noch nicht). -->
   <div class="hero">
-    <img src="../assets/icons/AppIcon-sName2Date.png" width="128" height="128" alt="sName2Date icon">
-    <div>
-      <h1>sName2Date</h1>
-      <p class="subtitle">From file name to capture date</p>
-      <span class="badge">Coming to the Mac App Store · October 2026</span>
-    </div>
+    <img src="../assets/icons/AppIcon-sName2Date.png" width="128" height="128" alt="">
+    <div><h1>sName2Date</h1><p class="subtitle">From file name to capture date</p><span class="badge">Coming soon · October 2026</span></div>
   </div>
-
   <p class="promo">Photos without a capture date sort themselves nowhere. sName2Date takes the date from the file name and writes it where every photo library looks for it.</p>
-
-  <div class="shots">
-    <figure>
-      <img src="../assets/shots/sname2date-before.jpg" width="1440" height="900" alt="sName2Date listing files with dates found in their names" loading="lazy">
-      <figcaption>Before: the date is only in the name — and where day and month could be swapped, the file is marked instead of guessed.</figcaption>
-    </figure>
-    <figure>
-      <img src="../assets/shots/sname2date-after.jpg" width="1440" height="900" alt="sName2Date after a run, every file with a capture date" loading="lazy">
-      <figcaption>After: every file carries its capture date, and the names are in ISO notation.</figcaption>
-    </figure>
+  <div class="shots"><figure><img src="../assets/shots/en/sname2date-list.jpg" width="1440" height="900" alt="sName2Date — From file name to capture date" loading="lazy"></figure><figure><img src="../assets/shots/en/sname2date-preview.jpg" width="1440" height="900" alt="sName2Date — From file name to capture date" loading="lazy"></figure></div>
+  <div class="beschreibung">
+<p>Plenty of photos and videos carry their date in the file name — just not where software looks for it. Pictures saved from a chat, pulled off a scanner or rescued from an old archive arrive as IMG_20240115_103000.jpg or Vacation 15.01.2024.jpg, and every photo library files them under today&#x27;s date.</p>
+<p>sName2Date reads the date from the file name and writes it into the file as the capture date. If the file has none yet, it gets one.</p>
+<h2 class="kapitel">FORMATS IT RECOGNIZES</h2>
+<p>Dates and times in the common notations, among them:</p>
+<ul><li>2024-01-15 10-30-00</li><li>IMG_20240115_103000</li><li>IMG-20240115-WA0001</li><li>2024-01-15 · 2024 01 15 · 2024_01_15</li><li>15.01.2024 · 15-01-2024 · 15.01.24</li><li>15 Jan 2024 · 15 March 2024 · January 15 2024</li><li>2016 04 · 04-2016 — year and month only</li></ul>
+<p>Spelled-out month names are read in your system language and in English, in both the long and the abbreviated form.</p>
+<p>If the name holds only a date, a time is assumed — you decide which one. If the day is missing too, the first of the month applies, and the row says so. If several dates appear in one name, the first one wins. And where day and month could be swapped, your setting decides — the files in question are marked instead of being guessed at silently.</p>
+<p>If there is no date in the name at all, you type it in yourself on the right of the row. That reaches back to 1826, the year of the oldest surviving photograph — so a scanned nineteenth-century picture can be dated just like yesterday&#x27;s.</p>
+<h2 class="kapitel">WHAT GETS CHANGED</h2>
+<p>sName2Date writes EXIF DateTimeOriginal and DateTimeDigitized as well as TIFF DateTime, and for videos and audio recordings the creation date inside the container. On request, the creation and modification date of the file itself as well.</p>
+<p>The image data stays untouched: a JPEG is not recompressed, a video is not re-encoded. For videos and audio recordings the app usually changes just a few bytes inside the container instead of rewriting it — even a large movie is done in an instant.</p>
+<p>JPEG, PNG, TIFF, HEIC and GIF hold a capture date, as do the video formats MP4, MOV and M4V and the audio formats M4A and M4B.</p>
+<h2 class="kapitel">EVEN FILES THAT CANNOT HOLD A CAPTURE DATE</h2>
+<p>A PDF, a text file, a spreadsheet has no field for a capture date at all — and still comes into the list. sName2Date sets the file&#x27;s creation and modification date there, the only place the date can end up; the row shows it with an orange check mark instead of a green one. So here the extension does not matter — PDFs, text, spreadsheets, archives, anything.</p>
+<p>If the file is not to be touched at all, you clear the checkbox “Write date into the file” at the top of the window. sName2Date then only brings the name into ISO notation: Invoice 15.03.2024.pdf becomes 2024-03-15 12-00-00 Invoice.pdf, and in the Finder the folder now sorts by date. If you prefer, the date stays where it stood in the name instead of moving to the front.</p>
+<h2 class="kapitel">EVERYTHING CAN BE TAKEN BACK</h2>
+<p>A run is undone completely with Cmd+Z — capture date, file timestamps and the changed file name. Cmd+Shift+Z restores it.</p>
+<h2 class="kapitel">WHOLE FOLDERS</h2>
+<p>sName2Date takes entire directory trees in one go and can skip files that already have a capture date. Folders you have released once are remembered, and it never asks about them again.</p>
   </div>
-
-  <h2 class="section">What it does</h2>
-  <div class="features">
-    <div>
-      <h3>Reads the date from the name</h3>
-      <p>IMG_20240115_103000, Vacation 15.01.2024, 15 Jan 2024, 2016 04 — the common notations, month names in your system language and in English. If there is no date at all, you type it in, back to 1826.</p>
-    </div>
-    <div>
-      <h3>Writes it where software looks</h3>
-      <p>EXIF DateTimeOriginal and DateTimeDigitized plus TIFF DateTime for JPEG, PNG, TIFF, HEIC and GIF; the creation date inside the container for MP4, MOV, M4V, M4A and M4B.</p>
-    </div>
-    <div>
-      <h3>Leaves the pictures alone</h3>
-      <p>A JPEG is not recompressed, a video is not re-encoded. For movies the app usually changes just a few bytes inside the container — even a large file is done in an instant.</p>
-    </div>
-    <div>
-      <h3>Even files without a capture date</h3>
-      <p>PDFs, text, spreadsheets, archives get the file’s creation and modification date instead. Or clear one checkbox and sName2Date only brings the name into ISO notation.</p>
-    </div>
-    <div>
-      <h3>Whole folders</h3>
-      <p>Entire directory trees in one go, skipping files that already have a capture date if you wish.</p>
-    </div>
-    <div>
-      <h3>Everything can be taken back</h3>
-      <p>A run is undone completely with ⌘Z — capture date, file timestamps and the changed file name. ⇧⌘Z restores it.</p>
-    </div>
-  </div>
-
-  <div class="note" id="lite"><p><strong>sName2Date Lite — free.</strong> The edition for one file per run: read the date from the name, set it by hand, write it as the capture date, bring the name into ISO notation and take everything back with ⌘Z. The same capabilities as sName2Date, just without entire folders.</p></div>
-
+  <div class="note" id="lite"><p><strong>sName2Date Lite</strong> · Free — The edition for one file per run: write the date from the file name into a photo, a movie, or an audio recording as the capture date, set it by hand, put the name into ISO notation, and take everything back with ⌘Z — the same capabilities as sName2Date, just without entire folders.</p></div>
   <ul class="facts">
     <li>Requires macOS 12 or later</li>
     <li>25 languages</li>
     <li>Support: <a href="mailto:SwiftAppsBavaria@gmx.net">SwiftAppsBavaria@gmx.net</a></li>
-    <!-- TODO: Links auf Support- und Datenschutzseite — sname2date-privacy existiert, GitHub Pages ist dort aber nicht eingeschaltet. -->
   </ul>
-
-  <h2 class="section">More apps</h2>
-  <div class="apps">
-    <a class="app-card" href="../scollect/">
-      <img src="../assets/icons/AppIcon-sCollect.png" width="64" height="64" alt="">
-      <div><span class="badge">October 2026</span><h3>sCollect</h3>
-        <p>Music, movies, books and other collections in one library — your edits land in the files themselves.</p></div>
-    </a>
-    <a class="app-card" href="https://apps.apple.com/app/id6759445195">
-      <img src="../assets/icons/AppIcon-SwiftRename.png" width="64" height="64" alt="">
-      <div><h3>SwiftRename</h3>
-        <p>Rename files in batches — by capture date, numbered consecutively, or sorted into year and month folders.</p></div>
-    </a>
-    <a class="app-card" href="https://apps.apple.com/app/id6791168695">
-      <img src="../assets/icons/AppIcon-sVectorLift.png" width="64" height="64" alt="">
-      <div><h3>sVectorLift</h3>
-        <p>Open, view, and save old vector clip art as SVG — CorelDRAW, Windows Metafile, and CGM.</p></div>
-    </a>
-  </div>
+  <h2 class="section">More Apps</h2>
+  <div class="apps"><a class="app-card" href="https://apps.apple.com/app/id6759445195"><img src="../assets/icons/AppIcon-SwiftRename.png" width="64" height="64" alt=""><div><h3>SwiftRename</h3><p>Rename files in batches — by capture date, numbered consecutively, or sorted straight into year and month folders.</p></div></a><a class="app-card" href="https://apps.apple.com/app/id6791168695"><img src="../assets/icons/AppIcon-sVectorLift.png" width="64" height="64" alt=""><div><h3>sVectorLift</h3><p>Open, view, and save old vector clip art as SVG — CorelDRAW, Windows Metafile, and CGM.</p></div></a><a class="app-card" href="../scollect/"><img src="../assets/icons/AppIcon-sCollect.png" width="64" height="64" alt=""><div><span class="badge">October 2026</span><h3>sCollect</h3><p>Organize music, movies, audiobooks, ebooks, and other collections in a media library. For common formats, every detail is stored in the file’s own tag, not just in the database — with full ID3v2.4 support. MP3s can be exported as copies for iTunes and the Music app without multiple artists being cut off; the entire library can be exported as iTunes XML. Plays almost any format, directly or through an external player.</p></div></a><div class="app-card"><img src="../assets/icons/AppIcon-sCollectPlay.png" width="64" height="64" alt=""><div><span class="badge">October 2026</span><h3>sCollectPlay</h3><p>The player for the media library: play music, movies, audiobooks, and podcasts simply from a folder, an iTunes XML file, or an sCollect library — the files’ tags stay untouched. With playlists, audio and subtitle tracks, and for movies, slow motion and frame-by-frame stepping. Anything macOS can’t play on its own, such as MKV, AVI, or DSD, is handed off to an external player.</p></div></div><div class="app-card"><img src="../assets/icons/AppIcon-sCollectPlayLite.png" width="64" height="64" alt=""><div><span class="badge">Free · October 2026</span><h3>sCollectPlay Lite</h3><p>The lean edition of sCollectPlay: simply open a folder, an iTunes XML file, or an sCollect library and play music, movies, audiobooks, and podcasts from it — with playlists, audio and subtitle tracks, slow motion, and frame-by-frame stepping. One source per session; the column browser, custom playlists, and recently used sources are reserved for the full version.</p></div></div><div class="app-card"><img src="../assets/icons/AppIcon-sBikeBridge.png" width="64" height="64" alt=""><div><span class="badge">Coming soon</span><h3>sBikeBridge</h3><p>Analyze bike rides without uploading them to a portal: import FIT files from any bike computer that records in this format, plus GPX and TCX. Rides are kept in a dedicated library on the Mac — with map, power and heart rate, photos, and notes; the import detects duplicates. Stats by year or month and filters by distance, elevation gain, and duration make rides comparable. The map is also available offline if desired.</p></div></div></div>
   <p><a href="../#apps">All apps →</a></p>
 </main>
-
 <footer class="site"><div class="wrap">
-  <a href="../impressum.html">Legal Notice (Impressum)</a><a href="../privacy.html">Website Privacy</a>
+  <a href="../impressum.html">Legal Notice</a><a href="../privacy.html">Website Privacy</a>
   <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
 </div></footer>
 </body>

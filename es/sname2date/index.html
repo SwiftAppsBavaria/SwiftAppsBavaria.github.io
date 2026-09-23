@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sName2Date — Del nombre a la fecha EXIF</title>
+<meta name="description" content="Las fotos sin fecha de captura no se ordenan en ningún sitio. sName2Date toma la fecha del nombre del archivo y la escribe donde la busca cualquier gestor de fotos.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/sname2date/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/sname2date/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/sname2date/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/sname2date/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/sname2date/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/sname2date/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/sname2date/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/sname2date/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/sname2date/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/sname2date/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/sname2date/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/sname2date/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/sname2date/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../es/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../es/#apps">Apps</a>
+    <details class="sprache"><summary aria-label="Idioma">Español</summary><div><a href="../../sname2date/" lang="en">English</a><a href="../../de/sname2date/" lang="de">Deutsch</a><a href="../../es/sname2date/" aria-current="true" lang="es">Español</a><a href="../../fr/sname2date/" lang="fr">Français</a><a href="../../it/sname2date/" lang="it">Italiano</a><a href="../../ja/sname2date/" lang="ja">日本語</a><a href="../../ko/sname2date/" lang="ko">한국어</a><a href="../../pt-br/sname2date/" lang="pt-BR">Português (Brasil)</a><a href="../../pt-pt/sname2date/" lang="pt-PT">Português (Portugal)</a><a href="../../ru/sname2date/" lang="ru">Русский</a><a href="../../zh-hans/sname2date/" lang="zh-Hans">简体中文</a><a href="../../zh-hant/sname2date/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <img src="../../assets/icons/AppIcon-sName2Date.png" width="128" height="128" alt="">
+    <div><h1>sName2Date</h1><p class="subtitle">Del nombre a la fecha EXIF</p><span class="badge">Próximamente · octubre de 2026</span></div>
+  </div>
+  <p class="promo">Las fotos sin fecha de captura no se ordenan en ningún sitio. sName2Date toma la fecha del nombre del archivo y la escribe donde la busca cualquier gestor de fotos.</p>
+  <div class="shots"><figure><img src="../../assets/shots/es/sname2date-list.jpg" width="1440" height="900" alt="sName2Date — Del nombre a la fecha EXIF" loading="lazy"></figure><figure><img src="../../assets/shots/es/sname2date-preview.jpg" width="1440" height="900" alt="sName2Date — Del nombre a la fecha EXIF" loading="lazy"></figure></div>
+  <div class="beschreibung">
+<p>Muchas fotos y vídeos llevan su fecha en el nombre del archivo, pero no donde los programas la buscan. Quien recibe imágenes de un chat, de un escáner o de un archivo antiguo obtiene archivos como IMG_20240115_103000.jpg o Vacaciones 15.01.2024.jpg, que aparecen en cualquier gestor de fotos con la fecha de hoy.</p>
+<p>sName2Date lee la fecha del nombre del archivo y la escribe como fecha de captura dentro del archivo. Si todavía no hay ninguna, se crea.</p>
+<h2 class="kapitel">FORMATOS RECONOCIDOS</h2>
+<p>Fecha y hora en las formas habituales, entre otras:</p>
+<ul><li>2024-01-15 10-30-00</li><li>IMG_20240115_103000</li><li>IMG-20240115-WA0001</li><li>2024-01-15 · 2024 01 15 · 2024_01_15</li><li>15.01.2024 · 15-01-2024 · 15.01.24</li><li>15 ene. 2024 · 15 marzo 2024 · January 15 2024</li><li>2016 04 · 04-2016 — solo año y mes</li></ul>
+<p>Los nombres de mes escritos con letra se leen en el idioma de tu sistema y en inglés, tanto en la forma larga como en la abreviada.</p>
+<p>Si el nombre solo lleva una fecha, se supone una hora; cuál, lo decides tú. Si falta también el día, vale el primero del mes, y la línea lo indica. Si el nombre contiene varias fechas, gana la primera. Y donde el día y el mes podrían intercambiarse, decide tu ajuste: los archivos afectados se señalan expresamente, en lugar de adivinar en silencio.</p>
+<p>Si en el nombre no hay ninguna fecha, la introduces tú mismo a la derecha de la línea. Eso llega hasta 1826, el año de la fotografía conservada más antigua: las tomas escaneadas del siglo XIX se pueden fechar igual que las de ayer.</p>
+<h2 class="kapitel">QUÉ SE MODIFICA</h2>
+<p>Se escriben EXIF DateTimeOriginal y DateTimeDigitized, además de TIFF DateTime; en los vídeos y las grabaciones de audio, la fecha de creación dentro del contenedor. Si lo deseas, también la fecha de creación y de modificación del archivo.</p>
+<p>Los datos de imagen quedan intactos: un JPEG no se vuelve a comprimir y un vídeo no se vuelve a codificar. En los vídeos y las grabaciones de audio, la app suele cambiar solo unos pocos bytes del contenedor en lugar de reescribirlo; así, incluso un vídeo grande queda listo en un instante.</p>
+<p>Admiten una fecha de captura JPEG, PNG, TIFF, HEIC y GIF, además de los formatos de vídeo MP4, MOV y M4V y los formatos de audio M4A y M4B.</p>
+<h2 class="kapitel">TAMBIÉN LOS ARCHIVOS QUE NO PUEDEN LLEVAR UNA FECHA DE CAPTURA</h2>
+<p>Un PDF, un archivo de texto, una hoja de cálculo no tiene ningún campo para una fecha de captura y, aun así, entra en la lista. Ahí sName2Date ajusta la fecha de creación y de modificación del archivo, el único sitio al que el dato puede llegar; la fila lo muestra con una marca naranja en vez de una verde. Aquí no cuenta ninguna extensión: PDF, texto, hojas de cálculo, archivos comprimidos, todo.</p>
+<p>Si no quieres que se toque el archivo, desactivas en la parte superior de la ventana la casilla «Escribir la fecha en el archivo». Entonces sName2Date se limita a poner el nombre en la escritura ISO: Factura 15.03.2024.pdf se convierte en 2024-03-15 12-00-00 Factura.pdf, y en el Finder la carpeta se ordena así por fecha. Si lo prefieres, la fecha se queda donde estaba dentro del nombre en lugar de pasar al principio.</p>
+<h2 class="kapitel">TODO SE PUEDE DESHACER</h2>
+<p>Una pasada se deshace por completo con Cmd+Z: la fecha de captura, las marcas de tiempo del archivo y el nombre modificado. Cmd+Shift+Z la vuelve a aplicar.</p>
+<h2 class="kapitel">CARPETAS ENTERAS</h2>
+<p>sName2Date acepta árboles de carpetas enteros de una vez y puede omitir los archivos que ya tienen una fecha de captura. Las carpetas autorizadas una vez las recuerda y no vuelve a preguntar por ellas.</p>
+  </div>
+  <div class="note" id="lite"><p><strong>sName2Date Lite</strong> · Gratis — La edición para un archivo por pasada: escribir la fecha del nombre de archivo como fecha de captura en una foto, un vídeo o una grabación de audio, ajustarla a mano, pasar el nombre a la notación ISO y deshacerlo todo con ⌘Z; las mismas capacidades que sName2Date, solo que sin carpetas enteras.</p></div>
+  <ul class="facts">
+    <li>Requiere macOS 12 o posterior</li>
+    <li>25 idiomas</li>
+    <li>Soporte: <a href="mailto:SwiftAppsBavaria@gmx.net">SwiftAppsBavaria@gmx.net</a></li>
+  </ul>
+  <h2 class="section">Más apps</h2>
+  <div class="apps"><a class="app-card" href="https://apps.apple.com/app/id6759445195"><img src="../../assets/icons/AppIcon-SwiftRename.png" width="64" height="64" alt=""><div><h3>SwiftRename</h3><p>Renombrar archivos por lotes: por fecha de captura, con numeración consecutiva o directamente clasificados en carpetas de año y mes.</p></div></a><a class="app-card" href="https://apps.apple.com/app/id6791168695"><img src="../../assets/icons/AppIcon-sVectorLift.png" width="64" height="64" alt=""><div><h3>sVectorLift</h3><p>Abrir, ver y guardar clipart vectorial antiguo como SVG: CorelDRAW, Windows Metafile y CGM.</p></div></a><a class="app-card" href="../../es/scollect/"><img src="../../assets/icons/AppIcon-sCollect.png" width="64" height="64" alt=""><div><span class="badge">octubre de 2026</span><h3>sCollect</h3><p>Organizar música, películas, audiolibros, libros electrónicos y otras colecciones en una biblioteca multimedia. En los formatos habituales, cada dato se guarda en la etiqueta del propio archivo, no solo en la base de datos, con compatibilidad total con ID3v2.4. Los MP3 se pueden exportar como copia para iTunes y la app Música sin que se recorten los artistas múltiples; la biblioteca completa se exporta como XML de iTunes. Reproduce casi cualquier formato, directamente o mediante un reproductor externo.</p></div></a><div class="app-card"><img src="../../assets/icons/AppIcon-sCollectPlay.png" width="64" height="64" alt=""><div><span class="badge">octubre de 2026</span><h3>sCollectPlay</h3><p>El reproductor para la biblioteca multimedia: reproducir música, películas, audiolibros y pódcasts simplemente desde una carpeta, un XML de iTunes o una biblioteca de sCollect, sin cambiar nada en las etiquetas de los archivos. Con listas de reproducción, pistas de audio y de subtítulos y, en las películas, cámara lenta y avance fotograma a fotograma. Lo que macOS no reproduce por sí mismo, como MKV, AVI o DSD, se pasa a un reproductor externo.</p></div></div><div class="app-card"><img src="../../assets/icons/AppIcon-sCollectPlayLite.png" width="64" height="64" alt=""><div><span class="badge">Gratis · octubre de 2026</span><h3>sCollectPlay Lite</h3><p>La edición ligera de sCollectPlay: simplemente abrir una carpeta, un XML de iTunes o una biblioteca de sCollect y reproducir desde ahí música, películas, audiolibros y pódcasts, con listas de reproducción, pistas de audio y de subtítulos, cámara lenta y avance fotograma a fotograma. Una fuente por sesión; el navegador de columnas, las listas de reproducción propias y las fuentes usadas recientemente quedan reservados a la versión completa.</p></div></div><div class="app-card"><img src="../../assets/icons/AppIcon-sBikeBridge.png" width="64" height="64" alt=""><div><span class="badge">Próximamente</span><h3>sBikeBridge</h3><p>Analizar salidas en bicicleta sin subirlas a un portal: importar archivos FIT de cualquier ciclocomputador que grabe en este formato, además de GPX y TCX. Las salidas se guardan en una biblioteca propia en el Mac, con mapa, potencia y frecuencia cardiaca, fotos y notas; la importación detecta los duplicados. Las estadísticas por año o por mes y los filtros por distancia, desnivel y duración permiten comparar las salidas. Si se desea, el mapa también está disponible sin conexión.</p></div></div></div>
+  <p><a href="../../es/#apps">Todas las apps →</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../impressum.html">Aviso legal</a><a href="../../privacy.html">Privacidad del sitio web</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

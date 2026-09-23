@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sName2Date — 從檔案名稱寫入拍攝日期</title>
+<meta name="description" content="沒有拍攝日期的照片，在哪裡都排不進去。sName2Date 把日期從檔案名稱取出來，寫到每個照片管理程式尋找它的地方。">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/sname2date/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/sname2date/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/sname2date/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/sname2date/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/sname2date/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/sname2date/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/sname2date/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/sname2date/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/sname2date/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/sname2date/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/sname2date/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/sname2date/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/sname2date/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../zh-hant/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../zh-hant/#apps">App</a>
+    <details class="sprache"><summary aria-label="語言">繁體中文</summary><div><a href="../../sname2date/" lang="en">English</a><a href="../../de/sname2date/" lang="de">Deutsch</a><a href="../../es/sname2date/" lang="es">Español</a><a href="../../fr/sname2date/" lang="fr">Français</a><a href="../../it/sname2date/" lang="it">Italiano</a><a href="../../ja/sname2date/" lang="ja">日本語</a><a href="../../ko/sname2date/" lang="ko">한국어</a><a href="../../pt-br/sname2date/" lang="pt-BR">Português (Brasil)</a><a href="../../pt-pt/sname2date/" lang="pt-PT">Português (Portugal)</a><a href="../../ru/sname2date/" lang="ru">Русский</a><a href="../../zh-hans/sname2date/" lang="zh-Hans">简体中文</a><a href="../../zh-hant/sname2date/" aria-current="true" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <img src="../../assets/icons/AppIcon-sName2Date.png" width="128" height="128" alt="">
+    <div><h1>sName2Date</h1><p class="subtitle">從檔案名稱寫入拍攝日期</p><span class="badge">即將推出 · 2026年10月</span></div>
+  </div>
+  <p class="promo">沒有拍攝日期的照片，在哪裡都排不進去。sName2Date 把日期從檔案名稱取出來，寫到每個照片管理程式尋找它的地方。</p>
+  <div class="shots"><figure><img src="../../assets/shots/zh-hant/sname2date-list.jpg" width="1440" height="900" alt="sName2Date — 從檔案名稱寫入拍攝日期" loading="lazy"></figure><figure><img src="../../assets/shots/zh-hant/sname2date-preview.jpg" width="1440" height="900" alt="sName2Date — 從檔案名稱寫入拍攝日期" loading="lazy"></figure></div>
+  <div class="beschreibung">
+<p>許多照片和影片把日期帶在檔案名稱裡——卻不在程式尋找日期的地方。從聊天軟體、掃描器或舊封存匯入影像的人，拿到的是 IMG_20240115_103000.jpg 或 假期 15.01.2024.jpg 這樣的檔案，它們在每個照片管理程式裡都顯示成今天的日期。</p>
+<p>sName2Date 從檔案名稱讀出日期，並把它當作拍攝日期寫進檔案。若檔案還沒有拍攝日期，就替它建立一個。</p>
+<h2 class="kapitel">可辨識的寫法</h2>
+<p>常見形式的日期與時間，其中包括：</p>
+<ul><li>2024-01-15 10-30-00</li><li>IMG_20240115_103000</li><li>IMG-20240115-WA0001</li><li>2024-01-15 · 2024 01 15 · 2024_01_15</li><li>15.01.2024 · 15-01-2024 · 15.01.24</li><li>January 15 2024 · Jan. 15, 2024——英文的月份名稱</li><li>2016 04 · 04-2016——只有年與月</li></ul>
+<p>拼寫成文字的月份名稱，會以你的系統語言和英文讀取，長式與縮寫皆可。中文的月份寫法（1月）不是由字母組成的字詞，因此不在此列——中文名稱請用上面的數字形式，例如 2024-01-15 或 15.01.2024，這些一律讀得到。</p>
+<p>名稱中只有日期時，會採用一個假定的時間；由你決定是哪一個。若連日也缺了，就以該月的第一天為準——列表會一併說明。名稱中有多個日期時，以第一個為準。而在日與月可能互換的情況下，由你的設定決定——受影響的檔案會特別標示出來，而不是默默猜測。</p>
+<p>名稱中完全沒有日期時，你可以自己在該列右側填入。可回溯到 1826 年，也就是現存最早照片的年份——十九世紀掃描而來的影像，因此和昨天拍的一樣可以標註日期。</p>
+<h2 class="kapitel">會更動什麼</h2>
+<p>寫入的是 EXIF DateTimeOriginal 與 DateTimeDigitized 以及 TIFF DateTime，影片與錄音則是容器中的建立日期。也可選擇一併寫入檔案本身的建立日期與修改日期。</p>
+<p>影像資料維持原樣：JPEG 不會重新壓縮，影片不會重新編碼。處理影片與錄音時，本 App 通常只更動容器中的少數位元組，而不是重寫整個檔案——因此再大的影片也是一瞬間就完成。</p>
+<p>能容納拍攝日期的格式有 JPEG、PNG、TIFF、HEIC 和 GIF，影片格式 MP4、MOV 和 M4V，以及音訊格式 M4A 和 M4B。</p>
+<h2 class="kapitel">無法容納拍攝日期的檔案也能處理</h2>
+<p>PDF、文字檔、試算表根本沒有放拍攝日期的欄位——但它們照樣會進入列表。sName2Date 會在這些檔案上設定檔案本身的建立日期與修改日期，那是這個日期唯一能落到的地方；該列會以橙色勾號而不是綠色勾號來表示。所以這裡不看副檔名——PDF、文字檔、試算表、封存檔，全都可以。</p>
+<p>若根本不希望檔案被碰到，就把視窗上方的「將日期寫入檔案」勾選取消。這時 sName2Date 只把名稱改成 ISO 寫法：帳單 15.03.2024.pdf 會變成 2024-03-15 12-00-00 帳單.pdf。在 Finder 中，資料夾便會依日期排序。你也可以選擇讓日期留在它原本在名稱中的位置，而不是移到最前面。</p>
+<h2 class="kapitel">一切都可以還原</h2>
+<p>一次執行可用 Cmd+Z 完整還原——拍攝日期、檔案時間戳記，以及變更過的檔案名稱。Cmd+Shift+Z 可再次套用。</p>
+<h2 class="kapitel">整個資料夾</h2>
+<p>sName2Date 可一次處理整個目錄樹，並可略過已經有拍攝日期的檔案。授權過一次的資料夾會被記住，不會再問第二次。</p>
+  </div>
+  <div class="note" id="lite"><p><strong>sName2Date Lite</strong> · 免費 — 每次處理一個檔案的版本：把檔案名稱中的日期當作拍攝日期寫入照片、影片或錄音，手動設定日期，把名稱改為 ISO 格式，並可用 ⌘Z 還原所有處理——功能與 sName2Date 相同，只是不能處理整個檔案夾。</p></div>
+  <ul class="facts">
+    <li>需要 macOS 12 或以上版本</li>
+    <li>支援 25 種語言</li>
+    <li>技術支援： <a href="mailto:SwiftAppsBavaria@gmx.net">SwiftAppsBavaria@gmx.net</a></li>
+  </ul>
+  <h2 class="section">更多 App</h2>
+  <div class="apps"><a class="app-card" href="https://apps.apple.com/app/id6759445195"><img src="../../assets/icons/AppIcon-SwiftRename.png" width="64" height="64" alt=""><div><h3>SwiftRename</h3><p>批次重新命名檔案——依照拍攝日期、連續編號，或直接歸入年份與月份檔案夾。</p></div></a><a class="app-card" href="https://apps.apple.com/app/id6791168695"><img src="../../assets/icons/AppIcon-sVectorLift.png" width="64" height="64" alt=""><div><h3>sVectorLift</h3><p>開啟、檢視舊的向量美工圖案並儲存為 SVG——CorelDRAW、Windows Metafile 與 CGM。</p></div></a><a class="app-card" href="../../zh-hant/scollect/"><img src="../../assets/icons/AppIcon-sCollect.png" width="64" height="64" alt=""><div><span class="badge">2026年10月</span><h3>sCollect</h3><p>在媒體庫中整理音樂、影片、有聲書、電子書與其他收藏。對於常見格式，每項資訊都會寫入檔案本身的標籤，而不只是存入資料庫——完整支援 ID3v2.4。MP3 可匯出為拷貝，供 iTunes 與「音樂」App 使用，有多位藝人時也不會只保留第一位；整個媒體庫可匯出為 iTunes XML。幾乎可以播放任何格式，可直接播放，也可透過外部播放器播放。</p></div></a><div class="app-card"><img src="../../assets/icons/AppIcon-sCollectPlay.png" width="64" height="64" alt=""><div><span class="badge">2026年10月</span><h3>sCollectPlay</h3><p>媒體庫的播放器：播放直接來自檔案夾、來自 iTunes XML 或 sCollect 媒體庫的音樂、影片、有聲書與 Podcast——檔案的標籤不會有任何改動。支援播放列表、音軌與字幕軌道，播放影片時可慢動作播放與逐格步進。macOS 本身無法播放的格式，例如 MKV、AVI 或 DSD，會交給外部播放器。</p></div></div><div class="app-card"><img src="../../assets/icons/AppIcon-sCollectPlayLite.png" width="64" height="64" alt=""><div><span class="badge">免費 · 2026年10月</span><h3>sCollectPlay Lite</h3><p>sCollectPlay 的精簡版：直接開啟檔案夾、iTunes XML 或 sCollect 媒體庫，播放其中的音樂、影片、有聲書與 Podcast——支援播放列表、音軌與字幕軌道、慢動作播放與逐格步進。每次工作階段只能使用一個來源；分欄瀏覽器、自訂播放列表與最近使用的來源僅限完整版。</p></div></div><div class="app-card"><img src="../../assets/icons/AppIcon-sBikeBridge.png" width="64" height="64" alt=""><div><span class="badge">即將推出</span><h3>sBikeBridge</h3><p>分析單車騎乘紀錄，無需上傳至任何平台：讀取任何以此格式記錄的碼錶所產生的 FIT 檔案，以及 GPX 與 TCX。騎乘紀錄儲存在 Mac 上的獨立資料庫中——包含地圖、功率與心率、照片與備註；匯入時會辨識重複項目。依照年份或月份的統計數據，以及依照距離、爬升高度與時間長度的篩選，讓騎乘紀錄便於比較。地圖也可依照需求離線使用。</p></div></div></div>
+  <p><a href="../../zh-hant/#apps">所有 App →</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../impressum.html">法律聲明</a><a href="../../privacy.html">網站隱私權</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>
