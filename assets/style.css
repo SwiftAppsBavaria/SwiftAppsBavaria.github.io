@@ -52,7 +52,7 @@ header.site nav a { margin-left: 20px; font-size: 15px; color: var(--text-soft);
 header.site nav a:hover { color: var(--text); text-decoration: none; }
 
 /* Startseite */
-.banner { margin: 32px 0 8px; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
+.banner { margin: 32px 0 8px; }  /* Rundung und Rand trägt das Bild selbst (transparente Ecken) */
 .lead { font-size: 21px; color: var(--text-soft); margin: 20px 0 8px; }
 h2.section { font-size: 28px; margin: 48px 0 16px; letter-spacing: -.01em; }
 

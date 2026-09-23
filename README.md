@@ -21,7 +21,7 @@ schreibt `index.html`, `scollect/`, `sname2date/` samt `help/` (Englisch, Wurzel
 | Hilfe sCollect (`…/scollect/help/`) | HelpBook im Projekt, `sCollect.help/…/<lproj>/index.html` — Inhalt ohne die Schlußzeile; PT-PT bekommt das brasilianische `pt.lproj` wie die App |
 | Hilfe sName2Date (`…/sname2date/help/`) | `HelpView.swift` (Abschnitte in Reihenfolge, Fassung der Vollversion) + Katalog der App |
 
-Von Hand und nur deutsch/englisch: `impressum.html`, `privacy.html`, `assets/style.css`, `assets/banner.jpg`.
+Von Hand und nur deutsch/englisch: `impressum.html`, `privacy.html`, `assets/style.css`, `assets/banner.webp`.
 
 ## Marketing-URLs je Store-Sprache
 
