@@ -1,4 +1,4 @@
-# SwiftAppsBavaria.github.io — ENTWURF (2026-09-23)
+# SwiftAppsBavaria.github.io — Stand 2026-09-23, freigegeben
 
 Familienseite der Mac-Apps; gedacht als **Marketing-URL** in App Store Connect
 (`https://swiftappsbavaria.github.io/scollect/`, `…/sname2date/`). Noch **nicht** auf GitHub.
