@@ -19,7 +19,7 @@ Familienseite der Mac-Apps; gedacht als **Marketing-URL** in App Store Connect
 - **„October 2026“ ist eine datierte Zusage** — sie steht hier so wie in `StoreApps`; verstreicht der Monat, beide nachziehen.
 
 ## Offen vor dem Veröffentlichen
-1. 🔴 Impressum: Anschrift eintragen (§ 5 DDG verlangt ladungsfähige Anschrift).
+1. ✅ Impressum: Anschrift eingetragen (2026-09-23). Impressum und Website-Datenschutz vor dem Freischalten prüfen lassen.
 2. Repo `SwiftAppsBavaria/SwiftAppsBavaria.github.io` anlegen, pushen, Pages einschalten
    (Settings → Pages → Branch `main`, Ordner `/`).
 3. Auf den App-Seiten die Links zu Support und Datenschutz ergänzen, sobald die `*-privacy`-Repos
