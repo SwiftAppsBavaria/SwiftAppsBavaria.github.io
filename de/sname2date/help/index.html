@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sName2Date Hilfe</title>
+<meta name="description" content="sName2Date Hilfe">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/sname2date/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/sname2date/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/sname2date/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/sname2date/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/sname2date/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/sname2date/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/sname2date/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/sname2date/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/sname2date/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/sname2date/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/sname2date/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/sname2date/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/sname2date/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../de/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../de/#apps">Apps</a>
+    <details class="sprache"><summary aria-label="Sprache">Deutsch</summary><div><a href="../../../sname2date/help/" lang="en">English</a><a href="../../../de/sname2date/help/" aria-current="true" lang="de">Deutsch</a><a href="../../../es/sname2date/help/" lang="es">Español</a><a href="../../../fr/sname2date/help/" lang="fr">Français</a><a href="../../../it/sname2date/help/" lang="it">Italiano</a><a href="../../../ja/sname2date/help/" lang="ja">日本語</a><a href="../../../ko/sname2date/help/" lang="ko">한국어</a><a href="../../../pt-br/sname2date/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../pt-pt/sname2date/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../ru/sname2date/help/" lang="ru">Русский</a><a href="../../../zh-hans/sname2date/help/" lang="zh-Hans">简体中文</a><a href="../../../zh-hant/sname2date/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../">← sName2Date</a></p>
+  <article class="hilfe">
+<h1>sName2Date Hilfe</h1>
+<h2>Was die App tut</h2>
+<p>sName2Date sucht im Dateinamen nach einem Datum und schreibt es als Aufnahmedatum in die Bild-, Film- oder Tondatei. Ein bereits vorhandenes Aufnahmedatum wird dabei überschrieben — genau dafür gibt es die App, denn ein Export oder eine Digitalisierung trägt meist das falsche Datum.</p>
+<p class="notiz">Sollen Dateien mit vorhandenem Aufnahmedatum unangetastet bleiben, lässt sich das in den Einstellungen umstellen.</p>
+<h2>Die beiden Haken oben im Fenster</h2>
+<p>Oben im Fenster stehen zwei Haken, die sich nicht ausschließen. Datum in die Datei schreiben legt das gefundene Datum als Aufnahmedatum in die Datei selbst; wo das Format keines aufnimmt — eine PDF etwa oder eine Textdatei — setzt die App statt dessen Erstellungs- und Änderungsdatum der Datei, und der Haken in der Zeile ist dann orange statt grün. Dateinamen umstellen bringt den Namen in die ISO-Schreibweise. Beide zusammen sind der Normalfall; ist nur der zweite gesetzt, wird keine Datei geöffnet und nur umbenannt.</p>
+<p class="notiz">Der dritte Haken, Datum voranstellen, gehört zum Umbenennen: er setzt die Angabe an den Anfang des Namens, statt sie an ihrer Fundstelle zu ersetzen. Er ist grau, solange nicht umbenannt wird.</p>
+<h2>Dateien laden</h2>
+<p>Dateien kommen auf drei Wegen in die Liste: über die Knöpfe oben im Fenster, durch Ziehen auf das Fenster, oder über das Menü Ablage — ⌘O wählt Dateien, ⌘⇧O einen Ordner. Die Zeile unter den Knöpfen sagt, welcher Ordner gerade geladen ist.</p>
+<p class="notiz">Bei einem Ordner kommen die Unterordner mit, solange der Haken daneben gesetzt ist.</p>
+<h2>Erkannte Schreibweisen</h2>
+<p>Erkannt werden Datum und Uhrzeit in den gängigen Formen, etwa 2024-01-15 10-30-00, IMG_20240115_103000, 2024-01-15, 2024 01 15, 15.01.2024 und 15-01-2024. Zweistellige Jahre werden ergänzt. Auch die Namen, die SwiftRename vergibt, werden gelesen.</p>
+<p class="notiz">Enthält ein Name mehrere Datumsangaben, gewinnt die erste — in IMG_20240115_bearbeitet_2019-03-02 also die Aufnahme und nicht die spätere Notiz. Eine Angabe mit Uhrzeit hat immer Vorrang vor einer ohne.</p>
+<h2>Wenn nur Monat und Jahr im Namen stehen</h2>
+<p>Trägt der Name nur Jahr und Monat, etwa 2016 04 Blomberg, wird der April 2016 gelesen und der erste Tag des Monats angenommen. In der Zeile steht dann „(Tag angenommen)&quot;; der genaue Tag lässt sich rechts im Feld nachtragen.</p>
+<p class="notiz">Der Monat muss dafür zweistellig geschrieben sein. In einem Namen wie Bild 2 2016 steht sonst meist eine Zählnummer — und ein falsch gelesenes Datum wäre schlimmer als ein nicht gelesenes.</p>
+<h2>Tag oder Monat zuerst?</h2>
+<p>Der 3. April heißt auf Deutsch 3.4., auf Englisch 4/3 — dieselben zwei Zahlen, umgekehrte Bedeutung. Bei 15-03-2024 macht das nichts aus: einen Monat 15 gibt es nicht, die Angabe ist eindeutig und wird immer richtig gelesen. Nur wenn beide Zahlen als Monat durchgehen, etwa bei 03-05-2024, muss entschieden werden.</p>
+<p class="notiz">Liegt eine solche Datei in der Liste, erscheint über ihr eine orange Leiste mit der Wahl zwischen beiden Lesarten; die betroffenen Zeilen sind eigens gekennzeichnet. Voreingestellt ist die Schreibweise deiner Systemregion. Solange keine Datei mehrdeutig ist, gibt es nichts zu wählen — deshalb ist die Leiste dann auch nicht da.</p>
+<h2>Uhrzeit</h2>
+<p>Trägt der Name nur ein Datum, wird eine Uhrzeit angenommen. Sie lässt sich in den Einstellungen ändern.</p>
+<p class="notiz">Voreingestellt sind 12 Uhr mittags. Das verhindert, dass der Tag kippt, wenn die Datei später in eine andere Zeitzone wandert. Wird auch der Dateiname umgestellt, steht die angenommene Uhrzeit ebenfalls darin — Name und Aufnahmedatum sagen immer dasselbe.</p>
+<h2>Datum von Hand setzen</h2>
+<p>Rechts in jeder Zeile steht ein Feld mit Datum und Uhrzeit. Was dort eingetragen wird, hat Vorrang vor dem Datum aus dem Dateinamen. So lassen sich auch Dateien bearbeiten, in deren Namen gar kein Datum steht.</p>
+<p class="notiz">Der Pfeil neben dem Feld setzt die Zeile auf den Wert aus dem Dateinamen zurück.</p>
+<h2>Ein zweites Datum: wann der Inhalt entstand</h2>
+<p>Neben dem Aufnahmedatum lässt sich festhalten, wann das Motiv selbst entstand — bei einem abfotografierten Gemälde von 1650 also 1650 und nicht der Tag der Aufnahme. Der Schalter Motivdatum oben im Fenster blendet dafür die Spalte Datiert auf ein. Sie ist von Haus aus ausgeblendet, weil die meisten Dateien keine braucht.</p>
+<p class="notiz">Ablegen lässt sich das nur in JPEG, TIFF und HEIC. PNG und GIF nehmen allein das Aufnahmedatum auf, Filme ebenso; dort steht in der Spalte ein Hinweis statt eines Feldes. Das Aufnahmedatum selbst schreiben alle diese Formate.</p>
+<h2>Dateinamen vereinheitlichen</h2>
+<p>Auf Wunsch ersetzt die App die Datumsangabe im Dateinamen durch die ISO-Schreibweise mit Uhrzeit: aus 15.03.2024 Urlaub.jpg wird 2024-03-15 10-30-00 Urlaub.jpg. So sortieren die Dateien im Finder nach Aufnahmezeit. Einzuschalten mit dem Haken Dateinamen umstellen oben im Fenster; in der Liste steht der neue Name dann unter dem alten.</p>
+<p class="notiz">Steht im Namen gar kein Datum, wird das von Hand gesetzte vorangestellt. Ist der neue Name schon vergeben, wird durchnumeriert. Auch das Umbenennen nimmt ⌘Z zurück.</p>
+<h2>Rückgängig</h2>
+<p>Mit ⌘Z lässt sich ein Durchgang zurücknehmen: Aufnahmedatum sowie Erstellungs- und Änderungsdatum stehen danach wieder auf den Werten von vorher. ⌘⇧Z wiederholt ihn.</p>
+<p class="notiz">Wird die Liste geleert oder ein anderer Ordner gewählt, entfällt das Rückgängig — die App hat dann kein Zugriffsrecht mehr auf die alten Dateien.</p>
+<h2>Was verändert wird</h2>
+<p>Geschrieben werden EXIF DateTimeOriginal und DateTimeDigitized sowie TIFF DateTime, bei Filmen und Tonaufnahmen das Erstellungsdatum im Container. Die Bilddaten selbst bleiben unangetastet — ein JPEG wird nicht neu komprimiert.</p>
+<p class="notiz">Lege trotzdem eine Sicherung an, bevor du eine große Sammlung bearbeitest.</p>
+<h2>Wenn eine Zeile nicht grün wird</h2>
+<p>Ein oranger Haken heißt: das Aufnahmedatum ließ sich nicht schreiben, dafür tragen jetzt Erstellungs- und Änderungsdatum der Datei den Wert — die Angabe ist also festgehalten, nur an anderer Stelle. Die Zeile nennt den Grund. Ein rotes Dreieck heißt, dass gar nichts geschrieben werden konnte.</p>
+<p class="notiz">Wurde eine einzelne Datei gewählt, darf die App nur an dieser Datei arbeiten, nicht in ihrem Ordner — daran kann das Umbenennen scheitern; die Zeile sagt es dann. Abhilfe: den Ordner wählen statt der einzelnen Datei. Bleibt etwas unklar, sichert der Knopf in den Einstellungen unter Diagnose ein Protokoll der letzten sieben Tage.</p>
+  </article>
+  <p class="zurueck"><a href="../">← sName2Date</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../impressum.html">Impressum</a><a href="../../../privacy.html">Datenschutz der Website</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

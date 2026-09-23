@@ -9,7 +9,7 @@ python3 ~/Documents/Claude/Xcode/_Shared/tools/website/build.py
 ```
 
 Das Skript liegt im `_Shared`-Repo (nicht hier, damit keine lokalen Pfade öffentlich werden) und
-schreibt `index.html`, `scollect/`, `sname2date/` (Englisch, Wurzel) sowie `de/ … zh-hant/` neu.
+schreibt `index.html`, `scollect/`, `sname2date/` samt `help/` (Englisch, Wurzel) sowie `de/ … zh-hant/` neu.
 **Wer eine erzeugte Seite von Hand ändert, verliert die Änderung beim nächsten Lauf.** Quellen:
 
 | Inhalt | Quelle |
@@ -18,6 +18,8 @@ schreibt `index.html`, `scollect/`, `sname2date/` (Englisch, Wurzel) sowie `de/ 
 | Bildschirmfotos (je Sprache) | `App Store/<CODE>/Screenshots/` der App |
 | App-Liste, Einzeiler, Symbole, „Kostenlos“ | `_GeneralSystemKit/StoreApps.swift` + dessen Paketkatalog |
 | Menü, Überschriften, Fußzeile | `_Shared/tools/website/texte.json` |
+| Hilfe sCollect (`…/scollect/help/`) | HelpBook im Projekt, `sCollect.help/…/<lproj>/index.html` — Inhalt ohne die Schlußzeile; PT-PT bekommt das brasilianische `pt.lproj` wie die App |
+| Hilfe sName2Date (`…/sname2date/help/`) | `HelpView.swift` (Abschnitte in Reihenfolge, Fassung der Vollversion) + Katalog der App |
 
 Von Hand und nur deutsch/englisch: `impressum.html`, `privacy.html`, `assets/style.css`, `assets/banner.jpg`.
 

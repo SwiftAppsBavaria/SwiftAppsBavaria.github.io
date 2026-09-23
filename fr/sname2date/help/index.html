@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aide sName2Date</title>
+<meta name="description" content="Aide sName2Date">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/sname2date/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/sname2date/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/sname2date/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/sname2date/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/sname2date/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/sname2date/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/sname2date/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/sname2date/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/sname2date/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/sname2date/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/sname2date/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/sname2date/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/sname2date/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../fr/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../fr/#apps">Apps</a>
+    <details class="sprache"><summary aria-label="Langue">Français</summary><div><a href="../../../sname2date/help/" lang="en">English</a><a href="../../../de/sname2date/help/" lang="de">Deutsch</a><a href="../../../es/sname2date/help/" lang="es">Español</a><a href="../../../fr/sname2date/help/" aria-current="true" lang="fr">Français</a><a href="../../../it/sname2date/help/" lang="it">Italiano</a><a href="../../../ja/sname2date/help/" lang="ja">日本語</a><a href="../../../ko/sname2date/help/" lang="ko">한국어</a><a href="../../../pt-br/sname2date/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../pt-pt/sname2date/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../ru/sname2date/help/" lang="ru">Русский</a><a href="../../../zh-hans/sname2date/help/" lang="zh-Hans">简体中文</a><a href="../../../zh-hant/sname2date/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../">← sName2Date</a></p>
+  <article class="hilfe">
+<h1>Aide sName2Date</h1>
+<h2>Ce que fait l&#x27;app</h2>
+<p>sName2Date cherche une date dans le nom du fichier et l&#x27;écrit comme date de prise de vue dans le fichier image, vidéo ou audio. Une date de prise de vue déjà présente est alors remplacée — c&#x27;est précisément la raison d&#x27;être de l&#x27;app, car une exportation ou une numérisation porte le plus souvent une date erronée.</p>
+<p class="notiz">Si les fichiers ayant déjà une date de prise de vue doivent rester intacts, cela se règle dans les Réglages.</p>
+<h2>Les deux cases en haut de la fenêtre</h2>
+<p>En haut de la fenêtre se trouvent deux cases qui ne s&#x27;excluent pas. Écrire la date dans le fichier inscrit la date trouvée comme date de prise de vue dans le fichier lui-même ; là où le format n&#x27;en accepte aucune — un PDF par exemple ou un fichier texte — l&#x27;app définit à la place les dates de création et de modification du fichier, et la coche de la ligne est alors orange au lieu de verte. Convertir les noms de fichiers met le nom à la notation ISO. Les deux ensemble sont le cas normal ; si seule la seconde est cochée, aucun fichier n&#x27;est ouvert et il n&#x27;y a que le renommage.</p>
+<p class="notiz">La troisième case, Date au début, relève du renommage : elle place l&#x27;indication au début du nom au lieu de la remplacer à l&#x27;endroit où elle a été trouvée. Elle est grisée tant qu&#x27;aucun renommage n&#x27;a lieu.</p>
+<h2>Charger des fichiers</h2>
+<p>Les fichiers arrivent dans la liste de trois façons : par les boutons en haut de la fenêtre, en les glissant sur la fenêtre, ou par le menu Fichier — ⌘O choisit des fichiers, ⌘⇧O un dossier. La ligne sous les boutons indique quel dossier est chargé.</p>
+<p class="notiz">Pour un dossier, les sous-dossiers sont inclus tant que la case correspondante est cochée.</p>
+<h2>Notations reconnues</h2>
+<p>La date et l&#x27;heure sont reconnues dans les formes courantes, par exemple 2024-01-15 10-30-00, IMG_20240115_103000, 2024-01-15, 2024 01 15, 15.01.2024 et 15-01-2024. Les années à deux chiffres sont complétées. Les noms attribués par SwiftRename sont également lus.</p>
+<p class="notiz">Si un nom contient plusieurs dates, la première l&#x27;emporte — dans IMG_20240115_bearbeitet_2019-03-02, c&#x27;est donc la prise de vue et non la note ajoutée plus tard. Une indication avec heure a toujours priorité sur une indication sans heure.</p>
+<h2>Quand le nom ne contient que le mois et l&#x27;année</h2>
+<p>Si le nom ne porte qu&#x27;une année et un mois, par exemple 2016 04 Blomberg, avril 2016 est lu et le premier jour du mois est supposé. La ligne indique alors « (jour supposé) » ; le jour exact peut être complété dans le champ à droite.</p>
+<p class="notiz">Le mois doit pour cela être écrit sur deux chiffres. Dans un nom comme Bild 2 2016, il s&#x27;agit le plus souvent d&#x27;un numéro d&#x27;ordre — et une date mal lue serait pire qu&#x27;une date non lue.</p>
+<h2>Jour ou mois d&#x27;abord ?</h2>
+<p>Le 3 avril s&#x27;écrit 3/4 en français, mais 4/3 en anglais — les deux mêmes nombres, un sens inversé. Pour 15-03-2024, cela n&#x27;a aucune importance : il n&#x27;existe pas de mois 15, l&#x27;indication est sans équivoque et sera toujours lue correctement. Ce n&#x27;est que lorsque les deux nombres peuvent passer pour un mois, comme dans 03-05-2024, qu&#x27;il faut trancher.</p>
+<p class="notiz">Si un tel fichier figure dans la liste, une barre orange apparaît au-dessus, offrant le choix entre les deux lectures ; les lignes concernées sont signalées à part. La notation de la région de votre système est présélectionnée. Tant qu&#x27;aucun fichier n&#x27;est ambigu, il n&#x27;y a rien à choisir — c&#x27;est pourquoi la barre est alors absente.</p>
+<h2>Heure</h2>
+<p>Si le nom ne contient qu&#x27;une date, une heure est supposée. Elle peut être modifiée dans les Réglages.</p>
+<p class="notiz">Midi est la valeur par défaut. Cela évite que le jour ne bascule si le fichier passe plus tard dans un autre fuseau horaire. Si le nom du fichier est lui aussi adapté, l&#x27;heure supposée y figure également — le nom et la date de prise de vue disent toujours la même chose.</p>
+<h2>Définir la date à la main</h2>
+<p>À droite de chaque ligne se trouve un champ avec la date et l&#x27;heure. Ce qui y est saisi prime sur la date issue du nom du fichier. Il est ainsi possible de traiter aussi des fichiers dont le nom ne contient aucune date.</p>
+<p class="notiz">La flèche à côté du champ rétablit dans la ligne la valeur issue du nom du fichier.</p>
+<h2>Une seconde date : quand le contenu a été créé</h2>
+<p>Outre la date de prise de vue, il est possible de consigner quand le sujet lui-même a été créé — pour la photographie d&#x27;un tableau de 1650, donc 1650 et non le jour de la prise de vue. L&#x27;option « Date du contenu » en haut de la fenêtre affiche à cet effet la colonne « Daté de ». Elle est masquée par défaut, car la plupart des fichiers n&#x27;en ont pas besoin.</p>
+<p class="notiz">Cet enregistrement n&#x27;est possible qu&#x27;en JPEG, TIFF et HEIC. PNG et GIF ne reçoivent que la date de prise de vue, les films de même ; la colonne y affiche une indication au lieu d&#x27;un champ. La date de prise de vue elle-même s&#x27;écrit dans tous ces formats.</p>
+<h2>Uniformiser les noms de fichiers</h2>
+<p>Sur demande, l&#x27;app remplace la date contenue dans le nom du fichier par la notation ISO avec l&#x27;heure : 15.03.2024 Urlaub.jpg devient 2024-03-15 10-30-00 Urlaub.jpg. Les fichiers se classent ainsi par heure de prise de vue dans le Finder. À activer avec la case Convertir les noms de fichiers en haut de la fenêtre ; dans la liste, le nouveau nom figure alors sous l&#x27;ancien.</p>
+<p class="notiz">Si le nom ne contient aucune date, celle définie à la main est placée en tête. Si le nouveau nom est déjà pris, une numérotation est ajoutée. ⌘Z annule aussi le renommage.</p>
+<h2>Annuler</h2>
+<p>⌘Z permet d&#x27;annuler un passage : la date de prise de vue ainsi que les dates de création et de modification retrouvent ensuite leurs valeurs précédentes. ⌘⇧Z le rétablit.</p>
+<p class="notiz">Si la liste est vidée ou si un autre dossier est choisi, l&#x27;annulation n&#x27;est plus possible — l&#x27;app n&#x27;a alors plus de droit d&#x27;accès aux anciens fichiers.</p>
+<h2>Ce qui est modifié</h2>
+<p>Sont écrits EXIF DateTimeOriginal et DateTimeDigitized ainsi que TIFF DateTime, et pour les vidéos et les enregistrements audio la date de création contenue dans le conteneur. Les données d&#x27;image elles-mêmes restent intactes — un JPEG n&#x27;est pas recompressé.</p>
+<p class="notiz">Effectuez malgré tout une sauvegarde avant de traiter une grande collection.</p>
+<h2>Lorsqu&#x27;une ligne ne devient pas verte</h2>
+<p>Une coche orange signifie que la date de prise de vue n&#x27;a pas pu être écrite, mais que les dates de création et de modification du fichier portent désormais cette valeur — l&#x27;indication est donc conservée, seulement à un autre endroit. La ligne en indique la raison. Un triangle rouge signifie que rien du tout n&#x27;a pu être écrit.</p>
+<p class="notiz">Si un seul fichier a été choisi, l&#x27;app ne peut travailler que sur ce fichier, pas dans son dossier — le renommage peut échouer pour cette raison ; la ligne l&#x27;indique alors. Remède : choisir le dossier plutôt que le fichier isolé. Si un point reste obscur, le bouton des Réglages, sous Diagnostic, enregistre un journal des sept derniers jours.</p>
+  </article>
+  <p class="zurueck"><a href="../">← sName2Date</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../impressum.html">Mentions légales</a><a href="../../../privacy.html">Confidentialité du site</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

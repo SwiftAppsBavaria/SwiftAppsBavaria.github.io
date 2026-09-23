@@ -132,3 +132,40 @@ details.sprache > div a[aria-current] { font-weight: 600; }
 .beschreibung ul { margin: 0 0 12px; padding-left: 22px; }
 .beschreibung li { margin: 2px 0; }
 .storelink { font-weight: 600; }
+
+/* Hilfe — Inhalt aus dem HelpBook (sCollect) bzw. aus HelpView.swift (sName2Date).
+   Die Klassen sind die des HelpBooks; hier auf Website-Maß gebracht. */
+.hilfelink { margin: 10px 0 0; font-size: 17px; }
+.zurueck { margin: 24px 0; font-size: 15px; }
+.hilfe { max-width: 760px; }
+.hilfe h1 { font-size: 36px; line-height: 1.15; margin: 8px 0 8px; letter-spacing: -.01em; }
+.hilfe h2 { font-size: 24px; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.hilfe h3 { font-size: 19px; margin: 24px 0 8px; }
+.hilfe p { margin: 10px 0; }
+.hilfe ul, .hilfe ol { margin: 10px 0 10px 24px; padding: 0; }
+.hilfe li { margin: 4px 0; }
+.hilfe .subtitle { font-size: 19px; color: var(--text-soft); margin: 0 0 20px; }
+.hilfe .notiz { color: var(--text-soft); font-size: 15px; }
+.hilfe .toc { background: var(--bg-soft); border-radius: 12px; padding: 16px 20px; margin: 16px 0 24px; }
+.hilfe .toc h2 { font-size: 17px; margin: 0 0 8px; border: none; padding: 0; }
+.hilfe .toc ol { margin: 0 0 0 20px; }
+.hilfe aside, .hilfe .tip { background: var(--bg-soft); border-radius: 10px; padding: 12px 16px; margin: 14px 0; font-size: 15px; }
+.hilfe aside strong, .hilfe .tip strong { display: block; margin-bottom: 4px; }
+.hilfe kbd {
+  display: inline-block; padding: 1px 6px; font: 14px/1.4 -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 4px;
+}
+.hilfe code { font-family: "SF Mono", Menlo, monospace; font-size: 14px; background: var(--bg-soft); padding: 1px 5px; border-radius: 4px; }
+.hilfe table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+.hilfe th, .hilfe td { text-align: left; padding: 6px 10px; border: 1px solid var(--line); vertical-align: top; }
+.hilfe th { background: var(--bg-soft); font-weight: 600; }
+.hilfe .shortcut-table td:first-child { white-space: nowrap; width: 200px; }
+.hilfe img.icon { width: 16px; height: 16px; display: inline; vertical-align: -2px; }
+.hilfe .steps { counter-reset: step; }
+.hilfe .step { counter-increment: step; margin: 12px 0; padding-left: 34px; position: relative; }
+.hilfe .step::before {
+  content: counter(step); position: absolute; left: 0; top: 2px; width: 22px; height: 22px;
+  background: var(--accent); color: #fff; border-radius: 50%; font-size: 12px; font-weight: 700;
+  text-align: center; line-height: 22px;
+}
+@media (max-width: 600px) { .hilfe table { display: block; overflow-x: auto; } .hilfe .shortcut-table td:first-child { width: auto; } }

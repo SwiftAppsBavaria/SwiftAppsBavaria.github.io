@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sName2Date 輔助說明</title>
+<meta name="description" content="sName2Date 輔助說明">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/sname2date/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/sname2date/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/sname2date/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/sname2date/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/sname2date/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/sname2date/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/sname2date/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/sname2date/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/sname2date/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/sname2date/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/sname2date/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/sname2date/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/sname2date/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../zh-hant/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../zh-hant/#apps">App</a>
+    <details class="sprache"><summary aria-label="語言">繁體中文</summary><div><a href="../../../sname2date/help/" lang="en">English</a><a href="../../../de/sname2date/help/" lang="de">Deutsch</a><a href="../../../es/sname2date/help/" lang="es">Español</a><a href="../../../fr/sname2date/help/" lang="fr">Français</a><a href="../../../it/sname2date/help/" lang="it">Italiano</a><a href="../../../ja/sname2date/help/" lang="ja">日本語</a><a href="../../../ko/sname2date/help/" lang="ko">한국어</a><a href="../../../pt-br/sname2date/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../pt-pt/sname2date/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../ru/sname2date/help/" lang="ru">Русский</a><a href="../../../zh-hans/sname2date/help/" lang="zh-Hans">简体中文</a><a href="../../../zh-hant/sname2date/help/" aria-current="true" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../">← sName2Date</a></p>
+  <article class="hilfe">
+<h1>sName2Date 輔助說明</h1>
+<h2>這個 App 做什麼</h2>
+<p>sName2Date 會在檔案名稱中尋找日期，並把它當作拍攝日期寫入影像、影片或音訊檔案。既有的拍攝日期會被覆寫 —— 這正是這個 App 的用途，因為匯出或數位化的檔案通常帶著錯誤的日期。</p>
+<p class="notiz">若希望已有拍攝日期的檔案保持不動，可以在設定中更改。</p>
+<h2>視窗上方的兩個選項</h2>
+<p>視窗上方有兩個選項，兩者並不互相排斥。將日期寫入檔案會把找到的日期作為拍攝日期寫進檔案本身；若格式無法容納拍攝日期 —— 例如 PDF 或文字檔 —— App 就改為設定檔案的建立日期與修改日期，這時該行的勾號會是橘色而不是綠色。調整檔案名稱則把名稱改成 ISO 寫法。兩者一起用是常態；若只勾選第二項，就不會開啟任何檔案，只做重新命名。</p>
+<p class="notiz">第三個選項，日期置於開頭，屬於重新命名：它會把日期放到名稱最前面，而不是在找到的位置上取代它。只要不重新命名，它就是灰色的。</p>
+<h2>載入檔案</h2>
+<p>有三種方式可以把檔案加入列表：視窗上方的按鈕、把檔案拖到視窗上，或透過「檔案」選單 —— ⌘O 選擇檔案，⌘⇧O 選擇資料夾。按鈕下方那一行會說明目前載入的是哪個資料夾。</p>
+<p class="notiz">選擇資料夾時，只要旁邊的選項有勾選，子資料夾也會一併納入。</p>
+<h2>可辨識的寫法</h2>
+<p>常見形式的日期與時間都能辨識，例如 2024-01-15 10-30-00、IMG_20240115_103000、2024-01-15、2024 01 15、15.01.2024 與 15-01-2024。兩位數的年份會自動補齊。SwiftRename 產生的名稱同樣讀得出來。</p>
+<p class="notiz">名稱中若有多個日期，以第一個為準 —— 在 IMG_20240115_bearbeitet_2019-03-02 中就是拍攝的日期，而不是後來加註的日期。含時間的日期一律優先於不含時間的。</p>
+<h2>名稱中只有月份與年份時</h2>
+<p>若名稱中只有年份與月份，例如 2016 04 Blomberg，就讀作 2016 年 4 月，並假定為當月的第一天。此時該行會顯示「（日為假定值）」；確切的日期可以在右側的欄位中補上。</p>
+<p class="notiz">為此月份必須寫成兩位數。像 Bild 2 2016 這樣的名稱中通常是流水號 —— 讀錯日期比讀不出日期更糟。</p>
+<h2>日在前還是月在前？</h2>
+<p>4 月 3 日在台灣寫成 4/3，在英式寫法中卻是 3/4 —— 同樣兩個數字，意思相反。碰到 15-03-2024 就不成問題：沒有第 15 個月，這個寫法是明確的，一定會被讀對。只有兩個數字都可能是月份時，例如 03-05-2024，才需要做決定。</p>
+<p class="notiz">列表中若有這樣的檔案，上方會出現一條橘色橫列，讓你在兩種讀法之間選擇；受影響的行也會特別標示。預設是你系統地區設定的寫法。只要沒有檔案有歧義，就沒有東西要選 —— 所以那條橫列也不會出現。</p>
+<h2>時間</h2>
+<p>名稱中若只有日期，就會假定一個時間。這個時間可以在設定中更改。</p>
+<p class="notiz">預設是中午 12 點。這樣可避免檔案日後移到其他時區時日期跳到前後一天。若檔案名稱也一併改寫，假定的時間同樣會出現在名稱中 —— 名稱與拍攝日期永遠一致。</p>
+<h2>手動設定日期</h2>
+<p>每一行右側都有一個日期與時間的欄位。在那裡填入的內容優先於檔案名稱中的日期。這樣一來，名稱中完全沒有日期的檔案也能處理。</p>
+<p class="notiz">欄位旁的箭頭會把該行回復成檔案名稱中的值。</p>
+<h2>第二個日期：內容產生的時間</h2>
+<p>除了拍攝日期之外，還可以記錄被攝主體本身產生的時間——拍攝一幅 1650 年的畫作時，記錄的是 1650 年，而不是拍攝當天。視窗上方的「創作日期」開關會顯示對應的「創作日期」欄。此欄預設隱藏，因為大多數檔案並不需要。</p>
+<p class="notiz">只有 JPEG、TIFF 和 HEIC 能夠儲存它。PNG 和 GIF 只接受拍攝日期，影片也一樣；這些檔案在該欄中顯示提示，而不是輸入欄位。拍攝日期本身，以上所有格式都能寫入。</p>
+<h2>統一檔案名稱</h2>
+<p>需要的話，App 可以把檔案名稱中的日期改成含時間的 ISO 寫法：15.03.2024 Urlaub.jpg 會變成 2024-03-15 10-30-00 Urlaub.jpg。這樣檔案在 Finder 中就會依拍攝時間排序。此功能以視窗上方的調整檔案名稱選項開啟；開啟後，新名稱會顯示在列表中舊名稱的下方。</p>
+<p class="notiz">若名稱中完全沒有日期，就把手動設定的日期加在名稱前面。新名稱若已經有人用了，就會加上編號。重新命名同樣可以用 ⌘Z 還原。</p>
+<h2>還原</h2>
+<p>用 ⌘Z 可以還原一次處理：拍攝日期以及建立日期與修改日期都會回到先前的值。⌘⇧Z 則是重做。</p>
+<p class="notiz">清空列表或改選其他資料夾之後，就無法再還原 —— 因為 App 對舊的檔案已經沒有存取權限。</p>
+<h2>會更動哪些內容</h2>
+<p>寫入的是 EXIF DateTimeOriginal 與 DateTimeDigitized 以及 TIFF DateTime，影片與錄音則是容器裡的建立日期。影像資料本身不會被更動 —— JPEG 不會重新壓縮。</p>
+<p class="notiz">處理大量檔案之前，還是先做一份備份。</p>
+<h2>當某一行沒有變成綠色</h2>
+<p>橘色勾號表示：拍攝日期寫不進去，但檔案的建立日期與修改日期已經帶有這個值 —— 資料還是保留下來了，只是換了地方。該行會說明原因。紅色三角形表示完全沒有寫入任何東西。</p>
+<p class="notiz">選的若是單一檔案，App 只能動這個檔案，不能在它所在的資料夾裡動作 —— 重新命名可能因此失敗；該行會說明。解決辦法：選擇資料夾，而不是單一檔案。若還有不清楚的地方，設定中「診斷」下的按鈕可以儲存最近七天的記錄檔。</p>
+  </article>
+  <p class="zurueck"><a href="../">← sName2Date</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../impressum.html">法律聲明</a><a href="../../../privacy.html">網站隱私權</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

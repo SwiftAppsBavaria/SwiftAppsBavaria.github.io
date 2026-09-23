@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ajuda do sName2Date</title>
+<meta name="description" content="Ajuda do sName2Date">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/sname2date/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/sname2date/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/sname2date/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/sname2date/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/sname2date/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/sname2date/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/sname2date/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/sname2date/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/sname2date/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/sname2date/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/sname2date/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/sname2date/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/sname2date/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../pt-pt/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../pt-pt/#apps">Apps</a>
+    <details class="sprache"><summary aria-label="Idioma">Português (Portugal)</summary><div><a href="../../../sname2date/help/" lang="en">English</a><a href="../../../de/sname2date/help/" lang="de">Deutsch</a><a href="../../../es/sname2date/help/" lang="es">Español</a><a href="../../../fr/sname2date/help/" lang="fr">Français</a><a href="../../../it/sname2date/help/" lang="it">Italiano</a><a href="../../../ja/sname2date/help/" lang="ja">日本語</a><a href="../../../ko/sname2date/help/" lang="ko">한국어</a><a href="../../../pt-br/sname2date/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../pt-pt/sname2date/help/" aria-current="true" lang="pt-PT">Português (Portugal)</a><a href="../../../ru/sname2date/help/" lang="ru">Русский</a><a href="../../../zh-hans/sname2date/help/" lang="zh-Hans">简体中文</a><a href="../../../zh-hant/sname2date/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../">← sName2Date</a></p>
+  <article class="hilfe">
+<h1>Ajuda do sName2Date</h1>
+<h2>O que a aplicação faz</h2>
+<p>O sName2Date procura uma data no nome do ficheiro e escreve-a como data de captura no ficheiro de imagem, de filme ou de áudio. Uma data de captura já existente é substituída — é precisamente para isso que a aplicação existe, pois uma exportação ou uma digitalização traz quase sempre a data errada.</p>
+<p class="notiz">Se os ficheiros que já têm data de captura devem ficar intactos, isso pode ser alterado nas Definições.</p>
+<h2>As duas opções no topo da janela</h2>
+<p>No topo da janela existem duas opções que não se excluem. Escrever a data no ficheiro coloca a data encontrada no próprio ficheiro como data de captura; onde o formato não aceita nenhuma — um PDF, por exemplo, ou um ficheiro de texto — a aplicação define em vez disso as datas de criação e modificação do ficheiro, e o visto na linha fica então laranja em vez de verde. Converter o nome do ficheiro passa o nome para a notação ISO. As duas em conjunto são o caso normal; se apenas a segunda estiver ativa, não se abre nenhum ficheiro e apenas se muda o nome.</p>
+<p class="notiz">A terceira opção, Data no início, pertence à mudança de nome: coloca a indicação no princípio do nome, em vez de a substituir no sítio onde foi encontrada. Fica cinzenta enquanto não se mudar o nome.</p>
+<h2>Carregar ficheiros</h2>
+<p>Os ficheiros chegam à lista por três vias: através dos botões no topo da janela, arrastando-os para a janela ou através do menu Ficheiro — ⌘O escolhe ficheiros, ⌘⇧O escolhe uma pasta. A linha por baixo dos botões indica que pasta está carregada.</p>
+<p class="notiz">No caso de uma pasta, as subpastas são incluídas enquanto a opção ao lado estiver assinalada.</p>
+<h2>Notações reconhecidas</h2>
+<p>São reconhecidas datas e horas nas formas correntes, por exemplo 2024-01-15 10-30-00, IMG_20240115_103000, 2024-01-15, 2024 01 15, 15.01.2024 e 15-01-2024. Os anos de dois dígitos são completados. Também são lidos os nomes atribuídos pelo SwiftRename.</p>
+<p class="notiz">Se um nome contiver várias datas, ganha a primeira — em IMG_20240115_bearbeitet_2019-03-02 é, portanto, a da captura e não a anotação posterior. Uma indicação com hora tem sempre precedência sobre uma sem hora.</p>
+<h2>Quando no nome só constam o mês e o ano</h2>
+<p>Se o nome tiver apenas ano e mês, por exemplo 2016 04 Blomberg, é lido abril de 2016 e presume-se o primeiro dia do mês. Na linha surge então «(dia presumido)»; o dia exato pode ser indicado no campo à direita.</p>
+<p class="notiz">Para isso, o mês tem de estar escrito com dois algarismos. Num nome como Bild 2 2016 costuma estar antes um número sequencial — e uma data mal lida seria pior do que uma data não lida.</p>
+<h2>Dia ou mês primeiro?</h2>
+<p>Em português, 3 de abril escreve-se 3/4; em inglês, 4/3 — os mesmos dois números com o significado invertido. Em 15-03-2024 isso não faz diferença: não existe um mês 15, a indicação é inequívoca e é sempre lida corretamente. Só quando ambos os números podem ser um mês, como em 03-05-2024, é preciso decidir.</p>
+<p class="notiz">Se existir um ficheiro assim na lista, aparece por cima dele uma barra laranja com a escolha entre as duas leituras; as linhas afetadas ficam assinaladas. A predefinição é a notação da tua região do sistema. Enquanto nenhum ficheiro for ambíguo, não há nada a escolher — por isso a barra também não aparece.</p>
+<h2>Hora</h2>
+<p>Se o nome só tiver a data, é presumida uma hora. Pode ser alterada nas Definições.</p>
+<p class="notiz">A predefinição é o meio-dia. Isso evita que o dia mude se o ficheiro passar mais tarde para outro fuso horário. Se o nome do ficheiro também for alterado, a hora presumida fica igualmente indicada nele — o nome e a data de captura dizem sempre o mesmo.</p>
+<h2>Definir a data manualmente</h2>
+<p>À direita de cada linha há um campo com data e hora. O que aí for indicado tem precedência sobre a data lida no nome do ficheiro. Assim também é possível processar ficheiros que não tenham qualquer data no nome.</p>
+<p class="notiz">A seta ao lado do campo repõe na linha o valor lido no nome do ficheiro.</p>
+<h2>Uma segunda data: quando o conteúdo surgiu</h2>
+<p>Além da data de captura, é possível registar quando o próprio motivo surgiu — na fotografia de uma pintura de 1650, portanto 1650 e não o dia da tomada. O interruptor «Data do conteúdo» na parte superior da janela mostra para isso a coluna «Datado de». Está oculta por predefinição, porque a maioria dos ficheiros não precisa dela.</p>
+<p class="notiz">Isso só pode ser guardado em JPEG, TIFF e HEIC. PNG e GIF aceitam apenas a data de captura, e os filmes também; aí a coluna mostra um aviso em vez de um campo. A própria data de captura é escrita em todos estes formatos.</p>
+<h2>Uniformizar os nomes dos ficheiros</h2>
+<p>Se quiseres, a aplicação substitui a data no nome do ficheiro pela notação ISO com hora: 15.03.2024 Urlaub.jpg passa a 2024-03-15 10-30-00 Urlaub.jpg. Assim, os ficheiros ficam ordenados no Finder pela hora de captura. Ativa-se com a opção Converter o nome do ficheiro no topo da janela; na lista, o novo nome aparece por baixo do antigo.</p>
+<p class="notiz">Se o nome não tiver qualquer data, é colocada no início a que foi definida manualmente. Se o novo nome já existir, é acrescentada uma numeração. O ⌘Z também anula a mudança de nome.</p>
+<h2>Anular</h2>
+<p>Com ⌘Z é possível anular uma operação: a data de captura, bem como as datas de criação e modificação, voltam aos valores anteriores. ⌘⇧Z volta a executá-la.</p>
+<p class="notiz">Se a lista for limpa ou for escolhida outra pasta, deixa de ser possível anular — a aplicação já não tem direito de acesso aos ficheiros antigos.</p>
+<h2>O que é alterado</h2>
+<p>São escritos EXIF DateTimeOriginal e DateTimeDigitized, bem como TIFF DateTime; nos filmes e nas gravações de áudio, a data de criação dentro do contentor. Os dados da imagem em si ficam intactos — um JPEG não é recomprimido.</p>
+<p class="notiz">Ainda assim, faz uma cópia de segurança antes de processares uma coleção grande.</p>
+<h2>Quando uma linha não fica verde</h2>
+<p>Um visto laranja significa: não foi possível escrever a data de captura, mas as datas de criação e modificação do ficheiro passaram a ter esse valor — a indicação ficou registada, apenas noutro sítio. A linha indica o motivo. Um triângulo vermelho significa que não foi possível escrever coisa alguma.</p>
+<p class="notiz">Se tiver sido escolhido um único ficheiro, a aplicação só pode trabalhar nesse ficheiro e não na pasta dele — a mudança de nome pode falhar por causa disso; nesse caso, a linha indica-o. Solução: escolher a pasta em vez do ficheiro isolado. Se ficar alguma dúvida, o botão das Definições, em Diagnóstico, guarda um registo dos últimos sete dias.</p>
+  </article>
+  <p class="zurueck"><a href="../">← sName2Date</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../impressum.html">Aviso legal</a><a href="../../../privacy.html">Privacidade do site</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aiuto sName2Date</title>
+<meta name="description" content="Aiuto sName2Date">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/sname2date/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/sname2date/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/sname2date/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/sname2date/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/sname2date/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/sname2date/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/sname2date/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/sname2date/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/sname2date/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/sname2date/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/sname2date/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/sname2date/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/sname2date/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../it/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../it/#apps">App</a>
+    <details class="sprache"><summary aria-label="Lingua">Italiano</summary><div><a href="../../../sname2date/help/" lang="en">English</a><a href="../../../de/sname2date/help/" lang="de">Deutsch</a><a href="../../../es/sname2date/help/" lang="es">Español</a><a href="../../../fr/sname2date/help/" lang="fr">Français</a><a href="../../../it/sname2date/help/" aria-current="true" lang="it">Italiano</a><a href="../../../ja/sname2date/help/" lang="ja">日本語</a><a href="../../../ko/sname2date/help/" lang="ko">한국어</a><a href="../../../pt-br/sname2date/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../pt-pt/sname2date/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../ru/sname2date/help/" lang="ru">Русский</a><a href="../../../zh-hans/sname2date/help/" lang="zh-Hans">简体中文</a><a href="../../../zh-hant/sname2date/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../">← sName2Date</a></p>
+  <article class="hilfe">
+<h1>Aiuto sName2Date</h1>
+<h2>Cosa fa l&#x27;app</h2>
+<p>sName2Date cerca una data nel nome del file e la scrive come data di scatto nel file di immagine, di filmato o audio. Un&#x27;eventuale data di scatto già presente viene sovrascritta — è proprio a questo che serve l&#x27;app, perché un&#x27;esportazione o una digitalizzazione porta di solito la data sbagliata.</p>
+<p class="notiz">Se i file che hanno già una data di scatto devono restare intatti, è possibile cambiarlo nelle impostazioni.</p>
+<h2>Le due caselle in alto nella finestra</h2>
+<p>In alto nella finestra ci sono due caselle che non si escludono a vicenda. Scrivi la data nel file mette la data trovata come data di scatto nel file stesso; dove il formato non ne accetta alcuna — un PDF per esempio o un file di testo — l&#x27;app imposta invece la data di creazione e di modifica del file, e il segno di spunta nella riga è allora arancione invece che verde. Converti i nomi dei file porta il nome alla notazione ISO. Entrambe insieme sono il caso normale; se è attiva solo la seconda, non viene aperto alcun file e si procede solo alla ridenominazione.</p>
+<p class="notiz">La terza casella, Data all&#x27;inizio, appartiene alla ridenominazione: mette l&#x27;indicazione all&#x27;inizio del nome invece di sostituirla nel punto in cui è stata trovata. È in grigio finché non si rinomina.</p>
+<h2>Caricare i file</h2>
+<p>I file arrivano nell&#x27;elenco in tre modi: con i pulsanti in alto nella finestra, trascinandoli sulla finestra oppure dal menu Archivio — ⌘O sceglie i file, ⌘⇧O una cartella. La riga sotto i pulsanti indica quale cartella è attualmente caricata.</p>
+<p class="notiz">Se scegli una cartella, vengono incluse anche le sottocartelle, finché l&#x27;opzione accanto è attiva.</p>
+<h2>Formati riconosciuti</h2>
+<p>Vengono riconosciute data e ora nelle forme più diffuse, per esempio 2024-01-15 10-30-00, IMG_20240115_103000, 2024-01-15, 2024 01 15, 15.01.2024 e 15-01-2024. Gli anni a due cifre vengono completati. Vengono letti anche i nomi assegnati da SwiftRename.</p>
+<p class="notiz">Se un nome contiene più date, vince la prima — in IMG_20240115_bearbeitet_2019-03-02 quindi lo scatto e non l&#x27;annotazione successiva. Un&#x27;indicazione con l&#x27;ora ha sempre la precedenza su una senza.</p>
+<h2>Quando nel nome ci sono solo mese e anno</h2>
+<p>Se il nome contiene solo anno e mese, ad esempio 2016 04 Blomberg, viene letto aprile 2016 e si presume il primo giorno del mese. Nella riga compare allora «(giorno presunto)»; il giorno esatto si può aggiungere nel campo a destra.</p>
+<p class="notiz">Il mese deve perciò essere scritto con due cifre. In un nome come Bild 2 2016 si tratta per lo più di un numero progressivo — e una data letta male sarebbe peggio di una data non letta.</p>
+<h2>Prima il giorno o il mese?</h2>
+<p>In italiano il 3 aprile si scrive 3/4, in inglese 4/3 — le stesse due cifre, significato opposto. Con 15-03-2024 questo non ha conseguenze: un mese 15 non esiste, l&#x27;indicazione è univoca e viene sempre letta correttamente. Solo quando entrambi i numeri possono valere come mese, per esempio in 03-05-2024, occorre decidere.</p>
+<p class="notiz">Se nell&#x27;elenco c&#x27;è un file di questo tipo, sopra di esso compare una barra arancione con la scelta tra le due letture; le righe interessate sono contrassegnate in modo apposito. È preimpostata la notazione della regione del tuo sistema. Finché nessun file è ambiguo non c&#x27;è nulla da scegliere — per questo la barra non compare.</p>
+<h2>Ora</h2>
+<p>Se il nome contiene solo una data, viene presunta un&#x27;ora. È possibile modificarla nelle impostazioni.</p>
+<p class="notiz">Sono preimpostate le 12 di mezzogiorno. Ciò evita che il giorno cambi se il file passa in seguito in un altro fuso orario. Se viene modificato anche il nome del file, l&#x27;ora presunta compare anche lì — nome e data di scatto dicono sempre la stessa cosa.</p>
+<h2>Impostare la data manualmente</h2>
+<p>A destra di ogni riga si trova un campo con data e ora. Ciò che viene inserito lì ha la precedenza sulla data ricavata dal nome del file. In questo modo si possono elaborare anche file nel cui nome non compare alcuna data.</p>
+<p class="notiz">La freccia accanto al campo riporta la riga al valore ricavato dal nome del file.</p>
+<h2>Una seconda data: quando è nato il contenuto</h2>
+<p>Accanto alla data di scatto si può annotare quando è nato il soggetto stesso: nella fotografia di un dipinto del 1650 quindi 1650 e non il giorno della ripresa. L&#x27;interruttore «Data del contenuto» in alto nella finestra mostra a tal fine la colonna «Datato al». È nascosta per impostazione predefinita, perché la maggior parte dei file non ne ha bisogno.</p>
+<p class="notiz">Questo si può memorizzare solo in JPEG, TIFF e HEIC. PNG e GIF accolgono soltanto la data di scatto, e così i filmati; lì nella colonna compare un&#x27;indicazione invece di un campo. La data di scatto stessa viene scritta in tutti questi formati.</p>
+<h2>Uniformare i nomi dei file</h2>
+<p>Se lo desideri, l&#x27;app sostituisce la data nel nome del file con la notazione ISO comprensiva di ora: da 15.03.2024 Urlaub.jpg si ottiene 2024-03-15 10-30-00 Urlaub.jpg. Così nel Finder i file si ordinano per momento di scatto. Si attiva con la casella Converti i nomi dei file in alto nella finestra; nell&#x27;elenco il nuovo nome compare poi sotto quello vecchio.</p>
+<p class="notiz">Se nel nome non compare alcuna data, viene anteposta quella impostata manualmente. Se il nuovo nome è già in uso, viene aggiunto un numero progressivo. Anche la ridenominazione viene annullata con ⌘Z.</p>
+<h2>Annullare</h2>
+<p>Con ⌘Z è possibile annullare un&#x27;esecuzione: la data di scatto e le date di creazione e di modifica tornano poi ai valori precedenti. ⌘⇧Z la ripristina.</p>
+<p class="notiz">Se l&#x27;elenco viene svuotato o viene scelta un&#x27;altra cartella, l&#x27;annullamento non è più possibile — l&#x27;app non ha più il diritto di accesso ai file precedenti.</p>
+<h2>Cosa viene modificato</h2>
+<p>Vengono scritti EXIF DateTimeOriginal e DateTimeDigitized nonché TIFF DateTime, nei filmati e nelle registrazioni audio la data di creazione contenuta nel contenitore. I dati dell&#x27;immagine restano intatti — un JPEG non viene ricompresso.</p>
+<p class="notiz">Crea comunque una copia di sicurezza prima di elaborare una raccolta di grandi dimensioni.</p>
+<h2>Quando una riga non diventa verde</h2>
+<p>Un segno di spunta arancione significa: non è stato possibile scrivere la data di scatto, in compenso ora sono la data di creazione e di modifica del file a portare il valore — l&#x27;informazione è quindi conservata, solo in un altro punto. La riga ne indica il motivo. Un triangolo rosso significa che non è stato possibile scrivere nulla.</p>
+<p class="notiz">Se è stato scelto un singolo file, l&#x27;app può lavorare solo su quel file e non nella sua cartella — per questo la ridenominazione può non riuscire; in tal caso la riga lo indica. Rimedio: scegliere la cartella anziché il singolo file. Se qualcosa resta poco chiaro, il pulsante nelle impostazioni, alla voce Diagnostica, salva un registro degli ultimi sette giorni.</p>
+  </article>
+  <p class="zurueck"><a href="../">← sName2Date</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../impressum.html">Note legali</a><a href="../../../privacy.html">Privacy del sito</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

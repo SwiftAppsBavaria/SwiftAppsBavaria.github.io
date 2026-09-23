@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sCollect 說明</title>
+<meta name="description" content="sCollect 說明">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/scollect/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/scollect/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/scollect/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/scollect/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/scollect/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/scollect/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/scollect/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/scollect/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/scollect/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/scollect/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/scollect/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/scollect/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/scollect/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../zh-hant/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../zh-hant/#apps">App</a>
+    <details class="sprache"><summary aria-label="語言">繁體中文</summary><div><a href="../../../scollect/help/" lang="en">English</a><a href="../../../de/scollect/help/" lang="de">Deutsch</a><a href="../../../es/scollect/help/" lang="es">Español</a><a href="../../../fr/scollect/help/" lang="fr">Français</a><a href="../../../it/scollect/help/" lang="it">Italiano</a><a href="../../../ja/scollect/help/" lang="ja">日本語</a><a href="../../../ko/scollect/help/" lang="ko">한국어</a><a href="../../../pt-br/scollect/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../pt-pt/scollect/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../ru/scollect/help/" lang="ru">Русский</a><a href="../../../zh-hans/scollect/help/" lang="zh-Hans">简体中文</a><a href="../../../zh-hant/scollect/help/" aria-current="true" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../">← sCollect</a></p>
+  <article class="hilfe">
+
+
+<h1>sCollect 說明</h1>
+<p class="subtitle">管理你的音樂、有聲書、電影、電子書和收藏品的媒體庫</p>
+
+<nav class="toc">
+<h2>目錄</h2>
+<ol>
+<li><a href="#start">快速入門</a></li>
+<li><a href="#library">管理媒體庫</a></li>
+<li><a href="#import">匯入媒體</a></li>
+<li><a href="#browse">瀏覽媒體庫</a></li>
+<li><a href="#metadata">編輯中繼資料</a></li>
+<li><a href="#playback">播放</a></li>
+<li><a href="#playlists">播放清單</a></li>
+<li><a href="#external">外接硬碟</a></li>
+<li><a href="#settings">設定</a></li>
+<li><a href="#convert">格式轉換</a></li>
+<li><a href="#sync">同步 (主媒體庫/副本)</a></li>
+<li><a href="#shortcuts">鍵盤快速鍵</a></li>
+</ol>
+</nav>
+
+<!-- ============================================================ -->
+<h2 id="start">1. 快速入門</h2>
+
+<h3>什麼是 sCollect？</h3>
+<p>sCollect 是一款 macOS 媒體庫 App，可以幫助你整理音樂、有聲書、Podcast、電影、電視影集、電子書、PDF 以及各種收藏品（硬幣、模型、郵票等）。每個媒體都附帶中繼資料（標題、演出者、專輯、類型等），並且可以直接在 App 內播放或編輯。</p>
+
+<!-- ohne-internet -->
+<h3 id="ohne-internet">不連網 &ndash; 刻意為之</h3>
+<p>sCollect 不會匯入 CD，也不會從網際網路取得曲目資訊或封面。這並非疏漏，而是刻意的決定：這兩件事 Apple Music 都已經做得到，而且做得很好。請在 Apple Music 中匯入 CD，然後再將產生的檔案匯入 sCollect。為此，請在 Apple Music 的匯入設定中選擇<strong>AAC</strong>、<strong>Apple Lossless</strong>或<strong>MP3</strong> &ndash; 如此一來，Apple Music 補上的曲目資訊就會寫入檔案，並在匯入時一併帶入。若選擇<strong>WAV</strong>，Apple Music 會將這些資訊保留在它自己的資料庫中，檔案匯入後便沒有曲目資訊。</p>
+<p>相對地，你的媒體庫始終是你自己的私事。sCollect 不會主動連上網際網路上的任何位址，不會將有關你收藏的資訊傳送給任何服務，也不需要帳號。你收藏了什麼、如何整理、為此記下了什麼，都不會離開你的 Mac &ndash; 除非你自己把它分享出去。</p>
+
+<h3>建立新媒體庫</h3>
+<div class="steps">
+<div class="step"><strong>選擇資料夾：</strong>首次啟動時，系統會要求你選擇一個儲存位置。選擇一個資料夾，sCollect 將在其中儲存媒體庫資料，並在其中建立一個 <code>Media</code> 子資料夾來存放你的檔案。媒體庫本身（項目、播放清單、設定）以 <code>.scollect</code> 套件的形式放在同一個資料夾中。</div>
+<div class="step"><strong>檢查設定：</strong>隨後會自動開啟設定中的「媒體庫」標籤頁。在這裡你可以更改預設媒體資料夾，或為不同類別指定個別的資料夾（例如，在外接硬碟上為電影設定個別的資料夾）。</div>
+<div class="step"><strong>匯入媒體：</strong>透過<strong>檔案 &gt; 匯入檔案&hellip;</strong>（<kbd>&#8984;O</kbd>）或<strong>檔案 &gt; 匯入資料夾&hellip;</strong>（<kbd>&#8679;&#8984;O</kbd>）匯入你的第一批檔案。</div>
+</div>
+
+<h3>開啟現有媒體庫</h3>
+<p>如果你已有 sCollect 媒體庫（例如在外接硬碟上），請選擇<strong>檔案 &gt; 選擇其他媒體庫&hellip;</strong>，然後導覽到媒體庫的主資料夾（包含 <code>.scollect</code> 套件的那個資料夾）。你也可以在 Finder 中按兩下 <code>.scollect</code> 套件；sCollect 會在需要時詢問外層資料夾，以便封面圖片和媒體檔案同樣可用。</p>
+
+<aside>
+<strong>提示：</strong>你可以擁有多個媒體庫，透過<strong>檔案 &gt; 選擇其他媒體庫&hellip;</strong>在它們之間切換。最近使用的媒體庫會顯示在子選單中。 切換時，會先妥善完成正在進行的同步或檔案整理。
+</aside>
+
+<aside>
+<strong>注意：</strong>如果您選擇的新媒體庫資料夾包含先前媒體庫的殘餘（透過<code>.slaves/</code>目錄的存在偵測到），sCollect將顯示一個確認對話框，其中包含先前註冊的副本數量。確認後，可存取的副本會自動與舊主媒體庫解除關聯，然後<code>.slaves/</code>註冊表被移除。無法存取的副本保留與舊主媒體庫的繫結，可能需要手動修復。
+</aside>
+
+<!-- ============================================================ -->
+<h2 id="library">2. 管理媒體庫</h2>
+
+<h3>類別和媒體類型</h3>
+<p>sCollect 將媒體整理為四個主要類別，每個類別最多可包含十種媒體類型：</p>
+<table>
+<tr><th>類別</th><th>預設媒體類型</th></tr>
+<tr><td>音訊</td><td>音樂、有聲書、Podcast（+ 7 個可自訂）</td></tr>
+<tr><td>書籍</td><td>電子書、PDF（+ 8 個可自訂）</td></tr>
+<tr><td>影片</td><td>家庭影片、劇情片、影集（+ 7 個可自訂）</td></tr>
+<tr><td>其他</td><td>硬幣、模型、郵票（+ 7 個可自訂）</td></tr>
+</table>
+<p>名稱可以在設定中自由更改（「類別名稱」和「欄位名稱」標籤頁）。</p>
+<p><strong>兩個術語的準確含義：</strong><em>類別</em>是四個固定的上位概念之一 &ndash; 音訊、圖書、影片、其他。<em>媒體類型</em>（簡稱：類型）才是你真正收藏的東西：音樂、有聲書、Podcast、電子書、劇情片等等。因此音樂、有聲書和 Podcast 三者都屬於同一個<em>音訊</em>類別。凡是功能詢問處理範圍的地方 &ndash; 例如「整理媒體庫」或「檢查遺失的檔案」 &ndash; 你選擇的都是<strong>類型</strong>：只有這樣才能把音樂與有聲書分開處理。上面的類別用於展開和收合，並且會一併切換它底下的所有類型。</p>
+
+<h3>側邊欄</h3>
+<p>左側側邊欄顯示所有使用中的媒體類型和播放清單。點一下項目即可檢視其內容。未命名的媒體類型會被隱藏。</p>
+<!-- typwechsel-drop -->
+<p><strong>透過拖移更改媒體類型：</strong>把列表中的項目拖到側邊欄的某個媒體類型上，即可更改它們的類型。sCollect 會事先詢問 &ndash; 更改類型會把檔案移到新的目標位置，主媒體庫和每個副本上都是如此，並且在依日期歸檔時可能產生名稱衝突。</p>
+<aside>
+<strong>注意：</strong>拖到<em>媒體類型</em>上會更改現有項目的類型。若要<em>匯入</em>新檔案，請改為把它們拖到右側的媒體列表上。不屬於媒體庫的檔案在放到媒體類型上時保持不變 &ndash; sCollect 也會這樣告訴你。
+</aside>
+
+<h3>媒體資料夾</h3>
+<p>預設情況下，sCollect 將所有匯入的檔案儲存在媒體庫中的 <code>Media</code> 資料夾內。不過，你可以為每種媒體類型指定個別的資料夾——這樣電影可以存放在大容量外接硬碟上，而音樂保留在內建 SSD 上。</p>
+<p>媒體資料夾設定位於 <strong>sCollect &gt; 設定&hellip; &gt; 媒體庫</strong>。</p>
+
+<h3>刪除與 App 垃圾桶</h3>
+<p>選取項目，然後選擇<strong>編輯 &gt; 移到垃圾桶</strong>（<kbd>&#8984;&#9003;</kbd>）或在快速選單中選擇「從媒體庫移除並從磁碟刪除」。sCollect 不會立即刪除，而是將檔案移至每個媒體資料夾內的隱藏 App 垃圾桶（<code>.Deleted</code> 資料夾）&ndash; 這在任何儲存裝置上都有效，包括沒有系統垃圾桶的網路共享，而且因為是在同一磁碟內移動所以很快。按 <kbd>&#8984;Z</kbd> 可立即還原刪除，按 <kbd>&#8679;&#8984;Z</kbd> 可重做。</p>
+<p>透過 <strong>檔案 &gt; 媒體庫 &gt; App 垃圾桶&hellip;</strong> 開啟 App 垃圾桶（為空時停用）。在那裡你可以復原所選或全部項目、永久移除它們（若儲存裝置支援則移至系統垃圾桶，否則直接刪除）或將它們移至所選資料夾。在 <strong>設定 &gt; 垃圾桶</strong> 中你可設定清空時是否使用系統垃圾桶，以及是否在啟動時自動移除過期項目（保留期限自 1 天起，會先詢問）。已連接的副本會將刪除於本機反映到各自的 <code>.Deleted</code> 資料夾 &ndash; 無需透過網路傳輸。</p>
+
+
+<!-- duplicates-view -->
+<h3>顯示重複項目</h3>
+<p>透過<strong>檔案 &gt; 媒體庫 &gt; 顯示重複的項目</strong>（<kbd>&#8679;&#8984;D</kbd>），sCollect 會掃描目前整個類別，並在媒體列表中只顯示找到的重複項目 &ndash; 與 Apple Music 類似。對於已有的選取，右鍵選單中有「尋找重複項目」。</p>
+<p>搜尋會顯示進度列，並且隨時可以中斷。收藏較大時，第一次執行可能較久；sCollect 會把此時算出的特徵值記在媒體庫中，因此之後每次執行都明顯更快。檔案一旦改變，它的特徵值會自動作廢並重新計算。</p>
+
+<h4>依據什麼尋找</h4>
+<p>這次執行分若干階段，並把它辨識為同屬一體的內容歸攏在一起：</p>
+<ul>
+<li><strong>中繼資料：</strong>時間長度相近且標題與演出者相同。同一專輯內不同的光碟編號或曲目編號會排除重複，有聲書還會因專輯標題不同而排除。</li>
+<li><strong>檔案內容：</strong>檔案大小相同且檔案開頭相同。</li>
+<li><strong>相同音訊的深度尋找：</strong>即使標籤完全不同也能辨識出同一段錄音。它從磁碟讀取的內容明顯更多，因此可在設定的<strong>重複項目</strong>中調節 &ndash;「自動」會在網路卷宗上將其關閉。</li>
+<li><strong>孤立項目：</strong>檔案已遺失的項目會掛到同一資料夾中具有相同基礎標題的現有同類項目上。這是把「標題」改名為「標題 (2)」之後的典型殘留。</li>
+</ul>
+<p>為了讓比較不建立在錯誤資訊之上，sCollect 會在尋找前讀取相關檔案的標籤，並修正媒體庫中偏離的數值。否則，錯誤的光碟編號可能導致同一本有聲書的不同光碟被當作相同。</p>
+
+<h4>重複項檢視</h4>
+<p>列表中凡是被建議為重複的項目都會<strong>著色</strong> &ndash; 每組保留一個。這些建議的項目同時處於<strong>選取</strong>狀態；你可以隨意更改選取。一個狹窄的狀態欄另外顯示兩種提示：多個項目指向同一個檔案時的<strong>鏈條</strong>，以及某個項目的檔案遺失時的<strong>警告三角</strong>。兩者可能同時出現。</p>
+<p>排序和搜尋在重複項檢視中同樣有效。搜尋篩選只是隱藏；此時「刪除所選」只會帶走可見的項目，其餘的在重設篩選後依然可以刪除。</p>
+<!-- auswahl-loeschen -->
+<p><strong>刪除所選</strong>會先詢問確認，然後把選取的項目連同檔案放入 App 垃圾桶（用 <kbd>&#8984;Z</kbd> 還原）。如果某個選取的項目指向的檔案仍被一個保留的項目需要，或者它的檔案遺失，則只刪除該項目 &ndash; 確認對話框會特別列出這些情況。如果選取涵蓋了某一組的全部項目，該按鈕會被停用。</p>
+<p>你也可以逐個選取並刪除項目。每組保留哪一個項目會持續重新判定 &ndash; 若你中途手動刪除，會自動有另一個頂上，任何一組都不會失去全部項目。「結束重複項檢視」回到一般列表。</p>
+
+<!-- ============================================================ -->
+<h2 id="import">3. 匯入媒體</h2>
+
+<h3>匯入檔案</h3>
+<p>選擇<strong>檔案 &gt; 匯入檔案&hellip;</strong>（<kbd>&#8984;O</kbd>）來選取個別檔案。支援的格式：</p>
+<ul>
+<li><strong>音訊：</strong> MP3, M4A, AAC, FLAC, WAV, AIFF, AIF, ALAC, CAF</li>
+<li><strong>影片：</strong> MP4, M4V, MOV</li>
+<li><strong>書籍：</strong> PDF, EPUB</li>
+<li><strong>其他：</strong> JPG, JPEG, HEIC, PNG, TIFF, WEBP</li>
+</ul>
+<!-- ohne-internet-verweis -->
+<p>請用 Apple Music 匯入 CD，然後再匯入檔案；sCollect 為何不自己做這件事，請見<a href="#ohne-internet">不連網 &ndash; 刻意為之</a>（第 1 節）。</p>
+
+<h3>匯入資料夾</h3>
+<p>透過<strong>檔案 &gt; 匯入資料夾&hellip;</strong>（<kbd>&#8679;&#8984;O</kbd>），可以匯入資料夾中所有支援的檔案（包含子資料夾）。</p>
+
+<!-- import-ziehen -->
+<h3>拖入檔案和資料夾</h3>
+<p>你從 Finder 拖到 sCollect 視窗上的東西，走的是與這兩個選單項目<strong>完全相同的路</strong>：資料夾會連同其子資料夾一起被搜尋，匯入對話框會先讓你看到有什麼將被納入，重複偵測也照常運作。</p>
+<p>拖到<strong>播放清單</strong>上時同樣如此：來自 Finder 的檔案會先被匯入，然後才放進播放清單。</p>
+
+<!-- buchpakete -->
+<h3>套件格式的書籍</h3>
+<p><strong>書籍</strong>應用程式把購買的書存為<em>套件</em> &ndash; 從外面看像是一個檔案，實際上是一個資料夾。sCollect 不會收下這樣的套件，並會告訴你：<em>『未匯入「書籍」套件』</em>，並附上名稱。能被接收的是作為單個 <strong>.epub</strong> 或 <strong>.pdf</strong> 檔案的書籍。</p>
+
+<h3>匯入模式</h3>
+<p>在設定（<strong>媒體庫</strong>，<strong>匯入</strong>框）中，你可以指定匯入檔案的處理方式：</p>
+<ul>
+<li><strong>複製到媒體庫：</strong>檔案會被複製到媒體資料夾。原始檔案保持不變。</li>
+<li><strong>移動到媒體庫：</strong>檔案會被移動到媒體資料夾。</li>
+<li><strong>保留在原位置：</strong>檔案保持原樣。sCollect 只記錄檔案位置。適用於網路磁碟上的檔案。</li>
+</ul>
+<!-- import-scheitert -->
+<p>如果某個檔案在複製或搬移時無法納入媒體庫，sCollect <strong>不會為它建立項目</strong>。該檔案原封不動地留在原處，並有一則訊息列出該檔案及原因。</p>
+
+<h3>重複偵測</h3>
+<p>匯入時，sCollect 會自動檢查重複項目（相同標題 + 演出者或相同檔案名稱）。如果發現重複項目，會出現對話框供你選擇：</p>
+<ul>
+<li><strong>全部匯入：</strong>匯入所有檔案，包含重複項目。</li>
+<li><strong>略過重複項目：</strong>僅匯入媒體庫中尚未存在的檔案。</li>
+<li><strong>匯入所選項目：</strong>手動選擇要匯入的重複項目。</li>
+</ul>
+
+<h3>自動整理</h3>
+<p>匯入的檔案會自動按資料夾結構整理：<code>演出者/專輯/檔案</code>。當演出者數量較多時，還會按首字母分組（例如：<code>A/AB/ABB/ABBA/Gold/Track.mp3</code>）。</p>
+
+<!-- datumsablage -->
+<p><strong>依日期歸檔：</strong>對於時間點比演出者更重要的媒體類型 &ndash; 照片、家庭錄影、收藏 &ndash; 你可以在設定中改選依日期歸檔。檔案隨後會進入年份和月份資料夾，檔案名稱帶有該時間點。檔案帶有拍攝時間時以它為準；否則以項目的日期為準。</p>
+<!-- kamerapraefix -->
+<p><strong>匯入時整理標題：</strong>當 sCollect 從檔案名稱衍生標題時，前面常常是相機的名稱，後面跟著一個日期 &ndash; 例如 <code>IMG_20240115 Urlaub</code>。<strong>設定 &gt; 匯入（按日期排序時）</strong>下的四個開關會把它整理乾淨。它們<em>只對依日期歸檔的媒體類型</em>生效：想在名稱中保留 <code>IMG</code> 或 <code>20250401</code> 的人，本來就會依字母順序歸檔。</p>
+<ul>
+<li><strong>從衍生標題中移除相機前綴</strong> &ndash; 預設開啟。<code>IMG_20240115 Urlaub</code> 會變成 <code>20240115 Urlaub</code>。只有緊貼日期、中間沒有空格<em>並且</em>出現在已知相機名稱清單中的部分才會被移除：<code>Sam 2024-01-15 Konzert</code> 保持不變。</li>
+<li><strong>從衍生標題中移除日期</strong> &ndash; 預設開啟。由此變成 <code>Urlaub</code>。</li>
+<li><strong>在標題中補充 ISO 日期和時間</strong> &ndash; 預設開啟。由此變成 <code>2024-01-15 00-00-00 Urlaub</code>，與檔案名稱中的寫法相同，這樣標題也會以同樣的方式排序。標題中若已有日期，則不再補充。這項補充也會寫入檔案，好讓媒體庫和檔案說同一件事。</li>
+<li><strong>檔案名稱中的日期優先</strong> &ndash; 預設<em>關閉</em>。檔案名稱中若有日期，就以它為準 &ndash; 即使檔案自身也給出了一個。它是四者中唯一推翻已有陳述、而不是填補空缺的一個。</li>
+</ul>
+<p>前兩個只觸碰<em>衍生</em>標題 &ndash; 標題若寫在檔案的標籤中，就保持不變；那是某個人的陳述，不是衍生結果。第三個在那裡也會補充。若移除之後什麼都不剩，檔案就完整保留它的名稱。</p>
+<aside>
+<strong>提示：</strong>影片會自動分類：時間長度不足 70 分鐘的影片視為家庭錄影，更長的視為劇情片。你可以隨時在中繼資料編輯器中更改類型 &ndash; 或者在側邊欄中把它們拖到另一個媒體類型上。
+</aside>
+
+<aside>
+<strong>注意：</strong>匯入期間，sCollect偵測包含舊式不符合標準的DivX/Xvid樣本項目（<code>xvid</code>/<code>DIVX</code>/<code>DX50</code>/<code>DIV3</code>）的MP4檔案，並將其重新命名為<code>.divx</code>。這些檔案在播放時自動路由到外部播放器（參見第6節）。符合標準的MPEG-4 Part 2串流（<code>mp4v</code>）保持不變 — AVFoundation可以播放它們。
+</aside>
+
+<!-- ============================================================ -->
+<h2 id="browse">4. 瀏覽媒體庫</h2>
+
+<h3>欄位檢視</h3>
+<p>媒體列表以可自訂的表格檢視顯示你的項目。你可以：</p>
+<ul>
+<li><strong>顯示/隱藏欄位：</strong>按右鍵點選欄位標題，開啟欄位選擇器。</li>
+<li><strong>重新排列欄位：</strong>拖移欄位標題到你想要的位置。</li>
+<li><strong>更改欄位寬度：</strong>拖移兩個欄位標題之間的分隔線。</li>
+<li><strong>排序：</strong>點一下欄位標題按該欄位排序。再次點選可反轉排序順序。按住 <strong>Shift</strong> 可再加入一欄作為次級排序 &ndash; 處於排序中的欄會顯示箭頭和順序編號（例如 <code>專輯&darr;1</code>、<code>演出者&uarr;2</code>）。在處於排序中的欄標題上 <strong>Option-點按</strong>，可把該欄重新移出排序。按右鍵點按欄標題會提供<em>重設排序</em>，以便重新只依主欄排序。排序會依媒體類型分別記住。</li>
+</ul>
+
+<h3>直欄瀏覽器</h3>
+<p>直欄瀏覽器（可透過工具列切換顯示/隱藏）提供類似於 Apple Music 直欄瀏覽器的多層級導覽。你可以在各直欄中選取項目，按類型、演出者和專輯進行篩選。</p>
+<ul>
+<li>按住 <kbd>&#8984;</kbd> 點選或 <kbd>&#8679;</kbd> 點選進行多重選取</li>
+<li>瀏覽器顯示哪些欄位可以在設定中配置</li>
+</ul>
+<!-- spaltenbrowser-knoten -->
+<p>如果某一欄的值多於<strong>設定 &gt; 媒體庫 &gt; 視圖</strong>中<strong>每個資料夾最大項目數</strong>所設定的數量，該欄會按首字母把這些值歸併為<strong>節點</strong>（<code>A</code>、<code>AB</code>、<code>0-9</code> &hellip;）。按一下節點會<strong>篩選</strong>出其下的所有值並將其展開；再按一下會將其收合，篩選保持不變。按住 <kbd>&#8984;</kbd> 點選可以組合節點和單個值。使用方向鍵時，在節點上稍作停留即會篩選，但不展開；<kbd>&#8617;</kbd> 展開或收合節點並立即篩選。</p>
+
+<h3>搜尋</h3>
+<p>右上角的搜尋欄位可搜尋所有相關欄位（標題、演出者、專輯、作曲家、類型、備註、作品名、樂章名、年份）。搜尋結果會在輸入時即時篩選。</p>
+
+<h3>預覽圖</h3>
+<p>當「預覽」欄位可見時，每行會顯示一個小縮覽圖（封面或電影縮覽圖）。點選已選取行的圖片，可以在彈出式視窗中檢視大圖。</p>
+
+<!-- linked-column -->
+<h3>辨識已連結的項目</h3>
+<p>可顯示的<strong>已連結</strong>欄（欄標題為鏈條符號）會以勾號標示檔案位於媒體資料夾之外的項目。這些是匯入時選擇<strong>保留在原位置</strong>的檔案，sCollect 只記住它們的存放位置。沒有勾號則表示檔案位於媒體庫的媒體資料夾中。由於每次匯入前都可以更改匯入方式，一個媒體庫中往往兩者兼有。按一下欄標題即可依此欄排序，把所有已連結的項目集中在一起。勾號僅供顯示，無法點按，因為切換代表移動檔案。</p>
+
+<!-- ============================================================ -->
+<h2 id="metadata">5. 編輯中繼資料</h2>
+
+<!-- sicherung-vorher -->
+<h3>大幅變動前先備份</h3>
+<p><strong>sCollect 寫入的是你的檔案本身，而不是它們的副本。</strong> 因此在大幅變動之前請先備份 &ndash; 例如在用批次編輯器或欄位操作一次更改大量項目之前。用 Time Machine 就夠了。</p>
+
+<h3>單項編輯器</h3>
+<p>連按兩下一個項目（或選取後按 <kbd>&#8984;I</kbd>）開啟中繼資料編輯器。編輯器包含多個標籤頁：</p>
+<ul>
+<li><strong>資訊：</strong>標題、演出者、專輯演出者、專輯、類型、關鍵字、年份、曲目編號、光碟編號、作曲者、註解、分組、作品、樂章名稱、樂章編號、BPM、評等、收藏。圖書（電子書、PDF）在此處顯示的是<strong>頁數</strong>欄位而非時間長度和 BPM，並且可以直接編輯。</li>
+<li><strong>封面：</strong>檢視、更換、移除封面圖片。對於電影：從影片中任意位置產生縮覽圖。新影像可透過<strong>載入圖片</strong>或<strong>貼上</strong>放入 &ndash; 你也可以把影像檔案或其他程式中的影像拖到封面上。</li>
+<li><strong>排序：</strong>標題、演出者、專輯演出者、專輯和作曲家的個別排序欄位。這些欄位用於排序，不會改變顯示的值（例如，排序演出者設為「Beatles, The」）。</li>
+<li><strong>檔案資訊：</strong>技術細節（檔案格式、取樣率、位元率、檔案大小、權限、標籤格式） &ndash; 以及四個<em>可以</em>更改的時間戳記。參見下方「檔案標籤頁中的時間戳記」。</li>
+<li><strong>附件：</strong>僅限<em>其他</em>類別。屬於某個項目的文件、影像或影片 &ndash; 參見下方「附件」。</li>
+</ul>
+<!-- editor-blaettern -->
+<p>使用編輯器右上角的箭頭按鈕 <strong>&lsaquo;</strong> 和 <strong>&rsaquo;</strong>，或按 <kbd>&#8963;&#8984;&#8592;</kbd> / <kbd>&#8963;&#8984;&#8594;</kbd>，即可在不關閉編輯器的情況下切換到清單中的上一個或下一個項目（<kbd>&#8963;</kbd> 即 ctrl 鍵）。你的更動會隨之儲存；如果無法儲存，編輯器會停留在目前項目。</p>
+
+<!-- full-date -->
+<p><strong>年份與精確日期：</strong>年份欄位旁的日曆按鈕（或按兩下年份欄位）可輸入完整日期。按鈕上的勾號代表已儲存精確到日的日期。sCollect 會依照檔案中記載的精確度儲存日期 &ndash; 檔案中只有年份時就保留年份，精確到日的日期在編輯後同樣保留。</p>
+
+<!-- zeitstempel -->
+<h3>檔案標籤頁中的時間戳記</h3>
+<p>檔案標籤頁顯示四個時間點，四個都可以設定。它們表示的不是同一回事 &ndash; 這正是它們並排出現的原因：</p>
+<ul>
+<li><strong>拍攝時間（檔案）：</strong><em>檔案本身</em>所帶的時間點 &ndash; 照片來自相機，影片來自容器。旁邊寫著<em>來源</em>，也就是這個值在檔案的哪個位置被找到。僅出現在影像和影片檔案中；音訊格式沒有帶時刻的載體。</li>
+<li><strong>製作日期：</strong><em>檔案系統</em>的時間點。與拍攝時間是兩回事：複製時 macOS 會把它設為<em>現在</em>。</li>
+<li><strong>匯入日期（媒體庫）：</strong>項目進入媒體庫的時間點。純粹屬於媒體庫的資訊 &ndash; 沒有任何檔案攜帶它。</li>
+<li><strong>修改日期（媒體庫）：</strong>「已修改」欄。它反映檔案的修改時間 &ndash; 因此若你在這裡更改它，被設定的是<em>檔案</em>，媒體庫隨後跟上。欄位上也這樣寫著：「設定檔案時間」。</li>
+</ul>
+<!-- zonendeutung -->
+<p>對於影片，來源旁邊有時還會寫著一條關於<em>時區</em>的提示。因為容器裡的時間點並不帶時區資訊：規範把它讀作 UTC，但並非每部相機都這樣寫。因此匯入時 sCollect 會把容器裡的時間與檔案的製作日期作比較 &ndash; 兩者都來自同一個相機時鐘，而它們之間的差值就給出了解讀。「無時區」表示：情況尚未確定，日期是對的，時刻可能偏離一個時區差。「當地時間」表示：相機已被認出，所指的時間點就寫在旁邊。<strong>檔案在此過程中不會被更動</strong> &ndash; 這個解讀是一項說明，不是一次干預。</p>
+<p>四者都只在<strong>儲存</strong>時才寫入，與其他任何欄位一樣。</p>
+
+<!-- kopierschutz -->
+<h3>受複製保護的媒體</h3>
+<p>一本購買的有聲書、一部租借的影片、一本帶 DRM 的書：這類檔案誰都不許寫入 &ndash; 寫入標籤往好了說也只會讓它們變得不可用。sCollect 在開啟時就認出這種保護，並且<strong>不去碰這個檔案</strong>。在書籍中，它能認出 PDF 的加密、Adobe DRM、Apple FairPlay、Readium LCP，以及各章不是可讀文字的 EPUB；在音樂和影片中，能認出 Apple FairPlay 和常見的容器加密（Common Encryption）。</p>
+<p>這樣的項目你仍然可以編輯。你填寫的內容會進入一個副檔名為 <strong>.xmp</strong> 的<strong>附屬檔案</strong>，它就放在該檔案旁邊。在編輯器的<strong>檔案資訊</strong>標籤頁中，你可以從兩處看出這一點：一處是提示 &ndash; <em>「受複製保護的檔案：資訊儲存在旁邊的附屬檔案（.xmp）中，檔案本身保持不變。」</em>，若是書籍則為 <em>「受保護的書籍：資訊儲存在旁邊的附屬檔案（.xmp）中，書籍本身保持不變。」</em> &ndash; 另一處是標籤格式，它這時會寫著 <strong>Sidecar (XMP)</strong> 以及保護的種類。</p>
+<p>附屬檔案屬於這個項目，並隨它留下：你重新命名這個項目時它會一起走；媒體庫的每個副本上同樣有它。因為檔案本身裡什麼也沒寫，所以與檔案的比對在這裡也不會報告任何差異。</p>
+<p>受保護的媒體缺少兩樣東西，原因都是同一個 &ndash; 它們都以內容可被讀取為前提：<strong>來自檔案的拍攝時間</strong>和<strong>取自影片某一影格的縮覽圖</strong>。關於播放，請見<a href="#playback">播放</a>（第 6 節）。</p>
+
+<!-- anhaenge -->
+<h3>附件</h3>
+<p><strong>其他</strong>類別的項目可以帶附件 &ndash; PDF 手冊、收藏品的照片、一段影片。編輯器中的<strong>附件</strong>標籤頁接收它們：透過<strong>加入附件&hellip;</strong>按鈕，或者把檔案拖到列表上。</p>
+<p>旁邊有兩種方式，所選方式適用於接下來加入的內容：</p>
+<ul>
+<li><strong>連結</strong>（預設）：檔案留在原處。媒體庫記住它的位置，即使被改名也能重新找到。它<em>不會</em>鏡像到副本 &ndash; 因為沒有可鏡像的實體 &ndash; 移除附件時也<em>不會被刪除</em>：消失的只是項目。</li>
+<li><strong>複製</strong>：檔案被放入項目旁邊的附件資料夾，並隨項目一起移動 &ndash; 也會到達媒體庫的每個副本。</li>
+</ul>
+<p>列表中的圖像說明目前狀態：<em>紙頁</em>表示副本，<em>鏈條</em>表示連結，<em>紅色驚嘆號</em>表示已連結的檔案找不到了 &ndash; 被刪除、被改名，或者磁碟未連接。此時旁邊會出現<strong>選擇資料夾&hellip;</strong>，用它可以在新位置重新找到該檔案。</p>
+<!-- bildfenster -->
+<p><strong>影像</strong>附件可透過箭頭按鈕在編輯器前方一個獨立、可自由調整大小的視窗中開啟；其他檔案則以相應的程式開啟。同樣地，按一下編輯器左側的<strong>主影像</strong>，會在這個視窗中以完整解析度顯示該影像 &ndash; 如果項目的檔案不是影像，則顯示封面。</p>
+<!-- bild-einfuegen -->
+<p><strong>其他</strong>類別項目的主影像同樣接受你拖到上面的影像。只要編輯器中能看到該影像，你就可以用 <kbd>&#8984;V</kbd> 從剪貼簿插入影像 &ndash; 即使目前有文字欄位處於使用中狀態。如果剪貼簿中是文字，<kbd>&#8984;V</kbd> 會照常把它貼到文字欄位中。影像要在點按<strong>儲存</strong>後才會被採用。</p>
+<aside>
+<strong>說明：</strong>附件只在<strong>儲存</strong>時才生效 &ndash; 已預定的檔案會帶著「儲存時將被複製」或「&hellip;連結」的註記留在列表中。
+</aside>
+<h3>批次編輯器</h3>
+<p>選取多個項目後按 <kbd>&#8984;I</kbd>（或連按兩下選取項目）開啟批次編輯器。批次編輯器僅顯示可以同時更改所有選取項目的欄位。每個欄位旁邊有一個核取方塊——只有勾選的欄位才會被寫入。</p>
+
+<h3>欄位操作</h3>
+<p>如需進行進階編輯，請選取相應項目，然後選擇<strong>編輯 &gt; 尋找/取代&hellip;</strong>（<kbd>&#8997;&#8984;F</kbd>）或使用快速選單，即可打開<strong>欄位操作</strong>視窗，其中提供以下工具：</p>
+<ul>
+<li><strong>尋找與取代：</strong>在一個或多個欄位中尋找並取代文字。</li>
+<li><strong>交換／複製欄位：</strong>交換兩個欄位的內容（例如 演出者 &#8596; 專輯演出者） &ndash; 或者把其中一個的值<em>單向</em>取入另一個。此時按鈕會寫明方向（例如「標題 &#8594; 註解」），以便看清哪個欄位會被覆寫。相關的排序欄位會自動跟隨。<strong>複製會先詢問</strong>，因為它無法還原：目標會失去原有內容，而來源為空的地方目標也會被清空。</li>
+<li><strong>附加到標題：</strong>在標題的開頭或結尾加入文字。</li>
+<li><strong>日期寫入標題：</strong>將檔案的修改日期寫入標題。</li>
+<li><strong>拆分：</strong>將欄位內容在分隔符號處拆分為兩個目標欄位（複製或剪下來源欄位）。也支援數字欄位（曲目/光碟/樂章編號、年份）；無法辨識數字的項目將被略過。</li>
+<li><strong>拆分名稱與排序：</strong> 在排序欄位為空的項目中解析逗號排序形式（例如 &laquo;Lennon, John&raquo;）：原始值移入排序欄位，名稱欄位（標題、演出者、專輯演出者、專輯或作曲）被翻轉為自然順序（&laquo;John Lennon&raquo;）。含多個逗號的歧義情形最初不會勾選。</li>
+</ul>
+
+<h3>評等和收藏</h3>
+<p>每個項目可以獲得 0 到 10 的評等，以五顆星星按半格顯示：第一次點選星星會設為整顆，第二次設為半顆，第三次則清除。此外，還有一個獨立的收藏標記（心形圖示），可以在「收藏」欄位中點選切換。</p>
+
+<aside>
+<strong>提示：</strong>項目的媒體類型可以在編輯器中更改，但僅限於同一類別內（例如，從「音樂」改為「Podcast」可以，但從「音樂」改為「電影」則不行）。
+</aside>
+
+<aside>
+<strong>書籍：</strong>對於電子書和 PDF，「時間長度」欄顯示的是<strong>頁數</strong>。如果缺少或過時，你可以在一個或多個項目上按右鍵 &gt;「更新頁數」，重新從檔案中讀取。
+</aside>
+
+<aside>
+<strong>正在修復媒體：</strong>儲存中繼資料時，可能會短暫出現「正在修復媒體…」的提示。這表示檔案的結構曾經損壞 &ndash; 通常是錄製中斷或下載不完整所致 &ndash; sCollect 在寫入變更之前自動進行了修復。這種情況很少發生，且僅在必要時才會發生。如果檔案<strong>不完整</strong>（結尾被截斷），其時間長度資訊會被修正；結尾缺少的媒體資料本身無法復原（因為它原本就不在檔案中），但中繼資料會被保留。如果只是內部資料區塊的位置發生了偏移，修復則不會造成任何資料遺失。無法安全修復的檔案不會被更改 &ndash; 此時 sCollect 會顯示提示並中止操作，而不會強行進行有風險的變更。
+</aside>
+
+<!-- ============================================================ -->
+<h2 id="playback">6. 播放</h2>
+
+<h3>播放音訊</h3>
+<p>選取一個音訊項目，然後按<kbd>空白鍵</kbd>或視窗底部播放列中的播放按鈕。播放列顯示：</p>
+<ul>
+<li>封面圖片、標題和演出者</li>
+<li>用於快轉/倒轉的時間軸</li>
+<li>音量控制</li>
+<li>隨機播放和重複模式</li>
+</ul>
+
+<h3>播放影片</h3>
+<p>電影會在獨立的影片視窗中開啟。移動滑鼠時控制項目會自動顯示。如果檔案包含多個音軌，你可以在「播放」選單中切換音軌和字幕。</p>
+
+<h3>播放控制</h3>
+<!-- kuerzel-wiedergabe -->
+<table class="shortcut-table">
+<tr><td><kbd>空白鍵</kbd></td><td>播放 / 暫停</td></tr>
+<tr><td><kbd>&#8997;&#8984;&#8594;</kbd></td><td>下一曲</td></tr>
+<tr><td><kbd>&#8997;&#8984;&#8592;</kbd></td><td>上一曲</td></tr>
+<tr><td><kbd>&#8997;&#8984;&#8593;</kbd></td><td>增大音量</td></tr>
+<tr><td><kbd>&#8997;&#8984;&#8595;</kbd></td><td>減小音量</td></tr>
+<tr><td><kbd>&#8963;&#8984;F</kbd></td><td>全螢幕</td></tr>
+</table>
+<p>這些指令也位於<strong>播放</strong>選單中；所有鍵盤快速鍵請參閱<a href="#shortcuts">第 12 章</a>。</p>
+
+<h3>播放模式</h3>
+<ul>
+<li><strong>隨機播放：</strong>以隨機順序播放目前列表。</li>
+<li><strong>重複（列表）：</strong>在最後一首之後重複整個列表。</li>
+<li><strong>重複（單首）：</strong>循環播放目前曲目。</li>
+</ul>
+
+<h3>記住播放位置</h3>
+<p>sCollect可以為每個項目記住最後到達的播放位置，並在下次從該位置繼續 &ndash; 就像有聲書或Podcast一樣。是否記住位置由你<strong>按媒體類型全域</strong>設定，位於<strong>設定 &gt; 播放/播放清單 &gt; 記住播放位置</strong>（有聲書、Podcast和電影預設開啟，音樂預設關閉）。</p>
+<p>從記住的位置繼續播放時，會短暫出現<strong>「從頭開始」</strong>按鈕 &ndash; 點選即可改為從頭播放該曲目。</p>
+
+<h3>固定的開始和停止標記</h3>
+<p>在中繼資料編輯器的<strong>檔案資訊</strong>標籤、<strong>播放</strong>部分，你可以設定固定標記：此後該項目僅從<strong>開始</strong>播放到<strong>停止</strong> &ndash; 便於略過片頭或結尾的靜音。時間採用<code>MMM:SS</code>格式，千分之一秒寫在逗號之後（例如<code>3:45,500</code>）。<strong>「套用」</strong>按鈕會將相應欄位設為目前播放位置。</p>
+<aside>
+<strong>注意：</strong>播放位置和開始/停止在外部播放（VLC、IINA、MPV）時同樣有效。如果已設定此媒體庫的副本，位置和標記會自動與它們同步 &ndash; 你可以在一台裝置上暫停，在另一台裝置上繼續。
+</aside>
+
+<h3>建立裁剪副本</h3>
+<p>sCollect可以根據已設定的開始/停止標記，建立一個<strong>裁剪副本</strong>作為新項目，放在原始項目旁邊 &ndash; 原始項目保持不變。在中繼資料編輯器中，可在<strong>檔案資訊 &gt; 播放</strong>下找到<strong>「建立裁剪副本」</strong>按鈕。或者：在一個或多個項目上按右鍵，選擇<strong>「按開始/停止裁剪…」</strong>。</p>
+<p>支援MP4/M4V/MOV（影片）以及MP3、M4A/M4B、AIFF、WAV和CAF（音訊）。裁剪為無損操作 &ndash; 無需重新編碼，因此沒有品質損失。</p>
+<p>對於PCM格式的AIFF和WAV，你還可以額外指定平滑的<strong>淡入</strong>和<strong>淡出</strong> &ndash; 以秒為單位（<code>5</code>、<code>2,5</code>），或採用與開始和停止相同的格式（<code>0:05</code>）。sCollect 無法辨識的輸入會標成紅色，只有兩個欄位都正確時才會進行裁剪。對於壓縮格式<strong>MP3、M4A和M4B</strong>，裁剪前會開啟一個包含兩個選項的對話框：<strong>「無損（保留原始格式）」</strong>不重新編碼進行裁剪，但不支援淡入/淡出。<strong>「M4A(AAC)」</strong>則會重新編碼 &ndash; 可選擇<strong>資料速率</strong>（128 到 320 kbps）並可選淡入/淡出，代價是輕微的品質損失。</p>
+
+<h3>輸出到 Apple Music</h3>
+<p>播放清單可以傳送到 Apple Music：在側邊欄中按右鍵點選播放清單，選擇「將播放清單傳送到 Apple Music」。也可以透過<strong>檔案 &gt; 將播放清單傳送到 Apple Music&hellip;</strong>選單使用。</p>
+
+<h3>外部播放</h3>
+<p>某些格式不被macOS或AVFoundation直接支援。sCollect偵測到這種情況，並自動在外部播放器中開啟這些檔案：</p>
+<ul>
+<li><strong>視訊容器格式：</strong>MKV、AVI、FLV、MPG、MPEG、VOB、DivX</li>
+<li><strong>現代編解碼器：</strong>MP4中的AV1（在沒有硬體解碼器的較舊Mac上）</li>
+<li><strong>高解析度音訊：</strong>DSD（DFF、DSF）</li>
+<li><strong>其他音訊格式：</strong>OGG Vorbis、WMA</li>
+</ul>
+<!-- unerreichbare-spuren -->
+<p><strong>當某條軌道無法觸及時：</strong>有些檔案看上去可以播放，實際上只能播放一半 &ndash; 例如一個 MP4，macOS 根本不提供它的音訊軌。結果將是一部無聲影片。因此 sCollect 在匯入時會檢查容器攜帶了哪些軌道、其中哪些真正到達，並把結果記在項目上。播放時，這樣的檔案會不再重新檢查便交給外部播放器。</p>
+<p>這類常見情形中的一種，sCollect 在匯入時就予以修正：MP4 容器中的 MP3 音訊缺少 macOS 期待的一個描述欄位。該處理更動容器中的 <strong>19 個位元組</strong> &ndash; 畫面、聲音、時間長度、章節和所有標籤都保持不變 &ndash; 此後該檔案在任何地方都能播放，而不只是在 sCollect 中。記錄中的一行會指明每一個這樣的情形。</p>
+<!-- kopierschutz-wiedergabe -->
+<p><strong>受複製保護的檔案</strong>，sCollect 一律不先檢查就交到外面：交給 macOS 為它們指定的那個程式 &ndash; 購買的內容例如交給 <strong>TV</strong> 或<strong>音樂</strong>。只有在那裡才有能讓它們得以播放的金鑰。</p>
+<p>首選播放器自動偵測：<strong>VLC</strong>、<strong>IINA</strong>或<strong>MPV</strong>（按此順序）。您可以在<strong>設定 &gt; 播放/播放清單 &gt; 用於不支援編解碼器的外部播放器</strong>下設定首選項。如果未安裝這些播放器中的任何一個，sCollect將回退到預設應用程式 &ndash; 我們推薦<a href="https://www.videolan.org/vlc/">VLC Media Player</a>（免費、開放原始碼）。</p>
+<aside>
+<strong>注意：</strong>首次啟動時，sCollect會顯示包含此資訊的歡迎文字。啟用「不再顯示」以便將來隱藏。
+</aside>
+
+<!-- ============================================================ -->
+<h2 id="playlists">7. 播放清單</h2>
+
+<h3>標準播放清單</h3>
+<p>按一下側邊欄中「播放清單」標題旁的<strong>+</strong>可建立新的播放清單，按一下旁邊的資料夾圖示可建立用來存放播放清單的資料夾。項目可以從媒體列表拖移進去，也可以透過右鍵選單中的「加入播放清單」加入；「僅從播放清單中移除」會將其移出播放清單，但不會從媒體庫中刪除。</p>
+<!-- playlist-kategorie -->
+<p>位於某個類別（例如音訊）下的播放清單只接收該類別的項目。如需混合清單，請使用側邊欄最底部的「播放清單」。刪除播放清單或資料夾時，sCollect 會先詢問確認；刪除資料夾會一併刪除其中的播放清單，項目本身仍保留在媒體庫中。</p>
+<!-- playlist-zug -->
+<p>如果你把檔案從 <strong>Finder</strong> 拖到某個播放清單上，它們會先被匯入 &ndash; 帶匯入對話框和重複偵測 &ndash; 然後才進入該清單；請見<a href="#import">匯入媒體</a>（第 3 節）。</p>
+
+<!-- playlist-rueckgaengig -->
+<p>加入和移除都可以用 <kbd>&#8984;Z</kbd> 還原；被移除的項目會回到原來的位置。「從媒體庫移除」也是如此：<kbd>&#8984;Z</kbd> 會把項目連同封面及其在所有播放清單中的位置一併復原。</p>
+
+<!-- playlist-doppelt -->
+<h3>在一個播放清單中多次加入同一項目</h3>
+<p>如果某個項目已在播放清單中，而你再次加入它，sCollect 會詢問 &ndash; 對所有拖入或選取的項目只詢問一次，並在下方列出它們的名稱。<strong>仍然加入</strong>會將它們再加入一次，<strong>略過</strong>（<kbd>Esc</kbd>）會略去已包含的項目；新項目在兩種情況下都會加入。</p>
+<p>每一列都是一個獨立的項目：兩個相同的項目中，你可以只選取其中一個並用「僅從播放清單中移除」將其移出，另一個保持不變。</p>
+
+<!-- playlist-sortieren -->
+<h3>排序與「編號」直欄</h3>
+<p>每個播放清單都有自己的排序，與媒體庫及其他播放清單無關。<strong>編號</strong>直欄顯示項目在播放清單中的位置，也就是加入的順序；播放清單起初依此排序。</p>
+<p>按一下直欄標題即依該直欄排序，再按一下則反轉方向；按住 Shift 鍵按一下可再加入一個直欄，按住 Option 鍵按一下可移除一個直欄。<strong>隨時按一下「編號」即可回到加入的順序</strong> &ndash; 排序只改變顯示，絕不改變儲存的順序。播放依顯示的順序進行。</p>
+<p>如果播放清單已有自己的直欄選擇，可在直欄標題上按一下右鍵並選擇<strong>自訂直欄&hellip;</strong>來顯示「編號」。</p>
+
+<!-- playlist-spaltenbrowser -->
+<h3>播放清單中的直欄瀏覽器</h3>
+<p>在播放清單中也可以顯示直欄瀏覽器 &ndash; 使用列表右上方的開關，或選擇<strong>顯示方式 &gt; 顯示/隱藏直欄瀏覽器</strong>（<kbd>&#8984;B</kbd>）。它只顯示該播放清單中項目的值。每個播放清單都會記住自己在瀏覽器中的選取；而瀏覽器是否顯示則對所有清單通用。</p>
+
+<h3>智慧型播放清單</h3>
+<p>智慧型播放清單會根據規則自動填入。透過<strong>檔案 &gt; 新增智慧型播放清單&hellip;</strong>（<kbd>&#8997;&#8984;N</kbd>）或「播放清單」標題旁的齒輪圖示來建立 &ndash; 在側邊欄最底部或某個類別下皆可。位於某個類別下的智慧型播放清單只評估該類別的項目。規則可以組合：</p>
+<ul>
+<li><strong>文字欄位：</strong>標題、演出者、專輯、流派等（包含、開頭為、結尾為、為&hellip;）</li>
+<li><strong>數字欄位：</strong>年份、評分、播放次數、時間長度（為、大於、小於&hellip;）</li>
+<li><strong>日期欄位：</strong>加入日期、上次播放（為、大於、小於）</li>
+<li><strong>布林欄位：</strong>收藏、合輯（為真/為假）</li>
+</ul>
+<p>在「符合」處設定是<strong>全部</strong>規則都須符合（且），還是符合<strong>任意</strong>規則即可（或）。</p>
+
+<aside>
+<strong>提示：</strong>sCollect 在建立新媒體庫時會自動建立四個智慧型播放清單：「最近加入」、「最近播放」、「評分最高」和「播放最多」。
+</aside>
+
+<!-- ============================================================ -->
+<h2 id="external">8. 外接硬碟</h2>
+
+<h3>外接硬碟上的媒體庫</h3>
+<p>你可以在外接硬碟上建立或搬移 sCollect 媒體庫。注意事項：</p>
+<ul>
+<li>將硬碟連接到<strong>另一部 Mac</strong> 時，需要一次性授予 sCollect 取用權限。系統會自動出現對話框讓你選擇媒體資料夾。</li>
+<li>為獲得最佳檔案取用效果，建議在系統設定的<strong>隱私權與安全性 &gt; 完全取用磁碟</strong>中加入 sCollect。</li>
+</ul>
+
+<h3>按媒體類型設定個別資料夾</h3>
+<p>在<strong>設定 &gt; 媒體庫</strong>中，你可以為每種媒體類型指定個別的資料夾。這樣電影可以存放在大容量外接 HDD 上，而音樂保留在高速內建 SSD 上。</p>
+<!-- ordner-nicht-erreichbar -->
+<p><strong>當這樣的資料夾無法存取時</strong> &ndash; 磁碟已拔除、網路卷宗未連接 &ndash; sCollect 會<em>鎖定</em>該媒體類型：不寫入、不移動、不比對任何內容，項目保持不變。這是有意為之。缺少資料夾的媒體類型否則會悄無聲息地落入預設資料夾，而媒體庫事後便再也不知道這些檔案該歸到哪裡。</p>
+<p>一條警告橫幅會指明受影響的類型，設定中該資料夾旁則註明它目前無法存取。重新接上磁碟，鎖定便自行解除。</p>
+<!-- umbiegen -->
+<p><strong>重新指向：</strong>如果你在原有資料夾無法存取的情況下為某個媒體類型選擇了<em>另一個</em>資料夾，那麼什麼也移不了 &ndash; 檔案本來就搆不著。此時 sCollect 會提議把<em>項目</em>重新指向新資料夾：它在那裡尋找每一個檔案，先按原有路徑，再按檔案名稱，並事先給你一份帶三個數字的預覽 &ndash; 透過路徑找到、透過檔案名稱找到、仍然沒有檔案。<strong>重新指向只更改媒體庫，不動任何一個檔案。</strong></p>
+
+<h3>尋找遺失的檔案</h3>
+<p>如果檔案被搬移或硬碟未連接，你可以透過<strong>設定 &gt; 媒體庫 &gt; 檢查缺失檔案</strong>執行檢查。sCollect 會顯示所有無法取用的項目；<strong>搜尋資料夾&hellip;</strong>會在你選擇的資料夾中尋找它們（見下文）。</p>
+
+<p>如果為主媒體庫註冊了副本，視窗還會顯示<strong>從副本還原</strong>按鈕。sCollect搜尋所有可存取的副本以尋找遺失的檔案，並將第一個找到的結果（大小 > 0）複製回主媒體庫。在意外刪除後，垃圾桶在此期間已被清空時很有用 &ndash; 只要至少有一個副本仍然有該檔案，它就可以還原。</p>
+
+<!-- fehlende-markieren -->
+<h3>標記並顯示缺失的項目</h3>
+<p><strong>檔案 &gt; 媒體庫 &gt; 標記缺失的項目</strong>會把全部內容檢查一遍，並把結果記在項目上。此後列表只讀取這個標記 &ndash; 捲動時它不再重新檢查，因為在大型媒體庫中那樣太慢。沒有檔案的項目會在標題前得到一個<strong>橘色警告三角形</strong>。</p>
+<p><strong>磁碟機已拔除並不等於檔案缺失。</strong>沒有連接的東西，sCollect 也無法檢查。這類項目報告會單獨計為<em>無法檢查</em>，它們的標記保持原樣 &ndash; 既不設定也不清除。因此執行結束後的報告會分別列出已檢查、缺失和無法檢查的項目，以及新設定了多少標記、清除了多少標記。</p>
+<p><strong>檔案 &gt; 媒體庫 &gt; 顯示缺失的項目</strong>（<kbd>&#8679;&#8984;F</kbd>）是一個切換開關：列表此時只顯示被標記的項目。列表上方的橫幅會說明它為何這麼短，並在同一處以<strong>結束缺失項檢視</strong>提供出口。只要沒有設定任何標記，這個開關就是灰的。</p>
+<p>這個檢視在<strong>開啟時凍結</strong>它所顯示的項目。如果你重新連結其中一個，它的列會留在原處並得到一個<strong>綠色勾號</strong> &ndash; 這樣你在逐個處理時不會看不清自己已經完成了多少。橫幅裡的計數器兩個數都顯示：還有多少沒有檔案，以及已完成多少。回到一般檢視後，這個標示就消失了。</p>
+<!-- zurueckholen -->
+<p>如果你在 Finder 中把某個檔案<strong>移出了媒體資料夾</strong>，sCollect 通常仍能透過它的書籤找到它 &ndash; 這時檔案並未缺失，只是位於媒體庫之外。報告會在單獨一行中列出這類項目，<strong>取回</strong>會把這些檔案搬回原位。如果 sCollect 不能從外部位置移除檔案，則改為複製。</p>
+
+<h3>重新找回缺失的檔案</h3>
+<p>檔案缺失時，項目<strong>無法編輯</strong>。這是有意為之：沒有任何地方可以寫入，而一個能開啟、卻要到儲存時才拒絕的編輯器只會白費你的功夫。取而代之，右鍵選單提供<strong>尋找檔案&hellip;</strong>。對話框會在仍然存在的那一層資料夾中開啟，並且只顯示副檔名相符的檔案。</p>
+<p><strong>找到的檔案會被取回媒體庫</strong>，而不只是建立連結。這樣，受管理的項目依然是受管理的，即使你是在別處重新找到該檔案。</p>
+<p>如果是<strong>磁碟機未連接</strong>，這裡就只有一條變灰的提示。在這種情況下提供尋找，等於邀請你把項目永久地掛到錯誤的檔案上。</p>
+<p>對於沒有檔案的項目，右鍵選單裡<strong>只會列出真正能用的項</strong>。播放、在 Finder 中顯示、轉換、從磁碟刪除，以及其他一切需要檔案的操作，根本不會出現。</p>
+<p>如果你選取<strong>多個</strong>項目，其中有沒有檔案的，批次編輯器會跳過它們，並在欄位上方說明其數量；它用其餘項目開啟。如果全部都缺少檔案，它就不開啟。</p>
+
+<!-- ordnersuche -->
+<h3>在資料夾中尋找缺失的檔案</h3>
+<p>與其逐個尋找檔案，你可以給 sCollect 指定一個存放缺失檔案的資料夾。有三條途徑：針對選取項目的右鍵選單<strong>在資料夾中尋找缺失項目&hellip;</strong>，針對所有已標記項目的<strong>標記缺失的項目</strong>報告中的<strong>在資料夾中尋找&hellip;</strong>，以及<strong>缺失檔案</strong>視窗中的<strong>搜尋資料夾&hellip;</strong>。</p>
+<ul>
+<li><strong>唯一的結果</strong>由 sCollect 自行比對 &ndash; 依據名稱和大小；對於改過名的音訊和影片檔案，則依據大小和時長。</li>
+<li><strong>有歧義或不確定的結果</strong> &ndash; 例如不同子資料夾中的兩個同名檔案，或一本改過名的書 &ndash; 會進入一個供你決定的視窗。那裡沒有任何預選；只有在你選擇了一個檔案之後，才能採用該項目。</li>
+<li>如果找到的檔案位於媒體庫<strong>之外</strong>，它會被<strong>複製</strong>到正確的位置；如果它位於該項目所屬類型的媒體資料夾中，則會被<strong>搬移</strong>到那裡。</li>
+<li><strong>已連結</strong>的項目在匯入方式為「保留在原位置」時會被重新連結；在其他匯入方式下，檔案會進入媒體庫，項目的值會寫入檔案。</li>
+<li>如果找到的檔案已屬於另一個項目，則會被<strong>略過</strong>。</li>
+</ul>
+<p>最終訊息會列出哪些被自動比對、哪些由你採用、哪些未找到、哪些被略過；記錄中列出了路徑。</p>
+
+<h3>網路共享上的媒體庫</h3>
+<p>sCollect還可以在SMB或NFS共享上執行媒體庫。請注意：</p>
+<ul>
+<li><strong>開啟時：</strong>如果卷宗離線，則不會嘗試自動掛載 &ndash; sCollect顯示警告。您仍然可以開啟媒體庫，或先手動連接卷宗。</li>
+<li><strong>刪除時：</strong> 即使在網路共享上，刪除的檔案也會先進入 App 垃圾桶（相應媒體資料夾中的 <code>.Deleted</code> 資料夾），並可從那裡復原。只有在清空 App 垃圾桶時才會被永久移除（見第 2 節）。由於共享通常沒有系統垃圾桶，屆時會被直接刪除。</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 id="settings">9. 設定</h2>
+<p>透過 <strong>sCollect &gt; 設定&hellip;</strong>（<kbd>&#8984;,</kbd>）開啟設定。設定分為多個標籤頁：</p>
+
+<h3>一般</h3>
+<ul>
+<li><strong>匯入模式：</strong>複製、搬移或保留原處（今後匯入的預設設定）。</li>
+<li><strong>多值分隔符號：</strong>作為單個欄位中多個演出者/類型分隔符號的字元（預設：&amp;、/、;）。</li>
+</ul>
+
+<h3>媒體庫</h3>
+<ul>
+<li><strong>預設媒體資料夾：</strong>匯入的檔案存放的主資料夾。</li>
+<li><strong>按媒體類型設定資料夾：</strong>特定媒體類型的選用個別資料夾。</li>
+<li><strong>媒體庫儲存位置：</strong>顯示目前位置，可以進行更改。</li>
+<!-- einstellungen-ansicht -->
+<li><strong>匯入：</strong>匯入檔案的處理方式（參見「匯入模式」）。</li>
+<li><strong>視圖 &gt; 每個資料夾最大項目數：</strong>值達到此數量時，直欄瀏覽器會按首字母建立節點。只影響顯示，不影響磁碟上的資料夾。</li>
+</ul>
+
+<h3>類別名稱</h3>
+<p>可以更改類別（音訊、書籍、影片、其他）和媒體類型（音樂、有聲書等）的名稱。未命名的媒體類型會在側邊欄中隱藏，從而實現停用。</p>
+
+<h3>欄位名稱</h3>
+<p>更改欄位名稱（例如，為電子書將「演出者」改為「作者」）。可以全域設定或按媒體類型設定。</p>
+<!-- feldbezeichner-various -->
+<p>對許多媒體類型，sCollect 已經自帶了合適的名稱：有聲書中「演出者」本身就叫<em>作者</em>，劇情片中「專輯」叫<em>製片公司</em>。在<strong>其他</strong>類別中，名稱取決於收藏領域：</p>
+<ul>
+<li><strong>硬幣：</strong>鑄幣廠、國家、系列、雕刻師、目錄</li>
+<li><strong>模型：</strong>製造商、品牌、系列、設計工程師、比例</li>
+<li><strong>郵票：</strong>郵政管理機構、國家、發行、設計者、目錄</li>
+</ul>
+<p>「其他」底下的其餘位置在你自行命名之前，沿用模型的名稱。所有這些預設都可以在此處覆寫 &ndash; 它們是建議，而非規定。</p>
+
+<h3>播放/播放清單</h3>
+<ul>
+<li><strong>Apple Music 輸出：</strong>將播放清單輸出到 Apple Music 的設定。</li>
+<li><strong>視訊視窗始終在最前面：</strong>視訊視窗保持在所有其他視窗之上。</li>
+<li><strong>慢動作/單格時的音量：</strong>慢動作和單格模式期間的音量降低（dB）。</li>
+<li><strong>外部視訊播放器：</strong>用於AVFoundation無法解碼的編解碼器的首選播放器（MKV、AVI、無HW解碼器的AV1、DivX等）。偵測到VLC、IINA和MPV；如果未安裝任何一個，則使用預設應用程式。</li>
+</ul>
+
+<h3>同步</h3>
+<p>管理與主媒體庫和副本媒體庫的連接。你在這裡把第二個媒體庫連接為副本、監看待處理的同步操作，並把主媒體庫的狀態投射到副本上。詳見第 11 節。</p>
+
+<h3>語言</h3>
+<p>sCollect 支援 25 種語言。選擇你偏好的語言——重新啟動 App 後新語言即可生效。</p>
+
+<!-- ============================================================ -->
+<h2 id="convert">10. 格式轉換</h2>
+
+<h3>轉換音訊或從影片中擷取音訊</h3>
+<p>選取一個或多個音訊或影片項目，按右鍵並選擇<strong>格式轉換&hellip;</strong>，影片則選擇<strong>擷取音訊為&hellip;</strong>。在對話框中：</p>
+<ul>
+<li><strong>輸出格式：</strong>AAC、MP3、HE-AAC、ALAC（無損）、WAV 或 AIFF。也可選擇&laquo;音訊不變&raquo;（直通）&ndash; 音訊串流以 1:1 方式無重新編碼地複製到 MP4 容器中。</li>
+<li><strong>音訊參數：</strong>聲道配置（與原始相同 / 立體聲 / 單聲道）、取樣率，以及 PCM/ALAC 的位元深度。</li>
+<li><strong>壓縮：</strong>對於 MP3/AAC/HE-AAC：固定位元率或可變位元率（VBR）以及品質滑桿。</li>
+<li><strong>目標：</strong>兩種選擇 &ndash; <strong>媒體庫</strong>（轉換後的檔案加入所選的音訊類別；預設&laquo;播客&raquo;，或&laquo;有聲書&raquo;/&laquo;音樂&raquo;作為備用，如果播客未啟用）或<strong>外部</strong>（使用<strong>選擇&hellip;</strong>按鈕選擇媒體庫外的資料夾 &ndash; 原始檔案保持不變，轉換後的檔案不會加入媒體庫中）。</li>
+<li><strong>原始處理：</strong>目標為&laquo;媒體庫&raquo;時：保留、移到垃圾桶或用轉換取代。目標為&laquo;外部&raquo;時始終保留。</li>
+</ul>
+<p>原始檔案的中繼資料和封面始終複製。匯入媒體庫時，檔案會移動到音訊類別資料夾；不進行重複檢查 &ndash; 原始檔案的處理由&laquo;原始&raquo;選單控制。</p>
+
+<h3>iPod 預設</h3>
+<p><strong>iPod 相容 (AAC-LC, 256 kbps)</strong>按鈕將參數設定為與舊版 iPod 最大相容的組合：MP4 容器中的 AAC-LC、44.1 kHz、立體聲、256 kbps CBR。</p>
+
+<aside><strong>提示：</strong>所有轉換設定按媒體庫儲存 &ndash; 下次開啟對話框時，你的最後設定已預先選取。</aside>
+
+<!-- ============================================================ -->
+<h2 id="sync">11. 同步 (主媒體庫/副本)</h2>
+
+<h3>概念</h3>
+<p>sCollect 可以將多個媒體庫相互同步：一個媒體庫作為<em>主媒體庫</em>，一個或多個其他作為<em>副本</em>。主媒體庫中的更改會自動鏡像到連線的副本上，每個副本擁有自己的媒體資料夾和路徑。</p>
+
+<!-- kein-backup -->
+<h3>同步不是備份</h3>
+<p><strong>副本防的是拿不到，不是遺失。</strong> 每一處變動都會被鏡像 &ndash; 刪除也一樣：在主媒體庫上移入垃圾桶的內容，在每個副本上同樣進入垃圾桶；一旦永久移除，各處都不再有。誤覆寫的欄位亦然：副本接收的是新值，而不是舊值。因此備份必須位於這條鏈之 <em>外</em> &ndash; 例如 Time Machine，或是複製到一個 sCollect 並不知道的媒體上。</p>
+
+<h3>新增副本</h3>
+<p>開啟<strong>設定 &gt; 同步</strong>並按一下<strong>新增副本&hellip;</strong>。選擇另一個 sCollect 媒體庫作為副本。候選不能已經是另一個主媒體庫的副本，也不能本身是帶有已註冊副本的主媒體庫。</p>
+<p><strong>最合適的時機是不再有任何待處理事項的時候。</strong>新副本必須先取得它所缺少的一切 &ndash; 若這與仍在進行的傳輸撞在一起，兩者都會更久，必要時所有副本會互相等待。看一眼側邊欄中的同步圖像就夠了：若它沒有顯示數字，就是合適的時刻。</p>
+
+<h3>初始檔案鏡像</h3>
+<p>在 Push 時，sCollect 會寫入副本的媒體庫（項目、播放清單、設定），但不會在初始設定時自動複製所有媒體檔案。對於初始批次鏡像，建議使用 FreeFileSync 等外部工具。</p>
+
+<h3>投影 (Push)</h3>
+<p>使用副本列中的<strong>投影</strong>，主媒體庫會完全重寫副本的 <code>library.json</code>。該副本的待處理同步佇列也會被重置。</p>
+
+<h3>即時廣播</h3>
+<p>在日常運行中，主媒體庫上的每一處更改都會自動傳播到所有已連接的副本。對於無法存取的副本，更改會存入佇列，並在該副本重新可存取時補做。每個副本待處理的操作數量會顯示在同步設定中（「X 待處理」標記）。</p>
+<p>主媒體庫上的刪除會被反映為：每個副本將自己的檔案於本機移至自己的 <code>.Deleted</code> 垃圾桶 &ndash; 無需透過網路傳輸。在主媒體庫上復原也會於本機取回副本的檔案；只有在主媒體庫上永久移除時，副本才會丟棄其垃圾桶中的檔案。</p>
+
+<h3>待處理操作</h3>
+<p>當某個副本離線，或某次同步失敗時，待處理的操作就會堆積。每個副本有兩個選項：</p>
+<ul>
+<li><strong>補做待處理項：</strong>嘗試套用積壓。若某次傳輸失敗，它會留在原處而本次執行停止 &ndash; 它不會遺失，而是在下一次嘗試時重新嘗試。</li>
+<li><strong>放棄&hellip;：</strong>該副本跳過它全部的積壓。<strong>這是放棄，而不是許可：</strong>此後它被視為最新，儘管這些更改並未到達它 &ndash; 對它而言這些更改已經失去。因此之後必須緊接著執行<strong>投射</strong>或<strong>修復同步錯誤&hellip;</strong>；只有這樣才能查明它真正缺少什麼並補上。</li>
+</ul>
+
+<h3>當某個副本跟不上時</h3>
+<p>所有副本處理同一份列表，而且是<strong>齊步</strong>進行的：只有當一項更改到達了每一個副本，才會繼續往下走。這是有意為之 &ndash; 這樣就不會有副本悄悄落後，並在幾個月後帶著誰也說不清的狀態。</p>
+<p>由此帶來的結果是：<strong>若一個副本卡住，其餘的就等待。</strong>側邊欄中它們旁邊會顯示「正在等待另一個副本」。這不是錯誤，而是煞車，一旦缺席的副本重新可存取 &ndash; 磁碟已連接、網路卷宗可用 &ndash; 它就會自行鬆開。</p>
+<p>若情況持續，你有兩條路：讓卡住的副本變得可存取並執行<strong>補做待處理項</strong> &ndash; 或者在它那裡選擇<strong>放棄</strong>，隨後<strong>投射</strong>。第二條路讓這一個副本失去它的積壓，但立刻釋放其餘副本。</p>
+
+<h3>修復同步錯誤</h3>
+<p>使用<strong>修復同步錯誤&hellip;</strong>，副本中每個檔案的標籤資料將與主媒體庫進行比較，如有差異則重新寫入。評分、類型和年份的過濾器允許分階段處理。副本中缺失的檔案將從主媒體庫複製。</p>
+
+<h3>唯讀副本</h3>
+<p>副本可以標記為唯讀 &ndash; 那麼副本中的匯入、刪除和標籤編輯將被阻擋。</p>
+
+<h3>整理媒體庫</h3>
+<p>透過<strong>設定 &gt; 媒體庫 &gt; 整理媒體庫</strong>（或媒體列表上方的按鈕），sCollect 會把受管理的檔案整理到一個乾淨的狀態。事先會有一個視窗詢問範圍和選項。</p>
+
+<h4>範圍</h4>
+<p>上方選擇要處理的<strong>媒體類型</strong> &ndash; 在其類別下展開，並顯示每種類型的項目數量。預設全部選取。這樣做是值得的，因為逐漸長大的媒體庫很少處處都同樣整齊：如果你在音樂上大量使用過尋找&nbsp;&amp;&nbsp;取代，而有聲書幾乎沒有，那就最好把兩者分開處理。</p>
+
+<h4>這次執行做什麼</h4>
+<ul>
+<li><strong>合併重複項目：</strong>如果兩個項目指向同一個檔案，那不是重複項目，而是媒體庫中的一個錯誤 &ndash; 畢竟只有一份媒體。較早的項目保留，並從另一個那裡繼承資訊量更大的內容：更高的評等、收藏標記、更高的播放次數、記住的播放位置。被放棄項目在播放清單中的位置，此後指向保留下來的那個。</li>
+<li><strong>歸位：</strong>檔案不在目標路徑上的項目會被移到那裡（演出者/專輯，固定的資料夾層級）。附屬檔案、封面和附件一同移動。</li>
+<li><strong>比對資料夾：</strong>掃描媒體資料夾，尋找手動複製進來、尚未有項目的檔案。新檔案會被接納。若某個已有項目缺少檔案，而找到的檔案與之相符，項目便據此修復，並接過所找到檔案的中繼資料。若原檔案仍在，該檔案會作為真正的重複項目被接納，並在標題和檔案名稱中加上「 (2)」。</li>
+<li><strong>移除孤立項目：</strong>檔案<em>確鑿</em>已經消失的項目會被刪除 &ndash; 只刪項目，因為檔案已經不在了。「確鑿」意味著：磁碟已連接，其上並非<em>所有</em>檔案同時遺失，而對受管理的項目而言媒體資料夾可以存取。若其中一個條件不滿足，項目保持不變 &ndash; 一顆未連接的磁碟不該讓任何項目付出代價。</li>
+</ul>
+
+<h4>把中繼資料與檔案比對</h4>
+<p>該選項<strong>預設關閉</strong>，回答的是媒體庫與檔案不一致時以哪一方為準的問題：</p>
+<ul>
+<li><strong>以檔案為準：</strong>採用檔案的標籤，媒體庫被修正。不會寫入任何檔案。</li>
+<li><strong>以媒體庫為準：</strong>採用儲存的數值，並寫入檔案。<strong>這無法還原。</strong></li>
+</ul>
+<p>下方選擇涉及的<strong>欄位</strong> &ndash; 全部已勾選，取消勾選是有意的動作。這次執行起初不寫入任何內容：它只收集差異，隨後在預覽中依欄位分組顯示。你可以在那裡依欄位一次取消勾選，或展開後逐行取消；鉛筆圖像標記自上次存取以來被外部更動過的檔案。只有「套用」才會寫入。</p>
+<p><strong>BPM 和歌詞</strong>不在可選之列：它們根本不儲存在媒體庫中，因而沒有可供比較的數值。它們只存在於檔案之中，寫入時也會被保留。<strong>封面</strong>在其中，但透過大小來比較 &ndash; 兩張碰巧位元組數相同的不同影像，這種比較無法分辨。</p>
+
+<h4>把更改與副本同步</h4>
+<p>預設開啟。若你關閉它，已連接的副本保持不變並因此逐漸分歧 &ndash; 只有當你之後無論如何都會用外部工具做一次完整比對時才有意義。<strong>投射不能取代它：</strong>投射只對應路徑並回報目標位置缺少什麼，卻不會在副本上移動任何內容。</p>
+
+<p>執行期間會鎖定帶有更改的操作；會顯示帶取消按鈕的進度列，並抑制 Mac 進入睡眠，以免外部卷宗中斷連接。最後會有一個視窗彙總：移動了什麼、合併了什麼、新接納了什麼、修復了什麼、作為重複項目加入了什麼，以及移除了什麼。</p>
+
+<aside><strong>提示：</strong>如果你定期使用外部工具（例如 FreeFileSync）更新副本，只需在每次鏡像後對副本執行<strong>投影</strong> &ndash; 待處理佇列會自動重置。</aside>
+
+<!-- ============================================================ -->
+<h2 id="shortcuts">12. 鍵盤快速鍵</h2>
+
+<!-- kuerzel-stand-2109 -->
+
+<h3>一般</h3>
+<table class="shortcut-table">
+<tr><td><kbd>&#8984;O</kbd></td><td>匯入檔案</td></tr>
+<tr><td><kbd>&#8679;&#8984;O</kbd></td><td>匯入資料夾</td></tr>
+<tr><td><kbd>&#8984;I</kbd></td><td>資訊（選取多個項目時：編輯多個項目）</td></tr>
+<tr><td><kbd>&#8984;F</kbd></td><td>搜尋</td></tr>
+<tr><td><kbd>&#8997;&#8984;F</kbd></td><td>尋找/取代</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>還原</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>重做</td></tr>
+<tr><td><kbd>&#8984;&#9003;</kbd></td><td>移到垃圾桶</td></tr>
+<tr><td><kbd>&#8679;&#8984;I</kbd></td><td>反向選取</td></tr>
+<tr><td><kbd>&#8679;&#8984;E</kbd></td><td>將所選匯出為 iTunes 檔案</td></tr>
+<tr><td><kbd>&#8679;&#8984;D</kbd></td><td>顯示重複的項目</td></tr>
+<!-- kuerzel-fehlende --><tr><td><kbd>&#8679;&#8984;F</kbd></td><td>顯示缺失的項目</td></tr>
+<tr><td><kbd>&#8997;&#8984;N</kbd></td><td>新增智慧型播放清單</td></tr>
+<tr><td><kbd>&#8984;,</kbd></td><td>設定</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>sCollect 輔助說明</td></tr>
+</table>
+
+<h3>顯示方式</h3>
+<table class="shortcut-table">
+<tr><td><kbd>&#8984;1</kbd> &hellip; <kbd>&#8984;4</kbd></td><td>選擇類別：音訊、書籍、影片、其他</td></tr>
+<tr><td><kbd>&#8984;B</kbd></td><td>顯示/隱藏直欄瀏覽器</td></tr>
+<!-- kuerzel-optimale-breite --><tr><td><kbd>&#8963;&#8984;B</kbd></td><td>最佳寬度</td></tr>
+<tr><td><kbd>&#8963;&#8984;S</kbd></td><td>顯示/隱藏側邊欄</td></tr>
+</table>
+
+<h3>播放</h3>
+<table class="shortcut-table">
+<tr><td><kbd>空白鍵</kbd></td><td>播放 / 暫停</td></tr>
+<tr><td><kbd>&#8997;&#8984;&#8594;</kbd></td><td>下一曲</td></tr>
+<tr><td><kbd>&#8997;&#8984;&#8592;</kbd></td><td>上一曲</td></tr>
+<tr><td><kbd>&#8997;&#8984;&#8593;</kbd></td><td>增大音量</td></tr>
+<tr><td><kbd>&#8997;&#8984;&#8595;</kbd></td><td>減小音量</td></tr>
+<tr><td><kbd>&#8963;&#8984;F</kbd></td><td>全螢幕</td></tr>
+</table>
+
+<h3>導覽</h3>
+<table class="shortcut-table">
+<tr><td><kbd>&#8593;</kbd> / <kbd>&#8595;</kbd></td><td>向上/向下移動項目</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd> / <kbd>&#8984;&#8595;</kbd></td><td>跳到第一個 / 最後一個項目</td></tr>
+<tr><td><kbd>&#8984;A</kbd></td><td>全選</td></tr>
+</table>
+
+<h3>在中繼資料編輯器中</h3>
+<table class="shortcut-table">
+<tr><td><kbd>&#8984;S</kbd></td><td>儲存</td></tr>
+<tr><td><kbd>&#8984;V</kbd></td><td>從剪貼簿插入影像（如果其中有影像）</td></tr>
+<tr><td><kbd>&#8963;&#8984;&#8592;</kbd> / <kbd>&#8963;&#8984;&#8594;</kbd></td><td>上一個 / 下一個項目（先儲存）</td></tr>
+</table>
+
+  </article>
+  <p class="zurueck"><a href="../">← sCollect</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../impressum.html">法律聲明</a><a href="../../../privacy.html">網站隱私權</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>
