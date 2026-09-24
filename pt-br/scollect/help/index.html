@@ -93,7 +93,7 @@
 <table>
 <tr><th>Categoria</th><th>Tipos de mídia padrão</th></tr>
 <tr><td>Áudio</td><td>Música, Audiolivro, Podcast (+ 7 personalizáveis)</td></tr>
-<tr><td>Livro</td><td>E-Book, PDF (+ 8 personalizáveis)</td></tr>
+<tr><td>Livro</td><td>E-book, PDF (+ 8 personalizáveis)</td></tr>
 <tr><td>Filme</td><td>Vídeo caseiro, Longa-metragem, Série (+ 7 personalizáveis)</td></tr>
 <tr><td>Diversos</td><td>Moeda, Modelo, Selo (+ 7 personalizáveis)</td></tr>
 </table>
@@ -127,7 +127,7 @@
 <ul>
 <li><strong>Metadados:</strong> mesmo título e intérprete com duração semelhante. Números de disco ou de faixa diferentes dentro do mesmo álbum excluem uma duplicata; nos audiolivros, além disso, títulos de álbum diferentes.</li>
 <li><strong>Conteúdo do arquivo:</strong> mesmo tamanho e mesmo início do arquivo.</li>
-<li><strong>Busca profunda por áudio idêntico:</strong> reconhece a mesma gravação mesmo quando as tags são completamente diferentes. Lê bem mais do disco e por isso é ajustável nos ajustes em <strong>Duplicatas</strong> &ndash; &laquo;automático&raquo; a desativa em volumes de rede.</li>
+<li><strong>Busca profunda por áudio idêntico:</strong> reconhece a mesma gravação mesmo quando as tags são completamente diferentes. Lê bem mais do disco e por isso pode ser configurada nos ajustes em <strong>Duplicatas</strong> &ndash; &laquo;automático&raquo; a desativa em volumes de rede.</li>
 <li><strong>Entradas órfãs:</strong> uma entrada cujo arquivo está ausente é anexada a uma entrada irmã existente com o mesmo título de base na mesma pasta. É o resto típico depois de renomear de &laquo;Título&raquo; para &laquo;Título (2)&raquo;.</li>
 </ul>
 <p>Para que a comparação não se baseie em informações erradas, antes da busca o sCollect lê as tags dos arquivos em questão e corrige os valores divergentes da biblioteca. Sem isso, números de disco errados poderiam fazer com que discos diferentes de um mesmo audiolivro fossem considerados idênticos.</p>
@@ -388,7 +388,7 @@
 <p>Um caso frequente desse tipo o sCollect corrige já na importação: áudio MP3 em um contêiner MP4 ao qual falta um campo descritivo que o macOS espera. A intervenção altera <strong>19 bytes</strong> no contêiner &ndash; imagem, som, duração, capítulos e todas as tags ficam intactos &ndash; e depois o arquivo é reproduzido em qualquer lugar, não apenas no sCollect. Uma linha do registro indica cada um desses casos.</p>
 <!-- kopierschutz-wiedergabe -->
 <p>Os <strong>arquivos protegidos contra cópia</strong> o sCollect sempre entrega para fora, sem verificá-los antes: ao app que o macOS prevê para eles &ndash; nos títulos comprados, por exemplo, ao <strong>TV</strong> ou à <strong>Música</strong>. Só ali está a chave com a qual eles podem ser reproduzidos.</p>
-<p>O reprodutor preferido é detectado automaticamente: <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (nesta ordem). Você pode escolher sua preferência em <strong>Ajustes &gt; Reprodução/Playlist &gt; Reprodutor externo para codecs não suportados</strong>. Se nenhum desses reprodutores estiver instalado, o sCollect recorre ao app padrão &ndash; recomendamos o <a href="https://www.videolan.org/vlc/">VLC Media Player</a> (gratuito, código aberto).</p>
+<p>O reprodutor preferido é detectado automaticamente: <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (nesta ordem). Você pode escolher sua preferência em <strong>Ajustes &gt; Reprodução/Playlist &gt; Reprodutor externo para codecs não suportados</strong>. Se nenhum desses reprodutores estiver instalado, o sCollect recorre ao app padrão &ndash; recomendamos o <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, código aberto).</p>
 <aside>
 <strong>Nota:</strong> Na primeira inicialização, o sCollect mostra um texto de boas-vindas com essas informações. Ative &laquo;Não mostrar novamente&raquo; para ocultá-lo no futuro.
 </aside>
@@ -442,7 +442,7 @@
 <p>Você pode criar uma biblioteca do sCollect em um disco externo ou mover uma existente para lá. Observe:</p>
 <ul>
 <li>Ao conectar o disco a um <strong>Mac diferente</strong>, o sCollect precisa obter acesso uma vez. Aparecerá automaticamente um diálogo para selecionar a pasta de mídia.</li>
-<li>Para um acesso ideal aos arquivos, recomendamos adicionar o sCollect nos Ajustes do Sistema em <strong>Privacidade e segurança &gt; Acesso total ao disco</strong>.</li>
+<li>Para um acesso ideal aos arquivos, recomendamos adicionar o sCollect nos Ajustes do Sistema em <strong>Privacidade e Segurança &gt; Acesso Total ao Disco</strong>.</li>
 </ul>
 
 <h3>Pastas personalizadas por tipo de mídia</h3>
@@ -530,7 +530,7 @@
 <h3>Reprodução/Playlist</h3>
 <ul>
 <li><strong>Exportação para o Apple Music:</strong> Ajustes para a exportação de playlists para o Apple Music.</li>
-<li><strong>Janela de vídeo sempre em primeiro plano:</strong> A janela de vídeo permanece acima de todas as outras janelas.</li>
+<li><strong>Janela de vídeo sempre à frente:</strong> A janela de vídeo permanece acima de todas as outras janelas.</li>
 <li><strong>Volume em câmera lenta / quadro a quadro:</strong> Redução de volume em dB durante os modos câmera lenta e quadro a quadro.</li>
 <li><strong>Reprodutor de vídeo externo:</strong> Reprodutor preferido para codecs que o AVFoundation não consegue decodificar (MKV, AVI, AV1 sem decodificador de hardware, DivX etc.). VLC, IINA e MPV são detectados; se nenhum estiver instalado, o app padrão é usado.</li>
 </ul>

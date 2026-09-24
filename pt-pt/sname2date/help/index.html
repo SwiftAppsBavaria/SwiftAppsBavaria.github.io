@@ -51,7 +51,7 @@
 <p class="notiz">Para isso, o mês tem de estar escrito com dois algarismos. Num nome como Bild 2 2016 costuma estar antes um número sequencial — e uma data mal lida seria pior do que uma data não lida.</p>
 <h2>Dia ou mês primeiro?</h2>
 <p>Em português, 3 de abril escreve-se 3/4; em inglês, 4/3 — os mesmos dois números com o significado invertido. Em 15-03-2024 isso não faz diferença: não existe um mês 15, a indicação é inequívoca e é sempre lida corretamente. Só quando ambos os números podem ser um mês, como em 03-05-2024, é preciso decidir.</p>
-<p class="notiz">Se existir um ficheiro assim na lista, aparece por cima dele uma barra laranja com a escolha entre as duas leituras; as linhas afetadas ficam assinaladas. A predefinição é a notação da tua região do sistema. Enquanto nenhum ficheiro for ambíguo, não há nada a escolher — por isso a barra também não aparece.</p>
+<p class="notiz">Se existir um ficheiro assim na lista, aparece por cima dele uma barra laranja com a escolha entre as duas leituras; as linhas afetadas ficam assinaladas. A predefinição é a notação da sua região do sistema. Enquanto nenhum ficheiro for ambíguo, não há nada a escolher — por isso a barra também não aparece.</p>
 <h2>Hora</h2>
 <p>Se o nome só tiver a data, é presumida uma hora. Pode ser alterada nas Definições.</p>
 <p class="notiz">A predefinição é o meio-dia. Isso evita que o dia mude se o ficheiro passar mais tarde para outro fuso horário. Se o nome do ficheiro também for alterado, a hora presumida fica igualmente indicada nele — o nome e a data de captura dizem sempre o mesmo.</p>
@@ -62,14 +62,14 @@
 <p>Além da data de captura, é possível registar quando o próprio motivo surgiu — na fotografia de uma pintura de 1650, portanto 1650 e não o dia da tomada. O interruptor «Data do conteúdo» na parte superior da janela mostra para isso a coluna «Datado de». Está oculta por predefinição, porque a maioria dos ficheiros não precisa dela.</p>
 <p class="notiz">Isso só pode ser guardado em JPEG, TIFF e HEIC. PNG e GIF aceitam apenas a data de captura, e os filmes também; aí a coluna mostra um aviso em vez de um campo. A própria data de captura é escrita em todos estes formatos.</p>
 <h2>Uniformizar os nomes dos ficheiros</h2>
-<p>Se quiseres, a aplicação substitui a data no nome do ficheiro pela notação ISO com hora: 15.03.2024 Urlaub.jpg passa a 2024-03-15 10-30-00 Urlaub.jpg. Assim, os ficheiros ficam ordenados no Finder pela hora de captura. Ativa-se com a opção Converter o nome do ficheiro no topo da janela; na lista, o novo nome aparece por baixo do antigo.</p>
+<p>Se quiser, a aplicação substitui a data no nome do ficheiro pela notação ISO com hora: 15.03.2024 Urlaub.jpg passa a 2024-03-15 10-30-00 Urlaub.jpg. Assim, os ficheiros ficam ordenados no Finder pela hora de captura. Ativa-se com a opção Converter o nome do ficheiro no topo da janela; na lista, o novo nome aparece por baixo do antigo.</p>
 <p class="notiz">Se o nome não tiver qualquer data, é colocada no início a que foi definida manualmente. Se o novo nome já existir, é acrescentada uma numeração. O ⌘Z também anula a mudança de nome.</p>
 <h2>Anular</h2>
 <p>Com ⌘Z é possível anular uma operação: a data de captura, bem como as datas de criação e modificação, voltam aos valores anteriores. ⌘⇧Z volta a executá-la.</p>
 <p class="notiz">Se a lista for limpa ou for escolhida outra pasta, deixa de ser possível anular — a aplicação já não tem direito de acesso aos ficheiros antigos.</p>
 <h2>O que é alterado</h2>
 <p>São escritos EXIF DateTimeOriginal e DateTimeDigitized, bem como TIFF DateTime; nos filmes e nas gravações de áudio, a data de criação dentro do contentor. Os dados da imagem em si ficam intactos — um JPEG não é recomprimido.</p>
-<p class="notiz">Ainda assim, faz uma cópia de segurança antes de processares uma coleção grande.</p>
+<p class="notiz">Ainda assim, faça uma cópia de segurança antes de processar uma coleção grande.</p>
 <h2>Quando uma linha não fica verde</h2>
 <p>Um visto laranja significa: não foi possível escrever a data de captura, mas as datas de criação e modificação do ficheiro passaram a ter esse valor — a indicação ficou registada, apenas noutro sítio. A linha indica o motivo. Um triângulo vermelho significa que não foi possível escrever coisa alguma.</p>
 <p class="notiz">Se tiver sido escolhido um único ficheiro, a aplicação só pode trabalhar nesse ficheiro e não na pasta dele — a mudança de nome pode falhar por causa disso; nesse caso, a linha indica-o. Solução: escolher a pasta em vez do ficheiro isolado. Se ficar alguma dúvida, o botão das Definições, em Diagnóstico, guarda um registo dos últimos sete dias.</p>

@@ -23,6 +23,11 @@ schreibt `index.html`, `scollect/`, `sname2date/` samt `help/` (Englisch, Wurzel
 
 Von Hand und nur deutsch/englisch: `impressum.html`, `privacy.html`, `assets/style.css`, `assets/banner.webp`.
 
+**Links nach außen öffnen in einem neuen Tab** (Nutzerwunsch 2026-09-24): `build.py` setzt
+`target="_blank" rel="noopener"` an jeden Link, der nicht auf `swiftappsbavaria.github.io` zeigt — auch in der
+eingebundenen App-Hilfe. Links innerhalb der Website bleiben im selben Tab. In den **von Hand** gepflegten
+Seiten muß das Attribut von Hand dazu.
+
 ## Marketing-URLs je Store-Sprache
 
 | Store | Adresse (sCollect / sName2Date) |
