@@ -113,7 +113,7 @@
 <p>Os ajustes das pastas de mídia ficam em <strong>sCollect &gt; Ajustes&hellip; &gt; Biblioteca</strong>.</p>
 
 <h3>Excluir e o Lixo do app</h3>
-<p>Selecione entradas e escolha <strong>Editar &gt; Para o lixo</strong> (<kbd>&#8984;&#9003;</kbd>) ou, no menu de contexto, &laquo;Remover da biblioteca e apagar do disco&raquo;. O sCollect não exclui de imediato, mas move os arquivos para um Lixo do app oculto dentro de cada pasta de mídia (a pasta <code>.Deleted</code>) &ndash; isso funciona em qualquer volume, inclusive em compartilhamentos de rede sem Lixo do sistema, e é rápido porque move no mesmo disco. Pressione <kbd>&#8984;Z</kbd> para desfazer uma exclusão na hora e <kbd>&#8679;&#8984;Z</kbd> para refazer.</p>
+<p>Selecione entradas e escolha <strong>Editar &gt; Para o Lixo</strong> (<kbd>&#8984;&#9003;</kbd>) ou, no menu de contexto, &laquo;Remover da biblioteca e apagar do disco&raquo;. O sCollect não exclui de imediato, mas move os arquivos para um Lixo do app oculto dentro de cada pasta de mídia (a pasta <code>.Deleted</code>) &ndash; isso funciona em qualquer volume, inclusive em compartilhamentos de rede sem Lixo do sistema, e é rápido porque move no mesmo disco. Pressione <kbd>&#8984;Z</kbd> para desfazer uma exclusão na hora e <kbd>&#8679;&#8984;Z</kbd> para refazer.</p>
 <p>Abra o Lixo do app em <strong>Arquivo &gt; Biblioteca &gt; Lixo do app&hellip;</strong> (desativado se vazio). Ali você pode restaurar as entradas selecionadas ou todas, removê-las permanentemente (para o Lixo do sistema se o volume oferecer suporte; caso contrário, excluídas diretamente) ou movê-las para uma pasta à sua escolha. Em <strong>Ajustes &gt; Lixo</strong> você define se o esvaziamento usa o Lixo do sistema e se as entradas vencidas são removidas automaticamente na inicialização (prazo a partir de 1 dia, com confirmação). As cópias conectadas espelham a exclusão localmente na sua própria pasta <code>.Deleted</code> &ndash; sem transferência pela rede.</p>
 
 
@@ -184,7 +184,7 @@
 </ul>
 
 <h3>Organização automática</h3>
-<p>Os arquivos importados são organizados automaticamente em uma estrutura de pastas: <code>Artista/Album/Arquivo</code>. Quando há muitos artistas, eles são agrupados adicionalmente por letra inicial (por ex., <code>A/AB/ABB/ABBA/Gold/Track.mp3</code>).</p>
+<p>Os arquivos importados são guardados automaticamente em uma estrutura de pastas fixa: três níveis de letras a partir do nome do artista e, em seguida, <code>Artista/Album/Arquivo</code> (por ex., <code>A/AB/ABB/ABBA/Gold/Track.mp3</code>). O caminho depende apenas dos metadados e permanece estável à medida que a biblioteca cresce &ndash; os arquivos já guardados não são movidos.</p>
 
 <!-- datumsablage -->
 <p><strong>Arquivamento ordenado por data:</strong> Para os tipos de mídia em que o momento conta mais do que o artista &ndash; fotos, vídeos caseiros, coleções &ndash; você pode escolher nos ajustes um arquivamento por data. Os arquivos vão então para pastas de ano e mês, e o nome do arquivo leva o momento. Vale a data de captura quando o arquivo tiver uma; caso contrário, a data do objeto.</p>
@@ -286,7 +286,7 @@
 <li><strong>Vincular</strong> (padrão): O arquivo fica onde está. A biblioteca memoriza o local e volta a encontrá-lo mesmo depois de uma renomeação. Ele <em>não</em> é espelhado para as cópias &ndash; não há nada para espelhar &ndash; e ao remover o anexo ele <em>não é excluído</em>: apenas a entrada desaparece.</li>
 <li><strong>Copiar</strong>: O arquivo é colocado na pasta de anexos ao lado do objeto e o acompanha &ndash; também para cada cópia da biblioteca.</li>
 </ul>
-<p>Na lista, o ícone mostra a situação: uma <em>folha</em> para uma cópia, uma <em>corrente</em> para um vínculo, um <em>ponto de exclamação vermelho</em> quando um arquivo vinculado não é mais encontrado &ndash; excluído, renomeado, ou o disco não está conectado. Ao lado aparece então <strong>Escolher pasta&hellip;</strong>, com o qual você o localiza em sua nova posição.</p>
+<p>Na lista, o ícone mostra a situação: uma <em>folha</em> para uma cópia, uma <em>corrente</em> para um vínculo, um <em>ponto de exclamação vermelho</em> quando um arquivo vinculado não é mais encontrado &ndash; excluído, renomeado, ou o disco não está conectado. Ao lado aparece então <strong>Localizar&hellip;</strong>, com o qual você o localiza em sua nova posição.</p>
 <!-- bildfenster -->
 <p>Um anexo de <strong>imagem</strong> se abre pelo botão de seta em uma janela própria, livremente redimensionável, à frente do editor; outros arquivos abrem no app correspondente. Da mesma forma, um clique na <strong>imagem principal</strong> à esquerda no editor mostra a imagem em resolução total nessa janela &ndash; em um objeto cujo arquivo não é uma imagem, a capa.</p>
 <!-- bild-einfuegen -->
@@ -298,7 +298,7 @@
 <p>Selecione várias entradas e pressione <kbd>&#8984;I</kbd> (ou clique duas vezes na seleção). O editor em lote mostra apenas os campos que podem ser alterados simultaneamente para todas as entradas selecionadas. Ao lado de cada campo existe uma caixa de seleção &ndash; apenas os campos marcados são salvos.</p>
 
 <h3>Operações de campo</h3>
-<p>Para edições avançadas, selecione os itens e escolha <strong>Editar &gt; Encontrar/Substituir&hellip;</strong> (<kbd>&#8997;&#8984;F</kbd>) ou use o menu de contexto. A janela <strong>Operações de campo</strong> se abre com as seguintes ferramentas:</p>
+<p>Para edições avançadas, selecione os itens e escolha <strong>Editar &gt; Localizar/Substituir&hellip;</strong> (<kbd>&#8997;&#8984;F</kbd>) ou use o menu de contexto. A janela <strong>Operações de campo</strong> se abre com as seguintes ferramentas:</p>
 <ul>
 <li><strong>Localizar e substituir:</strong> Procurar e substituir texto em um ou mais campos.</li>
 <li><strong>Trocar/copiar campos:</strong> Trocar o conteúdo de dois campos (por ex. Artista &#8596; Artista do álbum) &ndash; ou passar o valor de um para o outro de forma <em>unidirecional</em>. O botão indica então o sentido (por ex. &laquo;Título &#8594; Comentário&raquo;), para que se veja qual campo é sobrescrito. Os campos de ordenação associados acompanham automaticamente. <strong>Copiar pergunta antes</strong>, pois não pode ser desfeito: o destino perde o conteúdo atual, e onde a origem estiver vazia o destino também é esvaziado.</li>
@@ -378,7 +378,7 @@
 <h3>Reprodução externa</h3>
 <p>Alguns formatos não são suportados diretamente pelo macOS ou pelo AVFoundation. O sCollect detecta isso e abre esses arquivos automaticamente em um reprodutor externo:</p>
 <ul>
-<li><strong>Formatos contêineres de vídeo:</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
+<li><strong>Formatos especiais de vídeo:</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
 <li><strong>Codecs modernos:</strong> AV1 em MP4 (em Macs mais antigos sem decodificador de hardware)</li>
 <li><strong>Áudio de alta resolução:</strong> DSD (DFF, DSF)</li>
 <li><strong>Outros formatos de áudio:</strong> OGG Vorbis, WMA</li>
@@ -454,7 +454,7 @@
 <p><strong>Redirecionar:</strong> Se você escolher para um tipo de mídia <em>outra</em> pasta enquanto a anterior está inacessível, nada pode ser movido &ndash; os arquivos não estão ao alcance. O sCollect propõe então redirecionar as <em>entradas</em> para a nova pasta: procura ali cada arquivo, primeiro pelo caminho anterior, depois pelo nome do arquivo, e antes lhe mostra uma pré-visualização com três números &ndash; encontrados pelo caminho, encontrados pelo nome, continuam sem arquivo. <strong>Redirecionar altera apenas a biblioteca, nem um único arquivo.</strong></p>
 
 <h3>Encontrar arquivos ausentes</h3>
-<p>Se arquivos foram movidos ou o disco não estava conectado, você pode executar uma verificação por meio de <strong>Ajustes &gt; Biblioteca &gt; Verificar arquivos ausentes</strong>. O sCollect apresentará todas as entradas inacessíveis; <strong>Pesquisar pasta&hellip;</strong> as procura em uma pasta à sua escolha (veja abaixo).</p>
+<p>Se arquivos foram movidos ou o disco não estava conectado, você pode executar uma verificação por meio de <strong>Ajustes &gt; Biblioteca &gt; Verificar arquivos ausentes</strong>. O sCollect apresentará todas as entradas inacessíveis; <strong>Buscar na pasta&hellip;</strong> as procura em uma pasta à sua escolha (veja abaixo).</p>
 
 <p>Se houver cópias registradas para o master, a janela também mostra um botão <strong>Restaurar das cópias</strong>. O sCollect pesquisa em todas as cópias acessíveis pelos arquivos ausentes e copia o primeiro resultado encontrado (tamanho > 0) de volta para o master. Útil após uma exclusão acidental quando o Lixo já foi esvaziado &ndash; enquanto pelo menos uma cópia ainda tiver o arquivo, ele pode ser recuperado.</p>
 
@@ -476,7 +476,7 @@
 
 <!-- ordnersuche -->
 <h3>Procurar arquivos ausentes em uma pasta</h3>
-<p>Em vez de procurar cada arquivo individualmente, você pode indicar ao sCollect uma pasta onde estão os arquivos ausentes. Há três caminhos para isso: o menu de contexto <strong>Procurar ausentes na pasta&hellip;</strong> para as entradas selecionadas, <strong>Procurar na pasta&hellip;</strong> no relatório de <strong>Marcar itens ausentes</strong> para todas as marcadas, e <strong>Pesquisar pasta&hellip;</strong> na janela <strong>Arquivos ausentes</strong>.</p>
+<p>Em vez de procurar cada arquivo individualmente, você pode indicar ao sCollect uma pasta onde estão os arquivos ausentes. Há três caminhos para isso: o menu de contexto <strong>Procurar ausentes na pasta&hellip;</strong> para as entradas selecionadas, <strong>Procurar na pasta&hellip;</strong> no relatório de <strong>Marcar itens ausentes</strong> para todas as marcadas, e <strong>Buscar na pasta&hellip;</strong> na janela <strong>Arquivos ausentes</strong>.</p>
 <ul>
 <li><strong>Correspondências inequívocas</strong> são atribuídas pelo próprio sCollect &ndash; por nome e tamanho e, no caso de arquivos de áudio e vídeo renomeados, por tamanho e duração.</li>
 <li><strong>Correspondências ambíguas ou incertas</strong> &ndash; por exemplo dois arquivos com o mesmo nome em subpastas diferentes, ou um livro renomeado &ndash; vão para uma janela onde você decide. Ali nada está pré-selecionado; só depois de você escolher um arquivo a entrada pode ser aceita.</li>
@@ -531,15 +531,15 @@
 <ul>
 <li><strong>Exportação para o Apple Music:</strong> Ajustes para a exportação de playlists para o Apple Music.</li>
 <li><strong>Janela de vídeo sempre à frente:</strong> A janela de vídeo permanece acima de todas as outras janelas.</li>
-<li><strong>Volume em câmera lenta / quadro a quadro:</strong> Redução de volume em dB durante os modos câmera lenta e quadro a quadro.</li>
-<li><strong>Reprodutor de vídeo externo:</strong> Reprodutor preferido para codecs que o AVFoundation não consegue decodificar (MKV, AVI, AV1 sem decodificador de hardware, DivX etc.). VLC, IINA e MPV são detectados; se nenhum estiver instalado, o app padrão é usado.</li>
+<li><strong>Volume em câmera lenta/quadro a quadro:</strong> Redução de volume em dB durante os modos câmera lenta e quadro a quadro.</li>
+<li><strong>Reprodutor externo para codecs não suportados:</strong> Reprodutor preferido para codecs que o AVFoundation não consegue decodificar (MKV, AVI, AV1 sem decodificador de hardware, DivX etc.). VLC, IINA e MPV são detectados; se nenhum estiver instalado, o app padrão é usado.</li>
 </ul>
 
 <h3>Sincronização</h3>
 <p>Gerencia a conexão com as bibliotecas master e cópia. É aqui que você conecta uma segunda biblioteca como cópia, acompanha as operações de sincronização pendentes e projeta o estado do master sobre uma cópia. Detalhes na seção 11.</p>
 
 <h3>Idioma</h3>
-<p>O sCollect está disponível em 25 idiomas. Escolha seu idioma preferido &ndash; o novo idioma ficará ativo após reiniciar o app.</p>
+<p>O idioma do app segue os Ajustes do Sistema. Para alterá-lo: Ajustes do Sistema → Geral → Idioma e Região e, lá, role até a seção “Aplicativos”, no final.</p>
 
 <!-- ============================================================ -->
 <h2 id="convert">10. Converter formato</h2>
@@ -550,7 +550,7 @@
 <li><strong>Formato de saída:</strong> AAC, MP3, HE-AAC, ALAC (sem perdas), WAV ou AIFF. Também &laquo;Áudio inalterado&raquo; (passthrough) &ndash; o fluxo de áudio é copiado tal como está para um contêiner MP4 sem recodificação.</li>
 <li><strong>Parâmetros de áudio:</strong> Disposição de canais (como o original / estéreo / mono), taxa de amostragem e, para PCM/ALAC, a profundidade de bits.</li>
 <li><strong>Compressão:</strong> Para MP3/AAC/HE-AAC: taxa de bits fixa ou variável (VBR) com controle deslizante de qualidade.</li>
-<li><strong>Destino:</strong> Duas escolhas &ndash; <strong>Biblioteca</strong> (o arquivo convertido vai para a categoria de áudio escolhida; padrão &laquo;Podcast&raquo;, ou &laquo;Audiolivro&raquo;/&laquo;Música&raquo; como alternativa se Podcast não estiver ativo) ou <strong>Externo</strong> (com o botão <strong>Escolher&hellip;</strong> você seleciona uma pasta fora da biblioteca &ndash; o original fica intacto e o arquivo convertido não é adicionado à biblioteca).</li>
+<li><strong>Destino:</strong> Duas escolhas &ndash; <strong>Biblioteca</strong> (o arquivo convertido vai para a categoria de áudio escolhida; padrão &laquo;Podcast&raquo;, ou &laquo;Audiolivro&raquo;/&laquo;Música&raquo; como alternativa se Podcast não estiver ativo) ou <strong>Externo</strong> (com o botão <strong>Selecionar&hellip;</strong> você seleciona uma pasta fora da biblioteca &ndash; o original fica intacto e o arquivo convertido não é adicionado à biblioteca).</li>
 <li><strong>Tratamento do original:</strong> Para o destino &laquo;Biblioteca&raquo;: manter, mover para o lixo ou substituir pela conversão. Para &laquo;Externo&raquo;, sempre mantido.</li>
 </ul>
 <p>Os metadados e a capa do original são sempre copiados. Ao importar para a biblioteca, o arquivo é movido para a pasta da categoria de áudio; não é feita verificação de duplicatas &ndash; o que acontece com o original é controlado pelo menu &laquo;Original&raquo;.</p>
@@ -575,7 +575,7 @@
 <p><strong>O momento mais favorável é quando não há mais nada pendente.</strong> Uma cópia nova precisa primeiro receber tudo o que lhe falta &ndash; se isso coincidir com uma transferência ainda em andamento, ambas demoram mais e, na dúvida, todas as cópias esperam umas pelas outras. Basta olhar o símbolo de sincronização na barra lateral: se não mostrar nenhum número, é o momento certo.</p>
 
 <h3>Espelhamento inicial dos arquivos</h3>
-<p>No Push, o sCollect grava o banco de dados da cópia (itens, playlists, ajustes), mas não copia automaticamente todos os arquivos de mídia na configuração inicial. Para o espelhamento inicial em massa, recomenda-se uma ferramenta externa como o FreeFileSync.</p>
+<p>No Push, o sCollect grava o banco de dados da cópia (itens, playlists, ajustes), mas não copia automaticamente todos os arquivos de mídia na configuração inicial. Para o espelhamento inicial em massa, recomenda-se uma ferramenta externa como o FreeFileSync. Depois disso, o sCollect assume ele mesmo as operações de arquivo em andamento (importação, mover, excluir, gravação de tags, capas).</p>
 
 <h3>Projetar (Push)</h3>
 <p>Com <strong>Projetar</strong> na linha da cópia, o master regrava completamente o <code>library.json</code> da cópia. A fila de sincronização pendente dessa cópia também é redefinida.</p>
@@ -643,7 +643,7 @@
 <tr><td><kbd>&#8679;&#8984;O</kbd></td><td>Importar pasta</td></tr>
 <tr><td><kbd>&#8984;I</kbd></td><td>Informações (com várias entradas selecionadas: Editar vários itens)</td></tr>
 <tr><td><kbd>&#8984;F</kbd></td><td>Buscar</td></tr>
-<tr><td><kbd>&#8997;&#8984;F</kbd></td><td>Encontrar/Substituir</td></tr>
+<tr><td><kbd>&#8997;&#8984;F</kbd></td><td>Localizar/Substituir</td></tr>
 <tr><td><kbd>&#8984;Z</kbd></td><td>Desfazer</td></tr>
 <tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>Refazer</td></tr>
 <tr><td><kbd>&#8984;&#9003;</kbd></td><td>Para o lixo</td></tr>

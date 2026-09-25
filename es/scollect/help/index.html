@@ -98,7 +98,7 @@
 <tr><td>Varios</td><td>Moneda, Maqueta, Sello (+ 7 personalizables)</td></tr>
 </table>
 <p>Las etiquetas pueden cambiarse en los ajustes (pestañas &laquo;Etiquetas de categorías&raquo; y &laquo;Etiquetas de campos&raquo;).</p>
-<p><strong>Los dos términos, con precisión:</strong> Una <em>categoría</em> es uno de los cuatro grandes conjuntos fijos &ndash; Audio, Libro, Película, Varios. Un <em>tipo de medio</em> (en breve: tipo) es lo que realmente coleccionas: Música, Audiolibro, Podcast, E-book, Largometraje y así sucesivamente. Música, Audiolibro y Podcast están, pues, los tres en la misma categoría <em>Audio</em>. Donde una función te pregunta por el alcance &ndash; por ej. &laquo;Organizar la biblioteca&raquo; o &laquo;Comprobar archivos que faltan&raquo; &ndash;, eliges por eso <strong>tipos</strong>: solo así se puede tratar la música por separado de los audiolibros. La categoría de encima sirve para plegar y desplegar, y conmuta todos sus tipos a la vez.</p>
+<p><strong>Los dos términos, con precisión:</strong> Una <em>categoría</em> es uno de los cuatro grandes conjuntos fijos &ndash; Audio, Libro, Película, Varios. Un <em>tipo de medio</em> (en breve: tipo) es lo que realmente coleccionas: Música, Audiolibro, Podcast, E-book, Largometraje y así sucesivamente. Música, Audiolibro y Podcast están, pues, los tres en la misma categoría <em>Audio</em>. Donde una función te pregunta por el alcance &ndash; por ej. &laquo;Organizar biblioteca&raquo; o &laquo;Comprobar archivos faltantes&raquo; &ndash;, eliges por eso <strong>tipos</strong>: solo así se puede tratar la música por separado de los audiolibros. La categoría de encima sirve para plegar y desplegar, y conmuta todos sus tipos a la vez.</p>
 
 <h3>Barra lateral</h3>
 <p>La barra lateral a la izquierda muestra todos los tipos de medios activos y tus playlists. Haz clic en una entrada para ver su contenido. Los tipos de medios sin nombre asignado permanecen ocultos.</p>
@@ -118,8 +118,8 @@
 
 
 <!-- duplicates-view -->
-<h3>Mostrar duplicados</h3>
-<p>Con <strong>Archivo &gt; Biblioteca &gt; Mostrar duplicados</strong> (<kbd>&#8679;&#8984;D</kbd>) sCollect recorre toda la categoría actual y muestra en la lista de medios solo los duplicados encontrados &ndash; como en Apple Music. Para una selección existente está la opción del menú contextual &laquo;Buscar duplicados&raquo;.</p>
+<h3>Mostrar los ítems duplicados</h3>
+<p>Con <strong>Archivo &gt; Biblioteca &gt; Mostrar los ítems duplicados</strong> (<kbd>&#8679;&#8984;D</kbd>) sCollect recorre toda la categoría actual y muestra en la lista de medios solo los duplicados encontrados &ndash; como en Apple Music. Para una selección existente está la opción del menú contextual &laquo;Buscar duplicados&raquo;.</p>
 <p>La búsqueda muestra una barra de progreso y puede interrumpirse en cualquier momento. En colecciones grandes la primera pasada puede durar mucho; sCollect guarda en la biblioteca los valores calculados en esa ocasión, de modo que cada pasada siguiente es notablemente más rápida. Si un archivo cambia, sus valores se descartan automáticamente y se recalculan.</p>
 
 <h4>Qué se busca</h4>
@@ -127,7 +127,7 @@
 <ul>
 <li><strong>Metadatos:</strong> mismo título e intérprete con duración parecida. Números de disco o de pista distintos dentro del mismo álbum excluyen un duplicado; en los audiolibros, además, títulos de álbum distintos.</li>
 <li><strong>Contenido del archivo:</strong> mismo tamaño y mismo comienzo del archivo.</li>
-<li><strong>Búsqueda en profundidad de audio idéntico:</strong> reconoce la misma grabación incluso cuando las etiquetas son completamente distintas. Lee bastante más del disco y por eso se regula en los ajustes bajo <strong>Duplicados</strong> &ndash; &laquo;automático&raquo; la desactiva en volúmenes de red.</li>
+<li><strong>Búsqueda profunda de audio idéntico:</strong> reconoce la misma grabación incluso cuando las etiquetas son completamente distintas. Lee bastante más del disco y por eso se regula en los ajustes bajo <strong>Duplicados</strong> &ndash; &laquo;automático&raquo; la desactiva en volúmenes de red.</li>
 <li><strong>Entradas huérfanas:</strong> una entrada cuyo archivo falta se adjunta a una entrada hermana existente con el mismo título base en la misma carpeta. Es el resto típico tras renombrar de &laquo;Título&raquo; a &laquo;Título (2)&raquo;.</li>
 </ul>
 <p>Para que la comparación no se base en datos erróneos, antes de buscar sCollect lee las etiquetas de los archivos en cuestión y corrige los valores divergentes de la biblioteca. Sin eso, números de disco erróneos podrían hacer que distintos discos de un mismo audiolibro se tomaran por idénticos.</p>
@@ -180,11 +180,11 @@
 <ul>
 <li><strong>Importar todos:</strong> Importa todos los archivos, incluidos los duplicados.</li>
 <li><strong>Omitir duplicados:</strong> Solo importa los archivos que aún no están en la biblioteca.</li>
-<li><strong>Importar seleccionados:</strong> Eliges manualmente qué duplicados importar.</li>
+<li><strong>Importar selección:</strong> Eliges manualmente qué duplicados importar.</li>
 </ul>
 
 <h3>Organización automática</h3>
-<p>Los archivos importados se organizan automáticamente en una estructura de carpetas: <code>Artista/Album/Archivo</code>. Cuando hay muchos artistas, se agrupan además por letra inicial (por ej., <code>A/AB/ABB/ABBA/Gold/Track.mp3</code>).</p>
+<p>Los archivos importados se guardan automáticamente en una estructura de carpetas fija: tres niveles de letras a partir del nombre del artista y después <code>Artista/Album/Archivo</code> (por ej., <code>A/AB/ABB/ABBA/Gold/Track.mp3</code>). La ruta depende solo de los metadatos y se mantiene estable aunque la biblioteca crezca &ndash; los archivos ya guardados no se mueven.</p>
 
 <!-- datumsablage -->
 <p><strong>Archivado por fecha:</strong> Para los tipos de medio en los que el momento importa más que el artista &ndash; fotos, vídeos caseros, colecciones &ndash; puedes elegir en los ajustes un archivado por fecha. Los archivos van entonces a carpetas de año y mes, y el nombre del archivo lleva el momento. Rige la fecha de captura donde el archivo lleva una; si no, la fecha del objeto.</p>
@@ -217,8 +217,8 @@
 <li><strong>Ordenar:</strong> Haz clic en un encabezado de columna para ordenar por esa columna. Haz clic de nuevo para invertir el orden. Mantén pulsada la tecla <strong>Mayúsculas</strong> para añadir otra columna como orden secundario &ndash; las columnas activas muestran una flecha y un número de orden (por ej. <code>Álbum&darr;1</code>, <code>Artista&uarr;2</code>). Con <strong>Opción-clic</strong> en una cabecera activa, esa columna se quita de nuevo del orden. Al hacer clic derecho en una cabecera se ofrece <em>Restablecer orden</em>, para ordenar de nuevo solo por la columna principal. Los órdenes se recuerdan por tipo de medio.</li>
 </ul>
 
-<h3>Navegador por columnas</h3>
-<p>El navegador por columnas (activable desde la barra de herramientas) ofrece una navegación multinivel, similar al navegador de columnas de Apple Music. Puedes filtrar por género, artista y álbum seleccionando entradas en las columnas correspondientes.</p>
+<h3>Explorador de columnas</h3>
+<p>El explorador de columnas (activable desde la barra de herramientas) ofrece una navegación multinivel, similar al navegador de columnas de Apple Music. Puedes filtrar por género, artista y álbum seleccionando entradas en las columnas correspondientes.</p>
 <ul>
 <li>Selección múltiple con <kbd>&#8984;</kbd>-clic o <kbd>&#8679;</kbd>-clic</li>
 <li>Las columnas que muestra el navegador son configurables en los ajustes</li>
@@ -286,7 +286,7 @@
 <li><strong>Vincular</strong> (por omisión): El archivo se queda donde está. La biblioteca recuerda su ubicación y lo vuelve a encontrar incluso tras un renombrado. <em>No</em> se replica en las copias &ndash; no hay nada que replicar &ndash; y al quitar el adjunto <em>no se borra</em>: solo desaparece la entrada.</li>
 <li><strong>Copiar</strong>: El archivo se coloca en la carpeta de adjuntos junto al objeto y viaja con él &ndash; también a cada copia de la biblioteca.</li>
 </ul>
-<p>En la lista el icono dice en qué punto estás: una <em>hoja</em> para una copia, una <em>cadena</em> para un vínculo, un <em>signo de exclamación rojo</em> cuando un archivo vinculado ya no se encuentra &ndash; borrado, renombrado, o el disco no está conectado. Al lado aparece entonces <strong>Elegir carpeta&hellip;</strong>, con el que lo localizas en su nueva ubicación.</p>
+<p>En la lista el icono dice en qué punto estás: una <em>hoja</em> para una copia, una <em>cadena</em> para un vínculo, un <em>signo de exclamación rojo</em> cuando un archivo vinculado ya no se encuentra &ndash; borrado, renombrado, o el disco no está conectado. Al lado aparece entonces <strong>Localizar&hellip;</strong>, con el que lo localizas en su nueva ubicación.</p>
 <!-- bildfenster -->
 <p>Un adjunto de tipo <strong>imagen</strong> se abre con el botón de flecha en una ventana propia, de tamaño libremente ajustable, delante del editor; los demás archivos se abren en la aplicación correspondiente. Del mismo modo, un clic en la <strong>imagen principal</strong> a la izquierda del editor muestra la imagen a resolución completa en esa ventana &ndash; en un objeto cuyo archivo no es una imagen, la portada.</p>
 <!-- bild-einfuegen -->
@@ -303,7 +303,7 @@
 <li><strong>Buscar y reemplazar:</strong> Buscar y reemplazar texto en uno o varios campos.</li>
 <li><strong>Intercambiar/copiar campos:</strong> Intercambiar el contenido de dos campos (por ej. Artista &#8596; Artista del álbum) &ndash; o tomar el valor de uno en el otro de forma <em>unidireccional</em>. El botón indica entonces el sentido (por ej. &laquo;Título &#8594; Comentario&raquo;), para que se vea qué campo se sobrescribe. Los campos de ordenación asociados se llevan automáticamente. <strong>Copiar pregunta antes</strong>, porque no es reversible: el destino pierde su contenido actual, y donde el origen está vacío también se vacía el destino.</li>
 <li><strong>Añadir al título:</strong> Agregar texto al principio o al final del título.</li>
-<li><strong>Fecha en el título:</strong> Insertar la fecha de modificación del archivo en el título.</li>
+<li><strong>Fecha al título:</strong> Insertar la fecha de modificación del archivo en el título.</li>
 <li><strong>Dividir:</strong> Dividir el contenido de un campo en un separador en dos campos de destino (copiar o cortar el campo de origen). También admite campos numéricos (n.&ordm; de pista/disco/movimiento, año); las entradas sin número reconocible se omiten.</li>
 <li><strong>Separar nombre y ordenación:</strong> Resuelve una forma de orden con coma (p. ej. &laquo;Lennon, John&raquo;) en entradas con campo de ordenación vacío: el valor original pasa al campo de ordenación y el campo de nombre (Título, Artista, Artista del álbum, Álbum o Compositor) se invierte al orden natural (&laquo;John Lennon&raquo;). Los casos ambiguos con varias comas no se marcan inicialmente.</li>
 </ul>
@@ -362,15 +362,15 @@
 <p>Cuando la reproducción se reanuda en una posición recordada, aparece brevemente el botón <strong>&laquo;Desde el principio&raquo;</strong> &ndash; un clic inicia el título desde el principio en su lugar.</p>
 
 <h3>Marcas fijas de inicio y fin</h3>
-<p>En el editor de metadatos, en la pestaña <strong>Info de archivo</strong>, sección <strong>Reproducción</strong>, puedes establecer marcas fijas: la entrada se reproduce entonces solo desde <strong>Inicio</strong> hasta <strong>Fin</strong> &ndash; útil para saltar una introducción o el silencio al final. Los tiempos van en formato <code>MMM:SS</code>, con milésimas tras la coma (por ej. <code>3:45,500</code>). El botón <strong>&laquo;Aplicar&raquo;</strong> ajusta el campo correspondiente a la posición de reproducción actual.</p>
+<p>En el editor de metadatos, en la pestaña <strong>Info del archivo</strong>, sección <strong>Reproducción</strong>, puedes establecer marcas fijas: la entrada se reproduce entonces solo desde <strong>Inicio</strong> hasta <strong>Fin</strong> &ndash; útil para saltar una introducción o el silencio al final. Los tiempos van en formato <code>MMM:SS</code>, con milésimas tras la coma (por ej. <code>3:45,500</code>). El botón <strong>&laquo;Aplicar&raquo;</strong> ajusta el campo correspondiente a la posición de reproducción actual.</p>
 <aside>
 <strong>Nota:</strong> La posición de reproducción y el inicio/fin también se aplican a la reproducción externa (VLC, IINA, MPV). Si hay copias de esta biblioteca configuradas, la posición y las marcas se sincronizan automáticamente con ellas &ndash; puedes pausar en un dispositivo y reanudar en otro.
 </aside>
 
 <h3>Crear copia recortada</h3>
-<p>A partir de las marcas de inicio/fin establecidas, sCollect puede crear una <strong>copia recortada</strong> como nueva entrada junto al original &ndash; el original permanece sin cambios. En el editor de metadatos encontrarás en <strong>Info de archivo &gt; Reproducción</strong> el botón <strong>&laquo;Crear copia recortada&raquo;</strong>. Como alternativa: haz clic derecho en una o varias entradas y elige <strong>&laquo;Recortar según inicio/fin…&raquo;</strong>.</p>
+<p>A partir de las marcas de inicio/fin establecidas, sCollect puede crear una <strong>copia recortada</strong> como nueva entrada junto al original &ndash; el original permanece sin cambios. En el editor de metadatos encontrarás en <strong>Info del archivo &gt; Reproducción</strong> el botón <strong>&laquo;Crear copia recortada&raquo;</strong>. Como alternativa: haz clic derecho en una o varias entradas y elige <strong>&laquo;Recortar según inicio/fin…&raquo;</strong>.</p>
 <p>Se admiten MP4/M4V/MOV (vídeo) así como MP3, M4A/M4B, AIFF, WAV y CAF (audio). El recorte se realiza sin pérdidas &ndash; sin recodificación y, por tanto, sin pérdida de calidad.</p>
-<p>En los formatos PCM AIFF y WAV puedes indicar además un suave <strong>fundido de entrada</strong> y <strong>fundido de salida</strong> &ndash; en segundos (<code>5</code>, <code>2,5</code>) o como el inicio y el fin (<code>0:05</code>). Un valor que sCollect no entiende se marca en rojo, y solo se recorta cuando ambos campos son correctos. En los formatos comprimidos <strong>MP3, M4A y M4B</strong> se abre un diálogo con dos opciones antes de recortar: <strong>&laquo;Sin pérdidas (conservar el formato original)&raquo;</strong> recorta sin recodificación, pero no permite fundidos. <strong>&laquo;M4A (AAC)&raquo;</strong> recodifica en su lugar &ndash; con una <strong>tasa de datos</strong> seleccionable (128 a 320 kbps) y fundido opcional, a costa de una ligera pérdida de calidad.</p>
+<p>En los formatos PCM AIFF y WAV puedes indicar además un suave <strong>fundido de entrada</strong> y <strong>fundido de salida</strong> &ndash; en segundos (<code>5</code>, <code>2,5</code>) o como el inicio y el fin (<code>0:05</code>). Un valor que sCollect no entiende se marca en rojo, y solo se recorta cuando ambos campos son correctos. En los formatos comprimidos <strong>MP3, M4A y M4B</strong> se abre un diálogo con dos opciones antes de recortar: <strong>&laquo;Sin pérdidas (conservar el formato original)&raquo;</strong> recorta sin recodificación, pero no permite fundidos. <strong>&laquo;M4A (AAC)&raquo;</strong> recodifica en su lugar &ndash; con una <strong>tasa de bits</strong> seleccionable (128 a 320 kbps) y fundido opcional, a costa de una ligera pérdida de calidad.</p>
 
 <h3>Exportar a Apple Music</h3>
 <p>Las playlists pueden enviarse a Apple Music: haz clic derecho en una playlist en la barra lateral y selecciona &laquo;Enviar playlist a Apple Music&raquo;. También puedes encontrar esta opción en el menú <strong>Archivo &gt; Enviar playlist a Apple Music&hellip;</strong></p>
@@ -499,7 +499,7 @@
 
 <h3>General</h3>
 <ul>
-<li><strong>Modo de importación:</strong> Copiar, Mover o Dejar en su sitio (predeterminado para futuras importaciones).</li>
+<li><strong>Modo de importación:</strong> Copiar, Mover o Dejar en su lugar (predeterminado para futuras importaciones).</li>
 <li><strong>Separadores de valores múltiples:</strong> Caracteres utilizados como separadores para múltiples artistas/géneros en un mismo campo (predeterminado: &amp;, /, ;).</li>
 </ul>
 
@@ -510,7 +510,7 @@
 <li><strong>Ubicación de la biblioteca:</strong> Muestra la ubicación actual y permite cambiarla.</li>
 <!-- einstellungen-ansicht -->
 <li><strong>Importación:</strong> Cómo se tratan los archivos importados (ver &laquo;Modos de importación&raquo;).</li>
-<li><strong>Vista &gt; Máx. entradas por carpeta:</strong> A partir de este número de valores, el navegador por columnas forma nodos por letras iniciales. Solo afecta a la visualización, no a las carpetas del disco.</li>
+<li><strong>Vista &gt; Máx. entradas por carpeta:</strong> A partir de este número de valores, el explorador de columnas forma nodos por letras iniciales. Solo afecta a la visualización, no a las carpetas del disco.</li>
 </ul>
 
 <h3>Etiquetas de categorías</h3>
@@ -530,16 +530,16 @@
 <h3>Reproducción/Playlist</h3>
 <ul>
 <li><strong>Exportación a Apple Music:</strong> Ajustes para la exportación de playlists a Apple Music.</li>
-<li><strong>Ventana de vídeo siempre encima:</strong> La ventana de vídeo permanece sobre todas las demás ventanas.</li>
+<li><strong>Ventana de vídeo siempre en primer plano:</strong> La ventana de vídeo permanece sobre todas las demás ventanas.</li>
 <li><strong>Volumen en cámara lenta / fotograma a fotograma:</strong> Reducción de volumen en dB durante los modos cámara lenta y fotograma a fotograma.</li>
-<li><strong>Reproductor de vídeo externo:</strong> Reproductor preferido para códecs que AVFoundation no puede decodificar (MKV, AVI, AV1 sin decodificador hardware, DivX, etc.). Se detectan VLC, IINA y MPV; si no hay ninguno instalado, se usa la app por defecto.</li>
+<li><strong>Reproductor externo para códecs no compatibles:</strong> Reproductor preferido para códecs que AVFoundation no puede decodificar (MKV, AVI, AV1 sin decodificador hardware, DivX, etc.). Se detectan VLC, IINA y MPV; si no hay ninguno instalado, se usa la app por defecto.</li>
 </ul>
 
 <h3>Sincronización</h3>
 <p>Gestiona la conexión con las bibliotecas master y copia. Aquí conectas una segunda biblioteca como copia, vigilas las operaciones de sincronización pendientes y proyectas el estado del master sobre una copia. Detalles en la sección 11.</p>
 
 <h3>Idioma</h3>
-<p>sCollect está disponible en 25 idiomas. Elige tu idioma preferido &ndash; el nuevo idioma se activará tras reiniciar la aplicación.</p>
+<p>El idioma de la app sigue la configuración del sistema. Para cambiarlo, ve a Ajustes del Sistema → General → Idioma y región y desplázate hasta abajo del todo, a la sección «Aplicaciones».</p>
 
 <!-- ============================================================ -->
 <h2 id="convert">10. Convertir formato</h2>
@@ -550,7 +550,7 @@
 <li><strong>Formato de salida:</strong> AAC, MP3, HE-AAC, ALAC (sin pérdidas), WAV o AIFF. También &laquo;Audio sin cambios&raquo; (passthrough) &ndash; el flujo de audio se copia tal cual a un contenedor MP4 sin re-codificar.</li>
 <li><strong>Parámetros de audio:</strong> Disposición de canales (como original / estéreo / mono), frecuencia de muestreo y, para PCM/ALAC, profundidad de bits.</li>
 <li><strong>Compresión:</strong> Para MP3/AAC/HE-AAC: tasa de bits fija o variable (VBR) con control de calidad.</li>
-<li><strong>Destino:</strong> Dos opciones &ndash; <strong>Biblioteca</strong> (el archivo convertido se añade a la categoría de audio elegida; preestablecido &laquo;Podcast&raquo;, o &laquo;Audiolibro&raquo;/&laquo;Música&raquo; como alternativa si Podcast no está activo) o <strong>Externo</strong> (con el botón <strong>Elegir&hellip;</strong> selecciona una carpeta fuera de la biblioteca &ndash; el original queda intacto y el archivo convertido no se añade a la biblioteca).</li>
+<li><strong>Destino:</strong> Dos opciones &ndash; <strong>Biblioteca</strong> (el archivo convertido se añade a la categoría de audio elegida; preestablecido &laquo;Podcast&raquo;, o &laquo;Audiolibro&raquo;/&laquo;Música&raquo; como alternativa si Podcast no está activo) o <strong>Externo</strong> (con el botón <strong>Seleccionar&hellip;</strong> selecciona una carpeta fuera de la biblioteca &ndash; el original queda intacto y el archivo convertido no se añade a la biblioteca).</li>
 <li><strong>Tratamiento del original:</strong> Para destino &laquo;Biblioteca&raquo;: conservar, mover a la papelera o reemplazar por la conversión. Para &laquo;Externo&raquo; siempre se conserva.</li>
 </ul>
 <p>Los metadatos y la portada del original siempre se copian. Al importar a la biblioteca, el archivo se mueve a la carpeta de la categoría de audio; no se realiza ninguna comprobación de duplicados &ndash; lo que ocurre con el original lo controla el menú &laquo;Original&raquo;.</p>
@@ -577,7 +577,7 @@
 <p><strong>El momento más favorable es cuando ya no queda nada pendiente.</strong> Una copia nueva debe recibir primero todo lo que le falta &ndash; si eso coincide con una transferencia todavía en curso, ambas duran más, y en caso de duda todas las copias se esperan unas a otras. Basta con mirar el símbolo de sincronización en la barra lateral: si no muestra ninguna cifra, es el momento adecuado.</p>
 
 <h3>Espejado inicial de archivos</h3>
-<p>Al hacer Push, sCollect escribe la base de datos de la copia (ítems, playlists, ajustes), pero no copia automáticamente todos los archivos en la configuración inicial. Para el espejado masivo inicial se recomienda una herramienta externa como FreeFileSync. Después, sCollect se encarga de las operaciones de archivo en curso.</p>
+<p>Al hacer Push, sCollect escribe la base de datos de la copia (ítems, playlists, ajustes), pero no copia automáticamente todos los archivos en la configuración inicial. Para el espejado masivo inicial se recomienda una herramienta externa como FreeFileSync. Después, sCollect se encarga él mismo de las operaciones de archivo en curso (importación, mover, eliminar, escritura de etiquetas, carátulas).</p>
 
 <h3>Proyectar (Push)</h3>
 <p>Con <strong>Proyectar</strong> en la fila de la copia, el master reescribe la <code>library.json</code> de la copia desde cero. La cola de sincronización pendiente de esta copia también se reinicia.</p>
@@ -589,14 +589,14 @@
 <h3>Operaciones pendientes</h3>
 <p>Si una copia está sin conexión o una sincronización ha fallado, las operaciones pendientes se acumulan. Por copia:</p>
 <ul>
-<li><strong>Recuperar pendientes:</strong> Intenta aplicar el retraso. Si una transferencia falla, se queda ahí y la pasada se detiene &ndash; no se pierde, sino que se vuelve a intentar en el siguiente intento.</li>
+<li><strong>Ejecutar pendientes:</strong> Intenta aplicar el retraso. Si una transferencia falla, se queda ahí y la pasada se detiene &ndash; no se pierde, sino que se vuelve a intentar en el siguiente intento.</li>
 <li><strong>Descartar&hellip;:</strong> Esta copia se salta todo su retraso. <strong>Es una renuncia, no una autorización:</strong> después cuenta como al día sin que los cambios le hayan llegado &ndash; para ella están perdidos. Por eso después siempre corresponde <strong>Proyectar</strong> o <strong>Resolver errores de sincronización&hellip;</strong>; solo eso determina qué le falta realmente y lo recupera.</li>
 </ul>
 
 <h3>Cuando una copia no sigue el ritmo</h3>
 <p>Todas las copias procesan la misma lista, y lo hacen <strong>al mismo paso</strong>: solo cuando un cambio ha llegado a cada copia se continúa. Es intencionado &ndash; así ninguna copia puede quedarse atrás sin que se note y llevar meses después un estado que ya nadie sabe situar.</p>
 <p>La consecuencia: <strong>si una copia se atasca, las demás esperan.</strong> En la barra lateral figura entonces en ellas &laquo;Esperando a otra copia&raquo;. No es un error, sino el freno, y se suelta por sí solo en cuanto la copia que falta vuelve a estar accesible &ndash; disco conectado, volumen de red disponible.</p>
-<p>Si persiste, tienes dos caminos: hacer accesible la copia atascada y <strong>Recuperar pendientes</strong> &ndash; o elegir en ella <strong>Descartar</strong> y a continuación <strong>Proyectar</strong>. El segundo camino le cuesta a esa única copia su retraso, pero libera de inmediato a las demás.</p>
+<p>Si persiste, tienes dos caminos: hacer accesible la copia atascada y <strong>Ejecutar pendientes</strong> &ndash; o elegir en ella <strong>Descartar</strong> y a continuación <strong>Proyectar</strong>. El segundo camino le cuesta a esa única copia su retraso, pero libera de inmediato a las demás.</p>
 
 <h3>Resolver errores de sincronización</h3>
 <p>Con <strong>Resolver errores de sincronización&hellip;</strong>, los datos de etiqueta de cada archivo de la copia se comparan con el master y se reescriben en caso de diferencia. Filtros para puntuación, género y año permiten un procesamiento por etapas. Los archivos que faltan se copian desde el master.</p>
@@ -605,7 +605,7 @@
 <p>Una copia puede marcarse como solo lectura &ndash; entonces la importación, eliminación y ediciones de etiquetas en la copia se bloquean.</p>
 
 <h3>Organizar biblioteca</h3>
-<p>Mediante <strong>Ajustes &gt; Biblioteca &gt; Organizar la biblioteca</strong> (o el botón encima de la lista de medios) sCollect pone los archivos gestionados en un estado limpio. Antes, un diálogo pregunta por el alcance y las opciones.</p>
+<p>Mediante <strong>Ajustes &gt; Biblioteca &gt; Organizar biblioteca</strong> (o el botón encima de la lista de medios) sCollect pone los archivos gestionados en un estado limpio. Antes, un diálogo pregunta por el alcance y las opciones.</p>
 
 <h4>Alcance</h4>
 <p>Arriba eliges los <strong>tipos de medio</strong> que se van a tratar &ndash; desplegados bajo su categoría, con el número de objetos por tipo. Todo viene preseleccionado. Merece la pena, porque una biblioteca que ha ido creciendo rara vez está igual de cuidada en todas partes: si en la música has trabajado mucho con Buscar&nbsp;&amp;&nbsp;Reemplazar y en los audiolibros apenas, es mejor tratar ambas cosas por separado.</p>

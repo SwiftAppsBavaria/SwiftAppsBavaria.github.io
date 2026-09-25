@@ -112,14 +112,14 @@
 <p>Por predefinição, o sCollect armazena todos os ficheiros importados na pasta <code>Media</code> dentro da sua biblioteca. No entanto, é possível atribuir uma pasta independente a cada tipo de multimédia &ndash; útil se quiser manter os filmes num disco externo grande enquanto a música permanece no SSD interno.</p>
 <p>As definições das pastas multimédia encontram-se em <strong>sCollect &gt; Definições&hellip; &gt; Biblioteca</strong>.</p>
 
-<h3>Apagar e o Lixo da app</h3>
-<p>Selecione entradas e escolha <strong>Edição &gt; Para o lixo</strong> (<kbd>&#8984;&#9003;</kbd>) ou, no menu de contexto, &laquo;Remover da biblioteca e apagar do disco&raquo;. O sCollect não apaga de imediato, mas move os ficheiros para um Lixo da app oculto dentro de cada pasta multimédia (a pasta <code>.Deleted</code>) &ndash; isto funciona em qualquer volume, incluindo partilhas de rede sem Lixo do sistema, e é rápido porque move dentro do mesmo disco. Prima <kbd>&#8984;Z</kbd> para desfazer uma eliminação de imediato e <kbd>&#8679;&#8984;Z</kbd> para refazer.</p>
-<p>Abra o Lixo da app em <strong>Ficheiro &gt; Biblioteca &gt; Lixo da app&hellip;</strong> (desativado se estiver vazio). Aí pode restaurar as entradas selecionadas ou todas, removê-las definitivamente (para o Lixo do sistema se o volume o suportar; caso contrário, são apagadas diretamente) ou movê-las para uma pasta à sua escolha. Em <strong>Definições &gt; Lixo</strong> define-se se o esvaziamento usa o Lixo do sistema e se as entradas expiradas são removidas automaticamente no arranque (prazo a partir de 1 dia, com confirmação). As cópias ligadas replicam a eliminação localmente na sua própria pasta <code>.Deleted</code> &ndash; sem transferência pela rede.</p>
+<h3>Apagar e o Lixo da aplicação</h3>
+<p>Selecione entradas e escolha <strong>Edição &gt; Para o Lixo</strong> (<kbd>&#8984;&#9003;</kbd>) ou, no menu de contexto, &laquo;Remover da biblioteca e apagar do disco&raquo;. O sCollect não apaga de imediato, mas move os ficheiros para um Lixo da aplicação oculto dentro de cada pasta multimédia (a pasta <code>.Deleted</code>) &ndash; isto funciona em qualquer volume, incluindo partilhas de rede sem Lixo do sistema, e é rápido porque move dentro do mesmo disco. Prima <kbd>&#8984;Z</kbd> para desfazer uma eliminação de imediato e <kbd>&#8679;&#8984;Z</kbd> para refazer.</p>
+<p>Abra o Lixo da aplicação em <strong>Ficheiro &gt; Biblioteca &gt; Lixo da aplicação&hellip;</strong> (desativado se estiver vazio). Aí pode restaurar as entradas selecionadas ou todas, removê-las definitivamente (para o Lixo do sistema se o volume o suportar; caso contrário, são apagadas diretamente) ou movê-las para uma pasta à sua escolha. Em <strong>Definições &gt; Lixo</strong> define-se se o esvaziamento usa o Lixo do sistema e se as entradas expiradas são removidas automaticamente no arranque (prazo a partir de 1 dia, com confirmação). As cópias ligadas replicam a eliminação localmente na sua própria pasta <code>.Deleted</code> &ndash; sem transferência pela rede.</p>
 
 
 <!-- duplicates-view -->
 <h3>Mostrar duplicados</h3>
-<p>Através de <strong>Ficheiro &gt; Biblioteca &gt; Mostrar elementos duplicados</strong> (<kbd>&#8679;&#8984;D</kbd>) o sCollect percorre toda a categoria atual e mostra na lista multimédia apenas os duplicados encontrados &ndash; como no Apple Music. Para uma seleção existente, existe a opção do menu de contexto &laquo;Procurar duplicados&raquo;.</p>
+<p>Através de <strong>Ficheiro &gt; Biblioteca &gt; Mostrar elementos duplicados</strong> (<kbd>&#8679;&#8984;D</kbd>) o sCollect percorre toda a categoria atual e mostra na lista multimédia apenas os duplicados encontrados &ndash; como no Apple Music. Para uma seleção existente, existe a opção do menu de contexto &laquo;Encontrar duplicados&raquo;.</p>
 <p>A pesquisa mostra uma barra de progresso e pode ser interrompida a qualquer momento. Em coleções grandes, a primeira execução pode demorar; o sCollect guarda na biblioteca os valores calculados nesse momento, pelo que cada execução seguinte é bastante mais rápida. Se um ficheiro mudar, os seus valores são descartados e recalculados automaticamente.</p>
 
 <h4>O que é procurado</h4>
@@ -136,8 +136,8 @@
 <p>Na lista aparecem <strong>sombreadas</strong> todas as entradas propostas como duplicado &ndash; em cada grupo fica uma. As propostas estão simultaneamente <strong>assinaladas</strong>; pode alterar a marcação livremente. Uma coluna de estado estreita mostra ainda duas indicações: uma <strong>corrente</strong> quando várias entradas apontam para o mesmo ficheiro, e um <strong>triângulo de aviso</strong> quando o ficheiro de uma entrada está em falta. As duas coisas podem sobrepor-se.</p>
 <p>A ordenação e a pesquisa também funcionam na visualização de duplicados. O filtro de pesquisa apenas oculta; &laquo;Apagar seleção&raquo; leva então apenas as entradas visíveis, e as restantes podem continuar a ser apagadas depois de repor o filtro.</p>
 <!-- auswahl-loeschen -->
-<p><strong>Apagar seleção</strong> pede confirmação e depois coloca as entradas assinaladas, juntamente com o ficheiro, no Lixo da app (desfazer com <kbd>&#8984;Z</kbd>). Se uma entrada assinalada apontar para um ficheiro de que uma entrada que fica ainda precisa, ou se o seu ficheiro estiver em falta, só a entrada é removida &ndash; a pergunta de confirmação indica esses casos à parte. Se a marcação abranger um grupo por completo, o botão fica bloqueado.</p>
-<p>Também é possível assinalar e apagar entradas isoladas. A entrada que fica em cada grupo é redeterminada continuamente &ndash; se apagar manualmente entretanto, outra assume o lugar automaticamente, e nenhum grupo perde todas as suas entradas. &laquo;Sair da visualização de duplicados&raquo; volta à lista normal.</p>
+<p><strong>Apagar seleção</strong> pede confirmação e depois coloca as entradas assinaladas, juntamente com o ficheiro, no Lixo da aplicação (desfazer com <kbd>&#8984;Z</kbd>). Se uma entrada assinalada apontar para um ficheiro de que uma entrada que fica ainda precisa, ou se o seu ficheiro estiver em falta, só a entrada é removida &ndash; a pergunta de confirmação indica esses casos à parte. Se a marcação abranger um grupo por completo, o botão fica bloqueado.</p>
+<p>Também é possível assinalar e apagar entradas isoladas. A entrada que fica em cada grupo é redeterminada continuamente &ndash; se apagar manualmente entretanto, outra assume o lugar automaticamente, e nenhum grupo perde todas as suas entradas. &laquo;Sair da vista de duplicados&raquo; volta à lista normal.</p>
 
 <!-- ============================================================ -->
 <h2 id="import">3. Importar conteúdo</h2>
@@ -173,18 +173,18 @@
 <li><strong>Deixar no local:</strong> Os ficheiros permanecem onde estão. O sCollect apenas memoriza a localização. Útil para ficheiros em unidades de rede.</li>
 </ul>
 <!-- import-scheitert -->
-<p>Se um ficheiro não puder ser incluído na biblioteca ao copiar ou mover, o sCollect <strong>não cria nenhuma entrada</strong> para ele. O ficheiro fica inalterado no seu lugar, e uma mensagem informa-o disso, indicando o motivo.</p>
+<p>Se um ficheiro não puder ser incluído na biblioteca ao copiar ou mover, o sCollect <strong>não cria nenhuma entrada</strong> para ele. O ficheiro fica inalterado no seu lugar, e uma mensagem indica o ficheiro e o motivo.</p>
 
 <h3>Deteção de duplicados</h3>
 <p>Durante a importação, o sCollect verifica automaticamente se existem duplicados (mesmo título + artista ou mesmo nome de ficheiro). Se forem detetados duplicados, aparece um diálogo em que pode decidir:</p>
 <ul>
 <li><strong>Importar tudo:</strong> Importa todos os ficheiros, incluindo os duplicados.</li>
-<li><strong>Ignorar duplicados:</strong> Importa apenas os ficheiros que ainda não estão na biblioteca.</li>
+<li><strong>Saltar duplicados:</strong> Importa apenas os ficheiros que ainda não estão na biblioteca.</li>
 <li><strong>Importar selecionados:</strong> Escolhe manualmente quais os duplicados a importar.</li>
 </ul>
 
 <h3>Organização automática</h3>
-<p>Os ficheiros importados são organizados automaticamente numa estrutura de pastas: <code>Artista/Album/Arquivo</code>. Quando há muitos artistas, estes são ainda agrupados por letra inicial (por ex., <code>A/AB/ABB/ABBA/Gold/Track.mp3</code>).</p>
+<p>Os ficheiros importados são guardados automaticamente numa estrutura de pastas fixa: três níveis de letras a partir do nome do artista, depois <code>Artista/Álbum/Ficheiro</code> (por ex., <code>A/AB/ABB/ABBA/Gold/Track.mp3</code>). O caminho depende apenas dos metadados e mantém-se estável à medida que a biblioteca cresce – os ficheiros já guardados não são movidos.</p>
 
 <!-- datumsablage -->
 <p><strong>Arquivamento ordenado por data:</strong> Para os tipos de multimédia em que o momento conta mais do que o artista &ndash; fotografias, vídeos caseiros, coleções &ndash; pode escolher nas definições um arquivamento por data. Os ficheiros vão então para pastas de ano e mês, e o nome do ficheiro inclui o momento. Vale a data de captura quando o ficheiro a tiver; caso contrário, a data do objeto.</p>
@@ -246,7 +246,7 @@
 <h3>Editor individual</h3>
 <p>Faça duplo clique numa entrada (ou selecione-a e prima <kbd>&#8984;I</kbd>) para abrir o editor de metadados. O editor tem vários separadores:</p>
 <ul>
-<li><strong>Info:</strong> Título, Artista, Artista do álbum, Álbum, Género, Palavras-chave, Ano, Número da faixa, Número do disco, Compositor, Comentário, Agrupamento, Obra, Nome do andamento, Número do andamento, BPM, Classificação, Favorito. Nos livros (e-book, PDF) aparece aqui o campo <strong>Número de páginas</strong> em vez da duração e dos BPM, podendo ser editado diretamente.</li>
+<li><strong>Info:</strong> Título, Artista, Artista do álbum, Álbum, Género, Palavras-chave, Ano, Número da faixa, Número do disco, Compositor, Comentário, Agrupamento, Obra, Nome do andamento, Número do andamento, BPM, Avaliação, Favorito. Nos livros (e-book, PDF) aparece aqui o campo <strong>Número de páginas</strong> em vez da duração e dos BPM, podendo ser editado diretamente.</li>
 <li><strong>Capa:</strong> Visualizar, alterar ou remover a imagem da capa. Para filmes: gerar uma miniatura a partir de qualquer ponto do vídeo. Uma nova imagem entra através de <strong>Carregar imagem</strong> ou <strong>Colar</strong> &ndash; ou arraste para a capa um ficheiro de imagem ou uma imagem de outra app.</li>
 <li><strong>Ordenação:</strong> Campos de ordenação independentes para Título, Artista, Artista do álbum, Álbum e Compositor. Estes campos são usados para a ordenação sem alterar os valores apresentados (por ex., &laquo;Beatles, The&raquo; como artista de ordenação).</li>
 <li><strong>Informações do ficheiro:</strong> Detalhes técnicos (formato do ficheiro, frequência de amostragem, débito binário, tamanho, permissões, formato das etiquetas) &ndash; e quatro marcas temporais que <em>pode</em> alterar. Consulte &laquo;Marcas temporais no separador Ficheiro&raquo; mais abaixo.</li>
@@ -274,7 +274,7 @@
 <!-- kopierschutz -->
 <h3>Conteúdos protegidos contra cópia</h3>
 <p>Um audiolivro comprado, um filme alugado, um livro com DRM: nestes ficheiros ninguém pode escrever &ndash; uma gravação de etiquetas deixá-los-ia, na melhor das hipóteses, inutilizáveis. O sCollect reconhece a proteção ao abrir e <strong>não toca no ficheiro</strong>. Nos livros são reconhecidos a cifragem de um PDF, o Adobe DRM, o Apple FairPlay, o Readium LCP e os EPUB cujos capítulos não são texto legível; nas músicas e nos filmes, o Apple FairPlay e a cifragem de contentor mais difundida (Common Encryption).</p>
-<p>Mesmo assim, é possível editar um objeto destes. Os seus dados vão para um <strong>ficheiro complementar</strong> com a extensão <strong>.xmp</strong>, que fica ao lado do ficheiro. No editor, isso nota-se em dois pontos do separador <strong>Informações do ficheiro</strong>: pela indicação &ndash; <em>&laquo;Ficheiro protegido contra cópia: os dados ficam num ficheiro complementar (.xmp) ao lado; o ficheiro em si permanece inalterado.&raquo;</em>, num livro <em>&laquo;Livro protegido: os dados ficam num ficheiro complementar (.xmp) ao lado; o livro em si permanece inalterado.&raquo;</em> &ndash; e pelo formato das etiquetas, que indica então <strong>Sidecar (XMP)</strong> juntamente com o tipo de proteção.</p>
+<p>Mesmo assim, é possível editar um objeto destes. Os seus dados vão para um <strong>ficheiro complementar</strong> com a extensão <strong>.xmp</strong>, que fica ao lado do ficheiro. No editor, isso nota-se em dois pontos do separador <strong>Informações do ficheiro</strong>: pela indicação &ndash; <em>&laquo;Ficheiro protegido contra cópia: os dados ficam num ficheiro complementar (.xmp) ao lado; o próprio ficheiro permanece inalterado.&raquo;</em>, num livro <em>&laquo;Livro protegido: os dados ficam num ficheiro complementar (.xmp) ao lado; o livro propriamente dito permanece inalterado.&raquo;</em> &ndash; e pelo formato das etiquetas, que indica então <strong>Sidecar (XMP)</strong> juntamente com o tipo de proteção.</p>
 <p>O ficheiro complementar pertence ao objeto e fica com ele: se mudar o nome do título, acompanha-o; em cada cópia da biblioteca também está presente. Como no próprio ficheiro não há nada, a comparação com o ficheiro também não indica aqui qualquer divergência.</p>
 <p>Nos conteúdos protegidos faltam duas coisas, ambas pelo mesmo motivo &ndash; pressupõem que o conteúdo possa ser lido: a <strong>data de captura proveniente do ficheiro</strong> e a <strong>miniatura a partir de um fotograma do vídeo</strong>. Sobre a reprodução, consulte <a href="#playback">Reprodução</a> (secção 6).</p>
 
@@ -286,7 +286,7 @@
 <li><strong>Vincular</strong> (predefinição): O ficheiro fica onde está. A biblioteca memoriza a localização e volta a encontrá-lo mesmo depois de lhe ser mudado o nome. <em>Não</em> é replicado para as cópias &ndash; não há nada para replicar &ndash; e ao remover o anexo <em>não é apagado</em>: apenas a entrada desaparece.</li>
 <li><strong>Copiar</strong>: O ficheiro é colocado na pasta de anexos ao lado do objeto e acompanha-o &ndash; também para cada cópia da biblioteca.</li>
 </ul>
-<p>Na lista, o ícone mostra a situação: uma <em>folha</em> para uma cópia, uma <em>corrente</em> para um vínculo, um <em>ponto de exclamação vermelho</em> quando um ficheiro vinculado já não é encontrado &ndash; apagado, com outro nome, ou o disco não está ligado. Ao lado aparece então <strong>Escolher pasta&hellip;</strong>, com o qual o localiza na nova posição.</p>
+<p>Na lista, o ícone mostra a situação: uma <em>folha</em> para uma cópia, uma <em>corrente</em> para um vínculo, um <em>ponto de exclamação vermelho</em> quando um ficheiro vinculado já não é encontrado &ndash; apagado, com outro nome, ou o disco não está ligado. Ao lado aparece então <strong>Localizar&hellip;</strong>, com o qual o localiza na nova posição.</p>
 <!-- bildfenster -->
 <p>Um anexo de <strong>imagem</strong> abre-se, através do botão de seta, numa janela própria, livremente redimensionável, à frente do editor; os outros ficheiros abrem-se na app correspondente. Da mesma forma, um clique na <strong>imagem principal</strong> à esquerda no editor mostra a imagem em resolução total nessa janela &ndash; num objeto cujo ficheiro não é uma imagem, a capa.</p>
 <!-- bild-einfuegen -->
@@ -304,12 +304,12 @@
 <li><strong>Trocar/copiar campos:</strong> Trocar o conteúdo de dois campos (por ex., Artista &#8596; Artista do álbum) &ndash; ou passar o valor de um para o outro de forma <em>unidirecional</em>. O botão indica então o sentido (por ex., &laquo;Título &#8594; Comentário&raquo;), para que se veja qual o campo que é substituído. Os campos de ordenação associados acompanham automaticamente. <strong>Copiar pergunta antes</strong>, pois não pode ser desfeito: o destino perde o conteúdo atual e, onde a origem estiver vazia, o destino também é esvaziado.</li>
 <li><strong>Acrescentar ao título:</strong> Adicionar texto no início ou no fim do título.</li>
 <li><strong>Data no título:</strong> Inserir a data de modificação do ficheiro no título.</li>
-<li><strong>Dividir:</strong> Dividir o conteúdo de um campo, num separador, em dois campos de destino (copiar ou cortar o campo de origem). Suporta campos numéricos (n.&ordm; da faixa/do disco/do andamento, ano); as entradas sem número reconhecível são ignoradas.</li>
+<li><strong>Dividir:</strong> Dividir o conteúdo de um campo, num separador, em dois campos de destino (copiar ou cortar o campo de origem). Suporta campos numéricos (n.&ordm; da faixa/do disco/do andamento, ano); as entradas sem número reconhecível são saltadas.</li>
 <li><strong>Separar nome e ordenação:</strong> Resolve uma forma de ordenação com vírgula (por ex., &laquo;Lennon, John&raquo;) em entradas com o campo de ordenação vazio: o valor original vai para o campo de ordenação e o campo de nome (Título, Artista, Artista do álbum, Álbum ou Compositor) é invertido para a ordem natural (&laquo;John Lennon&raquo;). Os casos ambíguos com várias vírgulas não ficam inicialmente assinalados.</li>
 </ul>
 
-<h3>Classificação e favoritos</h3>
-<p>Cada entrada pode receber uma classificação de 0 a 10, apresentada como cinco estrelas em meios passos: o primeiro clique numa estrela preenche-a, o segundo deixa-a a meio e o terceiro repõe-na. Além disso, existe um indicador de favorito independente (ícone de coração) que pode ser ativado com um clique na coluna &laquo;Favorito&raquo;.</p>
+<h3>Avaliação e favoritos</h3>
+<p>Cada entrada pode receber uma avaliação de 0 a 10, apresentada como cinco estrelas em meios passos: o primeiro clique numa estrela preenche-a, o segundo deixa-a a meio e o terceiro repõe-na. Além disso, existe um indicador de favorito independente (ícone de coração) que pode ser ativado com um clique na coluna &laquo;Favorito&raquo;.</p>
 
 <aside>
 <strong>Sugestão:</strong> O tipo de multimédia de uma entrada pode ser alterado no editor &ndash; mas apenas dentro da mesma categoria (por ex., de &laquo;Música&raquo; para &laquo;Podcast&raquo;, mas não de &laquo;Música&raquo; para &laquo;Filme&raquo;).
@@ -367,10 +367,10 @@
 <strong>Nota:</strong> A posição de reprodução e as marcas de início/fim também se aplicam à reprodução externa (VLC, IINA, MPV). Se existirem cópias desta biblioteca configuradas, a posição e as marcas são sincronizadas automaticamente com elas &ndash; pode colocar em pausa num dispositivo e retomar noutro.
 </aside>
 
-<h3>Criar cópia recortada</h3>
-<p>A partir das marcas de início/fim definidas, o sCollect pode criar uma <strong>cópia recortada</strong> como nova entrada ao lado do original &ndash; o original permanece inalterado. No editor de metadados encontra para isso, em <strong>Informações do ficheiro &gt; Reprodução</strong>, o botão <strong>&laquo;Criar cópia recortada&raquo;</strong>. Em alternativa: clique com o botão direito numa ou em mais entradas e escolha <strong>&laquo;Recortar por início/fim…&raquo;</strong>.</p>
+<h3>Criar cópia cortada</h3>
+<p>A partir das marcas de início/fim definidas, o sCollect pode criar uma <strong>cópia cortada</strong> como nova entrada ao lado do original &ndash; o original permanece inalterado. No editor de metadados encontra para isso, em <strong>Informações do ficheiro &gt; Reprodução</strong>, o botão <strong>&laquo;Criar cópia cortada&raquo;</strong>. Em alternativa: clique com o botão direito numa ou em mais entradas e escolha <strong>&laquo;Cortar por início/fim…&raquo;</strong>.</p>
 <p>São suportados MP4/M4V/MOV (vídeo), bem como MP3, M4A/M4B, AIFF, WAV e CAF (áudio). O corte é feito sem perdas, ou seja, sem recodificação e sem perda de qualidade.</p>
-<p>Nos formatos PCM AIFF e WAV é ainda possível indicar um <strong>fade-in</strong> e um <strong>fade-out</strong> suaves &ndash; em segundos (<code>5</code>, <code>2,5</code>) ou tal como o início e o fim (<code>0:05</code>). Uma introdução que o sCollect não compreenda é assinalada a vermelho, e o corte só é feito quando ambos os campos estiverem corretos. Nos formatos comprimidos <strong>MP3, M4A e M4B</strong>, antes do corte abre-se um diálogo com duas opções: <strong>&laquo;Sem perdas (manter o formato original)&raquo;</strong> corta sem recodificação, mas não permite fade-in/out. <strong>&laquo;M4A (AAC)&raquo;</strong> recodifica em vez disso &ndash; com uma <strong>taxa de bits</strong> selecionável (128 a 320 kbps) e fade-in/out opcional, à custa de uma ligeira perda de qualidade.</p>
+<p>Nos formatos PCM AIFF e WAV é ainda possível indicar um <strong>fade-in</strong> e um <strong>fade-out</strong> suaves &ndash; em segundos (<code>5</code>, <code>2,5</code>) ou tal como o início e o fim (<code>0:05</code>). Um valor introduzido que o sCollect não compreenda é assinalado a vermelho, e o corte só é feito quando ambos os campos estiverem corretos. Nos formatos comprimidos <strong>MP3, M4A e M4B</strong>, antes do corte abre-se um diálogo com duas opções: <strong>&laquo;Sem perdas (manter o formato original)&raquo;</strong> corta sem recodificação, mas não permite fade-in/out. <strong>&laquo;M4A (AAC)&raquo;</strong> recodifica em vez disso &ndash; com uma <strong>taxa de bits</strong> selecionável (128 a 320 kbps) e fade-in/out opcional, à custa de uma ligeira perda de qualidade.</p>
 
 <h3>Exportar para o Apple Music</h3>
 <p>As playlists podem ser enviadas para o Apple Music: clique com o botão direito numa playlist na barra lateral e escolha &laquo;Enviar playlist para o Apple Music&raquo;. Em alternativa, encontra esta opção no menu <strong>Ficheiro &gt; Enviar playlist para o Apple Music&hellip;</strong></p>
@@ -390,14 +390,14 @@
 <p>Os <strong>ficheiros protegidos contra cópia</strong> são sempre entregues pelo sCollect para o exterior, sem os verificar antes: à app que o macOS prevê para eles &ndash; nos títulos comprados, por exemplo, à <strong>TV</strong> ou à <strong>Música</strong>. Só aí está a chave com a qual podem ser reproduzidos.</p>
 <p>O leitor preferido é detetado automaticamente: <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (por esta ordem). Pode escolher a sua preferência em <strong>Definições &gt; Reprodução/Playlist &gt; Leitor externo para codecs não suportados</strong>. Se nenhum destes leitores estiver instalado, o sCollect recorre à app predefinida &ndash; recomendamos o <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, de código aberto).</p>
 <aside>
-<strong>Nota:</strong> No primeiro arranque, o sCollect mostra um texto de boas-vindas com estas informações. Ative &laquo;Não mostrar novamente&raquo; para o ocultar no futuro.
+<strong>Nota:</strong> No primeiro arranque, o sCollect mostra um texto de boas-vindas com estas informações. Ative &laquo;Não voltar a mostrar&raquo; para o ocultar no futuro.
 </aside>
 
 <!-- ============================================================ -->
 <h2 id="playlists">7. Playlists</h2>
 
 <h3>Playlists normais</h3>
-<p>Para criar uma nova playlist, use o <strong>+</strong> ao lado do título &laquo;Playlists&raquo; na barra lateral; para criar uma pasta de playlists, use o ícone de pasta ao lado. As entradas são adicionadas arrastando-as da lista multimédia ou através do menu de contexto &laquo;Adicionar à playlist&raquo;; &laquo;Remover só da playlist&raquo; retira-as novamente sem as apagar da biblioteca.</p>
+<p>Para criar uma nova playlist, use o <strong>+</strong> ao lado do título &laquo;Playlists&raquo; na barra lateral; para criar uma pasta de playlists, use o ícone de pasta ao lado. As entradas são adicionadas arrastando-as da lista multimédia ou através do menu de contexto &laquo;Adicionar à playlist&raquo;; &laquo;Remover apenas da playlist&raquo; retira-as novamente sem as apagar da biblioteca.</p>
 <!-- playlist-kategorie -->
 <p>Uma playlist dentro de uma categoria (por ex., Áudio) aceita apenas entradas dessa categoria. Para uma lista mista, use as playlists na parte inferior da barra lateral. Ao apagar uma playlist ou uma pasta, o sCollect pede confirmação; uma pasta leva consigo as suas playlists, e as entradas propriamente ditas permanecem na biblioteca.</p>
 <!-- playlist-zug -->
@@ -409,7 +409,7 @@
 <!-- playlist-doppelt -->
 <h3>Um título várias vezes numa playlist</h3>
 <p>Se um título já estiver na playlist e o adicionar novamente, o sCollect pede confirmação &ndash; uma única vez para todos os títulos arrastados ou selecionados, com os respetivos nomes por baixo. <strong>Adicionar mesmo assim</strong> acrescenta-os mais uma vez, <strong>Saltar</strong> (<kbd>Esc</kbd>) deixa de fora os que já lá estão; os títulos novos entram em ambos os casos.</p>
-<p>Cada linha é uma entrada própria: pode selecionar apenas uma de duas ocorrências iguais e retirá-la com &laquo;Remover só da playlist&raquo;; a outra permanece.</p>
+<p>Cada linha é uma entrada própria: pode selecionar apenas uma de duas ocorrências iguais e retirá-la com &laquo;Remover apenas da playlist&raquo;; a outra permanece.</p>
 
 <!-- playlist-sortieren -->
 <h3>Ordenar e a coluna &laquo;N.º&raquo;</h3>
@@ -419,19 +419,19 @@
 
 <!-- playlist-spaltenbrowser -->
 <h3>Navegador de colunas nas playlists</h3>
-<p>Também numa playlist é possível mostrar o navegador de colunas &ndash; com o botão à direita, por cima da lista, ou com <strong>Vista &gt; Mostrar/ocultar navegador de colunas</strong> (<kbd>&#8984;B</kbd>). Mostra apenas valores dos títulos dessa playlist. Cada playlist memoriza a sua seleção no navegador; já o facto de estar visível ou não aplica-se a todas as listas em conjunto.</p>
+<p>Também numa playlist é possível mostrar o navegador de colunas &ndash; com o botão à direita, por cima da lista, ou com <strong>Visualização &gt; Mostrar/ocultar navegador de colunas</strong> (<kbd>&#8984;B</kbd>). Mostra apenas valores dos títulos dessa playlist. Cada playlist memoriza a sua seleção no navegador; já o facto de estar visível ou não aplica-se a todas as listas em conjunto.</p>
 
 <h3>Playlists inteligentes</h3>
 <p>As playlists inteligentes são preenchidas automaticamente com base em regras. Crie uma através de <strong>Ficheiro &gt; Nova playlist inteligente&hellip;</strong> (<kbd>&#8997;&#8984;N</kbd>) ou da roda dentada ao lado do título &laquo;Playlists&raquo; &ndash; na parte inferior da barra lateral ou dentro de uma categoria. Uma playlist inteligente dentro de uma categoria avalia apenas as entradas dessa categoria. As regras podem ser combinadas:</p>
 <ul>
 <li><strong>Campos de texto:</strong> Título, Artista, Álbum, Género, etc. (contém, começa com, termina com, é&hellip;)</li>
-<li><strong>Campos numéricos:</strong> Ano, Classificação, Reproduções, Duração (é, é maior que, é menor que&hellip;)</li>
+<li><strong>Campos numéricos:</strong> Ano, Avaliação, Reproduções, Duração (é, é maior que, é menor que&hellip;)</li>
 <li><strong>Campos de data:</strong> Adicionado em, Última reprodução (é, é maior que, é menor que)</li>
 <li><strong>Campos booleanos:</strong> Favorito, Compilação (é verdadeiro/falso)</li>
 </ul>
 <p>Em &laquo;Correspondência&raquo; define-se se as regras têm de ser todas cumpridas (<strong>Todos</strong>, E) ou se basta qualquer uma (<strong>Qualquer</strong>, OU).</p>
 <aside>
-<strong>Sugestão:</strong> Ao criar uma nova biblioteca, o sCollect gera automaticamente quatro playlists inteligentes: &laquo;Adicionados recentemente&raquo;, &laquo;Reproduzidos recentemente&raquo;, &laquo;Mais bem classificados&raquo; e &laquo;Mais reproduzidos&raquo;.
+<strong>Sugestão:</strong> Ao criar uma nova biblioteca, o sCollect gera automaticamente quatro playlists inteligentes: &laquo;Adicionados recentemente&raquo;, &laquo;Reproduzidos recentemente&raquo;, &laquo;Mais bem avaliados&raquo; e &laquo;Mais reproduzidos&raquo;.
 </aside>
 
 <!-- ============================================================ -->
@@ -453,7 +453,7 @@
 <p><strong>Redirecionar:</strong> Se escolher para um tipo de multimédia <em>outra</em> pasta enquanto a anterior está inacessível, nada pode ser movido &ndash; os ficheiros não estão ao alcance. O sCollect propõe então redirecionar as <em>entradas</em> para a nova pasta: procura aí cada ficheiro, primeiro pelo caminho anterior e depois pelo nome do ficheiro, e antes mostra-lhe uma pré-visualização com três números &ndash; encontrados pelo caminho, encontrados pelo nome, continuam sem ficheiro. <strong>Redirecionar altera apenas a biblioteca, nem um único ficheiro.</strong></p>
 
 <h3>Encontrar ficheiros em falta</h3>
-<p>Se os ficheiros tiverem sido movidos ou o disco não estiver ligado, pode executar uma verificação através de <strong>Definições &gt; Biblioteca &gt; Verificar ficheiros em falta</strong>. O sCollect apresenta todas as entradas inacessíveis; <strong>Pesquisar pasta&hellip;</strong> procura-as numa pasta à sua escolha (ver abaixo).</p>
+<p>Se os ficheiros tiverem sido movidos ou o disco não estiver ligado, pode executar uma verificação através de <strong>Definições &gt; Biblioteca &gt; Verificar ficheiros em falta</strong>. O sCollect apresenta todas as entradas inacessíveis; <strong>Pesquisar na pasta&hellip;</strong> procura-as numa pasta à sua escolha (ver abaixo).</p>
 
 <p>Se existirem cópias registadas para o master, a janela mostra também um botão <strong>Restaurar das cópias</strong>. O sCollect pesquisa em todas as cópias acessíveis os ficheiros em falta e copia o primeiro resultado encontrado (tamanho > 0) de volta para o master. Útil após uma eliminação acidental quando o Lixo já foi esvaziado &ndash; enquanto pelo menos uma cópia ainda tiver o ficheiro, este pode ser recuperado.</p>
 
@@ -462,7 +462,7 @@
 <p><strong>Ficheiro &gt; Biblioteca &gt; Assinalar elementos em falta</strong> verifica uma vez todo o acervo e guarda o resultado na entrada. A partir daí, a lista lê apenas essa marca &ndash; não volta a verificar nada enquanto percorre a lista, porque numa biblioteca grande isso demoraria demasiado. Uma entrada sem ficheiro recebe um <strong>triângulo de aviso cor de laranja</strong> antes do título.</p>
 <p><strong>Um disco desligado não significa que o ficheiro esteja em falta.</strong> O que não está ligado também não pode ser verificado pelo sCollect. Essas entradas são contadas à parte no relatório como <em>não verificáveis</em>, e a respetiva marca fica como estava &ndash; não é colocada nem retirada. Por isso, o relatório após a execução indica as entradas verificadas, em falta e não verificáveis, e ainda quantas marcas foram colocadas e quantas foram retiradas.</p>
 <p><strong>Ficheiro &gt; Biblioteca &gt; Mostrar elementos em falta</strong> (<kbd>&#8679;&#8984;F</kbd>) é um comutador: a lista passa a mostrar apenas as entradas assinaladas. Uma faixa por cima da lista explica porque está tão curta e oferece no mesmo sítio a saída com <strong>Sair da vista de elementos em falta</strong>. Enquanto não houver nenhuma marca colocada, o comutador fica esbatido.</p>
-<p>A visualização <strong>fixa, ao ser ativada,</strong> as entradas que mostra. Se voltar a vincular uma delas, a linha permanece e recebe um <strong>visto verde</strong> &ndash; assim não perde a noção do que já resolveu à medida que vai trabalhando. O contador na faixa mostra ambas as coisas: quantas continuam sem ficheiro e quantas estão resolvidas. Na visualização normal, a marcação desaparece.</p>
+<p>Ao ser ativada, a visualização <strong>congela</strong> as entradas que mostra. Se voltar a vincular uma delas, a linha permanece e recebe um <strong>visto verde</strong> &ndash; assim não perde a noção do que já resolveu à medida que avança. O contador na faixa mostra ambas as coisas: quantas continuam sem ficheiro e quantas estão resolvidas. Na visualização normal, a marcação desaparece.</p>
 <!-- zurueckholen -->
 <p>Se tiver <strong>movido um ficheiro para fora da pasta multimédia</strong> no Finder, o sCollect muitas vezes ainda o encontra através do marcador &ndash; nesse caso não está em falta, mas fora da biblioteca. O relatório indica essas entradas numa linha própria, e <strong>Recuperar</strong> move os ficheiros de volta para o seu lugar. Se o sCollect não puder remover nada na localização alheia, copia-os em vez disso.</p>
 
@@ -475,21 +475,21 @@
 
 <!-- ordnersuche -->
 <h3>Procurar ficheiros em falta numa pasta</h3>
-<p>Em vez de procurar cada ficheiro individualmente, pode indicar ao sCollect uma pasta onde se encontram os ficheiros em falta. Há três caminhos para isso: o menu de contexto <strong>Procurar elementos em falta na pasta&hellip;</strong> para as entradas selecionadas, <strong>Procurar na pasta&hellip;</strong> no relatório de <strong>Assinalar elementos em falta</strong> para todas as assinaladas, e <strong>Pesquisar pasta&hellip;</strong> na janela <strong>Ficheiros em falta</strong>.</p>
+<p>Em vez de procurar cada ficheiro individualmente, pode indicar ao sCollect uma pasta onde se encontram os ficheiros em falta. Há três caminhos para isso: o menu de contexto <strong>Procurar em falta na pasta&hellip;</strong> para as entradas selecionadas, <strong>Procurar na pasta&hellip;</strong> no relatório de <strong>Assinalar elementos em falta</strong> para todas as assinaladas, e <strong>Pesquisar na pasta&hellip;</strong> na janela <strong>Ficheiros em falta</strong>.</p>
 <ul>
 <li><strong>Correspondências inequívocas</strong> são atribuídas pelo próprio sCollect &ndash; por nome e tamanho e, no caso de ficheiros de áudio e vídeo com outro nome, por tamanho e duração.</li>
 <li><strong>Correspondências ambíguas ou incertas</strong> &ndash; por exemplo, dois ficheiros com o mesmo nome em subpastas diferentes, ou um livro com outro nome &ndash; vão para uma janela onde é o utilizador que decide. Aí nada está pré-selecionado; só depois de escolher um ficheiro é que a entrada pode ser aceite.</li>
 <li>Se a correspondência estiver <strong>fora</strong> da biblioteca, é <strong>copiada</strong> para o lugar certo; se estiver na pasta multimédia do próprio tipo, é <strong>movida</strong> para lá.</li>
 <li>Uma entrada <strong>vinculada</strong> é novamente vinculada com o modo de importação &laquo;Deixar no local&raquo;; com qualquer outro, o ficheiro entra na biblioteca e os valores da entrada são gravados nele.</li>
-<li>Se um ficheiro encontrado já pertencer a outra entrada, é <strong>ignorado</strong>.</li>
+<li>Se um ficheiro encontrado já pertencer a outra entrada, é <strong>saltado</strong>.</li>
 </ul>
-<p>A mensagem final indica o que foi atribuído automaticamente, aceite pelo utilizador, não encontrado ou ignorado; o registo contém os caminhos.</p>
+<p>A mensagem final indica o que foi atribuído automaticamente, aceite pelo utilizador, não encontrado ou saltado; o registo contém os caminhos.</p>
 
 <h3>Bibliotecas em partilhas de rede</h3>
 <p>O sCollect também consegue gerir bibliotecas em partilhas SMB ou NFS. Tenha em atenção:</p>
 <ul>
 <li><strong>Ao abrir:</strong> Se o volume estiver offline, não é feita nenhuma tentativa de montagem automática &ndash; o sCollect mostra um aviso. Pode ainda assim abrir a biblioteca ou ligar primeiro o volume manualmente.</li>
-<li><strong>Ao apagar:</strong> Também nas partilhas de rede, os ficheiros apagados vão primeiro para o Lixo da app (a pasta <code>.Deleted</code> na respetiva pasta multimédia) e podem ser restaurados a partir daí. Só são removidos definitivamente ao esvaziar o Lixo da app (consulte a secção 2). Como as partilhas geralmente não têm Lixo do sistema, são então apagados diretamente.</li>
+<li><strong>Ao apagar:</strong> Também nas partilhas de rede, os ficheiros apagados vão primeiro para o Lixo da aplicação (a pasta <code>.Deleted</code> na respetiva pasta multimédia) e podem ser restaurados a partir daí. Só são removidos definitivamente ao esvaziar o Lixo da aplicação (consulte a secção 2). Como as partilhas geralmente não têm Lixo do sistema, são então apagados diretamente.</li>
 </ul>
 
 <!-- ============================================================ -->
@@ -524,21 +524,21 @@
 <li><strong>Modelo:</strong> Fabricante, Marca, Série, Projetista, Escala</li>
 <li><strong>Selo:</strong> Administração postal, País, Emissão, Desenhador, Catálogo</li>
 </ul>
-<p>Os restantes lugares em &laquo;Diversos&raquo; têm os nomes do modelo até que lhes dê um nome. Todas estas predefinições podem ser substituídas aqui &ndash; são uma proposta, não uma imposição.</p>
+<p>Os restantes lugares em &laquo;Diversos&raquo; têm os nomes de &laquo;Modelo&raquo; até que lhes dê um nome. Todas estas predefinições podem ser substituídas aqui &ndash; são uma proposta, não uma imposição.</p>
 
 <h3>Reprodução/Playlist</h3>
 <ul>
 <li><strong>Exportação para o Apple Music:</strong> Definições para a exportação de playlists para o Apple Music.</li>
 <li><strong>Janela de vídeo sempre à frente:</strong> A janela de vídeo permanece por cima de todas as outras janelas.</li>
-<li><strong>Volume em câmara lenta / fotograma a fotograma:</strong> Redução do volume em dB durante os modos câmara lenta e fotograma a fotograma.</li>
-<li><strong>Leitor de vídeo externo:</strong> Leitor preferido para codecs que o AVFoundation não consegue descodificar (MKV, AVI, AV1 sem descodificador de hardware, DivX, etc.). VLC, IINA e MPV são detetados; se nenhum estiver instalado, é usada a app predefinida.</li>
+<li><strong>Volume em câmara lenta/imagem a imagem:</strong> Redução do volume em dB durante os modos câmara lenta e fotograma a fotograma.</li>
+<li><strong>Leitor externo para codecs não suportados:</strong> Leitor preferido para codecs que o AVFoundation não consegue descodificar (MKV, AVI, AV1 sem descodificador de hardware, DivX, etc.). VLC, IINA e MPV são detetados; se nenhum estiver instalado, é usada a app predefinida.</li>
 </ul>
 
 <h3>Sincronização</h3>
 <p>Gere a ligação às bibliotecas master e cópia. É aqui que se liga uma segunda biblioteca como cópia, se acompanham as operações de sincronização pendentes e se projeta o estado do master sobre uma cópia. Detalhes na secção 11.</p>
 
 <h3>Idioma</h3>
-<p>O sCollect está disponível em 25 idiomas. Escolha o idioma preferido &ndash; o novo idioma fica ativo depois de reiniciar a app.</p>
+<p>O idioma da aplicação segue as Definições do Sistema. Para o alterar: Definições do Sistema → Geral → Idioma e região e, aí, desça até ao fim, até à secção «Aplicações».</p>
 
 <!-- ============================================================ -->
 <h2 id="convert">10. Converter formato</h2>
@@ -547,15 +547,15 @@
 <p>Selecione uma ou mais entradas de áudio ou vídeo, clique com o botão direito e escolha <strong>Converter formato&hellip;</strong> ou, para filmes, <strong>Extrair áudio como&hellip;</strong>. No diálogo:</p>
 <ul>
 <li><strong>Formato de saída:</strong> AAC, MP3, HE-AAC, ALAC (sem perdas), WAV ou AIFF. Também &laquo;Áudio inalterado&raquo; (passthrough) &ndash; o fluxo de áudio é copiado tal como está para um contentor MP4 sem recodificação.</li>
-<li><strong>Parâmetros de áudio:</strong> Disposição dos canais (como o original / estéreo / mono), frequência de amostragem e, para PCM/ALAC, a profundidade de bits.</li>
-<li><strong>Compressão:</strong> Para MP3/AAC/HE-AAC: débito binário fixo ou variável (VBR) com nivelador de qualidade.</li>
-<li><strong>Destino:</strong> Duas escolhas &ndash; <strong>Biblioteca</strong> (o ficheiro convertido vai para a categoria de áudio escolhida; predefinição &laquo;Podcast&raquo;, ou &laquo;Audiolivro&raquo;/&laquo;Música&raquo; como alternativa se Podcast não estiver ativo) ou <strong>Externo</strong> (com o botão <strong>Escolher&hellip;</strong> seleciona uma pasta fora da biblioteca &ndash; o original fica intacto e o ficheiro convertido não é adicionado à biblioteca).</li>
+<li><strong>Parâmetros de áudio:</strong> Disposição dos canais (como o original / estéreo / mono), frequência de amostragem (original / 22050 / 44100 / 48000 Hz) e, para PCM/ALAC, a profundidade de bits.</li>
+<li><strong>Compressão:</strong> Para MP3/AAC/HE-AAC: débito binário fixo ou variável (VBR) com controlo de qualidade.</li>
+<li><strong>Destino:</strong> Duas escolhas &ndash; <strong>Biblioteca</strong> (o ficheiro convertido vai para a categoria de áudio escolhida; predefinição &laquo;Podcast&raquo;, ou &laquo;Audiolivro&raquo;/&laquo;Música&raquo; como alternativa se Podcast não estiver ativo) ou <strong>Externo</strong> (com o botão <strong>Selecionar&hellip;</strong> seleciona uma pasta fora da biblioteca &ndash; o original fica intacto e o ficheiro convertido não é adicionado à biblioteca).</li>
 <li><strong>Tratamento do original:</strong> Para o destino &laquo;Biblioteca&raquo;: manter, mover para o lixo ou substituir pela conversão. Para &laquo;Externo&raquo;, é sempre mantido.</li>
 </ul>
 <p>Os metadados e a capa do original são sempre copiados. Ao importar para a biblioteca, o ficheiro é movido para a pasta da categoria de áudio; não é feita verificação de duplicados &ndash; o que acontece ao original é controlado pelo menu &laquo;Original&raquo;.</p>
 
 <h3>Predefinição iPod</h3>
-<p>O botão <strong>Compatível com iPod (AAC-LC, 256 kbps)</strong> define os parâmetros para uma combinação com a máxima compatibilidade com iPods antigos: AAC-LC em contentor MP4, 44,1 kHz, estéreo, 256 kbps CBR.</p>
+<p>O botão <strong>Compatível com iPod (AAC-LC, 256 kbps)</strong> define os parâmetros para uma combinação com a máxima compatibilidade com iPods antigos (Shuffle, Nano, Classic): AAC-LC em contentor MP4, 44,1 kHz, estéreo, 256 kbps CBR. Não é passthrough, para que o HE-AAC do material de origem seja recodificado em AAC-LC.</p>
 
 <aside><strong>Sugestão:</strong> Todas as definições de conversão são guardadas por biblioteca &ndash; da próxima vez que o diálogo for aberto, a última configuração já estará pré-selecionada.</aside>
 
@@ -563,7 +563,7 @@
 <h2 id="sync">11. Sincronização (Master/Cópia)</h2>
 
 <h3>Conceito</h3>
-<p>O sCollect pode sincronizar várias bibliotecas entre si: uma biblioteca atua como <em>master</em>, uma ou mais outras como <em>cópias</em>. As alterações no master são refletidas automaticamente nas cópias ligadas, com pastas multimédia e caminhos próprios em cada cópia.</p>
+<p>O sCollect pode sincronizar várias bibliotecas entre si: uma biblioteca atua como <em>master</em>, uma ou mais outras como <em>cópias</em>. As alterações no master (edições de etiquetas, importações, reorganização) são refletidas automaticamente nas cópias ligadas, com pastas multimédia e caminhos próprios em cada cópia. Assim, por ex., a biblioteca completa num disco externo grande pode servir de master, enquanto um portátil tem uma cópia reduzida ou idêntica.</p>
 
 <!-- kein-backup -->
 <h3>A sincronização não é uma cópia de segurança</h3>
@@ -574,10 +574,10 @@
 <p><strong>O momento mais favorável é quando já não há nada pendente.</strong> Uma cópia nova tem primeiro de receber tudo o que lhe falta &ndash; se isso coincidir com uma transferência ainda em curso, ambas demoram mais e, na dúvida, todas as cópias esperam umas pelas outras. Basta olhar para o símbolo de sincronização na barra lateral: se não mostrar nenhum número, é o momento certo.</p>
 
 <h3>Replicação inicial dos ficheiros</h3>
-<p>No Push, o sCollect grava a base de dados da cópia (elementos, playlists, definições), mas não copia automaticamente todos os ficheiros multimédia na configuração inicial. Para a replicação inicial em massa, recomenda-se uma ferramenta externa como o FreeFileSync.</p>
+<p>No Push, o sCollect grava a base de dados da cópia (elementos, playlists, definições), mas não copia automaticamente todos os ficheiros multimédia na configuração inicial. Para a replicação inicial em massa, recomenda-se uma ferramenta externa como o FreeFileSync. Depois disso, o sCollect encarrega-se ele próprio das operações correntes com ficheiros (importação, deslocação, eliminação, escrita de etiquetas, capas).</p>
 
 <h3>Projetar (Push)</h3>
-<p>Com <strong>Projetar</strong> na linha da cópia, o master volta a gravar por completo o <code>library.json</code> da cópia. A fila de sincronização pendente dessa cópia também é reposta.</p>
+<p>Com <strong>Projetar</strong> na linha da cópia, o master volta a gravar por completo o <code>library.json</code> da cópia &ndash; todos os elementos, playlists e definições relevantes para o conteúdo são assumidos a partir do master. A fila de sincronização pendente dessa cópia também é reposta.</p>
 
 <h3>Transmissão em direto</h3>
 <p>No funcionamento normal, cada alteração no master é propagada automaticamente para todas as cópias ligadas. Nas cópias inacessíveis, as alterações são armazenadas numa fila e aplicadas assim que a cópia volta a estar acessível. O número de operações pendentes por cópia é mostrado nas definições de sincronização (emblema &laquo;X pendentes&raquo;).</p>
@@ -587,19 +587,19 @@
 <p>Quando uma cópia está offline ou uma sincronização falhou, acumulam-se operações pendentes. Para cada cópia existem duas opções:</p>
 <ul>
 <li><strong>Executar pendentes:</strong> Tenta aplicar o que está em atraso. Se uma transferência falhar, fica onde está e a execução para &ndash; não se perde, mas é tentada novamente na próxima tentativa.</li>
-<li><strong>Descartar&hellip;:</strong> Esta cópia salta todo o seu atraso. <strong>É uma renúncia, não uma autorização:</strong> depois passa a contar como atualizada sem que as alterações lhe tenham chegado &ndash; para ela, estão perdidas. Por isso, depois é sempre necessário <strong>Projetar</strong> ou <strong>Corrigir erros de sincronização&hellip;</strong>; só isso apura o que realmente lhe falta e o recupera.</li>
+<li><strong>Ignorar&hellip;:</strong> Esta cópia salta todo o seu atraso. <strong>É uma renúncia, não uma autorização:</strong> depois passa a contar como atualizada sem que as alterações lhe tenham chegado &ndash; para ela, estão perdidas. Por isso, depois é sempre necessário <strong>Projetar</strong> ou <strong>Corrigir erros de sincronização&hellip;</strong>; só isso apura o que realmente lhe falta e o recupera.</li>
 </ul>
 
 <h3>Quando uma cópia não acompanha</h3>
 <p>Todas as cópias processam a mesma lista, e fazem-no <strong>ao mesmo passo</strong>: só quando uma alteração chegou a cada cópia é que se avança. É intencional &ndash; assim nenhuma cópia pode ficar para trás sem que se note e carregar meses depois um estado que já ninguém sabe situar.</p>
 <p>A consequência: <strong>se uma cópia fica bloqueada, as outras esperam.</strong> Na barra lateral aparece então ao lado delas &laquo;A aguardar outra cópia&raquo;. Não é um erro, mas sim o travão, e este solta-se por si só assim que a cópia em falta voltar a estar acessível &ndash; disco ligado, volume de rede disponível.</p>
-<p>Se persistir, tem dois caminhos: tornar acessível a cópia bloqueada e <strong>Executar pendentes</strong> &ndash; ou escolher nela <strong>Descartar</strong> e em seguida <strong>Projetar</strong>. O segundo caminho custa a essa única cópia o seu atraso, mas liberta de imediato as restantes.</p>
+<p>Se persistir, tem dois caminhos: tornar acessível a cópia bloqueada e <strong>Executar pendentes</strong> &ndash; ou escolher nela <strong>Ignorar</strong> e em seguida <strong>Projetar</strong>. O segundo caminho custa a essa única cópia o seu atraso, mas liberta de imediato as restantes.</p>
 
 <h3>Corrigir erros de sincronização</h3>
-<p>Com <strong>Corrigir erros de sincronização&hellip;</strong>, os dados das etiquetas de cada ficheiro da cópia são comparados com o master e voltam a ser gravados em caso de diferença. Os filtros por classificação, género e ano permitem um processamento por etapas. Os ficheiros em falta são copiados a partir do master.</p>
+<p>Com <strong>Corrigir erros de sincronização&hellip;</strong>, os dados das etiquetas de cada ficheiro da cópia são comparados com o master e voltam a ser gravados em caso de diferença. Os filtros por avaliação, género e ano permitem um processamento por etapas. Os ficheiros em falta são copiados a partir do master. Útil após intervenções manuais ou após uma replicação inicial com uma ferramenta externa.</p>
 
 <h3>Cópias só de leitura</h3>
-<p>Uma cópia pode ser marcada como só de leitura &ndash; nesse caso, a importação, a eliminação e as edições de etiquetas na cópia ficam bloqueadas.</p>
+<p>Uma cópia pode ser marcada como só de leitura &ndash; nesse caso, a importação, a eliminação e as edições de etiquetas na cópia ficam bloqueadas, para que as alterações não sejam substituídas na sincronização seguinte.</p>
 
 <h3>Organizar biblioteca</h3>
 <p>Através de <strong>Definições &gt; Biblioteca &gt; Organizar biblioteca</strong> (ou do botão por cima da lista multimédia), o sCollect coloca os ficheiros geridos num estado limpo. Antes, uma janela pergunta pelo âmbito e pelas opções.</p>
@@ -609,13 +609,13 @@
 
 <h4>O que a execução faz</h4>
 <ul>
-<li><strong>Unir entradas duplicadas:</strong> Se duas entradas apontam para o mesmo ficheiro, não se trata de um duplicado, mas de um erro na biblioteca &ndash; há apenas um ficheiro multimédia. Fica a entrada mais antiga, que herda da outra o que diz mais: a classificação mais alta, o favorito, o contador mais alto, uma posição de reprodução memorizada. Os lugares em playlists da entrada abandonada passam a apontar para a que ficou.</li>
+<li><strong>Unir entradas duplicadas:</strong> Se duas entradas apontam para o mesmo ficheiro, não se trata de um duplicado, mas de um erro na biblioteca &ndash; há apenas um ficheiro multimédia. Fica a entrada mais antiga, que herda da outra o que diz mais: a avaliação mais alta, o favorito, o contador mais alto, uma posição de reprodução memorizada. Os lugares em playlists da entrada abandonada passam a apontar para a que ficou.</li>
 <li><strong>Arrumar:</strong> As entradas cujo ficheiro não está no caminho previsto são movidas para lá (Artista/Álbum, níveis de pasta fixos). Os ficheiros associados, as capas e os anexos acompanham.</li>
 <li><strong>Confrontar pastas:</strong> As pastas multimédia são percorridas em busca de ficheiros copiados manualmente e ainda sem entrada. Os ficheiros novos são incorporados. Se o ficheiro de uma entrada existente estiver em falta e um achado lhe corresponder, a entrada é reparada com base nele e assume daí os metadados. Se o original ainda existir, o ficheiro é incorporado como verdadeiro duplicado com o acréscimo &laquo; (2)&raquo; no título e no nome do ficheiro.</li>
 <li><strong>Remover entradas órfãs:</strong> As entradas cujo ficheiro <em>comprovadamente</em> desapareceu são apagadas &ndash; apenas a entrada, já que o ficheiro deixou de existir. &laquo;Comprovadamente&raquo; significa: o disco está ligado, não estão em falta <em>todos</em> os ficheiros nele e, nos objetos geridos, a pasta multimédia está acessível. Se uma destas condições não se cumprir, a entrada fica intacta &ndash; um disco desligado não deve custar nenhuma entrada.</li>
 </ul>
 
-<h4>Confrontar os metadados com os ficheiros</h4>
+<h4>Cotejar os metadados com os ficheiros</h4>
 <p>Esta opção está <strong>desativada por predefinição</strong> e responde à pergunta sobre o que vale quando a biblioteca e o ficheiro divergem:</p>
 <ul>
 <li><strong>Vence o ficheiro:</strong> Vale a etiqueta do ficheiro, a biblioteca é corrigida. Nenhum ficheiro é gravado.</li>
@@ -627,7 +627,7 @@
 <h4>Sincronizar as alterações com as cópias</h4>
 <p>Ativado por predefinição. Se o desativar, as cópias ligadas ficam intactas e, por isso, divergem &ndash; só faz sentido se depois fizer de qualquer forma um confronto completo com uma ferramenta externa. <strong>Projetar não recupera isso:</strong> apenas reproduz caminhos e indica o que falta no destino, mas na cópia não move nada.</p>
 
-<p>Durante a execução, as ações que fazem alterações ficam bloqueadas; é apresentada uma barra de progresso com um botão para cancelar e a entrada em pausa do Mac é impedida, para que os volumes externos não sejam desligados. No fim, uma janela resume o que foi movido, unido, novamente incorporado, reparado, acrescentado como duplicado e removido.</p>
+<p>Durante a execução, as ações que fazem alterações ficam bloqueadas; é apresentada uma barra de progresso com um botão para cancelar e a entrada em pausa do Mac é impedida, para que os volumes externos não sejam desligados. No fim, uma janela resume o que foi movido, unido, incorporado como novo, reparado, acrescentado como duplicado e removido.</p>
 
 <aside><strong>Sugestão:</strong> Se atualizar regularmente uma cópia com uma ferramenta externa (por ex., FreeFileSync), basta executar <strong>Projetar</strong> na cópia após cada replicação &ndash; a fila pendente é reposta automaticamente.</aside>
 
@@ -652,7 +652,7 @@
 <!-- kuerzel-fehlende --><tr><td><kbd>&#8679;&#8984;F</kbd></td><td>Mostrar elementos em falta</td></tr>
 <tr><td><kbd>&#8997;&#8984;N</kbd></td><td>Nova playlist inteligente</td></tr>
 <tr><td><kbd>&#8984;,</kbd></td><td>Definições</td></tr>
-<tr><td><kbd>&#8984;/</kbd></td><td>Ajuda sCollect</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>Ajuda do sCollect</td></tr>
 </table>
 
 <h3>Visualização</h3>

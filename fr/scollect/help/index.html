@@ -118,8 +118,8 @@
 
 
 <!-- duplicates-view -->
-<h3>Afficher les doublons</h3>
-<p>Via <strong>Fichier &gt; Bibliothèque &gt; Afficher les éléments en double</strong> (<kbd>&#8679;&#8984;D</kbd>), sCollect parcourt toute la catégorie courante et n&rsquo;affiche plus dans la liste des médias que les doublons trouvés &ndash; comme dans Apple Music. Pour une sélection existante, le menu contextuel propose &laquo;Trouver les doublons&raquo;.</p>
+<h3>Afficher les éléments en double</h3>
+<p>Via <strong>Fichier &gt; Bibliothèque &gt; Afficher les éléments en double</strong> (<kbd>&#8679;&#8984;D</kbd>), sCollect parcourt toute la catégorie courante et n&rsquo;affiche plus dans la liste des médias que les doublons trouvés &ndash; comme dans Apple Music. Pour une sélection existante, le menu contextuel propose &laquo;Rechercher les doublons&raquo;.</p>
 <p>La recherche affiche une barre de progression et peut être interrompue à tout moment. Sur de grandes collections, le premier passage peut être long ; sCollect mémorise dans la bibliothèque les valeurs calculées à cette occasion, de sorte que chaque passage suivant est nettement plus rapide. Si un fichier change, ses valeurs sont automatiquement écartées et recalculées.</p>
 
 <h4>Ce qui est recherché</h4>
@@ -127,7 +127,7 @@
 <ul>
 <li><strong>Métadonnées :</strong> même titre et même interprète pour une durée voisine. Des numéros de disque ou de piste différents au sein du même album excluent un doublon ; pour les livres audio, des titres d&rsquo;album différents également.</li>
 <li><strong>Contenu du fichier :</strong> même taille et même début de fichier.</li>
-<li><strong>Recherche approfondie d&rsquo;un audio identique :</strong> reconnaît le même enregistrement même lorsque les tags sont complètement différents. Elle lit nettement plus de données sur le disque et se règle donc dans les réglages sous <strong>Doublons</strong> &ndash; &laquo;automatique&raquo; la désactive sur les volumes réseau.</li>
+<li><strong>Recherche approfondie d&rsquo;audio identique :</strong> reconnaît le même enregistrement même lorsque les tags sont complètement différents. Elle lit nettement plus de données sur le disque et se règle donc dans les réglages sous <strong>Doublons</strong> &ndash; &laquo;automatique&raquo; la désactive sur les volumes réseau.</li>
 <li><strong>Entrées orphelines :</strong> une entrée dont le fichier manque est rattachée à une entrée sœur existante portant le même titre de base dans le même dossier. C&rsquo;est le reste typique après un renommage de &laquo;Titre&raquo; en &laquo;Titre (2)&raquo;.</li>
 </ul>
 <p>Pour que la comparaison ne repose pas sur des indications erronées, sCollect lit avant la recherche les tags des fichiers concernés et corrige les valeurs divergentes de la bibliothèque. Sans cela, des numéros de disque erronés pourraient par exemple faire passer pour identiques différents disques d&rsquo;un même livre audio.</p>
@@ -184,7 +184,7 @@
 </ul>
 
 <h3>Organisation automatique</h3>
-<p>Les fichiers importés sont automatiquement organisés dans une arborescence : <code>Artiste/Album/Fichier</code>. Lorsqu&rsquo;il y a de nombreux artistes, ils sont en outre regroupés par lettre initiale (par ex. <code>A/AB/ABB/ABBA/Gold/Track.mp3</code>).</p>
+<p>Les fichiers importés sont automatiquement rangés dans une arborescence fixe : trois niveaux de lettres tirés du nom de l&rsquo;artiste, puis <code>Artiste/Album/Fichier</code> (par ex. <code>A/AB/ABB/ABBA/Gold/Track.mp3</code>). Le chemin dépend uniquement des métadonnées et reste stable à mesure que la bibliothèque grandit &ndash; les fichiers déjà rangés ne sont pas déplacés.</p>
 
 <!-- datumsablage -->
 <p><strong>Classement par date :</strong> Pour les types de média où le moment compte plus que l&rsquo;artiste &ndash; photos, vidéos personnelles, collections &ndash;, vous pouvez choisir dans les réglages un classement par date à la place. Les fichiers atterrissent alors dans des dossiers d&rsquo;année et de mois, et le nom de fichier porte le moment. La date de prise de vue fait foi lorsque le fichier en porte une ; sinon la date de l&rsquo;élément.</p>
@@ -286,7 +286,7 @@
 <li><strong>Lier</strong> (par défaut) : Le fichier reste là où il est. La bibliothèque mémorise son emplacement et le retrouve même après un renommage. Il n&rsquo;est <em>pas</em> répliqué sur les copies &ndash; il n&rsquo;y a rien à répliquer &ndash; et lors du retrait de la pièce jointe il n&rsquo;est <em>pas supprimé</em> : seule l&rsquo;entrée disparaît.</li>
 <li><strong>Copier</strong> : Le fichier est placé dans le dossier des pièces jointes à côté de l&rsquo;élément et le suit &ndash; sur chaque copie de la bibliothèque également.</li>
 </ul>
-<p>Dans la liste, l&rsquo;icône indique où vous en êtes : une <em>feuille</em> pour une copie, une <em>chaîne</em> pour un lien, un <em>point d&rsquo;exclamation rouge</em> lorsqu&rsquo;un fichier lié est introuvable &ndash; supprimé, renommé, ou le disque n&rsquo;est pas connecté. <strong>Choisir le dossier&hellip;</strong> apparaît alors à côté, pour le retrouver à son nouvel emplacement.</p>
+<p>Dans la liste, l&rsquo;icône indique où vous en êtes : une <em>feuille</em> pour une copie, une <em>chaîne</em> pour un lien, un <em>point d&rsquo;exclamation rouge</em> lorsqu&rsquo;un fichier lié est introuvable &ndash; supprimé, renommé, ou le disque n&rsquo;est pas connecté. <strong>Retrouver&hellip;</strong> apparaît alors à côté, pour le retrouver à son nouvel emplacement.</p>
 <!-- bildfenster -->
 <p>Une pièce jointe de type <strong>image</strong> s&rsquo;ouvre via le bouton fléché dans une fenêtre à part, librement redimensionnable, devant l&rsquo;éditeur ; les autres fichiers s&rsquo;ouvrent dans l&rsquo;application associée. De même, un clic sur l&rsquo;<strong>image principale</strong> à gauche dans l&rsquo;éditeur affiche l&rsquo;image en pleine résolution dans cette fenêtre &ndash; pour un élément dont le fichier n&rsquo;est pas une image, la pochette.</p>
 <!-- bild-einfuegen -->
@@ -302,7 +302,7 @@
 <ul>
 <li><strong>Rechercher &amp; Remplacer :</strong> Rechercher et remplacer du texte dans un ou plusieurs champs.</li>
 <li><strong>Échanger/copier des champs :</strong> Échanger le contenu de deux champs (par ex. Artiste &#8596; Artiste de l&rsquo;album) &ndash; ou reprendre la valeur de l&rsquo;un dans l&rsquo;autre de manière <em>unidirectionnelle</em>. Le bouton nomme alors le sens (par ex. &laquo;Titre &#8594; Commentaire&raquo;), afin que l&rsquo;on voie quel champ est écrasé. Les champs de tri associés suivent automatiquement. <strong>La copie demande confirmation</strong>, car elle est irréversible : la cible perd son contenu actuel, et là où la source est vide, la cible est vidée aussi.</li>
-<li><strong>Compléter le titre :</strong> Ajouter du texte au début ou à la fin du titre.</li>
+<li><strong>Ajouter au titre :</strong> Ajouter du texte au début ou à la fin du titre.</li>
 <li><strong>Date dans le titre :</strong> Insérer la date de modification du fichier dans le titre.</li>
 <li><strong>Diviser :</strong> Diviser le contenu d&rsquo;un champ à un séparateur en deux champs cibles (copier ou couper le champ source). Champs numériques pris en charge (n&deg; de piste/disque/mouvement, année) ; les entrées sans nombre sont ignorées.</li>
 <li><strong>Séparer nom et tri :</strong> Résout une forme de tri avec virgule (par ex. &laquo;Lennon, John&raquo;) dans les entrées au champ de tri vide : la valeur d&rsquo;origine passe dans le champ de tri et le champ de nom (Titre, Artiste, Artiste de l&rsquo;album, Album ou Compositeur) est remis dans l&rsquo;ordre naturel (&laquo;John Lennon&raquo;). Les cas ambigus à plusieurs virgules ne sont pas cochés au départ.</li>
@@ -429,7 +429,7 @@
 <li><strong>Champs date :</strong> Date d&rsquo;ajout, Dernière lecture (est, est supérieur à, est inférieur à)</li>
 <li><strong>Champs booléens :</strong> Favori, Compilation (est vrai/faux)</li>
 </ul>
-<p>Sous &laquo; Respecter &raquo;, vous choisissez <strong>Tous</strong> si toutes les règles doivent être remplies (ET) ou <strong>N&rsquo;importe lequel</strong> si une seule suffit (OU).</p>
+<p>Sous &laquo; Correspondance &raquo;, vous choisissez <strong>Tous</strong> si toutes les règles doivent être remplies (ET) ou <strong>N&rsquo;importe lequel</strong> si une seule suffit (OU).</p>
 
 <aside>
 <strong>Astuce :</strong> Lors de la création d&rsquo;une nouvelle bibliothèque, sCollect génère automatiquement quatre playlists intelligentes : &laquo; Ajouts récents &raquo;, &laquo; Écoutes récentes &raquo;, &laquo; Les mieux notés &raquo; et &laquo; Les plus écoutés &raquo;.
@@ -442,7 +442,7 @@
 <p>Vous pouvez créer une bibliothèque sCollect sur un disque externe ou y déplacer une bibliothèque existante. À noter :</p>
 <ul>
 <li>Lorsque vous connectez le disque à un <strong>autre Mac</strong>, sCollect doit obtenir l&rsquo;accès une seule fois. Une boîte de dialogue apparaît automatiquement pour vous permettre de sélectionner le dossier de médias.</li>
-<li>Pour un accès optimal aux fichiers, nous recommandons d&rsquo;ajouter sCollect dans Réglages du système sous <strong>Confidentialité et sécurité &gt; Accès complet au disque</strong>.</li>
+<li>Pour un accès optimal aux fichiers, nous recommandons d&rsquo;ajouter sCollect dans Réglages Système sous <strong>Confidentialité et sécurité &gt; Accès complet au disque</strong>.</li>
 </ul>
 
 <h3>Dossiers personnalisés par type de médias</h3>
@@ -499,13 +499,13 @@
 
 <h3>Général</h3>
 <ul>
-<li><strong>Mode d&rsquo;import :</strong> Copier, Déplacer ou Laisser sur place (par défaut pour les futurs imports).</li>
+<li><strong>Mode d&rsquo;importation :</strong> Copier, Déplacer ou Laisser sur place (par défaut pour les futurs imports).</li>
 <li><strong>Séparateurs de valeurs multiples :</strong> Caractères utilisés comme séparateurs pour plusieurs artistes/genres dans un même champ (par défaut : &amp;, /, ;).</li>
 </ul>
 
 <h3>Bibliothèque</h3>
 <ul>
-<li><strong>Dossier de médias par défaut :</strong> Le dossier principal dans lequel les fichiers importés sont stockés.</li>
+<li><strong>Dossier média par défaut :</strong> Le dossier principal dans lequel les fichiers importés sont stockés.</li>
 <li><strong>Dossiers par type de médias :</strong> Dossiers personnalisés optionnels pour des types de médias spécifiques.</li>
 <li><strong>Emplacement de la bibliothèque :</strong> Affiche l&rsquo;emplacement actuel et permet d&rsquo;en changer.</li>
 <!-- einstellungen-ansicht -->
@@ -522,7 +522,7 @@
 <p>Pour de nombreux types de média, sCollect apporte déjà des noms adaptés : pour un livre audio, &laquo;Artiste&raquo; s&rsquo;appelle d&rsquo;emblée <em>Auteur</em>, pour un long métrage &laquo;Album&raquo; s&rsquo;appelle <em>Studio</em>. Pour la catégorie <strong>Divers</strong>, les noms suivent le domaine de collection :</p>
 <ul>
 <li><strong>Pièce de monnaie :</strong> Atelier monétaire, Pays, Série, Graveur, Catalogue</li>
-<li><strong>Modèle réduit :</strong> Fabricant, Marque, Série, Concepteur, Échelle</li>
+<li><strong>Maquette :</strong> Fabricant, Marque, Série, Concepteur, Échelle</li>
 <li><strong>Timbre :</strong> Administration postale, Pays, Émission, Dessinateur, Catalogue</li>
 </ul>
 <p>Les autres emplacements sous &laquo;Divers&raquo; portent les noms du modèle réduit jusqu&rsquo;à ce que vous les nommiez vous-même. Toutes ces valeurs par défaut peuvent être remplacées ici &ndash; ce sont une proposition, pas une contrainte.</p>
@@ -532,20 +532,20 @@
 <li><strong>Export Apple Music :</strong> Réglages pour l&rsquo;export de playlists vers Apple Music.</li>
 <li><strong>Fenêtre vidéo toujours au premier plan :</strong> La fenêtre vidéo reste au-dessus de toutes les autres fenêtres.</li>
 <li><strong>Volume en ralenti / image par image :</strong> Réduction du volume en dB pendant les modes ralenti et image par image.</li>
-<li><strong>Lecteur vidéo externe :</strong> Lecteur préféré pour les codecs qu'AVFoundation ne peut pas décoder (MKV, AVI, AV1 sans décodeur matériel, DivX, etc.). VLC, IINA et MPV sont détectés ; si aucun n'est installé, l'application par défaut est utilisée.</li>
+<li><strong>Lecteur externe pour les codecs non pris en charge :</strong> Lecteur préféré pour les codecs qu'AVFoundation ne peut pas décoder (MKV, AVI, AV1 sans décodeur matériel, DivX, etc.). VLC, IINA et MPV sont détectés ; si aucun n'est installé, l'application par défaut est utilisée.</li>
 </ul>
 
 <h3>Synchronisation</h3>
 <p>Gère la liaison avec les bibliothèques master et copie. C&rsquo;est ici que vous reliez une deuxième bibliothèque en tant que copie, surveillez les opérations de synchronisation en attente et projetez l&rsquo;état du master sur une copie. Détails à la section 11.</p>
 
 <h3>Langue</h3>
-<p>sCollect est disponible en 25 langues. Choisissez votre langue préférée &ndash; la nouvelle langue sera active après le redémarrage de l&rsquo;application.</p>
+<p>La langue de l'app suit les réglages du système. Pour la modifier : Réglages Système → Général → Langue et région, puis faites défiler tout en bas jusqu'à la section « Applications ».</p>
 
 <!-- ============================================================ -->
 <h2 id="convert">10. Convertir le format</h2>
 
 <h3>Convertir l&rsquo;audio ou extraire l&rsquo;audio d&rsquo;une vidéo</h3>
-<p>Sélectionnez une ou plusieurs entrées audio ou vidéo, faites un clic droit et choisissez <strong>Convertir le format&hellip;</strong> ou <strong>Extraire l&rsquo;audio en&hellip;</strong> pour les films. La boîte de dialogue propose :</p>
+<p>Sélectionnez une ou plusieurs entrées audio ou vidéo, faites un clic droit et choisissez <strong>Convertir le format&hellip;</strong> ou <strong>Extraire l&rsquo;audio en tant que&hellip;</strong> pour les films. La boîte de dialogue propose :</p>
 <ul>
 <li><strong>Format de sortie :</strong> AAC, MP3, HE-AAC, ALAC (sans perte), WAV ou AIFF. &laquo;Audio inchangé&raquo; (passthrough) est aussi disponible &ndash; le flux audio est copié tel quel dans un conteneur MP4 sans ré-encodage.</li>
 <li><strong>Paramètres audio :</strong> Disposition des canaux (comme l&rsquo;original / stéréo / mono), fréquence d&rsquo;échantillonnage et pour PCM/ALAC la profondeur de bits.</li>
@@ -559,7 +559,7 @@
 <p>Le bouton <strong>Compatible iPod (AAC-LC, 256 kbps)</strong> règle les paramètres sur une combinaison maximalement compatible avec les anciens iPods : AAC-LC dans un conteneur MP4, 44,1 kHz, stéréo, 256 kbps CBR. Pas du passthrough, afin que la source HE-AAC soit ré-encodée en AAC-LC.</p>
 
 <aside>
-<strong>Astuce :</strong> Tous les réglages de conversion sont mémorisés par bibliothèque &ndash; au prochain ouverture du dialogue, votre dernière configuration est déjà présélectionnée.
+<strong>Astuce :</strong> Tous les réglages de conversion sont mémorisés par bibliothèque &ndash; à la prochaine ouverture de la boîte de dialogue, votre dernière configuration est déjà présélectionnée.
 </aside>
 
 <!-- ============================================================ -->
@@ -589,14 +589,14 @@
 <h3>Opérations en attente</h3>
 <p>Si une copie est hors ligne ou si une synchronisation a échoué, les opérations en attente s&rsquo;accumulent. Pour chaque copie :</p>
 <ul>
-<li><strong>Rattraper les opérations en attente :</strong> Tente d&rsquo;appliquer le retard. Si un transfert échoue, il reste en place et le passage s&rsquo;arrête &ndash; il n&rsquo;est pas perdu, mais retenté au prochain essai.</li>
+<li><strong>Traiter les opérations en attente :</strong> Tente d&rsquo;appliquer le retard. Si un transfert échoue, il reste en place et le passage s&rsquo;arrête &ndash; il n&rsquo;est pas perdu, mais retenté au prochain essai.</li>
 <li><strong>Abandonner&hellip; :</strong> Cette copie saute la totalité de son retard. <strong>C&rsquo;est un renoncement, pas une validation :</strong> elle est ensuite considérée à jour sans que les modifications lui soient parvenues &ndash; elles sont perdues pour elle. C&rsquo;est pourquoi <strong>Projeter</strong> ou <strong>Résoudre les erreurs de synchronisation&hellip;</strong> doit toujours suivre ; c&rsquo;est cela seul qui établit ce qui lui manque réellement et le rattrape.</li>
 </ul>
 
 <h3>Lorsqu&rsquo;une copie ne suit pas</h3>
 <p>Toutes les copies traitent la même liste, et elles le font <strong>au même pas</strong> : ce n&rsquo;est qu&rsquo;une fois qu&rsquo;une modification est parvenue à chaque copie que l&rsquo;on continue. C&rsquo;est intentionnel &ndash; ainsi aucune copie ne peut prendre du retard sans qu&rsquo;on le remarque et porter des mois plus tard un état que plus personne ne sait situer.</p>
-<p>Conséquence : <strong>si une copie coince, les autres attendent.</strong> Dans la barre latérale figure alors chez elles &laquo;En attente d&rsquo;une autre copie&raquo;. Ce n&rsquo;est pas une erreur, mais le frein, et il se desserre de lui-même dès que la copie manquante redevient accessible &ndash; disque branché, volume réseau disponible.</p>
-<p>Si cela persiste, vous avez deux voies : rendre accessible la copie qui coince et <strong>Rattraper les opérations en attente</strong> &ndash; ou choisir chez elle <strong>Abandonner</strong> puis <strong>Projeter</strong>. La seconde voie coûte à cette seule copie son retard, mais libère immédiatement les autres.</p>
+<p>Conséquence : <strong>si une copie coince, les autres attendent.</strong> Dans la barre latérale figure alors chez elles &laquo;Attend une autre copie&raquo;. Ce n&rsquo;est pas une erreur, mais le frein, et il se desserre de lui-même dès que la copie manquante redevient accessible &ndash; disque branché, volume réseau disponible.</p>
+<p>Si cela persiste, vous avez deux voies : rendre accessible la copie qui coince et <strong>Traiter les opérations en attente</strong> &ndash; ou choisir chez elle <strong>Abandonner</strong> puis <strong>Projeter</strong>. La seconde voie coûte à cette seule copie son retard, mais libère immédiatement les autres.</p>
 
 <h3>Résoudre les erreurs de synchronisation</h3>
 <p>Avec <strong>Résoudre les erreurs de synchronisation&hellip;</strong>, les données de tags de chaque fichier de la copie sont comparées au master et réécrites en cas de différence. Des filtres pour la note, le genre et l&rsquo;année permettent un traitement par étapes. Les fichiers manquants sont copiés depuis le master.</p>
@@ -618,7 +618,7 @@
 <li><strong>Supprimer les entrées orphelines :</strong> Les entrées dont le fichier a <em>manifestement</em> disparu sont supprimées &ndash; seulement l&rsquo;entrée, puisque le fichier n&rsquo;existe plus. &laquo;Manifestement&raquo; signifie : le disque est branché, ce ne sont pas <em>tous</em> les fichiers qui y manquent, et pour les éléments gérés le dossier média est accessible. Si l&rsquo;une de ces conditions n&rsquo;est pas remplie, l&rsquo;entrée reste intacte &ndash; un disque non branché ne doit coûter aucune entrée.</li>
 </ul>
 
-<h4>Comparer les métadonnées avec les fichiers</h4>
+<h4>Confronter les métadonnées aux fichiers</h4>
 <p>Cette option est <strong>désactivée par défaut</strong> et répond à la question de savoir ce qui prévaut lorsque la bibliothèque et le fichier divergent :</p>
 <ul>
 <li><strong>Le fichier prime :</strong> Le tag du fichier compte, la bibliothèque est corrigée. Aucun fichier n&rsquo;est écrit.</li>

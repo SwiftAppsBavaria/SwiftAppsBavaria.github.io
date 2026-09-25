@@ -113,7 +113,7 @@
 <p>Die Medienordner-Einstellungen findest du unter <strong>sCollect &gt; Einstellungen&hellip; &gt; Mediathek</strong>.</p>
 
 <h3>Löschen und App-Papierkorb</h3>
-<p>Markiere Einträge und wähle <strong>Bearbeiten &gt; In den Papierkorb</strong> (<kbd>&#8984;&#9003;</kbd>) oder im Kontextmenü &laquo;Aus Mediathek entfernen und vom Datenträger löschen&raquo;. sCollect löscht nicht sofort, sondern verschiebt die Dateien pro Medienordner in einen versteckten App-Papierkorb (Ordner <code>.Deleted</code>) &ndash; das klappt auf jedem Volume, auch auf Netzwerk-Freigaben ohne System-Papierkorb, und ist schnell, weil auf demselben Laufwerk verschoben wird. Mit <kbd>&#8984;Z</kbd> machst du eine Löschung sofort rückgängig, mit <kbd>&#8679;&#8984;Z</kbd> wiederholst du sie.</p>
+<p>Markiere Einträge und wähle <strong>Bearbeiten &gt; In den Papierkorb</strong> (<kbd>&#8984;&#9003;</kbd>) oder im Kontextmenü &laquo;Aus Mediathek entfernen und vom Datenträger löschen&raquo;. sCollect löscht nicht sofort, sondern verschiebt die Dateien pro Medienordner in einen versteckten App-Papierkorb (Ordner <code>.Deleted</code>) &ndash; das klappt auf jedem Volume, auch auf Netzwerk-Freigaben ohne System-Papierkorb, und ist schnell, weil auf demselben Laufwerk verschoben wird. Mit <kbd>&#8984;Z</kbd> widerrufst du eine Löschung sofort, mit <kbd>&#8679;&#8984;Z</kbd> wiederholst du sie.</p>
 <p>Den App-Papierkorb öffnest du über <strong>Ablage &gt; Mediathek &gt; App-Papierkorb&hellip;</strong> (deaktiviert, wenn er leer ist). Dort kannst du markierte oder alle Einträge wiederherstellen, endgültig entfernen (in den System-Papierkorb, falls das Volume ihn unterstützt, sonst direkt löschen) oder in einen frei wählbaren Ordner verschieben. Unter <strong>Einstellungen &gt; Papierkorb</strong> legst du fest, ob beim Leeren der System-Papierkorb genutzt wird und ob abgelaufene Einträge beim Start automatisch entfernt werden (Aufbewahrungsfrist ab 1 Tag, mit Rückfrage). Verbundene Kopien spiegeln das Löschen lokal in ihren eigenen <code>.Deleted</code>-Ordner &ndash; ohne Datei-Übertragung übers Netz.</p>
 
 
@@ -136,7 +136,7 @@
 <p>In der Liste sind alle Einträge <strong>getönt</strong>, die als Duplikat vorgeschlagen werden &ndash; je Gruppe bleibt einer stehen. Die Vorschläge sind zugleich <strong>markiert</strong>; du kannst die Markierung frei ändern. Eine schmale Statusspalte zeigt zusätzlich zwei Hinweise: eine <strong>Kette</strong>, wenn mehrere Einträge auf dieselbe Datei zeigen, und ein <strong>Warndreieck</strong>, wenn die Datei eines Eintrags fehlt. Beides kann sich überschneiden.</p>
 <p>Sortieren und Suchen wirken auch in der Duplikatsicht. Der Suchfilter blendet nur aus; &laquo;Auswahl löschen&raquo; nimmt dann ausschließlich die sichtbaren Einträge mit, und der Rest bleibt nach dem Zurücksetzen des Filters weiterhin löschbar.</p>
 <!-- auswahl-loeschen -->
-<p><strong>Auswahl löschen</strong> fragt vorher nach und legt dann die markierten Einträge samt Datei in den App-Papierkorb (mit <kbd>&#8984;Z</kbd> rückgängig). Zeigt ein markierter Eintrag auf eine Datei, die ein bleibender Eintrag noch braucht, oder fehlt seine Datei, geht nur der Eintrag &ndash; die Rückfrage nennt diese Fälle eigens. Deckt die Markierung eine Gruppe vollständig ab, ist der Knopf gesperrt.</p>
+<p><strong>Auswahl löschen</strong> fragt vorher nach und legt dann die markierten Einträge samt Datei in den App-Papierkorb (mit <kbd>&#8984;Z</kbd> widerrufbar). Zeigt ein markierter Eintrag auf eine Datei, die ein bleibender Eintrag noch braucht, oder fehlt seine Datei, geht nur der Eintrag &ndash; die Rückfrage nennt diese Fälle eigens. Deckt die Markierung eine Gruppe vollständig ab, ist der Knopf gesperrt.</p>
 <p>Du kannst auch einzelne Einträge markieren und löschen. Welcher Eintrag je Gruppe bleibt, wird dabei laufend neu bestimmt &ndash; löschst du zwischendurch von Hand, rückt automatisch ein anderer nach, und keine Gruppe verliert alle ihre Einträge. &laquo;Duplikatsicht beenden&raquo; kehrt zur normalen Liste zurück.</p>
 
 <!-- ============================================================ -->
@@ -286,7 +286,7 @@
 <li><strong>Verknüpfen</strong> (Vorgabe): Die Datei bleibt, wo sie liegt. Die Mediathek merkt sich ihren Ort und findet sie auch nach einem Umbenennen wieder. Sie wird <em>nicht</em> auf Kopien gespiegelt &ndash; es gibt nichts zu spiegeln &ndash; und beim Entfernen des Anhangs <em>nicht gelöscht</em>: es verschwindet nur der Eintrag.</li>
 <li><strong>Kopieren</strong>: Die Datei wird in den Anhang-Ordner neben das Objekt gelegt und wandert mit ihm mit &ndash; auch auf jede Kopie der Mediathek.</li>
 </ul>
-<p>In der Liste sagt das Symbol, woran man ist: ein <em>Blatt</em> für eine Kopie, eine <em>Kette</em> für eine Verknüpfung, ein <em>rotes Ausrufezeichen</em>, wenn eine verknüpfte Datei nicht mehr auffindbar ist &ndash; gelöscht, umbenannt, oder das Laufwerk ist nicht angeschlossen. Dann steht <strong>Ordner wählen&hellip;</strong> daneben, mit dem du sie an ihrem neuen Ort wiederfindest.</p>
+<p>In der Liste sagt das Symbol, woran man ist: ein <em>Blatt</em> für eine Kopie, eine <em>Kette</em> für eine Verknüpfung, ein <em>rotes Ausrufezeichen</em>, wenn eine verknüpfte Datei nicht mehr auffindbar ist &ndash; gelöscht, umbenannt, oder das Laufwerk ist nicht angeschlossen. Dann steht <strong>Wiederfinden&hellip;</strong> daneben, mit dem du sie an ihrem neuen Ort wiederfindest.</p>
 <!-- bildfenster -->
 <p>Ein <strong>Bild</strong>-Anhang öffnet sich über den Pfeil-Knopf in einem eigenen, frei veränderbaren Fenster vor dem Editor; andere Dateien öffnen im zugehörigen Programm. Ebenso zeigt ein Klick auf das <strong>Hauptbild</strong> links im Editor das Bild in voller Auflösung in diesem Fenster &ndash; bei einem Objekt, dessen Datei kein Bild ist, das Cover.</p>
 <!-- bild-einfuegen -->
@@ -406,7 +406,7 @@
 <p>Ziehst du Dateien aus dem <strong>Finder</strong> auf eine Playlist, werden sie zuerst importiert &ndash; mit Importdialog und Duplikaterkennung &ndash; und kommen danach in die Liste; siehe <a href="#import">Medien importieren</a> (Abschnitt 3).</p>
 
 <!-- playlist-rueckgaengig -->
-<p>Hinzufügen und Entfernen lassen sich mit <kbd>&#8984;Z</kbd> rückgängig machen; ein entfernter Eintrag kommt an seinen alten Platz zurück. Dasselbe gilt für &laquo;Aus Mediathek entfernen&raquo;: <kbd>&#8984;Z</kbd> holt den Eintrag zurück, samt Cover und seinen Plätzen in allen Playlists.</p>
+<p>Hinzufügen und Entfernen lassen sich mit <kbd>&#8984;Z</kbd> widerrufen; ein entfernter Eintrag kommt an seinen alten Platz zurück. Dasselbe gilt für &laquo;Aus Mediathek entfernen&raquo;: <kbd>&#8984;Z</kbd> holt den Eintrag zurück, samt Cover und seinen Plätzen in allen Playlists.</p>
 
 <!-- playlist-doppelt -->
 <h3>Einen Titel mehrmals in einer Playlist</h3>
@@ -533,14 +533,14 @@
 <li><strong>Apple-Music-Export:</strong> Einstellungen für den Playlist-Export an Apple Music.</li>
 <li><strong>Videofenster immer im Vordergrund:</strong> Das Videofenster bleibt stets über allen anderen Fenstern.</li>
 <li><strong>Lautstärke bei Zeitlupe/Einzelbild:</strong> Lautstärkereduzierung in dB während Zeitlupe und Einzelbild-Modus.</li>
-<li><strong>Externer Video-Player:</strong> Bevorzugter Player für Codecs, die AVFoundation nicht abspielen kann (MKV, AVI, AV1 ohne HW-Decoder, DivX usw.). Erkannt werden VLC, IINA und MPV; ist keiner installiert, wird das Standardprogramm verwendet.</li>
+<li><strong>Externer Player für nicht-unterstützte Codecs:</strong> Bevorzugter Player für Codecs, die AVFoundation nicht abspielen kann (MKV, AVI, AV1 ohne HW-Decoder, DivX usw.). Erkannt werden VLC, IINA und MPV; ist keiner installiert, wird das Standardprogramm verwendet.</li>
 </ul>
 
 <h3>Synchronisation</h3>
 <p>Verwaltet die Verbindung zu Master- und Kopie-Mediatheken. Hier verbindest du eine zweite Mediathek als Kopie, überwachst Pending-Sync-Operationen und projizierst den Master-Stand auf eine Kopie. Details siehe Abschnitt 11.</p>
 
 <h3>Sprache</h3>
-<p>sCollect ist in 25 Sprachen verfügbar. Wähle deine bevorzugte Sprache aus &ndash; nach einem Neustart der App wird die neue Sprache aktiv.</p>
+<p>Die Sprache der App folgt den Systemeinstellungen. Zum Ändern: Systemeinstellungen → Allgemein → Sprache &amp; Region und dort ganz unten zum Abschnitt „Apps“ scrollen.</p>
 
 <!-- ============================================================ -->
 <h2 id="convert">10. Format konvertieren</h2>
@@ -623,7 +623,7 @@
 <p>Diese Option ist <strong>voreingestellt aus</strong> und beantwortet die Frage, was gilt, wenn Mediathek und Datei auseinanderliegen:</p>
 <ul>
 <li><strong>Datei gewinnt:</strong> Der Tag der Datei zählt, die Mediathek wird berichtigt. Es wird keine Datei geschrieben.</li>
-<li><strong>Bibliothek gewinnt:</strong> Der gespeicherte Wert zählt und wird in die Datei geschrieben. <strong>Das lässt sich nicht rückgängig machen.</strong></li>
+<li><strong>Bibliothek gewinnt:</strong> Der gespeicherte Wert zählt und wird in die Datei geschrieben. <strong>Das lässt sich nicht widerrufen.</strong></li>
 </ul>
 <p>Darunter wählst du die <strong>Felder</strong>, um die es gehen soll &ndash; alles ist angehakt, abgewählt wird bewusst. Der Lauf schreibt zunächst nichts: er sammelt nur die Abweichungen und zeigt sie anschließend in einer Vorschau, nach Feld gruppiert. Dort kannst du je Feld alles auf einmal oder aufgeklappt jede einzelne Zeile abwählen; ein Stift-Symbol markiert Dateien, die seit dem letzten Zugriff von außen verändert wurden. Erst &laquo;Übernehmen&raquo; schreibt.</p>
 <p><strong>Bpm und Songtext</strong> stehen nicht zur Wahl: sie werden in der Mediathek gar nicht gespeichert, es gibt also keinen Wert, gegen den zu vergleichen wäre. Sie leben ausschließlich in der Datei und bleiben beim Schreiben erhalten. Das <strong>Cover</strong> ist dabei, wird aber über seine Größe verglichen &ndash; zwei verschiedene Bilder mit zufällig gleicher Byte-Zahl erkennt der Vergleich nicht.</p>
@@ -649,7 +649,7 @@
 <tr><td><kbd>&#8984;I</kbd></td><td>Informationen (bei mehreren markierten Einträgen: Mehrere Objekte bearbeiten)</td></tr>
 <tr><td><kbd>&#8984;F</kbd></td><td>Suchen</td></tr>
 <tr><td><kbd>&#8997;&#8984;F</kbd></td><td>Suchen/Ersetzen</td></tr>
-<tr><td><kbd>&#8984;Z</kbd></td><td>Rückgängig</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>Widerrufen</td></tr>
 <tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>Wiederholen</td></tr>
 <tr><td><kbd>&#8984;&#9003;</kbd></td><td>In den Papierkorb</td></tr>
 <tr><td><kbd>&#8679;&#8984;I</kbd></td><td>Auswahl umkehren</td></tr>

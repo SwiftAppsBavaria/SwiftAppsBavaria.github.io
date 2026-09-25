@@ -214,7 +214,7 @@
 <li><strong>Show/hide columns:</strong> Right-click a column header to open the column chooser.</li>
 <li><strong>Reorder columns:</strong> Drag column headers via drag &amp; drop to the desired position.</li>
 <li><strong>Resize columns:</strong> Drag the divider between two column headers.</li>
-<li><strong>Sort:</strong> Click a column header to sort by that column. Click again to reverse the order. Hold <strong>Shift</strong> to add another column as a secondary sort &ndash; active columns show an arrow and an order number (e.g. <code>Album&darr;1</code>, <code>Artist&uarr;2</code>). <strong>Option-click</strong> an active column header to remove that column from the sort again. Right-clicking a column header offers <em>Reset sorting</em> to sort by the main column only.</li>
+<li><strong>Sort:</strong> Click a column header to sort by that column. Click again to reverse the order. Hold <strong>Shift</strong> to add another column as a secondary sort &ndash; active columns show an arrow and an order number (e.g. <code>Album&darr;1</code>, <code>Artist&uarr;2</code>). <strong>Option-click</strong> an active column header to remove that column from the sort again. Right-clicking a column header offers <em>Reset Sorting</em> to sort by the main column only.</li>
 </ul>
 
 <h3>Column Browser</h3>
@@ -306,7 +306,7 @@
 <li><strong>Append to Title:</strong> Add text to the beginning or end of the title.</li>
 <li><strong>Date to Title:</strong> Insert the file&rsquo;s modification date into the title.</li>
 <li><strong>Split:</strong> Split a field&rsquo;s content at a separator into two target fields (copy or cut the source field). Numeric fields (track/disc/movement number, year) are supported; entries without a parseable number are skipped.</li>
-<li><strong>Split names &amp; sorting:</strong> Resolves a comma sort form (e.g. &laquo;Lennon, John&raquo;) in entries with an empty sort field: the original value moves into the sort field, and the name field (Title, Artist, Album Artist, Album or Composer) is flipped into natural order (&laquo;John Lennon&raquo;). Ambiguous cases with multiple commas are unchecked initially.</li>
+<li><strong>Separate name &amp; sorting:</strong> Resolves a comma sort form (e.g. &laquo;Lennon, John&raquo;) in entries with an empty sort field: the original value moves into the sort field, and the name field (Title, Artist, Album Artist, Album or Composer) is flipped into natural order (&laquo;John Lennon&raquo;). Ambiguous cases with multiple commas are unchecked initially.</li>
 </ul>
 
 <h3>Rating and Favorites</h3>
@@ -390,7 +390,7 @@
 <h3>Create trimmed copy</h3>
 <p>From the start/stop markers you have set, sCollect can create a <strong>trimmed copy</strong> as a new entry next to the original &ndash; the original stays unchanged. In the metadata editor you will find the <strong>&laquo;Create trimmed copy&raquo;</strong> button under <strong>File Info &gt; Playback</strong>. Alternatively, right-click one or more entries and choose <strong>&laquo;Trim to start/stop…&raquo;</strong>.</p>
 <p>Supported formats are MP4/M4V/MOV (video) as well as MP3, M4A/M4B, AIFF, WAV, and CAF (audio). Trimming is lossless &ndash; without re-encoding and therefore without loss of quality.</p>
-<p>For the PCM formats AIFF and WAV you can additionally specify a gentle <strong>fade-in</strong> and <strong>fade-out</strong> &ndash; in seconds (<code>5</code>, <code>2,5</code>) or like start and stop (<code>0:05</code>). A value that sCollect does not understand is marked red, and trimming only happens once both fields are valid. For the compressed formats <strong>MP3, M4A, and M4B</strong>, a dialog with two options opens before trimming: <strong>&laquo;Lossless (keep original format)&raquo;</strong> trims without re-encoding but does not allow fading. <strong>&laquo;M4A (AAC)&raquo;</strong> re-encodes instead &ndash; with a selectable <strong>bitrate</strong> (128 to 320 kbps) and optional fade-in/out, at the cost of a slight loss of quality.</p>
+<p>For the PCM formats AIFF and WAV you can additionally specify a gentle <strong>fade-in</strong> and <strong>fade-out</strong> &ndash; in seconds (<code>5</code>, <code>2,5</code>) or like start and stop (<code>0:05</code>). A value that sCollect does not understand is marked red, and trimming only happens once both fields are valid. For the compressed formats <strong>MP3, M4A, and M4B</strong>, a dialog with two options opens before trimming: <strong>&laquo;Lossless (keep original format)&raquo;</strong> trims without re-encoding but does not allow fading. <strong>&laquo;M4A (AAC)&raquo;</strong> re-encodes instead &ndash; with a selectable <strong>bit rate</strong> (128 to 320 kbps) and optional fade-in/out, at the cost of a slight loss of quality.</p>
 
 <h3>Apple Music Export</h3>
 <p>Playlists can be sent to Apple Music: right-click a playlist in the sidebar and choose &laquo;Send Playlist to Apple Music&raquo;. Alternatively, you can find this option in the menu under <strong>File &gt; Send Playlist to Apple Music&hellip;</strong></p>
@@ -533,14 +533,14 @@
 <li><strong>Apple Music export:</strong> Settings for exporting playlists to Apple Music.</li>
 <li><strong>Video window always on top:</strong> The video window always stays above all other windows.</li>
 <li><strong>Volume during slow motion / frame step:</strong> Volume reduction in dB during slow-motion and single-frame mode.</li>
-<li><strong>External video player:</strong> Preferred player for codecs that AVFoundation cannot decode (MKV, AVI, AV1 without HW decoder, DivX, etc.). Detected: VLC, IINA, and MPV; if none are installed, the default app is used.</li>
+<li><strong>External player for unsupported codecs:</strong> Preferred player for codecs that AVFoundation cannot decode (MKV, AVI, AV1 without HW decoder, DivX, etc.). Detected: VLC, IINA, and MPV; if none are installed, the default app is used.</li>
 </ul>
 
 <h3>Synchronization</h3>
 <p>Manages the connection to master and copy libraries. Connect another library as a copy, monitor pending sync operations, and project the master state onto a copy. See section 11 for details.</p>
 
 <h3>Language</h3>
-<p>sCollect is available in 25 languages. Choose your preferred language &ndash; the new language will take effect after restarting the app.</p>
+<p>The app’s language follows the system settings. To change it: System Settings → General → Language &amp; Region, then scroll all the way down to the “Applications” section.</p>
 
 <!-- ============================================================ -->
 <h2 id="convert">10. Convert Format</h2>
