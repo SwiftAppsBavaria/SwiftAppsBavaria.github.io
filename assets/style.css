@@ -59,9 +59,15 @@ h2.section { font-size: 28px; margin: 48px 0 16px; letter-spacing: -.01em; }
 .apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
 .app-card {
   display: flex; gap: 14px; padding: 16px; border-radius: 14px;
-  background: var(--bg-soft); color: var(--text);
+  background: var(--bg-soft); color: var(--text); position: relative;
 }
-a.app-card:hover { text-decoration: none; box-shadow: var(--shadow); }
+/* Seit 2026-09-25 ist die Karte ein <div>: der Name trägt den Kartenlink und spannt ihn über die ganze Karte,
+   damit der Handbuch-Link darin ein eigener Link sein kann (ein Link im Link ist kein gültiges HTML). */
+.app-card .kartenlink { color: inherit; }
+.app-card .kartenlink::after { content: ""; position: absolute; inset: 0; border-radius: 14px; }
+.app-card .kartenlink:hover { text-decoration: none; }
+.app-card:has(.kartenlink):hover { box-shadow: var(--shadow); }
+.app-card p.hilfelink { margin: 8px 0 0; font-size: 14px; position: relative; z-index: 1; }
 .app-card img { width: 64px; height: 64px; flex: none; }
 .app-card h3 { margin: 0 0 4px; font-size: 17px; }
 .app-card p { margin: 0; font-size: 14px; line-height: 1.45; color: var(--text-soft); }

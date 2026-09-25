@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SwiftRename Help</title>
+<meta name="description" content="SwiftRename Help">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/swiftrename/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/swiftrename/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/swiftrename/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/swiftrename/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/swiftrename/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/swiftrename/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/swiftrename/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/swiftrename/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/swiftrename/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/swiftrename/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/swiftrename/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/swiftrename/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/swiftrename/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../#apps">Apps</a>
+    <details class="sprache"><summary aria-label="Language">English</summary><div><a href="../../swiftrename/help/" aria-current="true" lang="en">English</a><a href="../../de/swiftrename/help/" lang="de">Deutsch</a><a href="../../es/swiftrename/help/" lang="es">Español</a><a href="../../fr/swiftrename/help/" lang="fr">Français</a><a href="../../it/swiftrename/help/" lang="it">Italiano</a><a href="../../ja/swiftrename/help/" lang="ja">日本語</a><a href="../../ko/swiftrename/help/" lang="ko">한국어</a><a href="../../pt-br/swiftrename/help/" lang="pt-BR">Português (Brasil)</a><a href="../../pt-pt/swiftrename/help/" lang="pt-PT">Português (Portugal)</a><a href="../../ru/swiftrename/help/" lang="ru">Русский</a><a href="../../zh-hans/swiftrename/help/" lang="zh-Hans">简体中文</a><a href="../../zh-hant/swiftrename/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../../#apps">← All apps →</a> · <a href="https://apps.apple.com/app/id6759445195" target="_blank" rel="noopener">Mac App Store</a></p>
+  <article class="hilfe">
+<h1>SwiftRename Help</h1>
+<h2>Overview</h2>
+<p>SwiftRename is a tool for renaming and organizing multiple files at once. You can rename files by date, number them sequentially, add a prefix, and automatically sort them into a folder structure.</p>
+<h2>Select Folders</h2>
+<p>1. Click the folder icon next to the input folder to choose the folder containing the files you want to rename. Alternatively, you can drag and drop folders from Finder into the folder fields. Using the small arrow on the folder icon, you can quickly re-select a recently used folder.<br>2. Enable “Include Subfolders” to also process files within subfolders.<br>3. Choose an output folder where the renamed files will be copied or moved. The input and output folders can be the same (renaming in place).<br>4. Use “Swap” to switch the input and output folders. Use “Refresh” to reload both file lists.</p>
+<h2>Rename Modes</h2>
+<p>• Date only: Names files according to their creation date (e.g., “2024-01-15 at 14-30-00.jpg”)<br>• Date + original name: Adds the date before the original file name (e.g., “2024-01-15 at 14-30-00 - IMG_4523.jpg”)<br>• Numbering with prefix: Numbers files consecutively with a selectable prefix (e.g., “Vacation_0001.jpg”)<br>• Keep original name: Sorts files into the folder structure without changing the file name</p>
+<p>If file names are identical, a counter is automatically appended (e.g., “_1,” “_2”).</p>
+<h2>Folder Structure</h2>
+<p>Files can be automatically sorted into subfolders by date:<br>• None: All files go directly into the output folder<br>• Preserve: Mirrors the input folder&#x27;s subfolder structure<br>• Year: e.g., “2024/”<br>• Year/Month: e.g., “2024/01/”<br>• Year/Month/Day: e.g., “2024/01/15/”</p>
+<p>If the files span multiple decades, additional decade folders will be created (e.g., “2011-2020/2015/…”).</p>
+<p>For “Year/Month” and “Year/Month/Day,” the option “Full date in subfolder names” appears directly below the folder structure selector. When enabled, month and day folders contain the full date (e.g. “2024/2024-01/2024-01-15/” instead of “2024/01/15/”).</p>
+<h2>Name Preview</h2>
+<p>At the top of the input list you can choose between three views: list, tree and name preview (eye icon). In the preview, the planned new name and its target folder appear below each current file name – relative to the output folder, that is including the date and decade folders.</p>
+<p>The preview requires a selected output folder and is recalculated as soon as you change the mode, prefix, folder structure or the “Use camera date” setting. With many files it fills in gradually, because the capture date has to be read for every file.</p>
+<p>These are planned names: whether a file is skipped as a duplicate, and whether a counter (“_1”) has to be appended when target names collide, is only decided when the operation runs.</p>
+<h2>Camera Date (EXIF)</h2>
+<p>If “Use Camera Date” is enabled, the capture date from the EXIF data will be read for photos and videos. This is more accurate than the file creation date, which can change when copying.</p>
+<p>Many photo formats are supported, including JPEG, HEIC, PNG, TIFF, and common RAW formats (CR2, CR3, NEF, ARW, DNG, RAF, and more).</p>
+<p>If no EXIF date is available, the file creation date will be used automatically.</p>
+<h2>File extension filter</h2>
+<p>Use the “File Extensions” dropdown to filter the displayed files by type:<br>• Available extensions are automatically detected from the input folder.<br>• Select one or more extensions by clicking (⌘-click to toggle, ⇧-click for a range).<br>• “All File Extensions” resets the filter and shows all files.<br>• The filter is retained when switching folders, as long as the extensions exist there.</p>
+<h2>Duplicate Detection</h2>
+<p>If “Check for Duplicates” is enabled, duplicates will be detected before copying or moving—both in the input and output folders (the entire target tree). Detection is based on file size and a byte comparison of the file content; for images and videos, metadata such as EXIF is skipped. The date only matters for the additional image-content comparison.</p>
+<p>Detected duplicates are shown in an overview with preview thumbnails. You can then decide whether to continue (duplicates will be skipped) or cancel the operation.</p>
+<p>With the additional option “Compare image content only (slow)”, only the decoded pixel data of images are compared. Metadata such as keywords, tags or EXIF entries are ignored. This also detects identical images that were recompressed when saving keywords. This variant is significantly slower and only active when duplicate checking is enabled. Only images with the same file format and similar file size are considered as candidates. The maximum allowed size difference can be adjusted in Settings (⌘,) under “Size tolerance for image comparison” (default: 128 KB). RAW formats often require larger values, as metadata such as keywords can occupy several dozen KB per entry.</p>
+<p>If a program has re-wrapped or re-exported a video, it counts as a separate file – even when picture and sound are identical. Videos have no content comparison like images do.</p>
+<h2>Copy and Move</h2>
+<p>• Copy: The original files are retained, and copies are created in the output folder.<br>• Move: The files are moved to the output folder.</p>
+<p>Before executing, SwiftRename checks whether there is enough storage space on the destination drive. If there is insufficient space, a warning appears. You can continue the process anyway.</p>
+<p>The total size of the files is displayed below the input list, and the free storage space on the destination drive is displayed below the output list.</p>
+<h2>Undo and Redo</h2>
+<p>Every file operation can be undone:<br>• ⌘Z: Undo the last operation<br>• ⌘⇧Z: Redo an undone operation</p>
+<p>When undoing a copy, the copied files are moved to the Trash. When undoing a move, the files are restored to their original location.</p>
+<h2>Progress and Cancel</h2>
+<p>During processing, a progress bar with a percentage display will be shown. You can stop the operation at any time by clicking “Cancel.” Files that have already been processed will remain and can be undone using ⌘Z.</p>
+<h2>Keyboard Shortcuts</h2>
+<p>• ⌘O: Select input folder<br>• ⌘⇧O: Select output folder<br>• ⌘Z: Undo<br>• ⌘⇧Z: Redo<br>• ⌘,: Settings<br>• ⌘/: Show help<br>• ⌘Q: Quit app</p>
+<h2>Tips</h2>
+<p>• Before performing major renaming operations, create a backup of your files.<br>• Use the preview in the left pane to check the renaming results before executing.<br>• Right-click on a file in the list to display it in Finder.<br>• In Settings (⌘,) you can adjust the “Size tolerance for image comparison”. If problems occur, use “Save Log…” there to save the messages from the last seven days as a text file.</p>
+  </article>
+  <p class="zurueck"><a href="../../#apps">← All apps →</a> · <a href="https://apps.apple.com/app/id6759445195" target="_blank" rel="noopener">Mac App Store</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../impressum.html">Legal Notice</a><a href="../../privacy.html">Website Privacy</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>
