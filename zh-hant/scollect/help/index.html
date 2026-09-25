@@ -127,7 +127,7 @@
 <ul>
 <li><strong>中繼資料：</strong>時間長度相近且標題與演出者相同。同一專輯內不同的光碟編號或曲目編號會排除重複，有聲書還會因專輯標題不同而排除。</li>
 <li><strong>檔案內容：</strong>檔案大小相同且檔案開頭相同。</li>
-<li><strong>相同音訊深度掃描：</strong>即使標籤完全不同也能辨識出同一段錄音。它從磁碟讀取的內容明顯更多，因此可在設定的<strong>重複項目</strong>中調節 &ndash;「自動」會在網路卷宗上將其關閉。</li>
+<li><strong>相同音訊深度掃描：</strong>即使標籤完全不同也能辨識出同一段錄音。它從磁碟讀取的內容明顯更多，因此可在設定的<strong>重複項</strong>中調節 &ndash;「自動」會在網路卷宗上將其關閉。</li>
 <li><strong>孤立項目：</strong>檔案已遺失的項目會掛到同一資料夾中具有相同基礎標題的現有同類項目上。這是把「標題」改名為「標題 (2)」之後的典型殘留。</li>
 </ul>
 <p>為了讓比較不建立在錯誤資訊之上，sCollect 會在尋找前讀取相關檔案的標籤，並修正媒體庫中偏離的數值。否則，錯誤的光碟編號可能導致同一本有聲書的不同光碟被當作相同。</p>
@@ -370,7 +370,7 @@
 <h3>建立裁剪副本</h3>
 <p>sCollect可以根據已設定的開始/停止標記，建立一個<strong>裁剪副本</strong>作為新項目，放在原始項目旁邊 &ndash; 原始項目保持不變。在中繼資料編輯器中，可在<strong>檔案資訊 &gt; 播放</strong>下找到<strong>「建立裁剪副本」</strong>按鈕。或者：在一個或多個項目上按右鍵，選擇<strong>「按開始/停止裁剪…」</strong>。</p>
 <p>支援MP4/M4V/MOV（影片）以及MP3、M4A/M4B、AIFF、WAV和CAF（音訊）。裁剪為無損操作 &ndash; 無需重新編碼，因此沒有品質損失。</p>
-<p>對於PCM格式的AIFF和WAV，你還可以額外指定平滑的<strong>淡入</strong>和<strong>淡出</strong> &ndash; 以秒為單位（<code>5</code>、<code>2,5</code>），或採用與開始和停止相同的格式（<code>0:05</code>）。sCollect 無法辨識的輸入會標成紅色，只有兩個欄位都正確時才會進行裁剪。對於壓縮格式<strong>MP3、M4A和M4B</strong>，裁剪前會開啟一個包含兩個選項的對話框：<strong>「無損（保留原始格式）」</strong>不重新編碼進行裁剪，但不支援淡入/淡出。<strong>「M4A(AAC)」</strong>則會重新編碼 &ndash; 可選擇<strong>資料速率</strong>（128 到 320 kbps）並可選淡入/淡出，代價是輕微的品質損失。</p>
+<p>對於PCM格式的AIFF和WAV，你還可以額外指定平滑的<strong>淡入</strong>和<strong>淡出</strong> &ndash; 以秒為單位（<code>5</code>、<code>2.5</code>），或採用與開始和停止相同的格式（<code>0:05</code>）。sCollect 無法辨識的輸入會標成紅色，只有兩個欄位都正確時才會進行裁剪。對於壓縮格式<strong>MP3、M4A和M4B</strong>，裁剪前會開啟一個包含兩個選項的對話框：<strong>「無損（保留原始格式）」</strong>不重新編碼進行裁剪，但不支援淡入/淡出。<strong>「M4A(AAC)」</strong>則會重新編碼 &ndash; 可選擇<strong>資料速率</strong>（128 到 320 kbps）並可選淡入/淡出，代價是輕微的品質損失。</p>
 
 <h3>輸出到 Apple Music</h3>
 <p>播放清單可以傳送到 Apple Music：在側邊欄中按右鍵點選播放清單，選擇「將播放清單傳送到 Apple Music」。也可以透過<strong>檔案 &gt; 將播放清單傳送到 Apple Music&hellip;</strong>選單使用。</p>
@@ -550,7 +550,7 @@
 <li><strong>輸出格式：</strong>AAC、MP3、HE-AAC、ALAC（無損）、WAV 或 AIFF。也可選擇&laquo;音訊不變&raquo;（直通）&ndash; 音訊串流以 1:1 方式無重新編碼地複製到 MP4 容器中。</li>
 <li><strong>音訊參數：</strong>聲道配置（與原始相同 / 立體聲 / 單聲道）、取樣率，以及 PCM/ALAC 的位元深度。</li>
 <li><strong>壓縮：</strong>對於 MP3/AAC/HE-AAC：固定位元率或可變位元率（VBR）以及品質滑桿。</li>
-<li><strong>目標：</strong>兩種選擇 &ndash; <strong>媒體庫</strong>（轉換後的檔案加入所選的音訊類別；預設&laquo;Podcast&raquo;，或&laquo;有聲書&raquo;/&laquo;音樂&raquo;作為備用，如果播客未啟用）或<strong>外部</strong>（使用<strong>選擇&hellip;</strong>按鈕選擇媒體庫外的資料夾 &ndash; 原始檔案保持不變，轉換後的檔案不會加入媒體庫中）。</li>
+<li><strong>目標：</strong>兩種選擇 &ndash; <strong>媒體庫</strong>（轉換後的檔案加入所選的音訊類別；預設&laquo;Podcast&raquo;，或&laquo;有聲書&raquo;/&laquo;音樂&raquo;作為備用，如果 Podcast 未啟用）或<strong>外部</strong>（使用<strong>選擇&hellip;</strong>按鈕選擇媒體庫外的資料夾 &ndash; 原始檔案保持不變，轉換後的檔案不會加入媒體庫中）。</li>
 <li><strong>原始處理：</strong>目標為&laquo;媒體庫&raquo;時：保留、移到垃圾桶或用轉換取代。目標為&laquo;外部&raquo;時始終保留。</li>
 </ul>
 <p>原始檔案的中繼資料和封面始終複製。匯入媒體庫時，檔案會移動到音訊類別資料夾；不進行重複檢查 &ndash; 原始檔案的處理由&laquo;原始&raquo;選單控制。</p>
@@ -594,7 +594,7 @@
 <h3>當某個副本跟不上時</h3>
 <p>所有副本處理同一份列表，而且是<strong>齊步</strong>進行的：只有當一項更改到達了每一個副本，才會繼續往下走。這是有意為之 &ndash; 這樣就不會有副本悄悄落後，並在幾個月後帶著誰也說不清的狀態。</p>
 <p>由此帶來的結果是：<strong>若一個副本卡住，其餘的就等待。</strong>側邊欄中它們旁邊會顯示「等待其他副本」。這不是錯誤，而是煞車，一旦缺席的副本重新可存取 &ndash; 磁碟已連接、網路卷宗可用 &ndash; 它就會自行鬆開。</p>
-<p>若情況持續，你有兩條路：讓卡住的副本變得可存取並執行<strong>執行待處理項</strong> &ndash; 或者在它那裡選擇<strong>捨棄</strong>，隨後<strong>投射</strong>。第二條路讓這一個副本失去它的積壓，但立刻釋放其餘副本。</p>
+<p>若情況持續，你有兩條路：讓卡住的副本變得可存取並按一下<strong>執行待處理項</strong> &ndash; 或者在它那裡選擇<strong>捨棄</strong>，隨後<strong>投射</strong>。第二條路讓這一個副本失去它的積壓，但立刻釋放其餘副本。</p>
 
 <h3>修復同步錯誤</h3>
 <p>使用<strong>修復同步錯誤&hellip;</strong>，副本中每個檔案的標籤資料將與主媒體庫進行比較，如有差異則重新寫入。評分、類型和年份的過濾器允許分階段處理。副本中缺失的檔案將從主媒體庫複製。</p>
