@@ -35,7 +35,7 @@
   <article class="hilfe">
 <h1>Handbuch zu sName2Date</h1>
 <h2>Was die App tut</h2>
-<p>sName2Date sucht im Dateinamen nach einem Datum und schreibt es als Aufnahmedatum in die Bild-, Film- oder Tondatei. Ein bereits vorhandenes Aufnahmedatum wird dabei überschrieben — genau dafür gibt es die App, denn ein Export oder eine Digitalisierung trägt meist das falsche Datum.</p>
+<p>sName2Date sucht im Dateinamen nach einem Datum und schreibt es als Aufnahmedatum in die Bild-, Film- oder Tondatei; bei PDFs und anderen Dateien ohne Aufnahmedatum setzt die App das Erstellungs- und Änderungsdatum. Ein bereits vorhandenes Aufnahmedatum wird dabei überschrieben — genau dafür gibt es die App, denn ein Export oder eine Digitalisierung trägt meist das falsche Datum. In der Liste steht hinter dem Namen das vorhandene Datum — bei PDFs und ähnlichen Dateien das Erstellungsdatum —, rechts das neue.</p>
 <p class="notiz">Sollen Dateien mit vorhandenem Aufnahmedatum unangetastet bleiben, lässt sich das in den Einstellungen umstellen.</p>
 <h2>Die beiden Haken oben im Fenster</h2>
 <p>Oben im Fenster stehen zwei Haken, die sich nicht ausschließen. Datum in die Datei schreiben legt das gefundene Datum als Aufnahmedatum in die Datei selbst; wo das Format keines aufnimmt — eine PDF etwa oder eine Textdatei — setzt die App statt dessen Erstellungs- und Änderungsdatum der Datei, und der Haken in der Zeile ist dann orange statt grün. Dateinamen umstellen bringt den Namen in die ISO-Schreibweise. Beide zusammen sind der Normalfall; ist nur der zweite gesetzt, wird keine Datei geöffnet und nur umbenannt.</p>
@@ -62,7 +62,7 @@
 <p>Neben dem Aufnahmedatum lässt sich festhalten, wann das Motiv selbst entstand — bei einem abfotografierten Gemälde von 1650 also 1650 und nicht der Tag der Aufnahme. Der Schalter Motivdatum oben im Fenster blendet dafür die Spalte Datiert auf ein. Sie ist von Haus aus ausgeblendet, weil die meisten Dateien keine braucht.</p>
 <p class="notiz">Ablegen lässt sich das nur in JPEG, TIFF und HEIC. PNG und GIF nehmen allein das Aufnahmedatum auf, Filme ebenso; dort steht in der Spalte ein Hinweis statt eines Feldes. Das Aufnahmedatum selbst schreiben alle diese Formate.</p>
 <h2>Dateinamen vereinheitlichen</h2>
-<p>Auf Wunsch ersetzt die App die Datumsangabe im Dateinamen durch die ISO-Schreibweise mit Uhrzeit: aus 15.03.2024 Urlaub.jpg wird 2024-03-15 10-30-00 Urlaub.jpg. So sortieren die Dateien im Finder nach Aufnahmezeit. Einzuschalten mit dem Haken Dateinamen umstellen oben im Fenster; in der Liste steht der neue Name dann unter dem alten.</p>
+<p>Auf Wunsch ersetzt die App die Datumsangabe im Dateinamen durch die ISO-Schreibweise mit Uhrzeit: aus 15.03.2024 Urlaub.jpg wird 2024-03-15 12-00-00 Urlaub.jpg. So sortieren die Dateien im Finder nach Aufnahmezeit. Einzuschalten mit dem Haken Dateinamen umstellen oben im Fenster; in der Liste steht der neue Name dann unter dem alten.</p>
 <p class="notiz">Steht im Namen gar kein Datum, wird das von Hand gesetzte vorangestellt. Ist der neue Name schon vergeben, wird durchnumeriert. Auch das Umbenennen nimmt ⌘Z zurück.</p>
 <h2>Rückgängig</h2>
 <p>Mit ⌘Z lässt sich ein Durchgang zurücknehmen: Aufnahmedatum sowie Erstellungs- und Änderungsdatum stehen danach wieder auf den Werten von vorher. ⌘⇧Z wiederholt ihn.</p>
@@ -71,8 +71,8 @@
 <p>Geschrieben werden EXIF DateTimeOriginal und DateTimeDigitized sowie TIFF DateTime, bei Filmen und Tonaufnahmen das Erstellungsdatum im Container. Die Bilddaten selbst bleiben unangetastet — ein JPEG wird nicht neu komprimiert.</p>
 <p class="notiz">Lege trotzdem eine Sicherung an, bevor du eine große Sammlung bearbeitest.</p>
 <h2>Wenn eine Zeile nicht grün wird</h2>
-<p>Ein oranger Haken heißt: das Aufnahmedatum ließ sich nicht schreiben, dafür tragen jetzt Erstellungs- und Änderungsdatum der Datei den Wert — die Angabe ist also festgehalten, nur an anderer Stelle. Die Zeile nennt den Grund. Ein rotes Dreieck heißt, dass gar nichts geschrieben werden konnte.</p>
-<p class="notiz">Wurde eine einzelne Datei gewählt, darf die App nur an dieser Datei arbeiten, nicht in ihrem Ordner — daran kann das Umbenennen scheitern; die Zeile sagt es dann. Abhilfe: den Ordner wählen statt der einzelnen Datei. Bleibt etwas unklar, sichert der Knopf in den Einstellungen unter Diagnose ein Protokoll der letzten sieben Tage.</p>
+<p>Ein blauer Haken heißt: das Format nimmt das Aufnahmedatum selbst nicht auf — bei HEIF, WebP und AVI steht der Wert deshalb in einer XMP-Begleitdatei daneben, die viele Fotoprogramme mitlesen. Ein oranger Haken heißt: das Aufnahmedatum ließ sich nicht schreiben, dafür tragen jetzt Erstellungs- und Änderungsdatum der Datei den Wert — die Angabe ist also festgehalten, nur an anderer Stelle. Die Zeile nennt den Grund. Ein rotes Dreieck heißt, dass gar nichts geschrieben werden konnte.</p>
+<p class="notiz">Wurde eine einzelne Datei gewählt, darf die App zunächst nur an dieser Datei arbeiten, nicht in ihrem Ordner — Umbenennen ändert aber den Ordnereintrag. Dann fragt die App nach dem Durchgang einmal nach dem Ordner; ein übergeordneter genügt, und die Freigabe gilt auch nach einem Neustart. Bleibt etwas unklar, sichert der Knopf in den Einstellungen unter Diagnose ein Protokoll der letzten sieben Tage.</p>
   </article>
   <p class="zurueck"><a href="../">← sName2Date</a></p>
 </main>

@@ -35,7 +35,7 @@
   <article class="hilfe">
 <h1>sName2Date Manual</h1>
 <h2>What the app does</h2>
-<p>sName2Date looks for a date in the file name and writes it into the image, movie or audio file as the capture date. A capture date that is already there gets overwritten in the process — that is exactly what the app is for, because an export or a digitization usually carries the wrong date.</p>
+<p>sName2Date looks for a date in the file name and writes it into the image, movie or audio file as the capture date; for PDFs and other files without a capture date, the app sets the creation and modification date. A capture date that is already there gets overwritten in the process — that is exactly what the app is for, because an export or a digitization usually carries the wrong date. In the list, the existing date appears after the name — for PDFs and similar files, the creation date — and the new one on the right.</p>
 <p class="notiz">If files that already have a capture date should stay untouched, you can change that in Settings.</p>
 <h2>The two checkboxes at the top of the window</h2>
 <p>At the top of the window there are two checkboxes, and they do not exclude one another. Write date into the file puts the date it found into the file itself as the capture date; where the format cannot hold one — a PDF, say, or a text file — the app sets the file&#x27;s creation and modification date instead, and the check mark in the row is then orange instead of green. Convert file names brings the name into the ISO notation. Both together are the normal case; if only the second one is set, no file is opened and it is only renamed.</p>
@@ -62,7 +62,7 @@
 <p>Alongside the capture date, it is possible to record when the subject itself was created — for a photographed painting from 1650 that means 1650, not the day of the shot. The “Content date” switch at the top of the window shows the “Dated” column for this. It is hidden by default, because most files do not need one.</p>
 <p class="notiz">This can only be stored in JPEG, TIFF and HEIC. PNG and GIF hold the capture date alone, and so do movies; there the column shows a note instead of a field. The capture date itself is written by all of these formats.</p>
 <h2>Making file names consistent</h2>
-<p>If you want, the app replaces the date in the file name with the ISO notation including the time: 15.03.2024 Urlaub.jpg becomes 2024-03-15 10-30-00 Urlaub.jpg. That way the files sort by capture time in the Finder. Switch it on with the checkbox Convert file names at the top of the window; the new name then appears below the old one in the list.</p>
+<p>If you want, the app replaces the date in the file name with the ISO notation including the time: 15.03.2024 Urlaub.jpg becomes 2024-03-15 12-00-00 Urlaub.jpg. That way the files sort by capture time in the Finder. Switch it on with the checkbox Convert file names at the top of the window; the new name then appears below the old one in the list.</p>
 <p class="notiz">If the name carries no date at all, the one set by hand is put in front. If the new name is already taken, a number is appended. ⌘Z takes the renaming back as well.</p>
 <h2>Undo</h2>
 <p>⌘Z takes a run back: the capture date and the creation and modification dates are then back at their previous values. ⌘⇧Z repeats it.</p>
@@ -71,8 +71,8 @@
 <p>EXIF DateTimeOriginal and DateTimeDigitized are written, as well as TIFF DateTime; for movies and audio recordings, the creation date inside the container. The image data itself is left untouched — a JPEG is not recompressed.</p>
 <p class="notiz">All the same, make a backup before you process a large collection.</p>
 <h2>When a row does not turn green</h2>
-<p>An orange check mark means the capture date could not be written, but the file&#x27;s creation and modification dates now carry the value — so the date is recorded, just in a different place. The row gives the reason. A red triangle means nothing at all could be written.</p>
-<p class="notiz">If a single file was chosen, the app may only work on that file, not in its folder — renaming can fail because of that, and the row says so. The remedy: choose the folder instead of the single file. If anything remains unclear, the button in Settings under Diagnostics saves a log file of the past seven days.</p>
+<p>A blue check mark means the format itself cannot hold the capture date — for HEIF, WebP and AVI the value is therefore stored in an XMP sidecar beside the file, which many photo apps read as well. An orange check mark means the capture date could not be written, but the file&#x27;s creation and modification dates now carry the value — so the date is recorded, just in a different place. The row gives the reason. A red triangle means nothing at all could be written.</p>
+<p class="notiz">If a single file was chosen, the app may at first only work on that file, not in its folder — but renaming changes the folder entry. So after the run the app asks once for the folder; a folder further up is enough, and the access also applies after a restart. If anything remains unclear, the button in Settings under Diagnostics saves a log file of the past seven days.</p>
   </article>
   <p class="zurueck"><a href="../">← sName2Date</a></p>
 </main>
