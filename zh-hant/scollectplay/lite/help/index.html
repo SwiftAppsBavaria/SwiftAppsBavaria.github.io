@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sCollectPlay Lite 手冊</title>
+<meta name="description" content="sCollectPlay Lite 手冊">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/scollectplay/lite/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/scollectplay/lite/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/scollectplay/lite/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/scollectplay/lite/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/scollectplay/lite/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/scollectplay/lite/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/scollectplay/lite/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/scollectplay/lite/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/scollectplay/lite/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/scollectplay/lite/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/scollectplay/lite/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/scollectplay/lite/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/scollectplay/lite/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../../zh-hant/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../../zh-hant/#apps">App</a>
+    <details class="sprache"><summary aria-label="語言">繁體中文</summary><div><a href="../../../../scollectplay/lite/help/" lang="en">English</a><a href="../../../../de/scollectplay/lite/help/" lang="de">Deutsch</a><a href="../../../../es/scollectplay/lite/help/" lang="es">Español</a><a href="../../../../fr/scollectplay/lite/help/" lang="fr">Français</a><a href="../../../../it/scollectplay/lite/help/" lang="it">Italiano</a><a href="../../../../ja/scollectplay/lite/help/" lang="ja">日本語</a><a href="../../../../ko/scollectplay/lite/help/" lang="ko">한국어</a><a href="../../../../pt-br/scollectplay/lite/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../../pt-pt/scollectplay/lite/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../../ru/scollectplay/lite/help/" lang="ru">Русский</a><a href="../../../../zh-hans/scollectplay/lite/help/" lang="zh-Hans">简体中文</a><a href="../../../../zh-hant/scollectplay/lite/help/" aria-current="true" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../../../../zh-hant/#apps">← 所有 App →</a></p>
+  <article class="hilfe">
+
+
+<h1>sCollectPlay Lite 手冊</h1>
+<p class="subtitle">用於 sCollect 媒體資料庫、資料夾與 iTunes XML 輸出的播放器</p>
+
+<nav class="toc">
+<h2>目錄</h2>
+<ol>
+<li><a href="#start">快速入門</a></li>
+<li><a href="#sources">選擇來源</a></li>
+<li><a href="#browse">瀏覽媒體資料庫</a></li>
+<li><a href="#playback">播放</a></li>
+<li><a href="#playlists">播放清單</a></li>
+<li><a href="#delete">刪除媒體檔案</a></li>
+<li><a href="#settings">設定</a></li>
+<li><a href="#shortcuts">鍵盤快速鍵</a></li>
+</ol>
+</nav>
+
+
+<h2 id="start">1. 快速入門</h2>
+
+<h3>什麼是 sCollectPlay Lite？</h3>
+<p>sCollectPlay Lite 是 <strong>sCollect</strong> 的隨附 App。它專注於單純的播放：不輸入媒體、不編輯後設資料、不同步。相對地，它可以從三種來源讀取內容：資料夾、iTunes/Apple Music XML 和 sCollect 媒體資料庫。</p>
+
+<h3>首次啟動</h3>
+<p>首次啟動時，sCollectPlay Lite 會顯示歡迎對話框，說明特殊格式的播放方式（參見第 4 節）。接著會出現來源選擇畫面，你可以在其中選擇一個媒體資料庫。</p>
+
+<aside>
+<strong>提示：</strong>sCollectPlay Lite 與 macOS 14.0 或更新版本相容，並提供 24 種語言。
+</aside>
+
+
+<h2 id="sources">2. 選擇來源</h2>
+
+<p>sCollectPlay Lite 支援三種來源類型，可在啟動時或稍後透過<strong>檔案</strong>選單開啟：</p>
+
+<h3>掃描資料夾</h3>
+<p>選擇任意資料夾 &ndash; sCollectPlay Lite 會遞迴搜尋其中的媒體檔案，並直接從檔案讀取後設資料（音訊/影片使用 AVFoundation，EPUB/PDF 使用 EbookTagKit）。這是不需要 sCollect 媒體資料庫就能開始的最簡單方式。</p>
+<ul>
+<li><strong>每次工作階段一個來源：</strong>在 sCollectPlay Lite 中，新的資料夾會取代先前的資料夾，下次啟動 App 時不會還原任何內容。</li>
+<li><strong>MKV 偵測：</strong>副檔名為 <code>.mp4</code> 但實際上是 MKV 的檔案，會依 EBML 簽名辨識出來並另外標示。</li>
+<li><strong>依播放時間分類：</strong>僅憑資料夾無法判斷檔案是音樂還是有聲書。因此，sCollectPlay Lite 會依長度為音訊和影片分類 &ndash; 音訊：10 分鐘以內、10&ndash;30 分鐘、30&ndash;60 分鐘、超過 60 分鐘；影片：5 分鐘以內、5&ndash;20 分鐘、20&ndash;70 分鐘、70&ndash;210 分鐘、超過 210 分鐘。電子書和 PDF 則依副檔名辨識。</li>
+</ul>
+
+<h3>sCollect 媒體資料庫</h3>
+<p>選擇 sCollect 媒體資料庫的主資料夾（存放 <code>.scollect</code> 套件的資料夾；較舊的媒體資料庫則是包含 <code>settings.json</code> 的資料夾）。sCollectPlay Lite 會直接讀取資料庫檔案、播放清單與設定 &ndash; 包含可自訂的欄位名稱與智慧型播放清單。選擇媒體資料庫會取代先前使用中的資料夾掃描。你也可以在 Finder 中連按兩下 <code>.scollect</code> 套件來開啟媒體資料庫。</p>
+
+<h3>iTunes/Apple Music XML</h3>
+<p>選擇一個 <code>Library.xml</code> 或 <code>.musiclibrary</code> 套件。sCollectPlay Lite 會解析曲目與播放清單（標準與智慧型）。系統播放清單（Master、Distinguished Kind）會被略過。媒體類型直接取自 XML 本身：音樂、有聲書、Podcast、家庭錄影、電影、影集和音樂影片。開啟時會一次性詢問對應的媒體資料夾，讓 sCollectPlay Lite 能夠取用這些檔案。</p>
+
+<aside>
+<strong>注意：</strong>一律只會載入一種來源。每次新開啟的來源都會取代先前的來源，即使是另一個資料夾也一樣。視窗標題列會顯示來源的類型和名稱，例如資料夾「音樂」或媒體庫「sCollect」；將指標停在標題上，即會顯示完整路徑。
+</aside>
+
+<p>sCollectPlay Lite 不會記住來源：下次啟動時會再次出現來源選擇畫面。</p>
+
+
+<h2 id="browse">3. 瀏覽媒體資料庫</h2>
+
+<h3>側邊欄</h3>
+<p>側邊欄以兩層摺疊式列表顯示類別與媒體類型（例如 音訊 &gt; 音樂 / 有聲書 / Podcast），以及所有已載入的播放清單。在媒體類型或播放清單之間切換時，右側的曲目列表會隨之更新。</p>
+
+<h3>曲目列表</h3>
+<ul>
+<li><strong>欄位：</strong>在 sCollectPlay Lite 中，顯示哪些欄位是固定的。</li>
+<li><strong>排序：</strong>點一下欄位標題即可依該欄位排序；再次點選會反轉順序。</li>
+<li><strong>欄位寬度：</strong>拖移欄位標題中的分隔線即可調整。</li>
+</ul>
+
+<h3>搜尋</h3>
+<p>工具列中的搜尋欄位可依標題、演出者、專輯、類型及其他欄位篩選。在播放清單中，搜尋還會套用到播放清單的內容。</p>
+
+
+<h2 id="playback">4. 播放</h2>
+
+<h3>播放音訊</h3>
+<p>選取一個音訊項目，然後按<kbd>空白鍵</kbd>或播放列中的播放按鈕。播放列顯示：</p>
+<ul>
+<li>封面圖片、標題和演出者</li>
+<li>用於快轉/倒轉的時間軸</li>
+<li>音量控制</li>
+<li>隨機播放和重複模式</li>
+<li>影片還會額外顯示：慢動作與單格前進</li>
+</ul>
+
+<h3>播放影片</h3>
+<p>電影會在獨立的影片視窗中開啟。音軌和字幕可以在<strong>播放</strong>選單中切換。按 <kbd>&#8984;&#8963;F</kbd> 可切換到全螢幕模式。</p>
+
+<h3>外部播放</h3>
+<p>某些格式不被 macOS 或 AVFoundation 直接支援。sCollectPlay Lite 偵測到這種情況，並自動在外部播放器中開啟這些檔案：</p>
+<ul>
+<li><strong>視訊容器格式：</strong>MKV、AVI、FLV、MPG、MPEG、VOB、DivX</li>
+<li><strong>現代編解碼器：</strong>MP4 中的 AV1（在沒有硬體解碼器的較舊 Mac 上）</li>
+<li><strong>高解析度音訊：</strong>DSD（DFF、DSF）</li>
+<li><strong>其他音訊格式：</strong>OGG Vorbis、WMA</li>
+</ul>
+<p>首選播放器會自動偵測：<strong>VLC</strong>、<strong>IINA</strong> 或 <strong>MPV</strong>（按此順序）。你可以在<strong>設定 &gt; 播放 &gt; 外部視訊播放器</strong>中指定選擇。如果這些播放器都未安裝，則會使用該格式的預設程式 &ndash; 我們推薦 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>（免費、開放原始碼）。</p>
+
+<h3>播放控制</h3>
+<table class="shortcut-table">
+<tr><td><kbd>空白鍵</kbd></td><td>開始播放 / 暫停</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>快轉 10 秒</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>倒轉 10 秒</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>下一首</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>上一首</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>調高音量</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>調低音量</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>影片全螢幕 開啟/關閉</td></tr>
+</table>
+
+<h3>播放模式</h3>
+<ul>
+<li><strong>隨機播放：</strong>以隨機順序播放目前列表。</li>
+<li><strong>重複（列表）：</strong>在最後一首之後重複整個列表。</li>
+<li><strong>重複（單首）：</strong>循環播放目前曲目。</li>
+</ul>
+
+<h3>輸出到 Apple Music</h3>
+<p>播放清單或選取的曲目可以傳送到 Apple Music：</p>
+<ul>
+<li><strong>側邊欄快速選單：</strong>按右鍵點選播放清單 &gt; <em>將播放清單傳送到 Apple Music</em>。</li>
+<li><strong>曲目快速選單：</strong><em>以播放清單傳送到 Apple Music</em>（已標示的曲目作為&laquo;選取範圍&raquo;）。</li>
+<li><strong>檔案選單：</strong><em>將播放清單傳送到 Apple Music&hellip;</em>（選取播放清單時可用）。</li>
+</ul>
+<p>技術上會寫入一個 M3U8 檔案並交給 Music.app。Apple Music 中已存在的播放清單可以選擇自動更新 &ndash; 相關設定可在設定中找到。</p>
+
+
+<h2 id="playlists">5. 播放清單</h2>
+
+<p>sCollectPlay Lite 會顯示已載入媒體資料庫的所有播放清單 &ndash; 標準播放清單與智慧型播放清單皆是。當項目內容變動時，智慧型播放清單會依照儲存的條件重新評估。這裡無法編輯；編輯請使用 sCollect。</p>
+<p>載入 XML 媒體資料庫時，標準與智慧型播放清單同樣會被輸入。系統播放清單（Master、Distinguished Kind）會被略過。</p>
+
+
+<h2 id="delete">6. 刪除媒體檔案</h2>
+
+<p>在曲目快速選單中可以找到<strong>刪除媒體檔案</strong>項目。預設情況下事前會出現確認對話框（可以在設定中關閉）。檔案會被移到垃圾桶，項目則從媒體資料庫中移除。</p>
+
+<aside>
+<strong>網路共享：</strong>SMB 或 NFS 共享通常沒有垃圾桶。sCollectPlay Lite 偵測到這種情況，會在刪除前明確詢問 &ndash; 檔案會被永久移除且無法復原。你可以取消這項操作；在這種情況下，項目與檔案都維持不變。
+</aside>
+
+
+<h2 id="settings">7. 設定</h2>
+<p>透過 <strong>sCollectPlay Lite &gt; 設定&hellip;</strong>（<kbd>&#8984;,</kbd>）開啟設定。設定分為多個標籤頁；有些欄位是唯讀的（顯示來自已載入 sCollect 媒體資料庫的值或預設值）&ndash; 它們呈現的是 sCollect 中可用的功能。</p>
+
+<h3>一般</h3>
+<ul>
+<li><strong>確認刪除：</strong>移到垃圾桶之前先詢問。</li>
+</ul>
+
+<h3>播放</h3>
+<ul>
+<li><strong>Apple Music 輸出：</strong>一律更新既有的播放清單（不再詢問）。</li>
+<li><strong>影片視窗始終在最前：</strong>視訊視窗保持在所有其他視窗之上。</li>
+<li><strong>縮到最細時暫停影片：</strong>影片視窗縮到最細期間暫停播放，還原視窗後繼續播放。</li>
+<li><strong>慢動作/單格時的音量：</strong>慢動作和單格模式期間的音量降低（dB）。</li>
+<li><strong>外部視訊播放器：</strong>用於 AVFoundation 無法播放的編解碼器的首選播放器（參見第 4 節）。可偵測 VLC、IINA 和 MPV。</li>
+</ul>
+
+<h3>統計</h3>
+<p>已載入媒體資料庫的計數（每種媒體類型的項目數量、總時間長度、儲存空間需求）。</p>
+
+<h3>語言</h3>
+<p>sCollectPlay Lite 支援 24 種語言。選擇你偏好的語言 &ndash; 重新啟動 App 後新語言即可生效。重新啟動可以透過語言標籤頁中的按鈕自動觸發。</p>
+
+<aside>
+<strong>注意：</strong>停用的欄位顯示的是 sCollect（主 App）中可用、但 sCollectPlay Lite 中無法使用的設定 &ndash; 例如標籤編輯、輸入模式或同步選項。
+</aside>
+
+
+<h2 id="shortcuts">8. 鍵盤快速鍵</h2>
+
+<h3>一般</h3>
+<table class="shortcut-table">
+<tr><td><kbd>&#8984;,</kbd></td><td>開啟設定</td></tr>
+<tr><td><kbd>&#8984;&#8679;O</kbd></td><td>選擇 sCollect 媒體資料庫&hellip;</td></tr>
+<tr><td><kbd>&#8984;Q</kbd></td><td>結束 sCollectPlay Lite</td></tr>
+</table>
+
+<h3>播放</h3>
+<table class="shortcut-table">
+<tr><td><kbd>空白鍵</kbd></td><td>播放 / 暫停</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>快轉 10 秒</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>倒轉 10 秒</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>下一首</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>上一首</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>調高音量</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>調低音量</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>影片全螢幕 開啟/關閉</td></tr>
+</table>
+
+
+  </article>
+  <p class="zurueck"><a href="../../../../zh-hant/#apps">← 所有 App →</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../../impressum.html">法律聲明</a><a href="../../../../privacy.html">網站隱私權</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

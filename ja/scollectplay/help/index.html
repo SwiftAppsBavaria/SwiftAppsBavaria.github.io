@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sCollectPlay マニュアル</title>
+<meta name="description" content="sCollectPlay マニュアル">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/scollectplay/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/scollectplay/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/scollectplay/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/scollectplay/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/scollectplay/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/scollectplay/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/scollectplay/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/scollectplay/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/scollectplay/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/scollectplay/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/scollectplay/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/scollectplay/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/scollectplay/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../ja/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../ja/#apps">アプリ</a>
+    <details class="sprache"><summary aria-label="言語">日本語</summary><div><a href="../../../scollectplay/help/" lang="en">English</a><a href="../../../de/scollectplay/help/" lang="de">Deutsch</a><a href="../../../es/scollectplay/help/" lang="es">Español</a><a href="../../../fr/scollectplay/help/" lang="fr">Français</a><a href="../../../it/scollectplay/help/" lang="it">Italiano</a><a href="../../../ja/scollectplay/help/" aria-current="true" lang="ja">日本語</a><a href="../../../ko/scollectplay/help/" lang="ko">한국어</a><a href="../../../pt-br/scollectplay/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../pt-pt/scollectplay/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../ru/scollectplay/help/" lang="ru">Русский</a><a href="../../../zh-hans/scollectplay/help/" lang="zh-Hans">简体中文</a><a href="../../../zh-hant/scollectplay/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../../../ja/#apps">← すべてのアプリ →</a></p>
+  <article class="hilfe">
+
+
+<h1>sCollectPlay マニュアル</h1>
+<p class="subtitle">sCollectライブラリ、フォルダ、iTunes XMLエクスポートのためのプレーヤー</p>
+
+<nav class="toc">
+<h2>目次</h2>
+<ol>
+<li><a href="#start">はじめに</a></li>
+<li><a href="#sources">ソースを選ぶ</a></li>
+<li><a href="#browse">ライブラリのブラウズ</a></li>
+<li><a href="#playback">再生</a></li>
+<li><a href="#playlists">プレイリスト</a></li>
+<li><a href="#delete">メディアファイルの削除</a></li>
+<li><a href="#settings">設定</a></li>
+<li><a href="#shortcuts">キーボードショートカット</a></li>
+</ol>
+</nav>
+
+
+<h2 id="start">1. はじめに</h2>
+
+<h3>sCollectPlayとは？</h3>
+<p>sCollectPlayは<strong>sCollect</strong>のコンパニオンAppです。再生に特化しており、読み込みもメタデータ編集も同期もありません。そのかわり3種類のソースから読み込みます：フォルダ、iTunes/Apple Music XML、sCollectライブラリです。</p>
+
+<h3>初回起動時</h3>
+<p>初回起動時、sCollectPlayは特殊なフォーマットの再生についての説明を含むウェルカムダイアログを表示します（セクション4を参照）。その後、ライブラリを選べるソース選択画面が表示されます。</p>
+
+<aside>
+<strong>ヒント：</strong>sCollectPlayはmacOS 14.0以降に対応し、24の言語で利用できます。
+</aside>
+
+
+<h2 id="sources">2. ソースを選ぶ</h2>
+
+<p>sCollectPlayは3種類のソースに対応しています。起動時、または後から<strong>ファイル</strong>メニューから開けます：</p>
+
+<h3>フォルダをスキャン</h3>
+<p>任意のフォルダを選ぶと &ndash; sCollectPlayはその中を再帰的に検索してメディアファイルを探し、メタデータをファイルから直接読み取ります（オーディオ/ビデオはAVFoundation、EPUB/PDFはEbookTagKit）。sCollectライブラリなしで始められる最も簡単な方法です。</p>
+<ul>
+
+<li><strong>蓄積：</strong>複数のフォルダを次々に追加でき &ndash; 内容は統合されます。次回のApp起動時には、これまでのスキャンフォルダがすべて自動的に復元されます。</li>
+
+
+<li><strong>MKVの検出：</strong>拡張子が<code>.mp4</code>でも実際はMKVのファイルは、EBMLシグネチャによって検出され、その旨が記録されます。</li>
+<li><strong>再生時間による分類：</strong>フォルダだけでは、ファイルがミュージックなのかオーディオブックなのかはわかりません。そのため、sCollectPlayはオーディオとビデオを長さで分類します &ndash; オーディオ：10分まで、10〜30分、30〜60分、60分超。ビデオ：5分まで、5〜20分、20〜70分、70〜210分、210分超。電子書籍とPDFはファイル拡張子で判別します。</li>
+</ul>
+
+<p><strong>ファイル &gt; スキャンしたフォルダを忘れる&hellip;</strong>でリストを空にできます &ndash; 現在のセッションはそのままで、次回のApp起動時にライブラリが空になります。</p>
+
+
+<h3>sCollectライブラリ</h3>
+<p>sCollectライブラリのメインフォルダ（<code>.scollect</code>バンドルがあるフォルダ。古いライブラリでは<code>settings.json</code>があるフォルダ）を選びます。sCollectPlayはライブラリファイル、プレイリスト、設定を直接読み取ります &ndash; 設定可能なフィールド名やスマートプレイリストも含めてです。ライブラリを選ぶと、それまで有効だったフォルダスキャンは置き換えられます。Finderで<code>.scollect</code>バンドルをダブルクリックしてライブラリを開くこともできます。</p>
+
+<h3>iTunes/Apple Music XML</h3>
+<p><code>Library.xml</code>または<code>.musiclibrary</code>バンドルを選びます。sCollectPlayはトラックとプレイリスト（標準とスマート）を解析します。システムプレイリスト（Master、Distinguished Kind）はスキップされます。メディアタイプはXML自体から引き継がれます：ミュージック、オーディオブック、ポッドキャスト、ホームビデオ、映画、シリーズ、ミュージックビデオ。開くときに一度だけ対応するメディアフォルダを尋ねられます。sCollectPlayがファイルにアクセスできるようにするためです。</p>
+
+<aside>
+<strong>注：</strong>読み込まれるソースの種類は常に1つだけです。フォルダスキャンにはさらにフォルダを追加できますが、ライブラリやXMLを開くと、それまでの内容は置き換えられます。ウインドウのタイトルバーにはソースの種類と名前が表示されます（例：フォルダ「ミュージック」、ライブラリ「sCollect」）。タイトルにポインタを合わせると、フルパスが表示されます。
+</aside>
+
+
+<h3>最近使ったソース</h3>
+<p><strong>ファイル</strong>メニューでは、各コマンドの下にその種類の最近使ったソースが表示されます：<em>最近スキャンしたフォルダ</em>、<em>最近使ったライブラリ</em>、<em>最近開いたXMLライブラリ</em>で、それぞれ最大10件です。クリックするとそのソースがもう一度開きます。アクセスできなくなったソースはリストから消えます。<em>リストを消去</em>でリストを空にできます。次回の起動時、sCollectPlayは最後に使ったソースを自動的に読み込みます。それがネットワークボリューム上にある場合は、事前に確認します &ndash; <strong>設定 &gt; 一般 &gt; 起動時にネットワークライブラリについて通知する</strong>でオフにできます。</p>
+
+
+
+
+<h2 id="browse">3. ライブラリのブラウズ</h2>
+
+<h3>サイドバー</h3>
+<p>サイドバーには、カテゴリとメディアタイプが2段のアコーディオンとして（例：オーディオ &gt; 音楽 / オーディオブック / ポッドキャスト）、そして読み込まれたすべてのプレイリストが表示されます。メディアタイプやプレイリストを切り替えると、右側のトラックリストが更新されます。</p>
+
+<h3>トラックリスト</h3>
+<ul>
+
+<li><strong>列をカスタマイズ：</strong>カラムヘッダーを右クリック &gt; <em>列をカスタマイズ&hellip;</em>で、表示するカラムを選びます。表示状態、並び順、幅はメディアタイプまたはプレイリストごとに適用されます。sCollectライブラリの場合、sCollectPlayはそこでのカラム設定を初期値として引き継ぎ、変更内容はこのMacで記憶します。</li>
+
+
+<li><strong>ソート：</strong>カラムヘッダーをクリックするとそのカラムでソートされ、もう一度クリックすると順序が反転します。</li>
+<li><strong>カラム幅：</strong>カラムヘッダーの境界線をドラッグします。</li>
+
+<li><strong>カラムの並び順：</strong>カラムヘッダーを別の位置へドラッグします。</li>
+
+
+
+<li><strong>リンク：</strong>表示を切り替えられるこのカラム &ndash; 列見出しはチェーン記号 &ndash; は、ファイルがsCollectライブラリのメディアフォルダの外にある項目にチェックマークを付けます。sCollectでは<strong>そのままにする</strong>で読み込んだファイルがこれにあたります。スキャンしたフォルダやXMLライブラリではメディアフォルダがないため、このカラムは空のままです。</li>
+
+</ul>
+
+
+
+<h3>カラムブラウザ</h3>
+<p>カラムブラウザは、トラックリストの上に複数の選択カラムを表示します &ndash; Apple Musicのカラムブラウザに似たものです。ツールバー右側にある3本のカラムのボタンで表示/非表示を切り替えます。メディアタイプの表示では現れますが、プレイリストでは非表示のままです。</p>
+<ul>
+<li><strong>カラム：</strong>ジャンル、アーティスト、アルバム、作曲者、グループ。どれを表示するかは、sCollectPlayがsCollectライブラリの設定から引き継ぎます &ndash; 変更はsCollectで行います。</li>
+<li><strong>選択：</strong>値をクリックするとそれで絞り込み、<kbd>&#8984;</kbd>クリックで値を選択に追加または解除します。1つのカラム内では複数の値が&laquo;または&raquo;として、カラム間では&laquo;かつ&raquo;として働きます。最上段の<strong>すべて</strong>で、そのカラムの選択を解除できます。</li>
+<li><strong>グループ：</strong>カラムの項目が非常に多い場合、sCollectPlayは頭文字ごとに開閉できるグループにまとめます。クリックすると1つのグループが開き、前のグループが閉じます。<kbd>&#8984;</kbd>クリックで複数を同時に開いたままにできます。</li>
+<li><strong>キーボード：</strong><kbd>&#8593;</kbd>と<kbd>&#8595;</kbd>でリスト内のカーソルを動かします &ndash; カーソル位置の値は1秒後に適用され、<kbd>&#9166;</kbd>ですぐに適用されます。<kbd>&#8594;</kbd>はグループを開く、または中へ入り、<kbd>&#8592;</kbd>は閉じる、または上位の行へ移動します。</li>
+<li><strong>サイズ：</strong>カラム間の境界線とブラウザの下端はドラッグできます。</li>
+</ul>
+<p>選択、カラム幅、高さはこのMacでsCollectPlayが記憶します。sCollectライブラリはそのままです &ndash; sCollectPlayはその設定に何も書き込みません。</p>
+
+
+<h3>検索</h3>
+<p>ツールバーの検索フィールドは、タイトル、アーティスト、アルバム、ジャンルなどのフィールドで絞り込みます。プレイリストでは、検索はプレイリストの内容にも適用されます。</p>
+
+
+<h2 id="playback">4. 再生</h2>
+
+<h3>オーディオの再生</h3>
+<p>オーディオ項目を選んで<kbd>スペース</kbd>またはプレーヤーバーの再生ボタンを押します。プレーヤーバーには以下が表示されます：</p>
+<ul>
+<li>カバー画像、タイトル、アーティスト</li>
+<li>早送り/巻き戻し用のタイムライン</li>
+<li>音量コントロール</li>
+<li>シャッフルとリピートモード</li>
+<li>ビデオの場合はさらに：スローモーションとコマ送り</li>
+</ul>
+
+<h3>ビデオの再生</h3>
+<p>映画は別のビデオウインドウで開かれます。オーディオトラックと字幕は<strong>再生</strong>メニューで切り替えられます。<kbd>&#8984;&#8963;F</kbd>でフルスクリーンモードに切り替わります。</p>
+
+<h3>外部再生</h3>
+<p>一部の形式はmacOSやAVFoundationでは直接サポートされていません。sCollectPlayはこれを検出し、これらのファイルを外部プレーヤーで自動的に開きます：</p>
+<ul>
+<li><strong>特殊なビデオ形式：</strong>MKV、AVI、FLV、MPG、MPEG、VOB、DivX</li>
+<li><strong>最新のコーデック：</strong>MP4内のAV1（ハードウェアデコーダーのない古いMacの場合）</li>
+<li><strong>ハイレゾオーディオ：</strong>DSD（DFF、DSF）</li>
+<li><strong>その他のオーディオ形式：</strong>OGG Vorbis、WMA</li>
+</ul>
+<p>優先プレーヤーは自動的に検出されます：<strong>VLC</strong>、<strong>IINA</strong>、または<strong>MPV</strong>（この順序）。<strong>設定 &gt; 再生 &gt; 外部ビデオプレーヤー</strong>で選択を指定できます。これらのプレーヤーがいずれもインストールされていない場合は、その形式のデフォルトアプリが使われます &ndash; <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>（無料、オープンソース）をお勧めします。</p>
+
+<h3>再生コントロール</h3>
+<table class="shortcut-table">
+<tr><td><kbd>スペース</kbd></td><td>再生を開始/一時停止</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>10秒早送り</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>10秒巻き戻し</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>次のトラック</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>前のトラック</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>音量を上げる</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>音量を下げる</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>ビデオのフルスクリーンの切り替え</td></tr>
+</table>
+
+<h3>再生モード</h3>
+<ul>
+<li><strong>シャッフル：</strong>現在のリストをランダムな順序で再生します。</li>
+<li><strong>リピート（リスト）：</strong>最後のトラックの後にリスト全体を繰り返します。</li>
+<li><strong>リピート（トラック）：</strong>現在のトラックを繰り返し再生します。</li>
+</ul>
+
+<h3>Apple Musicへのエクスポート</h3>
+<p>プレイリストや選択したトラックをApple Musicに送信できます：</p>
+<ul>
+<li><strong>サイドバーのコンテキストメニュー：</strong>プレイリストを右クリック &gt; <em>プレイリストを Apple Music に送信</em>。</li>
+<li><strong>トラックのコンテキストメニュー：</strong><em>Apple Musicにプレイリストとして送信</em>（選択したトラックが&laquo;選択&raquo;になります）。</li>
+<li><strong>ファイルメニュー：</strong><em>プレイリストを Apple Music に送信&hellip;</em>（プレイリストが選ばれているときに有効）。</li>
+</ul>
+<p>技術的にはM3U8ファイルを書き出してMusic.appに渡します。Apple Musicの既存のプレイリストを自動的に更新することもできます &ndash; その設定は設定にあります。</p>
+
+
+<h2 id="playlists">5. プレイリスト</h2>
+
+<p>sCollectPlayは、読み込まれたライブラリのすべてのプレイリストを表示します &ndash; 標準プレイリストもスマートプレイリストもです。スマートプレイリストは、項目の内容が変わると保存された条件で再評価されます。変更できるのはsCollectだけですが、それとは別に独自のプレイリストを作成できます。</p>
+<p>XMLライブラリを読み込むときも、標準プレイリストとスマートプレイリストが取り込まれます。システムプレイリスト（Master、Distinguished Kind）はスキップされます。</p>
+
+
+<h3>マイプレイリスト</h3>
+<p>サイドバーの<strong>マイプレイリスト</strong>で、独自のプレイリストを作成できます &ndash; フォルダ、XML、ライブラリのどれが読み込まれていても使えます：</p>
+<ul>
+<li><strong>作成：</strong><em>マイプレイリスト</em>の横にあるプラスボタンから、<em>新規プレイリスト&hellip;</em>と<em>新規スマートプレイリスト&hellip;</em>を選べます。</li>
+<li><strong>追加：</strong>トラックリストのコンテキストメニューにある<em>プレイリストに追加</em>で、選択したトラックをプレイリストに追加するか、新しいプレイリストを作成します。独自のプレイリストでは、<em>プレイリストから削除</em>でトラックを取り除けます。</li>
+<li><strong>スマートプレイリスト</strong>はルールに従って自動的に構成されます。コンテキストメニューの<em>編集</em>でルールを変更できます。</li>
+<li><strong>名前の変更、削除、Apple Musicへの送信：</strong>プレイリストのコンテキストメニューから行います。</li>
+</ul>
+<p>独自のプレイリストはsCollectPlayがこのMacに保存し、ライブラリやXMLに書き込むことはありません。トラックはファイルパスで見つけ直すため、再スキャンした後でも保たれます。</p>
+
+
+
+<h2 id="delete">6. メディアファイルの削除</h2>
+
+<p>トラックのコンテキストメニューには<strong>メディアファイルを削除</strong>があります。標準では事前に確認ダイアログが表示されます（設定で無効にできます）。ファイルはゴミ箱に移動され、項目はライブラリから削除されます。</p>
+
+<aside>
+<strong>ネットワーク共有：</strong>SMBやNFSの共有には通常ゴミ箱がありません。sCollectPlayはこれを検出し、削除の前に明示的に確認します &ndash; ファイルは完全に削除され、復元できません。操作は中止できます。その場合、項目もファイルもそのまま残ります。
+</aside>
+
+
+<h2 id="settings">7. 設定</h2>
+<p>設定は<strong>sCollectPlay &gt; 設定&hellip;</strong>（<kbd>&#8984;,</kbd>）で開きます。いくつかのタブに分かれており、一部のフィールドは読み取り専用です（読み込まれたsCollectライブラリの値、またはデフォルト値）&ndash; sCollectで何が使えるかを示しています。</p>
+
+<h3>一般</h3>
+<ul>
+<li><strong>削除を確認：</strong>ゴミ箱に移動する前に確認します。</li>
+
+<li><strong>起動時にネットワークライブラリについて通知する：</strong>起動時、ネットワークボリューム上のソースを読み込む前に確認します。</li>
+
+</ul>
+
+<h3>再生</h3>
+<ul>
+<li><strong>Apple Musicエクスポート：</strong>既存のプレイリストを常に更新する（確認しない）。</li>
+<li><strong>ビデオウィンドウを常に前面に：</strong>ビデオウィンドウは他のすべてのウィンドウの上に表示され続けます。</li>
+<li><strong>Dockにしまったときにビデオを一時停止：</strong>ビデオウィンドウがDockにしまわれている間は再生を一時停止し、ウィンドウを戻すと再開します。</li>
+<li><strong>スロー/コマ送り時の音量：</strong>スローモーションおよびコマ送りモード中のdB単位の音量低減。</li>
+<li><strong>外部ビデオプレーヤー：</strong>AVFoundationが再生できないコーデック向けの優先プレーヤー（セクション4を参照）。VLC、IINA、MPVが検出されます。</li>
+</ul>
+
+<h3>統計</h3>
+<p>読み込まれたライブラリの集計（メディアタイプごとの項目数、合計時間、必要な容量）。</p>
+
+<h3>言語</h3>
+<p>sCollectPlayは24の言語に対応しています。お好みの言語を選んでください &ndash; アプリを再起動すると新しい言語が有効になります。再起動は言語タブのボタンから自動的に行えます。</p>
+
+<aside>
+<strong>注：</strong>無効になっているフィールドは、sCollect（メインApp）では使えるがsCollectPlayでは使えない設定を示しています &ndash; 例えばタグ編集、読み込みモード、同期オプションです。
+</aside>
+
+
+<h2 id="shortcuts">8. キーボードショートカット</h2>
+
+<h3>一般</h3>
+<table class="shortcut-table">
+<tr><td><kbd>&#8984;,</kbd></td><td>設定を開く</td></tr>
+<tr><td><kbd>&#8984;&#8679;O</kbd></td><td>sCollect ライブラリを選択&hellip;</td></tr>
+<tr><td><kbd>&#8984;Q</kbd></td><td>sCollectPlayを終了</td></tr>
+</table>
+
+<h3>再生</h3>
+<table class="shortcut-table">
+<tr><td><kbd>スペース</kbd></td><td>再生/一時停止</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>10秒早送り</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>10秒巻き戻し</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>次のトラック</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>前のトラック</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>音量を上げる</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>音量を下げる</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>ビデオのフルスクリーンの切り替え</td></tr>
+</table>
+
+
+  </article>
+  <p class="zurueck"><a href="../../../ja/#apps">← すべてのアプリ →</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../impressum.html">運営者情報</a><a href="../../../privacy.html">ウェブサイトのプライバシー</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

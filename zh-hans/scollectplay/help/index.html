@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sCollectPlay 手册</title>
+<meta name="description" content="sCollectPlay 手册">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/scollectplay/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/scollectplay/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/scollectplay/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/scollectplay/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/scollectplay/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/scollectplay/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/scollectplay/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/scollectplay/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/scollectplay/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/scollectplay/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/scollectplay/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/scollectplay/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/scollectplay/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../zh-hans/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../zh-hans/#apps">App</a>
+    <details class="sprache"><summary aria-label="语言">简体中文</summary><div><a href="../../../scollectplay/help/" lang="en">English</a><a href="../../../de/scollectplay/help/" lang="de">Deutsch</a><a href="../../../es/scollectplay/help/" lang="es">Español</a><a href="../../../fr/scollectplay/help/" lang="fr">Français</a><a href="../../../it/scollectplay/help/" lang="it">Italiano</a><a href="../../../ja/scollectplay/help/" lang="ja">日本語</a><a href="../../../ko/scollectplay/help/" lang="ko">한국어</a><a href="../../../pt-br/scollectplay/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../pt-pt/scollectplay/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../ru/scollectplay/help/" lang="ru">Русский</a><a href="../../../zh-hans/scollectplay/help/" aria-current="true" lang="zh-Hans">简体中文</a><a href="../../../zh-hant/scollectplay/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../../../zh-hans/#apps">← 全部 App →</a></p>
+  <article class="hilfe">
+
+
+<h1>sCollectPlay 手册</h1>
+<p class="subtitle">用于播放 sCollect 媒体库、文件夹和 iTunes XML 导出的播放器</p>
+
+<nav class="toc">
+<h2>目录</h2>
+<ol>
+<li><a href="#start">快速入门</a></li>
+<li><a href="#sources">选择来源</a></li>
+<li><a href="#browse">浏览媒体库</a></li>
+<li><a href="#playback">播放</a></li>
+<li><a href="#playlists">播放列表</a></li>
+<li><a href="#delete">删除媒体文件</a></li>
+<li><a href="#settings">设置</a></li>
+<li><a href="#shortcuts">键盘快捷键</a></li>
+</ol>
+</nav>
+
+
+<h2 id="start">1. 快速入门</h2>
+
+<h3>什么是 sCollectPlay？</h3>
+<p>sCollectPlay 是 <strong>sCollect</strong> 的配套 App。它专注于播放：不导入、不编辑元数据、不同步。作为补偿，它从三种来源读取内容：文件夹、iTunes/Apple Music XML 和 sCollect 媒体库。</p>
+
+<h3>首次启动</h3>
+<p>首次启动时，sCollectPlay 会显示一个欢迎对话框，其中包含播放特殊格式的说明（参见第 4 节）。随后会出现来源选择界面，你可以在其中选择一个媒体库。</p>
+
+<aside>
+<strong>提示：</strong>sCollectPlay 兼容 macOS 14.0 或更高版本，并提供 24 种语言。
+</aside>
+
+
+<h2 id="sources">2. 选择来源</h2>
+
+<p>sCollectPlay 支持三种来源类型，你可以在启动时或稍后通过<strong>文件</strong>菜单打开它们：</p>
+
+<h3>扫描文件夹</h3>
+<p>选择任意一个文件夹 &ndash; sCollectPlay 会递归搜索其中的媒体文件，并直接从文件中读取元数据（音频/视频用 AVFoundation，EPUB/PDF 用 EbookTagKit）。这是不使用 sCollect 媒体库即可上手的最简单方式。</p>
+<ul>
+
+<li><strong>累积：</strong>可以依次添加多个文件夹 &ndash; 它们的内容会被合并。下次启动 App 时，之前扫描过的所有文件夹都会自动恢复。</li>
+
+
+<li><strong>MKV 识别：</strong>扩展名为 <code>.mp4</code> 但实际上是 MKV 的文件，会通过 EBML 签名识别并单独标记。</li>
+<li><strong>按时长分类：</strong>仅凭文件夹无法判断一个文件是音乐还是有声书。因此，sCollectPlay 按时长对音频和视频进行分类 &ndash; 音频：10分钟以内、10&ndash;30分钟、30&ndash;60分钟、超过60分钟；视频：5分钟以内、5&ndash;20分钟、20&ndash;70分钟、70&ndash;210分钟、超过210分钟。电子书和 PDF 则根据文件扩展名识别。</li>
+</ul>
+
+<p>通过<strong>文件 &gt; 忘记已扫描的文件夹&hellip;</strong>可以清空该列表 &ndash; 当前会话保持不变，下次启动 App 时媒体库为空。</p>
+
+
+<h3>sCollect 媒体库</h3>
+<p>选择 sCollect 媒体库的主文件夹（包含 <code>.scollect</code> 包的文件夹；对于较旧的媒体库，则是包含 <code>settings.json</code> 的文件夹）。sCollectPlay 会直接读取媒体库文件、播放列表和设置 &ndash; 包括可自定义的字段名称和智能播放列表。选择媒体库会取代此前激活的文件夹扫描。你也可以在 Finder 中双击 <code>.scollect</code> 包来打开媒体库。</p>
+
+<h3>iTunes/Apple Music XML</h3>
+<p>选择一个 <code>Library.xml</code> 文件或 <code>.musiclibrary</code> 包。sCollectPlay 会解析曲目和播放列表（标准和智能）。系统播放列表（Master、Distinguished Kind）会被跳过。媒体类型直接取自 XML 本身：音乐、有声书、播客、家庭录像、电影、剧集和音乐视频。打开时会一次性询问对应的媒体文件夹，以便 sCollectPlay 能够访问这些文件。</p>
+
+<aside>
+<strong>注意：</strong>始终只加载一种来源。文件夹扫描可以用更多文件夹加以扩展；而打开媒体库或 XML 则会替换现有内容。窗口标题栏会显示来源的类型和名称，例如文件夹“音乐”或媒体库“sCollect”；将指针悬停在标题上，即可显示完整路径。
+</aside>
+
+
+<h3>最近使用的来源</h3>
+<p>在<strong>文件</strong>菜单中，每个命令下方都列出该类型最近使用的来源：<em>最近扫描的文件夹</em>、<em>最近使用的媒体库</em>和<em>最近打开的 XML 媒体库</em>，每个列表最多十项。点击即可再次打开该来源；如果它已无法访问，就会从列表中消失。<em>清空列表</em>可清空一个列表。下次启动时，sCollectPlay 会自动加载上次使用的来源。如果它位于网络宗卷上，App 会事先询问 &ndash; 可在<strong>设置 &gt; 通用 &gt; 启动时提示网络媒体库</strong>中关闭。</p>
+
+
+
+
+<h2 id="browse">3. 浏览媒体库</h2>
+
+<h3>边栏</h3>
+<p>边栏以两级折叠的形式显示类别和媒体类型（例如 音频 &gt; 音乐 / 有声书 / 播客），以及所有已加载的播放列表。在媒体类型或播放列表之间切换时，右侧的曲目列表会随之更新。</p>
+
+<h3>曲目列表</h3>
+<ul>
+
+<li><strong>自定义列：</strong>右键点击列标题 &gt; <em>自定义列&hellip;</em>可选择要显示的列。可见性、顺序和宽度按媒体类型或播放列表分别生效；对于 sCollect 媒体库，sCollectPlay 会以那里的列设置作为初始值，你的更改则记在这台 Mac 上。</li>
+
+
+<li><strong>排序：</strong>点击列标题按该列排序；再次点击可反转排序顺序。</li>
+<li><strong>列宽：</strong>拖动列标题中的分隔线即可调整。</li>
+
+<li><strong>列顺序：</strong>将列标题拖到其他位置。</li>
+
+
+
+<li><strong>已链接：</strong>这个可显示的列 &ndash; 其列标题为链条符号 &ndash; 会用勾号标出文件位于 sCollect 媒体库的媒体文件夹之外的项目；在 sCollect 中，这些就是以<strong>保留在原位置</strong>方式导入的文件。对于已扫描的文件夹和 XML 媒体库，此列保持为空，因为那里没有媒体文件夹。</li>
+
+</ul>
+
+
+
+<h3>列浏览器</h3>
+<p>列浏览器会在曲目列表上方显示多个选择列 &ndash; 类似于 Apple Music 中的列浏览器。工具栏右侧带三根列条的按钮可以显示和隐藏它。它出现在媒体类型视图中；在播放列表中则保持隐藏。</p>
+<ul>
+<li><strong>列：</strong>流派、艺人、专辑、作曲和分组。其中哪些可见，由 sCollectPlay 从 sCollect 媒体库的设置中读取 &ndash; 更改需在 sCollect 中进行。</li>
+<li><strong>选择：</strong>点击某个值即可按其筛选，<kbd>&#8984;</kbd>-点击可将某个值加入或移出选择。同一列中的多个值之间为「或」，不同列之间为「且」。最上方一行<strong>全部</strong>可再次取消该列的选择。</li>
+<li><strong>分组：</strong>如果某一列的条目非常多，sCollectPlay 会按首字母将它们归入可展开的分组。点击会打开一个分组并关闭上一个，<kbd>&#8984;</kbd>-点击可让多个分组同时保持展开。</li>
+<li><strong>键盘：</strong><kbd>&#8593;</kbd> 和 <kbd>&#8595;</kbd> 在列表中移动光标 &ndash; 光标所在的值会在一秒后生效，<kbd>&#9166;</kbd> 则立即生效。<kbd>&#8594;</kbd> 打开一个分组或进入其中，<kbd>&#8592;</kbd> 关闭该分组或跳到上一级行。</li>
+<li><strong>大小：</strong>列之间的分隔线以及浏览器的下边缘都可以拖动。</li>
+</ul>
+<p>sCollectPlay 会在这台 Mac 上记住选择、列宽和高度。sCollect 媒体库不受影响 &ndash; sCollectPlay 不会向它的设置中写入任何内容。</p>
+
+
+<h3>搜索</h3>
+<p>工具栏中的搜索栏可按标题、艺人、专辑、流派以及其他字段进行筛选。在播放列表中，搜索还会应用于播放列表的内容。</p>
+
+
+<h2 id="playback">4. 播放</h2>
+
+<h3>播放音频</h3>
+<p>选择一个音频条目，然后按<kbd>空格键</kbd>或播放栏中的播放按钮。播放栏显示：</p>
+<ul>
+<li>封面图片、标题和艺人</li>
+<li>用于快进/快退的时间轴</li>
+<li>音量控制</li>
+<li>随机播放和重复模式</li>
+<li>视频还另有：慢动作和逐帧步进</li>
+</ul>
+
+<h3>播放视频</h3>
+<p>电影会在单独的视频窗口中打开。音轨和字幕可以在<strong>播放</strong>菜单中切换。使用 <kbd>&#8984;&#8963;F</kbd> 可切换到全屏模式。</p>
+
+<h3>外部播放</h3>
+<p>某些格式不被 macOS 或 AVFoundation 直接支持。sCollectPlay 会检测到这种情况，并自动在外部播放器中打开这些文件：</p>
+<ul>
+<li><strong>视频特殊格式：</strong>MKV、AVI、FLV、MPG、MPEG、VOB、DivX</li>
+<li><strong>现代编解码器：</strong>MP4 中的 AV1（在没有硬件解码器的较旧 Mac 上）</li>
+<li><strong>高解析度音频：</strong>DSD（DFF、DSF）</li>
+<li><strong>其他音频格式：</strong>OGG Vorbis、WMA</li>
+</ul>
+<p>首选播放器会自动检测：<strong>VLC</strong>、<strong>IINA</strong> 或 <strong>MPV</strong>（按此顺序）。你可以在<strong>设置 &gt; 播放 &gt; 外部视频播放器</strong>中指定。如果这些播放器都未安装，则使用该格式的默认程序 &ndash; 推荐使用 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>（免费、开源）。</p>
+
+<h3>播放控制</h3>
+<table class="shortcut-table">
+<tr><td><kbd>空格键</kbd></td><td>开始播放 / 暂停</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>快进 10 秒</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>快退 10 秒</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>下一曲</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>上一曲</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>增大音量</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>减小音量</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>切换视频全屏</td></tr>
+</table>
+
+<h3>播放模式</h3>
+<ul>
+<li><strong>随机播放：</strong>以随机顺序播放当前列表。</li>
+<li><strong>重复（列表）：</strong>在最后一首之后重复整个列表。</li>
+<li><strong>重复（单曲）：</strong>循环播放当前曲目。</li>
+</ul>
+
+<h3>导出到 Apple Music</h3>
+<p>播放列表或所选的部分曲目可以发送到 Apple Music：</p>
+<ul>
+<li><strong>边栏右键菜单：</strong>右键点击播放列表 &gt; <em>将播放列表发送到 Apple Music</em>。</li>
+<li><strong>曲目右键菜单：</strong><em>作为播放列表发送到 Apple Music</em>（所选曲目作为「选择」）。</li>
+<li><strong>文件菜单：</strong><em>将播放列表发送到 Apple Music&hellip;</em>（选中播放列表时可用）。</li>
+</ul>
+<p>技术上会写入一个 M3U8 文件并交给 Music.app。Apple Music 中已有的播放列表可以选择自动更新 &ndash; 相应的选项在设置中。</p>
+
+
+<h2 id="playlists">5. 播放列表</h2>
+
+<p>sCollectPlay 会显示已加载媒体库中的所有播放列表 &ndash; 标准播放列表和智能播放列表都包括在内。当项目集合发生变化时，智能播放列表会依据已保存的条件重新求值。只能在 sCollect 中修改它们；此外，你还可以创建自己的播放列表。</p>
+<p>加载 XML 媒体库时，标准播放列表和智能播放列表也会一并导入。系统播放列表（Master、Distinguished Kind）会被跳过。</p>
+
+
+<h3>我的播放列表</h3>
+<p>在边栏的<strong>我的播放列表</strong>下，你可以创建自己的播放列表 &ndash; 无论加载的是文件夹、XML 还是媒体库：</p>
+<ul>
+<li><strong>创建：</strong><em>我的播放列表</em>旁边的加号提供<em>新建播放列表&hellip;</em>和<em>新建智能播放列表&hellip;</em>。</li>
+<li><strong>添加：</strong>曲目列表右键菜单中的<em>添加到播放列表</em>会将所选曲目添加到某个播放列表，或新建一个播放列表；在自己的播放列表中，<em>从播放列表移除</em>可将曲目再次移出。</li>
+<li><strong>智能播放列表</strong>会按规则自动组合；右键菜单中的<em>编辑</em>可修改规则。</li>
+<li><strong>重命名、删除、发送到 Apple Music：</strong>通过播放列表的右键菜单。</li>
+</ul>
+<p>sCollectPlay 将你自己的播放列表保存在这台 Mac 上，绝不写入媒体库或 XML；它通过文件路径重新找到其中的曲目，即使重新扫描后也是如此。</p>
+
+
+
+<h2 id="delete">6. 删除媒体文件</h2>
+
+<p>在曲目右键菜单中可以找到<strong>删除媒体文件</strong>这一项。默认情况下之前会出现一个确认对话框（可在设置中关闭）。文件会被移到废纸篓，条目会从媒体库中移除。</p>
+
+<aside>
+<strong>网络共享：</strong>SMB 或 NFS 共享通常没有废纸篓。sCollectPlay 会检测到这一点，并在删除前明确询问 &ndash; 文件将被永久移除，且无法恢复。你可以取消该操作；此时条目和文件都保持不变。
+</aside>
+
+
+<h2 id="settings">7. 设置</h2>
+<p>通过 <strong>sCollectPlay &gt; 设置&hellip;</strong>（<kbd>&#8984;,</kbd>）打开设置。设置分为多个标签页；部分字段为只读（显示已加载的 sCollect 媒体库中的值或默认值）&ndash; 它们表明在 sCollect 中会有哪些可用功能。</p>
+
+<h3>通用</h3>
+<ul>
+<li><strong>确认删除：</strong>移到废纸篓之前先询问。</li>
+
+<li><strong>启动时提示网络媒体库：</strong>启动时，在加载网络宗卷上的来源之前先询问。</li>
+
+</ul>
+
+<h3>播放</h3>
+<ul>
+<li><strong>Apple Music 导出：</strong>始终更新现有播放列表（不询问）。</li>
+<li><strong>视频窗口始终在最前：</strong>视频窗口始终保持在所有其他窗口之上。</li>
+<li><strong>最小化时暂停视频：</strong>视频窗口最小化期间暂停播放，恢复窗口后继续播放。</li>
+<li><strong>慢动作/逐帧时的音量：</strong>慢动作和逐帧模式期间的音量降低（dB）。</li>
+<li><strong>外部视频播放器：</strong>用于 AVFoundation 无法播放的编解码器的首选播放器（参见第 4 节）。可识别 VLC、IINA 和 MPV。</li>
+</ul>
+
+<h3>统计</h3>
+<p>已加载媒体库的计数（每种媒体类型的项目数、总时长、占用空间）。</p>
+
+<h3>语言</h3>
+<p>sCollectPlay 提供 24 种语言。选择你偏好的语言 &ndash; 重新启动 App 后新语言即生效。可以通过语言标签页中的按钮自动触发重新启动。</p>
+
+<aside>
+<strong>注意：</strong>已停用的字段显示的是 sCollect（主 App）中提供、而 sCollectPlay 中不可用的设置 &ndash; 例如标签编辑、导入模式或同步选项。
+</aside>
+
+
+<h2 id="shortcuts">8. 键盘快捷键</h2>
+
+<h3>通用</h3>
+<table class="shortcut-table">
+<tr><td><kbd>&#8984;,</kbd></td><td>打开设置</td></tr>
+<tr><td><kbd>&#8984;&#8679;O</kbd></td><td>选择 sCollect 媒体库&hellip;</td></tr>
+<tr><td><kbd>&#8984;Q</kbd></td><td>退出 sCollectPlay</td></tr>
+</table>
+
+<h3>播放</h3>
+<table class="shortcut-table">
+<tr><td><kbd>空格键</kbd></td><td>播放 / 暂停</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>快进 10 秒</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>快退 10 秒</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>下一曲</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>上一曲</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>增大音量</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>减小音量</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>切换视频全屏</td></tr>
+</table>
+
+
+  </article>
+  <p class="zurueck"><a href="../../../zh-hans/#apps">← 全部 App →</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../impressum.html">法律声明</a><a href="../../../privacy.html">网站隐私</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

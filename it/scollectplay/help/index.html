@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manuale di sCollectPlay</title>
+<meta name="description" content="Manuale di sCollectPlay">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/scollectplay/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/scollectplay/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/scollectplay/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/scollectplay/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/scollectplay/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/scollectplay/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/scollectplay/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/scollectplay/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/scollectplay/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/scollectplay/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/scollectplay/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/scollectplay/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/scollectplay/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../it/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../it/#apps">App</a>
+    <details class="sprache"><summary aria-label="Lingua">Italiano</summary><div><a href="../../../scollectplay/help/" lang="en">English</a><a href="../../../de/scollectplay/help/" lang="de">Deutsch</a><a href="../../../es/scollectplay/help/" lang="es">Español</a><a href="../../../fr/scollectplay/help/" lang="fr">Français</a><a href="../../../it/scollectplay/help/" aria-current="true" lang="it">Italiano</a><a href="../../../ja/scollectplay/help/" lang="ja">日本語</a><a href="../../../ko/scollectplay/help/" lang="ko">한국어</a><a href="../../../pt-br/scollectplay/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../pt-pt/scollectplay/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../ru/scollectplay/help/" lang="ru">Русский</a><a href="../../../zh-hans/scollectplay/help/" lang="zh-Hans">简体中文</a><a href="../../../zh-hant/scollectplay/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../../../it/#apps">← Tutte le app →</a></p>
+  <article class="hilfe">
+
+
+<h1>Manuale di sCollectPlay</h1>
+<p class="subtitle">Lettore per librerie sCollect, cartelle ed esportazioni XML di iTunes</p>
+
+<nav class="toc">
+<h2>Indice</h2>
+<ol>
+<li><a href="#start">Per iniziare</a></li>
+<li><a href="#sources">Scegliere una sorgente</a></li>
+<li><a href="#browse">Esplorare la libreria</a></li>
+<li><a href="#playback">Riproduzione</a></li>
+<li><a href="#playlists">Playlist</a></li>
+<li><a href="#delete">Eliminare i file multimediali</a></li>
+<li><a href="#settings">Impostazioni</a></li>
+<li><a href="#shortcuts">Abbreviazioni da tastiera</a></li>
+</ol>
+</nav>
+
+
+<h2 id="start">1. Per iniziare</h2>
+
+<h3>Cos'è sCollectPlay?</h3>
+<p>sCollectPlay è un'app companion di <strong>sCollect</strong>. È specializzata nella sola riproduzione: nessuna importazione, nessuna modifica dei metadati, nessuna sincronizzazione. Per questo legge da tre sorgenti: cartelle, XML di iTunes/Apple Music e librerie sCollect.</p>
+
+<h3>Al primo avvio</h3>
+<p>Al primo avvio sCollectPlay mostra una finestra di benvenuto con indicazioni sulla riproduzione dei formati speciali (vedi sezione 4). Subito dopo compare la scelta della sorgente, dove puoi selezionare una libreria.</p>
+
+<aside>
+<strong>Suggerimento:</strong> sCollectPlay è compatibile con macOS 14.0 o successivo ed è disponibile in 24 lingue.
+</aside>
+
+
+<h2 id="sources">2. Scegliere una sorgente</h2>
+
+<p>sCollectPlay conosce tre tipi di sorgente, che puoi aprire all'avvio oppure in seguito dal menu <strong>File</strong>:</p>
+
+<h3>Scansiona cartella</h3>
+<p>Scegli una cartella qualsiasi &ndash; sCollectPlay la analizza in modo ricorsivo alla ricerca di file multimediali e legge i metadati direttamente dai file (AVFoundation per audio/video, EbookTagKit per EPUB/PDF). È il modo più semplice per iniziare senza una libreria sCollect.</p>
+<ul>
+
+<li><strong>Accumulo:</strong> Puoi aggiungere più cartelle una dopo l'altra &ndash; i contenuti vengono uniti. Al successivo avvio dell'app tutte le cartelle scansionate finora vengono ripristinate automaticamente.</li>
+
+
+<li><strong>Riconoscimento MKV:</strong> I file con estensione <code>.mp4</code> che in realtà sono MKV vengono riconosciuti dalla firma EBML e contrassegnati separatamente.</li>
+<li><strong>Classificazione per durata:</strong> Una cartella non rivela se un file è musica o un audiolibro. Per questo sCollectPlay classifica audio e video in base alla loro durata &ndash; audio: fino a 10, 10&ndash;30, 30&ndash;60 e oltre 60 min; video: fino a 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 e oltre 210 min. E-book e PDF vengono riconosciuti dall'estensione del file.</li>
+</ul>
+
+<p>Con <strong>File &gt; Dimentica cartelle scansionate&hellip;</strong> puoi svuotare l'elenco &ndash; la sessione corrente resta invariata, al successivo avvio dell'app la libreria è vuota.</p>
+
+
+<h3>Libreria sCollect</h3>
+<p>Scegli la cartella principale di una libreria sCollect (la cartella in cui si trova il bundle <code>.scollect</code>; nelle librerie più vecchie la cartella con <code>settings.json</code>). sCollectPlay legge direttamente i file della libreria, le playlist e le impostazioni &ndash; comprese le denominazioni dei campi configurabili e le playlist intelligenti. La scelta di una libreria sostituisce una scansione di cartelle attiva. Puoi aprire la libreria anche con un doppio clic sul bundle <code>.scollect</code> nel Finder.</p>
+
+<h3>XML di iTunes/Apple Music</h3>
+<p>Scegli un file <code>Library.xml</code> oppure un bundle <code>.musiclibrary</code>. sCollectPlay analizza brani e playlist (standard e intelligenti). Le playlist di sistema (Master, Distinguished Kind) vengono saltate. I tipi di media sCollectPlay li riprende dall'XML stesso: Musica, Audiolibro, Podcast, Video personale, Lungometraggio, Serie e Video musicale. All'apertura viene richiesta una sola volta la cartella multimediale corrispondente, affinché sCollectPlay possa accedere ai file.</p>
+
+<aside>
+<strong>Nota:</strong> È sempre caricato esattamente un tipo di sorgente. Una scansione di cartelle può essere estesa con altre cartelle; se invece apri una libreria o un XML, il contenuto precedente viene sostituito. La barra del titolo della finestra indica tipo e nome della sorgente, ad esempio Cartella «Musica» o Libreria «sCollect»; se punti sul titolo, compare il percorso completo.
+</aside>
+
+
+<h3>Sorgenti usate di recente</h3>
+<p>Nel menu <strong>File</strong>, sotto ogni comando compaiono le ultime sorgenti usate di quel tipo: <em>Cartelle scansionate di recente</em>, <em>Librerie usate di recente</em> e <em>Librerie XML aperte di recente</em>, fino a dieci ciascuna. Un clic riapre la sorgente; se non è più raggiungibile, scompare dall'elenco. <em>Svuota elenco</em> svuota un elenco. Al successivo avvio sCollectPlay carica da sé l'ultima sorgente usata. Se si trova su un volume di rete, l'app chiede prima conferma &ndash; disattivabile in <strong>Impostazioni &gt; Generali &gt; Avvisa in caso di libreria di rete all'avvio</strong>.</p>
+
+
+
+
+<h2 id="browse">3. Esplorare la libreria</h2>
+
+<h3>Barra laterale</h3>
+<p>La barra laterale mostra categorie e tipi di contenuto come fisarmonica a due livelli (ad es. Audio &gt; Musica / Audiolibro / Podcast) e tutte le playlist caricate. Passando da un tipo di contenuto o da una playlist all'altra, l'elenco dei brani a destra si aggiorna.</p>
+
+<h3>Elenco dei brani</h3>
+<ul>
+
+<li><strong>Personalizzare le colonne:</strong> Clic destro su un'intestazione di colonna &gt; <em>Personalizza colonne&hellip;</em> sceglie le colonne visibili. Visibilità, ordine e larghezze valgono per ogni tipo di contenuto o playlist; con una libreria sCollect, sCollectPlay ne riprende le colonne come punto di partenza e memorizza le tue modifiche su questo Mac.</li>
+
+
+<li><strong>Ordinare:</strong> Un clic su un'intestazione ordina in base a quella colonna; un secondo clic inverte l'ordine.</li>
+<li><strong>Larghezza delle colonne:</strong> Trascinando la linea di separazione nell'intestazione della colonna.</li>
+
+<li><strong>Ordine delle colonne:</strong> Trascina un'intestazione di colonna in un'altra posizione.</li>
+
+
+
+<li><strong>Collegato:</strong> Questa colonna opzionale &ndash; la sua intestazione mostra un simbolo di catena &ndash; contrassegna con un segno di spunta gli oggetti il cui file si trova fuori dalle cartelle multimediali della libreria sCollect; in sCollect sono i file importati con <strong>Lascia sul posto</strong>. Per le cartelle scansionate e le librerie XML la colonna resta vuota, perché lì non esistono cartelle multimediali.</li>
+
+</ul>
+
+
+
+<h3>Browser a colonne</h3>
+<p>Il browser a colonne mostra sopra l'elenco dei brani più colonne di selezione &ndash; simile al browser a colonne di Apple Music. Il pulsante con le tre colonne a destra nella barra degli strumenti lo attiva e disattiva. Compare nelle viste dei tipi di contenuto; nelle playlist resta nascosto.</p>
+<ul>
+<li><strong>Colonne:</strong> Genere, artista, album, compositore e raggruppamento. Quali di esse siano visibili, sCollectPlay lo riprende dalle impostazioni della libreria sCollect &ndash; si modifica in sCollect.</li>
+<li><strong>Selezionare:</strong> Un clic su un valore filtra in base a esso, <kbd>&#8984;</kbd>-clic aggiunge un valore alla selezione o lo rimuove. All'interno di una colonna più valori agiscono come &laquo;o&raquo;, tra le colonne come &laquo;e&raquo;. La prima riga <strong>Tutti</strong> annulla di nuovo la selezione della rispettiva colonna.</li>
+<li><strong>Gruppi:</strong> Se una colonna contiene moltissime voci, sCollectPlay le raccoglie per lettera iniziale in gruppi espandibili. Un clic apre un gruppo e chiude il precedente, <kbd>&#8984;</kbd>-clic ne lascia aperti più contemporaneamente.</li>
+<li><strong>Tastiera:</strong> <kbd>&#8593;</kbd> e <kbd>&#8595;</kbd> spostano il cursore nell'elenco &ndash; il valore sotto il cursore viene applicato dopo un secondo, <kbd>&#9166;</kbd> lo applica subito. <kbd>&#8594;</kbd> apre un gruppo o vi entra, <kbd>&#8592;</kbd> lo chiude oppure salta alla riga superiore.</li>
+<li><strong>Dimensioni:</strong> Le linee di separazione tra le colonne e il bordo inferiore del browser si possono trascinare.</li>
+</ul>
+<p>Selezione, larghezza delle colonne e altezza vengono memorizzate da sCollectPlay su questo Mac. La libreria sCollect resta intatta &ndash; sCollectPlay non scrive nulla nelle sue impostazioni.</p>
+
+
+<h3>Ricerca</h3>
+<p>Il campo di ricerca nella barra degli strumenti filtra per titolo, artista, album, genere e altri campi. Nelle playlist la ricerca viene applicata anche al contenuto della playlist.</p>
+
+
+<h2 id="playback">4. Riproduzione</h2>
+
+<h3>Riprodurre audio</h3>
+<p>Seleziona una voce audio e premi <kbd>Barra spaziatrice</kbd> o il pulsante Play nella barra del lettore. La barra del lettore mostra:</p>
+<ul>
+<li>Copertina, titolo e artista</li>
+<li>Barra temporale per avanzare/riavvolgere</li>
+<li>Controllo del volume</li>
+<li>Riproduzione casuale e modalità di ripetizione</li>
+<li>Per i video anche: rallentatore e avanzamento per fotogrammi</li>
+</ul>
+
+<h3>Riprodurre video</h3>
+<p>I film vengono aperti in una finestra video separata. Puoi cambiare traccia audio e sottotitoli nel menu <strong>Riproduzione</strong>. Con <kbd>&#8984;&#8963;F</kbd> passi alla modalità a schermo intero.</p>
+
+<h3>Riproduzione esterna</h3>
+<p>Alcuni formati non sono supportati direttamente da macOS o AVFoundation. sCollectPlay lo rileva e apre questi file automaticamente in un lettore esterno:</p>
+<ul>
+<li><strong>Formati video speciali:</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
+<li><strong>Codec moderni:</strong> AV1 in MP4 (su Mac più vecchi senza decodificatore hardware)</li>
+<li><strong>Audio ad alta risoluzione:</strong> DSD (DFF, DSF)</li>
+<li><strong>Altri formati audio:</strong> OGG Vorbis, WMA</li>
+</ul>
+<p>Il lettore preferito viene rilevato automaticamente: <strong>VLC</strong>, <strong>IINA</strong> o <strong>MPV</strong> (in questo ordine). Puoi definire la tua scelta in <strong>Impostazioni &gt; Riproduzione &gt; Lettore video esterno</strong>. Se nessuno di questi lettori è installato, viene usata l'app predefinita per il formato &ndash; consigliamo <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, open source).</p>
+
+<h3>Controlli di riproduzione</h3>
+<table class="shortcut-table">
+<tr><td><kbd>Barra spaziatrice</kbd></td><td>Avvia/metti in pausa la riproduzione</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>Avanza di 10 secondi</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>Riavvolgi di 10 secondi</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>Traccia successiva</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>Traccia precedente</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>Alza il volume</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>Abbassa il volume</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>Attiva/disattiva schermo intero video</td></tr>
+</table>
+
+<h3>Modalità di riproduzione</h3>
+<ul>
+<li><strong>Riproduzione casuale:</strong> Riproduce la lista corrente in ordine casuale.</li>
+<li><strong>Ripeti (lista):</strong> Ripete l'intera lista dopo l'ultimo brano.</li>
+<li><strong>Ripeti (brano):</strong> Ripete il brano corrente all'infinito.</li>
+</ul>
+
+<h3>Esportazione verso Apple Music</h3>
+<p>Le playlist o una selezione di brani possono essere inviate ad Apple Music:</p>
+<ul>
+<li><strong>Menu contestuale della barra laterale:</strong> Clic destro su una playlist &gt; <em>Invia playlist ad Apple Music</em>.</li>
+<li><strong>Menu contestuale dei brani:</strong> <em>Invia come playlist ad Apple Music</em> (i brani selezionati come &laquo;Selezione&raquo;).</li>
+<li><strong>Menu File:</strong> <em>Invia playlist ad Apple Music&hellip;</em> (attivo quando è selezionata una playlist).</li>
+</ul>
+<p>Tecnicamente viene scritto un file M3U8 che viene consegnato a Music.app. Le playlist già esistenti in Apple Music possono essere aggiornate automaticamente, se lo desideri &ndash; la relativa opzione si trova nelle impostazioni.</p>
+
+
+<h2 id="playlists">5. Playlist</h2>
+
+<p>sCollectPlay mostra tutte le playlist della libreria caricata &ndash; sia quelle standard sia quelle intelligenti. Le playlist intelligenti vengono rivalutate in base ai criteri memorizzati quando cambia l'insieme degli oggetti. Si possono modificare solo in sCollect; in più puoi creare playlist personali.</p>
+<p>Durante il caricamento di una libreria XML vengono importate sia le playlist standard sia quelle intelligenti. Le playlist di sistema (Master, Distinguished Kind) vengono saltate.</p>
+
+
+<h3>Le mie playlist</h3>
+<p>In <strong>Le mie playlist</strong> nella barra laterale crei playlist personali &ndash; indipendentemente dal fatto che sia caricata una cartella, un XML o una libreria:</p>
+<ul>
+<li><strong>Creare:</strong> Il pulsante più accanto a <em>Le mie playlist</em> offre <em>Nuova playlist&hellip;</em> e <em>Nuova playlist intelligente&hellip;</em>.</li>
+<li><strong>Riempire:</strong> <em>Aggiungi alla playlist</em> nel menu contestuale dell'elenco dei brani aggiunge i brani selezionati a una playlist o ne crea una nuova; in una playlist personale, <em>Rimuovi dalla playlist</em> li toglie di nuovo.</li>
+<li><strong>Le playlist intelligenti</strong> si compongono da sole in base a regole; <em>Modifica</em> nel menu contestuale cambia le regole.</li>
+<li><strong>Rinominare, eliminare, inviare ad Apple Music:</strong> tramite il menu contestuale della playlist.</li>
+</ul>
+<p>sCollectPlay salva le playlist personali su questo Mac, mai nella libreria o nell'XML; ne ritrova i brani tramite il percorso del file, anche dopo una nuova scansione.</p>
+
+
+
+<h2 id="delete">6. Eliminare i file multimediali</h2>
+
+<p>Nel menu contestuale dei brani trovi la voce <strong>Elimina file multimediale</strong>. Per impostazione predefinita compare prima un dialogo di conferma (disattivabile nelle impostazioni). Il file viene spostato nel Cestino e la voce viene rimossa dalla libreria.</p>
+
+<aside>
+<strong>Condivisioni di rete:</strong> Le condivisioni SMB o NFS di norma non hanno un Cestino. sCollectPlay lo rileva e chiede esplicitamente conferma prima dell'eliminazione &ndash; il file viene rimosso definitivamente e non può essere ripristinato. Puoi annullare l'operazione; in tal caso voce e file restano invariati.
+</aside>
+
+
+<h2 id="settings">7. Impostazioni</h2>
+<p>Apri le impostazioni tramite <strong>sCollectPlay &gt; Impostazioni&hellip;</strong> (<kbd>&#8984;,</kbd>). Sono suddivise in diverse schede; alcuni campi sono di sola lettura (valori della libreria sCollect caricata oppure valori predefiniti) &ndash; mostrano ciò che sarebbe disponibile in sCollect.</p>
+
+<h3>Generali</h3>
+<ul>
+<li><strong>Conferma eliminazione:</strong> Chiedi conferma prima di spostare nel Cestino.</li>
+
+<li><strong>Avvisa in caso di libreria di rete all'avvio:</strong> All'avvio chiede conferma prima di caricare una sorgente che si trova su un volume di rete.</li>
+
+</ul>
+
+<h3>Riproduzione</h3>
+<ul>
+<li><strong>Esportazione Apple Music:</strong> Aggiorna sempre la playlist esistente (senza chiedere).</li>
+<li><strong>Finestra video sempre in primo piano:</strong> La finestra video resta sempre sopra tutte le altre finestre.</li>
+<li><strong>Metti in pausa il video quando la finestra è contratta:</strong> Mette in pausa la riproduzione mentre la finestra video è contratta e la riprende quando viene ripristinata.</li>
+<li><strong>Volume in modalità rallentatore/fotogramma:</strong> Riduzione del volume in dB durante le modalità rallentatore e fotogramma.</li>
+<li><strong>Lettore video esterno:</strong> Lettore preferito per i codec che AVFoundation non può riprodurre (vedi sezione 4). Vengono rilevati VLC, IINA e MPV.</li>
+</ul>
+
+<h3>Statistiche</h3>
+<p>Contatori sulla libreria caricata (numero di oggetti per tipo di contenuto, durata totale, spazio occupato).</p>
+
+<h3>Lingua</h3>
+<p>sCollectPlay è disponibile in 24 lingue. Scegli la tua lingua preferita &ndash; dopo un riavvio dell'app la nuova lingua sarà attiva. Il riavvio può essere avviato automaticamente con il pulsante nella scheda Lingua.</p>
+
+<aside>
+<strong>Nota:</strong> I campi disattivati mostrano impostazioni disponibili in sCollect (l'app principale) ma non in sCollectPlay &ndash; ad esempio la modifica dei tag, le modalità di importazione o le opzioni di sincronizzazione.
+</aside>
+
+
+<h2 id="shortcuts">8. Abbreviazioni da tastiera</h2>
+
+<h3>Generali</h3>
+<table class="shortcut-table">
+<tr><td><kbd>&#8984;,</kbd></td><td>Apri impostazioni</td></tr>
+<tr><td><kbd>&#8984;&#8679;O</kbd></td><td>Scegli libreria sCollect&hellip;</td></tr>
+<tr><td><kbd>&#8984;Q</kbd></td><td>Esci da sCollectPlay</td></tr>
+</table>
+
+<h3>Riproduzione</h3>
+<table class="shortcut-table">
+<tr><td><kbd>Barra spaziatrice</kbd></td><td>Riproduci / Pausa</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>Avanza di 10 secondi</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>Riavvolgi di 10 secondi</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>Traccia successiva</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>Traccia precedente</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>Alza il volume</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>Abbassa il volume</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>Attiva/disattiva schermo intero video</td></tr>
+</table>
+
+
+  </article>
+  <p class="zurueck"><a href="../../../it/#apps">← Tutte le app →</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../impressum.html">Note legali</a><a href="../../../privacy.html">Privacy del sito</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

@@ -56,13 +56,13 @@
 </ol>
 </nav>
 
-<!-- ============================================================ -->
+
 <h2 id="start">1. Primeiros passos</h2>
 
 <h3>O que é o sCollect?</h3>
 <p>O sCollect é um app de biblioteca multimídia para macOS que permite organizar música, audiolivros, podcasts, filmes, séries, e-books, PDF e qualquer tipo de coleção (moedas, modelos, selos etc.). Cada item é catalogado com seus metadados (título, artista, álbum, gênero etc.) e pode ser reproduzido ou editado diretamente no app.</p>
 
-<!-- ohne-internet -->
+
 <h3 id="ohne-internet">Sem Internet &ndash; de propósito</h3>
 <p>O sCollect não importa CDs nem busca na Internet informações das faixas ou capas. Não é um esquecimento, mas uma decisão: o Apple Music já faz as duas coisas, e as faz bem. Importe o CD lá e, em seguida, importe para o sCollect os arquivos resultantes. Para isso, escolha <strong>AAC</strong>, <strong>Apple Lossless</strong> ou <strong>MP3</strong> nos ajustes de importação do Apple Music &ndash; assim, as informações das faixas acrescentadas pelo Apple Music ficam salvas nos arquivos e os acompanham na importação. Com <strong>WAV</strong>, o Apple Music as salva na própria biblioteca e os arquivos chegam sem informações das faixas.</p>
 <p>Em contrapartida, sua biblioteca continua sendo um assunto privado. O sCollect não acessa por conta própria nenhum endereço na Internet, não envia dados sobre sua coleção a nenhum serviço e não precisa de conta. O que você coleciona, como organiza e o que anota sobre isso não sai do seu Mac &ndash; a não ser que você o compartilhe por iniciativa própria.</p>
@@ -85,7 +85,7 @@
 <strong>Nota:</strong> Se a nova pasta de biblioteca que você escolher contiver restos de uma biblioteca anterior (detectados pela presença de um diretório <code>.slaves/</code>), o sCollect mostra um diálogo de confirmação com o número de cópias previamente registradas. Após confirmar, as cópias acessíveis são desvinculadas automaticamente do antigo master e, em seguida, o registro <code>.slaves/</code> é removido. As cópias inacessíveis mantêm o vínculo com o antigo master e podem precisar de reparo manual.
 </aside>
 
-<!-- ============================================================ -->
+
 <h2 id="library">2. Gerenciar a biblioteca</h2>
 
 <h3>Categorias e tipos de mídia</h3>
@@ -102,7 +102,7 @@
 
 <h3>Barra lateral</h3>
 <p>A barra lateral à esquerda mostra todos os tipos de mídia ativos e suas playlists. Clique em uma entrada para ver seu conteúdo. Os tipos de mídia sem nome atribuído ficam ocultos.</p>
-<!-- typwechsel-drop -->
+
 <p><strong>Mudar o tipo de mídia arrastando:</strong> Arraste objetos da lista para um tipo de mídia na barra lateral para mudar o tipo deles. O sCollect pergunta antes &ndash; uma mudança de tipo move os arquivos para o novo local previsto, no master e em cada cópia, e com arquivamento ordenado por data pode gerar colisões de nomes.</p>
 <aside>
 <strong>Atenção:</strong> Arrastar para um <em>tipo de mídia</em> muda o tipo dos objetos existentes. Para <em>importar</em> arquivos novos, arraste-os para a lista de mídia à direita. Os arquivos que não pertencem à biblioteca ficam intactos ao serem soltos sobre um tipo de mídia &ndash; e o sCollect também avisa isso.
@@ -114,10 +114,10 @@
 
 <h3>Excluir e o Lixo do app</h3>
 <p>Selecione entradas e escolha <strong>Editar &gt; Para o Lixo</strong> (<kbd>&#8984;&#9003;</kbd>) ou, no menu de contexto, &laquo;Remover da biblioteca e apagar do disco&raquo;. O sCollect não exclui de imediato, mas move os arquivos para um Lixo do app oculto dentro de cada pasta de mídia (a pasta <code>.Deleted</code>) &ndash; isso funciona em qualquer volume, inclusive em compartilhamentos de rede sem Lixo do sistema, e é rápido porque move no mesmo disco. Pressione <kbd>&#8984;Z</kbd> para desfazer uma exclusão na hora e <kbd>&#8679;&#8984;Z</kbd> para refazer.</p>
-<p>Abra o Lixo do app em <strong>Arquivo &gt; Biblioteca &gt; Lixo do app&hellip;</strong> (desativado se vazio). Ali você pode restaurar as entradas selecionadas ou todas, removê-las permanentemente (para o Lixo do sistema se o volume oferecer suporte; caso contrário, excluídas diretamente) ou movê-las para uma pasta à sua escolha. Em <strong>Ajustes &gt; Lixo</strong> você define se o esvaziamento usa o Lixo do sistema e se as entradas vencidas são removidas automaticamente na inicialização (prazo a partir de 1 dia, com confirmação). As cópias conectadas espelham a exclusão localmente na sua própria pasta <code>.Deleted</code> &ndash; sem transferência pela rede.</p>
+<p>Abra o Lixo do app em <strong>Arquivo &gt; Biblioteca &gt; Lixo do app&hellip;</strong> (<kbd>&#8679;&#8984;T</kbd>, desativado se vazio). Ali você pode restaurar as entradas selecionadas ou todas, removê-las permanentemente (para o Lixo do sistema se o volume oferecer suporte; caso contrário, excluídas diretamente) ou movê-las para uma pasta à sua escolha. Em <strong>Ajustes &gt; Lixo</strong> você define se o esvaziamento usa o Lixo do sistema e se as entradas vencidas são removidas automaticamente na inicialização (prazo a partir de 1 dia, com confirmação). As cópias conectadas espelham a exclusão localmente na sua própria pasta <code>.Deleted</code> &ndash; sem transferência pela rede.</p>
 
 
-<!-- duplicates-view -->
+
 <h3>Mostrar duplicatas</h3>
 <p>Por meio de <strong>Arquivo &gt; Biblioteca &gt; Mostrar itens duplicados</strong> (<kbd>&#8679;&#8984;D</kbd>) o sCollect percorre toda a categoria atual e mostra na lista de mídia apenas as duplicatas encontradas &ndash; como no Apple Music. Para uma seleção existente há a opção do menu de contexto &laquo;Encontrar duplicatas&raquo;.</p>
 <p>A busca mostra uma barra de progresso e pode ser interrompida a qualquer momento. Em coleções grandes a primeira execução pode demorar; o sCollect salva na biblioteca os valores calculados nesse momento, de modo que cada execução seguinte é bem mais rápida. Se um arquivo mudar, seus valores são descartados e recalculados automaticamente.</p>
@@ -135,11 +135,11 @@
 <h4>A visualização de duplicatas</h4>
 <p>Na lista aparecem <strong>sombreadas</strong> todas as entradas propostas como duplicata &ndash; em cada grupo fica uma. As propostas estão ao mesmo tempo <strong>marcadas</strong>; você pode alterar a marcação livremente. Uma coluna de estado estreita mostra ainda duas indicações: uma <strong>corrente</strong> quando várias entradas apontam para o mesmo arquivo, e um <strong>triângulo de aviso</strong> quando o arquivo de uma entrada está ausente. As duas coisas podem se sobrepor.</p>
 <p>A ordenação e a busca também funcionam na visualização de duplicatas. O filtro de busca apenas oculta; &laquo;Excluir seleção&raquo; leva então somente as entradas visíveis, e o restante continua podendo ser excluído depois de redefinir o filtro.</p>
-<!-- auswahl-loeschen -->
+
 <p><strong>Excluir seleção</strong> pede confirmação e depois coloca as entradas marcadas, junto com o arquivo, no Lixo do app (desfazer com <kbd>&#8984;Z</kbd>). Se uma entrada marcada apontar para um arquivo de que uma entrada que fica ainda precisa, ou se o arquivo dela estiver ausente, só a entrada é removida &ndash; a pergunta de confirmação indica esses casos separadamente. Se a marcação abranger um grupo por completo, o botão fica bloqueado.</p>
 <p>Você também pode marcar e excluir entradas isoladas. Qual entrada fica em cada grupo é redeterminado continuamente &ndash; se você excluir manualmente nesse meio-tempo, outra assume o lugar automaticamente, e nenhum grupo perde todas as suas entradas. &laquo;Sair da visualização de duplicatas&raquo; volta à lista normal.</p>
 
-<!-- ============================================================ -->
+
 <h2 id="import">3. Importar conteúdo</h2>
 
 <h3>Importar arquivos</h3>
@@ -148,20 +148,22 @@
 <li><strong>Áudio:</strong> MP3, M4A, AAC, FLAC, WAV, AIFF, AIF, ALAC, CAF</li>
 <li><strong>Vídeo:</strong> MP4, M4V, MOV</li>
 <li><strong>Livros:</strong> PDF, EPUB</li>
-<li><strong>Diversos:</strong> JPG, JPEG, HEIC, PNG, TIFF, WEBP</li>
+<li><strong>Diversos:</strong> todos os formatos acima, além de imagens de todo tipo (JPG, HEIC, PNG, TIFF, WEBP, GIF, BMP, também RAW), quadrinhos (CBZ, CBR), e-books (MOBI, AZW, DJVU) e textos (TXT, RTF, DOC, DOCX). Outros arquivos você anexa a um objeto no editor, em <strong>Anexos</strong>.</li>
 </ul>
-<!-- ohne-internet-verweis -->
+<p><strong>Arquivos complementares</strong> (.xmp, por exemplo do digiKam ou do Lightroom, e .nfo) acompanham o seu arquivo. Ao importar arquivos individuais, <strong>selecione-os também</strong> no diálogo &ndash; caso contrário, o macOS libera para o sCollect apenas o arquivo escolhido, não o vizinho dele. Na importação de pastas, isso acontece automaticamente.</p>
+
 <p>Importe um CD com o Apple Music e depois importe os arquivos; o motivo pelo qual o sCollect não faz isso por conta própria está explicado em <a href="#ohne-internet">Sem Internet &ndash; de propósito</a> (seção 1).</p>
 
 <h3>Importar uma pasta</h3>
 <p>Use <strong>Arquivo &gt; Importar pasta&hellip;</strong> (<kbd>&#8679;&#8984;O</kbd>) para importar todos os arquivos suportados de uma pasta, incluindo subpastas.</p>
 
-<!-- import-ziehen -->
+
 <h3>Arrastar arquivos e pastas para dentro</h3>
 <p>O que você arrasta do Finder para a janela do sCollect segue <strong>o mesmo caminho</strong> dos dois comandos de menu: as pastas são percorridas junto com suas subpastas, o diálogo de importação mostra antes o que vai entrar, e a detecção de duplicatas funciona como sempre.</p>
+<p>No sentido inverso, você arrasta entradas da lista para uma pasta do Finder para copiar os arquivos para lá. Com cada arquivo vão junto os seus arquivos complementares (.xmp, .nfo, pôster, fanart) e, em <em>Diversos</em>, a pasta com os anexos copiados; os anexos vinculados ficam onde estão.</p>
 <p>Isso também vale quando você arrasta para uma <strong>playlist</strong>: os arquivos vindos do Finder são primeiro importados e depois colocados na playlist.</p>
 
-<!-- buchpakete -->
+
 <h3>Livros em formato de pacote</h3>
 <p>O app <strong>Livros</strong> guarda os títulos comprados como <em>pacote</em> &ndash; por fora parece um arquivo, mas na verdade é uma pasta. O sCollect não aceita um pacote desses e avisa você: <em>&laquo;Pacote do Livros não importado&raquo;</em>, com o nome junto. É aceito um livro como arquivo <strong>.epub</strong> ou <strong>.pdf</strong> individual.</p>
 
@@ -172,7 +174,7 @@
 <li><strong>Mover para a biblioteca:</strong> Os arquivos são movidos para a pasta de mídia.</li>
 <li><strong>Deixar no local:</strong> Os arquivos permanecem onde estão. O sCollect apenas memoriza o local. Útil para arquivos em unidades de rede.</li>
 </ul>
-<!-- import-scheitert -->
+
 <p>Se um arquivo não puder ser incluído na biblioteca ao copiar ou mover, o sCollect <strong>não cria nenhuma entrada</strong> para ele. O arquivo fica inalterado no seu lugar, e uma mensagem o informa junto com o motivo.</p>
 
 <h3>Detecção de duplicatas</h3>
@@ -186,9 +188,9 @@
 <h3>Organização automática</h3>
 <p>Os arquivos importados são guardados automaticamente em uma estrutura de pastas fixa: três níveis de letras a partir do nome do artista e, em seguida, <code>Artista/Album/Arquivo</code> (por ex., <code>A/AB/ABB/ABBA/Gold/Track.mp3</code>). O caminho depende apenas dos metadados e permanece estável à medida que a biblioteca cresce &ndash; os arquivos já guardados não são movidos.</p>
 
-<!-- datumsablage -->
+
 <p><strong>Arquivamento ordenado por data:</strong> Para os tipos de mídia em que o momento conta mais do que o artista &ndash; fotos, vídeos caseiros, coleções &ndash; você pode escolher nos ajustes um arquivamento por data. Os arquivos vão então para pastas de ano e mês, e o nome do arquivo leva o momento. Vale a data de captura quando o arquivo tiver uma; caso contrário, a data do objeto.</p>
-<!-- kamerapraefix -->
+
 <p><strong>Arrumar os títulos na importação:</strong> Quando o sCollect deriva um título do nome do arquivo, na frente muitas vezes está o nome da câmera e atrás uma data &ndash; por ex., <code>IMG_20240115 Urlaub</code>. Quatro opções em <strong>Ajustes &gt; Importação (com ordenação por data)</strong> cuidam disso. Elas só atuam <em>nos tipos de mídia com arquivamento ordenado por data</em>: quem quiser manter <code>IMG</code> ou <code>20250401</code> no nome ordena de qualquer forma alfabeticamente.</p>
 <ul>
 <li><strong>Remover o prefixo da câmera dos títulos derivados</strong> &ndash; ativado por padrão. De <code>IMG_20240115 Urlaub</code> resulta <code>20240115 Urlaub</code>. Só é removido o que está colado à data sem espaço <em>e</em> consta da lista de nomes de câmera conhecidos: <code>Sam 2024-01-15 Konzert</code> fica intacto.</li>
@@ -205,7 +207,7 @@
 <strong>Nota:</strong> Durante a importação, o sCollect detecta arquivos MP4 com antigas sample entries DivX/Xvid não conformes ao padrão (<code>xvid</code>/<code>DIVX</code>/<code>DX50</code>/<code>DIV3</code>) e os renomeia para <code>.divx</code>. Esses arquivos são automaticamente roteados para um reprodutor externo durante a reprodução (consulte a seção 6). Os fluxos MPEG-4 Part 2 conformes ao padrão (<code>mp4v</code>) permanecem intactos — o AVFoundation pode reproduzi-los.
 </aside>
 
-<!-- ============================================================ -->
+
 <h2 id="browse">4. Explorar a biblioteca</h2>
 
 <h3>Visualização em colunas</h3>
@@ -223,7 +225,7 @@
 <li>Seleção múltipla com <kbd>&#8984;</kbd>-clique ou <kbd>&#8679;</kbd>-clique</li>
 <li>As colunas exibidas pelo navegador são configuráveis nos ajustes</li>
 </ul>
-<!-- spaltenbrowser-knoten -->
+
 <p>Se uma coluna tiver mais valores do que o definido em <strong>Ajustes &gt; Biblioteca &gt; Visualização</strong> em <strong>Máx. entradas por pasta</strong>, ela os agrupa em <strong>nós</strong> por letra inicial (<code>A</code>, <code>AB</code>, <code>0-9</code> &hellip;). Um clique em um nó <strong>filtra</strong> por todos os valores abaixo dele e o expande; um segundo clique o recolhe de novo, e o filtro se mantém. Com <kbd>&#8984;</kbd>-clique é possível combinar nós e valores individuais. Com as teclas de seta, um nó filtra após uma breve pausa, sem se expandir; <kbd>&#8617;</kbd> expande ou recolhe e filtra de imediato.</p>
 
 <h3>Busca</h3>
@@ -232,14 +234,15 @@
 <h3>Miniaturas</h3>
 <p>Quando a coluna &laquo;Pré-visualização&raquo; está visível, cada linha apresenta uma pequena miniatura (capa ou quadro do vídeo). Clique na imagem de uma linha já selecionada para ver uma pré-visualização maior em um popover.</p>
 
-<!-- linked-column -->
+
 <h3>Reconhecer objetos vinculados</h3>
 <p>A coluna opcional <strong>Vinculado</strong> &ndash; o cabeçalho mostra um símbolo de corrente &ndash; marca com uma marca de seleção os objetos cujo arquivo está fora das pastas de mídia. São os arquivos importados com <strong>Deixar no local</strong>: o sCollect apenas memoriza onde eles estão. Sem a marca, o arquivo está em uma pasta de mídia da biblioteca. Como o modo de importação pode ser alterado antes de cada importação, uma biblioteca costuma conter os dois casos. Um clique no cabeçalho ordena por essa coluna e reúne todos os objetos vinculados. A marca é apenas indicativa &ndash; não é clicável, pois alterá-la significaria mover o arquivo.</p>
+<p>O menu de contexto de um objeto vinculado tem dois itens do Finder: <strong>Mostrar no Finder</strong> leva ao arquivo original em seu próprio local, <strong>Mostrar o link no Finder</strong> ao link que o sCollect criou para ele na pasta de mídia. Se o arquivo original não existir mais, o segundo item não aparece e <strong>Mostrar no Finder</strong> mostra o link.</p>
 
-<!-- ============================================================ -->
+
 <h2 id="metadata">5. Editar metadados</h2>
 
-<!-- sicherung-vorher -->
+
 <h3>Faça backup antes de grandes alterações</h3>
 <p><strong>O sCollect grava nos seus arquivos, não em uma cópia deles.</strong> Por isso, faça um backup antes de grandes alterações &ndash; por exemplo, antes de alterar muitas entradas de uma vez no Editor em lote ou com as Operações de campo. O Time Machine basta.</p>
 
@@ -252,13 +255,13 @@
 <li><strong>Info do arquivo:</strong> Detalhes técnicos (formato do arquivo, taxa de amostragem, taxa de bits, tamanho, permissões, formato de tags) &ndash; e quatro marcas de tempo que você <em>pode</em> alterar. Veja &laquo;Marcas de tempo na aba Arquivo&raquo; mais abaixo.</li>
 <li><strong>Anexos:</strong> Apenas na categoria <em>Diversos</em>. Documentos, imagens ou vídeos que pertencem a um objeto &ndash; veja &laquo;Anexos&raquo; mais abaixo.</li>
 </ul>
-<!-- editor-blaettern -->
+
 <p>Com os botões de seta <strong>&lsaquo;</strong> e <strong>&rsaquo;</strong> no canto superior direito do editor ou com <kbd>&#8963;&#8984;&#8592;</kbd> / <kbd>&#8963;&#8984;&#8594;</kbd> você passa para a entrada anterior ou seguinte da lista sem fechar o editor (<kbd>&#8963;</kbd> é a tecla Control). Suas alterações são salvas nesse momento; se não for possível salvá-las, o editor permanece na entrada atual.</p>
 
-<!-- full-date -->
+
 <p><strong>Ano e data exata:</strong> Ao lado do campo do ano, o botão de calendário (ou um clique duplo no campo do ano) abre a entrada de uma data completa. Uma marca no botão indica que há uma data com dia exato armazenada. O sCollect salva a data exatamente com a precisão que consta no arquivo &ndash; se ali houver apenas um ano, permanece o ano; uma data com dia exato é preservada ao editar.</p>
 
-<!-- zeitstempel -->
+
 <h3>Marcas de tempo na aba Arquivo</h3>
 <p>A aba Arquivo mostra quatro momentos, e os quatro podem ser definidos. Eles significam coisas diferentes &ndash; é por isso que estão lado a lado:</p>
 <ul>
@@ -267,18 +270,18 @@
 <li><strong>Data de importação (biblioteca):</strong> Quando o objeto entrou na biblioteca. Uma informação puramente da biblioteca &ndash; nenhum arquivo a traz.</li>
 <li><strong>Data de modificação (biblioteca):</strong> A coluna &laquo;Modificado&raquo;. Reflete a hora de modificação do arquivo &ndash; se você a alterar aqui, é portanto <em>o arquivo</em> que é ajustado, e a biblioteca acompanha. O campo também diz isso: &laquo;define a data do arquivo&raquo;.</li>
 </ul>
-<!-- zonendeutung -->
+
 <p>Nos filmes, ao lado da origem às vezes aparece ainda uma indicação sobre o <em>fuso horário</em>. Isso porque o momento no contêiner não traz nenhuma indicação de fuso: a norma o lê como UTC, mas nem toda câmera o grava assim. Ao importar, o sCollect compara por isso a hora no contêiner com a data de criação do arquivo &ndash; ambas vêm do mesmo relógio da câmera, e da diferença entre elas resulta a interpretação. &laquo;sem fuso horário&raquo; significa: o caso está em aberto, a data está certa, a hora pode estar deslocada pela diferença de fuso. &laquo;hora local&raquo; significa: a câmera foi reconhecida, e o momento pretendido consta logo ao lado. <strong>O arquivo não é alterado nesse processo</strong> &ndash; a interpretação é uma informação, não uma intervenção.</p>
 <p>Os quatro só são gravados ao <strong>salvar</strong>, como qualquer outro campo.</p>
 
-<!-- kopierschutz -->
+
 <h3>Mídias protegidas contra cópia</h3>
 <p>Um audiolivro comprado, um filme alugado, um livro com DRM: nesses arquivos ninguém pode escrever &ndash; uma gravação de tags os deixaria inutilizáveis, na melhor das hipóteses. O sCollect reconhece a proteção ao abrir e <strong>não toca no arquivo</strong>. Nos livros são reconhecidos a criptografia de um PDF, o Adobe DRM, o Apple FairPlay, o Readium LCP e EPUBs cujos capítulos não são texto legível; nas músicas e nos filmes, o Apple FairPlay e a criptografia de contêiner mais difundida (Common Encryption).</p>
 <p>Mesmo assim você pode editar um objeto desses. Seus dados vão para um <strong>arquivo complementar</strong> com a extensão <strong>.xmp</strong>, que fica ao lado do arquivo. No editor você percebe isso em dois lugares na aba <strong>Info do arquivo</strong>: pela indicação &ndash; <em>&laquo;Arquivo protegido contra cópia: os dados ficam em um arquivo complementar (.xmp) ao lado; o arquivo em si permanece inalterado.&raquo;</em>, em um livro <em>&laquo;Livro protegido: os dados ficam em um arquivo complementar (.xmp) ao lado; o livro em si permanece inalterado.&raquo;</em> &ndash; e pelo formato de tags, que então indica <strong>Sidecar (XMP)</strong> junto com o tipo de proteção.</p>
 <p>O arquivo complementar pertence ao objeto e fica com ele: se você renomear o título, ele acompanha; em cada cópia da biblioteca ele também está presente. Como no próprio arquivo não há nada, a comparação com o arquivo tampouco indica divergência aqui.</p>
 <p>Duas coisas faltam nas mídias protegidas, e ambas pelo mesmo motivo &ndash; elas pressupõem que o conteúdo possa ser lido: a <strong>data de captura vinda do arquivo</strong> e a <strong>miniatura a partir de um quadro do vídeo</strong>. Sobre a reprodução, veja <a href="#playback">Reprodução</a> (seção 6).</p>
 
-<!-- anhaenge -->
+
 <h3>Anexos</h3>
 <p>Os objetos da categoria <strong>Diversos</strong> podem ter anexos &ndash; um manual em PDF, fotos de uma peça de coleção, um vídeo. A aba <strong>Anexos</strong> no editor os recebe: por meio do botão <strong>Adicionar anexo&hellip;</strong> ou arrastando arquivos para a lista.</p>
 <p>Ao lado existem duas possibilidades, e a escolha vale para o que vier a seguir:</p>
@@ -287,9 +290,9 @@
 <li><strong>Copiar</strong>: O arquivo é colocado na pasta de anexos ao lado do objeto e o acompanha &ndash; também para cada cópia da biblioteca.</li>
 </ul>
 <p>Na lista, o ícone mostra a situação: uma <em>folha</em> para uma cópia, uma <em>corrente</em> para um vínculo, um <em>ponto de exclamação vermelho</em> quando um arquivo vinculado não é mais encontrado &ndash; excluído, renomeado, ou o disco não está conectado. Ao lado aparece então <strong>Localizar&hellip;</strong>, com o qual você o localiza em sua nova posição.</p>
-<!-- bildfenster -->
+
 <p>Um anexo de <strong>imagem</strong> se abre pelo botão de seta em uma janela própria, livremente redimensionável, à frente do editor; outros arquivos abrem no app correspondente. Da mesma forma, um clique na <strong>imagem principal</strong> à esquerda no editor mostra a imagem em resolução total nessa janela &ndash; em um objeto cujo arquivo não é uma imagem, a capa.</p>
-<!-- bild-einfuegen -->
+
 <p>A imagem principal de um objeto da categoria <strong>Diversos</strong> também aceita uma imagem que você arraste para ela. Com <kbd>&#8984;V</kbd> você insere uma imagem da área de transferência, assim que a imagem estiver visível no editor &ndash; mesmo que um campo de texto esteja ativo. Se a área de transferência contiver texto, <kbd>&#8984;V</kbd> o cola normalmente no campo de texto. A imagem só é adotada com <strong>Salvar</strong>.</p>
 <aside>
 <strong>Nota:</strong> Os anexos só têm efeito ao <strong>salvar</strong> &ndash; os arquivos pendentes aparecem na lista com a indicação &laquo;será copiado ao salvar&raquo; ou &laquo;&hellip;vinculado&raquo;.
@@ -323,7 +326,7 @@
 <strong>Reparo de mídia:</strong> Ao salvar os metadados, pode aparecer brevemente a mensagem &laquo;Reparando o arquivo de mídia&hellip;&raquo;. Significa que o arquivo estava estruturalmente danificado &ndash; normalmente uma gravação interrompida ou uma transferência incompleta &ndash; e que o sCollect o reparou automaticamente antes de gravar as alterações. Isso acontece raramente e apenas quando necessário. Se o arquivo estava <strong>incompleto</strong> (cortado no final), sua duração indicada é corrigida; os dados de mídia ausentes no final não podem ser recuperados (já faltavam no arquivo), mas os metadados são preservados. Se apenas um bloco de dados interno tinha sido deslocado, o reparo é sem perdas. Os arquivos que não podem ser reparados com segurança permanecem inalterados &ndash; o sCollect então interrompe com uma mensagem em vez de forçar uma alteração arriscada.
 </aside>
 
-<!-- ============================================================ -->
+
 <h2 id="playback">6. Reprodução</h2>
 
 <h3>Reproduzir áudio</h3>
@@ -339,7 +342,7 @@
 <p>Os filmes se abrem em uma janela de vídeo separada. Os controles aparecem automaticamente quando você move o mouse. Você pode alternar faixas de áudio e legendas no menu &laquo;Reprodução&raquo; se o arquivo contiver várias faixas.</p>
 
 <h3>Controles de reprodução</h3>
-<!-- kuerzel-wiedergabe -->
+
 <table class="shortcut-table">
 <tr><td><kbd>Espaço</kbd></td><td>Reproduzir / Pausar</td></tr>
 <tr><td><kbd>&#8997;&#8984;&#8594;</kbd></td><td>Próxima faixa</td></tr>
@@ -383,41 +386,41 @@
 <li><strong>Áudio de alta resolução:</strong> DSD (DFF, DSF)</li>
 <li><strong>Outros formatos de áudio:</strong> OGG Vorbis, WMA</li>
 </ul>
-<!-- unerreichbare-spuren -->
+
 <p><strong>Quando uma faixa está inacessível:</strong> Alguns arquivos parecem reproduzíveis e só o são pela metade &ndash; por exemplo um MP4 cuja faixa de áudio o macOS nem sequer oferece. O resultado seria um filme mudo. Por isso o sCollect verifica na importação quais faixas o contêiner traz e quais delas realmente chegam, e memoriza o resultado no objeto. Na reprodução, um arquivo desses é entregue ao reprodutor externo sem nova verificação.</p>
 <p>Um caso frequente desse tipo o sCollect corrige já na importação: áudio MP3 em um contêiner MP4 ao qual falta um campo descritivo que o macOS espera. A intervenção altera <strong>19 bytes</strong> no contêiner &ndash; imagem, som, duração, capítulos e todas as tags ficam intactos &ndash; e depois o arquivo é reproduzido em qualquer lugar, não apenas no sCollect. Uma linha do registro indica cada um desses casos.</p>
-<!-- kopierschutz-wiedergabe -->
+
 <p>Os <strong>arquivos protegidos contra cópia</strong> o sCollect sempre entrega para fora, sem verificá-los antes: ao app que o macOS prevê para eles &ndash; nos títulos comprados, por exemplo, ao <strong>TV</strong> ou à <strong>Música</strong>. Só ali está a chave com a qual eles podem ser reproduzidos.</p>
 <p>O reprodutor preferido é detectado automaticamente: <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (nesta ordem). Você pode escolher sua preferência em <strong>Ajustes &gt; Reprodução/Playlist &gt; Reprodutor externo para codecs não suportados</strong>. Se nenhum desses reprodutores estiver instalado, o sCollect recorre ao app padrão &ndash; recomendamos o <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, código aberto).</p>
 <aside>
 <strong>Nota:</strong> Na primeira inicialização, o sCollect mostra um texto de boas-vindas com essas informações. Ative &laquo;Não mostrar novamente&raquo; para ocultá-lo no futuro.
 </aside>
 
-<!-- ============================================================ -->
+
 <h2 id="playlists">7. Playlists</h2>
 
 <h3>Playlists padrão</h3>
 <p>Para criar uma nova playlist, use o <strong>+</strong> ao lado do título &laquo;Playlists&raquo; na barra lateral; para criar uma pasta de playlists, use o ícone de pasta ao lado. As entradas são adicionadas arrastando-as da lista de mídia ou pelo menu de contexto &laquo;Adicionar à playlist&raquo;; &laquo;Remover somente da playlist&raquo; as retira novamente sem excluí-las da biblioteca.</p>
-<!-- playlist-kategorie -->
+
 <p>Uma playlist dentro de uma categoria (por ex., Áudio) aceita apenas entradas dessa categoria. Para uma lista mista, use as playlists na parte inferior da barra lateral. Ao excluir uma playlist ou uma pasta, o sCollect pede confirmação; uma pasta leva consigo suas playlists, e as entradas propriamente ditas permanecem na biblioteca.</p>
-<!-- playlist-zug -->
+
 <p>Se você arrastar arquivos do <strong>Finder</strong> para uma playlist, eles são primeiro importados &ndash; com diálogo de importação e detecção de duplicatas &ndash; e depois entram na lista; veja <a href="#import">Importar conteúdo</a> (seção 3).</p>
 
-<!-- playlist-rueckgaengig -->
+
 <p>Adicionar e remover podem ser desfeitos com <kbd>&#8984;Z</kbd>; uma entrada removida volta ao seu lugar anterior. O mesmo vale para &laquo;Remover da biblioteca&raquo;: <kbd>&#8984;Z</kbd> recupera a entrada, junto com a capa e seus lugares em todas as playlists.</p>
 
-<!-- playlist-doppelt -->
+
 <h3>Um título várias vezes em uma playlist</h3>
 <p>Se um título já estiver na playlist e você o adicionar novamente, o sCollect pede confirmação &ndash; uma única vez para todos os títulos arrastados ou selecionados, com os respectivos nomes abaixo. <strong>Adicionar mesmo assim</strong> os acrescenta mais uma vez, <strong>Pular</strong> (<kbd>Esc</kbd>) deixa de fora os que já estão lá; os títulos novos entram nos dois casos.</p>
 <p>Cada linha é uma entrada própria: você pode selecionar apenas uma de duas ocorrências iguais e retirá-la com &laquo;Remover somente da playlist&raquo;; a outra permanece.</p>
 
-<!-- playlist-sortieren -->
+
 <h3>Ordenar e a coluna &laquo;N.º&raquo;</h3>
 <p>Cada playlist tem sua própria ordenação, independente da biblioteca e das outras playlists. A coluna <strong>N.º</strong> mostra a posição na playlist, ou seja, a ordem em que os títulos foram adicionados; inicialmente, a playlist está ordenada por ela.</p>
 <p>Um clique em um cabeçalho de coluna ordena por essa coluna, um segundo inverte o sentido; com a tecla Shift pressionada acrescenta-se mais uma coluna, com a tecla Option pressionada retira-se uma. <strong>Um clique em &laquo;N.º&raquo; volta sempre à ordem em que os títulos foram adicionados</strong> &ndash; ordenar altera apenas a exibição, nunca a ordem salva. A reprodução segue a ordem exibida.</p>
 <p>Se uma playlist já tiver uma seleção de colunas própria, mostre &laquo;N.º&raquo; clicando com o botão direito nos cabeçalhos de coluna e escolhendo <strong>Personalizar colunas&hellip;</strong>.</p>
 
-<!-- playlist-spaltenbrowser -->
+
 <h3>Navegador de colunas nas playlists</h3>
 <p>Também em uma playlist é possível mostrar o navegador de colunas &ndash; com o botão à direita, acima da lista, ou com <strong>Visualizar &gt; Mostrar/ocultar navegador de colunas</strong> (<kbd>&#8984;B</kbd>). Ele mostra apenas valores dos títulos dessa playlist. Cada playlist memoriza sua seleção no navegador; já o fato de ele estar visível ou não vale para todas as listas em conjunto.</p>
 
@@ -435,7 +438,7 @@
 <strong>Dica:</strong> Ao criar uma nova biblioteca, o sCollect gera automaticamente quatro playlists inteligentes: &laquo;Adicionados recentemente&raquo;, &laquo;Reproduzidos recentemente&raquo;, &laquo;Mais bem avaliados&raquo; e &laquo;Mais reproduzidos&raquo;.
 </aside>
 
-<!-- ============================================================ -->
+
 <h2 id="external">8. Discos externos</h2>
 
 <h3>Biblioteca em um disco externo</h3>
@@ -447,10 +450,10 @@
 
 <h3>Pastas personalizadas por tipo de mídia</h3>
 <p>Em <strong>Ajustes &gt; Biblioteca</strong>, você pode atribuir uma pasta independente a cada tipo de mídia. Por exemplo, os filmes podem ficar em um grande disco rígido externo enquanto a música permanece no SSD interno rápido.</p>
-<!-- ordner-nicht-erreichbar -->
+
 <p><strong>Quando uma dessas pastas está inacessível</strong> &ndash; o disco está desconectado, o volume de rede não está montado &ndash;, o sCollect <em>bloqueia</em> esse tipo de mídia: nada é gravado, movido nem sincronizado, e as entradas ficam inalteradas. É intencional. Caso contrário, um tipo de mídia sem sua pasta acabaria, em silêncio, na pasta padrão, e depois a biblioteca não saberia mais a que lugar os arquivos pertencem.</p>
 <p>Uma faixa de aviso indica os tipos afetados, e nos ajustes a pasta aparece com a indicação de que neste momento está inacessível. Conecte o disco novamente e o bloqueio é suspenso por si só.</p>
-<!-- umbiegen -->
+
 <p><strong>Redirecionar:</strong> Se você escolher para um tipo de mídia <em>outra</em> pasta enquanto a anterior está inacessível, nada pode ser movido &ndash; os arquivos não estão ao alcance. O sCollect propõe então redirecionar as <em>entradas</em> para a nova pasta: procura ali cada arquivo, primeiro pelo caminho anterior, depois pelo nome do arquivo, e antes lhe mostra uma pré-visualização com três números &ndash; encontrados pelo caminho, encontrados pelo nome, continuam sem arquivo. <strong>Redirecionar altera apenas a biblioteca, nem um único arquivo.</strong></p>
 
 <h3>Encontrar arquivos ausentes</h3>
@@ -458,13 +461,13 @@
 
 <p>Se houver cópias registradas para o master, a janela também mostra um botão <strong>Restaurar das cópias</strong>. O sCollect pesquisa em todas as cópias acessíveis pelos arquivos ausentes e copia o primeiro resultado encontrado (tamanho > 0) de volta para o master. Útil após uma exclusão acidental quando o Lixo já foi esvaziado &ndash; enquanto pelo menos uma cópia ainda tiver o arquivo, ele pode ser recuperado.</p>
 
-<!-- fehlende-markieren -->
+
 <h3>Marcar e mostrar as entradas ausentes</h3>
 <p><strong>Arquivo &gt; Biblioteca &gt; Marcar itens ausentes</strong> verifica uma vez todo o acervo e salva o resultado na entrada. A partir daí a lista lê apenas essa marca &ndash; não verifica nada de novo enquanto você percorre a lista, porque em uma biblioteca grande isso demoraria demais. Uma entrada sem arquivo recebe um <strong>triângulo de aviso laranja</strong> antes do título.</p>
 <p><strong>Um disco desconectado não significa que o arquivo esteja ausente.</strong> O que não está conectado o sCollect também não pode verificar. Essas entradas são contadas à parte no relatório como <em>não verificáveis</em>, e a marca delas fica como estava &ndash; não é colocada nem retirada. Por isso o relatório depois da execução indica as entradas verificadas, ausentes e não verificáveis, e ainda quantas marcas foram colocadas e quantas foram retiradas.</p>
 <p><strong>Arquivo &gt; Biblioteca &gt; Mostrar itens ausentes</strong> (<kbd>&#8679;&#8984;F</kbd>) é uma alternância: a lista passa a mostrar apenas as entradas marcadas. Uma faixa acima da lista explica por que ela está tão curta e oferece no mesmo lugar a saída com <strong>Sair da visualização de ausentes</strong>. Enquanto nenhuma marca estiver colocada, a alternância fica esmaecida.</p>
 <p>A visualização <strong>congela ao ser ativada</strong> quais entradas mostra. Se você vincular de novo uma delas, a linha permanece e recebe uma <strong>marca de seleção verde</strong> &ndash; assim você não perde a visão geral do que já resolveu enquanto vai trabalhando. O contador na faixa mostra as duas coisas: quantas continuam sem arquivo e quantas estão resolvidas. Na visualização normal a marcação desaparece.</p>
-<!-- zurueckholen -->
+
 <p>Se você tiver <strong>movido um arquivo para fora da pasta de mídia</strong> no Finder, o sCollect muitas vezes ainda o encontra por meio do marcador &ndash; nesse caso ele não está ausente, mas fora da biblioteca. O relatório indica essas entradas em uma linha própria, e <strong>Recuperar</strong> move os arquivos de volta ao seu lugar. Se o sCollect não puder remover nada no local alheio, ele os copia em vez disso.</p>
 
 <h3>Encontrar novamente um arquivo ausente</h3>
@@ -474,7 +477,7 @@
 <p>No menu de contexto de uma entrada sem arquivo aparecem <strong>apenas os itens que também funcionam</strong>. Reproduzir, mostrar no Finder, converter, apagar do disco e tudo o mais que precise do arquivo nem sequer é oferecido.</p>
 <p>Se você selecionar <strong>várias</strong> entradas e houver entre elas algumas sem arquivo, o editor em lote as pula e indica o número delas acima dos campos; ele abre com as restantes. Se o arquivo estiver ausente em todas, ele não abre.</p>
 
-<!-- ordnersuche -->
+
 <h3>Procurar arquivos ausentes em uma pasta</h3>
 <p>Em vez de procurar cada arquivo individualmente, você pode indicar ao sCollect uma pasta onde estão os arquivos ausentes. Há três caminhos para isso: o menu de contexto <strong>Procurar ausentes na pasta&hellip;</strong> para as entradas selecionadas, <strong>Procurar na pasta&hellip;</strong> no relatório de <strong>Marcar itens ausentes</strong> para todas as marcadas, e <strong>Buscar na pasta&hellip;</strong> na janela <strong>Arquivos ausentes</strong>.</p>
 <ul>
@@ -493,7 +496,7 @@
 <li><strong>Ao excluir:</strong> Também em compartilhamentos de rede, os arquivos excluídos vão primeiro para o Lixo do app (a pasta <code>.Deleted</code> na respectiva pasta de mídia) e podem ser restaurados de lá. Só são removidos permanentemente ao esvaziar o Lixo do app (veja a seção 2). Como compartilhamentos geralmente não têm Lixo do sistema, eles são então excluídos diretamente.</li>
 </ul>
 
-<!-- ============================================================ -->
+
 <h2 id="settings">9. Ajustes</h2>
 <p>Abra os ajustes por meio de <strong>sCollect &gt; Ajustes&hellip;</strong> (<kbd>&#8984;,</kbd>). Os ajustes estão divididos em várias abas:</p>
 
@@ -508,7 +511,7 @@
 <li><strong>Pasta de mídia padrão:</strong> A pasta principal onde os arquivos importados são armazenados.</li>
 <li><strong>Pastas por tipo de mídia:</strong> Pastas personalizadas opcionais para tipos de mídia específicos.</li>
 <li><strong>Local da biblioteca:</strong> Mostra o local atual e permite alterá-lo.</li>
-<!-- einstellungen-ansicht -->
+
 <li><strong>Importação:</strong> Como os arquivos importados são tratados (veja &laquo;Modos de importação&raquo;).</li>
 <li><strong>Visualização &gt; Máx. entradas por pasta:</strong> A partir desse número de valores, o navegador de colunas forma nós por letra inicial. Afeta apenas a exibição, não as pastas no disco.</li>
 </ul>
@@ -518,7 +521,7 @@
 
 <h3>Rótulos de campos</h3>
 <p>Altere os rótulos das colunas (por ex., &laquo;Artista&raquo; para &laquo;Autor&raquo; em e-books) globalmente ou por tipo de mídia.</p>
-<!-- feldbezeichner-various -->
+
 <p>Para muitos tipos de mídia o sCollect já traz nomes adequados: em um audiolivro &laquo;Artista&raquo; se chama automaticamente <em>Autor</em>, em um longa-metragem &laquo;Álbum&raquo; se chama <em>Estúdio</em>. Na categoria <strong>Diversos</strong> os nomes seguem a área de coleção:</p>
 <ul>
 <li><strong>Moeda:</strong> Casa da moeda, País, Série, Gravador, Catálogo</li>
@@ -531,6 +534,7 @@
 <ul>
 <li><strong>Exportação para o Apple Music:</strong> Ajustes para a exportação de playlists para o Apple Music.</li>
 <li><strong>Janela de vídeo sempre à frente:</strong> A janela de vídeo permanece acima de todas as outras janelas.</li>
+<li><strong>Pausar o vídeo ao minimizar:</strong> Pausa a reprodução enquanto a janela de vídeo estiver minimizada e a retoma ao restaurá-la.</li>
 <li><strong>Volume em câmera lenta/quadro a quadro:</strong> Redução de volume em dB durante os modos câmera lenta e quadro a quadro.</li>
 <li><strong>Reprodutor externo para codecs não suportados:</strong> Reprodutor preferido para codecs que o AVFoundation não consegue decodificar (MKV, AVI, AV1 sem decodificador de hardware, DivX etc.). VLC, IINA e MPV são detectados; se nenhum estiver instalado, o app padrão é usado.</li>
 </ul>
@@ -541,7 +545,7 @@
 <h3>Idioma</h3>
 <p>O idioma do app segue os Ajustes do Sistema. Para alterá-lo: Ajustes do Sistema → Geral → Idioma e Região e, lá, role até a seção “Aplicativos”, no final.</p>
 
-<!-- ============================================================ -->
+
 <h2 id="convert">10. Converter formato</h2>
 
 <h3>Converter áudio ou extrair áudio de um vídeo</h3>
@@ -560,13 +564,13 @@
 
 <aside><strong>Dica:</strong> Todos os ajustes de conversão são salvos por biblioteca &ndash; na próxima vez que o diálogo for aberto, sua última configuração já estará pré-selecionada.</aside>
 
-<!-- ============================================================ -->
+
 <h2 id="sync">11. Sincronização (Master/Cópia)</h2>
 
 <h3>Conceito</h3>
 <p>O sCollect pode sincronizar várias bibliotecas entre si: uma biblioteca atua como <em>master</em>, uma ou mais outras como <em>cópias</em>. As alterações no master são refletidas automaticamente nas cópias conectadas, com pastas de mídia e caminhos próprios em cada cópia.</p>
 
-<!-- kein-backup -->
+
 <h3>A sincronização não é um backup</h3>
 <p><strong>Uma cópia protege da ausência, não da perda.</strong> Cada alteração é espelhada &ndash; inclusive a exclusão: o que no master vai para o lixo vai também para o lixo de cada cópia, e com a remoção definitiva desaparece em todo lugar. O mesmo vale para um campo substituído por engano: as cópias assumem o valor novo, não o antigo. Um backup precisa, por isso, estar <em>fora</em> dessa cadeia &ndash; por exemplo o Time Machine ou uma cópia para uma mídia que o sCollect não conhece.</p>
 
@@ -632,10 +636,10 @@
 
 <aside><strong>Dica:</strong> Se você atualiza regularmente uma cópia com uma ferramenta externa (por ex. FreeFileSync), basta executar <strong>Projetar</strong> na cópia após cada espelhamento &ndash; a fila pendente é redefinida automaticamente.</aside>
 
-<!-- ============================================================ -->
+
 <h2 id="shortcuts">12. Atalhos de teclado</h2>
 
-<!-- kuerzel-stand-2109 -->
+
 
 <h3>Geral</h3>
 <table class="shortcut-table">
@@ -647,10 +651,11 @@
 <tr><td><kbd>&#8984;Z</kbd></td><td>Desfazer</td></tr>
 <tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>Refazer</td></tr>
 <tr><td><kbd>&#8984;&#9003;</kbd></td><td>Para o lixo</td></tr>
+<tr><td><kbd>&#8679;&#8984;T</kbd></td><td>Lixo do app</td></tr>
 <tr><td><kbd>&#8679;&#8984;I</kbd></td><td>Inverter seleção</td></tr>
 <tr><td><kbd>&#8679;&#8984;E</kbd></td><td>Exportar seleção como arquivo iTunes</td></tr>
 <tr><td><kbd>&#8679;&#8984;D</kbd></td><td>Mostrar itens duplicados</td></tr>
-<!-- kuerzel-fehlende --><tr><td><kbd>&#8679;&#8984;F</kbd></td><td>Mostrar itens ausentes</td></tr>
+<tr><td><kbd>&#8679;&#8984;F</kbd></td><td>Mostrar itens ausentes</td></tr>
 <tr><td><kbd>&#8997;&#8984;N</kbd></td><td>Nova playlist inteligente</td></tr>
 <tr><td><kbd>&#8984;,</kbd></td><td>Ajustes</td></tr>
 <tr><td><kbd>&#8984;/</kbd></td><td>Ajuda sCollect</td></tr>
@@ -660,7 +665,7 @@
 <table class="shortcut-table">
 <tr><td><kbd>&#8984;1</kbd> &hellip; <kbd>&#8984;4</kbd></td><td>Escolher categoria: Áudio, Livro, Filme, Diversos</td></tr>
 <tr><td><kbd>&#8984;B</kbd></td><td>Mostrar/ocultar navegador de colunas</td></tr>
-<!-- kuerzel-optimale-breite --><tr><td><kbd>&#8963;&#8984;B</kbd></td><td>Largura ideal</td></tr>
+<tr><td><kbd>&#8963;&#8984;B</kbd></td><td>Largura ideal</td></tr>
 <tr><td><kbd>&#8963;&#8984;S</kbd></td><td>Mostrar/ocultar barra lateral</td></tr>
 </table>
 

@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manuel de sCollectPlay Lite</title>
+<meta name="description" content="Manuel de sCollectPlay Lite">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/scollectplay/lite/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/scollectplay/lite/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/scollectplay/lite/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/scollectplay/lite/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/scollectplay/lite/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/scollectplay/lite/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/scollectplay/lite/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/scollectplay/lite/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/scollectplay/lite/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/scollectplay/lite/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/scollectplay/lite/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/scollectplay/lite/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/scollectplay/lite/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../../fr/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../../fr/#apps">Apps</a>
+    <details class="sprache"><summary aria-label="Langue">Français</summary><div><a href="../../../../scollectplay/lite/help/" lang="en">English</a><a href="../../../../de/scollectplay/lite/help/" lang="de">Deutsch</a><a href="../../../../es/scollectplay/lite/help/" lang="es">Español</a><a href="../../../../fr/scollectplay/lite/help/" aria-current="true" lang="fr">Français</a><a href="../../../../it/scollectplay/lite/help/" lang="it">Italiano</a><a href="../../../../ja/scollectplay/lite/help/" lang="ja">日本語</a><a href="../../../../ko/scollectplay/lite/help/" lang="ko">한국어</a><a href="../../../../pt-br/scollectplay/lite/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../../pt-pt/scollectplay/lite/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../../ru/scollectplay/lite/help/" lang="ru">Русский</a><a href="../../../../zh-hans/scollectplay/lite/help/" lang="zh-Hans">简体中文</a><a href="../../../../zh-hant/scollectplay/lite/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../../../../fr/#apps">← Toutes les apps →</a></p>
+  <article class="hilfe">
+
+
+<h1>Manuel de sCollectPlay Lite</h1>
+<p class="subtitle">Lecteur pour les médiathèques sCollect, les dossiers et les exports XML d&rsquo;iTunes</p>
+
+<nav class="toc">
+<h2>Sommaire</h2>
+<ol>
+<li><a href="#start">Premiers pas</a></li>
+<li><a href="#sources">Choisir une source</a></li>
+<li><a href="#browse">Parcourir la médiathèque</a></li>
+<li><a href="#playback">Lecture</a></li>
+<li><a href="#playlists">Playlists</a></li>
+<li><a href="#delete">Supprimer des fichiers multimédias</a></li>
+<li><a href="#settings">Réglages</a></li>
+<li><a href="#shortcuts">Raccourcis clavier</a></li>
+</ol>
+</nav>
+
+
+<h2 id="start">1. Premiers pas</h2>
+
+<h3>Qu&rsquo;est-ce que sCollectPlay Lite ?</h3>
+<p>sCollectPlay Lite est une application compagnon de <strong>sCollect</strong>. Elle est spécialisée dans la seule lecture : pas d&rsquo;import, pas de modification des métadonnées, pas de synchronisation. En contrepartie, elle lit trois sources : des dossiers, le XML iTunes/Apple Music et les médiathèques sCollect.</p>
+
+<h3>Au premier lancement</h3>
+<p>Au premier lancement, sCollectPlay Lite affiche une fenêtre de bienvenue avec des indications sur la lecture des formats particuliers (voir section 4). Ensuite apparait le sélecteur de source, où vous pouvez choisir une médiathèque.</p>
+
+<aside>
+<strong>Astuce :</strong> sCollectPlay Lite est compatible avec macOS 14.0 ou plus récent et disponible en 24 langues.
+</aside>
+
+
+<h2 id="sources">2. Choisir une source</h2>
+
+<p>sCollectPlay Lite connait trois types de sources, que vous pouvez ouvrir au démarrage ou plus tard via le menu <strong>Fichier</strong> :</p>
+
+<h3>Scanner un dossier</h3>
+<p>Choisissez un dossier quelconque &ndash; sCollectPlay Lite le parcourt récursivement à la recherche de fichiers multimédias et lit les métadonnées directement dans les fichiers (AVFoundation pour l&rsquo;audio et la vidéo, EbookTagKit pour EPUB et PDF). C&rsquo;est la manière la plus simple de commencer sans médiathèque sCollect.</p>
+<ul>
+<li><strong>Une source par session :</strong> Dans sCollectPlay Lite, un nouveau dossier remplace le précédent, et rien n&rsquo;est restauré au lancement suivant de l&rsquo;app.</li>
+<li><strong>Détection MKV :</strong> Les fichiers portant l&rsquo;extension <code>.mp4</code> qui sont en réalité des MKV sont reconnus grâce à leur signature EBML et marqués comme tels.</li>
+<li><strong>Classement selon la durée :</strong> Un dossier ne révèle pas si un fichier est de la musique ou un livre audio. sCollectPlay Lite classe donc l&rsquo;audio et la vidéo selon leur durée &ndash; audio : jusqu&rsquo;à 10, 10&ndash;30, 30&ndash;60 et plus de 60 min ; vidéo : jusqu&rsquo;à 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 et plus de 210 min. Les e-books et les PDF sont reconnus à leur extension de fichier.</li>
+</ul>
+
+<h3>Médiathèque sCollect</h3>
+<p>Choisissez le dossier principal d&rsquo;une médiathèque sCollect (le dossier qui contient le paquet <code>.scollect</code> ; pour les médiathèques plus anciennes, le dossier contenant <code>settings.json</code>). sCollectPlay Lite lit directement les fichiers de la médiathèque, les playlists et les réglages &ndash; y compris les libellés de champs personnalisés et les playlists intelligentes. Le choix d&rsquo;une médiathèque remplace un scan de dossier actif. Vous pouvez aussi ouvrir la médiathèque en double-cliquant sur le paquet <code>.scollect</code> dans le Finder.</p>
+
+<h3>XML iTunes/Apple Music</h3>
+<p>Choisissez un fichier <code>Library.xml</code> ou un paquet <code>.musiclibrary</code>. sCollectPlay Lite analyse les pistes et les listes de lecture (standard et intelligentes). Les playlists système (Master, Distinguished Kind) sont ignorées. sCollectPlay Lite reprend les types de média du XML lui-même : Musique, Livre audio, Podcast, Vidéo personnelle, Long métrage, Série et Clip vidéo. À l&rsquo;ouverture, le dossier de médias correspondant vous est demandé une seule fois, afin que sCollectPlay Lite puisse accéder aux fichiers.</p>
+
+<aside>
+<strong>Note :</strong> Un seul type de source est chargé à la fois. Chaque source nouvellement ouverte remplace la précédente, y compris un dossier supplémentaire. La barre de titre de la fenêtre indique le type et le nom de la source, par exemple Dossier « Musique » ou Bibliothèque « sCollect » ; placez le pointeur sur le titre pour afficher le chemin complet.
+</aside>
+
+<p>sCollectPlay Lite ne mémorise aucune source : au lancement suivant, le sélecteur de source réapparait.</p>
+
+
+<h2 id="browse">3. Parcourir la médiathèque</h2>
+
+<h3>Barre latérale</h3>
+<p>La barre latérale affiche les catégories et les types de médias sous forme d&rsquo;accordéon à deux niveaux (par ex. Audio &gt; Musique / Livre audio / Podcast) ainsi que toutes les playlists chargées. Lorsque vous passez d&rsquo;un type de médias ou d&rsquo;une playlist à l&rsquo;autre, la liste des médias à droite se met à jour.</p>
+
+<h3>Liste des médias</h3>
+<ul>
+<li><strong>Colonnes :</strong> Les colonnes affichées sont fixes dans sCollectPlay Lite.</li>
+<li><strong>Trier :</strong> Un clic sur un en-tête de colonne trie selon cette colonne ; un nouveau clic inverse l&rsquo;ordre.</li>
+<li><strong>Largeur des colonnes :</strong> En faisant glisser la ligne de séparation dans l&rsquo;en-tête de colonne.</li>
+</ul>
+
+<h3>Recherche</h3>
+<p>Le champ de recherche de la barre d&rsquo;outils filtre par titre, artiste, album, genre et d&rsquo;autres champs. Dans les playlists, la recherche s&rsquo;applique en outre au contenu de la playlist.</p>
+
+
+<h2 id="playback">4. Lecture</h2>
+
+<h3>Lecture audio</h3>
+<p>Sélectionnez une entrée audio et appuyez sur <kbd>Espace</kbd> ou sur le bouton de lecture dans la barre du lecteur. La barre du lecteur affiche :</p>
+<ul>
+<li>Pochette, titre et artiste</li>
+<li>Barre de progression pour avancer ou reculer</li>
+<li>Contrôle du volume</li>
+<li>Lecture aléatoire et mode de répétition</li>
+<li>Pour les vidéos en plus : ralenti et avance image par image</li>
+</ul>
+
+<h3>Lecture vidéo</h3>
+<p>Les films s&rsquo;ouvrent dans une fenêtre vidéo séparée. Vous pouvez changer de piste audio et de sous-titres dans le menu <strong>Lecture</strong>. Avec <kbd>&#8984;&#8963;F</kbd>, vous passez en mode plein écran.</p>
+
+<h3>Lecture externe</h3>
+<p>Certains formats ne sont pas pris en charge directement par macOS ou AVFoundation. sCollectPlay Lite le détecte et ouvre ces fichiers automatiquement dans un lecteur externe :</p>
+<ul>
+<li><strong>Formats vidéo particuliers :</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
+<li><strong>Codecs modernes :</strong> AV1 dans MP4 (sur des Mac plus anciens sans décodeur matériel)</li>
+<li><strong>Audio haute résolution :</strong> DSD (DFF, DSF)</li>
+<li><strong>Autres formats audio :</strong> OGG Vorbis, WMA</li>
+</ul>
+<p>Le lecteur préféré est détecté automatiquement : <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (dans cet ordre). Vous pouvez définir votre choix sous <strong>Réglages &gt; Lecture &gt; Lecteur vidéo externe</strong>. Si aucun de ces lecteurs n&rsquo;est installé, l&rsquo;application par défaut du format est utilisée &ndash; nous recommandons <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuit, open source).</p>
+
+<h3>Commandes de lecture</h3>
+<table class="shortcut-table">
+<tr><td><kbd>Espace</kbd></td><td>Démarrer la lecture / Pause</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>Avancer de 10 secondes</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>Reculer de 10 secondes</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>Piste suivante</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>Piste précédente</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>Plus fort</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>Moins fort</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>Activer/désactiver le plein écran vidéo</td></tr>
+</table>
+
+<h3>Modes de lecture</h3>
+<ul>
+<li><strong>Lecture aléatoire :</strong> Lit la liste en cours dans un ordre aléatoire.</li>
+<li><strong>Répétition (liste) :</strong> Répète l&rsquo;intégralité de la liste après le dernier titre.</li>
+<li><strong>Répétition (titre) :</strong> Répète le titre en cours indéfiniment.</li>
+</ul>
+
+<h3>Export vers Apple Music</h3>
+<p>Les playlists ou une sélection de pistes peuvent être envoyées à Apple Music :</p>
+<ul>
+<li><strong>Menu contextuel de la barre latérale :</strong> Clic droit sur une playlist &gt; <em>Envoyer la playlist à Apple Music</em>.</li>
+<li><strong>Menu contextuel des pistes :</strong> <em>Envoyer comme liste de lecture à Apple Music</em> (les pistes sélectionnées comme &laquo;Sélection&raquo;).</li>
+<li><strong>Menu Fichier :</strong> <em>Envoyer la playlist à Apple Music&hellip;</em> (actif lorsqu&rsquo;une playlist est sélectionnée).</li>
+</ul>
+<p>Techniquement, un fichier M3U8 est écrit et transmis à Music.app. Les playlists existantes dans Apple Music peuvent éventuellement être mises à jour automatiquement &ndash; le réglage correspondant se trouve dans les réglages.</p>
+
+
+<h2 id="playlists">5. Playlists</h2>
+
+<p>sCollectPlay Lite affiche toutes les playlists de la médiathèque chargée &ndash; aussi bien les playlists standard que les playlists intelligentes. Les playlists intelligentes sont réévaluées selon les critères enregistrés dès que l&rsquo;ensemble des éléments change. Aucune modification n&rsquo;est possible ; c&rsquo;est le rôle de sCollect.</p>
+<p>Lors du chargement d&rsquo;une médiathèque XML, les playlists standard et intelligentes sont également importées. Les playlists système (Master, Distinguished Kind) sont ignorées.</p>
+
+
+<h2 id="delete">6. Supprimer des fichiers multimédias</h2>
+
+<p>Le menu contextuel des pistes contient l&rsquo;entrée <strong>Supprimer le fichier multimédia</strong>. Par défaut, une boite de dialogue de confirmation apparait au préalable (elle peut être désactivée dans les réglages). Le fichier est déplacé vers la corbeille et l&rsquo;entrée est retirée de la médiathèque.</p>
+
+<aside>
+<strong>Partages réseau :</strong> Les partages SMB ou NFS n&rsquo;ont en général pas de corbeille. sCollectPlay Lite le détecte et demande explicitement confirmation avant la suppression &ndash; le fichier est supprimé définitivement et ne peut pas être restauré. Vous pouvez annuler l&rsquo;opération ; dans ce cas, l&rsquo;entrée et le fichier restent inchangés.
+</aside>
+
+
+<h2 id="settings">7. Réglages</h2>
+<p>Ouvrez les réglages via <strong>sCollectPlay Lite &gt; Réglages&hellip;</strong> (<kbd>&#8984;,</kbd>). Ils sont repartis en plusieurs onglets ; certains champs sont en lecture seule (valeurs issues de la médiathèque sCollect chargée ou valeurs par défaut) &ndash; ils montrent ce qui serait disponible dans sCollect.</p>
+
+<h3>Général</h3>
+<ul>
+<li><strong>Confirmer la suppression :</strong> Demander avant de déplacer vers la corbeille.</li>
+</ul>
+
+<h3>Lecture</h3>
+<ul>
+<li><strong>Export Apple Music :</strong> Toujours mettre à jour la playlist existante (sans demander).</li>
+<li><strong>Fenêtre vidéo toujours au premier plan :</strong> La fenêtre vidéo reste en permanence au-dessus de toutes les autres fenêtres.</li>
+<li><strong>Mettre la vidéo en pause quand la fenêtre est minimisée :</strong> Met la lecture en pause tant que la fenêtre vidéo est minimisée et la reprend lorsqu’elle est restaurée.</li>
+<li><strong>Volume en ralenti / image par image :</strong> Réduction du volume en dB pendant les modes ralenti et image par image.</li>
+<li><strong>Lecteur vidéo externe :</strong> Lecteur préféré pour les codecs qu&rsquo;AVFoundation ne peut pas lire (voir section 4). VLC, IINA et MPV sont détectés.</li>
+</ul>
+
+<h3>Statistiques</h3>
+<p>Compteurs sur la médiathèque chargée (nombre d&rsquo;éléments par type de médias, durée totale, espace occupé).</p>
+
+<h3>Langue</h3>
+<p>sCollectPlay Lite est disponible en 24 langues. Choisissez votre langue préférée &ndash; la nouvelle langue sera active après le redémarrage de l&rsquo;application. Le redémarrage peut être déclenché automatiquement via le bouton de l&rsquo;onglet Langue.</p>
+
+<aside>
+<strong>Note :</strong> Les champs désactivés montrent des réglages disponibles dans sCollect (l&rsquo;application principale) mais absents de sCollectPlay Lite &ndash; par exemple la modification des tags, les modes d&rsquo;import ou les options de synchronisation.
+</aside>
+
+
+<h2 id="shortcuts">8. Raccourcis clavier</h2>
+
+<h3>Général</h3>
+<table class="shortcut-table">
+<tr><td><kbd>&#8984;,</kbd></td><td>Ouvrir les réglages</td></tr>
+<tr><td><kbd>&#8984;&#8679;O</kbd></td><td>Choisir la médiathèque sCollect&hellip;</td></tr>
+<tr><td><kbd>&#8984;Q</kbd></td><td>Quitter sCollectPlay Lite</td></tr>
+</table>
+
+<h3>Lecture</h3>
+<table class="shortcut-table">
+<tr><td><kbd>Espace</kbd></td><td>Lecture / Pause</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>Avancer de 10 secondes</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>Reculer de 10 secondes</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>Piste suivante</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>Piste précédente</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>Augmenter le volume</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>Diminuer le volume</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>Activer/désactiver le plein écran vidéo</td></tr>
+</table>
+
+
+  </article>
+  <p class="zurueck"><a href="../../../../fr/#apps">← Toutes les apps →</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../../impressum.html">Mentions légales</a><a href="../../../../privacy.html">Confidentialité du site</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Handbuch zu sCollectPlay</title>
+<meta name="description" content="Handbuch zu sCollectPlay">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/scollectplay/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/scollectplay/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/scollectplay/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/scollectplay/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/scollectplay/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/scollectplay/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/scollectplay/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/scollectplay/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/scollectplay/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/scollectplay/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/scollectplay/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/scollectplay/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/scollectplay/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../de/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../de/#apps">Apps</a>
+    <details class="sprache"><summary aria-label="Sprache">Deutsch</summary><div><a href="../../../scollectplay/help/" lang="en">English</a><a href="../../../de/scollectplay/help/" aria-current="true" lang="de">Deutsch</a><a href="../../../es/scollectplay/help/" lang="es">Español</a><a href="../../../fr/scollectplay/help/" lang="fr">Français</a><a href="../../../it/scollectplay/help/" lang="it">Italiano</a><a href="../../../ja/scollectplay/help/" lang="ja">日本語</a><a href="../../../ko/scollectplay/help/" lang="ko">한국어</a><a href="../../../pt-br/scollectplay/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../pt-pt/scollectplay/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../ru/scollectplay/help/" lang="ru">Русский</a><a href="../../../zh-hans/scollectplay/help/" lang="zh-Hans">简体中文</a><a href="../../../zh-hant/scollectplay/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../../../de/#apps">← Alle Apps →</a></p>
+  <article class="hilfe">
+
+
+<h1>Handbuch zu sCollectPlay</h1>
+<p class="subtitle">Player für sCollect-Mediatheken, Ordner und iTunes-XML-Exporte</p>
+
+<nav class="toc">
+<h2>Inhalt</h2>
+<ol>
+<li><a href="#start">Erste Schritte</a></li>
+<li><a href="#sources">Quellen wählen</a></li>
+<li><a href="#browse">Mediathek durchsuchen</a></li>
+<li><a href="#playback">Wiedergabe</a></li>
+<li><a href="#playlists">Playlists</a></li>
+<li><a href="#delete">Mediendateien löschen</a></li>
+<li><a href="#settings">Einstellungen</a></li>
+<li><a href="#shortcuts">Tastaturkürzel</a></li>
+</ol>
+</nav>
+
+
+<h2 id="start">1. Erste Schritte</h2>
+
+<h3>Was ist sCollectPlay?</h3>
+<p>sCollectPlay ist eine Companion-App zu <strong>sCollect</strong>. Sie ist auf das reine Abspielen spezialisiert: kein Importieren, kein Bearbeiten von Metadaten, keine Synchronisation. Dafür liest sie aus drei Quellen: Ordnern, iTunes-/Apple-Music-XML und sCollect-Mediatheken.</p>
+
+<h3>Beim ersten Start</h3>
+<p>Beim ersten Start zeigt sCollectPlay einen Begrüßungs-Dialog mit Hinweisen zur Wiedergabe von Sonderformaten (siehe Abschnitt 4). Anschließend erscheint die Quellauswahl, in der du eine Mediathek wählen kannst.</p>
+
+<aside>
+<strong>Tipp:</strong> sCollectPlay ist mit macOS 14.0 oder neuer kompatibel und in 24 Sprachen verfügbar.
+</aside>
+
+
+<h2 id="sources">2. Quellen wählen</h2>
+
+<p>sCollectPlay kennt drei Quelltypen, die du beim Start oder später über das Menü <strong>Ablage</strong> öffnen kannst:</p>
+
+<h3>Ordner scannen</h3>
+<p>Wähle einen beliebigen Ordner aus &ndash; sCollectPlay durchsucht ihn rekursiv nach Mediendateien und liest die Metadaten direkt aus den Dateien (AVFoundation für Audio/Video, EbookTagKit für EPUB/PDF). Das ist der einfachste Weg, ohne sCollect-Mediathek zu starten.</p>
+<ul>
+
+<li><strong>Akkumulierend:</strong> Mehrere Ordner können nacheinander hinzugefügt werden &ndash; die Inhalte werden zusammengeführt. Beim nächsten App-Start werden alle bisherigen Scan-Ordner automatisch wiederhergestellt.</li>
+
+
+<li><strong>MKV-Erkennung:</strong> Dateien mit der Endung <code>.mp4</code>, die in Wirklichkeit MKV sind, werden anhand der EBML-Signatur erkannt und gesondert markiert.</li>
+<li><strong>Einteilung nach Spieldauer:</strong> Ein Ordner verrät nicht, ob eine Datei Musik oder ein Hörbuch ist. Audio und Video ordnet sCollectPlay deshalb nach ihrer Länge ein &ndash; Audio: bis 10, 10&ndash;30, 30&ndash;60 und über 60 Min.; Video: bis 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 und über 210 Min. E-Books und PDFs erkennt es an der Dateiendung.</li>
+</ul>
+
+<p>Mit <strong>Ablage &gt; Gescannte Ordner vergessen&hellip;</strong> kannst du die Liste leeren &ndash; die aktuelle Sitzung bleibt unverändert, beim nächsten App-Start ist die Mediathek leer.</p>
+
+
+<h3>sCollect-Mediathek</h3>
+<p>Wähle den Hauptordner einer sCollect-Mediathek (den Ordner, in dem das <code>.scollect</code>-Bündel liegt; bei älteren Mediatheken der Ordner mit <code>settings.json</code>). sCollectPlay liest die Library-Dateien, Playlists und Settings direkt &ndash; inklusive konfigurierbarer Feldbezeichner und Smart-Playlists. Die Mediathek-Auswahl ersetzt einen vorher aktiven Ordner-Scan. Du kannst die Mediathek auch per Doppelklick auf das <code>.scollect</code>-Bündel im Finder öffnen.</p>
+
+<h3>iTunes/Apple-Music-XML</h3>
+<p>Wähle eine <code>Library.xml</code> oder ein <code>.musiclibrary</code>-Bundle. sCollectPlay parst Tracks und Wiedergabelisten (Standard und Smart). System-Playlists (Master, Distinguished Kind) werden übersprungen. Die Medientypen übernimmt sCollectPlay aus der XML selbst: Musik, Hörbuch, Podcast, Heimvideo, Spielfilm, Serie und Musikvideo. Beim Öffnen wird einmalig der zugehörige Medienordner abgefragt, damit sCollectPlay auf die Dateien zugreifen kann.</p>
+
+<aside>
+<strong>Hinweis:</strong> Es ist immer genau eine Quellenart geladen. Ein Ordner-Scan lässt sich um weitere Ordner erweitern; wer dagegen eine Mediathek oder eine XML öffnet, ersetzt den bisherigen Bestand. Die Titelzeile des Fensters nennt Art und Namen der Quelle, etwa „Ordner „Musik““ oder „Mediathek „sCollect““; zeigst du auf den Titel, erscheint der vollständige Pfad.
+</aside>
+
+
+<h3>Zuletzt benutzte Quellen</h3>
+<p>Im Menü <strong>Ablage</strong> stehen unter jedem Befehl die zuletzt benutzten Quellen dieser Art: <em>Zuletzt gescannte Ordner</em>, <em>Zuletzt verwendete Mediatheken</em> und <em>Zuletzt geöffnete XML-Mediatheken</em>, je bis zu zehn. Ein Klick öffnet die Quelle wieder; ist sie nicht mehr erreichbar, verschwindet sie aus der Liste. <em>Liste löschen</em> leert eine Liste. Beim nächsten Start lädt sCollectPlay die zuletzt benutzte Quelle von selbst. Liegt sie auf einem Netzwerk-Volume, fragt die App vorher nach &ndash; abschaltbar unter <strong>Einstellungen &gt; Allgemein &gt; Beim Start auf Netzwerk-Mediathek hinweisen</strong>.</p>
+
+
+
+
+<h2 id="browse">3. Mediathek durchsuchen</h2>
+
+<h3>Seitenleiste</h3>
+<p>Die Seitenleiste zeigt Kategorien und Medientypen als zwei-stufiges Akkordeon (z.B. Audio &gt; Musik / Hörbuch / Podcast) sowie alle geladenen Playlists. Beim Wechsel zwischen Medientypen oder Playlists aktualisiert sich die Trackliste rechts.</p>
+
+<h3>Trackliste</h3>
+<ul>
+
+<li><strong>Spalten anpassen:</strong> Rechtsklick auf einen Spaltenkopf &gt; <em>Spalten anpassen&hellip;</em> wählt die sichtbaren Spalten. Sichtbarkeit, Reihenfolge und Breiten gelten je Medientyp bzw. Playlist; bei einer sCollect-Mediathek übernimmt sCollectPlay die Spalten von dort als Ausgangswert, deine Änderungen merkt es sich auf diesem Mac.</li>
+
+
+<li><strong>Sortieren:</strong> Klick auf einen Spaltenkopf sortiert nach dieser Spalte; erneutes Klicken kehrt die Reihenfolge um.</li>
+<li><strong>Spaltenbreite:</strong> Durch Ziehen an der Trennlinie im Spaltenkopf.</li>
+
+<li><strong>Spaltenreihenfolge:</strong> Einen Spaltenkopf an eine andere Stelle ziehen.</li>
+
+
+
+<li><strong>Verknüpft:</strong> Diese einblendbare Spalte &ndash; ihr Spaltenkopf zeigt ein Kettensymbol &ndash; kennzeichnet mit einem Häkchen die Objekte, deren Datei außerhalb der Medienordner der sCollect-Mediathek liegt; in sCollect sind das die mit <strong>An Ort belassen</strong> importierten Dateien. Bei gescannten Ordnern und XML-Mediatheken bleibt die Spalte leer, weil es dort keine Medienordner gibt.</li>
+
+</ul>
+
+
+
+<h3>Spaltenbrowser</h3>
+<p>Der Spaltenbrowser blendet über der Trackliste mehrere Auswahlspalten ein &ndash; ähnlich dem Spaltenbrowser in Apple Music. Der Knopf mit den drei Spalten rechts in der Symbolleiste schaltet ihn ein und aus. Er erscheint in den Medientyp-Ansichten; in Playlists bleibt er ausgeblendet.</p>
+<ul>
+<li><strong>Spalten:</strong> Genre, Künstler, Album, Komponist und Gruppierung. Welche davon zu sehen sind, übernimmt sCollectPlay aus den Einstellungen der sCollect-Mediathek &ndash; geändert wird das in sCollect.</li>
+<li><strong>Auswählen:</strong> Ein Klick auf einen Wert filtert danach, <kbd>&#8984;</kbd>-Klick nimmt einen Wert zur Auswahl hinzu oder heraus. Innerhalb einer Spalte wirken mehrere Werte als &laquo;oder&raquo;, zwischen den Spalten als &laquo;und&raquo;. Die oberste Zeile <strong>Alle</strong> hebt die Auswahl der jeweiligen Spalte wieder auf.</li>
+<li><strong>Gruppen:</strong> Hat eine Spalte sehr viele Einträge, fasst sCollectPlay sie nach Anfangsbuchstaben zu aufklappbaren Gruppen zusammen. Ein Klick öffnet eine Gruppe und schließt die vorherige, <kbd>&#8984;</kbd>-Klick lässt mehrere gleichzeitig offen.</li>
+<li><strong>Tastatur:</strong> <kbd>&#8593;</kbd> und <kbd>&#8595;</kbd> bewegen den Cursor durch die Liste &ndash; der Wert unter dem Cursor wird nach einer Sekunde übernommen, <kbd>&#9166;</kbd> übernimmt ihn sofort. <kbd>&#8594;</kbd> öffnet eine Gruppe bzw. springt hinein, <kbd>&#8592;</kbd> schließt sie bzw. springt zur übergeordneten Zeile.</li>
+<li><strong>Größe:</strong> Die Trennlinien zwischen den Spalten und die untere Kante des Browsers lassen sich ziehen.</li>
+</ul>
+<p>Auswahl, Spaltenbreiten und Höhe merkt sich sCollectPlay auf diesem Mac. Die sCollect-Mediathek bleibt dabei unangetastet &ndash; sCollectPlay schreibt nichts in ihre Einstellungen.</p>
+
+
+<h3>Suche</h3>
+<p>Das Suchfeld in der Toolbar filtert nach Titel, Künstler, Album, Genre und weiteren Feldern. In Playlists wird die Suche zusätzlich auf den Playlist-Inhalt angewendet.</p>
+
+
+<h2 id="playback">4. Wiedergabe</h2>
+
+<h3>Audio abspielen</h3>
+<p>Wähle einen Audio-Eintrag und drücke <kbd>Leertaste</kbd> oder den Play-Button in der Player-Leiste. Die Player-Leiste zeigt:</p>
+<ul>
+<li>Cover-Bild, Titel und Künstler</li>
+<li>Zeitleiste zum Vor-/Zurückspulen</li>
+<li>Lautstärkeregler</li>
+<li>Zufallswiedergabe und Wiederholungsmodus</li>
+<li>Bei Videos zusätzlich: Zeitlupe und Einzelbild-Schritt</li>
+</ul>
+
+<h3>Video abspielen</h3>
+<p>Filme werden in einem separaten Videofenster geöffnet. Tonspuren und Untertitel kannst du im Menü <strong>Wiedergabe</strong> umschalten. Mit <kbd>&#8984;&#8963;F</kbd> wechselst du in den Vollbildmodus.</p>
+
+<h3>Externe Wiedergabe</h3>
+<p>Einige Formate werden von macOS bzw. AVFoundation nicht direkt unterstützt. sCollectPlay erkennt das und öffnet diese Dateien automatisch in einem externen Player:</p>
+<ul>
+<li><strong>Video-Sonderformate:</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
+<li><strong>Moderne Codecs:</strong> AV1 in MP4 (auf älteren Macs ohne Hardware-Decoder)</li>
+<li><strong>Hires-Audio:</strong> DSD (DFF, DSF)</li>
+<li><strong>Weitere Audio-Formate:</strong> OGG Vorbis, WMA</li>
+</ul>
+<p>Der bevorzugte Player wird automatisch erkannt: <strong>VLC</strong>, <strong>IINA</strong> oder <strong>MPV</strong> (in dieser Reihenfolge). Du kannst die Auswahl in <strong>Einstellungen &gt; Wiedergabe &gt; Externer Video-Player</strong> festlegen. Wenn keiner dieser Player installiert ist, wird das Standardprogramm für das Format verwendet &ndash; empfehlenswert ist <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (kostenlos, Open Source).</p>
+
+<h3>Wiedergabe-Steuerung</h3>
+<table class="shortcut-table">
+<tr><td><kbd>Leertaste</kbd></td><td>Wiedergabe starten / pausieren</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>10 Sekunden vorspulen</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>10 Sekunden zurückspulen</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>Nächster Titel</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>Vorheriger Titel</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>Lauter</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>Leiser</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>Video-Vollbild ein/aus</td></tr>
+</table>
+
+<h3>Wiedergabemodi</h3>
+<ul>
+<li><strong>Zufallswiedergabe:</strong> Spielt die aktuelle Liste in zufälliger Reihenfolge.</li>
+<li><strong>Wiederholen (Liste):</strong> Wiederholt die gesamte Liste nach dem letzten Titel.</li>
+<li><strong>Wiederholen (Titel):</strong> Wiederholt den aktuellen Titel endlos.</li>
+</ul>
+
+<h3>Apple Music Export</h3>
+<p>Playlists oder eine Auswahl an Tracks können an Apple Music gesendet werden:</p>
+<ul>
+<li><strong>Sidebar-Kontextmenü:</strong> Rechtsklick auf eine Playlist &gt; <em>Playlist an Apple Music senden</em>.</li>
+<li><strong>Track-Kontextmenü:</strong> <em>Als Playlist an Apple Music senden</em> (markierte Tracks als &laquo;Auswahl&raquo;).</li>
+<li><strong>Menü Ablage:</strong> <em>Playlist an Apple Music senden&hellip;</em> (aktiv, wenn eine Playlist gewählt ist).</li>
+</ul>
+<p>Technisch wird eine M3U8-Datei geschrieben und an Music.app übergeben. Bestehende Playlists in Apple Music können optional automatisch aktualisiert werden &ndash; die Einstellung dazu findest du in den Einstellungen.</p>
+
+
+<h2 id="playlists">5. Playlists</h2>
+
+<p>sCollectPlay zeigt alle Playlists der geladenen Mediathek an &ndash; sowohl Standard- als auch Smart-Playlists. Smart-Playlists werden anhand der gespeicherten Kriterien neu ausgewertet, wenn sich der Item-Bestand ändert. Ändern lassen sie sich nur in sCollect; daneben kannst du eigene Playlists anlegen.</p>
+<p>Beim Laden einer XML-Mediathek werden Standard- und Smart-Playlists ebenfalls importiert. System-Playlists (Master, Distinguished Kind) werden übersprungen.</p>
+
+
+<h3>Meine Playlists</h3>
+<p>Unter <strong>Meine Playlists</strong> in der Seitenleiste legst du eigene Playlists an &ndash; gleich, ob ein Ordner, eine XML oder eine Mediathek geladen ist:</p>
+<ul>
+<li><strong>Anlegen:</strong> Das Plus neben <em>Meine Playlists</em> bietet <em>Neue Playlist&hellip;</em> und <em>Neue intelligente Playlist&hellip;</em>.</li>
+<li><strong>Füllen:</strong> <em>Zur Playlist hinzufügen</em> im Kontextmenü der Trackliste fügt die markierten Titel einer Playlist hinzu oder legt eine neue an; in einer eigenen Playlist nimmt <em>Aus Playlist entfernen</em> sie wieder heraus.</li>
+<li><strong>Intelligente Playlists</strong> stellen sich nach Regeln selbst zusammen; <em>Bearbeiten</em> im Kontextmenü ändert die Regeln.</li>
+<li><strong>Umbenennen, löschen, an Apple Music senden:</strong> über das Kontextmenü der Playlist.</li>
+</ul>
+<p>Eigene Playlists speichert sCollectPlay auf diesem Mac, nie in der Mediathek oder der XML; ihre Titel findet es über den Dateipfad wieder, auch nach einem neuen Scan.</p>
+
+
+
+<h2 id="delete">6. Mediendateien löschen</h2>
+
+<p>Im Track-Kontextmenü findest du den Eintrag <strong>Mediendatei löschen</strong>. Standardmäßig erscheint vorher ein Bestätigungsdialog (kann in den Einstellungen abgeschaltet werden). Die Datei wird in den Papierkorb verschoben und der Eintrag aus der Mediathek entfernt.</p>
+
+<aside>
+<strong>Netzwerk-Freigaben:</strong> SMB- oder NFS-Freigaben haben in der Regel keinen Papierkorb. sCollectPlay erkennt das und fragt vor dem Löschen explizit nach &ndash; die Datei wird endgültig entfernt und kann nicht wiederhergestellt werden. Du kannst den Vorgang abbrechen; in dem Fall bleiben Eintrag und Datei unverändert.
+</aside>
+
+
+<h2 id="settings">7. Einstellungen</h2>
+<p>Öffne die Einstellungen über <strong>sCollectPlay &gt; Einstellungen&hellip;</strong> (<kbd>&#8984;,</kbd>). Sie sind in mehrere Tabs unterteilt; einige Felder sind read-only (Werte aus der geladenen sCollect-Mediathek bzw. Standardwerte) &ndash; sie zeigen, was in sCollect verfügbar wäre.</p>
+
+<h3>Allgemein</h3>
+<ul>
+<li><strong>Löschen bestätigen:</strong> Vor dem Verschieben in den Papierkorb nachfragen.</li>
+
+<li><strong>Beim Start auf Netzwerk-Mediathek hinweisen:</strong> Fragt beim Start nach, bevor eine Quelle auf einem Netzwerk-Volume geladen wird.</li>
+
+</ul>
+
+<h3>Wiedergabe</h3>
+<ul>
+<li><strong>Apple-Music-Export:</strong> Bestehende Playlist immer aktualisieren (kein Nachfragen).</li>
+<li><strong>Videofenster immer im Vordergrund:</strong> Das Videofenster bleibt stets über allen anderen Fenstern.</li>
+<li><strong>Video beim Minimieren anhalten:</strong> Hält die Wiedergabe an, solange das Videofenster minimiert ist, und setzt sie beim Wiederherstellen fort.</li>
+<li><strong>Lautstärke bei Zeitlupe/Einzelbild:</strong> Lautstärkereduzierung in dB während Zeitlupe und Einzelbild-Modus.</li>
+<li><strong>Externer Video-Player:</strong> Bevorzugter Player für Codecs, die AVFoundation nicht abspielen kann (siehe Abschnitt 4). Erkannt werden VLC, IINA und MPV.</li>
+</ul>
+
+<h3>Statistik</h3>
+<p>Zähler über die geladene Mediathek (Anzahl Items pro Medientyp, Gesamtdauer, Speicherbedarf).</p>
+
+<h3>Sprache</h3>
+<p>sCollectPlay ist in 24 Sprachen verfügbar. Wähle deine bevorzugte Sprache aus &ndash; nach einem Neustart der App wird die neue Sprache aktiv. Der Neustart kann über den Button im Sprache-Tab automatisch ausgelöst werden.</p>
+
+<aside>
+<strong>Hinweis:</strong> Deaktivierte Felder zeigen Einstellungen, die in sCollect (der Hauptapp) verfügbar sind, aber in sCollectPlay nicht zur Verfügung stehen &ndash; etwa Tag-Editing, Import-Modi oder Sync-Optionen.
+</aside>
+
+
+<h2 id="shortcuts">8. Tastaturkürzel</h2>
+
+<h3>Allgemein</h3>
+<table class="shortcut-table">
+<tr><td><kbd>&#8984;,</kbd></td><td>Einstellungen öffnen</td></tr>
+<tr><td><kbd>&#8984;&#8679;O</kbd></td><td>sCollect-Mediathek wählen&hellip;</td></tr>
+<tr><td><kbd>&#8984;Q</kbd></td><td>sCollectPlay beenden</td></tr>
+</table>
+
+<h3>Wiedergabe</h3>
+<table class="shortcut-table">
+<tr><td><kbd>Leertaste</kbd></td><td>Wiedergabe / Pause</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>10 Sekunden vorspulen</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>10 Sekunden zurückspulen</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>Nächster Titel</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>Vorheriger Titel</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>Lautstärke erhöhen</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>Lautstärke verringern</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>Video-Vollbild ein/aus</td></tr>
+</table>
+
+
+  </article>
+  <p class="zurueck"><a href="../../../de/#apps">← Alle Apps →</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../impressum.html">Impressum</a><a href="../../../privacy.html">Datenschutz der Website</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

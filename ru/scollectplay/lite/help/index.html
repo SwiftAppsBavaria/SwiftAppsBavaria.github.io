@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Руководство по sCollectPlay Lite</title>
+<meta name="description" content="Руководство по sCollectPlay Lite">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/scollectplay/lite/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/de/scollectplay/lite/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/es/scollectplay/lite/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/fr/scollectplay/lite/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/it/scollectplay/lite/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/ja/scollectplay/lite/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/ko/scollectplay/lite/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/pt-br/scollectplay/lite/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/pt-pt/scollectplay/lite/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/ru/scollectplay/lite/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/zh-hans/scollectplay/lite/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/zh-hant/scollectplay/lite/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/scollectplay/lite/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../../ru/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../../ru/#apps">Приложения</a>
+    <details class="sprache"><summary aria-label="Язык">Русский</summary><div><a href="../../../../scollectplay/lite/help/" lang="en">English</a><a href="../../../../de/scollectplay/lite/help/" lang="de">Deutsch</a><a href="../../../../es/scollectplay/lite/help/" lang="es">Español</a><a href="../../../../fr/scollectplay/lite/help/" lang="fr">Français</a><a href="../../../../it/scollectplay/lite/help/" lang="it">Italiano</a><a href="../../../../ja/scollectplay/lite/help/" lang="ja">日本語</a><a href="../../../../ko/scollectplay/lite/help/" lang="ko">한국어</a><a href="../../../../pt-br/scollectplay/lite/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../../pt-pt/scollectplay/lite/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../../ru/scollectplay/lite/help/" aria-current="true" lang="ru">Русский</a><a href="../../../../zh-hans/scollectplay/lite/help/" lang="zh-Hans">简体中文</a><a href="../../../../zh-hant/scollectplay/lite/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../../../../ru/#apps">← Все приложения →</a></p>
+  <article class="hilfe">
+
+
+<h1>Руководство по sCollectPlay Lite</h1>
+<p class="subtitle">Плеер для медиатек sCollect, папок и экспортов iTunes XML</p>
+
+<nav class="toc">
+<h2>Содержание</h2>
+<ol>
+<li><a href="#start">Начало работы</a></li>
+<li><a href="#sources">Выбор источника</a></li>
+<li><a href="#browse">Просмотр медиатеки</a></li>
+<li><a href="#playback">Воспроизведение</a></li>
+<li><a href="#playlists">Плейлисты</a></li>
+<li><a href="#delete">Удаление медиафайлов</a></li>
+<li><a href="#settings">Настройки</a></li>
+<li><a href="#shortcuts">Сочетания клавиш</a></li>
+</ol>
+</nav>
+
+
+<h2 id="start">1. Начало работы</h2>
+
+<h3>Что такое sCollectPlay Lite?</h3>
+<p>sCollectPlay Lite — это приложение-компаньон к <strong>sCollect</strong>. Оно рассчитано исключительно на воспроизведение: без импорта, без редактирования метаданных, без синхронизации. Зато оно читает из трёх источников: папок, XML iTunes/Apple Music и медиатек sCollect.</p>
+
+<h3>При первом запуске</h3>
+<p>При первом запуске sCollectPlay Lite показывает приветственное окно с указаниями по воспроизведению особых форматов (см. раздел 4). Затем появляется выбор источника, где можно выбрать медиатеку.</p>
+
+<aside>
+<strong>Совет:</strong> sCollectPlay Lite совместим с macOS 14.0 и новее и доступен на 24 языках.
+</aside>
+
+
+<h2 id="sources">2. Выбор источника</h2>
+
+<p>sCollectPlay Lite знает три типа источников, которые можно открыть при запуске или позже через меню <strong>Файл</strong>:</p>
+
+<h3>Сканировать папку</h3>
+<p>Выберите любую папку &ndash; sCollectPlay Lite рекурсивно просматривает её в поисках медиафайлов и читает метаданные прямо из файлов (AVFoundation для аудио/видео, EbookTagKit для EPUB/PDF). Это самый простой способ начать без медиатеки sCollect.</p>
+<ul>
+<li><strong>Один источник за сеанс:</strong> В sCollectPlay Lite новая папка заменяет прежнюю, а при следующем запуске приложения ничего не восстанавливается.</li>
+<li><strong>Распознавание MKV:</strong> Файлы с расширением <code>.mp4</code>, которые на самом деле являются MKV, распознаются по сигнатуре EBML и помечаются отдельно.</li>
+<li><strong>Распределение по длительности:</strong> По папке не понять, музыка в файле или аудиокнига. Поэтому sCollectPlay Lite распределяет аудио и видео по длительности &ndash; аудио: до 10, 10&ndash;30, 30&ndash;60 и более 60 мин; видео: до 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 и более 210 мин. Электронные книги и PDF распознаются по расширению файла.</li>
+</ul>
+
+<h3>Медиатека sCollect</h3>
+<p>Выберите главную папку медиатеки sCollect (папку, в которой находится пакет <code>.scollect</code>; для более старых медиатек &ndash; папку с файлом <code>settings.json</code>). sCollectPlay Lite читает файлы медиатеки, плейлисты и настройки напрямую &ndash; включая настраиваемые названия полей и умные плейлисты. Выбор медиатеки заменяет ранее активное сканирование папок. Медиатеку можно также открыть двойным щелчком по пакету <code>.scollect</code> в Finder.</p>
+
+<h3>XML iTunes/Apple Music</h3>
+<p>Выберите файл <code>Library.xml</code> или пакет <code>.musiclibrary</code>. sCollectPlay Lite разбирает треки и плейлисты (обычные и умные). Системные плейлисты (Master, Distinguished Kind) пропускаются. Типы медиа sCollectPlay Lite берёт из самого XML: Музыка, Аудиокнига, Подкаст, Домашнее видео, Художественный фильм, Сериал и Видеоклип. При открытии однократно запрашивается соответствующая папка медиафайлов, чтобы sCollectPlay Lite мог обращаться к файлам.</p>
+
+<aside>
+<strong>Примечание:</strong> Всегда загружен ровно один вид источника. Каждый вновь открытый источник заменяет прежний, даже если это ещё одна папка. В заголовке окна указаны вид и название источника, например Папка «Музыка» или Медиатека «sCollect»; если навести указатель на заголовок, появится полный путь.
+</aside>
+
+<p>sCollectPlay Lite не запоминает источники: при следующем запуске снова появляется выбор источника.</p>
+
+
+<h2 id="browse">3. Просмотр медиатеки</h2>
+
+<h3>Боковая панель</h3>
+<p>Боковая панель показывает категории и типы медиа в виде двухуровневой «гармошки» (например, Аудио &gt; Музыка / Аудиокнига / Подкаст), а также все загруженные плейлисты. При переключении между типами медиа или плейлистами список треков справа обновляется.</p>
+
+<h3>Список треков</h3>
+<ul>
+<li><strong>Столбцы:</strong> Набор видимых столбцов в sCollectPlay Lite задан заранее.</li>
+<li><strong>Сортировка:</strong> Щелчок по заголовку столбца сортирует по этому столбцу; повторный щелчок меняет направление сортировки.</li>
+<li><strong>Ширина столбцов:</strong> Перетаскиванием разделительной линии в заголовке столбца.</li>
+</ul>
+
+<h3>Поиск</h3>
+<p>Поле поиска на панели инструментов фильтрует по названию, исполнителю, альбому, жанру и другим полям. В плейлистах поиск дополнительно применяется к содержимому плейлиста.</p>
+
+
+<h2 id="playback">4. Воспроизведение</h2>
+
+<h3>Воспроизведение аудио</h3>
+<p>Выберите аудиозапись и нажмите <kbd>Пробел</kbd> или кнопку воспроизведения в панели плеера. Панель плеера показывает:</p>
+<ul>
+<li>Обложку, название и исполнителя</li>
+<li>Шкалу времени для перемотки вперёд и назад</li>
+<li>Регулятор громкости</li>
+<li>Случайное воспроизведение и режим повтора</li>
+<li>Для видео дополнительно: замедление и покадровый шаг</li>
+</ul>
+
+<h3>Воспроизведение видео</h3>
+<p>Фильмы открываются в отдельном окне видео. Аудиодорожки и субтитры можно переключать в меню <strong>Воспроизведение</strong>. Клавишами <kbd>&#8984;&#8963;F</kbd> вы переходите в полноэкранный режим.</p>
+
+<h3>Внешнее воспроизведение</h3>
+<p>Некоторые форматы напрямую не поддерживаются macOS или AVFoundation. sCollectPlay Lite это распознаёт и автоматически открывает такие файлы во внешнем плеере:</p>
+<ul>
+<li><strong>Видеоконтейнерные форматы:</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
+<li><strong>Современные кодеки:</strong> AV1 в MP4 (на старых Mac без аппаратного декодера)</li>
+<li><strong>Hi-Res-аудио:</strong> DSD (DFF, DSF)</li>
+<li><strong>Прочие аудиоформаты:</strong> OGG Vorbis, WMA</li>
+</ul>
+<p>Предпочитаемый плеер распознаётся автоматически: <strong>VLC</strong>, <strong>IINA</strong> или <strong>MPV</strong> (в этом порядке). Задать выбор можно в разделе <strong>Настройки &gt; Воспроизведение &gt; Внешний видеоплеер</strong>. Если ни один из этих плееров не установлен, используется приложение по умолчанию для этого формата &ndash; рекомендуем <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (бесплатно, открытый код).</p>
+
+<h3>Управление воспроизведением</h3>
+<table class="shortcut-table">
+<tr><td><kbd>Пробел</kbd></td><td>Начать воспроизведение / пауза</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>Перемотка на 10 секунд вперёд</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>Перемотка на 10 секунд назад</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>Следующий трек</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>Предыдущий трек</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>Громче</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>Тише</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>Полноэкранный режим видео вкл./выкл.</td></tr>
+</table>
+
+<h3>Режимы воспроизведения</h3>
+<ul>
+<li><strong>Случайное воспроизведение:</strong> Воспроизведение текущего списка в случайном порядке.</li>
+<li><strong>Повтор (список):</strong> Повторяет весь список после последнего трека.</li>
+<li><strong>Повтор (трек):</strong> Повторяет текущий трек бесконечно.</li>
+</ul>
+
+<h3>Экспорт в Apple Music</h3>
+<p>Плейлисты или выбранные треки можно отправить в Apple Music:</p>
+<ul>
+<li><strong>Контекстное меню боковой панели:</strong> Щелчок правой кнопкой по плейлисту &gt; <em>Отправить плейлист в Apple Music</em>.</li>
+<li><strong>Контекстное меню трека:</strong> <em>Отправить как плейлист в Apple Music</em> (выделенные треки как &laquo;Выбранное&raquo;).</li>
+<li><strong>Меню «Файл»:</strong> <em>Отправить плейлист в Apple Music&hellip;</em> (активно, если выбран плейлист).</li>
+</ul>
+<p>Технически записывается файл M3U8 и передаётся в Music.app. Существующие плейлисты в Apple Music могут при желании обновляться автоматически &ndash; соответствующий параметр находится в настройках.</p>
+
+
+<h2 id="playlists">5. Плейлисты</h2>
+
+<p>sCollectPlay Lite показывает все плейлисты загруженной медиатеки &ndash; как обычные, так и умные. Умные плейлисты заново вычисляются по сохранённым критериям, когда меняется состав объектов. Редактирование невозможно; для этого служит sCollect.</p>
+<p>При загрузке XML-медиатеки импортируются как обычные, так и умные плейлисты. Системные плейлисты (Master, Distinguished Kind) пропускаются.</p>
+
+
+<h2 id="delete">6. Удаление медиафайлов</h2>
+
+<p>В контекстном меню трека есть пункт <strong>Удалить медиафайл</strong>. По умолчанию перед этим появляется диалог подтверждения (его можно отключить в настройках). Файл перемещается в Корзину, а запись удаляется из медиатеки.</p>
+
+<aside>
+<strong>Сетевые ресурсы:</strong> У ресурсов SMB или NFS, как правило, нет Корзины. sCollectPlay Lite это распознаёт и перед удалением явно запрашивает подтверждение &ndash; файл удаляется окончательно и не может быть восстановлен. Операцию можно отменить; в этом случае запись и файл остаются без изменений.
+</aside>
+
+
+<h2 id="settings">7. Настройки</h2>
+<p>Откройте настройки через <strong>sCollectPlay Lite &gt; Настройки&hellip;</strong> (<kbd>&#8984;,</kbd>). Они разделены на несколько вкладок; некоторые поля доступны только для чтения (значения из загруженной медиатеки sCollect или значения по умолчанию) &ndash; они показывают, что было бы доступно в sCollect.</p>
+
+<h3>Основные</h3>
+<ul>
+<li><strong>Подтвердить удаление:</strong> Спрашивать перед перемещением в Корзину.</li>
+</ul>
+
+<h3>Воспроизведение</h3>
+<ul>
+<li><strong>Экспорт в Apple Music:</strong> Всегда обновлять существующий плейлист (без запроса).</li>
+<li><strong>Окно видео всегда поверх других окон:</strong> Окно видео постоянно остаётся над всеми остальными окнами.</li>
+<li><strong>Приостанавливать видео при сворачивании:</strong> Приостанавливает воспроизведение, пока окно видео убрано в Dock, и возобновляет его при восстановлении окна.</li>
+<li><strong>Громкость при замедлении/покадровом режиме:</strong> Снижение громкости в дБ в режимах замедления и покадрового просмотра.</li>
+<li><strong>Внешний видеоплеер:</strong> Предпочитаемый плеер для кодеков, которые AVFoundation не может воспроизвести (см. раздел 4). Распознаются VLC, IINA и MPV.</li>
+</ul>
+
+<h3>Статистика</h3>
+<p>Счётчики по загруженной медиатеке (число объектов по типам медиа, общая длительность, объём хранения).</p>
+
+<h3>Язык</h3>
+<p>sCollectPlay Lite доступен на 24 языках. Выберите предпочтительный язык &ndash; после перезапуска приложения новый язык будет активирован. Перезапуск можно выполнить автоматически кнопкой на вкладке «Язык».</p>
+
+<aside>
+<strong>Примечание:</strong> Неактивные поля показывают настройки, доступные в sCollect (основном приложении), но отсутствующие в sCollectPlay Lite &ndash; например, редактирование тегов, режимы импорта или параметры синхронизации.
+</aside>
+
+
+<h2 id="shortcuts">8. Сочетания клавиш</h2>
+
+<h3>Общие</h3>
+<table class="shortcut-table">
+<tr><td><kbd>&#8984;,</kbd></td><td>Открыть настройки</td></tr>
+<tr><td><kbd>&#8984;&#8679;O</kbd></td><td>Выбрать медиатеку sCollect&hellip;</td></tr>
+<tr><td><kbd>&#8984;Q</kbd></td><td>Завершить sCollectPlay Lite</td></tr>
+</table>
+
+<h3>Воспроизведение</h3>
+<table class="shortcut-table">
+<tr><td><kbd>Пробел</kbd></td><td>Воспроизведение / пауза</td></tr>
+<tr><td><kbd>&#8594;</kbd></td><td>Перемотка на 10 секунд вперёд</td></tr>
+<tr><td><kbd>&#8592;</kbd></td><td>Перемотка на 10 секунд назад</td></tr>
+<tr><td><kbd>&#8984;&#8594;</kbd></td><td>Следующий трек</td></tr>
+<tr><td><kbd>&#8984;&#8592;</kbd></td><td>Предыдущий трек</td></tr>
+<tr><td><kbd>&#8984;&#8593;</kbd></td><td>Увеличить громкость</td></tr>
+<tr><td><kbd>&#8984;&#8595;</kbd></td><td>Уменьшить громкость</td></tr>
+<tr><td><kbd>&#8984;&#8963;F</kbd></td><td>Полноэкранный режим видео вкл./выкл.</td></tr>
+</table>
+
+
+  </article>
+  <p class="zurueck"><a href="../../../../ru/#apps">← Все приложения →</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../../impressum.html">Правовая информация</a><a href="../../../../privacy.html">Конфиденциальность сайта</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>
