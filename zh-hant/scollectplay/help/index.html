@@ -74,15 +74,13 @@
 <p>選擇任意資料夾 &ndash; sCollectPlay 會遞迴搜尋其中的媒體檔案，並直接從檔案讀取後設資料（音訊/影片使用 AVFoundation，EPUB/PDF 使用 EbookTagKit）。這是不需要 sCollect 媒體資料庫就能開始的最簡單方式。</p>
 <ul>
 
-<li><strong>可累積：</strong>可以陸續加入多個資料夾 &ndash; 這些內容會合併在一起。下次啟動 App 時，先前掃描過的所有資料夾都會自動還原。</li>
+<li><strong>可累積：</strong>可以陸續加入多個資料夾 &ndash; 這些內容會合併在一起。下次啟動 App 時，先前掃描過的所有資料夾都會以上次讀取的狀態顯示，不必重新掃描。</li>
 
 
 <li><strong>MKV 偵測：</strong>副檔名為 <code>.mp4</code> 但實際上是 MKV 的檔案，會依 EBML 簽名辨識出來並另外標示。</li>
 <li><strong>依播放時間分類：</strong>僅憑資料夾無法判斷檔案是音樂還是有聲書。因此，sCollectPlay 會依長度為音訊和影片分類 &ndash; 音訊：10 分鐘以內、10&ndash;30 分鐘、30&ndash;60 分鐘、超過 60 分鐘；影片：5 分鐘以內、5&ndash;20 分鐘、20&ndash;70 分鐘、70&ndash;210 分鐘、超過 210 分鐘。電子書和 PDF 則依副檔名辨識。</li>
 </ul>
-
-<p>透過<strong>檔案 &gt; 忘記已掃描的資料夾&hellip;</strong>可以清空列表 &ndash; 目前的作業階段維持不變，下次啟動 App 時媒體資料庫會是空的。</p>
-
+<p>在<strong>設定 &gt; 媒體庫 &gt; 已掃描的資料夾</strong>中，<em>更新</em>只會讀取自上次讀取以來有所變動的內容：新增、變更和移除的檔案。使用<em>移除</em>可以將資料夾連同其中的曲目一併移出。</p>
 
 <h3>sCollect 媒體資料庫</h3>
 <p>選擇 sCollect 媒體資料庫的主資料夾（存放 <code>.scollect</code> 套件的資料夾；較舊的媒體資料庫則是包含 <code>settings.json</code> 的資料夾）。sCollectPlay 會直接讀取資料庫檔案、播放清單與設定 &ndash; 包含可自訂的欄位名稱與智慧型播放清單。選擇媒體資料庫會取代先前使用中的資料夾掃描。你也可以在 Finder 中連按兩下 <code>.scollect</code> 套件來開啟媒體資料庫。</p>

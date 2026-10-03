@@ -74,15 +74,13 @@
 <p>Elige cualquier carpeta &ndash; sCollectPlay la explora de forma recursiva en busca de archivos multimedia y lee los metadatos directamente de los archivos (AVFoundation para audio y vídeo, EbookTagKit para EPUB y PDF). Es la forma más sencilla de empezar sin una biblioteca de sCollect.</p>
 <ul>
 
-<li><strong>Acumulativo:</strong> Se pueden añadir varias carpetas una tras otra &ndash; los contenidos se combinan. Al iniciar de nuevo la aplicación, todas las carpetas escaneadas hasta entonces se restauran automáticamente.</li>
+<li><strong>Acumulativo:</strong> Se pueden añadir varias carpetas una tras otra &ndash; los contenidos se combinan. Al iniciar de nuevo la aplicación, todas las carpetas escaneadas hasta entonces aparecen con el estado de la última lectura, sin volver a escanearse.</li>
 
 
 <li><strong>Detección de MKV:</strong> Los archivos con la extensión <code>.mp4</code> que en realidad son MKV se reconocen por su firma EBML y se marcan aparte.</li>
 <li><strong>Clasificación por duración:</strong> Una carpeta no revela si un archivo es música o un audiolibro. Por eso sCollectPlay clasifica el audio y el vídeo según su duración &ndash; audio: hasta 10, 10&ndash;30, 30&ndash;60 y más de 60 min; vídeo: hasta 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 y más de 210 min. Los e-books y los PDF se reconocen por la extensión del archivo.</li>
 </ul>
-
-<p>Con <strong>Archivo &gt; Olvidar carpetas escaneadas&hellip;</strong> puedes vaciar la lista &ndash; la sesión actual permanece sin cambios; al iniciar de nuevo la aplicación, la biblioteca estará vacía.</p>
-
+<p>En <strong>Ajustes &gt; Biblioteca &gt; Carpetas escaneadas</strong>, <em>Actualizar</em> solo lee lo que ha cambiado desde la última lectura: archivos nuevos, modificados y eliminados. Con <em>Eliminar</em> quitas una carpeta junto con sus pistas.</p>
 
 <h3>Biblioteca de sCollect</h3>
 <p>Elige la carpeta principal de una biblioteca de sCollect (la carpeta en la que se encuentra el paquete <code>.scollect</code>; en bibliotecas antiguas, la carpeta con <code>settings.json</code>). sCollectPlay lee directamente los archivos de la biblioteca, las playlists y los ajustes &ndash; incluidas las etiquetas de campo configurables y las playlists inteligentes. La selección de una biblioteca sustituye un escaneo de carpetas activo. También puedes abrir la biblioteca haciendo doble clic en el paquete <code>.scollect</code> en el Finder.</p>

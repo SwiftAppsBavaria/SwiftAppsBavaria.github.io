@@ -74,15 +74,13 @@
 <p>Wähle einen beliebigen Ordner aus &ndash; sCollectPlay durchsucht ihn rekursiv nach Mediendateien und liest die Metadaten direkt aus den Dateien (AVFoundation für Audio/Video, EbookTagKit für EPUB/PDF). Das ist der einfachste Weg, ohne sCollect-Mediathek zu starten.</p>
 <ul>
 
-<li><strong>Akkumulierend:</strong> Mehrere Ordner können nacheinander hinzugefügt werden &ndash; die Inhalte werden zusammengeführt. Beim nächsten App-Start werden alle bisherigen Scan-Ordner automatisch wiederhergestellt.</li>
+<li><strong>Akkumulierend:</strong> Mehrere Ordner können nacheinander hinzugefügt werden &ndash; die Inhalte werden zusammengeführt. Beim nächsten App-Start erscheinen alle bisherigen Scan-Ordner mit dem zuletzt eingelesenen Stand, ohne neu durchsucht zu werden.</li>
 
 
 <li><strong>MKV-Erkennung:</strong> Dateien mit der Endung <code>.mp4</code>, die in Wirklichkeit MKV sind, werden anhand der EBML-Signatur erkannt und gesondert markiert.</li>
 <li><strong>Einteilung nach Spieldauer:</strong> Ein Ordner verrät nicht, ob eine Datei Musik oder ein Hörbuch ist. Audio und Video ordnet sCollectPlay deshalb nach ihrer Länge ein &ndash; Audio: bis 10, 10&ndash;30, 30&ndash;60 und über 60 Min.; Video: bis 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 und über 210 Min. E-Books und PDFs erkennt es an der Dateiendung.</li>
 </ul>
-
-<p>Mit <strong>Ablage &gt; Gescannte Ordner vergessen&hellip;</strong> kannst du die Liste leeren &ndash; die aktuelle Sitzung bleibt unverändert, beim nächsten App-Start ist die Mediathek leer.</p>
-
+<p>Unter <strong>Einstellungen &gt; Mediathek &gt; Gescannte Ordner</strong> liest <em>Aktualisieren</em> nur ein, was sich seit dem letzten Einlesen geändert hat: neue, geänderte und entfernte Dateien. Mit <em>Entfernen</em> nimmst du einen Ordner samt seinen Titeln wieder heraus.</p>
 
 <h3>sCollect-Mediathek</h3>
 <p>Wähle den Hauptordner einer sCollect-Mediathek (den Ordner, in dem das <code>.scollect</code>-Bündel liegt; bei älteren Mediatheken der Ordner mit <code>settings.json</code>). sCollectPlay liest die Library-Dateien, Playlists und Settings direkt &ndash; inklusive konfigurierbarer Feldbezeichner und Smart-Playlists. Die Mediathek-Auswahl ersetzt einen vorher aktiven Ordner-Scan. Du kannst die Mediathek auch per Doppelklick auf das <code>.scollect</code>-Bündel im Finder öffnen.</p>

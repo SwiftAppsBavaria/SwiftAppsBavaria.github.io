@@ -74,15 +74,13 @@
 <p>Pick any folder &ndash; sCollectPlay scans it recursively for media files and reads metadata directly from the files (AVFoundation for audio/video, EbookTagKit for EPUB/PDF). This is the easiest way to get started without a sCollect library.</p>
 <ul>
 
-<li><strong>Accumulating:</strong> You can add multiple folders one after another &ndash; their contents are merged. On the next app launch, all previously scanned folders are restored automatically.</li>
+<li><strong>Accumulating:</strong> You can add multiple folders one after another &ndash; their contents are merged. On the next app launch, all previously scanned folders appear as they were last read, without being scanned again.</li>
 
 
 <li><strong>MKV detection:</strong> Files with an <code>.mp4</code> extension that are actually MKV are detected by their EBML signature and tagged accordingly.</li>
 <li><strong>Classification by duration:</strong> A folder doesn&rsquo;t reveal whether a file is music or an audiobook. sCollectPlay therefore sorts audio and video by length &ndash; audio: up to 10, 10&ndash;30, 30&ndash;60 and over 60 min; video: up to 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 and over 210 min. E-books and PDFs are recognized by their file extension.</li>
 </ul>
-
-<p>Use <strong>File &gt; Forget Scanned Folders&hellip;</strong> to clear the list. The current session stays unchanged; the next app launch starts with an empty library.</p>
-
+<p>Under <strong>Settings &gt; Library &gt; Scanned Folders</strong>, <em>Refresh</em> reads in only what has changed since the last read: new, modified and removed files. Use <em>Remove</em> to take a folder out again together with its tracks.</p>
 
 <h3>sCollect Library</h3>
 <p>Choose the main folder of a sCollect library (the folder that contains the <code>.scollect</code> bundle; for older libraries, the folder with <code>settings.json</code>). sCollectPlay reads the library files, playlists, and settings directly &ndash; including configurable field labels and smart playlists. Selecting a sCollect library replaces an active folder scan. You can also double-click the <code>.scollect</code> bundle in the Finder to open the library.</p>

@@ -74,15 +74,13 @@
 <p>选择任意一个文件夹 &ndash; sCollectPlay 会递归搜索其中的媒体文件，并直接从文件中读取元数据（音频/视频用 AVFoundation，EPUB/PDF 用 EbookTagKit）。这是不使用 sCollect 媒体库即可上手的最简单方式。</p>
 <ul>
 
-<li><strong>累积：</strong>可以依次添加多个文件夹 &ndash; 它们的内容会被合并。下次启动 App 时，之前扫描过的所有文件夹都会自动恢复。</li>
+<li><strong>累积：</strong>可以依次添加多个文件夹 &ndash; 它们的内容会被合并。下次启动 App 时，之前扫描过的所有文件夹都会以上次读取的状态显示，无需重新扫描。</li>
 
 
 <li><strong>MKV 识别：</strong>扩展名为 <code>.mp4</code> 但实际上是 MKV 的文件，会通过 EBML 签名识别并单独标记。</li>
 <li><strong>按时长分类：</strong>仅凭文件夹无法判断一个文件是音乐还是有声书。因此，sCollectPlay 按时长对音频和视频进行分类 &ndash; 音频：10分钟以内、10&ndash;30分钟、30&ndash;60分钟、超过60分钟；视频：5分钟以内、5&ndash;20分钟、20&ndash;70分钟、70&ndash;210分钟、超过210分钟。电子书和 PDF 则根据文件扩展名识别。</li>
 </ul>
-
-<p>通过<strong>文件 &gt; 忘记已扫描的文件夹&hellip;</strong>可以清空该列表 &ndash; 当前会话保持不变，下次启动 App 时媒体库为空。</p>
-
+<p>在<strong>设置 &gt; 媒体库 &gt; 已扫描的文件夹</strong>中，<em>更新</em>只读取自上次读取以来发生变化的内容：新增、更改和移除的文件。使用<em>移除</em>可以将文件夹连同其中的曲目一并移出。</p>
 
 <h3>sCollect 媒体库</h3>
 <p>选择 sCollect 媒体库的主文件夹（包含 <code>.scollect</code> 包的文件夹；对于较旧的媒体库，则是包含 <code>settings.json</code> 的文件夹）。sCollectPlay 会直接读取媒体库文件、播放列表和设置 &ndash; 包括可自定义的字段名称和智能播放列表。选择媒体库会取代此前激活的文件夹扫描。你也可以在 Finder 中双击 <code>.scollect</code> 包来打开媒体库。</p>
