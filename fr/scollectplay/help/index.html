@@ -89,12 +89,12 @@
 <p>Choisissez un fichier <code>Library.xml</code> ou un paquet <code>.musiclibrary</code>. sCollectPlay analyse les pistes et les listes de lecture (standard et intelligentes). Les playlists système (Master, Distinguished Kind) sont ignorées. sCollectPlay reprend les types de média du XML lui-même : Musique, Livre audio, Podcast, Vidéo personnelle, Long métrage, Série et Clip vidéo. À l&rsquo;ouverture, le dossier de médias correspondant vous est demandé une seule fois, afin que sCollectPlay puisse accéder aux fichiers.</p>
 
 <aside>
-<strong>Note :</strong> Un seul type de source est chargé à la fois. Un scan de dossier peut être étendu avec d&rsquo;autres dossiers ; en revanche, ouvrir une bibliothèque ou un XML remplace le contenu actuel. La barre de titre de la fenêtre indique le type et le nom de la source, par exemple Dossier « Musique » ou Bibliothèque « sCollect » ; placez le pointeur sur le titre pour afficher le chemin complet.
+<strong>Note :</strong> Un seul type de source est chargé à la fois. Un scan de dossier peut être étendu avec d&rsquo;autres dossiers ; en revanche, ouvrir une bibliothèque ou un XML remplace le contenu actuel. Les dossiers scannés restent alors enregistrés et peuvent être réactivés d&rsquo;un clic dans <strong>Réglages &gt; Bibliothèque</strong>. La barre de titre de la fenêtre indique le type et le nom de la source, par exemple Dossier « Musique » ou Bibliothèque « sCollect » ; placez le pointeur sur le titre pour afficher le chemin complet.
 </aside>
 
 
 <h3>Sources utilisées récemment</h3>
-<p>Dans le menu <strong>Fichier</strong>, chaque commande est suivie des dernières sources utilisées de ce type : <em>Dossiers récents</em>, <em>Bibliothèques récentes</em> et <em>Bibliothèques XML récentes</em>, jusqu&rsquo;à dix chacune. Un clic rouvre la source ; si elle n&rsquo;est plus accessible, elle disparait de la liste. <em>Effacer la liste</em> vide une liste. Au lancement suivant, sCollectPlay charge automatiquement la dernière source utilisée. Si elle se trouve sur un volume réseau, l&rsquo;app vous le demande d&rsquo;abord &ndash; désactivable dans <strong>Réglages &gt; Général &gt; Avertir au sujet d'une bibliothèque réseau au démarrage</strong>.</p>
+<p>Dans le menu <strong>Fichier</strong>, chaque commande est suivie des dernières sources utilisées de ce type : <em>Dossiers récents</em>, <em>Bibliothèques récentes</em> et <em>Bibliothèques XML récentes</em>, jusqu&rsquo;à dix chacune. Un clic rouvre la source ; si elle n&rsquo;est plus accessible, elle disparait de la liste. <em>Effacer la liste</em> vide une liste. Au lancement suivant, sCollectPlay charge automatiquement la dernière source utilisée. Si elle se trouve sur un volume réseau, l&rsquo;app vous le demande d&rsquo;abord &ndash; désactivable dans <strong>Réglages &gt; Général &gt; Avertir au sujet d'une bibliothèque réseau au démarrage</strong>. <strong>Réglages &gt; Bibliothèque</strong> affiche les mêmes listes, avec <em>Charger</em> pour chaque entrée.</p>
 
 
 
@@ -230,6 +230,17 @@
 <li><strong>Avertir au sujet d'une bibliothèque réseau au démarrage :</strong> Demande confirmation au démarrage avant de charger une source située sur un volume réseau.</li>
 
 </ul>
+
+<h3>Bibliothèque</h3>
+<p>En haut, les trois sources sont présentées les unes sous les autres : <em>Dossiers scannés</em>, <em>Bibliothèque XML</em> et <em>Bibliothèque sCollect</em>. Une seule est active à la fois &ndash; son cercle est plein. Un clic sur un autre cercle passe à la dernière source utilisée de ce type ; les dossiers scannés reviennent alors avec leur état enregistré, sans nouveau scan. S&rsquo;il n&rsquo;y en a pas encore, la sélection s&rsquo;ouvre.</p>
+<ul>
+<li><strong>Dossiers scannés :</strong> pour chaque dossier, le chemin, le nombre de titres et la date de la dernière lecture, ainsi que <em>Actualiser</em> et <em>Supprimer</em>.</li>
+
+<li><strong>Bibliothèque XML</strong> et <strong>Bibliothèque sCollect :</strong> les dernières entrées utilisées, chacune avec <em>Charger</em>. Pour la bibliothèque sCollect figure en outre l&rsquo;<em>Emplacement</em> de la bibliothèque chargée, avec <em>Modifier&hellip;</em>.</li>
+
+
+</ul>
+<p>En dessous suivent, en gris, les champs que seul sCollect propose (Importation, Dossier média, Actions).</p>
 
 <h3>Lecture</h3>
 <ul>

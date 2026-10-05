@@ -89,12 +89,12 @@
 <p>Selecione um ficheiro <code>Library.xml</code> ou um pacote <code>.musiclibrary</code>. O sCollectPlay analisa as faixas e as playlists (normais e inteligentes). As playlists de sistema (Master, Distinguished Kind) são ignoradas. O sCollectPlay obtém os tipos de multimédia do próprio ficheiro XML: Música, Audiolivro, Podcast, Vídeo caseiro, Longa-metragem, Série e Videoclipe. Ao abrir, o acesso à pasta de multimédia correspondente é pedido uma única vez, para que o sCollectPlay possa aceder aos ficheiros.</p>
 
 <aside>
-<strong>Nota:</strong> Está sempre carregado exatamente um tipo de fonte. Uma análise de pasta pode ser alargada com mais pastas; pelo contrário, abrir uma biblioteca ou um XML substitui o conteúdo anterior. A barra de título da janela indica o tipo e o nome da fonte, por exemplo Pasta «Música» ou Biblioteca «sCollect»; ao apontar para o título, surge o caminho completo.
+<strong>Nota:</strong> Está sempre carregado exatamente um tipo de fonte. Uma análise de pasta pode ser alargada com mais pastas; pelo contrário, abrir uma biblioteca ou um XML substitui o conteúdo anterior. As pastas analisadas mantêm-se guardadas e podem ser reativadas com um clique em <strong>Definições &gt; Biblioteca</strong>. A barra de título da janela indica o tipo e o nome da fonte, por exemplo Pasta «Música» ou Biblioteca «sCollect»; ao apontar para o título, surge o caminho completo.
 </aside>
 
 
 <h3>Fontes utilizadas recentemente</h3>
-<p>No menu <strong>Ficheiro</strong>, por baixo de cada comando, surgem as fontes desse tipo utilizadas recentemente: <em>Pastas analisadas recentemente</em>, <em>Bibliotecas utilizadas recentemente</em> e <em>Bibliotecas XML abertas recentemente</em>, até dez em cada uma. Um clique volta a abrir a fonte; se já não estiver acessível, desaparece da lista. <em>Limpar lista</em> esvazia uma lista. No arranque seguinte, o sCollectPlay carrega automaticamente a última fonte utilizada. Se esta se encontrar num volume de rede, a aplicação pergunta antes &ndash; pode ser desativado em <strong>Definições &gt; Geral &gt; Avisar sobre biblioteca de rede ao iniciar</strong>.</p>
+<p>No menu <strong>Ficheiro</strong>, por baixo de cada comando, surgem as fontes desse tipo utilizadas recentemente: <em>Pastas analisadas recentemente</em>, <em>Bibliotecas utilizadas recentemente</em> e <em>Bibliotecas XML abertas recentemente</em>, até dez em cada uma. Um clique volta a abrir a fonte; se já não estiver acessível, desaparece da lista. <em>Limpar lista</em> esvazia uma lista. No arranque seguinte, o sCollectPlay carrega automaticamente a última fonte utilizada. Se esta se encontrar num volume de rede, a aplicação pergunta antes &ndash; pode ser desativado em <strong>Definições &gt; Geral &gt; Avisar sobre biblioteca de rede ao iniciar</strong>. <strong>Definições &gt; Biblioteca</strong> mostra as mesmas listas, com <em>Carregar</em> em cada entrada.</p>
 
 
 
@@ -230,6 +230,17 @@
 <li><strong>Avisar sobre biblioteca de rede ao iniciar:</strong> Pergunta no arranque antes de carregar uma fonte que se encontre num volume de rede.</li>
 
 </ul>
+
+<h3>Biblioteca</h3>
+<p>Em cima, as três fontes surgem umas por baixo das outras: <em>Pastas analisadas</em>, <em>Biblioteca XML</em> e <em>Biblioteca do sCollect</em>. Só uma está ativa de cada vez &ndash; o respetivo círculo está preenchido. Um clique noutro círculo muda para a última fonte utilizada desse tipo; as pastas analisadas regressam com o estado guardado, sem nova análise. Se ainda não existir nenhuma, abre-se a seleção.</p>
+<ul>
+<li><strong>Pastas analisadas:</strong> para cada pasta, o caminho, o número de faixas e o momento da última leitura, bem como <em>Atualizar</em> e <em>Remover</em>.</li>
+
+<li><strong>Biblioteca XML</strong> e <strong>Biblioteca do sCollect:</strong> as entradas utilizadas recentemente, cada uma com <em>Carregar</em>. Na biblioteca do sCollect surge ainda o <em>Local de armazenamento</em> da biblioteca carregada, com <em>Alterar&hellip;</em>.</li>
+
+
+</ul>
+<p>Por baixo surgem, a cinzento, os campos que só o sCollect oferece (Importação, Pasta multimédia, Ações).</p>
 
 <h3>Reprodução</h3>
 <ul>

@@ -89,12 +89,12 @@
 <p>Wähle eine <code>Library.xml</code> oder ein <code>.musiclibrary</code>-Bundle. sCollectPlay parst Tracks und Wiedergabelisten (Standard und Smart). System-Playlists (Master, Distinguished Kind) werden übersprungen. Die Medientypen übernimmt sCollectPlay aus der XML selbst: Musik, Hörbuch, Podcast, Heimvideo, Spielfilm, Serie und Musikvideo. Beim Öffnen wird einmalig der zugehörige Medienordner abgefragt, damit sCollectPlay auf die Dateien zugreifen kann.</p>
 
 <aside>
-<strong>Hinweis:</strong> Es ist immer genau eine Quellenart geladen. Ein Ordner-Scan lässt sich um weitere Ordner erweitern; wer dagegen eine Mediathek oder eine XML öffnet, ersetzt den bisherigen Bestand. Die Titelzeile des Fensters nennt Art und Namen der Quelle, etwa „Ordner „Musik““ oder „Mediathek „sCollect““; zeigst du auf den Titel, erscheint der vollständige Pfad.
+<strong>Hinweis:</strong> Es ist immer genau eine Quellenart geladen. Ein Ordner-Scan lässt sich um weitere Ordner erweitern; wer dagegen eine Mediathek oder eine XML öffnet, ersetzt den bisherigen Bestand. Die gescannten Ordner bleiben dabei gespeichert und lassen sich unter <strong>Einstellungen &gt; Mediathek</strong> mit einem Klick wieder aktivieren. Die Titelzeile des Fensters nennt Art und Namen der Quelle, etwa „Ordner „Musik““ oder „Mediathek „sCollect““; zeigst du auf den Titel, erscheint der vollständige Pfad.
 </aside>
 
 
 <h3>Zuletzt benutzte Quellen</h3>
-<p>Im Menü <strong>Ablage</strong> stehen unter jedem Befehl die zuletzt benutzten Quellen dieser Art: <em>Zuletzt gescannte Ordner</em>, <em>Zuletzt verwendete Mediatheken</em> und <em>Zuletzt geöffnete XML-Mediatheken</em>, je bis zu zehn. Ein Klick öffnet die Quelle wieder; ist sie nicht mehr erreichbar, verschwindet sie aus der Liste. <em>Liste löschen</em> leert eine Liste. Beim nächsten Start lädt sCollectPlay die zuletzt benutzte Quelle von selbst. Liegt sie auf einem Netzwerk-Volume, fragt die App vorher nach &ndash; abschaltbar unter <strong>Einstellungen &gt; Allgemein &gt; Beim Start auf Netzwerk-Mediathek hinweisen</strong>.</p>
+<p>Im Menü <strong>Ablage</strong> stehen unter jedem Befehl die zuletzt benutzten Quellen dieser Art: <em>Zuletzt gescannte Ordner</em>, <em>Zuletzt verwendete Mediatheken</em> und <em>Zuletzt geöffnete XML-Mediatheken</em>, je bis zu zehn. Ein Klick öffnet die Quelle wieder; ist sie nicht mehr erreichbar, verschwindet sie aus der Liste. <em>Liste löschen</em> leert eine Liste. Beim nächsten Start lädt sCollectPlay die zuletzt benutzte Quelle von selbst. Liegt sie auf einem Netzwerk-Volume, fragt die App vorher nach &ndash; abschaltbar unter <strong>Einstellungen &gt; Allgemein &gt; Beim Start auf Netzwerk-Mediathek hinweisen</strong>. Dieselben Listen zeigt <strong>Einstellungen &gt; Mediathek</strong>, mit <em>Laden</em> je Eintrag.</p>
 
 
 
@@ -230,6 +230,17 @@
 <li><strong>Beim Start auf Netzwerk-Mediathek hinweisen:</strong> Fragt beim Start nach, bevor eine Quelle auf einem Netzwerk-Volume geladen wird.</li>
 
 </ul>
+
+<h3>Mediathek</h3>
+<p>Oben stehen die drei Quellen untereinander: <em>Gescannte Ordner</em>, <em>XML-Mediathek</em> und <em>sCollect-Mediathek</em>. Aktiv ist immer nur eine &ndash; ihr Kreis ist gefüllt. Ein Klick auf einen anderen Kreis wechselt zur zuletzt benutzten Quelle dieser Art; die gescannten Ordner kommen dabei mit ihrem gespeicherten Stand zurück, ohne neuen Scan. Gibt es noch keine, öffnet sich die Auswahl.</p>
+<ul>
+<li><strong>Gescannte Ordner:</strong> je Ordner Pfad, Zahl der Titel und Zeitpunkt des letzten Einlesens, dazu <em>Aktualisieren</em> und <em>Entfernen</em>.</li>
+
+<li><strong>XML-Mediathek</strong> und <strong>sCollect-Mediathek:</strong> die zuletzt benutzten Einträge, je mit <em>Laden</em>. Bei der sCollect-Mediathek steht außerdem der <em>Speicherort</em> der geladenen Mediathek mit <em>Ändern&hellip;</em>.</li>
+
+
+</ul>
+<p>Darunter folgen grau die Felder, die nur sCollect bietet (Import, Medienordner, Aktionen).</p>
 
 <h3>Wiedergabe</h3>
 <ul>

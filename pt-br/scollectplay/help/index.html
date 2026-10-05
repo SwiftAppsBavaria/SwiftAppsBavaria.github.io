@@ -89,12 +89,12 @@
 <p>Selecione um arquivo <code>Library.xml</code> ou um pacote <code>.musiclibrary</code>. O sCollectPlay analisa as faixas e as playlists (padrão e inteligentes). As playlists do sistema (Master, Distinguished Kind) são ignoradas. O sCollectPlay obtém os tipos de mídia do próprio arquivo XML: Música, Audiolivro, Podcast, Vídeo caseiro, Longa-metragem, Série e Videoclipe. Ao abrir, o acesso à pasta de mídia correspondente é solicitado uma única vez, para que o sCollectPlay possa acessar os arquivos.</p>
 
 <aside>
-<strong>Observação:</strong> Sempre há exatamente um tipo de fonte carregado. Um escaneamento de pasta pode ser ampliado com outras pastas; já abrir uma biblioteca ou um XML substitui o conteúdo anterior. A barra de título da janela mostra o tipo e o nome da fonte, por exemplo Pasta “Música” ou Biblioteca “sCollect”; ao apontar para o título, aparece o caminho completo.
+<strong>Observação:</strong> Sempre há exatamente um tipo de fonte carregado. Um escaneamento de pasta pode ser ampliado com outras pastas; já abrir uma biblioteca ou um XML substitui o conteúdo anterior. As pastas escaneadas continuam salvas e podem ser reativadas com um clique em <strong>Ajustes &gt; Biblioteca</strong>. A barra de título da janela mostra o tipo e o nome da fonte, por exemplo Pasta “Música” ou Biblioteca “sCollect”; ao apontar para o título, aparece o caminho completo.
 </aside>
 
 
 <h3>Fontes usadas recentemente</h3>
-<p>No menu <strong>Arquivo</strong>, abaixo de cada comando aparecem as fontes desse tipo usadas mais recentemente: <em>Pastas escaneadas recentemente</em>, <em>Bibliotecas usadas recentemente</em> e <em>Bibliotecas XML abertas recentemente</em>, até dez em cada. Um clique abre a fonte novamente; se ela não estiver mais acessível, desaparece da lista. <em>Limpar lista</em> esvazia uma lista. Na próxima abertura, o sCollectPlay carrega sozinho a última fonte usada. Se ela estiver em um volume de rede, o app pergunta antes &ndash; isso pode ser desativado em <strong>Ajustes &gt; Geral &gt; Avisar sobre biblioteca de rede ao iniciar</strong>.</p>
+<p>No menu <strong>Arquivo</strong>, abaixo de cada comando aparecem as fontes desse tipo usadas mais recentemente: <em>Pastas escaneadas recentemente</em>, <em>Bibliotecas usadas recentemente</em> e <em>Bibliotecas XML abertas recentemente</em>, até dez em cada. Um clique abre a fonte novamente; se ela não estiver mais acessível, desaparece da lista. <em>Limpar lista</em> esvazia uma lista. Na próxima abertura, o sCollectPlay carrega sozinho a última fonte usada. Se ela estiver em um volume de rede, o app pergunta antes &ndash; isso pode ser desativado em <strong>Ajustes &gt; Geral &gt; Avisar sobre biblioteca de rede ao iniciar</strong>. <strong>Ajustes &gt; Biblioteca</strong> mostra as mesmas listas, com <em>Carregar</em> em cada entrada.</p>
 
 
 
@@ -230,6 +230,17 @@
 <li><strong>Avisar sobre biblioteca de rede ao iniciar:</strong> Pergunta ao iniciar antes de carregar uma fonte que está em um volume de rede.</li>
 
 </ul>
+
+<h3>Biblioteca</h3>
+<p>No alto, as três fontes aparecem uma abaixo da outra: <em>Pastas escaneadas</em>, <em>Biblioteca XML</em> e <em>Biblioteca do sCollect</em>. Só uma fica ativa por vez &ndash; o círculo dela fica preenchido. Um clique em outro círculo muda para a última fonte usada desse tipo; as pastas escaneadas voltam com o estado salvo, sem um novo escaneamento. Se ainda não houver nenhuma, a seleção é aberta.</p>
+<ul>
+<li><strong>Pastas escaneadas:</strong> para cada pasta, o caminho, o número de faixas e o momento da última leitura, além de <em>Atualizar</em> e <em>Remover</em>.</li>
+
+<li><strong>Biblioteca XML</strong> e <strong>Biblioteca do sCollect:</strong> as entradas usadas mais recentemente, cada uma com <em>Carregar</em>. Na biblioteca do sCollect aparece ainda o <em>Local de armazenamento</em> da biblioteca carregada, com <em>Alterar&hellip;</em>.</li>
+
+
+</ul>
+<p>Abaixo, em cinza, vêm os campos que só o sCollect oferece (Importação, Pasta de mídia, Ações).</p>
 
 <h3>Reprodução</h3>
 <ul>

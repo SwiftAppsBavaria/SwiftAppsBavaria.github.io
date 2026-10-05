@@ -89,12 +89,12 @@
 <p>Scegli un file <code>Library.xml</code> oppure un bundle <code>.musiclibrary</code>. sCollectPlay analizza brani e playlist (standard e intelligenti). Le playlist di sistema (Master, Distinguished Kind) vengono saltate. I tipi di media sCollectPlay li riprende dall'XML stesso: Musica, Audiolibro, Podcast, Video personale, Lungometraggio, Serie e Video musicale. All'apertura viene richiesta una sola volta la cartella multimediale corrispondente, affinché sCollectPlay possa accedere ai file.</p>
 
 <aside>
-<strong>Nota:</strong> È sempre caricato esattamente un tipo di sorgente. Una scansione di cartelle può essere estesa con altre cartelle; se invece apri una libreria o un XML, il contenuto precedente viene sostituito. La barra del titolo della finestra indica tipo e nome della sorgente, ad esempio Cartella «Musica» o Libreria «sCollect»; se punti sul titolo, compare il percorso completo.
+<strong>Nota:</strong> È sempre caricato esattamente un tipo di sorgente. Una scansione di cartelle può essere estesa con altre cartelle; se invece apri una libreria o un XML, il contenuto precedente viene sostituito. Le cartelle scansionate restano salvate e puoi riattivarle con un clic in <strong>Impostazioni &gt; Libreria</strong>. La barra del titolo della finestra indica tipo e nome della sorgente, ad esempio Cartella «Musica» o Libreria «sCollect»; se punti sul titolo, compare il percorso completo.
 </aside>
 
 
 <h3>Sorgenti usate di recente</h3>
-<p>Nel menu <strong>File</strong>, sotto ogni comando compaiono le ultime sorgenti usate di quel tipo: <em>Cartelle scansionate di recente</em>, <em>Librerie usate di recente</em> e <em>Librerie XML aperte di recente</em>, fino a dieci ciascuna. Un clic riapre la sorgente; se non è più raggiungibile, scompare dall'elenco. <em>Svuota elenco</em> svuota un elenco. Al successivo avvio sCollectPlay carica da sé l'ultima sorgente usata. Se si trova su un volume di rete, l'app chiede prima conferma &ndash; disattivabile in <strong>Impostazioni &gt; Generali &gt; Avvisa in caso di libreria di rete all'avvio</strong>.</p>
+<p>Nel menu <strong>File</strong>, sotto ogni comando compaiono le ultime sorgenti usate di quel tipo: <em>Cartelle scansionate di recente</em>, <em>Librerie usate di recente</em> e <em>Librerie XML aperte di recente</em>, fino a dieci ciascuna. Un clic riapre la sorgente; se non è più raggiungibile, scompare dall'elenco. <em>Svuota elenco</em> svuota un elenco. Al successivo avvio sCollectPlay carica da sé l'ultima sorgente usata. Se si trova su un volume di rete, l'app chiede prima conferma &ndash; disattivabile in <strong>Impostazioni &gt; Generali &gt; Avvisa in caso di libreria di rete all'avvio</strong>. <strong>Impostazioni &gt; Libreria</strong> mostra gli stessi elenchi, con <em>Carica</em> per ogni voce.</p>
 
 
 
@@ -230,6 +230,17 @@
 <li><strong>Avvisa in caso di libreria di rete all'avvio:</strong> All'avvio chiede conferma prima di caricare una sorgente che si trova su un volume di rete.</li>
 
 </ul>
+
+<h3>Libreria</h3>
+<p>In alto sono elencate le tre sorgenti una sotto l'altra: <em>Cartelle scansionate</em>, <em>Libreria XML</em> e <em>Libreria sCollect</em>. È attiva sempre una sola &ndash; il suo cerchio è pieno. Un clic su un altro cerchio passa all'ultima sorgente usata di quel tipo; le cartelle scansionate tornano con il loro stato salvato, senza una nuova scansione. Se non ce n'è ancora nessuna, si apre la selezione.</p>
+<ul>
+<li><strong>Cartelle scansionate:</strong> per ogni cartella il percorso, il numero di brani e il momento dell'ultima lettura, oltre a <em>Aggiorna</em> e <em>Rimuovi</em>.</li>
+
+<li><strong>Libreria XML</strong> e <strong>Libreria sCollect:</strong> le ultime voci usate, ciascuna con <em>Carica</em>. Per la libreria sCollect compare inoltre la <em>Posizione</em> della libreria caricata, con <em>Modifica&hellip;</em>.</li>
+
+
+</ul>
+<p>Sotto seguono, in grigio, i campi offerti solo da sCollect (Importazione, Cartella media, Azioni).</p>
 
 <h3>Riproduzione</h3>
 <ul>
