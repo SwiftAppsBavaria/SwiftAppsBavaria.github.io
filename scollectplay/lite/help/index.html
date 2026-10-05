@@ -75,7 +75,7 @@
 <ul>
 <li><strong>One source per session:</strong> In sCollectPlay Lite, a new folder replaces the current one, and nothing is restored on the next app launch.</li>
 <li><strong>MKV detection:</strong> Files with an <code>.mp4</code> extension that are actually MKV are detected by their EBML signature and tagged accordingly.</li>
-<li><strong>Classification by duration:</strong> A folder doesn&rsquo;t reveal whether a file is music or an audiobook. sCollectPlay Lite therefore sorts audio and video by length &ndash; audio: up to 10, 10&ndash;30, 30&ndash;60 and over 60 min; video: up to 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 and over 210 min. E-books and PDFs are recognized by their file extension.</li>
+<li><strong>Classification by duration:</strong> A folder doesn&rsquo;t reveal whether a file is music or an audiobook. sCollectPlay Lite therefore sorts audio and video by length &ndash; audio: up to 10, 10&ndash;30, 30&ndash;60 and over 60 min; video: up to 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 and over 210 min. E-books and PDFs are recognized by their file extension. If the length can&rsquo;t be determined, a title is listed under “unknown length”.</li>
 </ul>
 <p>Under <strong>Settings &gt; Library &gt; Scanned Folders</strong>, <em>Refresh</em> reads in only what has changed since the last read: new, modified and removed files.</p>
 
@@ -184,6 +184,14 @@
 <ul>
 <li><strong>Confirm delete:</strong> Ask before moving files to the Trash.</li>
 </ul>
+
+<h3>Library</h3>
+<p>At the top, the three sources are listed one below the other: <em>Scanned Folders</em>, <em>XML Library</em>, and <em>sCollect Library</em>. Only one is active at a time &ndash; its circle is filled. Clicking another circle opens the selection dialog for that kind.</p>
+<ul>
+<li><strong>Scanned Folders:</strong> the path, number of tracks and time of the last read for each folder, plus <em>Refresh</em>.</li>
+<li><strong>sCollect Library:</strong> the <em>Storage</em> location of the loaded library, with <em>Change&hellip;</em>.</li>
+</ul>
+<p>Below these, grayed out, are the fields that only sCollect offers (Import, Media Folder, Actions).</p>
 
 <h3>Playback</h3>
 <ul>

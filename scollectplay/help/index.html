@@ -78,7 +78,7 @@
 
 
 <li><strong>MKV detection:</strong> Files with an <code>.mp4</code> extension that are actually MKV are detected by their EBML signature and tagged accordingly.</li>
-<li><strong>Classification by duration:</strong> A folder doesn&rsquo;t reveal whether a file is music or an audiobook. sCollectPlay therefore sorts audio and video by length &ndash; audio: up to 10, 10&ndash;30, 30&ndash;60 and over 60 min; video: up to 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 and over 210 min. E-books and PDFs are recognized by their file extension.</li>
+<li><strong>Classification by duration:</strong> A folder doesn&rsquo;t reveal whether a file is music or an audiobook. sCollectPlay therefore sorts audio and video by length &ndash; audio: up to 10, 10&ndash;30, 30&ndash;60 and over 60 min; video: up to 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 and over 210 min. E-books and PDFs are recognized by their file extension. If the length can&rsquo;t be determined, a title is listed under “unknown length”.</li>
 </ul>
 <p>Under <strong>Settings &gt; Library &gt; Scanned Folders</strong>, <em>Refresh</em> reads in only what has changed since the last read: new, modified and removed files. Use <em>Remove</em> to take a folder out again together with its tracks.</p>
 
@@ -89,12 +89,12 @@
 <p>Choose a <code>Library.xml</code> file or a <code>.musiclibrary</code> bundle. sCollectPlay parses tracks and playlists (standard and smart). System playlists (Master, Distinguished Kind) are skipped. sCollectPlay takes the media types from the XML itself: Music, Audiobook, Podcast, Home Video, Feature Film, Series and Music Video. On open, you&rsquo;re asked once for access to the corresponding media folder so sCollectPlay can reach the files.</p>
 
 <aside>
-<strong>Note:</strong> Exactly one kind of source is loaded at a time. A folder scan can be extended with more folders; opening a library or an XML, on the other hand, replaces the current contents. The window&rsquo;s title bar shows the kind and name of the source, e.g. Folder “Music” or Library “sCollect”; point to the title to see the full path.
+<strong>Note:</strong> Exactly one kind of source is loaded at a time. A folder scan can be extended with more folders; opening a library or an XML, on the other hand, replaces the current contents. The scanned folders remain saved and can be reactivated with a single click under <strong>Settings &gt; Library</strong>. The window&rsquo;s title bar shows the kind and name of the source, e.g. Folder “Music” or Library “sCollect”; point to the title to see the full path.
 </aside>
 
 
 <h3>Recently Used Sources</h3>
-<p>In the <strong>File</strong> menu, each command is followed by the most recently used sources of that kind: <em>Recent Folders</em>, <em>Recent Libraries</em>, and <em>Recent XML Libraries</em>, up to ten each. A click opens the source again; if it can no longer be reached, it disappears from the list. <em>Clear List</em> empties a list. On the next launch, sCollectPlay loads the most recently used source by itself. If it is on a network volume, the app asks first &ndash; you can turn this off under <strong>Settings &gt; General &gt; Warn about network library at startup</strong>.</p>
+<p>In the <strong>File</strong> menu, each command is followed by the most recently used sources of that kind: <em>Recent Folders</em>, <em>Recent Libraries</em>, and <em>Recent XML Libraries</em>, up to ten each. A click opens the source again; if it can no longer be reached, it disappears from the list. <em>Clear List</em> empties a list. On the next launch, sCollectPlay loads the most recently used source by itself. If it is on a network volume, the app asks first &ndash; you can turn this off under <strong>Settings &gt; General &gt; Warn about network library at startup</strong>. <strong>Settings &gt; Library</strong> shows the same lists, with <em>Load</em> for each entry.</p>
 
 
 
@@ -230,6 +230,17 @@
 <li><strong>Warn about network library at startup:</strong> Asks at startup before a source on a network volume is loaded.</li>
 
 </ul>
+
+<h3>Library</h3>
+<p>At the top, the three sources are listed one below the other: <em>Scanned Folders</em>, <em>XML Library</em>, and <em>sCollect Library</em>. Only one is active at a time &ndash; its circle is filled. Clicking another circle switches to the most recently used source of that kind; scanned folders come back with their saved state, without a new scan. If there is none yet, the selection dialog opens.</p>
+<ul>
+<li><strong>Scanned Folders:</strong> the path, number of tracks and time of the last read for each folder, plus <em>Refresh</em> and <em>Remove</em>.</li>
+
+<li><strong>XML Library</strong> and <strong>sCollect Library:</strong> the most recently used entries, each with <em>Load</em>. For the sCollect library, the <em>Storage</em> location of the loaded library is also shown, with <em>Change&hellip;</em>.</li>
+
+
+</ul>
+<p>Below these, grayed out, are the fields that only sCollect offers (Import, Media Folder, Actions).</p>
 
 <h3>Playback</h3>
 <ul>
