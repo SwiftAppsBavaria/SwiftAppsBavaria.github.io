@@ -247,7 +247,7 @@
 <p><strong>sCollect écrit dans vos fichiers, pas dans une copie.</strong> Faites donc une sauvegarde avant les grandes modifications &ndash; par exemple avant de modifier de nombreuses entrées à la fois dans l&rsquo;Éditeur par lots ou avec les Opérations sur les champs. Time Machine suffit.</p>
 
 <h3>Éditeur individuel</h3>
-<p>Double-cliquez sur une entrée (ou sélectionnez-la et appuyez sur <kbd>&#8984;I</kbd>) pour ouvrir l&rsquo;éditeur de métadonnées. L&rsquo;éditeur comporte plusieurs onglets :</p>
+<p>Sélectionnez une entrée et appuyez sur <kbd>&#8984;I</kbd> pour ouvrir l&rsquo;éditeur de métadonnées ; dans la catégorie <em>Divers</em>, un double-clic suffit. L&rsquo;éditeur comporte plusieurs onglets :</p>
 <ul>
 <li><strong>Infos :</strong> Titre, Artiste, Artiste de l&rsquo;album, Album, Genre, Mots-clés, Année, Numéro de piste, Numéro de disque, Compositeur, Commentaire, Regroupement, Œuvre, Nom du mouvement, Numéro de mouvement, BPM, Note, Favori. Pour les livres (e-book, PDF), le champ <strong>Nombre de pages</strong> apparaît ici à la place de la durée et des BPM, et vous pouvez le modifier directement.</li>
 <li><strong>Pochette :</strong> Afficher, modifier ou supprimer la pochette. Pour les films : générer une vignette à partir d&rsquo;un point quelconque de la vidéo. Une nouvelle image s&rsquo;ajoute via <strong>Charger l&rsquo;image</strong> ou <strong>Coller</strong> &ndash; ou faites glisser un fichier image ou une image d&rsquo;une autre application sur la pochette.</li>
@@ -298,7 +298,7 @@
 <strong>Remarque :</strong> Les pièces jointes ne prennent effet qu&rsquo;à l&rsquo;<strong>enregistrement</strong> &ndash; les fichiers en attente figurent dans la liste avec la mention &laquo;sera copié lors de l&rsquo;enregistrement&raquo; ou &laquo;&hellip;lié&raquo;.
 </aside>
 <h3>Éditeur par lots</h3>
-<p>Sélectionnez plusieurs entrées et appuyez sur <kbd>&#8984;I</kbd> (ou double-cliquez sur la sélection). L&rsquo;éditeur par lots n&rsquo;affiche que les champs modifiables simultanément pour toutes les entrées sélectionnées. Une case à cocher à côté de chaque champ détermine s&rsquo;il sera écrit &ndash; seuls les champs cochés sont enregistrés.</p>
+<p>Sélectionnez plusieurs entrées et appuyez sur <kbd>&#8984;I</kbd>. L&rsquo;éditeur par lots n&rsquo;affiche que les champs modifiables simultanément pour toutes les entrées sélectionnées. Une case à cocher à côté de chaque champ détermine s&rsquo;il sera écrit &ndash; seuls les champs cochés sont enregistrés.</p>
 
 <h3>Opérations sur les champs</h3>
 <p>Pour des modifications avancées, sélectionnez les éléments voulus, puis choisissez <strong>Édition &gt; Rechercher/Remplacer&hellip;</strong> (<kbd>&#8997;&#8984;F</kbd>) ou passez par le menu contextuel. La fenêtre <strong>Opérations sur les champs</strong> propose alors les outils suivants :</p>
@@ -330,7 +330,7 @@
 <h2 id="playback">6. Lecture</h2>
 
 <h3>Lecture audio</h3>
-<p>Sélectionnez une entrée audio et appuyez sur <kbd>Espace</kbd> ou sur le bouton de lecture dans la barre du lecteur en bas de la fenêtre. La barre du lecteur affiche :</p>
+<p>Double-cliquez sur une entrée audio, ou sélectionnez-la et appuyez sur <kbd>Espace</kbd> ou sur le bouton de lecture dans la barre du lecteur en bas de la fenêtre. La barre du lecteur affiche :</p>
 <ul>
 <li>Pochette, titre et artiste</li>
 <li>Barre de progression pour avancer ou reculer</li>
@@ -554,7 +554,7 @@
 <li><strong>Format de sortie :</strong> AAC, MP3, HE-AAC, ALAC (sans perte), WAV ou AIFF. &laquo;Audio inchangé&raquo; (passthrough) est aussi disponible &ndash; le flux audio est copié tel quel dans un conteneur MP4 sans ré-encodage.</li>
 <li><strong>Paramètres audio :</strong> Disposition des canaux (comme l&rsquo;original / stéréo / mono), fréquence d&rsquo;échantillonnage et pour PCM/ALAC la profondeur de bits.</li>
 <li><strong>Compression :</strong> Pour MP3/AAC/HE-AAC : débit fixe ou débit variable (VBR) avec curseur de qualité.</li>
-<li><strong>Cible :</strong> Deux choix &ndash; <strong>Bibliothèque</strong> (le fichier converti est ajouté à la catégorie audio choisie ; pré-réglée sur &laquo;Podcast&raquo;, ou &laquo;Livre audio&raquo;/&laquo;Musique&raquo; en repli si Podcast n&rsquo;est pas activé) ou <strong>Externe</strong> (avec le bouton <strong>Choisir&hellip;</strong> sélectionne un dossier hors de la bibliothèque &ndash; l&rsquo;original reste intact et le fichier converti n&rsquo;est pas ajouté à la bibliothèque).</li>
+<li><strong>Cible :</strong> Deux choix &ndash; <strong>Bibliothèque</strong> (le fichier converti est ajouté à la catégorie audio choisie ; pré-réglée sur &laquo;Podcast&raquo;, ou &laquo;Livre audio&raquo;/&laquo;Musique&raquo; en repli si Podcast n&rsquo;est pas activé ; ensuite, la fenêtre mémorise la dernière catégorie choisie) ou <strong>Externe</strong> (avec le bouton <strong>Choisir&hellip;</strong> sélectionne un dossier hors de la bibliothèque &ndash; l&rsquo;original reste intact et le fichier converti n&rsquo;est pas ajouté à la bibliothèque). À côté du bouton figure le chemin complet du dossier choisi ; s&rsquo;il est trop long, le début est tronqué (&laquo;&hellip;/Dossier/Cible&raquo;) afin que le dossier de destination lui-même reste visible. Le chemin complet s&rsquo;affiche au survol du pointeur.</li>
 <li><strong>Traitement de l&rsquo;original :</strong> Pour la cible &laquo;Bibliothèque&raquo; : conserver, mettre à la corbeille ou remplacer par la conversion. Pour &laquo;Externe&raquo; toujours conservé.</li>
 </ul>
 <p>Les métadonnées et la pochette de l&rsquo;original sont toujours reprises. Lors de l&rsquo;import dans la bibliothèque, le fichier est déplacé dans le dossier de la catégorie audio ; aucune vérification de doublons n&rsquo;est effectuée &ndash; ce qui arrive à l&rsquo;original est contrôlé par le menu &laquo;Original&raquo;.</p>

@@ -247,7 +247,7 @@
 <p><strong>sCollect writes into your files, not into a copy of them.</strong> So make a backup before large changes &ndash; for example before you change many entries at once in the Batch Editor or with Field Operations. Time Machine is enough.</p>
 
 <h3>Single-Item Editor</h3>
-<p>Double-click an entry (or select it and press <kbd>&#8984;I</kbd>) to open the metadata editor. The editor has several tabs:</p>
+<p>Select an entry and press <kbd>&#8984;I</kbd> to open the metadata editor; in the <em>Miscellaneous</em> category, a double-click does the same. The editor has several tabs:</p>
 <ul>
 <li><strong>Info:</strong> Title, Artist, Album Artist, Album, Genre, Keywords, Year, Track Number, Disc Number, Composer, Comment, Grouping, Work, Movement Name, Movement Number, BPM, Rating, Favorite. For books (e-book, PDF), the <strong>Page Count</strong> field appears here instead of duration and BPM, and you can edit it directly.</li>
 <li><strong>Artwork:</strong> View, change, or remove the artwork. For movies: generate a thumbnail from any point in the video. A new image comes in via <strong>Load Image</strong> or <strong>Paste</strong> &ndash; or you drag an image file or an image from another application onto the artwork.</li>
@@ -299,7 +299,7 @@
 </aside>
 
 <h3>Batch Editor</h3>
-<p>Select multiple entries and press <kbd>&#8984;I</kbd> (or double-click the selection). The batch editor shows only fields that can be changed for all selected entries at once. A checkbox next to each field controls whether it will be written &ndash; only checked fields are saved.</p>
+<p>Select multiple entries and press <kbd>&#8984;I</kbd>. The batch editor shows only fields that can be changed for all selected entries at once. A checkbox next to each field controls whether it will be written &ndash; only checked fields are saved.</p>
 
 <h3>Field Operations</h3>
 <p>For advanced editing, select the entries and choose <strong>Edit &gt; Find/Replace&hellip;</strong> (<kbd>&#8997;&#8984;F</kbd>) or use the context menu. This opens the <strong>Field Operations</strong> window with the following tools:</p>
@@ -331,7 +331,7 @@
 <h2 id="playback">6. Playback</h2>
 
 <h3>Playing Audio</h3>
-<p>Select an audio entry and press <kbd>Space</kbd> or the play button in the player bar at the bottom of the window. The player bar shows:</p>
+<p>Double-click an audio entry, or select it and press <kbd>Space</kbd> or the play button in the player bar at the bottom of the window. The player bar shows:</p>
 <ul>
 <li>Artwork, title, and artist</li>
 <li>Timeline for scrubbing forward and backward</li>
@@ -555,7 +555,7 @@
 <li><strong>Output format:</strong> AAC, MP3, HE-AAC, ALAC (lossless), WAV, or AIFF. &laquo;Audio passthrough&raquo; is also available &ndash; the audio bitstream is copied 1:1 into an MP4 container without re-encoding.</li>
 <li><strong>Audio parameters:</strong> Channel layout (as original / stereo / mono), sample rate (original / 22050 / 44100 / 48000 Hz), and for PCM/ALAC the bit depth.</li>
 <li><strong>Compression:</strong> For MP3/AAC/HE-AAC: choose between fixed bitrate or variable bitrate (VBR) with quality slider.</li>
-<li><strong>Target:</strong> Two choices &ndash; <strong>Library</strong> (the converted file lands in the chosen audio category of the library; preset to &laquo;Podcast&raquo;, or &laquo;Audiobook&raquo;/&laquo;Music&raquo; as fallback if Podcast is not active) or <strong>External</strong> (use the <strong>Choose&hellip;</strong> button to pick a folder outside the library &ndash; the original stays untouched, the converted file is not added to the library).</li>
+<li><strong>Target:</strong> Two choices &ndash; <strong>Library</strong> (the converted file lands in the chosen audio category of the library; preset to &laquo;Podcast&raquo;, or &laquo;Audiobook&raquo;/&laquo;Music&raquo; as fallback if Podcast is not active; after that the dialog remembers the last category chosen) or <strong>External</strong> (use the <strong>Choose&hellip;</strong> button to pick a folder outside the library &ndash; the original stays untouched, the converted file is not added to the library). The full path of the chosen folder appears next to the button; if it is too long, the beginning is cut off (&laquo;&hellip;/Folder/Target&raquo;) so the target folder itself stays visible. Hover over it to see the whole path.</li>
 <li><strong>Original handling:</strong> For target &laquo;Library&raquo;: keep, move to Trash, or replace with conversion. For &laquo;External&raquo; always kept.</li>
 </ul>
 <p>Metadata and artwork of the original are always copied over. When importing into the library, the file is moved into the audio category folder; no duplicate check is performed &ndash; what happens to the original is controlled by the &laquo;Original&raquo; combobox.</p>

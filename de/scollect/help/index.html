@@ -247,7 +247,7 @@
 <p><strong>sCollect schreibt in deine Dateien, nicht in eine Kopie davon.</strong> Lege deshalb vor großen Änderungen eine Sicherung an &ndash; etwa bevor du im Batch-Editor oder mit den Feldoperationen viele Einträge auf einmal änderst. Time Machine genügt dafür.</p>
 
 <h3>Einzel-Editor</h3>
-<p>Doppelklicke auf einen Eintrag (oder wähle ihn aus und drücke <kbd>&#8984;I</kbd>), um den Metadaten-Editor zu öffnen. Der Editor hat mehrere Tabs:</p>
+<p>Wähle einen Eintrag aus und drücke <kbd>&#8984;I</kbd>, um den Metadaten-Editor zu öffnen; in der Kategorie <em>Verschiedenes</em> genügt ein Doppelklick. Der Editor hat mehrere Tabs:</p>
 <ul>
 <li><strong>Info:</strong> Titel, Künstler, Album-Künstler, Album, Genre, Stichwörter, Jahr, Titelnummer, CD-Nummer, Komponist, Kommentar, Gruppierung, Werk, Satzname, Satznummer, BPM, Bewertung, Favorit. Bei Büchern (E-Book, PDF) erscheint hier statt Dauer und BPM das Feld <strong>Seitenzahl</strong>, das du direkt bearbeiten kannst.</li>
 <li><strong>Cover:</strong> Cover-Bild anzeigen, ändern, entfernen. Bei Filmen: Vorschaubild aus einer frei wählbaren Stelle im Video generieren. Ein neues Bild kommt über <strong>Bild laden</strong> oder <strong>Einfügen</strong> hinein &ndash; oder du ziehst eine Bilddatei oder ein Bild aus einem anderen Programm auf das Cover.</li>
@@ -299,7 +299,7 @@
 </aside>
 
 <h3>Batch-Editor</h3>
-<p>Wähle mehrere Einträge aus und drücke <kbd>&#8984;I</kbd> (oder Doppelklick auf die Auswahl). Der Batch-Editor zeigt nur Felder, die für alle gewählten Einträge gleichzeitig geändert werden können. Neben jedem Feld befindet sich ein Häkchen &ndash; nur aktivierte Felder werden geschrieben.</p>
+<p>Wähle mehrere Einträge aus und drücke <kbd>&#8984;I</kbd>. Der Batch-Editor zeigt nur Felder, die für alle gewählten Einträge gleichzeitig geändert werden können. Neben jedem Feld befindet sich ein Häkchen &ndash; nur aktivierte Felder werden geschrieben.</p>
 
 <h3>Feldoperationen</h3>
 <p>Für erweiterte Bearbeitungen markierst du die gewünschten Einträge und öffnest über <strong>Bearbeiten &gt; Suchen/Ersetzen&hellip;</strong> (<kbd>&#8997;&#8984;F</kbd>) oder das Kontextmenü das Fenster <strong>Feldoperationen</strong> mit folgenden Werkzeugen:</p>
@@ -331,7 +331,7 @@
 <h2 id="playback">6. Wiedergabe</h2>
 
 <h3>Audio abspielen</h3>
-<p>Wähle einen Audio-Eintrag aus und drücke <kbd>Leertaste</kbd> oder den Play-Button in der Player-Leiste am unteren Fensterrand. Die Player-Leiste zeigt:</p>
+<p>Doppelklicke auf einen Audio-Eintrag oder wähle ihn aus und drücke <kbd>Leertaste</kbd> oder den Play-Button in der Player-Leiste am unteren Fensterrand. Die Player-Leiste zeigt:</p>
 <ul>
 <li>Cover-Bild, Titel und Künstler</li>
 <li>Zeitleiste zum Vor-/Zurückspulen</li>
@@ -555,7 +555,7 @@
 <li><strong>Ausgabeformat:</strong> AAC, MP3, HE-AAC, ALAC (verlustfrei), WAV oder AIFF. Auch &laquo;Ton unverändert&raquo; (Passthrough) ist verfügbar &ndash; dabei wird der Audio-Bitstream ohne Re-Encoding 1:1 in einen MP4-Container kopiert.</li>
 <li><strong>Audio-Parameter:</strong> Kanal-Layout (wie Original / Stereo / Mono), Sample-Rate (Original / 22050 / 44100 / 48000 Hz) und bei PCM/ALAC die Bit-Tiefe.</li>
 <li><strong>Komprimierung:</strong> Bei MP3/AAC/HE-AAC wählbar zwischen fester Bitrate oder variabler Bitrate (VBR) mit Qualitätsregler.</li>
-<li><strong>Ziel:</strong> Zwei Wahlmöglichkeiten &ndash; <strong>Mediathek</strong> (Konvertat landet in der gewählten Audio-Kategorie der Mediathek; voreingestellt &laquo;Podcast&raquo; bzw. &laquo;Hörbuch&raquo;/&laquo;Musik&raquo; als Fallback, wenn Podcast nicht aktiv ist) oder <strong>Extern</strong> (mit Knopf <strong>Wählen&hellip;</strong> einen Ordner außerhalb der Mediathek wählen &ndash; das Original bleibt unverändert, das Konvertat wird nicht in die Mediathek aufgenommen).</li>
+<li><strong>Ziel:</strong> Zwei Wahlmöglichkeiten &ndash; <strong>Mediathek</strong> (Konvertat landet in der gewählten Audio-Kategorie der Mediathek; voreingestellt &laquo;Podcast&raquo; bzw. &laquo;Hörbuch&raquo;/&laquo;Musik&raquo; als Fallback, wenn Podcast nicht aktiv ist; danach merkt sich der Dialog die zuletzt gewählte Kategorie) oder <strong>Extern</strong> (mit Knopf <strong>Wählen&hellip;</strong> einen Ordner außerhalb der Mediathek wählen &ndash; das Original bleibt unverändert, das Konvertat wird nicht in die Mediathek aufgenommen). Neben dem Knopf steht der volle Pfad des gewählten Ordners; ist er zu lang, fällt der Anfang weg (&laquo;&hellip;/Ordner/Ziel&raquo;), damit der Zielordner selbst sichtbar bleibt. Zeigt der Mauszeiger darauf, erscheint der ganze Pfad.</li>
 <li><strong>Original-Behandlung:</strong> Bei Ziel &laquo;Mediathek&raquo; wählbar zwischen Behalten, in Papierkorb oder durch Konvertierung ersetzen. Bei &laquo;Extern&raquo; immer Behalten.</li>
 </ul>
 <p>Metadaten und Artwork des Originals werden grundsätzlich übernommen. Beim Import in die Mediathek wird die Datei in den Audio-Kategorie-Ordner verschoben, eine Duplikatsabfrage entfällt &ndash; was mit dem Original passiert, regelt die Combobox &laquo;Original&raquo;.</p>
