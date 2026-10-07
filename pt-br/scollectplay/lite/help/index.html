@@ -131,7 +131,7 @@
 <li><strong>Áudio de alta resolução:</strong> DSD (DFF, DSF)</li>
 <li><strong>Outros formatos de áudio:</strong> OGG Vorbis, WMA</li>
 </ul>
-<p>O player preferido é detectado automaticamente: <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (nesta ordem). Você pode definir sua escolha em <strong>Ajustes &gt; Reprodução &gt; Player de vídeo externo</strong>. Se nenhum desses players estiver instalado, será usado o app padrão para o formato &ndash; recomendamos o <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, de código aberto).</p>
+<p>O player preferido é detectado automaticamente: <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (nesta ordem). Você pode definir sua escolha em <strong>Ajustes &gt; Reprodução/Playlist &gt; Reprodutor externo para codecs não suportados</strong>. Se nenhum desses players estiver instalado, será usado o app padrão para o formato &ndash; recomendamos o <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, de código aberto).</p>
 
 <h3>Controles de reprodução</h3>
 <table class="shortcut-table">
@@ -152,15 +152,6 @@
 <li><strong>Repetir (faixa):</strong> Repete a faixa atual indefinidamente.</li>
 </ul>
 
-<h3>Exportar para o Apple Music</h3>
-<p>Playlists ou uma seleção de faixas podem ser enviadas para o Apple Music:</p>
-<ul>
-<li><strong>Menu de contexto da barra lateral:</strong> Clique com o botão direito em uma playlist &gt; <em>Enviar playlist para o Apple Music</em>.</li>
-<li><strong>Menu de contexto das faixas:</strong> <em>Enviar como playlist para o Apple Music</em> (as faixas selecionadas como &ldquo;Seleção&rdquo;).</li>
-<li><strong>Menu Arquivo:</strong> <em>Enviar playlist para o Apple Music&hellip;</em> (ativo quando uma playlist está selecionada).</li>
-</ul>
-<p>Tecnicamente, é gravado um arquivo M3U8, que é entregue ao Music.app. Playlists já existentes no Apple Music podem, opcionalmente, ser atualizadas automaticamente &ndash; a opção correspondente está nos ajustes.</p>
-
 
 <h2 id="playlists">5. Playlists</h2>
 
@@ -171,6 +162,7 @@
 <h2 id="delete">6. Excluir arquivos de mídia</h2>
 
 <p>No menu de contexto das faixas, você encontra o item <strong>Excluir arquivo de mídia</strong>. Por padrão, antes aparece uma caixa de diálogo de confirmação (que pode ser desativada nos ajustes). O arquivo é movido para o Lixo e a entrada é removida da biblioteca.</p>
+<p>Com <strong>Editar &gt; Desfazer</strong> (<kbd>&#8984;Z</kbd>), você traz o arquivo de volta do Lixo, junto com a entrada dele; <strong>Editar &gt; Refazer</strong> (<kbd>&#8679;&#8984;Z</kbd>) o exclui novamente.</p>
 
 <aside>
 <strong>Compartilhamentos de rede:</strong> Compartilhamentos SMB ou NFS geralmente não têm Lixo. O sCollectPlay Lite detecta isso e pergunta explicitamente antes de excluir &ndash; o arquivo é removido permanentemente e não pode ser recuperado. Você pode cancelar a operação; nesse caso, a entrada e o arquivo permanecem inalterados.
@@ -183,7 +175,11 @@
 <h3>Geral</h3>
 <ul>
 <li><strong>Confirmar exclusão:</strong> Perguntar antes de mover para o Lixo.</li>
+<li><strong>Idioma:</strong> O app segue o idioma do sistema. O botão <em>Abrir o ajuste de idioma nos Ajustes do Sistema</em> leva a <strong>Geral &gt; Idioma e Região</strong>; ali, na seção &ldquo;Aplicativos&rdquo;, você escolhe um idioma próprio para o sCollectPlay Lite.</li>
+<li><strong>Pasta de capas:</strong> As imagens de capa normalmente ficam em uma pasta &ldquo;Artworks&rdquo; dentro da biblioteca. Com <em>Selecionar&hellip;</em>, você indica outra pasta; ela vale só para a biblioteca carregada, e <em>Remover</em> a desvincula novamente.</li>
+<li><strong>Pasta de mídia:</strong> só aparece se a biblioteca usar pastas fora da sua própria pasta. Para cada pasta, você libera o acesso com <em>Selecionar</em> e o revoga com <em>Remover</em>.</li>
 </ul>
+<p>Abaixo, em cinza, vêm os ajustes que só o sCollect pode alterar (por exemplo, capa do álbum, livros e PDFs, valores múltiplos, duplicatas).</p>
 
 <h3>Biblioteca</h3>
 <p>No alto, as três fontes aparecem uma abaixo da outra: <em>Pastas escaneadas</em>, <em>Biblioteca XML</em> e <em>Biblioteca do sCollect</em>. Só uma fica ativa por vez &ndash; o círculo dela fica preenchido. Um clique em outro círculo abre a seleção para esse tipo.</p>
@@ -193,20 +189,19 @@
 </ul>
 <p>Abaixo, em cinza, vêm os campos que só o sCollect oferece (Importação, Pasta de mídia, Ações).</p>
 
-<h3>Reprodução</h3>
+<h3>Reprodução/Playlist</h3>
 <ul>
-<li><strong>Exportação para o Apple Music:</strong> Sempre atualizar a playlist existente (sem perguntar).</li>
 <li><strong>Janela de vídeo sempre à frente:</strong> A janela de vídeo fica sempre acima de todas as outras janelas.</li>
 <li><strong>Pausar o vídeo ao minimizar:</strong> Pausa a reprodução enquanto a janela de vídeo estiver minimizada e a retoma ao restaurá-la.</li>
 <li><strong>Volume em câmera lenta/quadro a quadro:</strong> Redução de volume em dB durante os modos de câmera lenta e quadro a quadro.</li>
-<li><strong>Player de vídeo externo:</strong> Player preferido para codecs que o AVFoundation não consegue reproduzir (veja a seção 4). São detectados o VLC, o IINA e o MPV.</li>
+<li><strong>Reprodutor externo para codecs não suportados:</strong> Player preferido para codecs que o AVFoundation não consegue reproduzir (veja a seção 4). São detectados o VLC, o IINA e o MPV.</li>
 </ul>
 
-<h3>Estatísticas</h3>
-<p>Contadores sobre a biblioteca carregada (número de itens por tipo de mídia, duração total, espaço ocupado).</p>
+<h3>Rótulos de categorias e Rótulos de campos</h3>
+<p>As duas abas mostram os nomes das categorias e dos tipos de mídia, ou dos campos, tal como a biblioteca do sCollect carregada os define. Eles só podem ser alterados no sCollect.</p>
 
-<h3>Idioma</h3>
-<p>O sCollectPlay Lite está disponível em 24 idiomas. Escolha seu idioma preferido &ndash; o novo idioma passa a valer depois que o app for reiniciado. O reinício pode ser feito automaticamente pelo botão na aba Idioma.</p>
+<h3>Estatísticas</h3>
+<p>O número de faixas por tipo de mídia e de playlists por categoria, além do número total de faixas.</p>
 
 <aside>
 <strong>Observação:</strong> Os campos desativados mostram ajustes que estão disponíveis no sCollect (o app principal), mas não no sCollectPlay Lite &ndash; por exemplo, a edição de tags, os modos de importação ou as opções de sincronização.
@@ -220,6 +215,9 @@
 <tr><td><kbd>&#8984;,</kbd></td><td>Abrir os ajustes</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>Selecionar biblioteca do sCollect&hellip;</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>Encerrar o sCollectPlay Lite</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>Desfazer (por exemplo, recuperar um arquivo excluído)</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>Refazer</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>Ajuda sCollectPlay Lite</td></tr>
 </table>
 
 <h3>Reprodução</h3>

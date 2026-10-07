@@ -162,7 +162,7 @@
 <li><strong>High-resolution audio:</strong> DSD (DFF, DSF)</li>
 <li><strong>Other audio formats:</strong> OGG Vorbis, WMA</li>
 </ul>
-<p>The preferred player is detected automatically: <strong>VLC</strong>, <strong>IINA</strong>, or <strong>MPV</strong> (in that order). You can override the choice in <strong>Settings &gt; Playback &gt; External video player</strong>. If none of these players are installed, the default app for the format is used &ndash; we recommend <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (free, open source).</p>
+<p>The preferred player is detected automatically: <strong>VLC</strong>, <strong>IINA</strong>, or <strong>MPV</strong> (in that order). You can override the choice in <strong>Settings &gt; Playback/Playlist &gt; External player for unsupported codecs</strong>. If none of these players are installed, the default app for the format is used &ndash; we recommend <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (free, open source).</p>
 
 <h3>Playback Controls</h3>
 <table class="shortcut-table">
@@ -183,6 +183,7 @@
 <li><strong>Repeat (Track):</strong> Repeats the current track endlessly.</li>
 </ul>
 
+
 <h3>Apple Music Export</h3>
 <p>Playlists or a selection of tracks can be sent to Apple Music:</p>
 <ul>
@@ -190,7 +191,8 @@
 <li><strong>Track context menu:</strong> <em>Send as Playlist to Apple Music</em> (selected tracks as &laquo;Selection&raquo;).</li>
 <li><strong>File menu:</strong> <em>Send Playlist to Apple Music&hellip;</em> (active when a playlist is selected).</li>
 </ul>
-<p>Internally, an M3U8 file is written and handed to Music.app. Existing playlists in Apple Music can optionally be updated automatically &ndash; the corresponding setting is in Preferences.</p>
+<p>sCollectPlay creates the playlist in Apple Music and adds the tracks. Tracks in formats Apple Music does not accept are not sent and are listed in a message. If you have sent the playlist before and it still exists in Apple Music, sCollectPlay asks whether to update it or create a new one; with &laquo;Don&rsquo;t ask again&raquo; or the <strong>Apple Music export</strong> setting (see <a href="#settings">Settings</a>) it is updated without asking.</p>
+
 
 
 <h2 id="playlists">5. Playlists</h2>
@@ -205,15 +207,42 @@
 <li><strong>Create:</strong> The plus button next to <em>My Playlists</em> offers <em>New Playlist&hellip;</em> and <em>New Smart Playlist&hellip;</em>.</li>
 <li><strong>Fill:</strong> <em>Add to Playlist</em> in the track list&rsquo;s context menu adds the selected tracks to a playlist or creates a new one; in one of your own playlists, <em>Remove from Playlist</em> takes them out again.</li>
 <li><strong>Smart playlists</strong> assemble themselves according to rules; <em>Edit</em> in the context menu changes the rules.</li>
-<li><strong>Rename, delete, send to Apple Music:</strong> via the playlist&rsquo;s context menu.</li>
+<li><strong>Rename, delete, send to Apple Music, export for VLC:</strong> via the playlist&rsquo;s context menu.</li>
 </ul>
 <p>sCollectPlay stores your own playlists on this Mac, never in the library or the XML; it finds their tracks again by file path, even after a new scan.</p>
+
+
+
+<h3 id="geraete">Playlists on iPhone or iPod</h3>
+<p>sCollectPlay does not transfer anything to a device directly. The way leads through Apple Music and the Finder:</p>
+<ol>
+<li><strong>Send to Apple Music:</strong> Right-click the playlist in the sidebar and choose <em>Send Playlist to Apple Music</em>, or select it and choose <strong>File &gt; Send Playlist to Apple Music&hellip;</strong> To send selected tracks, choose <em>Send as Playlist to Apple Music</em> from the track list's context menu.</li>
+<li><strong>Connect the device:</strong> Connect your iPhone, iPad or iPod to the Mac with a cable and select it in the <strong>Finder</strong> sidebar under &laquo;Locations&raquo;.</li>
+<li><strong>Tick the playlist:</strong> In the &laquo;Music&raquo; tab, turn on &laquo;Sync music onto [device]&raquo;, choose &laquo;Selected artists, albums, genres, and playlists&raquo; and tick the list under &laquo;Playlists&raquo;.</li>
+<li>Click &laquo;Apply&raquo;.</li>
+</ol>
+<p>Apple Music accepts MP3, AAC and ALAC (.m4a), AIFF and WAV. sCollectPlay does not send tracks in other formats (such as FLAC, OGG/Opus, raw .aac or MKV) and lists them in a message &ndash; they need to be converted first, for example with &laquo;Convert Format&raquo; in sCollect.</p>
+<p>If the playlist changes, send it again: sCollectPlay asks whether to update the existing list in Apple Music or create a new one. Then sync again in the Finder.</p>
+<aside>
+<strong>Note:</strong> If &laquo;Sync Library&raquo; (iCloud) is turned on on the iPhone, the Finder does not transfer music. The playlist then reaches the device through iCloud, provided &laquo;Sync Library&raquo; is also turned on in Apple Music on the Mac &ndash; this requires an Apple&nbsp;Music or iTunes&nbsp;Match subscription.
+</aside>
+
+<h3 id="vlc">Playlists on Android (VLC)</h3>
+<p>Right-click the playlist in the sidebar and choose <em>Export for VLC/Device&hellip;</em>, or select it and choose <strong>File &gt; Export Playlist for VLC/Device&hellip;</strong> This works with every playlist, including those under <strong>My Playlists</strong>. As the destination, choose an SD card, a USB stick or any folder. sCollectPlay creates a folder named after the playlist there, containing the files, sorted by artist and album, and the playlist as an <code>.m3u8</code> file with relative paths.</p>
+<ul>
+<li>The whole playlist is exported, even while the search field is filtering it &ndash; its audio and video files; books and miscellaneous items are skipped and counted in the final message.</li>
+<li>If you export the same playlist to the same place again, sCollectPlay copies only what is new or has changed and rewrites the list. Tracks you removed from the playlist are no longer in the list, but their files stay in the folder.</li>
+<li>While exporting, a bar appears below the track list; the cross next to it cancels. The list then contains the tracks copied up to that point.</li>
+</ul>
+<p>Then move the <strong>whole folder</strong> to the Android device: insert the card or stick, or copy it over a cable with an MTP app (macOS does not show an Android phone as a drive). Do not split the folder up &ndash; the list finds its tracks only relative to its own location. VLC shows the playlist among its playlists once it has scanned the storage; if the folder lies outside the scanned locations, add it to the media library in VLC.</p>
+<p>The folder also works with VLC on another Mac or PC and with any player that reads M3U8 lists.</p>
 
 
 
 <h2 id="delete">6. Deleting Media Files</h2>
 
 <p>The track context menu has a <strong>Delete media file</strong> entry. By default, a confirmation dialog appears beforehand (can be disabled in Settings). The file is moved to the Trash, and the entry is removed from the library.</p>
+<p>With <strong>Edit &gt; Undo</strong> (<kbd>&#8984;Z</kbd>) you bring the file back from the Trash, together with its entry; <strong>Edit &gt; Redo</strong> (<kbd>&#8679;&#8984;Z</kbd>) deletes it again.</p>
 
 <aside>
 <strong>Network shares:</strong> SMB and NFS shares typically have no Trash. sCollectPlay detects this and asks you to confirm before deleting &ndash; the file is removed permanently and cannot be restored. You can cancel; in that case, both entry and file remain unchanged.
@@ -225,11 +254,15 @@
 
 <h3>General</h3>
 <ul>
-<li><strong>Confirm delete:</strong> Ask before moving files to the Trash.</li>
+<li><strong>Confirm deletion:</strong> Ask before moving files to the Trash.</li>
 
 <li><strong>Warn about network library at startup:</strong> Asks at startup before a source on a network volume is loaded.</li>
 
+<li><strong>Language:</strong> The app follows the system language. The <em>Open language settings in System Settings</em> button takes you to <strong>General &gt; Language &amp; Region</strong>; in the &laquo;Applications&raquo; section there you choose a separate language for sCollectPlay.</li>
+<li><strong>Artwork folder:</strong> Cover images normally sit in a folder &laquo;Artworks&raquo; inside the library. With <em>Choose&hellip;</em> you specify another folder; it applies only to the loaded library, and <em>Remove</em> detaches it again.</li>
+<li><strong>Media Folder:</strong> appears only if the library uses folders outside its own folder. For each folder, <em>Choose</em> grants access and <em>Remove</em> withdraws it.</li>
 </ul>
+<p>Below these, grayed out, are the settings that only sCollect can change (such as album covers, books &amp; PDFs, multiple values, duplicates).</p>
 
 <h3>Library</h3>
 <p>At the top, the three sources are listed one below the other: <em>Scanned Folders</em>, <em>XML Library</em>, and <em>sCollect Library</em>. Only one is active at a time &ndash; its circle is filled. Clicking another circle switches to the most recently used source of that kind; scanned folders come back with their saved state, without a new scan. If there is none yet, the selection dialog opens.</p>
@@ -242,20 +275,22 @@
 </ul>
 <p>Below these, grayed out, are the fields that only sCollect offers (Import, Media Folder, Actions).</p>
 
-<h3>Playback</h3>
+<h3>Playback/Playlist</h3>
 <ul>
+
 <li><strong>Apple Music export:</strong> Always update existing playlist (don&rsquo;t ask).</li>
+
 <li><strong>Video window always on top:</strong> The video window always stays above all other windows.</li>
 <li><strong>Pause video when minimized:</strong> Pauses playback while the video window is minimized and resumes it when the window is restored.</li>
 <li><strong>Volume during slow motion / frame step:</strong> Volume reduction in dB during slow-motion and single-frame mode.</li>
-<li><strong>External video player:</strong> Preferred player for codecs that AVFoundation cannot decode (see section 4). Detected: VLC, IINA, and MPV.</li>
+<li><strong>External player for unsupported codecs:</strong> Preferred player for codecs that AVFoundation cannot decode (see section 4). Detected: VLC, IINA, and MPV.</li>
 </ul>
 
-<h3>Statistics</h3>
-<p>Counters for the loaded library (item count per media type, total duration, storage size).</p>
+<h3>Category Labels and Field Labels</h3>
+<p>These two tabs show the names of the categories and media types, and of the fields, as the loaded sCollect library defines them. They can only be changed in sCollect.</p>
 
-<h3>Language</h3>
-<p>sCollectPlay is available in 24 languages. Pick your preferred language &ndash; the new language takes effect after restarting the app. The restart can be triggered from the button in the Language tab.</p>
+<h3>Statistics</h3>
+<p>The number of tracks per media type and of playlists per category, plus the total number of tracks.</p>
 
 <aside>
 <strong>Note:</strong> Disabled fields show settings that are available in sCollect (the main app) but not in sCollectPlay &ndash; for example tag editing, import modes, or sync options.
@@ -269,6 +304,9 @@
 <tr><td><kbd>&#8984;,</kbd></td><td>Open Settings</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>Choose sCollect Library&hellip;</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>Quit sCollectPlay</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>Undo (for example, bring back a deleted file)</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>Redo</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>sCollectPlay Help</td></tr>
 </table>
 
 <h3>Playback</h3>

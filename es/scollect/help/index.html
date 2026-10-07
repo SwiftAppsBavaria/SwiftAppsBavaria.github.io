@@ -439,6 +439,31 @@
 </aside>
 
 
+<h3 id="geraete">Playlist en el iPhone o el iPod</h3>
+<p>sCollect no transfiere nada directamente a un dispositivo. El camino pasa por Apple Music y el Finder:</p>
+<ol>
+<li><strong>Enviar a Apple Music:</strong> Haz clic derecho en la playlist en la barra lateral y elige &laquo;Enviar playlist a Apple Music&raquo;, o selecciónala y elige <strong>Archivo &gt; Enviar playlist a Apple Music&hellip;</strong></li>
+<li><strong>Conectar el dispositivo:</strong> Conecta el iPhone, iPad o iPod al Mac con un cable y selecciónalo en la barra lateral del <strong>Finder</strong>, en &laquo;Ubicaciones&raquo;.</li>
+<li><strong>Marcar la playlist:</strong> En la pestaña &laquo;Música&raquo;, activa &laquo;Sincronizar música con el [dispositivo]&raquo;, elige &laquo;Artistas, álbumes, géneros y playlists seleccionados&raquo; y marca la lista en &laquo;Playlists&raquo;.</li>
+<li>Haz clic en &laquo;Aplicar&raquo;.</li>
+</ol>
+<p>Apple Music acepta MP3, AAC y ALAC (.m4a), AIFF y WAV. sCollect no envía los títulos en otros formatos (por ejemplo FLAC, OGG/Opus, .aac en bruto o MKV) y los indica en un mensaje &ndash; conviértelos antes, consulta <a href="#convert">Convertir formato</a> (sección 10). Para los iPod antiguos (Shuffle, Nano, Classic) encontrarás allí el botón <strong>Compatible con iPod (AAC-LC, 256 kbps)</strong>.</p>
+<p>Si la playlist cambia, envíala de nuevo: sCollect pregunta si debe actualizarse la lista existente en Apple Music o crearse una nueva. Después, vuelve a sincronizar en el Finder.</p>
+<aside>
+<strong>Nota:</strong> Si en el iPhone está activado &laquo;Sincronizar biblioteca&raquo; (iCloud), el Finder no transfiere música. La playlist llega entonces al dispositivo a través de iCloud, siempre que en Apple Music en el Mac también esté activado &laquo;Sincronizar biblioteca&raquo; &ndash; para ello se necesita una suscripción a Apple&nbsp;Music o iTunes&nbsp;Match.
+</aside>
+
+<h3 id="vlc">Playlist en un dispositivo Android (VLC)</h3>
+<p>Haz clic derecho en la playlist en la barra lateral y elige &laquo;Exportar para VLC/dispositivo&hellip;&raquo;, o selecciónala y elige <strong>Archivo &gt; Exportar playlist para VLC/dispositivo&hellip;</strong> Como destino eliges una tarjeta SD, una memoria USB o cualquier carpeta. sCollect crea allí una carpeta con el nombre de la playlist: dentro, los archivos, ordenados por artista y álbum, y la playlist como archivo <code>.m3u8</code> con rutas relativas.</p>
+<ul>
+<li>Se exportan los archivos de audio y de vídeo; los libros y los ítems de Varios se omiten y se cuentan en el mensaje final.</li>
+<li>Si vuelves a exportar la misma playlist al mismo lugar, sCollect copia solo lo que es nuevo o ha cambiado y vuelve a escribir la lista. Los títulos que has quitado de la playlist ya no aparecen en la lista, pero sus archivos permanecen en la carpeta.</li>
+<li>Si cancelas, la lista contiene los títulos copiados hasta ese momento.</li>
+</ul>
+<p>Lleva después la <strong>carpeta entera</strong> al dispositivo Android: inserta la tarjeta o la memoria, o cópiala por cable con un programa MTP (macOS no muestra un teléfono Android como unidad). No separes el contenido de la carpeta &ndash; la lista solo encuentra sus títulos de forma relativa a su propia ubicación. VLC muestra la playlist entre sus playlists en cuanto ha explorado el almacenamiento; si la carpeta está fuera de las ubicaciones exploradas, añádela a la biblioteca multimedia en VLC.</p>
+<p>La carpeta sirve también para VLC en otro Mac o PC y para cualquier reproductor que lea listas M3U8.</p>
+
+
 <h2 id="external">8. Discos externos</h2>
 
 <h3>Biblioteca en un disco externo</h3>

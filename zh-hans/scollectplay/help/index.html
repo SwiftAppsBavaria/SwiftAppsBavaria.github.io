@@ -162,7 +162,7 @@
 <li><strong>高解析度音频：</strong>DSD（DFF、DSF）</li>
 <li><strong>其他音频格式：</strong>OGG Vorbis、WMA</li>
 </ul>
-<p>首选播放器会自动检测：<strong>VLC</strong>、<strong>IINA</strong> 或 <strong>MPV</strong>（按此顺序）。你可以在<strong>设置 &gt; 播放 &gt; 外部视频播放器</strong>中指定。如果这些播放器都未安装，则使用该格式的默认程序 &ndash; 推荐使用 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>（免费、开源）。</p>
+<p>首选播放器会自动检测：<strong>VLC</strong>、<strong>IINA</strong> 或 <strong>MPV</strong>（按此顺序）。你可以在<strong>设置 &gt; 播放/播放列表 &gt; 用于不支持的编解码器的外部播放器</strong>中指定。如果这些播放器都未安装，则使用该格式的默认程序 &ndash; 推荐使用 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>（免费、开源）。</p>
 
 <h3>播放控制</h3>
 <table class="shortcut-table">
@@ -183,6 +183,7 @@
 <li><strong>重复（单曲）：</strong>循环播放当前曲目。</li>
 </ul>
 
+
 <h3>导出到 Apple Music</h3>
 <p>播放列表或所选的部分曲目可以发送到 Apple Music：</p>
 <ul>
@@ -190,7 +191,8 @@
 <li><strong>曲目右键菜单：</strong><em>作为播放列表发送到 Apple Music</em>（所选曲目作为「选择」）。</li>
 <li><strong>文件菜单：</strong><em>将播放列表发送到 Apple Music&hellip;</em>（选中播放列表时可用）。</li>
 </ul>
-<p>技术上会写入一个 M3U8 文件并交给 Music.app。Apple Music 中已有的播放列表可以选择自动更新 &ndash; 相应的选项在设置中。</p>
+<p>sCollectPlay 会在 Apple Music 中创建播放列表并添加曲目。Apple Music 不接受的格式的曲目不会一并发送，而是在提示信息中列出。如果你之前已经发送过该播放列表，且它在 Apple Music 中仍然存在，sCollectPlay 会询问是更新它还是新建一个；选择「不再询问」或使用设置 <strong>Apple Music 导出</strong>（参见<a href="#settings">设置</a>），就会不经询问直接更新。</p>
+
 
 
 <h2 id="playlists">5. 播放列表</h2>
@@ -205,15 +207,42 @@
 <li><strong>创建：</strong><em>我的播放列表</em>旁边的加号提供<em>新建播放列表&hellip;</em>和<em>新建智能播放列表&hellip;</em>。</li>
 <li><strong>添加：</strong>曲目列表右键菜单中的<em>添加到播放列表</em>会将所选曲目添加到某个播放列表，或新建一个播放列表；在自己的播放列表中，<em>从播放列表移除</em>可将曲目再次移出。</li>
 <li><strong>智能播放列表</strong>会按规则自动组合；右键菜单中的<em>编辑</em>可修改规则。</li>
-<li><strong>重命名、删除、发送到 Apple Music：</strong>通过播放列表的右键菜单。</li>
+<li><strong>重命名、删除、发送到 Apple Music、导出到 VLC：</strong>通过播放列表的右键菜单。</li>
 </ul>
 <p>sCollectPlay 将你自己的播放列表保存在这台 Mac 上，绝不写入媒体库或 XML；它通过文件路径重新找到其中的曲目，即使重新扫描后也是如此。</p>
+
+
+
+<h3 id="geraete">将播放列表同步到 iPhone 或 iPod</h3>
+<p>sCollectPlay 不会直接向设备传输任何内容。途径是经由 Apple Music 和 Finder：</p>
+<ol>
+<li><strong>发送到 Apple Music：</strong>在边栏中右键点击播放列表并选择<em>将播放列表发送到 Apple Music</em>，或者选中它后选择<strong>文件 &gt; 将播放列表发送到 Apple Music&hellip;</strong> 所选曲目可以通过曲目列表右键菜单中的<em>作为播放列表发送到 Apple Music</em>发送。</li>
+<li><strong>连接设备：</strong>用线缆将 iPhone、iPad 或 iPod 连接到 Mac，然后在 <strong>Finder</strong> 边栏的「位置」下选择它。</li>
+<li><strong>勾选播放列表：</strong>在「音乐」标签页中打开「将音乐同步到[设备]」，选择「所选艺人、专辑、类型和播放列表」，然后在「播放列表」下勾选该列表。</li>
+<li>点按「应用」。</li>
+</ol>
+<p>Apple Music 接受 MP3、AAC 和 ALAC（.m4a）、AIFF 和 WAV。其他格式的曲目（例如 FLAC、OGG/Opus、原始 .aac 或 MKV）sCollectPlay 不会一并发送，而是在提示信息中列出 &ndash; 它们需要事先转换，例如使用 sCollect 中的「转换格式」。</p>
+<p>播放列表有变化时，请再发送一次：sCollectPlay 会询问是更新 Apple Music 中已有的列表，还是新建一个。之后在 Finder 中重新同步。</p>
+<aside>
+<strong>提示：</strong>如果 iPhone 上打开了「同步资料库」（iCloud），Finder 不会传输音乐。这时，只要 Mac 上的 Apple Music 中也打开了「同步资料库」，播放列表就会通过 iCloud 到达设备 &ndash; 这需要订阅 Apple&nbsp;Music 或 iTunes&nbsp;Match。
+</aside>
+
+<h3 id="vlc">将播放列表传到 Android 设备（VLC）</h3>
+<p>在边栏中右键点击播放列表并选择<em>导出到 VLC/设备&hellip;</em>，或者选中它后选择<strong>文件 &gt; 将播放列表导出到 VLC/设备&hellip;</strong> 这适用于任何播放列表，包括<strong>我的播放列表</strong>下的播放列表。目标可以是 SD 卡、USB 闪存盘或任意文件夹。sCollectPlay 会在那里创建一个以播放列表命名的文件夹：其中包含按艺人和专辑整理的文件，以及一个使用相对路径的 <code>.m3u8</code> 播放列表文件。</p>
+<ul>
+<li>导出的是整个播放列表，即使搜索栏当前正在筛选它 &ndash; 即其中的音频和视频文件；「图书」和「其他」类别的条目会被跳过，并在完成提示中计数。</li>
+<li>如果你再次将同一个播放列表导出到同一位置，sCollectPlay 只复制新增或已更改的内容，并重写列表。你从播放列表中移除的曲目不再出现在列表中，但它们的文件仍留在文件夹里。</li>
+<li>导出期间，曲目列表下方会显示一个进度条；点击旁边的叉号即可取消。此时列表会包含截至那时已复制的曲目。</li>
+</ul>
+<p>然后把<strong>整个文件夹</strong>放到 Android 设备上：插入存储卡或闪存盘，或者用 MTP 程序通过线缆复制（macOS 不会把 Android 手机显示为磁盘）。不要拆散这个文件夹 &ndash; 列表只能相对于自身所在的位置找到其中的曲目。VLC 扫描存储空间后，就会在其播放列表中显示该播放列表；如果文件夹位于扫描范围之外，请在 VLC 中将它添加到媒体库。</p>
+<p>这个文件夹也适用于另一台 Mac 或 PC 上的 VLC，以及任何能读取 M3U8 列表的播放器。</p>
 
 
 
 <h2 id="delete">6. 删除媒体文件</h2>
 
 <p>在曲目右键菜单中可以找到<strong>删除媒体文件</strong>这一项。默认情况下之前会出现一个确认对话框（可在设置中关闭）。文件会被移到废纸篓，条目会从媒体库中移除。</p>
+<p>使用<strong>编辑 &gt; 撤销</strong>（<kbd>&#8984;Z</kbd>）可将文件连同其条目从废纸篓中恢复；<strong>编辑 &gt; 重做</strong>（<kbd>&#8679;&#8984;Z</kbd>）会再次删除它。</p>
 
 <aside>
 <strong>网络共享：</strong>SMB 或 NFS 共享通常没有废纸篓。sCollectPlay 会检测到这一点，并在删除前明确询问 &ndash; 文件将被永久移除，且无法恢复。你可以取消该操作；此时条目和文件都保持不变。
@@ -229,7 +258,11 @@
 
 <li><strong>启动时提示网络媒体库：</strong>启动时，在加载网络宗卷上的来源之前先询问。</li>
 
+<li><strong>语言：</strong>App 跟随系统语言。<em>在系统设置中打开语言设置</em>按钮会打开<strong>通用 &gt; 语言与地区</strong>；你可以在那里的“应用程序”部分为 sCollectPlay 单独选择一种语言。</li>
+<li><strong>封面文件夹：</strong>封面图片通常位于媒体库中的“Artworks”文件夹。使用<em>选择&hellip;</em>可指定其他文件夹；它只适用于当前加载的媒体库，<em>移除</em>可将其取消。</li>
+<li><strong>媒体文件夹：</strong>仅当媒体库使用其自身文件夹之外的文件夹时才会显示。可对每个文件夹用<em>选择</em>授予访问权限，用<em>移除</em>收回。</li>
 </ul>
+<p>下方以灰色显示只能在 sCollect 中更改的设置（例如专辑封面、书籍与PDF、多值、重复项）。</p>
 
 <h3>媒体库</h3>
 <p>顶部上下排列着三种来源：<em>已扫描的文件夹</em>、<em>XML 媒体库</em>和<em>sCollect 媒体库</em>。始终只有一个处于使用中 &ndash; 它的圆圈是实心的。点击另一个圆圈，会切换到该类型最近使用的来源；已扫描的文件夹会以保存的状态恢复，无需重新扫描。如果还没有这类来源，则会打开选择窗口。</p>
@@ -242,20 +275,22 @@
 </ul>
 <p>下方以灰色显示仅 sCollect 提供的字段（导入、媒体文件夹、操作）。</p>
 
-<h3>播放</h3>
+<h3>播放/播放列表</h3>
 <ul>
+
 <li><strong>Apple Music 导出：</strong>始终更新现有播放列表（不询问）。</li>
+
 <li><strong>视频窗口始终在最前：</strong>视频窗口始终保持在所有其他窗口之上。</li>
 <li><strong>最小化时暂停视频：</strong>视频窗口最小化期间暂停播放，恢复窗口后继续播放。</li>
 <li><strong>慢动作/逐帧时的音量：</strong>慢动作和逐帧模式期间的音量降低（dB）。</li>
-<li><strong>外部视频播放器：</strong>用于 AVFoundation 无法播放的编解码器的首选播放器（参见第 4 节）。可识别 VLC、IINA 和 MPV。</li>
+<li><strong>用于不支持的编解码器的外部播放器：</strong>用于 AVFoundation 无法播放的编解码器的首选播放器（参见第 4 节）。可识别 VLC、IINA 和 MPV。</li>
 </ul>
 
-<h3>统计</h3>
-<p>已加载媒体库的计数（每种媒体类型的项目数、总时长、占用空间）。</p>
+<h3>类别标签和字段标签</h3>
+<p>这两个标签页显示已加载的 sCollect 媒体库所规定的类别和媒体类型名称，或字段名称。它们只能在 sCollect 中更改。</p>
 
-<h3>语言</h3>
-<p>sCollectPlay 提供 24 种语言。选择你偏好的语言 &ndash; 重新启动 App 后新语言即生效。可以通过语言标签页中的按钮自动触发重新启动。</p>
+<h3>统计</h3>
+<p>每种媒体类型的曲目数和每个类别的播放列表数，以及曲目总数。</p>
 
 <aside>
 <strong>注意：</strong>已停用的字段显示的是 sCollect（主 App）中提供、而 sCollectPlay 中不可用的设置 &ndash; 例如标签编辑、导入模式或同步选项。
@@ -269,6 +304,9 @@
 <tr><td><kbd>&#8984;,</kbd></td><td>打开设置</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>选择 sCollect 媒体库&hellip;</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>退出 sCollectPlay</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>撤销（例如恢复已删除的文件）</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>重做</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>sCollectPlay 帮助</td></tr>
 </table>
 
 <h3>播放</h3>

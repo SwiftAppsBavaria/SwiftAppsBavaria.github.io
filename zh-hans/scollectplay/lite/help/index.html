@@ -131,7 +131,7 @@
 <li><strong>高解析度音频：</strong>DSD（DFF、DSF）</li>
 <li><strong>其他音频格式：</strong>OGG Vorbis、WMA</li>
 </ul>
-<p>首选播放器会自动检测：<strong>VLC</strong>、<strong>IINA</strong> 或 <strong>MPV</strong>（按此顺序）。你可以在<strong>设置 &gt; 播放 &gt; 外部视频播放器</strong>中指定。如果这些播放器都未安装，则使用该格式的默认程序 &ndash; 推荐使用 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>（免费、开源）。</p>
+<p>首选播放器会自动检测：<strong>VLC</strong>、<strong>IINA</strong> 或 <strong>MPV</strong>（按此顺序）。你可以在<strong>设置 &gt; 播放/播放列表 &gt; 用于不支持的编解码器的外部播放器</strong>中指定。如果这些播放器都未安装，则使用该格式的默认程序 &ndash; 推荐使用 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>（免费、开源）。</p>
 
 <h3>播放控制</h3>
 <table class="shortcut-table">
@@ -152,15 +152,6 @@
 <li><strong>重复（单曲）：</strong>循环播放当前曲目。</li>
 </ul>
 
-<h3>导出到 Apple Music</h3>
-<p>播放列表或所选的部分曲目可以发送到 Apple Music：</p>
-<ul>
-<li><strong>边栏右键菜单：</strong>右键点击播放列表 &gt; <em>将播放列表发送到 Apple Music</em>。</li>
-<li><strong>曲目右键菜单：</strong><em>作为播放列表发送到 Apple Music</em>（所选曲目作为「选择」）。</li>
-<li><strong>文件菜单：</strong><em>将播放列表发送到 Apple Music&hellip;</em>（选中播放列表时可用）。</li>
-</ul>
-<p>技术上会写入一个 M3U8 文件并交给 Music.app。Apple Music 中已有的播放列表可以选择自动更新 &ndash; 相应的选项在设置中。</p>
-
 
 <h2 id="playlists">5. 播放列表</h2>
 
@@ -171,6 +162,7 @@
 <h2 id="delete">6. 删除媒体文件</h2>
 
 <p>在曲目右键菜单中可以找到<strong>删除媒体文件</strong>这一项。默认情况下之前会出现一个确认对话框（可在设置中关闭）。文件会被移到废纸篓，条目会从媒体库中移除。</p>
+<p>使用<strong>编辑 &gt; 撤销</strong>（<kbd>&#8984;Z</kbd>）可将文件连同其条目从废纸篓中恢复；<strong>编辑 &gt; 重做</strong>（<kbd>&#8679;&#8984;Z</kbd>）会再次删除它。</p>
 
 <aside>
 <strong>网络共享：</strong>SMB 或 NFS 共享通常没有废纸篓。sCollectPlay Lite 会检测到这一点，并在删除前明确询问 &ndash; 文件将被永久移除，且无法恢复。你可以取消该操作；此时条目和文件都保持不变。
@@ -183,7 +175,11 @@
 <h3>通用</h3>
 <ul>
 <li><strong>确认删除：</strong>移到废纸篓之前先询问。</li>
+<li><strong>语言：</strong>App 跟随系统语言。<em>在系统设置中打开语言设置</em>按钮会打开<strong>通用 &gt; 语言与地区</strong>；你可以在那里的“应用程序”部分为 sCollectPlay Lite 单独选择一种语言。</li>
+<li><strong>封面文件夹：</strong>封面图片通常位于媒体库中的“Artworks”文件夹。使用<em>选择&hellip;</em>可指定其他文件夹；它只适用于当前加载的媒体库，<em>移除</em>可将其取消。</li>
+<li><strong>媒体文件夹：</strong>仅当媒体库使用其自身文件夹之外的文件夹时才会显示。可对每个文件夹用<em>选择</em>授予访问权限，用<em>移除</em>收回。</li>
 </ul>
+<p>下方以灰色显示只能在 sCollect 中更改的设置（例如专辑封面、书籍与PDF、多值、重复项）。</p>
 
 <h3>媒体库</h3>
 <p>顶部上下排列着三种来源：<em>已扫描的文件夹</em>、<em>XML 媒体库</em>和<em>sCollect 媒体库</em>。始终只有一个处于使用中 &ndash; 它的圆圈是实心的。点击另一个圆圈，会打开该类型的选择窗口。</p>
@@ -193,20 +189,19 @@
 </ul>
 <p>下方以灰色显示仅 sCollect 提供的字段（导入、媒体文件夹、操作）。</p>
 
-<h3>播放</h3>
+<h3>播放/播放列表</h3>
 <ul>
-<li><strong>Apple Music 导出：</strong>始终更新现有播放列表（不询问）。</li>
 <li><strong>视频窗口始终在最前：</strong>视频窗口始终保持在所有其他窗口之上。</li>
 <li><strong>最小化时暂停视频：</strong>视频窗口最小化期间暂停播放，恢复窗口后继续播放。</li>
 <li><strong>慢动作/逐帧时的音量：</strong>慢动作和逐帧模式期间的音量降低（dB）。</li>
-<li><strong>外部视频播放器：</strong>用于 AVFoundation 无法播放的编解码器的首选播放器（参见第 4 节）。可识别 VLC、IINA 和 MPV。</li>
+<li><strong>用于不支持的编解码器的外部播放器：</strong>用于 AVFoundation 无法播放的编解码器的首选播放器（参见第 4 节）。可识别 VLC、IINA 和 MPV。</li>
 </ul>
 
-<h3>统计</h3>
-<p>已加载媒体库的计数（每种媒体类型的项目数、总时长、占用空间）。</p>
+<h3>类别标签和字段标签</h3>
+<p>这两个标签页显示已加载的 sCollect 媒体库所规定的类别和媒体类型名称，或字段名称。它们只能在 sCollect 中更改。</p>
 
-<h3>语言</h3>
-<p>sCollectPlay Lite 提供 24 种语言。选择你偏好的语言 &ndash; 重新启动 App 后新语言即生效。可以通过语言标签页中的按钮自动触发重新启动。</p>
+<h3>统计</h3>
+<p>每种媒体类型的曲目数和每个类别的播放列表数，以及曲目总数。</p>
 
 <aside>
 <strong>注意：</strong>已停用的字段显示的是 sCollect（主 App）中提供、而 sCollectPlay Lite 中不可用的设置 &ndash; 例如标签编辑、导入模式或同步选项。
@@ -220,6 +215,9 @@
 <tr><td><kbd>&#8984;,</kbd></td><td>打开设置</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>选择 sCollect 媒体库&hellip;</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>退出 sCollectPlay Lite</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>撤销（例如恢复已删除的文件）</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>重做</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>sCollectPlay Lite 帮助</td></tr>
 </table>
 
 <h3>播放</h3>

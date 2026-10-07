@@ -131,7 +131,7 @@
 <li><strong>ハイレゾオーディオ：</strong>DSD（DFF、DSF）</li>
 <li><strong>その他のオーディオ形式：</strong>OGG Vorbis、WMA</li>
 </ul>
-<p>優先プレーヤーは自動的に検出されます：<strong>VLC</strong>、<strong>IINA</strong>、または<strong>MPV</strong>（この順序）。<strong>設定 &gt; 再生 &gt; 外部ビデオプレーヤー</strong>で選択を指定できます。これらのプレーヤーがいずれもインストールされていない場合は、その形式のデフォルトアプリが使われます &ndash; <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>（無料、オープンソース）をお勧めします。</p>
+<p>優先プレーヤーは自動的に検出されます：<strong>VLC</strong>、<strong>IINA</strong>、または<strong>MPV</strong>（この順序）。<strong>設定 &gt; 再生/プレイリスト &gt; 非対応コーデック用の外部プレーヤー</strong>で選択を指定できます。これらのプレーヤーがいずれもインストールされていない場合は、その形式のデフォルトアプリが使われます &ndash; <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>（無料、オープンソース）をお勧めします。</p>
 
 <h3>再生コントロール</h3>
 <table class="shortcut-table">
@@ -152,15 +152,6 @@
 <li><strong>リピート（トラック）：</strong>現在のトラックを繰り返し再生します。</li>
 </ul>
 
-<h3>Apple Musicへのエクスポート</h3>
-<p>プレイリストや選択したトラックをApple Musicに送信できます：</p>
-<ul>
-<li><strong>サイドバーのコンテキストメニュー：</strong>プレイリストを右クリック &gt; <em>プレイリストを Apple Music に送信</em>。</li>
-<li><strong>トラックのコンテキストメニュー：</strong><em>Apple Musicにプレイリストとして送信</em>（選択したトラックが&laquo;選択&raquo;になります）。</li>
-<li><strong>ファイルメニュー：</strong><em>プレイリストを Apple Music に送信&hellip;</em>（プレイリストが選ばれているときに有効）。</li>
-</ul>
-<p>技術的にはM3U8ファイルを書き出してMusic.appに渡します。Apple Musicの既存のプレイリストを自動的に更新することもできます &ndash; その設定は設定にあります。</p>
-
 
 <h2 id="playlists">5. プレイリスト</h2>
 
@@ -171,6 +162,7 @@
 <h2 id="delete">6. メディアファイルの削除</h2>
 
 <p>トラックのコンテキストメニューには<strong>メディアファイルを削除</strong>があります。標準では事前に確認ダイアログが表示されます（設定で無効にできます）。ファイルはゴミ箱に移動され、項目はライブラリから削除されます。</p>
+<p><strong>編集 &gt; 取り消す</strong>（<kbd>&#8984;Z</kbd>）で、ファイルを項目ごとゴミ箱から元に戻せます。<strong>編集 &gt; やり直す</strong>（<kbd>&#8679;&#8984;Z</kbd>）でもう一度削除します。</p>
 
 <aside>
 <strong>ネットワーク共有：</strong>SMBやNFSの共有には通常ゴミ箱がありません。sCollectPlay Liteはこれを検出し、削除の前に明示的に確認します &ndash; ファイルは完全に削除され、復元できません。操作は中止できます。その場合、項目もファイルもそのまま残ります。
@@ -183,7 +175,11 @@
 <h3>一般</h3>
 <ul>
 <li><strong>削除を確認：</strong>ゴミ箱に移動する前に確認します。</li>
+<li><strong>言語：</strong>アプリはシステムの言語に従います。<em>システム設定で言語設定を開く</em>ボタンで<strong>一般 &gt; 言語と地域</strong>が開きます。そこの「アプリケーション」セクションで、sCollectPlay Lite用に別の言語を選べます。</li>
+<li><strong>アートワークフォルダ：</strong>カバー画像は通常、ライブラリ内の「Artworks」フォルダにあります。<em>選択&hellip;</em>で別のフォルダを指定できます。このフォルダは読み込まれているライブラリにのみ適用され、<em>削除</em>で解除されます。</li>
+<li><strong>メディアフォルダ：</strong>ライブラリが自身のフォルダの外にあるフォルダを使っている場合にのみ表示されます。フォルダごとに<em>選択</em>でアクセスを許可し、<em>削除</em>で取り消します。</li>
 </ul>
+<p>その下には、sCollectでしか変更できない設定（アルバムアートワーク、書籍とPDF、マルチバリュー、重複など）がグレーで表示されます。</p>
 
 <h3>ライブラリ</h3>
 <p>上部には3つのソースが縦に並んでいます：<em>スキャンしたフォルダ</em>、<em>XMLライブラリ</em>、<em>sCollect ライブラリ</em>。使用中になるのは常に1つだけです &ndash; その丸が塗りつぶされます。別の丸をクリックすると、その種類の選択画面が開きます。</p>
@@ -193,20 +189,19 @@
 </ul>
 <p>その下には、sCollectだけが備える項目（インポート、メディアフォルダ、アクション）がグレーで表示されます。</p>
 
-<h3>再生</h3>
+<h3>再生/プレイリスト</h3>
 <ul>
-<li><strong>Apple Musicエクスポート：</strong>既存のプレイリストを常に更新する（確認しない）。</li>
 <li><strong>ビデオウィンドウを常に前面に：</strong>ビデオウィンドウは他のすべてのウィンドウの上に表示され続けます。</li>
 <li><strong>Dockにしまったときにビデオを一時停止：</strong>ビデオウィンドウがDockにしまわれている間は再生を一時停止し、ウィンドウを戻すと再開します。</li>
 <li><strong>スロー/コマ送り時の音量：</strong>スローモーションおよびコマ送りモード中のdB単位の音量低減。</li>
-<li><strong>外部ビデオプレーヤー：</strong>AVFoundationが再生できないコーデック向けの優先プレーヤー（セクション4を参照）。VLC、IINA、MPVが検出されます。</li>
+<li><strong>非対応コーデック用の外部プレーヤー：</strong>AVFoundationが再生できないコーデック向けの優先プレーヤー（セクション4を参照）。VLC、IINA、MPVが検出されます。</li>
 </ul>
 
-<h3>統計</h3>
-<p>読み込まれたライブラリの集計（メディアタイプごとの項目数、合計時間、必要な容量）。</p>
+<h3>カテゴリラベルとフィールドラベル</h3>
+<p>この2つのタブには、読み込まれたsCollect ライブラリで定められたカテゴリとメディアタイプの名前、またはフィールドの名前が表示されます。変更できるのはsCollectだけです。</p>
 
-<h3>言語</h3>
-<p>sCollectPlay Liteは24の言語に対応しています。お好みの言語を選んでください &ndash; アプリを再起動すると新しい言語が有効になります。再起動は言語タブのボタンから自動的に行えます。</p>
+<h3>統計</h3>
+<p>メディアタイプごとの曲数とカテゴリごとのプレイリスト数、および曲の総数。</p>
 
 <aside>
 <strong>注：</strong>無効になっているフィールドは、sCollect（メインApp）では使えるがsCollectPlay Liteでは使えない設定を示しています &ndash; 例えばタグ編集、読み込みモード、同期オプションです。
@@ -220,6 +215,9 @@
 <tr><td><kbd>&#8984;,</kbd></td><td>設定を開く</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>sCollect ライブラリを選択&hellip;</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>sCollectPlay Liteを終了</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>取り消す（例：削除したファイルを元に戻す）</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>やり直す</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>sCollectPlay Lite ヘルプ</td></tr>
 </table>
 
 <h3>再生</h3>

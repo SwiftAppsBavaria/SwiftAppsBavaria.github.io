@@ -131,7 +131,7 @@
 <li><strong>High-resolution audio:</strong> DSD (DFF, DSF)</li>
 <li><strong>Other audio formats:</strong> OGG Vorbis, WMA</li>
 </ul>
-<p>The preferred player is detected automatically: <strong>VLC</strong>, <strong>IINA</strong>, or <strong>MPV</strong> (in that order). You can override the choice in <strong>Settings &gt; Playback &gt; External video player</strong>. If none of these players are installed, the default app for the format is used &ndash; we recommend <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (free, open source).</p>
+<p>The preferred player is detected automatically: <strong>VLC</strong>, <strong>IINA</strong>, or <strong>MPV</strong> (in that order). You can override the choice in <strong>Settings &gt; Playback/Playlist &gt; External player for unsupported codecs</strong>. If none of these players are installed, the default app for the format is used &ndash; we recommend <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (free, open source).</p>
 
 <h3>Playback Controls</h3>
 <table class="shortcut-table">
@@ -152,15 +152,6 @@
 <li><strong>Repeat (Track):</strong> Repeats the current track endlessly.</li>
 </ul>
 
-<h3>Apple Music Export</h3>
-<p>Playlists or a selection of tracks can be sent to Apple Music:</p>
-<ul>
-<li><strong>Sidebar context menu:</strong> Right-click a playlist &gt; <em>Send Playlist to Apple Music</em>.</li>
-<li><strong>Track context menu:</strong> <em>Send as Playlist to Apple Music</em> (selected tracks as &laquo;Selection&raquo;).</li>
-<li><strong>File menu:</strong> <em>Send Playlist to Apple Music&hellip;</em> (active when a playlist is selected).</li>
-</ul>
-<p>Internally, an M3U8 file is written and handed to Music.app. Existing playlists in Apple Music can optionally be updated automatically &ndash; the corresponding setting is in Preferences.</p>
-
 
 <h2 id="playlists">5. Playlists</h2>
 
@@ -171,6 +162,7 @@
 <h2 id="delete">6. Deleting Media Files</h2>
 
 <p>The track context menu has a <strong>Delete media file</strong> entry. By default, a confirmation dialog appears beforehand (can be disabled in Settings). The file is moved to the Trash, and the entry is removed from the library.</p>
+<p>With <strong>Edit &gt; Undo</strong> (<kbd>&#8984;Z</kbd>) you bring the file back from the Trash, together with its entry; <strong>Edit &gt; Redo</strong> (<kbd>&#8679;&#8984;Z</kbd>) deletes it again.</p>
 
 <aside>
 <strong>Network shares:</strong> SMB and NFS shares typically have no Trash. sCollectPlay Lite detects this and asks you to confirm before deleting &ndash; the file is removed permanently and cannot be restored. You can cancel; in that case, both entry and file remain unchanged.
@@ -182,8 +174,12 @@
 
 <h3>General</h3>
 <ul>
-<li><strong>Confirm delete:</strong> Ask before moving files to the Trash.</li>
+<li><strong>Confirm deletion:</strong> Ask before moving files to the Trash.</li>
+<li><strong>Language:</strong> The app follows the system language. The <em>Open language settings in System Settings</em> button takes you to <strong>General &gt; Language &amp; Region</strong>; in the &laquo;Applications&raquo; section there you choose a separate language for sCollectPlay Lite.</li>
+<li><strong>Artwork folder:</strong> Cover images normally sit in a folder &laquo;Artworks&raquo; inside the library. With <em>Choose&hellip;</em> you specify another folder; it applies only to the loaded library, and <em>Remove</em> detaches it again.</li>
+<li><strong>Media Folder:</strong> appears only if the library uses folders outside its own folder. For each folder, <em>Choose</em> grants access and <em>Remove</em> withdraws it.</li>
 </ul>
+<p>Below these, grayed out, are the settings that only sCollect can change (such as album covers, books &amp; PDFs, multiple values, duplicates).</p>
 
 <h3>Library</h3>
 <p>At the top, the three sources are listed one below the other: <em>Scanned Folders</em>, <em>XML Library</em>, and <em>sCollect Library</em>. Only one is active at a time &ndash; its circle is filled. Clicking another circle opens the selection dialog for that kind.</p>
@@ -193,20 +189,19 @@
 </ul>
 <p>Below these, grayed out, are the fields that only sCollect offers (Import, Media Folder, Actions).</p>
 
-<h3>Playback</h3>
+<h3>Playback/Playlist</h3>
 <ul>
-<li><strong>Apple Music export:</strong> Always update existing playlist (don&rsquo;t ask).</li>
 <li><strong>Video window always on top:</strong> The video window always stays above all other windows.</li>
 <li><strong>Pause video when minimized:</strong> Pauses playback while the video window is minimized and resumes it when the window is restored.</li>
 <li><strong>Volume during slow motion / frame step:</strong> Volume reduction in dB during slow-motion and single-frame mode.</li>
-<li><strong>External video player:</strong> Preferred player for codecs that AVFoundation cannot decode (see section 4). Detected: VLC, IINA, and MPV.</li>
+<li><strong>External player for unsupported codecs:</strong> Preferred player for codecs that AVFoundation cannot decode (see section 4). Detected: VLC, IINA, and MPV.</li>
 </ul>
 
-<h3>Statistics</h3>
-<p>Counters for the loaded library (item count per media type, total duration, storage size).</p>
+<h3>Category Labels and Field Labels</h3>
+<p>These two tabs show the names of the categories and media types, and of the fields, as the loaded sCollect library defines them. They can only be changed in sCollect.</p>
 
-<h3>Language</h3>
-<p>sCollectPlay Lite is available in 24 languages. Pick your preferred language &ndash; the new language takes effect after restarting the app. The restart can be triggered from the button in the Language tab.</p>
+<h3>Statistics</h3>
+<p>The number of tracks per media type and of playlists per category, plus the total number of tracks.</p>
 
 <aside>
 <strong>Note:</strong> Disabled fields show settings that are available in sCollect (the main app) but not in sCollectPlay Lite &ndash; for example tag editing, import modes, or sync options.
@@ -220,6 +215,9 @@
 <tr><td><kbd>&#8984;,</kbd></td><td>Open Settings</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>Choose sCollect Library&hellip;</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>Quit sCollectPlay Lite</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>Undo (for example, bring back a deleted file)</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>Redo</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>sCollectPlay Lite Help</td></tr>
 </table>
 
 <h3>Playback</h3>

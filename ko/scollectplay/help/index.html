@@ -162,7 +162,7 @@
 <li><strong>고해상도 오디오:</strong> DSD(DFF, DSF)</li>
 <li><strong>기타 오디오 형식:</strong> OGG Vorbis, WMA</li>
 </ul>
-<p>선호하는 플레이어가 자동으로 감지됩니다: <strong>VLC</strong>, <strong>IINA</strong>, 또는 <strong>MPV</strong>(이 순서). <strong>설정 &gt; 재생 &gt; 외부 비디오 플레이어</strong>에서 선택을 지정할 수 있습니다. 이러한 플레이어가 모두 설치되어 있지 않으면 해당 형식의 기본 앱이 사용됩니다 &ndash; <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>(무료, 오픈 소스)를 권장합니다.</p>
+<p>선호하는 플레이어가 자동으로 감지됩니다: <strong>VLC</strong>, <strong>IINA</strong>, 또는 <strong>MPV</strong>(이 순서). <strong>설정 &gt; 재생/재생목록 &gt; 지원되지 않는 코덱용 외부 플레이어</strong>에서 선택을 지정할 수 있습니다. 이러한 플레이어가 모두 설치되어 있지 않으면 해당 형식의 기본 앱이 사용됩니다 &ndash; <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>(무료, 오픈 소스)를 권장합니다.</p>
 
 <h3>재생 컨트롤</h3>
 <table class="shortcut-table">
@@ -183,6 +183,7 @@
 <li><strong>반복 (트랙):</strong> 현재 트랙을 계속 반복합니다.</li>
 </ul>
 
+
 <h3>Apple Music으로 내보내기</h3>
 <p>재생목록이나 선택한 트랙을 Apple Music으로 보낼 수 있습니다:</p>
 <ul>
@@ -190,7 +191,8 @@
 <li><strong>트랙 컨텍스트 메뉴:</strong> <em>Apple Music에 재생목록으로 보내기</em>(선택한 트랙이 &laquo;선택 항목&raquo;으로).</li>
 <li><strong>파일 메뉴:</strong> <em>재생목록을 Apple Music으로 보내기&hellip;</em>(재생목록이 선택되어 있을 때 활성화).</li>
 </ul>
-<p>기술적으로는 M3U8 파일이 작성되어 Music.app에 전달됩니다. Apple Music의 기존 재생목록은 선택적으로 자동 업데이트할 수 있습니다 &ndash; 관련 설정은 설정에서 찾을 수 있습니다.</p>
+<p>sCollectPlay는 Apple Music에 재생목록을 만들고 트랙을 추가합니다. Apple Music이 받아들이지 않는 형식의 트랙은 보내지 않으며 메시지로 알려 줍니다. 이전에 재생목록을 보낸 적이 있고 Apple Music에 아직 남아 있으면, sCollectPlay는 업데이트할지 새로 만들지 묻습니다. &laquo;다시 묻지 않음&raquo;을 선택하거나 <strong>Apple Music 내보내기</strong> 설정(<a href="#settings">설정</a> 참조)을 사용하면 묻지 않고 업데이트됩니다.</p>
+
 
 
 <h2 id="playlists">5. 재생목록</h2>
@@ -205,15 +207,42 @@
 <li><strong>만들기:</strong> <em>내 재생목록</em> 옆의 더하기 버튼에서 <em>새 재생목록&hellip;</em>과 <em>새 스마트 재생목록&hellip;</em>을 선택할 수 있습니다.</li>
 <li><strong>채우기:</strong> 트랙 목록 컨텍스트 메뉴의 <em>재생목록에 추가</em>는 선택한 트랙을 재생목록에 추가하거나 새 재생목록을 만듭니다. 직접 만든 재생목록에서는 <em>재생목록에서 제거</em>로 다시 뺄 수 있습니다.</li>
 <li><strong>스마트 재생목록</strong>은 규칙에 따라 스스로 구성됩니다. 컨텍스트 메뉴의 <em>편집</em>으로 규칙을 변경합니다.</li>
-<li><strong>이름 변경, 삭제, Apple Music으로 보내기:</strong> 재생목록의 컨텍스트 메뉴에서 할 수 있습니다.</li>
+<li><strong>이름 변경, 삭제, Apple Music으로 보내기, VLC로 내보내기:</strong> 재생목록의 컨텍스트 메뉴에서 할 수 있습니다.</li>
 </ul>
 <p>직접 만든 재생목록은 sCollectPlay가 이 Mac에 저장하며, 라이브러리나 XML에는 절대 저장하지 않습니다. 트랙은 파일 경로로 다시 찾으므로 새로 스캔한 후에도 유지됩니다.</p>
+
+
+
+<h3 id="geraete">iPhone 또는 iPod에 재생목록 넣기</h3>
+<p>sCollectPlay는 기기로 직접 아무것도 전송하지 않습니다. Apple Music과 Finder를 거쳐야 합니다:</p>
+<ol>
+<li><strong>Apple Music으로 보내기:</strong> 사이드바에서 재생목록을 우클릭하고 <em>재생목록을 Apple Music으로 보내기</em>를 선택하거나, 재생목록을 선택한 다음 <strong>파일 &gt; 재생목록을 Apple Music으로 보내기&hellip;</strong>를 선택하세요. 선택한 트랙은 트랙 목록 컨텍스트 메뉴의 <em>Apple Music에 재생목록으로 보내기</em>로 보낼 수 있습니다.</li>
+<li><strong>기기 연결:</strong> iPhone, iPad 또는 iPod을 케이블로 Mac에 연결하고 <strong>Finder</strong> 사이드바의 &laquo;위치&raquo; 아래에서 선택하세요.</li>
+<li><strong>재생목록 체크:</strong> &laquo;음악&raquo; 탭에서 &laquo;음악을 [기기](으)로 동기화&raquo;를 켜고, &laquo;선택한 아티스트, 앨범, 장르 및 플레이리스트&raquo;를 선택한 다음 &laquo;플레이리스트&raquo; 아래에서 해당 목록을 체크하세요.</li>
+<li>&laquo;적용&raquo;을 클릭하세요.</li>
+</ol>
+<p>Apple Music은 MP3, AAC 및 ALAC(.m4a), AIFF, WAV를 받아들입니다. 다른 형식(예: FLAC, OGG/Opus, 원시 .aac 또는 MKV)의 트랙은 sCollectPlay가 보내지 않으며 메시지로 알려 줍니다 &ndash; 이러한 트랙은 미리 변환해야 합니다. 예를 들어 sCollect의 &laquo;형식 변환&raquo;을 사용하세요.</p>
+<p>재생목록이 바뀌면 다시 보내세요: sCollectPlay가 Apple Music의 기존 목록을 업데이트할지, 새 목록을 만들지 묻습니다. 그런 다음 Finder에서 다시 동기화하세요.</p>
+<aside>
+<strong>참고:</strong> iPhone에서 &laquo;보관함 동기화&raquo;(iCloud)가 켜져 있으면 Finder는 음악을 전송하지 않습니다. 이 경우 Mac의 Apple Music에서도 &laquo;보관함 동기화&raquo;가 켜져 있으면 재생목록이 iCloud를 통해 기기로 전달됩니다 &ndash; 이를 위해서는 Apple&nbsp;Music 또는 iTunes&nbsp;Match 구독이 필요합니다.
+</aside>
+
+<h3 id="vlc">Android 기기에 재생목록 넣기(VLC)</h3>
+<p>사이드바에서 재생목록을 우클릭하고 <em>VLC/기기로 내보내기&hellip;</em>를 선택하거나, 재생목록을 선택한 다음 <strong>파일 &gt; 재생목록을 VLC/기기로 내보내기&hellip;</strong>를 선택하세요. <strong>내 재생목록</strong> 아래의 재생목록을 포함해 모든 재생목록에서 사용할 수 있습니다. 대상으로는 SD 카드, USB 메모리 또는 임의의 폴더를 선택합니다. sCollectPlay는 그곳에 재생목록 이름으로 폴더를 만들고, 그 안에 아티스트와 앨범별로 정리된 파일과 상대 경로를 사용하는 <code>.m3u8</code> 파일 형태의 재생목록을 넣습니다.</p>
+<ul>
+<li>검색 필드가 재생목록을 필터링하고 있더라도 재생목록 전체가 내보내집니다 &ndash; 그 오디오 및 비디오 파일이 대상이며, 도서와 기타는 건너뛰며, 완료 메시지에서 그 개수를 알려 줍니다.</li>
+<li>같은 재생목록을 같은 위치로 다시 내보내면 sCollectPlay는 새로 생겼거나 변경된 것만 복사하고 목록을 다시 씁니다. 재생목록에서 뺀 트랙은 더 이상 목록에 없지만, 그 파일은 폴더에 그대로 남습니다.</li>
+<li>내보내는 동안 트랙 목록 아래에 막대가 표시되며, 옆의 X 표시로 취소할 수 있습니다. 그러면 목록에는 그때까지 복사된 트랙이 들어 있습니다.</li>
+</ul>
+<p>그런 다음 <strong>폴더 전체</strong>를 Android 기기로 옮기세요: 카드나 USB 메모리를 꽂거나, MTP 앱을 사용해 케이블로 복사합니다(macOS는 Android 휴대폰을 드라이브로 표시하지 않습니다). 폴더를 나누지 마세요 &ndash; 목록은 자신이 있는 위치를 기준으로만 트랙을 찾습니다. VLC는 저장 공간을 검색하고 나면 해당 재생목록을 자신의 재생목록 아래에 표시합니다. 폴더가 검색 대상 위치 밖에 있으면 VLC에서 미디어 라이브러리에 추가하세요.</p>
+<p>이 폴더는 다른 Mac이나 PC의 VLC, 그리고 M3U8 목록을 읽는 모든 플레이어에서도 사용할 수 있습니다.</p>
 
 
 
 <h2 id="delete">6. 미디어 파일 삭제</h2>
 
 <p>트랙 컨텍스트 메뉴에 <strong>미디어 파일 삭제</strong> 항목이 있습니다. 기본적으로 먼저 확인 대화상자가 나타납니다(설정에서 끌 수 있습니다). 파일은 휴지통으로 이동되고 항목은 라이브러리에서 제거됩니다.</p>
+<p><strong>편집 &gt; 실행 취소</strong>(<kbd>&#8984;Z</kbd>)로 파일을 항목과 함께 휴지통에서 되돌릴 수 있습니다. <strong>편집 &gt; 실행 복귀</strong>(<kbd>&#8679;&#8984;Z</kbd>)는 파일을 다시 삭제합니다.</p>
 
 <aside>
 <strong>네트워크 공유:</strong> SMB나 NFS 공유에는 대개 휴지통이 없습니다. sCollectPlay는 이를 감지하여 삭제하기 전에 명시적으로 확인을 요청합니다 &ndash; 파일은 영구적으로 제거되며 복원할 수 없습니다. 작업을 취소할 수 있으며, 그 경우 항목과 파일 모두 그대로 유지됩니다.
@@ -229,7 +258,11 @@
 
 <li><strong>시작 시 네트워크 라이브러리 경고:</strong> 시작할 때 네트워크 볼륨에 있는 소스를 로드하기 전에 묻습니다.</li>
 
+<li><strong>언어:</strong> 앱은 시스템 언어를 따릅니다. <em>시스템 설정에서 언어 설정 열기</em> 버튼을 누르면 <strong>일반 &gt; 언어 및 지역</strong>이 열리며, 그곳의 ‘응용 프로그램’ 섹션에서 sCollectPlay에 사용할 언어를 따로 선택할 수 있습니다.</li>
+<li><strong>아트워크 폴더:</strong> 커버 이미지는 보통 라이브러리 안의 ‘Artworks’ 폴더에 있습니다. <em>선택&hellip;</em>으로 다른 폴더를 지정할 수 있으며, 이 폴더는 로드된 라이브러리에만 적용됩니다. <em>제거</em>를 누르면 지정이 해제됩니다.</li>
+<li><strong>미디어 폴더:</strong> 라이브러리가 자체 폴더 밖의 폴더를 사용할 때만 표시됩니다. 폴더마다 <em>선택</em>으로 접근을 허용하고 <em>제거</em>로 다시 철회합니다.</li>
 </ul>
+<p>그 아래에는 sCollect에서만 변경할 수 있는 설정(예: 앨범 커버, 서적 및 PDF, 다중 값, 중복)이 회색으로 표시됩니다.</p>
 
 <h3>라이브러리</h3>
 <p>상단에는 세 가지 소스가 위아래로 나열됩니다: <em>스캔한 폴더</em>, <em>XML 라이브러리</em>, <em>sCollect 라이브러리</em>. 항상 하나만 활성화됩니다 &ndash; 활성 소스의 원이 채워져 있습니다. 다른 원을 클릭하면 해당 종류에서 마지막으로 사용한 소스로 전환됩니다. 스캔한 폴더는 새로 스캔하지 않고 저장된 상태로 돌아옵니다. 아직 소스가 없으면 선택 창이 열립니다.</p>
@@ -242,20 +275,22 @@
 </ul>
 <p>그 아래에는 sCollect에서만 제공하는 필드(가져오기, 미디어 폴더, 작업)가 회색으로 표시됩니다.</p>
 
-<h3>재생</h3>
+<h3>재생/재생목록</h3>
 <ul>
+
 <li><strong>Apple Music 내보내기:</strong> 기존 재생목록을 항상 업데이트합니다(묻지 않음).</li>
+
 <li><strong>비디오 창 항상 앞에:</strong> 비디오 창이 다른 모든 창 위에 유지됩니다.</li>
 <li><strong>최소화 시 비디오 일시 정지:</strong> 비디오 창이 최소화되어 있는 동안 재생을 일시 정지하고 창을 복원하면 다시 재생합니다.</li>
 <li><strong>슬로우 모션/단일 프레임 시 음량:</strong> 슬로우 모션 및 단일 프레임 모드 중 dB 단위의 음량 감소.</li>
-<li><strong>외부 비디오 플레이어:</strong> AVFoundation이 재생할 수 없는 코덱에 대한 선호 플레이어(4절 참조). VLC, IINA, MPV가 감지됩니다.</li>
+<li><strong>지원되지 않는 코덱용 외부 플레이어:</strong> AVFoundation이 재생할 수 없는 코덱에 대한 선호 플레이어(4절 참조). VLC, IINA, MPV가 감지됩니다.</li>
 </ul>
 
-<h3>통계</h3>
-<p>로드된 라이브러리에 대한 집계(미디어 유형별 항목 수, 총 재생 시간, 저장 용량).</p>
+<h3>카테고리 레이블 및 필드 레이블</h3>
+<p>두 탭에는 로드된 sCollect 라이브러리가 정한 카테고리와 미디어 유형의 이름 또는 필드의 이름이 표시됩니다. 이름은 sCollect에서만 변경할 수 있습니다.</p>
 
-<h3>언어</h3>
-<p>sCollectPlay는 24개 언어로 사용할 수 있습니다. 원하는 언어를 선택하세요 &ndash; 앱을 재시작하면 새 언어가 적용됩니다. 재시작은 언어 탭의 버튼으로 자동 실행할 수 있습니다.</p>
+<h3>통계</h3>
+<p>미디어 유형별 곡 수와 카테고리별 재생목록 수, 그리고 전체 곡 수.</p>
 
 <aside>
 <strong>참고:</strong> 비활성화된 필드는 sCollect(메인 앱)에서는 사용할 수 있지만 sCollectPlay에서는 제공되지 않는 설정을 보여 줍니다 &ndash; 예를 들어 태그 편집, 가져오기 모드, 동기화 옵션 등입니다.
@@ -269,6 +304,9 @@
 <tr><td><kbd>&#8984;,</kbd></td><td>설정 열기</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>sCollect 라이브러리 선택&hellip;</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>sCollectPlay 종료</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>실행 취소(예: 삭제한 파일 되돌리기)</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>실행 복귀</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>sCollectPlay 도움말</td></tr>
 </table>
 
 <h3>재생</h3>

@@ -162,7 +162,7 @@
 <li><strong>Áudio de alta resolução:</strong> DSD (DFF, DSF)</li>
 <li><strong>Outros formatos de áudio:</strong> OGG Vorbis, WMA</li>
 </ul>
-<p>O leitor preferido é detetado automaticamente: <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (por esta ordem). A escolha pode ser definida em <strong>Definições &gt; Reprodução &gt; Leitor de vídeo externo</strong>. Se nenhum destes leitores estiver instalado, é usada a aplicação predefinida para o formato &ndash; recomenda-se o <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, código aberto).</p>
+<p>O leitor preferido é detetado automaticamente: <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (por esta ordem). A escolha pode ser definida em <strong>Definições &gt; Reprodução/Playlist &gt; Leitor externo para codecs não suportados</strong>. Se nenhum destes leitores estiver instalado, é usada a aplicação predefinida para o formato &ndash; recomenda-se o <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, código aberto).</p>
 
 <h3>Controlos de reprodução</h3>
 <table class="shortcut-table">
@@ -183,6 +183,7 @@
 <li><strong>Repetir (faixa):</strong> Repete a faixa atual indefinidamente.</li>
 </ul>
 
+
 <h3>Exportar para o Apple Music</h3>
 <p>As playlists ou uma seleção de faixas podem ser enviadas para o Apple Music:</p>
 <ul>
@@ -190,7 +191,8 @@
 <li><strong>Menu de contexto das faixas:</strong> <em>Enviar como playlist para o Apple Music</em> (as faixas selecionadas como &laquo;Seleção&raquo;).</li>
 <li><strong>Menu Ficheiro:</strong> <em>Enviar playlist para o Apple Music&hellip;</em> (ativo quando uma playlist está selecionada).</li>
 </ul>
-<p>Tecnicamente, é escrito um ficheiro M3U8, que é entregue à Music.app. As playlists já existentes no Apple Music podem, opcionalmente, ser atualizadas automaticamente &ndash; a opção correspondente encontra-se nas definições.</p>
+<p>O sCollectPlay cria a playlist no Apple Music e adiciona as faixas. As faixas em formatos que o Apple Music não aceita não são enviadas e são indicadas numa mensagem. Se já tiver enviado a playlist anteriormente e esta ainda existir no Apple Music, o sCollectPlay pergunta se deve ser atualizada ou se deve ser criada uma nova; com &laquo;Não perguntar novamente&raquo; ou a definição <strong>Exportação para o Apple Music</strong> (consulte <a href="#settings">Definições</a>), é atualizada sem perguntar.</p>
+
 
 
 <h2 id="playlists">5. Playlists</h2>
@@ -205,15 +207,42 @@
 <li><strong>Criar:</strong> O sinal de mais junto a <em>As minhas playlists</em> oferece <em>Nova playlist&hellip;</em> e <em>Nova playlist inteligente&hellip;</em>.</li>
 <li><strong>Preencher:</strong> <em>Adicionar à playlist</em>, no menu de contexto da lista de faixas, adiciona as faixas selecionadas a uma playlist ou cria uma nova; numa playlist própria, <em>Remover da playlist</em> retira-as novamente.</li>
 <li><strong>As playlists inteligentes</strong> compõem-se automaticamente segundo regras; <em>Editar</em>, no menu de contexto, altera as regras.</li>
-<li><strong>Alterar nome, apagar, enviar para o Apple Music:</strong> através do menu de contexto da playlist.</li>
+<li><strong>Alterar nome, apagar, enviar para o Apple Music, exportar para VLC:</strong> através do menu de contexto da playlist.</li>
 </ul>
 <p>O sCollectPlay guarda as playlists próprias neste Mac, nunca na biblioteca nem no XML; volta a encontrar as respetivas faixas pelo caminho do ficheiro, mesmo após uma nova análise.</p>
+
+
+
+<h3 id="geraete">Playlist no iPhone ou no iPod</h3>
+<p>O sCollectPlay não transfere nada diretamente para um dispositivo. O caminho passa pelo Apple Music e pelo Finder:</p>
+<ol>
+<li><strong>Enviar para o Apple Music:</strong> Clique com o botão direito na playlist na barra lateral e escolha <em>Enviar playlist para o Apple Music</em>, ou selecione-a e escolha <strong>Ficheiro &gt; Enviar playlist para o Apple Music&hellip;</strong> As faixas selecionadas são enviadas com <em>Enviar como playlist para o Apple Music</em> no menu de contexto da lista de faixas.</li>
+<li><strong>Ligar o dispositivo:</strong> Ligue o iPhone, iPad ou iPod ao Mac com um cabo e selecione-o na barra lateral do <strong>Finder</strong>, em &laquo;Locais&raquo;.</li>
+<li><strong>Assinalar a playlist:</strong> No separador &laquo;Música&raquo;, ative &laquo;Sincronizar música com [dispositivo]&raquo;, escolha &laquo;Intérpretes, álbuns, géneros e listas de reprodução selecionados&raquo; e assinale a lista em &laquo;Listas&raquo;.</li>
+<li>Clique em &laquo;Aplicar&raquo;.</li>
+</ol>
+<p>O Apple Music aceita MP3, AAC e ALAC (.m4a), AIFF e WAV. O sCollectPlay não envia faixas noutros formatos (por exemplo FLAC, OGG/Opus, .aac em bruto ou MKV) e indica-as numa mensagem &ndash; têm de ser convertidas antes, por exemplo com &laquo;Converter formato&raquo; no sCollect.</p>
+<p>Se a playlist mudar, envie-a novamente: o sCollectPlay pergunta se a lista existente no Apple Music deve ser atualizada ou se deve ser criada uma nova. Depois, sincronize novamente no Finder.</p>
+<aside>
+<strong>Nota:</strong> Se &laquo;Sincronizar biblioteca&raquo; (iCloud) estiver ativado no iPhone, o Finder não transfere música. A playlist chega então ao dispositivo através do iCloud, desde que &laquo;Sincronizar biblioteca&raquo; também esteja ativado no Apple Music no Mac &ndash; isso requer uma subscrição do Apple&nbsp;Music ou do iTunes&nbsp;Match.
+</aside>
+
+<h3 id="vlc">Playlist num dispositivo Android (VLC)</h3>
+<p>Clique com o botão direito na playlist na barra lateral e escolha <em>Exportar para VLC/dispositivo&hellip;</em>, ou selecione-a e escolha <strong>Ficheiro &gt; Exportar playlist para VLC/dispositivo&hellip;</strong> Isto funciona com qualquer playlist, incluindo as de <strong>As minhas playlists</strong>. Como destino, escolha um cartão SD, uma pen USB ou qualquer pasta. O sCollectPlay cria aí uma pasta com o nome da playlist: dentro dela, os ficheiros, organizados por artista e álbum, e a playlist como ficheiro <code>.m3u8</code> com caminhos relativos.</p>
+<ul>
+<li>É exportada a playlist inteira, mesmo que o campo de pesquisa a esteja a filtrar nesse momento &ndash; os respetivos ficheiros de áudio e vídeo; os livros e os elementos de Diversos são ignorados e contabilizados na mensagem final.</li>
+<li>Se exportar a mesma playlist novamente para o mesmo local, o sCollectPlay copia apenas o que é novo ou foi alterado e reescreve a lista. Os títulos que retirou da playlist deixam de constar da lista, mas os respetivos ficheiros permanecem na pasta.</li>
+<li>Durante a exportação, é apresentada uma barra por baixo da lista de faixas; com a cruz ao lado, cancela a operação. A lista contém então os títulos copiados até esse momento.</li>
+</ul>
+<p>Em seguida, leve a <strong>pasta inteira</strong> para o dispositivo Android: insira o cartão ou a pen, ou copie-a por cabo com um programa MTP (o macOS não mostra um telemóvel Android como unidade). Não separe o conteúdo da pasta &ndash; a lista só encontra os seus títulos em relação à sua própria localização. O VLC mostra a playlist entre as suas playlists assim que tiver analisado o armazenamento; se a pasta estiver fora dos locais analisados, adicione-a à biblioteca multimédia no VLC.</p>
+<p>A pasta também serve para o VLC noutro Mac ou PC e para qualquer leitor compatível com listas M3U8.</p>
 
 
 
 <h2 id="delete">6. Apagar ficheiros multimédia</h2>
 
 <p>No menu de contexto das faixas encontra-se a opção <strong>Apagar ficheiro multimédia</strong>. Por predefinição, surge antes um diálogo de confirmação (pode ser desativado nas definições). O ficheiro é movido para o Lixo e a entrada é removida da biblioteca.</p>
+<p>Com <strong>Edição &gt; Desfazer</strong> (<kbd>&#8984;Z</kbd>), o ficheiro regressa do Lixo juntamente com a respetiva entrada; <strong>Edição &gt; Refazer</strong> (<kbd>&#8679;&#8984;Z</kbd>) apaga-o novamente.</p>
 
 <aside>
 <strong>Partilhas de rede:</strong> As partilhas SMB ou NFS não têm, em regra, Lixo. O sCollectPlay deteta isso e pergunta explicitamente antes de apagar &ndash; o ficheiro é removido definitivamente e não pode ser recuperado. A operação pode ser cancelada; nesse caso, a entrada e o ficheiro permanecem inalterados.
@@ -229,7 +258,11 @@
 
 <li><strong>Avisar sobre biblioteca de rede ao iniciar:</strong> Pergunta no arranque antes de carregar uma fonte que se encontre num volume de rede.</li>
 
+<li><strong>Idioma:</strong> A aplicação segue o idioma do sistema. O botão <em>Abrir a definição de idioma nas Definições do Sistema</em> leva a <strong>Geral &gt; Idioma e região</strong>; aí, na secção &laquo;Aplicações&raquo;, pode escolher um idioma próprio para o sCollectPlay.</li>
+<li><strong>Pasta de capas:</strong> Normalmente, as imagens de capa encontram-se numa pasta &laquo;Artworks&raquo; dentro da biblioteca. Com <em>Selecionar&hellip;</em> pode indicar outra pasta; esta aplica-se apenas à biblioteca carregada, e <em>Remover</em> desassocia-a novamente.</li>
+<li><strong>Pasta multimédia:</strong> só surge se a biblioteca utilizar pastas fora da sua própria pasta. Para cada pasta, <em>Selecionar</em> concede o acesso e <em>Remover</em> retira-o.</li>
 </ul>
+<p>Por baixo surgem, a cinzento, as definições que só o sCollect pode alterar (por exemplo, capa do álbum, livros e PDFs, valores múltiplos, duplicados).</p>
 
 <h3>Biblioteca</h3>
 <p>Em cima, as três fontes surgem umas por baixo das outras: <em>Pastas analisadas</em>, <em>Biblioteca XML</em> e <em>Biblioteca do sCollect</em>. Só uma está ativa de cada vez &ndash; o respetivo círculo está preenchido. Um clique noutro círculo muda para a última fonte utilizada desse tipo; as pastas analisadas regressam com o estado guardado, sem nova análise. Se ainda não existir nenhuma, abre-se a seleção.</p>
@@ -242,20 +275,22 @@
 </ul>
 <p>Por baixo surgem, a cinzento, os campos que só o sCollect oferece (Importação, Pasta multimédia, Ações).</p>
 
-<h3>Reprodução</h3>
+<h3>Reprodução/Playlist</h3>
 <ul>
+
 <li><strong>Exportação para o Apple Music:</strong> Atualizar sempre a playlist existente (sem perguntar).</li>
+
 <li><strong>Janela de vídeo sempre à frente:</strong> A janela de vídeo permanece sempre acima de todas as outras janelas.</li>
 <li><strong>Pausar o vídeo ao minimizar:</strong> Pausa a reprodução enquanto a janela de vídeo estiver minimizada e retoma-a ao restaurá-la.</li>
 <li><strong>Volume em câmara lenta/imagem a imagem:</strong> Redução de volume em dB durante os modos de câmara lenta e imagem a imagem.</li>
-<li><strong>Leitor de vídeo externo:</strong> Leitor preferido para codecs que o AVFoundation não consegue reproduzir (consulte a secção 4). São detetados o VLC, o IINA e o MPV.</li>
+<li><strong>Leitor externo para codecs não suportados:</strong> Leitor preferido para codecs que o AVFoundation não consegue reproduzir (consulte a secção 4). São detetados o VLC, o IINA e o MPV.</li>
 </ul>
 
-<h3>Estatísticas</h3>
-<p>Contadores sobre a biblioteca carregada (número de elementos por tipo de multimédia, duração total, espaço ocupado).</p>
+<h3>Rótulos de categorias e Rótulos de campos</h3>
+<p>Os dois separadores mostram os nomes das categorias e dos tipos de multimédia, ou dos campos, tal como a biblioteca do sCollect carregada os define. Só podem ser alterados no sCollect.</p>
 
-<h3>Idioma</h3>
-<p>O sCollectPlay está disponível em 24 idiomas. Escolha o idioma preferido &ndash; o novo idioma fica ativo após reiniciar a aplicação. O reinício pode ser desencadeado automaticamente através do botão no separador Idioma.</p>
+<h3>Estatísticas</h3>
+<p>O número de faixas por tipo de multimédia e de playlists por categoria, bem como o número total de faixas.</p>
 
 <aside>
 <strong>Nota:</strong> Os campos desativados mostram definições que estão disponíveis no sCollect (a aplicação principal), mas não no sCollectPlay &ndash; por exemplo, a edição de etiquetas, os modos de importação ou as opções de sincronização.
@@ -269,6 +304,9 @@
 <tr><td><kbd>&#8984;,</kbd></td><td>Abrir as definições</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>Selecionar biblioteca do sCollect&hellip;</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>Sair do sCollectPlay</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>Desfazer (por exemplo, recuperar um ficheiro apagado)</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>Refazer</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>Ajuda do sCollectPlay</td></tr>
 </table>
 
 <h3>Reprodução</h3>

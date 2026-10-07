@@ -162,7 +162,7 @@
 <li><strong>高解析度音訊：</strong>DSD（DFF、DSF）</li>
 <li><strong>其他音訊格式：</strong>OGG Vorbis、WMA</li>
 </ul>
-<p>首選播放器會自動偵測：<strong>VLC</strong>、<strong>IINA</strong> 或 <strong>MPV</strong>（按此順序）。你可以在<strong>設定 &gt; 播放 &gt; 外部視訊播放器</strong>中指定選擇。如果這些播放器都未安裝，則會使用該格式的預設程式 &ndash; 我們推薦 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>（免費、開放原始碼）。</p>
+<p>首選播放器會自動偵測：<strong>VLC</strong>、<strong>IINA</strong> 或 <strong>MPV</strong>（按此順序）。你可以在<strong>設定 &gt; 播放/播放清單 &gt; 用於不支援編解碼器的外部播放器</strong>中指定選擇。如果這些播放器都未安裝，則會使用該格式的預設程式 &ndash; 我們推薦 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>（免費、開放原始碼）。</p>
 
 <h3>播放控制</h3>
 <table class="shortcut-table">
@@ -183,14 +183,16 @@
 <li><strong>重複（單首）：</strong>循環播放目前曲目。</li>
 </ul>
 
+
 <h3>輸出到 Apple Music</h3>
 <p>播放清單或選取的曲目可以傳送到 Apple Music：</p>
 <ul>
 <li><strong>側邊欄快速選單：</strong>按右鍵點選播放清單 &gt; <em>將播放清單傳送到 Apple Music</em>。</li>
-<li><strong>曲目快速選單：</strong><em>以播放清單傳送到 Apple Music</em>（已標示的曲目作為&laquo;選取範圍&raquo;）。</li>
+<li><strong>曲目快速選單：</strong><em>作為播放清單傳送到 Apple Music</em>（已標示的曲目作為&laquo;選取範圍&raquo;）。</li>
 <li><strong>檔案選單：</strong><em>將播放清單傳送到 Apple Music&hellip;</em>（選取播放清單時可用）。</li>
 </ul>
-<p>技術上會寫入一個 M3U8 檔案並交給 Music.app。Apple Music 中已存在的播放清單可以選擇自動更新 &ndash; 相關設定可在設定中找到。</p>
+<p>sCollectPlay 會在 Apple Music 中建立播放清單並加入曲目。Apple Music 不接受的格式的曲目不會一併傳送，而是在訊息中列出。如果你之前已經傳送過這個播放清單，而且它在 Apple Music 中仍然存在，sCollectPlay 會詢問要更新它還是建立新的播放清單；選擇「不再詢問」或使用設定 <strong>Apple Music 輸出</strong>（參見<a href="#settings">設定</a>），就會不經詢問直接更新。</p>
+
 
 
 <h2 id="playlists">5. 播放清單</h2>
@@ -205,15 +207,42 @@
 <li><strong>建立：</strong><em>我的播放清單</em>旁的加號提供<em>新增播放清單&hellip;</em>和<em>新增智慧型播放清單&hellip;</em>。</li>
 <li><strong>加入：</strong>曲目列表快速選單中的<em>加入播放清單</em>會將標示的曲目加入某個播放清單，或建立新的播放清單；在自己的播放清單中，<em>從播放清單移除</em>可再將曲目移出。</li>
 <li><strong>智慧型播放清單</strong>會依規則自動組成；快速選單中的<em>編輯</em>可更改規則。</li>
-<li><strong>重新命名、刪除、傳送到 Apple Music：</strong>透過播放清單的快速選單。</li>
+<li><strong>重新命名、刪除、傳送到 Apple Music、匯出至 VLC：</strong>透過播放清單的快速選單。</li>
 </ul>
 <p>sCollectPlay 會將你自己的播放清單儲存在這部 Mac 上，絕不寫入媒體資料庫或 XML；它會透過檔案路徑重新找到其中的曲目，即使重新掃描後也一樣。</p>
+
+
+
+<h3 id="geraete">將播放清單同步到 iPhone 或 iPod</h3>
+<p>sCollectPlay 不會直接把任何內容傳輸到裝置上。途徑是透過 Apple Music 和 Finder：</p>
+<ol>
+<li><strong>傳送到 Apple Music：</strong>在側邊欄中按右鍵點選播放清單，選擇<em>將播放清單傳送到 Apple Music</em>，或者選取它後選擇<strong>檔案 &gt; 將播放清單傳送到 Apple Music&hellip;</strong> 已標示的曲目可以透過曲目列表快速選單中的<em>作為播放清單傳送到 Apple Music</em>傳送。</li>
+<li><strong>連接裝置：</strong>用連接線將 iPhone、iPad 或 iPod 連接到 Mac，然後在 <strong>Finder</strong> 側邊欄的「位置」下選擇它。</li>
+<li><strong>勾選播放清單：</strong>在「音樂」標籤頁中開啟「將音樂同步到[裝置]上」，選擇「所選的藝人、專輯、類型和播放列表」，然後在「播放列表」下勾選該清單。</li>
+<li>按一下「套用」。</li>
+</ol>
+<p>Apple Music 接受 MP3、AAC 和 ALAC（.m4a）、AIFF 和 WAV。其他格式的曲目（例如 FLAC、OGG/Opus、原始 .aac 或 MKV）sCollectPlay 不會一併傳送，而是在訊息中列出 &ndash; 它們必須事先轉換，例如使用 sCollect 中的「轉換格式」。</p>
+<p>播放清單有變動時，請再傳送一次：sCollectPlay 會詢問要更新 Apple Music 中既有的清單，還是建立新的清單。之後在 Finder 中重新同步。</p>
+<aside>
+<strong>提示：</strong>如果 iPhone 上開啟了「同步資料庫」（iCloud），Finder 就不會傳輸音樂。此時只要 Mac 上的 Apple Music 也開啟了「同步資料庫」，播放清單就會透過 iCloud 傳到裝置上 &ndash; 這需要訂閱 Apple&nbsp;Music 或 iTunes&nbsp;Match。
+</aside>
+
+<h3 id="vlc">將播放清單傳到 Android 裝置（VLC）</h3>
+<p>在側邊欄中按右鍵點選播放清單，選擇<em>匯出至 VLC/裝置&hellip;</em>，或者選取它後選擇<strong>檔案 &gt; 將播放清單匯出至 VLC/裝置&hellip;</strong> 這適用於任何播放清單，包括<strong>我的播放清單</strong>下的播放清單。目標可以是 SD 卡、USB 隨身碟或任何資料夾。sCollectPlay 會在那裡建立一個以播放清單命名的資料夾：其中包含依演出者和專輯整理的檔案，以及一個使用相對路徑的 <code>.m3u8</code> 播放清單檔案。</p>
+<ul>
+<li>匯出的是整個播放清單，即使搜尋欄位目前正在篩選它 &ndash; 也就是其中的音訊和影片檔案；「書籍」和「其他」類別的項目會被略過，並計入完成訊息中。</li>
+<li>如果你再次將同一個播放清單匯出到同一位置，sCollectPlay 只會複製新增或有變更的內容，並重新寫入清單。你從播放清單中移除的曲目不會再出現在清單中，但它們的檔案仍會留在資料夾裡。</li>
+<li>匯出期間，曲目列表下方會顯示一個進度列；按一下旁邊的叉號即可取消。此時清單會包含到那時為止已複製的曲目。</li>
+</ul>
+<p>接著把<strong>整個資料夾</strong>移到 Android 裝置上：插入記憶卡或隨身碟，或者用 MTP 程式透過連接線複製（macOS 不會把 Android 手機顯示為磁碟）。不要拆開這個資料夾 &ndash; 清單只能相對於自己所在的位置找到其中的曲目。VLC 掃描儲存空間後，就會在其播放清單中顯示這個播放清單；如果資料夾位於掃描範圍之外，請在 VLC 中將它加入媒體庫。</p>
+<p>這個資料夾也適用於另一部 Mac 或 PC 上的 VLC，以及任何能讀取 M3U8 清單的播放器。</p>
 
 
 
 <h2 id="delete">6. 刪除媒體檔案</h2>
 
 <p>在曲目快速選單中可以找到<strong>刪除媒體檔案</strong>項目。預設情況下事前會出現確認對話框（可以在設定中關閉）。檔案會被移到垃圾桶，項目則從媒體資料庫中移除。</p>
+<p>使用<strong>編輯 &gt; 還原</strong>（<kbd>&#8984;Z</kbd>）可將檔案連同其項目從垃圾桶中復原；<strong>編輯 &gt; 重做</strong>（<kbd>&#8679;&#8984;Z</kbd>）會再次刪除它。</p>
 
 <aside>
 <strong>網路共享：</strong>SMB 或 NFS 共享通常沒有垃圾桶。sCollectPlay 偵測到這種情況，會在刪除前明確詢問 &ndash; 檔案會被永久移除且無法復原。你可以取消這項操作；在這種情況下，項目與檔案都維持不變。
@@ -229,7 +258,11 @@
 
 <li><strong>啟動時提示網路媒體庫：</strong>啟動時，在載入網路卷宗上的來源之前先詢問。</li>
 
+<li><strong>語言：</strong>App 會跟隨系統語言。<em>在系統設定中開啟語言設定</em>按鈕會開啟<strong>一般 &gt; 語言與地區</strong>；你可以在那裡的「應用程式」部分為 sCollectPlay 單獨選擇一種語言。</li>
+<li><strong>封面資料夾：</strong>封面影像通常位於媒體資料庫中的「Artworks」資料夾。使用<em>選擇&hellip;</em>可指定其他資料夾；它只適用於目前載入的媒體資料庫，<em>移除</em>可將其取消。</li>
+<li><strong>媒體資料夾：</strong>僅當媒體資料庫使用其本身資料夾以外的資料夾時才會顯示。可對每個資料夾以<em>選擇</em>授予取用權限，以<em>移除</em>收回。</li>
 </ul>
+<p>下方以灰色顯示只能在 sCollect 中更改的設定（例如專輯封面、書籍與PDF、多值、重複項）。</p>
 
 <h3>媒體庫</h3>
 <p>頂部上下排列著三種來源：<em>已掃描的資料夾</em>、<em>XML 媒體庫</em>和<em>sCollect 媒體庫</em>。一律只有一個處於使用中 &ndash; 它的圓圈是實心的。按一下另一個圓圈，會切換到該類型最近使用的來源；已掃描的資料夾會以儲存的狀態恢復，無須重新掃描。若尚無這類來源，則會開啟選擇視窗。</p>
@@ -242,20 +275,22 @@
 </ul>
 <p>下方以灰色顯示僅 sCollect 提供的欄位（匯入、媒體資料夾、操作）。</p>
 
-<h3>播放</h3>
+<h3>播放/播放清單</h3>
 <ul>
+
 <li><strong>Apple Music 輸出：</strong>一律更新既有的播放清單（不再詢問）。</li>
+
 <li><strong>影片視窗始終在最前：</strong>視訊視窗保持在所有其他視窗之上。</li>
 <li><strong>縮到最細時暫停影片：</strong>影片視窗縮到最細期間暫停播放，還原視窗後繼續播放。</li>
 <li><strong>慢動作/單格時的音量：</strong>慢動作和單格模式期間的音量降低（dB）。</li>
-<li><strong>外部視訊播放器：</strong>用於 AVFoundation 無法播放的編解碼器的首選播放器（參見第 4 節）。可偵測 VLC、IINA 和 MPV。</li>
+<li><strong>用於不支援編解碼器的外部播放器：</strong>用於 AVFoundation 無法播放的編解碼器的首選播放器（參見第 4 節）。可偵測 VLC、IINA 和 MPV。</li>
 </ul>
 
-<h3>統計</h3>
-<p>已載入媒體資料庫的計數（每種媒體類型的項目數量、總時間長度、儲存空間需求）。</p>
+<h3>類別標籤和欄位標籤</h3>
+<p>這兩個標籤頁顯示已載入的 sCollect 媒體資料庫所規定的類別和媒體類型名稱，或欄位名稱。它們只能在 sCollect 中更改。</p>
 
-<h3>語言</h3>
-<p>sCollectPlay 支援 24 種語言。選擇你偏好的語言 &ndash; 重新啟動 App 後新語言即可生效。重新啟動可以透過語言標籤頁中的按鈕自動觸發。</p>
+<h3>統計</h3>
+<p>每種媒體類型的曲目數和每個類別的播放清單數，以及曲目總數。</p>
 
 <aside>
 <strong>注意：</strong>停用的欄位顯示的是 sCollect（主 App）中可用、但 sCollectPlay 中無法使用的設定 &ndash; 例如標籤編輯、輸入模式或同步選項。
@@ -269,6 +304,9 @@
 <tr><td><kbd>&#8984;,</kbd></td><td>開啟設定</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>選擇 sCollect 媒體資料庫&hellip;</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>結束 sCollectPlay</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>還原（例如復原已刪除的檔案）</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>重做</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>sCollectPlay 輔助說明</td></tr>
 </table>
 
 <h3>播放</h3>

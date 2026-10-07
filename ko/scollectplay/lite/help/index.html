@@ -131,7 +131,7 @@
 <li><strong>고해상도 오디오:</strong> DSD(DFF, DSF)</li>
 <li><strong>기타 오디오 형식:</strong> OGG Vorbis, WMA</li>
 </ul>
-<p>선호하는 플레이어가 자동으로 감지됩니다: <strong>VLC</strong>, <strong>IINA</strong>, 또는 <strong>MPV</strong>(이 순서). <strong>설정 &gt; 재생 &gt; 외부 비디오 플레이어</strong>에서 선택을 지정할 수 있습니다. 이러한 플레이어가 모두 설치되어 있지 않으면 해당 형식의 기본 앱이 사용됩니다 &ndash; <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>(무료, 오픈 소스)를 권장합니다.</p>
+<p>선호하는 플레이어가 자동으로 감지됩니다: <strong>VLC</strong>, <strong>IINA</strong>, 또는 <strong>MPV</strong>(이 순서). <strong>설정 &gt; 재생/재생목록 &gt; 지원되지 않는 코덱용 외부 플레이어</strong>에서 선택을 지정할 수 있습니다. 이러한 플레이어가 모두 설치되어 있지 않으면 해당 형식의 기본 앱이 사용됩니다 &ndash; <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>(무료, 오픈 소스)를 권장합니다.</p>
 
 <h3>재생 컨트롤</h3>
 <table class="shortcut-table">
@@ -152,15 +152,6 @@
 <li><strong>반복 (트랙):</strong> 현재 트랙을 계속 반복합니다.</li>
 </ul>
 
-<h3>Apple Music으로 내보내기</h3>
-<p>재생목록이나 선택한 트랙을 Apple Music으로 보낼 수 있습니다:</p>
-<ul>
-<li><strong>사이드바 컨텍스트 메뉴:</strong> 재생목록 우클릭 &gt; <em>재생목록을 Apple Music으로 보내기</em>.</li>
-<li><strong>트랙 컨텍스트 메뉴:</strong> <em>Apple Music에 재생목록으로 보내기</em>(선택한 트랙이 &laquo;선택 항목&raquo;으로).</li>
-<li><strong>파일 메뉴:</strong> <em>재생목록을 Apple Music으로 보내기&hellip;</em>(재생목록이 선택되어 있을 때 활성화).</li>
-</ul>
-<p>기술적으로는 M3U8 파일이 작성되어 Music.app에 전달됩니다. Apple Music의 기존 재생목록은 선택적으로 자동 업데이트할 수 있습니다 &ndash; 관련 설정은 설정에서 찾을 수 있습니다.</p>
-
 
 <h2 id="playlists">5. 재생목록</h2>
 
@@ -171,6 +162,7 @@
 <h2 id="delete">6. 미디어 파일 삭제</h2>
 
 <p>트랙 컨텍스트 메뉴에 <strong>미디어 파일 삭제</strong> 항목이 있습니다. 기본적으로 먼저 확인 대화상자가 나타납니다(설정에서 끌 수 있습니다). 파일은 휴지통으로 이동되고 항목은 라이브러리에서 제거됩니다.</p>
+<p><strong>편집 &gt; 실행 취소</strong>(<kbd>&#8984;Z</kbd>)로 파일을 항목과 함께 휴지통에서 되돌릴 수 있습니다. <strong>편집 &gt; 실행 복귀</strong>(<kbd>&#8679;&#8984;Z</kbd>)는 파일을 다시 삭제합니다.</p>
 
 <aside>
 <strong>네트워크 공유:</strong> SMB나 NFS 공유에는 대개 휴지통이 없습니다. sCollectPlay Lite는 이를 감지하여 삭제하기 전에 명시적으로 확인을 요청합니다 &ndash; 파일은 영구적으로 제거되며 복원할 수 없습니다. 작업을 취소할 수 있으며, 그 경우 항목과 파일 모두 그대로 유지됩니다.
@@ -183,7 +175,11 @@
 <h3>일반</h3>
 <ul>
 <li><strong>삭제 확인:</strong> 휴지통으로 옮기기 전에 묻습니다.</li>
+<li><strong>언어:</strong> 앱은 시스템 언어를 따릅니다. <em>시스템 설정에서 언어 설정 열기</em> 버튼을 누르면 <strong>일반 &gt; 언어 및 지역</strong>이 열리며, 그곳의 ‘응용 프로그램’ 섹션에서 sCollectPlay Lite에 사용할 언어를 따로 선택할 수 있습니다.</li>
+<li><strong>아트워크 폴더:</strong> 커버 이미지는 보통 라이브러리 안의 ‘Artworks’ 폴더에 있습니다. <em>선택&hellip;</em>으로 다른 폴더를 지정할 수 있으며, 이 폴더는 로드된 라이브러리에만 적용됩니다. <em>제거</em>를 누르면 지정이 해제됩니다.</li>
+<li><strong>미디어 폴더:</strong> 라이브러리가 자체 폴더 밖의 폴더를 사용할 때만 표시됩니다. 폴더마다 <em>선택</em>으로 접근을 허용하고 <em>제거</em>로 다시 철회합니다.</li>
 </ul>
+<p>그 아래에는 sCollect에서만 변경할 수 있는 설정(예: 앨범 커버, 서적 및 PDF, 다중 값, 중복)이 회색으로 표시됩니다.</p>
 
 <h3>라이브러리</h3>
 <p>상단에는 세 가지 소스가 위아래로 나열됩니다: <em>스캔한 폴더</em>, <em>XML 라이브러리</em>, <em>sCollect 라이브러리</em>. 항상 하나만 활성화됩니다 &ndash; 활성 소스의 원이 채워져 있습니다. 다른 원을 클릭하면 해당 종류의 선택 창이 열립니다.</p>
@@ -193,20 +189,19 @@
 </ul>
 <p>그 아래에는 sCollect에서만 제공하는 필드(가져오기, 미디어 폴더, 작업)가 회색으로 표시됩니다.</p>
 
-<h3>재생</h3>
+<h3>재생/재생목록</h3>
 <ul>
-<li><strong>Apple Music 내보내기:</strong> 기존 재생목록을 항상 업데이트합니다(묻지 않음).</li>
 <li><strong>비디오 창 항상 앞에:</strong> 비디오 창이 다른 모든 창 위에 유지됩니다.</li>
 <li><strong>최소화 시 비디오 일시 정지:</strong> 비디오 창이 최소화되어 있는 동안 재생을 일시 정지하고 창을 복원하면 다시 재생합니다.</li>
 <li><strong>슬로우 모션/단일 프레임 시 음량:</strong> 슬로우 모션 및 단일 프레임 모드 중 dB 단위의 음량 감소.</li>
-<li><strong>외부 비디오 플레이어:</strong> AVFoundation이 재생할 수 없는 코덱에 대한 선호 플레이어(4절 참조). VLC, IINA, MPV가 감지됩니다.</li>
+<li><strong>지원되지 않는 코덱용 외부 플레이어:</strong> AVFoundation이 재생할 수 없는 코덱에 대한 선호 플레이어(4절 참조). VLC, IINA, MPV가 감지됩니다.</li>
 </ul>
 
-<h3>통계</h3>
-<p>로드된 라이브러리에 대한 집계(미디어 유형별 항목 수, 총 재생 시간, 저장 용량).</p>
+<h3>카테고리 레이블 및 필드 레이블</h3>
+<p>두 탭에는 로드된 sCollect 라이브러리가 정한 카테고리와 미디어 유형의 이름 또는 필드의 이름이 표시됩니다. 이름은 sCollect에서만 변경할 수 있습니다.</p>
 
-<h3>언어</h3>
-<p>sCollectPlay Lite는 24개 언어로 사용할 수 있습니다. 원하는 언어를 선택하세요 &ndash; 앱을 재시작하면 새 언어가 적용됩니다. 재시작은 언어 탭의 버튼으로 자동 실행할 수 있습니다.</p>
+<h3>통계</h3>
+<p>미디어 유형별 곡 수와 카테고리별 재생목록 수, 그리고 전체 곡 수.</p>
 
 <aside>
 <strong>참고:</strong> 비활성화된 필드는 sCollect(메인 앱)에서는 사용할 수 있지만 sCollectPlay Lite에서는 제공되지 않는 설정을 보여 줍니다 &ndash; 예를 들어 태그 편집, 가져오기 모드, 동기화 옵션 등입니다.
@@ -220,6 +215,9 @@
 <tr><td><kbd>&#8984;,</kbd></td><td>설정 열기</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>sCollect 라이브러리 선택&hellip;</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>sCollectPlay Lite 종료</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>실행 취소(예: 삭제한 파일 되돌리기)</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>실행 복귀</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>sCollectPlay Lite 도움말</td></tr>
 </table>
 
 <h3>재생</h3>

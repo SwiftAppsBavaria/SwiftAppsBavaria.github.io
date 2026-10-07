@@ -439,6 +439,31 @@
 </aside>
 
 
+<h3 id="geraete">iPhone 또는 iPod에 재생목록 넣기</h3>
+<p>sCollect는 기기로 직접 아무것도 전송하지 않습니다. Apple Music과 Finder를 거쳐야 합니다:</p>
+<ol>
+<li><strong>Apple Music으로 보내기:</strong> 사이드바에서 재생목록을 우클릭하고 &laquo;재생목록을 Apple Music으로 보내기&raquo;를 선택하거나, 재생목록을 선택한 다음 <strong>파일 &gt; 재생목록을 Apple Music으로 보내기&hellip;</strong>를 선택하세요.</li>
+<li><strong>기기 연결:</strong> iPhone, iPad 또는 iPod을 케이블로 Mac에 연결하고 <strong>Finder</strong> 사이드바의 &laquo;위치&raquo; 아래에서 선택하세요.</li>
+<li><strong>재생목록 체크:</strong> &laquo;음악&raquo; 탭에서 &laquo;음악을 [기기](으)로 동기화&raquo;를 켜고, &laquo;선택한 아티스트, 앨범, 장르 및 플레이리스트&raquo;를 선택한 다음 &laquo;플레이리스트&raquo; 아래에서 해당 목록을 체크하세요.</li>
+<li>&laquo;적용&raquo;을 클릭하세요.</li>
+</ol>
+<p>Apple Music은 MP3, AAC 및 ALAC(.m4a), AIFF, WAV를 받아들입니다. 다른 형식(예: FLAC, OGG/Opus, 원시 .aac 또는 MKV)의 트랙은 sCollect가 보내지 않으며 메시지로 알려 줍니다 &ndash; 미리 변환하세요. <a href="#convert">형식 변환</a>(10장)을 참조하세요. 오래된 iPod(Shuffle, Nano, Classic)용으로는 그곳에 <strong>iPod 호환(AAC-LC, 256 kbps)</strong> 버튼이 있습니다.</p>
+<p>재생목록이 바뀌면 다시 보내세요: sCollect가 Apple Music의 기존 목록을 업데이트할지, 새 목록을 만들지 묻습니다. 그런 다음 Finder에서 다시 동기화하세요.</p>
+<aside>
+<strong>참고:</strong> iPhone에서 &laquo;보관함 동기화&raquo;(iCloud)가 켜져 있으면 Finder는 음악을 전송하지 않습니다. 이 경우 Mac의 Apple Music에서도 &laquo;보관함 동기화&raquo;가 켜져 있으면 재생목록이 iCloud를 통해 기기로 전달됩니다 &ndash; 이를 위해서는 Apple&nbsp;Music 또는 iTunes&nbsp;Match 구독이 필요합니다.
+</aside>
+
+<h3 id="vlc">Android 기기에 재생목록 넣기(VLC)</h3>
+<p>사이드바에서 재생목록을 우클릭하고 &laquo;VLC/기기로 내보내기&hellip;&raquo;를 선택하거나, 재생목록을 선택한 다음 <strong>파일 &gt; 재생목록을 VLC/기기로 내보내기&hellip;</strong>를 선택하세요. 대상으로는 SD 카드, USB 메모리 또는 임의의 폴더를 선택합니다. sCollect는 그곳에 재생목록 이름으로 폴더를 만들고, 그 안에 아티스트와 앨범별로 정리된 파일과 상대 경로를 사용하는 <code>.m3u8</code> 파일 형태의 재생목록을 넣습니다.</p>
+<ul>
+<li>오디오 및 비디오 파일이 내보내집니다. 도서와 기타는 건너뛰며, 완료 메시지에서 그 개수를 알려 줍니다.</li>
+<li>같은 재생목록을 같은 위치로 다시 내보내면 sCollect는 새로 생겼거나 변경된 것만 복사하고 목록을 다시 씁니다. 재생목록에서 뺀 트랙은 더 이상 목록에 없지만, 그 파일은 폴더에 그대로 남습니다.</li>
+<li>중간에 취소하면 목록에는 그때까지 복사된 트랙이 들어 있습니다.</li>
+</ul>
+<p>그런 다음 <strong>폴더 전체</strong>를 Android 기기로 옮기세요: 카드나 USB 메모리를 꽂거나, MTP 앱을 사용해 케이블로 복사합니다(macOS는 Android 휴대폰을 드라이브로 표시하지 않습니다). 폴더를 나누지 마세요 &ndash; 목록은 자신이 있는 위치를 기준으로만 트랙을 찾습니다. VLC는 저장 공간을 검색하고 나면 해당 재생목록을 자신의 재생목록 아래에 표시합니다. 폴더가 검색 대상 위치 밖에 있으면 VLC에서 미디어 라이브러리에 추가하세요.</p>
+<p>이 폴더는 다른 Mac이나 PC의 VLC, 그리고 M3U8 목록을 읽는 모든 플레이어에서도 사용할 수 있습니다.</p>
+
+
 <h2 id="external">8. 외장 드라이브</h2>
 
 <h3>외장 드라이브의 라이브러리</h3>

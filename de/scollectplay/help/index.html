@@ -162,7 +162,7 @@
 <li><strong>Hires-Audio:</strong> DSD (DFF, DSF)</li>
 <li><strong>Weitere Audio-Formate:</strong> OGG Vorbis, WMA</li>
 </ul>
-<p>Der bevorzugte Player wird automatisch erkannt: <strong>VLC</strong>, <strong>IINA</strong> oder <strong>MPV</strong> (in dieser Reihenfolge). Du kannst die Auswahl in <strong>Einstellungen &gt; Wiedergabe &gt; Externer Video-Player</strong> festlegen. Wenn keiner dieser Player installiert ist, wird das Standardprogramm für das Format verwendet &ndash; empfehlenswert ist <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (kostenlos, Open Source).</p>
+<p>Der bevorzugte Player wird automatisch erkannt: <strong>VLC</strong>, <strong>IINA</strong> oder <strong>MPV</strong> (in dieser Reihenfolge). Du kannst die Auswahl in <strong>Einstellungen &gt; Wiedergabe/Playlist &gt; Externer Player für nicht-unterstützte Codecs</strong> festlegen. Wenn keiner dieser Player installiert ist, wird das Standardprogramm für das Format verwendet &ndash; empfehlenswert ist <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (kostenlos, Open Source).</p>
 
 <h3>Wiedergabe-Steuerung</h3>
 <table class="shortcut-table">
@@ -183,6 +183,7 @@
 <li><strong>Wiederholen (Titel):</strong> Wiederholt den aktuellen Titel endlos.</li>
 </ul>
 
+
 <h3>Apple Music Export</h3>
 <p>Playlists oder eine Auswahl an Tracks können an Apple Music gesendet werden:</p>
 <ul>
@@ -190,7 +191,8 @@
 <li><strong>Track-Kontextmenü:</strong> <em>Als Playlist an Apple Music senden</em> (markierte Tracks als &laquo;Auswahl&raquo;).</li>
 <li><strong>Menü Ablage:</strong> <em>Playlist an Apple Music senden&hellip;</em> (aktiv, wenn eine Playlist gewählt ist).</li>
 </ul>
-<p>Technisch wird eine M3U8-Datei geschrieben und an Music.app übergeben. Bestehende Playlists in Apple Music können optional automatisch aktualisiert werden &ndash; die Einstellung dazu findest du in den Einstellungen.</p>
+<p>sCollectPlay legt die Playlist in Apple Music an und fügt die Titel hinzu. Titel in Formaten, die Apple Music nicht annimmt, schickt es nicht mit und nennt sie in einer Meldung. Hast du die Playlist schon einmal gesendet und gibt es sie in Apple Music noch, fragt sCollectPlay, ob sie aktualisiert oder eine neue angelegt werden soll; mit &laquo;Nicht mehr nachfragen&raquo; oder der Einstellung <strong>Apple-Music-Export</strong> (siehe <a href="#settings">Einstellungen</a>) wird sie ohne Frage aktualisiert.</p>
+
 
 
 <h2 id="playlists">5. Playlists</h2>
@@ -205,15 +207,42 @@
 <li><strong>Anlegen:</strong> Das Plus neben <em>Meine Playlists</em> bietet <em>Neue Playlist&hellip;</em> und <em>Neue intelligente Playlist&hellip;</em>.</li>
 <li><strong>Füllen:</strong> <em>Zur Playlist hinzufügen</em> im Kontextmenü der Trackliste fügt die markierten Titel einer Playlist hinzu oder legt eine neue an; in einer eigenen Playlist nimmt <em>Aus Playlist entfernen</em> sie wieder heraus.</li>
 <li><strong>Intelligente Playlists</strong> stellen sich nach Regeln selbst zusammen; <em>Bearbeiten</em> im Kontextmenü ändert die Regeln.</li>
-<li><strong>Umbenennen, löschen, an Apple Music senden:</strong> über das Kontextmenü der Playlist.</li>
+<li><strong>Umbenennen, löschen, an Apple Music senden, für VLC exportieren:</strong> über das Kontextmenü der Playlist.</li>
 </ul>
 <p>Eigene Playlists speichert sCollectPlay auf diesem Mac, nie in der Mediathek oder der XML; ihre Titel findet es über den Dateipfad wieder, auch nach einem neuen Scan.</p>
+
+
+
+<h3 id="geraete">Playlist aufs iPhone oder den iPod</h3>
+<p>sCollectPlay überträgt nichts direkt auf ein Gerät. Der Weg führt über Apple Music und den Finder:</p>
+<ol>
+<li><strong>An Apple Music senden:</strong> Rechtsklicke auf die Playlist in der Seitenleiste und wähle <em>Playlist an Apple Music senden</em>, oder wähle sie aus und nimm <strong>Ablage &gt; Playlist an Apple Music senden&hellip;</strong> Markierte Titel schickst du mit <em>Als Playlist an Apple Music senden</em> aus dem Kontextmenü der Trackliste.</li>
+<li><strong>Gerät anschließen:</strong> Verbinde iPhone, iPad oder iPod per Kabel mit dem Mac und wähle es im <strong>Finder</strong> in der Seitenleiste unter &laquo;Orte&raquo; aus.</li>
+<li><strong>Playlist ankreuzen:</strong> Schalte im Reiter &laquo;Musik&raquo; &laquo;Musik synchronisieren auf: [Gerät]&raquo; ein, wähle &laquo;Ausgewählte Künstler:innen, Alben, Genres und Playlists&raquo; und kreuze unter &laquo;Playlists&raquo; die Liste an.</li>
+<li>Klicke auf &laquo;Anwenden&raquo;.</li>
+</ol>
+<p>Apple Music nimmt MP3, AAC und ALAC (.m4a), AIFF und WAV an. Titel in anderen Formaten (etwa FLAC, OGG/Opus, rohes .aac oder MKV) schickt sCollectPlay nicht mit und nennt sie in einer Meldung &ndash; sie müssen vorher umgewandelt werden, etwa mit &laquo;Format konvertieren&raquo; in sCollect.</p>
+<p>Ändert sich die Playlist, sende sie noch einmal: sCollectPlay fragt, ob die bestehende Liste in Apple Music aktualisiert oder eine neue angelegt werden soll. Danach im Finder erneut synchronisieren.</p>
+<aside>
+<strong>Hinweis:</strong> Ist auf dem iPhone &laquo;Mediathek synchronisieren&raquo; (iCloud) eingeschaltet, überträgt der Finder keine Musik. Die Playlist kommt dann über iCloud aufs Gerät, wenn auch in Apple Music auf dem Mac &laquo;Mediathek synchronisieren&raquo; aktiv ist &ndash; das setzt ein Abo von Apple&nbsp;Music oder iTunes&nbsp;Match voraus.
+</aside>
+
+<h3 id="vlc">Playlist auf ein Android-Gerät (VLC)</h3>
+<p>Rechtsklicke auf die Playlist in der Seitenleiste und wähle <em>Für VLC/Gerät exportieren&hellip;</em>, oder wähle sie aus und nimm <strong>Ablage &gt; Playlist für VLC/Gerät exportieren&hellip;</strong> Das geht mit jeder Playlist, auch mit denen unter <strong>Meine Playlists</strong>. Als Ziel wählst du eine SD-Karte, einen USB-Stick oder einen beliebigen Ordner. sCollectPlay legt dort einen Ordner mit dem Namen der Playlist an: darin die Dateien, geordnet nach Interpret und Album, und die Playlist als <code>.m3u8</code>-Datei mit relativen Pfaden.</p>
+<ul>
+<li>Exportiert wird die ganze Playlist, auch wenn das Suchfeld sie gerade filtert &ndash; ihre Audio- und Videodateien; Bücher und Verschiedenes werden übersprungen und in der Abschlussmeldung gezählt.</li>
+<li>Exportierst du dieselbe Playlist noch einmal an dieselbe Stelle, kopiert sCollectPlay nur, was neu ist oder sich geändert hat, und schreibt die Liste neu. Titel, die du aus der Playlist genommen hast, stehen nicht mehr in der Liste, ihre Dateien bleiben aber im Ordner liegen.</li>
+<li>Während des Exports steht unter der Trackliste ein Balken; mit dem Kreuz daneben brichst du ab. Die Liste enthält dann die Titel, die bis dahin kopiert waren.</li>
+</ul>
+<p>Bring dann den <strong>ganzen Ordner</strong> aufs Android-Gerät: Steck die Karte oder den Stick ein, oder kopiere ihn per Kabel mit einem MTP-Programm (macOS zeigt ein Android-Telefon nicht als Laufwerk an). Nimm den Ordner nicht auseinander &ndash; die Liste findet ihre Titel nur relativ zu ihrem eigenen Platz. VLC zeigt die Playlist unter seinen Playlists, sobald es den Speicher durchsucht hat; liegt der Ordner außerhalb der durchsuchten Orte, füge ihn in VLC der Medienbibliothek hinzu.</p>
+<p>Der Ordner taugt auch für VLC auf einem anderen Mac oder PC und für jeden Player, der M3U8-Listen liest.</p>
 
 
 
 <h2 id="delete">6. Mediendateien löschen</h2>
 
 <p>Im Track-Kontextmenü findest du den Eintrag <strong>Mediendatei löschen</strong>. Standardmäßig erscheint vorher ein Bestätigungsdialog (kann in den Einstellungen abgeschaltet werden). Die Datei wird in den Papierkorb verschoben und der Eintrag aus der Mediathek entfernt.</p>
+<p>Mit <strong>Bearbeiten &gt; Rückgängig</strong> (<kbd>&#8984;Z</kbd>) holst du die Datei aus dem Papierkorb zurück, samt ihrem Eintrag; <strong>Bearbeiten &gt; Wiederholen</strong> (<kbd>&#8679;&#8984;Z</kbd>) löscht sie erneut.</p>
 
 <aside>
 <strong>Netzwerk-Freigaben:</strong> SMB- oder NFS-Freigaben haben in der Regel keinen Papierkorb. sCollectPlay erkennt das und fragt vor dem Löschen explizit nach &ndash; die Datei wird endgültig entfernt und kann nicht wiederhergestellt werden. Du kannst den Vorgang abbrechen; in dem Fall bleiben Eintrag und Datei unverändert.
@@ -229,7 +258,11 @@
 
 <li><strong>Beim Start auf Netzwerk-Mediathek hinweisen:</strong> Fragt beim Start nach, bevor eine Quelle auf einem Netzwerk-Volume geladen wird.</li>
 
+<li><strong>Sprache:</strong> Die App folgt der Sprache des Systems. Der Knopf <em>Spracheinstellung in den Systemeinstellungen öffnen</em> führt zu <strong>Allgemein &gt; Sprache &amp; Region</strong>; dort wählst du im Abschnitt &laquo;Apps&raquo; eine eigene Sprache für sCollectPlay.</li>
+<li><strong>Artwork-Ordner:</strong> Coverbilder liegen normalerweise als Ordner &laquo;Artworks&raquo; in der Mediathek. Mit <em>Wählen&hellip;</em> gibst du einen anderen Ordner an; er gilt nur für die geladene Mediathek, <em>Entfernen</em> löst ihn wieder.</li>
+<li><strong>Medienordner:</strong> erscheint nur, wenn die Mediathek Ordner außerhalb ihres eigenen Ordners benutzt. Je Ordner gibst du mit <em>Wählen</em> den Zugriff frei und nimmst ihn mit <em>Entfernen</em> wieder zurück.</li>
 </ul>
+<p>Darunter folgen grau die Einstellungen, die nur sCollect ändern kann (etwa Albumcover, Bücher &amp; PDFs, Mehrfachwerte, Duplikate).</p>
 
 <h3>Mediathek</h3>
 <p>Oben stehen die drei Quellen untereinander: <em>Gescannte Ordner</em>, <em>XML-Mediathek</em> und <em>sCollect-Mediathek</em>. Aktiv ist immer nur eine &ndash; ihr Kreis ist gefüllt. Ein Klick auf einen anderen Kreis wechselt zur zuletzt benutzten Quelle dieser Art; die gescannten Ordner kommen dabei mit ihrem gespeicherten Stand zurück, ohne neuen Scan. Gibt es noch keine, öffnet sich die Auswahl.</p>
@@ -242,20 +275,22 @@
 </ul>
 <p>Darunter folgen grau die Felder, die nur sCollect bietet (Import, Medienordner, Aktionen).</p>
 
-<h3>Wiedergabe</h3>
+<h3>Wiedergabe/Playlist</h3>
 <ul>
+
 <li><strong>Apple-Music-Export:</strong> Bestehende Playlist immer aktualisieren (kein Nachfragen).</li>
+
 <li><strong>Videofenster immer im Vordergrund:</strong> Das Videofenster bleibt stets über allen anderen Fenstern.</li>
 <li><strong>Video beim Minimieren anhalten:</strong> Hält die Wiedergabe an, solange das Videofenster minimiert ist, und setzt sie beim Wiederherstellen fort.</li>
 <li><strong>Lautstärke bei Zeitlupe/Einzelbild:</strong> Lautstärkereduzierung in dB während Zeitlupe und Einzelbild-Modus.</li>
-<li><strong>Externer Video-Player:</strong> Bevorzugter Player für Codecs, die AVFoundation nicht abspielen kann (siehe Abschnitt 4). Erkannt werden VLC, IINA und MPV.</li>
+<li><strong>Externer Player für nicht-unterstützte Codecs:</strong> Bevorzugter Player für Codecs, die AVFoundation nicht abspielen kann (siehe Abschnitt 4). Erkannt werden VLC, IINA und MPV.</li>
 </ul>
 
-<h3>Statistik</h3>
-<p>Zähler über die geladene Mediathek (Anzahl Items pro Medientyp, Gesamtdauer, Speicherbedarf).</p>
+<h3>Kategoriebezeichner und Feldbezeichner</h3>
+<p>Die beiden Reiter zeigen die Namen der Kategorien und Medientypen bzw. der Felder, wie die geladene sCollect-Mediathek sie festlegt. Ändern lassen sie sich nur in sCollect.</p>
 
-<h3>Sprache</h3>
-<p>sCollectPlay ist in 24 Sprachen verfügbar. Wähle deine bevorzugte Sprache aus &ndash; nach einem Neustart der App wird die neue Sprache aktiv. Der Neustart kann über den Button im Sprache-Tab automatisch ausgelöst werden.</p>
+<h3>Statistik</h3>
+<p>Die Zahl der Titel je Medientyp und der Wiedergabelisten je Kategorie, dazu die Gesamtzahl der Titel.</p>
 
 <aside>
 <strong>Hinweis:</strong> Deaktivierte Felder zeigen Einstellungen, die in sCollect (der Hauptapp) verfügbar sind, aber in sCollectPlay nicht zur Verfügung stehen &ndash; etwa Tag-Editing, Import-Modi oder Sync-Optionen.
@@ -269,6 +304,9 @@
 <tr><td><kbd>&#8984;,</kbd></td><td>Einstellungen öffnen</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>sCollect-Mediathek wählen&hellip;</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>sCollectPlay beenden</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>Rückgängig (etwa eine gelöschte Datei zurückholen)</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>Wiederholen</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>sCollectPlay Hilfe</td></tr>
 </table>
 
 <h3>Wiedergabe</h3>

@@ -50,7 +50,7 @@
 <li><a href="#playlists">播放列表</a></li>
 <li><a href="#external">外置硬盘</a></li>
 <li><a href="#settings">设置</a></li>
-<li><a href="#convert">格式转换</a></li>
+<li><a href="#convert">转换格式</a></li>
 <li><a href="#sync">同步 (主媒体库/副本)</a></li>
 <li><a href="#shortcuts">键盘快捷键</a></li>
 </ol>
@@ -439,6 +439,31 @@
 </aside>
 
 
+<h3 id="geraete">将播放列表同步到 iPhone 或 iPod</h3>
+<p>sCollect 不会直接向设备传输任何内容。途径是经由 Apple Music 和 Finder：</p>
+<ol>
+<li><strong>发送到 Apple Music：</strong>在边栏中右键点击播放列表并选择「将播放列表发送到 Apple Music」，或者选中它后选择<strong>文件 &gt; 将播放列表发送到 Apple Music&hellip;</strong></li>
+<li><strong>连接设备：</strong>用线缆将 iPhone、iPad 或 iPod 连接到 Mac，然后在 <strong>Finder</strong> 边栏的「位置」下选择它。</li>
+<li><strong>勾选播放列表：</strong>在「音乐」标签页中打开「将音乐同步到[设备]」，选择「所选艺人、专辑、类型和播放列表」，然后在「播放列表」下勾选该列表。</li>
+<li>点按「应用」。</li>
+</ol>
+<p>Apple Music 接受 MP3、AAC 和 ALAC（.m4a）、AIFF 和 WAV。其他格式的曲目（例如 FLAC、OGG/Opus、原始 .aac 或 MKV）sCollect 不会一并发送，而是在提示信息中列出 &ndash; 请先转换它们，见<a href="#convert">转换格式</a>（第 10 节）。对于较早的 iPod（Shuffle、Nano、Classic），那里提供 <strong>iPod 兼容 (AAC-LC, 256 kbps)</strong> 按钮。</p>
+<p>播放列表有变化时，请再发送一次：sCollect 会询问是更新 Apple Music 中已有的列表，还是新建一个。之后在 Finder 中重新同步。</p>
+<aside>
+<strong>提示：</strong>如果 iPhone 上打开了「同步资料库」（iCloud），Finder 不会传输音乐。这时，只要 Mac 上的 Apple Music 中也打开了「同步资料库」，播放列表就会通过 iCloud 到达设备 &ndash; 这需要订阅 Apple&nbsp;Music 或 iTunes&nbsp;Match。
+</aside>
+
+<h3 id="vlc">将播放列表传到 Android 设备（VLC）</h3>
+<p>在边栏中右键点击播放列表并选择「导出到 VLC/设备&hellip;」，或者选中它后选择<strong>文件 &gt; 将播放列表导出到 VLC/设备&hellip;</strong> 目标可以是 SD 卡、USB 闪存盘或任意文件夹。sCollect 会在那里创建一个以播放列表命名的文件夹：其中包含按艺人和专辑整理的文件，以及一个使用相对路径的 <code>.m3u8</code> 播放列表文件。</p>
+<ul>
+<li>导出的是音频和视频文件；「图书」和「其他」类别的条目会被跳过，并在完成提示中计数。</li>
+<li>如果你再次将同一个播放列表导出到同一位置，sCollect 只复制新增或已更改的内容，并重写列表。你从播放列表中移除的曲目不再出现在列表中，但它们的文件仍留在文件夹里。</li>
+<li>如果你中途取消，列表会包含截至那时已复制的曲目。</li>
+</ul>
+<p>然后把<strong>整个文件夹</strong>放到 Android 设备上：插入存储卡或闪存盘，或者用 MTP 程序通过线缆复制（macOS 不会把 Android 手机显示为磁盘）。不要拆散这个文件夹 &ndash; 列表只能相对于自身所在的位置找到其中的曲目。VLC 扫描存储空间后，就会在其播放列表中显示该播放列表；如果文件夹位于扫描范围之外，请在 VLC 中将它添加到媒体库。</p>
+<p>这个文件夹也适用于另一台 Mac 或 PC 上的 VLC，以及任何能读取 M3U8 列表的播放器。</p>
+
+
 <h2 id="external">8. 外置硬盘</h2>
 
 <h3>外置硬盘上的媒体库</h3>
@@ -546,7 +571,7 @@
 <p>App 的语言跟随系统设置。若要更改：系统设置 → 通用 → 语言与地区，然后滚动到最底部的“应用程序”部分。</p>
 
 
-<h2 id="convert">10. 格式转换</h2>
+<h2 id="convert">10. 转换格式</h2>
 
 <h3>转换音频或从视频中提取音频</h3>
 <p>选择一个或多个音频或视频条目，右键点击并选择<strong>转换格式&hellip;</strong>，影片则选择<strong>提取音频为&hellip;</strong>。在对话框中：</p>

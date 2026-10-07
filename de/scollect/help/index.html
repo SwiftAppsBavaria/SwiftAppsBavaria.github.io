@@ -441,6 +441,31 @@
 </aside>
 
 
+<h3 id="geraete">Playlist aufs iPhone oder den iPod</h3>
+<p>sCollect überträgt nichts direkt auf ein Gerät. Der Weg führt über Apple Music und den Finder:</p>
+<ol>
+<li><strong>An Apple Music senden:</strong> Rechtsklicke auf die Playlist in der Seitenleiste und wähle &laquo;Playlist an Apple Music senden&raquo;, oder wähle sie aus und nimm <strong>Ablage &gt; Playlist an Apple Music senden&hellip;</strong></li>
+<li><strong>Gerät anschließen:</strong> Verbinde iPhone, iPad oder iPod per Kabel mit dem Mac und wähle es im <strong>Finder</strong> in der Seitenleiste unter &laquo;Orte&raquo; aus.</li>
+<li><strong>Playlist ankreuzen:</strong> Schalte im Reiter &laquo;Musik&raquo; &laquo;Musik synchronisieren auf: [Gerät]&raquo; ein, wähle &laquo;Ausgewählte Künstler:innen, Alben, Genres und Playlists&raquo; und kreuze unter &laquo;Playlists&raquo; die Liste an.</li>
+<li>Klicke auf &laquo;Anwenden&raquo;.</li>
+</ol>
+<p>Apple Music nimmt MP3, AAC und ALAC (.m4a), AIFF und WAV an. Titel in anderen Formaten (etwa FLAC, OGG/Opus, rohes .aac oder MKV) schickt sCollect nicht mit und nennt sie in einer Meldung &ndash; wandle sie vorher um, siehe <a href="#convert">Format konvertieren</a> (Abschnitt 10). Für ältere iPods (Shuffle, Nano, Classic) gibt es dort den Knopf <strong>iPod-kompatibel (AAC-LC, 256 kbps)</strong>.</p>
+<p>Ändert sich die Playlist, sende sie noch einmal: sCollect fragt, ob die bestehende Liste in Apple Music aktualisiert oder eine neue angelegt werden soll. Danach im Finder erneut synchronisieren.</p>
+<aside>
+<strong>Hinweis:</strong> Ist auf dem iPhone &laquo;Mediathek synchronisieren&raquo; (iCloud) eingeschaltet, überträgt der Finder keine Musik. Die Playlist kommt dann über iCloud aufs Gerät, wenn auch in Apple Music auf dem Mac &laquo;Mediathek synchronisieren&raquo; aktiv ist &ndash; das setzt ein Abo von Apple&nbsp;Music oder iTunes&nbsp;Match voraus.
+</aside>
+
+<h3 id="vlc">Playlist auf ein Android-Gerät (VLC)</h3>
+<p>Rechtsklicke auf die Playlist in der Seitenleiste und wähle &laquo;Für VLC/Gerät exportieren&hellip;&raquo;, oder wähle sie aus und nimm <strong>Ablage &gt; Playlist für VLC/Gerät exportieren&hellip;</strong> Als Ziel wählst du eine SD-Karte, einen USB-Stick oder einen beliebigen Ordner. sCollect legt dort einen Ordner mit dem Namen der Playlist an: darin die Dateien, geordnet nach Interpret und Album, und die Playlist als <code>.m3u8</code>-Datei mit relativen Pfaden.</p>
+<ul>
+<li>Exportiert werden Audio- und Videodateien; Bücher und Verschiedenes werden übersprungen und in der Abschlussmeldung gezählt.</li>
+<li>Exportierst du dieselbe Playlist noch einmal an dieselbe Stelle, kopiert sCollect nur, was neu ist oder sich geändert hat, und schreibt die Liste neu. Titel, die du aus der Playlist genommen hast, stehen nicht mehr in der Liste, ihre Dateien bleiben aber im Ordner liegen.</li>
+<li>Brichst du ab, enthält die Liste die Titel, die bis dahin kopiert waren.</li>
+</ul>
+<p>Bring dann den <strong>ganzen Ordner</strong> aufs Android-Gerät: Steck die Karte oder den Stick ein, oder kopiere ihn per Kabel mit einem MTP-Programm (macOS zeigt ein Android-Telefon nicht als Laufwerk an). Nimm den Ordner nicht auseinander &ndash; die Liste findet ihre Titel nur relativ zu ihrem eigenen Platz. VLC zeigt die Playlist unter seinen Playlists, sobald es den Speicher durchsucht hat; liegt der Ordner außerhalb der durchsuchten Orte, füge ihn in VLC der Medienbibliothek hinzu.</p>
+<p>Der Ordner taugt auch für VLC auf einem anderen Mac oder PC und für jeden Player, der M3U8-Listen liest.</p>
+
+
 <h2 id="external">8. Externe Festplatten</h2>
 
 <h3>Mediathek auf externer Festplatte</h3>

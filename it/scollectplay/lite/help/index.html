@@ -131,7 +131,7 @@
 <li><strong>Audio ad alta risoluzione:</strong> DSD (DFF, DSF)</li>
 <li><strong>Altri formati audio:</strong> OGG Vorbis, WMA</li>
 </ul>
-<p>Il lettore preferito viene rilevato automaticamente: <strong>VLC</strong>, <strong>IINA</strong> o <strong>MPV</strong> (in questo ordine). Puoi definire la tua scelta in <strong>Impostazioni &gt; Riproduzione &gt; Lettore video esterno</strong>. Se nessuno di questi lettori è installato, viene usata l'app predefinita per il formato &ndash; consigliamo <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, open source).</p>
+<p>Il lettore preferito viene rilevato automaticamente: <strong>VLC</strong>, <strong>IINA</strong> o <strong>MPV</strong> (in questo ordine). Puoi definire la tua scelta in <strong>Impostazioni &gt; Riproduzione/Playlist &gt; Lettore esterno per codec non supportati</strong>. Se nessuno di questi lettori è installato, viene usata l'app predefinita per il formato &ndash; consigliamo <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, open source).</p>
 
 <h3>Controlli di riproduzione</h3>
 <table class="shortcut-table">
@@ -152,15 +152,6 @@
 <li><strong>Ripeti (brano):</strong> Ripete il brano corrente all'infinito.</li>
 </ul>
 
-<h3>Esportazione verso Apple Music</h3>
-<p>Le playlist o una selezione di brani possono essere inviate ad Apple Music:</p>
-<ul>
-<li><strong>Menu contestuale della barra laterale:</strong> Clic destro su una playlist &gt; <em>Invia playlist ad Apple Music</em>.</li>
-<li><strong>Menu contestuale dei brani:</strong> <em>Invia come playlist ad Apple Music</em> (i brani selezionati come &laquo;Selezione&raquo;).</li>
-<li><strong>Menu File:</strong> <em>Invia playlist ad Apple Music&hellip;</em> (attivo quando è selezionata una playlist).</li>
-</ul>
-<p>Tecnicamente viene scritto un file M3U8 che viene consegnato a Music.app. Le playlist già esistenti in Apple Music possono essere aggiornate automaticamente, se lo desideri &ndash; la relativa opzione si trova nelle impostazioni.</p>
-
 
 <h2 id="playlists">5. Playlist</h2>
 
@@ -171,6 +162,7 @@
 <h2 id="delete">6. Eliminare i file multimediali</h2>
 
 <p>Nel menu contestuale dei brani trovi la voce <strong>Elimina file multimediale</strong>. Per impostazione predefinita compare prima un dialogo di conferma (disattivabile nelle impostazioni). Il file viene spostato nel Cestino e la voce viene rimossa dalla libreria.</p>
+<p>Con <strong>Modifica &gt; Annulla</strong> (<kbd>&#8984;Z</kbd>) recuperi il file dal Cestino insieme alla sua voce; <strong>Modifica &gt; Ripristina</strong> (<kbd>&#8679;&#8984;Z</kbd>) lo elimina di nuovo.</p>
 
 <aside>
 <strong>Condivisioni di rete:</strong> Le condivisioni SMB o NFS di norma non hanno un Cestino. sCollectPlay Lite lo rileva e chiede esplicitamente conferma prima dell'eliminazione &ndash; il file viene rimosso definitivamente e non può essere ripristinato. Puoi annullare l'operazione; in tal caso voce e file restano invariati.
@@ -183,7 +175,11 @@
 <h3>Generali</h3>
 <ul>
 <li><strong>Conferma eliminazione:</strong> Chiedi conferma prima di spostare nel Cestino.</li>
+<li><strong>Lingua:</strong> L'app segue la lingua del sistema. Il pulsante <em>Apri le impostazioni della lingua in Impostazioni di Sistema</em> porta a <strong>Generali &gt; Lingua e zona</strong>; lì, nella sezione &laquo;Applicazioni&raquo;, scegli una lingua specifica per sCollectPlay Lite.</li>
+<li><strong>Cartella copertine:</strong> Le immagini di copertina si trovano di solito in una cartella &laquo;Artworks&raquo; all'interno della libreria. Con <em>Scegli&hellip;</em> indichi un'altra cartella; vale solo per la libreria caricata, e <em>Rimuovi</em> la scollega di nuovo.</li>
+<li><strong>Cartella media:</strong> compare solo se la libreria usa cartelle esterne alla propria cartella. Per ogni cartella concedi l'accesso con <em>Scegli</em> e lo revochi con <em>Rimuovi</em>.</li>
 </ul>
+<p>Sotto seguono, in grigio, le impostazioni che solo sCollect può modificare (ad esempio copertina album, libri e PDF, valori multipli, duplicati).</p>
 
 <h3>Libreria</h3>
 <p>In alto sono elencate le tre sorgenti una sotto l'altra: <em>Cartelle scansionate</em>, <em>Libreria XML</em> e <em>Libreria sCollect</em>. È attiva sempre una sola &ndash; il suo cerchio è pieno. Un clic su un altro cerchio apre la selezione per quel tipo.</p>
@@ -193,20 +189,19 @@
 </ul>
 <p>Sotto seguono, in grigio, i campi offerti solo da sCollect (Importazione, Cartella media, Azioni).</p>
 
-<h3>Riproduzione</h3>
+<h3>Riproduzione/Playlist</h3>
 <ul>
-<li><strong>Esportazione Apple Music:</strong> Aggiorna sempre la playlist esistente (senza chiedere).</li>
 <li><strong>Finestra video sempre in primo piano:</strong> La finestra video resta sempre sopra tutte le altre finestre.</li>
 <li><strong>Metti in pausa il video quando la finestra è contratta:</strong> Mette in pausa la riproduzione mentre la finestra video è contratta e la riprende quando viene ripristinata.</li>
 <li><strong>Volume in modalità rallentatore/fotogramma:</strong> Riduzione del volume in dB durante le modalità rallentatore e fotogramma.</li>
-<li><strong>Lettore video esterno:</strong> Lettore preferito per i codec che AVFoundation non può riprodurre (vedi sezione 4). Vengono rilevati VLC, IINA e MPV.</li>
+<li><strong>Lettore esterno per codec non supportati:</strong> Lettore preferito per i codec che AVFoundation non può riprodurre (vedi sezione 4). Vengono rilevati VLC, IINA e MPV.</li>
 </ul>
 
-<h3>Statistiche</h3>
-<p>Contatori sulla libreria caricata (numero di oggetti per tipo di contenuto, durata totale, spazio occupato).</p>
+<h3>Etichette categorie ed Etichette campi</h3>
+<p>Le due schede mostrano i nomi delle categorie e dei tipi di contenuto, oppure dei campi, così come li definisce la libreria sCollect caricata. Si possono modificare solo in sCollect.</p>
 
-<h3>Lingua</h3>
-<p>sCollectPlay Lite è disponibile in 24 lingue. Scegli la tua lingua preferita &ndash; dopo un riavvio dell'app la nuova lingua sarà attiva. Il riavvio può essere avviato automaticamente con il pulsante nella scheda Lingua.</p>
+<h3>Statistiche</h3>
+<p>Il numero di brani per tipo di contenuto e di playlist per categoria, più il numero totale di brani.</p>
 
 <aside>
 <strong>Nota:</strong> I campi disattivati mostrano impostazioni disponibili in sCollect (l'app principale) ma non in sCollectPlay Lite &ndash; ad esempio la modifica dei tag, le modalità di importazione o le opzioni di sincronizzazione.
@@ -220,6 +215,9 @@
 <tr><td><kbd>&#8984;,</kbd></td><td>Apri impostazioni</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>Scegli libreria sCollect&hellip;</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>Esci da sCollectPlay Lite</td></tr>
+<tr><td><kbd>&#8984;Z</kbd></td><td>Annulla (ad esempio per recuperare un file eliminato)</td></tr>
+<tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>Ripristina</td></tr>
+<tr><td><kbd>&#8984;/</kbd></td><td>Aiuto sCollectPlay Lite</td></tr>
 </table>
 
 <h3>Riproduzione</h3>
