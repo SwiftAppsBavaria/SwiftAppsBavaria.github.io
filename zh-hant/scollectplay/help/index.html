@@ -80,7 +80,7 @@
 <li><strong>MKV 偵測：</strong>副檔名為 <code>.mp4</code> 但實際上是 MKV 的檔案，會依 EBML 簽名辨識出來並另外標示。</li>
 <li><strong>依播放時間分類：</strong>僅憑資料夾無法判斷檔案是音樂還是有聲書。因此，sCollectPlay 會依長度為音訊和影片分類 &ndash; 音訊：10 分鐘以內、10&ndash;30 分鐘、30&ndash;60 分鐘、超過 60 分鐘；影片：5 分鐘以內、5&ndash;20 分鐘、20&ndash;70 分鐘、70&ndash;210 分鐘、超過 210 分鐘。電子書和 PDF 則依副檔名辨識。無法判斷長度的項目會列在「時長未知」下。</li>
 </ul>
-<p>在<strong>設定 &gt; 媒體庫 &gt; 已掃描的資料夾</strong>中，<em>更新</em>只會讀取自上次讀取以來有所變動的內容：新增、變更和移除的檔案。使用<em>移除</em>可以將資料夾連同其中的曲目一併移出。</p>
+<p>在<strong>設定 &gt; 媒體庫 &gt; 已掃描的資料夾</strong>中，<em>更新</em>只會讀取自上次讀取以來有所變動的內容：新增、變更和移除的檔案。使用<em>移除</em>可以將資料夾連同其中的曲目一併移出。更快的方式是<strong>檔案 &gt; 更新已掃描的資料夾</strong>（<kbd>&#8984;R</kbd>）或搜尋欄位右側的<strong>&#8635;</strong>按鈕。兩者都會依序更新所有資料夾；在設定中，<em>全部更新</em>也能做到。完成後，會有一則訊息列出新增、變更和移除的內容。</p>
 
 <h3>sCollect 媒體資料庫</h3>
 <p>選擇 sCollect 媒體資料庫的主資料夾（存放 <code>.scollect</code> 套件的資料夾；較舊的媒體資料庫則是包含 <code>settings.json</code> 的資料夾）。sCollectPlay 會直接讀取資料庫檔案、播放清單與設定 &ndash; 包含可自訂的欄位名稱與智慧型播放清單。選擇媒體資料庫會取代先前使用中的資料夾掃描。你也可以在 Finder 中連按兩下 <code>.scollect</code> 套件來開啟媒體資料庫。</p>
@@ -303,6 +303,7 @@
 <table class="shortcut-table">
 <tr><td><kbd>&#8984;,</kbd></td><td>開啟設定</td></tr>
 <tr><td><kbd>&#8984;&#8679;O</kbd></td><td>選擇 sCollect 媒體資料庫&hellip;</td></tr>
+<tr><td><kbd>&#8984;R</kbd></td><td>更新已掃描的資料夾</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>結束 sCollectPlay</td></tr>
 <tr><td><kbd>&#8984;Z</kbd></td><td>還原（例如復原已刪除的檔案）</td></tr>
 <tr><td><kbd>&#8679;&#8984;Z</kbd></td><td>重做</td></tr>
