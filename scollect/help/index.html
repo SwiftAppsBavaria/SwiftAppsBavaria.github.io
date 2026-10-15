@@ -93,11 +93,13 @@
 <table>
 <tr><th>Category</th><th>Default Media Types</th></tr>
 <tr><td>Audio</td><td>Music, Audiobook, Podcast (+ 7 customizable)</td></tr>
-<tr><td>Book</td><td>E-Book, PDF (+ 8 customizable)</td></tr>
-<tr><td>Movie</td><td>Home Video, Feature Film, TV Show (+ 7 customizable)</td></tr>
-<tr><td>Miscellaneous</td><td>Coin, Model, Stamp (+ 7 customizable)</td></tr>
+<tr><td>Book</td><td>E-book, PDF (+ 8 customizable)</td></tr>
+<tr><td>Movie</td><td>Home Video, Feature Film, Series, Camera (+ 6 customizable)</td></tr>
+<tr><td>Miscellaneous</td><td>Coin, Model, Stamp, Photo (+ 6 customizable)</td></tr>
 </table>
 <p>The labels can be changed in the settings (tabs &laquo;Category Labels&raquo; and &laquo;Field Labels&raquo;).</p>
+
+<p><strong>Camera</strong> and <strong>Photo</strong> are meant for your own recordings &ndash; camera and phone videos, and photos including RAW. Photos sit under <em>Miscellaneous</em> because only that category takes images. Both file their files by capture date from the start, and both carry the fields <em>Camera</em> and <em>Lens</em> (see <a href="#metadata">section 5</a>).</p>
 <p><strong>The two terms precisely:</strong> A <em>category</em> is one of the four fixed umbrella terms &ndash; Audio, Book, Film, Miscellaneous. A <em>media type</em> (type for short) is what you actually collect: Music, Audiobook, Podcast, E-Book, Feature Film and so on. Music, Audiobook and Podcast therefore all sit in the same <em>Audio</em> category. Wherever a function asks you for a scope &ndash; such as &laquo;Organize Library&raquo; or &laquo;Check for Missing Files&raquo; &ndash; you pick <strong>types</strong>: that is the only way to treat music separately from audiobooks. The category above them is there for expanding and collapsing, and toggles all of its types at once.</p>
 
 <h3>Sidebar</h3>
@@ -138,6 +140,7 @@
 
 <p><strong>Delete selection</strong> asks first and then moves the selected entries together with their files to the App Trash (undo with <kbd>&#8984;Z</kbd>). If a selected entry points at a file that a remaining entry still needs, or if its file is missing, only the entry goes &ndash; the confirmation names these cases separately. If the selection covers a group completely, the button is disabled.</p>
 <p>You can also select entries yourself and delete them. Which entry stays per group is decided continuously &ndash; if you delete some by hand in between, another one takes its place, and no group ever loses all of its entries. &laquo;Exit Duplicates View&raquo; returns to the normal list.</p>
+<p>The <strong>duration tolerance</strong> can be changed right in the blue bar (0 to 5 seconds). After a change, <strong>Search</strong> next to it becomes active; only a click on it or <kbd>&#8617;</kbd> searches the same set again &ndash; the whole category or the selection the duplicates view came from. The value also applies in Settings under <strong>Duplicates</strong> and to the check during import.</p>
 
 
 <h2 id="import">3. Importing Media</h2>
@@ -148,7 +151,7 @@
 <li><strong>Audio:</strong> MP3, M4A, AAC, FLAC, WAV, AIFF, AIF, ALAC, CAF</li>
 <li><strong>Video:</strong> MP4, M4V, MOV</li>
 <li><strong>Books:</strong> PDF, EPUB</li>
-<li><strong>Miscellaneous:</strong> all of the formats above, plus images of every kind (JPG, HEIC, PNG, TIFF, WEBP, GIF, BMP, RAW as well), comics (CBZ, CBR), e-books (MOBI, AZW, DJVU) and texts (TXT, RTF, DOC, DOCX). Other files can be added to an item in the editor under <strong>Attachments</strong>.</li>
+<li><strong>Miscellaneous:</strong> images of every kind (JPG, HEIC, PNG, TIFF, WEBP, GIF, BMP, RAW as well), comics (CBZ, CBR), e-books (MOBI, AZW, DJVU) and texts (TXT, RTF, DOC, DOCX). sCollect sorts music, films and books you import here into their own category. Other files can be added to an item in the editor under <strong>Attachments</strong>.</li>
 </ul>
 <p><strong>Sidecar files</strong> (.xmp, for example from digiKam or Lightroom, and .nfo) come along with their file. When importing individual files, <strong>select them as well</strong> in the dialog &ndash; otherwise macOS only gives sCollect access to the chosen file, not to the one next to it. A folder import does this on its own.</p>
 
@@ -160,7 +163,7 @@
 
 <h3>Dragging In Files and Folders</h3>
 <p>Whatever you drag from the Finder onto the sCollect window takes <strong>the same route</strong> as the two menu items: folders are searched including their subfolders, the import dialog shows you beforehand what is coming in, and duplicate detection runs as always.</p>
-<p>The other way round, drag entries from the list into a Finder folder to copy the files there. Each file brings along its sidecar files (.xmp, .nfo, poster, fanart) and, for <em>Miscellaneous</em>, the folder with its copied attachments; linked attachments stay where they are.</p>
+<p>The other way round, drag entries from the list into a Finder folder to copy the files there. Each file brings along its sidecar files (.xmp, .nfo, poster, artwork, fanart) and, for <em>Miscellaneous</em>, the folder with its copied attachments; linked attachments stay where they are.</p>
 <p>The same holds when you drag onto a <strong>playlist</strong>: files from the Finder are imported first and then placed in the playlist.</p>
 
 
@@ -189,7 +192,7 @@
 <p>Imported files are automatically organized in a fixed folder structure: three letter levels from the artist name, then <code>Artist/Album/File</code> (e.g. <code>A/AB/ABB/ABBA/Gold/Track.mp3</code>). The path depends only on the metadata and stays stable as the library grows &ndash; files that are already filed are not moved.</p>
 
 
-<p><strong>Date-sorted filing:</strong> For media types where the moment matters more than the artist &ndash; photos, home videos, collections &ndash; you can choose filing by date in the settings instead. The files then land in year and month folders, and the file name carries the moment. The capture date governs where the file carries one; otherwise the item's date.</p>
+<p><strong>Date-sorted filing:</strong> For media types where the moment matters more than the artist &ndash; photos, home videos, collections &ndash; you can choose filing by date in the settings instead. The files then land in year and month folders, and the file name carries the moment. The capture date governs where the file carries one; otherwise the item's date. For the <strong>Camera</strong> and <strong>Photo</strong> types this filing is set from the start.</p>
 
 <p><strong>Tidying up titles on import:</strong> When sCollect derives a title from the file name, the camera's name often sits in front and a date behind it &ndash; something like <code>IMG_20240115 Urlaub</code>. Four switches under <strong>Settings &gt; Import (when sorting by date)</strong> tidy that up. They only take effect <em>for media types with date-sorted filing</em>: anyone who wants to keep <code>IMG</code> or <code>20250401</code> in the name sorts alphabetically anyway.</p>
 <ul>
@@ -200,7 +203,7 @@
 </ul>
 <p>The first two only touch <em>derived</em> titles &ndash; a title stored in the file's tag stays untouched; it is somebody's statement, not a derivation. The third adds there as well. If nothing were left after removal, the file keeps its name in full.</p>
 <aside>
-<strong>Tip:</strong> Movies are automatically classified: videos shorter than 70 minutes are categorized as home videos, longer ones as feature films. You can change the type at any time in the metadata editor.
+<strong>Tip:</strong> Movies are automatically classified: videos shorter than 70 minutes are categorized as home videos, longer ones as feature films. If the file names the camera it was recorded with (iPhone, Sony, Panasonic &hellip;), the movie goes to <strong>Camera</strong>; a photo goes to <strong>Photo</strong>. This applies when the selected media type does not belong to the file's category &ndash; if you import explicitly into a type of the same category, such as Home Video, your choice stands. You can change the type at any time in the metadata editor.
 </aside>
 
 <aside>
@@ -275,10 +278,15 @@
 <p>All four are written only when you <strong>save</strong>, like any other field.</p>
 
 
+<h3>Camera and Lens</h3>
+<p>For <strong>Home Video</strong>, <strong>Camera</strong> and <strong>Photo</strong>, the fields &laquo;Work&raquo; and &laquo;Movement Name&raquo; are called <em>Camera</em> and <em>Lens</em>. On import sCollect fills them in from the file: for photos, including RAW, make, model and lens from the EXIF data; for movies the model the camera writes into them &ndash; iPhone, Sony (XAVC), Panasonic. Only empty fields are filled, and the import writes nothing to the file while doing so.</p>
+<p>For items that were already in the library before, there is <strong>File &gt; Library &gt; Fill In Camera</strong>. Unlike the import, this run also writes the values to the files or their sidecar files &ndash; that keeps connected copies identical to the master. Linked items (&laquo;Leave in Place&raquo;) are skipped. A message at the end tells you how many items were filled in.</p>
+
+
 <h3>Copy-Protected Media</h3>
 <p>A purchased audiobook, a rented movie, a book with DRM: nobody may write into such files &ndash; a tag write would at best leave them unusable. sCollect detects the protection when opening the item and <strong>does not touch the file</strong>. Detected are, for books, the encryption of a PDF, Adobe DRM, Apple FairPlay, Readium LCP and EPUBs whose chapters are not readable text; for music and movies, Apple FairPlay and the widespread container encryption (Common Encryption).</p>
 <p>You can still edit such an item. What you enter goes into a <strong>sidecar file</strong> with the extension <strong>.xmp</strong> that sits next to the file. In the editor you see this in two places on the <strong>File Info</strong> tab: in the note &ndash; <em>&laquo;Copy-protected file: the details are stored in a sidecar file (.xmp) next to it; the file itself stays unchanged.&raquo;</em>, for a book <em>&laquo;Protected book: the details are stored in a sidecar file (.xmp) next to it; the book itself stays unchanged.&raquo;</em> &ndash; and in the tag format, which then reads <strong>Sidecar (XMP)</strong> together with the kind of protection.</p>
-<p>The sidecar file belongs to the item and stays with it: if you rename the title, it travels along; it lies on every copy of the library just the same. Because nothing is stored in the file itself, the comparison with the file reports no deviation here either.</p>
+<p>The sidecar file belongs to the item and stays with it: if you rename the title, it travels along; it lies on every copy of the library just the same. Because nothing is stored in the file itself, the comparison with the file reports no deviation here either. sCollect places artwork next to it in the same way, as <code>&lt;name&gt;-cover.jpg</code> (for movies <code>&lt;name&gt;-poster.jpg</code>), and it belongs to the item just the same.</p>
 <p>Two things are missing for protected media, and both for the same reason &ndash; they require the content to be readable: the <strong>capture date from the file</strong> and the <strong>thumbnail from a movie frame</strong>. On playing them see <a href="#playback">Playback</a> (section 6).</p>
 
 
@@ -337,17 +345,18 @@
 <li>Timeline for scrubbing forward and backward</li>
 <li>Volume control</li>
 <li>Shuffle and repeat modes</li>
+<li>Queue: the list button shows the upcoming tracks; double-click plays one, Delete removes it.</li>
 </ul>
 
 <h3>Playing Video</h3>
-<p>Movies open in a separate video window. The controls appear automatically when you move the mouse. You can switch audio tracks and subtitles in the &laquo;Playback&raquo; menu if the file contains multiple tracks.</p>
+<p>Movies open in a separate video window; at the end of a movie, playback continues with the next track. The controls appear automatically when you move the mouse. You can switch audio tracks and subtitles in the &laquo;Playback&raquo; menu if the file contains multiple tracks. If you resize the video window by hand, sCollect keeps that width for the following movies as well; the height follows the aspect ratio of each movie. <strong>Playback &gt; 100 %</strong> returns to the original size.</p>
 
 <h3>External Playback</h3>
 <p>Some formats are not natively supported by macOS / AVFoundation. sCollect detects this and opens these files automatically in an external player:</p>
 <ul>
 <li><strong>Special video formats:</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
 <li><strong>Modern codecs:</strong> AV1 in MP4 (on older Macs without a hardware decoder)</li>
-<li><strong>High-resolution audio:</strong> DSD (DFF, DSF)</li>
+<li><strong>High-resolution audio:</strong> DSD (DFF, DSF), WavPack (WV)</li>
 <li><strong>Other audio formats:</strong> OGG Vorbis, WMA</li>
 </ul>
 
@@ -449,7 +458,7 @@
 <li><strong>Tick the playlist:</strong> In the &laquo;Music&raquo; tab, turn on &laquo;Sync music onto [device]&raquo;, choose &laquo;Selected artists, albums, genres, and playlists&raquo; and tick the list under &laquo;Playlists&raquo;.</li>
 <li>Click &laquo;Apply&raquo;.</li>
 </ol>
-<p>Apple Music accepts MP3, AAC and ALAC (.m4a), AIFF and WAV. sCollect does not send tracks in other formats (such as FLAC, OGG/Opus, raw .aac or MKV) and lists them in a message &ndash; convert them first, see <a href="#convert">Convert Format</a> (section 10). For older iPods (Shuffle, Nano, Classic) you will find the <strong>iPod-compatible (AAC-LC, 256 kbps)</strong> button there.</p>
+<p>Apple Music accepts MP3, AAC and ALAC (.m4a), AIFF and WAV. sCollect does not send tracks in other formats (such as FLAC, OGG/Opus or raw .aac) and lists them in a message &ndash; convert them first, see <a href="#convert">Convert Format</a> (section 10). For older iPods (Shuffle, Nano, Classic) you will find the <strong>iPod-compatible (AAC-LC, 256 kbps)</strong> button there.</p>
 <p>If the playlist changes, send it again: sCollect asks whether to update the existing list in Apple Music or create a new one. Then sync again in the Finder.</p>
 <aside>
 <strong>Note:</strong> If &laquo;Sync Library&raquo; (iCloud) is turned on on the iPhone, the Finder does not transfer music. The playlist then reaches the device through iCloud, provided &laquo;Sync Library&raquo; is also turned on in Apple Music on the Mac &ndash; this requires an Apple&nbsp;Music or iTunes&nbsp;Match subscription.
@@ -553,7 +562,10 @@
 <li><strong>Coin:</strong> Mint, Country, Series, Engraver, Catalog</li>
 <li><strong>Model:</strong> Manufacturer, Brand, Series, Engineer, Scale</li>
 <li><strong>Stamp:</strong> Postal Administration, Country, Issue, Designer, Catalog</li>
+<li><strong>Photo:</strong> Photographer, Client, Series, Retoucher, Location, Camera, Lens</li>
 </ul>
+
+<p>For the movie type <strong>Camera</strong> the fields are called Camera Operator, Client, Project, Director, Location, Camera and Lens; for <strong>Home Video</strong> &laquo;Work&raquo; and &laquo;Movement Name&raquo; are likewise called Camera and Lens.</p>
 <p>The remaining slots under &laquo;Miscellaneous&raquo; carry the model names until you name them yourself. All of these defaults can be overridden here &ndash; they are a suggestion, not a fixture.</p>
 
 <h3>Playback/Playlist</h3>
@@ -580,10 +592,11 @@
 <li><strong>Output format:</strong> AAC, MP3, HE-AAC, ALAC (lossless), WAV, or AIFF. &laquo;Audio passthrough&raquo; is also available &ndash; the audio bitstream is copied 1:1 into an MP4 container without re-encoding.</li>
 <li><strong>Audio parameters:</strong> Channel layout (as original / stereo / mono), sample rate (original / 22050 / 44100 / 48000 Hz), and for PCM/ALAC the bit depth.</li>
 <li><strong>Compression:</strong> For MP3/AAC/HE-AAC: choose between fixed bitrate or variable bitrate (VBR) with quality slider.</li>
-<li><strong>Target:</strong> Two choices &ndash; <strong>Library</strong> (the converted file lands in the chosen audio category of the library; preset to &laquo;Podcast&raquo;, or &laquo;Audiobook&raquo;/&laquo;Music&raquo; as fallback if Podcast is not active; after that the dialog remembers the last category chosen) or <strong>External</strong> (use the <strong>Choose&hellip;</strong> button to pick a folder outside the library &ndash; the original stays untouched, the converted file is not added to the library). The full path of the chosen folder appears next to the button; if it is too long, the beginning is cut off (&laquo;&hellip;/Folder/Target&raquo;) so the target folder itself stays visible. Hover over it to see the whole path.</li>
+<li><strong>Target:</strong> Two choices &ndash; <strong>Library</strong> (the converted file lands in the chosen audio category of the library. The dialog suggests the category all selected items come from &ndash; so music stays music. Otherwise, for example when extracting the audio from movies, it suggests the category you chose last, initially &laquo;Podcast&raquo;, or &laquo;Audiobook&raquo;/&laquo;Music&raquo; if Podcast is not active) or <strong>External</strong> (use the <strong>Choose&hellip;</strong> button to pick a folder outside the library &ndash; the original stays untouched, the converted file is not added to the library). The full path of the chosen folder appears next to the button; if it is too long, the beginning is cut off (&laquo;&hellip;/Folder/Target&raquo;) so the target folder itself stays visible. Hover over it to see the whole path.</li>
 <li><strong>Original handling:</strong> For target &laquo;Library&raquo;: keep, move to Trash, or replace with conversion. For &laquo;External&raquo; always kept.</li>
 </ul>
 <p>Metadata and artwork of the original are always copied over. When importing into the library, the file is moved into the audio category folder; no duplicate check is performed &ndash; what happens to the original is controlled by the &laquo;Original&raquo; combobox.</p>
+<p>Not every format can be converted: macOS cannot open WebM, MKV, AVI, DivX, FLV, VOB, WavPack, WMV/WMA or DSD recordings (DSF/DFF). For these, the menu item is dimmed; with a mixed selection, only the other entries go into the dialog.</p>
 
 <h3>iPod Preset</h3>
 <p>The button <strong>iPod-compatible (AAC-LC, 256 kbps)</strong> sets the parameters to a combination maximally compatible with older iPods (Shuffle, Nano, Classic): AAC-LC in MP4 container, 44.1 kHz, stereo, 256 kbps CBR. Not passthrough, so HE-AAC source material is re-encoded to AAC-LC.</p>
@@ -727,7 +740,7 @@
   <p class="zurueck"><a href="../">← sCollect</a></p>
 </main>
 <footer class="site"><div class="wrap">
-  <a href="../../impressum.html">Legal Notice</a><a href="../../privacy.html">Website Privacy</a>
+  <a href="../../impressum.html">Legal Notice</a><a href="../../privacy.html">Website Privacy</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
   <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
 </div></footer>
 </body>

@@ -94,10 +94,12 @@
 <tr><th>類別</th><th>預設媒體類型</th></tr>
 <tr><td>音訊</td><td>音樂、有聲書、Podcast（+ 7 個可自訂）</td></tr>
 <tr><td>書籍</td><td>電子書、PDF（+ 8 個可自訂）</td></tr>
-<tr><td>影片</td><td>家庭影片、劇情片、影集（+ 7 個可自訂）</td></tr>
-<tr><td>其他</td><td>硬幣、模型、郵票（+ 7 個可自訂）</td></tr>
+<tr><td>影片</td><td>家庭錄影、電影、影集、攝影機（+ 6 個可自訂）</td></tr>
+<tr><td>其他</td><td>硬幣、模型、郵票、照片（+ 6 個可自訂）</td></tr>
 </table>
 <p>名稱可以在設定中自由更改（「類別標籤」和「欄位標籤」標籤頁）。</p>
+
+<p><strong>攝影機</strong>和<strong>照片</strong>用於你自己拍攝的內容 &ndash; 攝影機和手機拍攝的影片，以及照片（包括 RAW）。照片放在<em>其他</em>底下，因為只有這個類別接收影像。兩者從一開始就依拍攝日期歸檔檔案，並且都帶有<em>攝影機</em>（照片中稱為「相機」）和<em>鏡頭</em>欄位（請見<a href="#metadata">第 5 節</a>）。</p>
 <p><strong>兩個術語的準確含義：</strong><em>類別</em>是四個固定的上位概念之一 &ndash; 音訊、圖書、影片、其他。<em>媒體類型</em>（簡稱：類型）才是你真正收藏的東西：音樂、有聲書、Podcast、電子書、劇情片等等。因此音樂、有聲書和 Podcast 三者都屬於同一個<em>音訊</em>類別。凡是功能詢問處理範圍的地方 &ndash; 例如「整理媒體庫」或「檢查缺失檔案」 &ndash; 你選擇的都是<strong>類型</strong>：只有這樣才能把音樂與有聲書分開處理。上面的類別用於展開和收合，並且會一併切換它底下的所有類型。</p>
 
 <h3>側邊欄</h3>
@@ -138,6 +140,7 @@
 
 <p><strong>刪除所選</strong>會先詢問確認，然後把選取的項目連同檔案放入 App 垃圾桶（用 <kbd>&#8984;Z</kbd> 還原）。如果某個選取的項目指向的檔案仍被一個保留的項目需要，或者它的檔案遺失，則只刪除該項目 &ndash; 確認對話框會特別列出這些情況。如果選取涵蓋了某一組的全部項目，該按鈕會被停用。</p>
 <p>你也可以逐個選取並刪除項目。每組保留哪一個項目會持續重新判定 &ndash; 若你中途手動刪除，會自動有另一個頂上，任何一組都不會失去全部項目。「結束重複項檢視」回到一般列表。</p>
+<p><strong>時長容差</strong>可以直接在藍色橫條中更改（0 到 5 秒）。更改後旁邊的<strong>搜尋</strong>會變為可用；只有按一下它或按下 <kbd>&#8617;</kbd> 後，sCollect 才會在同一範圍內重新搜尋 &ndash; 即整個類別，或重複項檢視所依據的選取。這個值同時適用於設定中的<strong>重複項</strong>以及匯入時的檢查。</p>
 
 
 <h2 id="import">3. 匯入媒體</h2>
@@ -148,7 +151,7 @@
 <li><strong>音訊：</strong> MP3, M4A, AAC, FLAC, WAV, AIFF, AIF, ALAC, CAF</li>
 <li><strong>影片：</strong> MP4, M4V, MOV</li>
 <li><strong>書籍：</strong> PDF, EPUB</li>
-<li><strong>其他：</strong> 以上所有格式，另加各類影像（JPG, HEIC, PNG, TIFF, WEBP, GIF, BMP，也包括 RAW）、漫畫（CBZ, CBR）、電子書（MOBI, AZW, DJVU）和文字檔（TXT, RTF, DOC, DOCX）。其他檔案可在編輯器的<strong>附件</strong>中附加到項目。</li>
+<li><strong>其他：</strong> 各類影像（JPG, HEIC, PNG, TIFF, WEBP, GIF, BMP，也包括 RAW）、漫畫（CBZ, CBR）、電子書（MOBI, AZW, DJVU）和文字檔（TXT, RTF, DOC, DOCX）。匯入到這裡的音樂、電影和書籍，sCollect 會歸入各自的類別。其他檔案可在編輯器的<strong>附件</strong>中附加到項目。</li>
 </ul>
 <p><strong>附屬檔案</strong>（.xmp，例如來自 digiKam 或 Lightroom，以及 .nfo）會隨其檔案一起匯入。匯入個別檔案時，請在對話框中<strong>一併選取</strong>它們 &ndash; 否則 macOS 只允許 sCollect 存取所選的檔案，而不包括它旁邊的檔案。匯入資料夾時這會自動完成。</p>
 
@@ -160,7 +163,7 @@
 
 <h3>拖入檔案和資料夾</h3>
 <p>你從 Finder 拖到 sCollect 視窗上的東西，走的是與這兩個選單項目<strong>完全相同的路</strong>：資料夾會連同其子資料夾一起被搜尋，匯入對話框會先讓你看到有什麼將被納入，重複偵測也照常運作。</p>
-<p>反過來，把項目從列表拖到 Finder 中的資料夾，即可把檔案複製到那裡。每個檔案都會帶上它的附屬檔案（.xmp、.nfo、海報、Fanart），<em>其他</em>類別還會帶上存放已複製附件的資料夾；已連結的附件留在原處。</p>
+<p>反過來，把項目從列表拖到 Finder 中的資料夾，即可把檔案複製到那裡。每個檔案都會帶上它的附屬檔案（.xmp、.nfo、海報、封面、Fanart），<em>其他</em>類別還會帶上存放已複製附件的資料夾；已連結的附件留在原處。</p>
 <p>拖到<strong>播放清單</strong>上時同樣如此：來自 Finder 的檔案會先被匯入，然後才放進播放清單。</p>
 
 
@@ -189,7 +192,7 @@
 <p>匯入的檔案會自動存放到固定的資料夾結構中：先是由演出者名稱產生的三層字母目錄，然後是<code>演出者/專輯/檔案</code>（例如：<code>A/AB/ABB/ABBA/Gold/Track.mp3</code>）。路徑只取決於中繼資料，媒體庫增長時也保持不變——已存放的檔案不會被移動。</p>
 
 
-<p><strong>依日期歸檔：</strong>對於時間點比演出者更重要的媒體類型 &ndash; 照片、家庭錄影、收藏 &ndash; 你可以在設定中改選依日期歸檔。檔案隨後會進入年份和月份資料夾，檔案名稱帶有該時間點。檔案帶有拍攝時間時以它為準；否則以項目的日期為準。</p>
+<p><strong>依日期歸檔：</strong>對於時間點比演出者更重要的媒體類型 &ndash; 照片、家庭錄影、收藏 &ndash; 你可以在設定中改選依日期歸檔。檔案隨後會進入年份和月份資料夾，檔案名稱帶有該時間點。檔案帶有拍攝時間時以它為準；否則以項目的日期為準。<strong>攝影機</strong>和<strong>照片</strong>類型從一開始就設為這種歸檔方式。</p>
 
 <p><strong>匯入時整理標題：</strong>當 sCollect 從檔案名稱衍生標題時，前面常常是相機的名稱，後面跟著一個日期 &ndash; 例如 <code>IMG_20240115 Urlaub</code>。<strong>設定 &gt; 匯入（按日期排序時）</strong>下的四個開關會把它整理乾淨。它們<em>只對依日期歸檔的媒體類型</em>生效：想在名稱中保留 <code>IMG</code> 或 <code>20250401</code> 的人，本來就會依字母順序歸檔。</p>
 <ul>
@@ -200,7 +203,7 @@
 </ul>
 <p>前兩個只觸碰<em>衍生</em>標題 &ndash; 標題若寫在檔案的標籤中，就保持不變；那是某個人的陳述，不是衍生結果。第三個在那裡也會補充。若移除之後什麼都不剩，檔案就完整保留它的名稱。</p>
 <aside>
-<strong>提示：</strong>影片會自動分類：時間長度不足 70 分鐘的影片視為家庭錄影，更長的視為劇情片。你可以隨時在中繼資料編輯器中更改類型 &ndash; 或者在側邊欄中把它們拖到另一個媒體類型上。
+<strong>提示：</strong>影片會自動分類：時間長度不足 70 分鐘的影片視為家庭錄影，更長的視為劇情片。如果檔案寫明了拍攝它的裝置（iPhone、Sony、Panasonic &hellip;），影片會歸入<strong>攝影機</strong>；照片則歸入<strong>照片</strong>。這適用於所選媒體類型不屬於該檔案類別的情況 &ndash; 如果你明確匯入到同一類別的某個類型，例如家庭錄影，則以你的選擇為準。你可以隨時在中繼資料編輯器中更改類型 &ndash; 或者在側邊欄中把它們拖到另一個媒體類型上。
 </aside>
 
 <aside>
@@ -275,10 +278,15 @@
 <p>四者都只在<strong>儲存</strong>時才寫入，與其他任何欄位一樣。</p>
 
 
+<h3>攝影機/相機與鏡頭</h3>
+<p>在<strong>家庭錄影</strong>、<strong>攝影機</strong>和<strong>照片</strong>中，「作品」和「樂章名稱」欄位改稱<em>攝影機</em>（照片中為「相機」）和<em>鏡頭</em>。匯入時 sCollect 會從檔案中填入它們：照片（包括 RAW）取 EXIF 資訊中的製造商、型號和鏡頭；影片取攝影機寫入的型號 &ndash; iPhone、Sony (XAVC)、Panasonic。只填入空白的欄位，匯入在此過程中不會向檔案寫入任何內容。</p>
+<p>對於之前就已在媒體庫中的項目，可使用<strong>檔案 &gt; 媒體庫 &gt; 補齊相機</strong>。與匯入不同，這項操作也會把這些資訊寫入檔案或其附屬檔案 &ndash; 這樣已連接的副本才能與主媒體庫保持一致。已連結的項目（「保留在原位置」）會被略過。最後會有一則訊息告訴你補齊了多少個項目。</p>
+
+
 <h3>受複製保護的媒體</h3>
 <p>一本購買的有聲書、一部租借的影片、一本帶 DRM 的書：這類檔案誰都不許寫入 &ndash; 寫入標籤往好了說也只會讓它們變得不可用。sCollect 在開啟時就認出這種保護，並且<strong>不去碰這個檔案</strong>。在書籍中，它能認出 PDF 的加密、Adobe DRM、Apple FairPlay、Readium LCP，以及各章不是可讀文字的 EPUB；在音樂和影片中，能認出 Apple FairPlay 和常見的容器加密（Common Encryption）。</p>
 <p>這樣的項目你仍然可以編輯。你填寫的內容會進入一個副檔名為 <strong>.xmp</strong> 的<strong>附屬檔案</strong>，它就放在該檔案旁邊。在編輯器的<strong>檔案資訊</strong>標籤頁中，你可以從兩處看出這一點：一處是提示 &ndash; <em>「受複製保護的檔案：資訊儲存在旁邊的附屬檔案（.xmp）中，檔案本身保持不變。」</em>，若是書籍則為 <em>「受保護的書籍：資訊儲存在旁邊的附屬檔案（.xmp）中，書籍本身保持不變。」</em> &ndash; 另一處是標籤格式，它這時會寫著 <strong>Sidecar (XMP)</strong> 以及保護的種類。</p>
-<p>附屬檔案屬於這個項目，並隨它留下：你重新命名這個項目時它會一起走；媒體庫的每個副本上同樣有它。因為檔案本身裡什麼也沒寫，所以與檔案的比對在這裡也不會報告任何差異。</p>
+<p>附屬檔案屬於這個項目，並隨它留下：你重新命名這個項目時它會一起走；媒體庫的每個副本上同樣有它。因為檔案本身裡什麼也沒寫，所以與檔案的比對在這裡也不會報告任何差異。sCollect 也會同樣把封面放在旁邊，命名為 <code>&lt;名稱&gt;-cover.jpg</code>（電影則為 <code>&lt;名稱&gt;-poster.jpg</code>），它同樣屬於這個項目。</p>
 <p>受保護的媒體缺少兩樣東西，原因都是同一個 &ndash; 它們都以內容可被讀取為前提：<strong>來自檔案的拍攝時間</strong>和<strong>取自影片某一影格的縮覽圖</strong>。關於播放，請見<a href="#playback">播放</a>（第 6 節）。</p>
 
 
@@ -336,10 +344,11 @@
 <li>用於快轉/倒轉的時間軸</li>
 <li>音量控制</li>
 <li>隨機播放和重複模式</li>
+<li>佇列：列表按鈕會顯示即將播放的曲目；連按兩下可播放其中一首，按 Delete 鍵可將其移除。</li>
 </ul>
 
 <h3>播放影片</h3>
-<p>電影會在獨立的影片視窗中開啟。移動滑鼠時控制項目會自動顯示。如果檔案包含多個音軌，你可以在「播放」選單中切換音軌和字幕。</p>
+<p>電影會在獨立的影片視窗中開啟；一部電影結束後，會繼續播放下一首曲目。移動滑鼠時控制項目會自動顯示。如果檔案包含多個音軌，你可以在「播放」選單中切換音軌和字幕。如果你手動調整影片視窗的大小，sCollect 會在之後的電影中保持這個寬度；高度則隨每部電影的畫面比例而定。<strong>播放 &gt; 100 %</strong>可恢復原始大小。</p>
 
 <h3>播放控制</h3>
 
@@ -383,7 +392,7 @@
 <ul>
 <li><strong>視訊容器格式：</strong>MKV、AVI、FLV、MPG、MPEG、VOB、DivX</li>
 <li><strong>現代編解碼器：</strong>MP4中的AV1（在沒有硬體解碼器的較舊Mac上）</li>
-<li><strong>高解析度音訊：</strong>DSD（DFF、DSF）</li>
+<li><strong>高解析度音訊：</strong>DSD（DFF、DSF）、WavPack（WV）</li>
 <li><strong>其他音訊格式：</strong>OGG Vorbis、WMA</li>
 </ul>
 
@@ -447,7 +456,7 @@
 <li><strong>勾選播放清單：</strong>在「音樂」標籤頁中開啟「將音樂同步到[裝置]上」，選擇「所選的藝人、專輯、類型和播放列表」，然後在「播放列表」下勾選該清單。</li>
 <li>按一下「套用」。</li>
 </ol>
-<p>Apple Music 接受 MP3、AAC 和 ALAC（.m4a）、AIFF 和 WAV。其他格式的曲目（例如 FLAC、OGG/Opus、原始 .aac 或 MKV）sCollect 不會一併傳送，而是在訊息中列出 &ndash; 請先轉換它們，請見<a href="#convert">轉換格式</a>（第 10 節）。對於較舊的 iPod（Shuffle、Nano、Classic），那裡提供 <strong>iPod 相容 (AAC-LC, 256 kbps)</strong> 按鈕。</p>
+<p>Apple Music 接受 MP3、AAC 和 ALAC（.m4a）、AIFF 和 WAV。其他格式的曲目（例如 FLAC、OGG/Opus 或原始 .aac）sCollect 不會一併傳送，而是在訊息中列出 &ndash; 請先轉換它們，請見<a href="#convert">轉換格式</a>（第 10 節）。對於較舊的 iPod（Shuffle、Nano、Classic），那裡提供 <strong>iPod 相容 (AAC-LC, 256 kbps)</strong> 按鈕。</p>
 <p>播放清單有變動時，請再傳送一次：sCollect 會詢問要更新 Apple Music 中既有的清單，還是建立新的清單。之後在 Finder 中重新同步。</p>
 <aside>
 <strong>提示：</strong>如果 iPhone 上開啟了「同步資料庫」（iCloud），Finder 就不會傳輸音樂。此時只要 Mac 上的 Apple Music 也開啟了「同步資料庫」，播放清單就會透過 iCloud 傳到裝置上 &ndash; 這需要訂閱 Apple&nbsp;Music 或 iTunes&nbsp;Match。
@@ -550,16 +559,19 @@
 <p>對許多媒體類型，sCollect 已經自帶了合適的名稱：有聲書中「演出者」本身就叫<em>作者</em>，劇情片中「專輯」叫<em>製片公司</em>。在<strong>其他</strong>類別中，名稱取決於收藏領域：</p>
 <ul>
 <li><strong>硬幣：</strong>鑄幣廠、國家、系列、雕刻師、目錄</li>
-<li><strong>模型：</strong>製造商、品牌、系列、設計工程師、比例</li>
+<li><strong>模型：</strong>製造商、品牌、型號系列、設計工程師、比例</li>
 <li><strong>郵票：</strong>郵政管理機構、國家、發行、設計者、目錄</li>
+<li><strong>照片：</strong>攝影師、客戶、系列、修圖師、地點、相機、鏡頭</li>
 </ul>
+
+<p>在影片類型<strong>攝影機</strong>中，欄位名稱為掌鏡、客戶、專案、導演、地點、攝影機和鏡頭；在<strong>家庭錄影</strong>中，「作品」和「樂章名稱」同樣改稱攝影機和鏡頭。</p>
 <p>「其他」底下的其餘位置在你自行命名之前，沿用模型的名稱。所有這些預設都可以在此處覆寫 &ndash; 它們是建議，而非規定。</p>
 
 <h3>播放/播放清單</h3>
 <ul>
 <li><strong>Apple Music 輸出：</strong>將播放清單輸出到 Apple Music 的設定。</li>
 <li><strong>影片視窗始終在最前：</strong>視訊視窗保持在所有其他視窗之上。</li>
-<li><strong>縮到最細時暫停影片：</strong>影片視窗縮到最細期間暫停播放，還原視窗後繼續播放。</li>
+<li><strong>縮到最小時暫停影片：</strong>影片視窗縮到最小期間暫停播放，還原視窗後繼續播放。</li>
 <li><strong>慢動作/逐格音量：</strong>慢動作和單格模式期間的音量降低（dB）。</li>
 <li><strong>用於不支援編解碼器的外部播放器：</strong>用於AVFoundation無法解碼的編解碼器的首選播放器（MKV、AVI、無HW解碼器的AV1、DivX等）。偵測到VLC、IINA和MPV；如果未安裝任何一個，則使用預設應用程式。</li>
 </ul>
@@ -568,7 +580,7 @@
 <p>管理與主媒體庫和副本媒體庫的連接。你在這裡把第二個媒體庫連接為副本、監看待處理的同步操作，並把主媒體庫的狀態投射到副本上。詳見第 11 節。</p>
 
 <h3>語言</h3>
-<p>App 的語言會跟隨系統設定。若要更改：系統設定 → 一般 → 語言與地區，然後捲動到最底部的「應用程式」部分。</p>
+<p>App 的語言會依照系統設定。若要更改：系統設定 → 一般 → 語言與地區，然後捲動到最下方的「應用程式」部分。</p>
 
 
 <h2 id="convert">10. 轉換格式</h2>
@@ -579,10 +591,11 @@
 <li><strong>輸出格式：</strong>AAC、MP3、HE-AAC、ALAC（無損）、WAV 或 AIFF。也可選擇&laquo;音訊不變&raquo;（直通）&ndash; 音訊串流以 1:1 方式無重新編碼地複製到 MP4 容器中。</li>
 <li><strong>音訊參數：</strong>聲道配置（與原始相同 / 立體聲 / 單聲道）、取樣率，以及 PCM/ALAC 的位元深度。</li>
 <li><strong>壓縮：</strong>對於 MP3/AAC/HE-AAC：固定位元率或可變位元率（VBR）以及品質滑桿。</li>
-<li><strong>目標：</strong>兩種選擇 &ndash; <strong>媒體庫</strong>（轉換後的檔案加入所選的音訊類別；預設&laquo;Podcast&raquo;，或&laquo;有聲書&raquo;/&laquo;音樂&raquo;作為備用，如果 Podcast 未啟用；之後對話框會記住上次選擇的類別）或<strong>外部</strong>（使用<strong>選擇&hellip;</strong>按鈕選擇媒體庫外的資料夾 &ndash; 原始檔案保持不變，轉換後的檔案不會加入媒體庫中）。按鈕旁顯示所選資料夾的完整路徑；路徑過長時會省略開頭部分（&laquo;&hellip;/資料夾/目標&raquo;），讓目標資料夾本身仍然可見。將指標停留在上面即可看到完整路徑。</li>
+<li><strong>目標：</strong>兩種選擇 &ndash; <strong>媒體庫</strong>（轉換後的檔案加入所選的音訊類別。對話框會建議所有所選項目所屬的類別 &ndash; 因此音樂仍是音樂。否則，例如從電影中擷取音訊時，會建議上次選擇的類別，最初為&laquo;Podcast&raquo;，如果 Podcast 未啟用則為&laquo;有聲書&raquo;/&laquo;音樂&raquo;）或<strong>外部</strong>（使用<strong>選擇&hellip;</strong>按鈕選擇媒體庫外的資料夾 &ndash; 原始檔案保持不變，轉換後的檔案不會加入媒體庫中）。按鈕旁顯示所選資料夾的完整路徑；路徑過長時會省略開頭部分（&laquo;&hellip;/資料夾/目標&raquo;），讓目標資料夾本身仍然可見。將指標停留在上面即可看到完整路徑。</li>
 <li><strong>原始處理：</strong>目標為&laquo;媒體庫&raquo;時：保留、移到垃圾桶或用轉換取代。目標為&laquo;外部&raquo;時始終保留。</li>
 </ul>
 <p>原始檔案的中繼資料和封面始終複製。匯入媒體庫時，檔案會移動到音訊類別資料夾；不進行重複檢查 &ndash; 原始檔案的處理由&laquo;原始&raquo;選單控制。</p>
+<p>並非所有格式都能轉換：macOS 無法打開 WebM、MKV、AVI、DivX、FLV、VOB、WavPack、WMV/WMA 以及 DSD 錄音（DSF/DFF）。對這些檔案，選單項目會顯示為灰色；混合選取時，只有其餘項目會進入對話框。</p>
 
 <h3>iPod 預設</h3>
 <p><strong>iPod 相容 (AAC-LC, 256 kbps)</strong>按鈕將參數設定為與舊版 iPod 最大相容的組合：MP4 容器中的 AAC-LC、44.1 kHz、立體聲、256 kbps CBR。</p>
@@ -722,7 +735,7 @@
   <p class="zurueck"><a href="../">← sCollect</a></p>
 </main>
 <footer class="site"><div class="wrap">
-  <a href="../../../impressum.html">法律聲明</a><a href="../../../privacy.html">網站隱私權</a>
+  <a href="../../../impressum.html">法律聲明</a><a href="../../../privacy.html">網站隱私權</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
   <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
 </div></footer>
 </body>
