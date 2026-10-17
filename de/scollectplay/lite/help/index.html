@@ -95,17 +95,18 @@
 <h2 id="browse">3. Mediathek durchsuchen</h2>
 
 <h3>Seitenleiste</h3>
-<p>Die Seitenleiste zeigt Kategorien und Medientypen als zwei-stufiges Akkordeon (z.B. Audio &gt; Musik / Hörbuch / Podcast) sowie alle geladenen Playlists. Beim Wechsel zwischen Medientypen oder Playlists aktualisiert sich die Trackliste rechts.</p>
+<p>Die Seitenleiste zeigt Kategorien und Medientypen als zwei-stufiges Akkordeon (z.B. Audio &gt; Musik / Hörbuch / Podcast); neben jedem Medientyp steht die Zahl seiner Objekte. Die Playlists einer sCollect-Mediathek stehen bei ihrer Kategorie unter <strong>Playlisten</strong>, Ordner lassen sich aufklappen. Playlists ohne Kategorie &ndash; und alle aus einem gescannten Ordner oder einer XML-Mediathek &ndash; stehen im Abschnitt <strong>Playlisten</strong> darunter. Beim Wechsel zwischen Medientypen oder Playlists aktualisiert sich die Trackliste rechts; der Fenstertitel zeigt, wie viele Titel sie gerade enthält, und bei einer Auswahl deren Zahl und Gesamtdauer.</p>
 
 <h3>Trackliste</h3>
 <ul>
 <li><strong>Spalten:</strong> Welche Spalten zu sehen sind, ist in sCollectPlay Lite fest vorgegeben.</li>
-<li><strong>Sortieren:</strong> Klick auf einen Spaltenkopf sortiert nach dieser Spalte; erneutes Klicken kehrt die Reihenfolge um.</li>
+<li><strong>Sortieren:</strong> Klick auf einen Spaltenkopf sortiert nach dieser Spalte; erneutes Klicken kehrt die Reihenfolge um. Jede Playlist sortiert für sich; ihre Spalte <strong>Nr.</strong> &ndash; die Position in der Playlist &ndash; führt zur ursprünglichen Reihenfolge zurück.</li>
+<li><strong>Laufender Titel:</strong> Ein Lautsprecher vor dem Titel zeigt, was gerade spielt. Die Markierung wandert beim Weiterschalten mit, solange sie auf dem laufenden Titel stand.</li>
 <li><strong>Spaltenbreite:</strong> Durch Ziehen an der Trennlinie im Spaltenkopf.</li>
 </ul>
 
 <h3>Suche</h3>
-<p>Das Suchfeld in der Toolbar filtert nach Titel, Künstler, Album, Genre und weiteren Feldern. In Playlists wird die Suche zusätzlich auf den Playlist-Inhalt angewendet.</p>
+<p>Das Suchfeld in der Toolbar filtert nach Titel, Künstler, Albumkünstler, Album, Komponist, Genre, Kommentar, Gruppierung, Werk, Satzname und Jahr. In Playlists wird die Suche zusätzlich auf den Playlist-Inhalt angewendet.</p>
 
 
 <h2 id="playback">4. Wiedergabe</h2>
@@ -121,14 +122,14 @@
 </ul>
 
 <h3>Video abspielen</h3>
-<p>Filme werden in einem separaten Videofenster geöffnet. Tonspuren und Untertitel kannst du im Menü <strong>Wiedergabe</strong> umschalten. Mit <kbd>&#8984;&#8963;F</kbd> wechselst du in den Vollbildmodus.</p>
+<p>Filme werden in einem separaten Videofenster geöffnet; am Ende eines Films geht es mit dem nächsten Titel weiter. Tonspuren und Untertitel kannst du im Menü <strong>Wiedergabe</strong> umschalten. Mit <kbd>&#8984;&#8963;F</kbd> wechselst du in den Vollbildmodus.</p>
 
 <h3>Externe Wiedergabe</h3>
 <p>Einige Formate werden von macOS bzw. AVFoundation nicht direkt unterstützt. sCollectPlay Lite erkennt das und öffnet diese Dateien automatisch in einem externen Player:</p>
 <ul>
 <li><strong>Video-Sonderformate:</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
 <li><strong>Moderne Codecs:</strong> AV1 in MP4 (auf älteren Macs ohne Hardware-Decoder)</li>
-<li><strong>Hires-Audio:</strong> DSD (DFF, DSF)</li>
+<li><strong>Hires-Audio:</strong> DSD (DFF, DSF), WavPack (WV)</li>
 <li><strong>Weitere Audio-Formate:</strong> OGG Vorbis, WMA</li>
 </ul>
 <p>Der bevorzugte Player wird automatisch erkannt: <strong>VLC</strong>, <strong>IINA</strong> oder <strong>MPV</strong> (in dieser Reihenfolge). Du kannst die Auswahl in <strong>Einstellungen &gt; Wiedergabe/Playlist &gt; Externer Player für nicht-unterstützte Codecs</strong> festlegen. Wenn keiner dieser Player installiert ist, wird das Standardprogramm für das Format verwendet &ndash; empfehlenswert ist <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (kostenlos, Open Source).</p>
@@ -155,7 +156,7 @@
 
 <h2 id="playlists">5. Playlists</h2>
 
-<p>sCollectPlay Lite zeigt alle Playlists der geladenen Mediathek an &ndash; sowohl Standard- als auch Smart-Playlists. Smart-Playlists werden anhand der gespeicherten Kriterien neu ausgewertet, wenn sich der Item-Bestand ändert. Eine Bearbeitung ist nicht möglich; dafür dient sCollect.</p>
+<p>sCollectPlay Lite zeigt alle Playlists der geladenen Mediathek an &ndash; sowohl Standard- als auch Smart-Playlists. Smart-Playlists werden anhand der gespeicherten Kriterien neu ausgewertet, wenn sich der Item-Bestand ändert; eine Smart-Playlist, die in sCollect unter einer Kategorie angelegt ist, wertet nur deren Titel aus. Eine Bearbeitung ist nicht möglich; dafür dient sCollect.</p>
 <p>Beim Laden einer XML-Mediathek werden Standard- und Smart-Playlists ebenfalls importiert. System-Playlists (Master, Distinguished Kind) werden übersprungen.</p>
 
 
@@ -238,7 +239,7 @@
   <p class="zurueck"><a href="../../../../de/#apps">← Alle Apps →</a></p>
 </main>
 <footer class="site"><div class="wrap">
-  <a href="../../../../impressum.html">Impressum</a><a href="../../../../privacy.html">Datenschutz der Website</a>
+  <a href="../../../../impressum.html">Impressum</a><a href="../../../../privacy.html">Datenschutz der Website</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
   <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
 </div></footer>
 </body>

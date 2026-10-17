@@ -31,19 +31,19 @@
 </div></header>
 
 <main class="wrap">
-  <p class="zurueck"><a href="../../../fr/#apps">← Toutes les apps →</a></p>
+  <p class="zurueck"><a href="../../../fr/#apps">← Toutes les apps →</a> · <a href="https://apps.apple.com/app/id6792676949" target="_blank" rel="noopener">Mac App Store</a></p>
   <article class="hilfe">
 
 
 <h1>Manuel de sCollectPlay</h1>
-<p class="subtitle">Lecteur pour les médiathèques sCollect, les dossiers et les exports XML d&rsquo;iTunes</p>
+<p class="subtitle">Lecteur pour les bibliothèques sCollect, les dossiers et les exports XML d&rsquo;iTunes</p>
 
 <nav class="toc">
 <h2>Sommaire</h2>
 <ol>
 <li><a href="#start">Premiers pas</a></li>
 <li><a href="#sources">Choisir une source</a></li>
-<li><a href="#browse">Parcourir la médiathèque</a></li>
+<li><a href="#browse">Parcourir la bibliothèque</a></li>
 <li><a href="#playback">Lecture</a></li>
 <li><a href="#playlists">Playlists</a></li>
 <li><a href="#delete">Supprimer des fichiers multimédias</a></li>
@@ -56,10 +56,10 @@
 <h2 id="start">1. Premiers pas</h2>
 
 <h3>Qu&rsquo;est-ce que sCollectPlay ?</h3>
-<p>sCollectPlay est une application compagnon de <strong>sCollect</strong>. Elle est spécialisée dans la seule lecture : pas d&rsquo;import, pas de modification des métadonnées, pas de synchronisation. En contrepartie, elle lit trois sources : des dossiers, le XML iTunes/Apple Music et les médiathèques sCollect.</p>
+<p>sCollectPlay est une application compagnon de <strong>sCollect</strong>. Elle est spécialisée dans la seule lecture : pas d&rsquo;import, pas de modification des métadonnées, pas de synchronisation. En contrepartie, elle lit trois sources : des dossiers, le XML iTunes/Apple Music et les bibliothèques sCollect.</p>
 
 <h3>Au premier lancement</h3>
-<p>Au premier lancement, sCollectPlay affiche une fenêtre de bienvenue avec des indications sur la lecture des formats particuliers (voir section 4). Ensuite apparait le sélecteur de source, où vous pouvez choisir une médiathèque.</p>
+<p>Au premier lancement, sCollectPlay affiche une fenêtre de bienvenue avec des indications sur la lecture des formats particuliers (voir section 4). Ensuite apparait le sélecteur de source, où vous pouvez choisir une bibliothèque.</p>
 
 <aside>
 <strong>Astuce :</strong> sCollectPlay est compatible avec macOS 14.0 ou plus récent et disponible en 24 langues.
@@ -71,7 +71,7 @@
 <p>sCollectPlay connait trois types de sources, que vous pouvez ouvrir au démarrage ou plus tard via le menu <strong>Fichier</strong> :</p>
 
 <h3>Scanner un dossier</h3>
-<p>Choisissez un dossier quelconque &ndash; sCollectPlay le parcourt récursivement à la recherche de fichiers multimédias et lit les métadonnées directement dans les fichiers (AVFoundation pour l&rsquo;audio et la vidéo, EbookTagKit pour EPUB et PDF). C&rsquo;est la manière la plus simple de commencer sans médiathèque sCollect.</p>
+<p>Choisissez un dossier quelconque &ndash; sCollectPlay le parcourt récursivement à la recherche de fichiers multimédias et lit les métadonnées directement dans les fichiers (AVFoundation pour l&rsquo;audio et la vidéo, EbookTagKit pour EPUB et PDF). C&rsquo;est la manière la plus simple de commencer sans bibliothèque sCollect.</p>
 <ul>
 
 <li><strong>Accumulation :</strong> Plusieurs dossiers peuvent être ajoutés les uns après les autres &ndash; leurs contenus sont fusionnés. Au lancement suivant de l&rsquo;app, tous les dossiers analysés précédemment apparaissent dans l&rsquo;état de leur dernière lecture, sans être analysés à nouveau.</li>
@@ -80,13 +80,13 @@
 <li><strong>Détection MKV :</strong> Les fichiers portant l&rsquo;extension <code>.mp4</code> qui sont en réalité des MKV sont reconnus grâce à leur signature EBML et marqués comme tels.</li>
 <li><strong>Classement selon la durée :</strong> Un dossier ne révèle pas si un fichier est de la musique ou un livre audio. sCollectPlay classe donc l&rsquo;audio et la vidéo selon leur durée &ndash; audio : jusqu&rsquo;à 10, 10&ndash;30, 30&ndash;60 et plus de 60 min ; vidéo : jusqu&rsquo;à 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 et plus de 210 min. Les e-books et les PDF sont reconnus à leur extension de fichier. Si la durée ne peut pas être déterminée, le titre est classé sous « durée inconnue ».</li>
 </ul>
-<p>Dans <strong>Réglages &gt; Bibliothèque &gt; Dossiers scannés</strong>, <em>Actualiser</em> ne relit que ce qui a changé depuis la dernière lecture : fichiers nouveaux, modifiés et supprimés. <em>Supprimer</em> retire un dossier ainsi que ses titres. Plus rapide : <strong>Fichier &gt; Actualiser les dossiers scannés</strong> (<kbd>&#8984;R</kbd>) ou le bouton <strong>&#8635;</strong> à droite du champ de recherche. Les deux actualisent tous les dossiers l&rsquo;un après l&rsquo;autre ; dans les réglages, <em>Tout actualiser</em> fait de même. À la fin, un message indique ce qui est nouveau, modifié ou supprimé.</p>
+<p>Dans <strong>Réglages &gt; Bibliothèque &gt; Dossiers scannés</strong>, <em>Actualiser</em> ne relit que ce qui a changé depuis la dernière lecture : fichiers nouveaux, modifiés et supprimés. <em>Supprimer</em> retire un dossier ainsi que ses titres. Plus rapide : <strong>Fichier &gt; Actualiser les dossiers scannés</strong> (<kbd>&#8984;R</kbd>) ou le bouton <strong>&#8635;</strong> à droite du champ de recherche. Les deux actualisent tous les dossiers l&rsquo;un après l&rsquo;autre ; dans les réglages, <em>Tout actualiser</em> fait de même. À la fin, un message indique ce qui est nouveau, modifié ou supprimé.</p>
 
-<h3>Médiathèque sCollect</h3>
-<p>Choisissez le dossier principal d&rsquo;une médiathèque sCollect (le dossier qui contient le paquet <code>.scollect</code> ; pour les médiathèques plus anciennes, le dossier contenant <code>settings.json</code>). sCollectPlay lit directement les fichiers de la médiathèque, les playlists et les réglages &ndash; y compris les libellés de champs personnalisés et les playlists intelligentes. Le choix d&rsquo;une médiathèque remplace un scan de dossier actif. Vous pouvez aussi ouvrir la médiathèque en double-cliquant sur le paquet <code>.scollect</code> dans le Finder.</p>
+<h3>Bibliothèque sCollect</h3>
+<p>Choisissez le dossier principal d&rsquo;une bibliothèque sCollect (le dossier qui contient le paquet <code>.scollect</code> ; pour les bibliothèques plus anciennes, le dossier contenant <code>settings.json</code>). sCollectPlay lit directement les fichiers de la bibliothèque, les playlists et les réglages &ndash; y compris les libellés de champs personnalisés et les playlists intelligentes. Le choix d&rsquo;une bibliothèque remplace un scan de dossier actif. Vous pouvez aussi ouvrir la bibliothèque en double-cliquant sur le paquet <code>.scollect</code> dans le Finder.</p>
 
 <h3>XML iTunes/Apple Music</h3>
-<p>Choisissez un fichier <code>Library.xml</code> ou un paquet <code>.musiclibrary</code>. sCollectPlay analyse les pistes et les listes de lecture (standard et intelligentes). Les playlists système (Master, Distinguished Kind) sont ignorées. sCollectPlay reprend les types de média du XML lui-même : Musique, Livre audio, Podcast, Vidéo personnelle, Long métrage, Série et Clip vidéo. À l&rsquo;ouverture, le dossier de médias correspondant vous est demandé une seule fois, afin que sCollectPlay puisse accéder aux fichiers.</p>
+<p>Choisissez un fichier <code>Library.xml</code> ou un paquet <code>.musiclibrary</code>. sCollectPlay analyse les pistes et les listes de lecture (standard et intelligentes). Les playlists système (Master, Distinguished Kind) sont ignorées. sCollectPlay reprend les types de média du XML lui-même : Musique, Livre audio, Podcast, Vidéo personnelle, Long métrage, Série et Clip vidéo. À l&rsquo;ouverture, le dossier média correspondant vous est demandé une seule fois, afin que sCollectPlay puisse accéder aux fichiers.</p>
 
 <aside>
 <strong>Note :</strong> Un seul type de source est chargé à la fois. Un scan de dossier peut être étendu avec d&rsquo;autres dossiers ; en revanche, ouvrir une bibliothèque ou un XML remplace le contenu actuel. Les dossiers scannés restent alors enregistrés et peuvent être réactivés d&rsquo;un clic dans <strong>Réglages &gt; Bibliothèque</strong>. La barre de titre de la fenêtre indique le type et le nom de la source, par exemple Dossier « Musique » ou Bibliothèque « sCollect » ; placez le pointeur sur le titre pour afficher le chemin complet.
@@ -99,44 +99,45 @@
 
 
 
-<h2 id="browse">3. Parcourir la médiathèque</h2>
+<h2 id="browse">3. Parcourir la bibliothèque</h2>
 
 <h3>Barre latérale</h3>
-<p>La barre latérale affiche les catégories et les types de médias sous forme d&rsquo;accordéon à deux niveaux (par ex. Audio &gt; Musique / Livre audio / Podcast) ainsi que toutes les playlists chargées. Lorsque vous passez d&rsquo;un type de médias ou d&rsquo;une playlist à l&rsquo;autre, la liste des médias à droite se met à jour.</p>
+<p>La barre latérale affiche les catégories et les types de média sous forme d&rsquo;accordéon à deux niveaux (par ex. Audio &gt; Musique / Livre audio / Podcast)  ; à côté de chaque type de média figure le nombre de ses objets. Les playlists d&rsquo;une bibliothèque sCollect figurent sous leur catégorie, dans <strong>Playlists</strong> ; les dossiers peuvent être dépliés. Les playlists sans catégorie &ndash; et toutes celles d&rsquo;un dossier scanné ou d&rsquo;une bibliothèque XML &ndash; figurent plus bas, dans la section <strong>Playlists</strong>. Lorsque vous passez d&rsquo;un type de média ou d&rsquo;une playlist à l&rsquo;autre, la liste des médias à droite se met à jour ; le titre de la fenêtre indique combien de titres elle contient actuellement et, pour une sélection, leur nombre et leur durée totale.</p>
 
 <h3>Liste des médias</h3>
 <ul>
 
-<li><strong>Personnaliser les colonnes :</strong> Un clic droit sur un en-tête de colonne &gt; <em>Personnaliser les colonnes&hellip;</em> permet de choisir les colonnes visibles. La visibilité, l&rsquo;ordre et la largeur des colonnes valent pour chaque type de médias ou playlist ; avec une médiathèque sCollect, sCollectPlay en reprend les colonnes comme point de départ et mémorise vos modifications sur ce Mac.</li>
+<li><strong>Personnaliser les colonnes :</strong> Un clic droit sur un en-tête de colonne &gt; <em>Personnaliser les colonnes&hellip;</em> permet de choisir les colonnes visibles. La visibilité, l&rsquo;ordre et la largeur des colonnes valent pour chaque type de média ou playlist ; avec une bibliothèque sCollect, sCollectPlay en reprend les colonnes comme point de départ et mémorise vos modifications sur ce Mac.</li>
 
 
-<li><strong>Trier :</strong> Un clic sur un en-tête de colonne trie selon cette colonne ; un nouveau clic inverse l&rsquo;ordre.</li>
+<li><strong>Trier :</strong> Un clic sur un en-tête de colonne trie selon cette colonne ; un nouveau clic inverse l&rsquo;ordre. Chaque playlist se trie indépendamment ; sa colonne <strong>N°</strong> &ndash; la position dans la playlist &ndash; rétablit l&rsquo;ordre d&rsquo;origine.</li>
+<li><strong>Titre en cours :</strong> Un haut-parleur devant le titre indique ce qui est en cours de lecture. La sélection suit le passage au titre suivant, tant qu&rsquo;elle se trouvait sur le titre en cours de lecture.</li>
 <li><strong>Largeur des colonnes :</strong> En faisant glisser la ligne de séparation dans l&rsquo;en-tête de colonne.</li>
 
 <li><strong>Ordre des colonnes :</strong> Faites glisser un en-tête de colonne vers un autre emplacement.</li>
 
 
 
-<li><strong>Lié :</strong> Cette colonne facultative &ndash; son en-tête affiche un symbole de chaîne &ndash; signale par une coche les objets dont le fichier se trouve en dehors des dossiers média de la médiathèque sCollect ; dans sCollect, ce sont les fichiers importés avec <strong>Laisser sur place</strong>. Pour les dossiers analysés et les médiathèques XML, la colonne reste vide, car il n&rsquo;y a pas de dossiers média dans ces cas.</li>
+<li><strong>Lié :</strong> Cette colonne facultative &ndash; son en-tête affiche un symbole de chaîne &ndash; signale par une coche les objets dont le fichier se trouve en dehors des dossiers média de la bibliothèque sCollect ; dans sCollect, ce sont les fichiers importés avec <strong>Laisser sur place</strong>. Pour les dossiers analysés et les bibliothèques XML, la colonne reste vide, car il n&rsquo;y a pas de dossiers média dans ces cas.</li>
 
 </ul>
 
 
 
-<h3>Navigateur par colonnes</h3>
-<p>Le navigateur par colonnes affiche plusieurs colonnes de sélection au-dessus de la liste des médias &ndash; comme le navigateur de colonnes d&rsquo;Apple Music. Le bouton représentant trois colonnes, à droite dans la barre d&rsquo;outils, l&rsquo;affiche et le masque. Il apparait dans les vues par type de médias ; dans les playlists il reste masqué.</p>
+<h3>Navigateur de colonnes</h3>
+<p>Le navigateur de colonnes affiche plusieurs colonnes de sélection au-dessus de la liste des médias &ndash; comme le navigateur de colonnes d&rsquo;Apple Music. Le bouton représentant trois colonnes, à droite dans la barre d&rsquo;outils, l&rsquo;affiche et le masque. Il est disponible dans les vues par type de média et dans les playlists ; dans une playlist, il affiche les valeurs de ses titres.</p>
 <ul>
-<li><strong>Colonnes :</strong> Genre, artiste, album, compositeur et regroupement. sCollectPlay reprend le choix des colonnes visibles depuis les réglages de la médiathèque sCollect &ndash; cela se modifie dans sCollect.</li>
-<li><strong>Sélectionner :</strong> Un clic sur une valeur filtre selon celle-ci, un <kbd>&#8984;</kbd>-clic ajoute une valeur à la sélection ou l&rsquo;en retire. À l&rsquo;intérieur d&rsquo;une colonne, plusieurs valeurs agissent comme un &laquo;ou&raquo;, entre les colonnes comme un &laquo;et&raquo;. La première ligne <strong>Tous</strong> annule à nouveau la sélection de la colonne concernée.</li>
+<li><strong>Colonnes :</strong> Genre, artiste, album, compositeur et regroupement. sCollectPlay reprend le choix des colonnes visibles depuis les réglages de la bibliothèque sCollect &ndash; cela se modifie dans sCollect.</li>
+<li><strong>Sélectionner :</strong> Un clic sur une valeur filtre selon celle-ci, un <kbd>&#8984;</kbd>-clic ajoute une valeur à la sélection ou l&rsquo;en retire. À l&rsquo;intérieur d&rsquo;une colonne, plusieurs valeurs agissent comme un &laquo; ou &raquo;, entre les colonnes comme un &laquo; et &raquo;. La première ligne <strong>Tous</strong> annule à nouveau la sélection de la colonne concernée.</li>
 <li><strong>Groupes :</strong> Si une colonne comporte de très nombreuses entrées, sCollectPlay les regroupe par lettre initiale en groupes dépliables. Un clic ouvre un groupe et ferme le précédent, un <kbd>&#8984;</kbd>-clic en laisse plusieurs ouverts en même temps.</li>
 <li><strong>Clavier :</strong> <kbd>&#8593;</kbd> et <kbd>&#8595;</kbd> déplacent le curseur dans la liste &ndash; la valeur sous le curseur est appliquée après une seconde, <kbd>&#9166;</kbd> l&rsquo;applique immédiatement. <kbd>&#8594;</kbd> ouvre un groupe ou y entre, <kbd>&#8592;</kbd> le referme ou remonte à la ligne parente.</li>
 <li><strong>Taille :</strong> Les séparateurs entre les colonnes et le bord inférieur du navigateur peuvent être glissés.</li>
 </ul>
-<p>sCollectPlay mémorise la sélection, la largeur des colonnes et la hauteur sur ce Mac. La médiathèque sCollect reste intacte &ndash; sCollectPlay n&rsquo;écrit rien dans ses réglages.</p>
+<p>sCollectPlay mémorise la sélection, la largeur des colonnes et la hauteur sur ce Mac. La bibliothèque sCollect reste intacte &ndash; sCollectPlay n&rsquo;écrit rien dans ses réglages.</p>
 
 
 <h3>Recherche</h3>
-<p>Le champ de recherche de la barre d&rsquo;outils filtre par titre, artiste, album, genre et d&rsquo;autres champs. Dans les playlists, la recherche s&rsquo;applique en outre au contenu de la playlist.</p>
+<p>Le champ de recherche de la barre d&rsquo;outils filtre par titre, artiste, artiste de l&rsquo;album, album, compositeur, genre, commentaire, regroupement, œuvre, nom du mouvement et année. Dans les playlists, la recherche s&rsquo;applique en outre au contenu de la playlist.</p>
 
 
 <h2 id="playback">4. Lecture</h2>
@@ -152,14 +153,14 @@
 </ul>
 
 <h3>Lecture vidéo</h3>
-<p>Les films s&rsquo;ouvrent dans une fenêtre vidéo séparée. Vous pouvez changer de piste audio et de sous-titres dans le menu <strong>Lecture</strong>. Avec <kbd>&#8984;&#8963;F</kbd>, vous passez en mode plein écran.</p>
+<p>Les films s&rsquo;ouvrent dans une fenêtre vidéo séparée ; à la fin d&rsquo;un film, la lecture se poursuit avec le titre suivant. Vous pouvez changer de piste audio et de sous-titres dans le menu <strong>Lecture</strong>. Avec <kbd>&#8984;&#8963;F</kbd>, vous passez en mode plein écran.</p>
 
 <h3>Lecture externe</h3>
 <p>Certains formats ne sont pas pris en charge directement par macOS ou AVFoundation. sCollectPlay le détecte et ouvre ces fichiers automatiquement dans un lecteur externe :</p>
 <ul>
 <li><strong>Formats vidéo particuliers :</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
 <li><strong>Codecs modernes :</strong> AV1 dans MP4 (sur des Mac plus anciens sans décodeur matériel)</li>
-<li><strong>Audio haute résolution :</strong> DSD (DFF, DSF)</li>
+<li><strong>Audio haute résolution :</strong> DSD (DFF, DSF), WavPack (WV)</li>
 <li><strong>Autres formats audio :</strong> OGG Vorbis, WMA</li>
 </ul>
 <p>Le lecteur préféré est détecté automatiquement : <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (dans cet ordre). Vous pouvez définir votre choix sous <strong>Réglages &gt; Lecture/Playlist &gt; Lecteur externe pour les codecs non pris en charge</strong>. Si aucun de ces lecteurs n&rsquo;est installé, l&rsquo;application par défaut du format est utilisée &ndash; nous recommandons <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuit, open source).</p>
@@ -188,7 +189,7 @@
 <p>Les playlists ou une sélection de pistes peuvent être envoyées à Apple Music :</p>
 <ul>
 <li><strong>Menu contextuel de la barre latérale :</strong> Clic droit sur une playlist &gt; <em>Envoyer la playlist à Apple Music</em>.</li>
-<li><strong>Menu contextuel des pistes :</strong> <em>Envoyer comme playlist à Apple Music</em> (les pistes sélectionnées comme &laquo;Sélection&raquo;).</li>
+<li><strong>Menu contextuel des pistes :</strong> <em>Envoyer comme playlist à Apple Music</em> (les pistes sélectionnées comme &laquo; Sélection &raquo;).</li>
 <li><strong>Menu Fichier :</strong> <em>Envoyer la playlist à Apple Music&hellip;</em> (actif lorsqu&rsquo;une playlist est sélectionnée).</li>
 </ul>
 <p>sCollectPlay crée la playlist dans Apple Music et y ajoute les titres. Les titres dans des formats qu&rsquo;Apple Music n&rsquo;accepte pas ne sont pas envoyés et sont indiqués dans un message. Si vous avez déjà envoyé la playlist et qu&rsquo;elle existe encore dans Apple Music, sCollectPlay demande s&rsquo;il faut la mettre à jour ou en créer une nouvelle ; avec &laquo; Ne plus demander &raquo; ou le réglage <strong>Export Apple Music</strong> (voir <a href="#settings">Réglages</a>), elle est mise à jour sans question.</p>
@@ -197,19 +198,19 @@
 
 <h2 id="playlists">5. Playlists</h2>
 
-<p>sCollectPlay affiche toutes les playlists de la médiathèque chargée &ndash; aussi bien les playlists standard que les playlists intelligentes. Les playlists intelligentes sont réévaluées selon les critères enregistrés dès que l&rsquo;ensemble des éléments change. Elles ne peuvent être modifiées que dans sCollect ; vous pouvez en outre créer vos propres playlists.</p>
-<p>Lors du chargement d&rsquo;une médiathèque XML, les playlists standard et intelligentes sont également importées. Les playlists système (Master, Distinguished Kind) sont ignorées.</p>
+<p>sCollectPlay affiche toutes les playlists de la bibliothèque chargée &ndash; aussi bien les playlists standard que les playlists intelligentes. Les playlists intelligentes sont réévaluées selon les critères enregistrés dès que l&rsquo;ensemble des éléments change ; une playlist intelligente créée dans sCollect sous une catégorie n&rsquo;évalue que les titres de celle-ci. Elles ne peuvent être modifiées que dans sCollect ; vous pouvez en outre créer vos propres playlists.</p>
+<p>Lors du chargement d&rsquo;une bibliothèque XML, les playlists standard et intelligentes sont également importées. Les playlists système (Master, Distinguished Kind) sont ignorées.</p>
 
 
 <h3>Mes playlists</h3>
-<p>Sous <strong>Mes playlists</strong> dans la barre latérale, vous créez vos propres playlists &ndash; qu&rsquo;un dossier, un XML ou une médiathèque soit chargé :</p>
+<p>Sous <strong>Mes playlists</strong> dans la barre latérale, vous créez vos propres playlists &ndash; qu&rsquo;un dossier, un XML ou une bibliothèque soit chargé :</p>
 <ul>
 <li><strong>Créer :</strong> Le bouton plus à côté de <em>Mes playlists</em> propose <em>Nouvelle playlist&hellip;</em> et <em>Nouvelle playlist intelligente&hellip;</em>.</li>
 <li><strong>Remplir :</strong> <em>Ajouter à la playlist</em> dans le menu contextuel de la liste des médias ajoute les titres sélectionnés à une playlist ou en crée une nouvelle ; dans l&rsquo;une de vos playlists, <em>Retirer de la playlist</em> les en retire.</li>
 <li><strong>Les playlists intelligentes</strong> se composent d&rsquo;elles-mêmes selon des règles ; <em>Éditer</em> dans le menu contextuel modifie les règles.</li>
 <li><strong>Renommer, supprimer, envoyer à Apple Music, exporter pour VLC :</strong> via le menu contextuel de la playlist.</li>
 </ul>
-<p>sCollectPlay enregistre vos propres playlists sur ce Mac, jamais dans la médiathèque ni dans le XML ; il retrouve leurs titres grâce au chemin du fichier, même après un nouveau scan.</p>
+<p>sCollectPlay enregistre vos propres playlists sur ce Mac, jamais dans la bibliothèque ni dans le XML ; il retrouve leurs titres grâce au chemin du fichier, même après un nouveau scan.</p>
 
 
 
@@ -224,7 +225,7 @@
 <p>Apple Music accepte les formats MP3, AAC et ALAC (.m4a), AIFF et WAV. sCollectPlay n&rsquo;envoie pas les titres dans d&rsquo;autres formats (par ex. FLAC, OGG/Opus, .aac brut ou MKV) et les indique dans un message &ndash; ils doivent d&rsquo;abord être convertis, par exemple avec &laquo; Convertir le format &raquo; dans sCollect.</p>
 <p>Si la playlist change, envoyez-la à nouveau : sCollectPlay demande s&rsquo;il faut mettre à jour la liste existante dans Apple Music ou en créer une nouvelle. Synchronisez ensuite à nouveau dans le Finder.</p>
 <aside>
-<strong>Note :</strong> Si &laquo; Synchroniser la bibliothèque &raquo; (iCloud) est activé sur l&rsquo;iPhone, le Finder ne transfère pas de musique. La playlist arrive alors sur l&rsquo;appareil par iCloud, à condition que &laquo; Synchroniser la bibliothèque &raquo; soit aussi activé dans Apple Music sur le Mac &ndash; ce qui suppose un abonnement à Apple&nbsp;Music ou à iTunes&nbsp;Match.
+<strong>Note :</strong> Si &laquo; Synchroniser la bibliothèque &raquo; (iCloud) est activé sur l&rsquo;iPhone, le Finder ne transfère pas de musique. La playlist arrive alors sur l&rsquo;appareil par iCloud, à condition que &laquo; Synchroniser la bibliothèque &raquo; soit aussi activé dans Apple Music sur le Mac &ndash; ce qui suppose un abonnement à Apple Music ou à iTunes Match.
 </aside>
 
 <h3 id="vlc">Playlist sur un appareil Android (VLC)</h3>
@@ -234,14 +235,14 @@
 <li>Si vous exportez à nouveau la même playlist au même endroit, sCollectPlay ne copie que ce qui est nouveau ou a changé, et réécrit la liste. Les titres que vous avez retirés de la playlist ne figurent plus dans la liste, mais leurs fichiers restent dans le dossier.</li>
 <li>Pendant l&rsquo;exportation, une barre de progression apparaît sous la liste des médias ; la croix à côté permet d&rsquo;annuler. La liste contient alors les titres copiés jusque-là.</li>
 </ul>
-<p>Transférez ensuite le <strong>dossier entier</strong> sur l&rsquo;appareil Android : insérez la carte ou la clé, ou copiez le dossier par câble avec une app MTP (macOS n&rsquo;affiche pas un téléphone Android comme disque). Ne démontez pas le dossier &ndash; la liste ne retrouve ses titres que par rapport à son propre emplacement. VLC affiche la playlist parmi ses playlists dès qu&rsquo;il a analysé la mémoire ; si le dossier se trouve en dehors des emplacements analysés, ajoutez-le à la médiathèque dans VLC.</p>
+<p>Transférez ensuite le <strong>dossier entier</strong> sur l&rsquo;appareil Android : insérez la carte ou la clé, ou copiez le dossier par câble avec une app MTP (macOS n&rsquo;affiche pas un téléphone Android comme disque). Ne démontez pas le dossier &ndash; la liste ne retrouve ses titres que par rapport à son propre emplacement. VLC affiche la playlist parmi ses playlists dès qu&rsquo;il a analysé la mémoire ; si le dossier se trouve en dehors des emplacements analysés, ajoutez-le à la bibliothèque dans VLC.</p>
 <p>Le dossier convient aussi à VLC sur un autre Mac ou PC et à tout lecteur qui lit les listes M3U8.</p>
 
 
 
 <h2 id="delete">6. Supprimer des fichiers multimédias</h2>
 
-<p>Le menu contextuel des pistes contient l&rsquo;entrée <strong>Supprimer le fichier multimédia</strong>. Par défaut, une boite de dialogue de confirmation apparait au préalable (elle peut être désactivée dans les réglages). Le fichier est déplacé vers la corbeille et l&rsquo;entrée est retirée de la médiathèque.</p>
+<p>Le menu contextuel des pistes contient l&rsquo;entrée <strong>Supprimer le fichier multimédia</strong>. Par défaut, une boite de dialogue de confirmation apparait au préalable (elle peut être désactivée dans les réglages). Le fichier est déplacé vers la corbeille et l&rsquo;entrée est retirée de la bibliothèque.</p>
 <p>Avec <strong>Édition &gt; Annuler</strong> (<kbd>&#8984;Z</kbd>), vous récupérez le fichier depuis la corbeille, avec son entrée ; <strong>Édition &gt; Rétablir</strong> (<kbd>&#8679;&#8984;Z</kbd>) le supprime à nouveau.</p>
 
 <aside>
@@ -250,7 +251,7 @@
 
 
 <h2 id="settings">7. Réglages</h2>
-<p>Ouvrez les réglages via <strong>sCollectPlay &gt; Réglages&hellip;</strong> (<kbd>&#8984;,</kbd>). Ils sont repartis en plusieurs onglets ; certains champs sont en lecture seule (valeurs issues de la médiathèque sCollect chargée ou valeurs par défaut) &ndash; ils montrent ce qui serait disponible dans sCollect.</p>
+<p>Ouvrez les réglages via <strong>sCollectPlay &gt; Réglages&hellip;</strong> (<kbd>&#8984;,</kbd>). Ils sont repartis en plusieurs onglets ; certains champs sont en lecture seule (valeurs issues de la bibliothèque sCollect chargée ou valeurs par défaut) &ndash; ils montrent ce qui serait disponible dans sCollect.</p>
 
 <h3>Général</h3>
 <ul>
@@ -259,8 +260,8 @@
 <li><strong>Avertir au sujet d'une bibliothèque réseau au démarrage :</strong> Demande confirmation au démarrage avant de charger une source située sur un volume réseau.</li>
 
 <li><strong>Langue :</strong> L&rsquo;application suit la langue du système. Le bouton <em>Ouvrir les réglages de langue dans Réglages Système</em> mène à <strong>Général &gt; Langue et région</strong> ; dans la section &laquo; Applications &raquo;, vous y choisissez une langue propre à sCollectPlay.</li>
-<li><strong>Dossier des illustrations :</strong> Les images de pochette se trouvent normalement dans un dossier &laquo; Artworks &raquo; au sein de la médiathèque. Avec <em>Choisir&hellip;</em>, vous indiquez un autre dossier ; il ne s&rsquo;applique qu&rsquo;à la médiathèque chargée, et <em>Supprimer</em> le détache à nouveau.</li>
-<li><strong>Dossier média :</strong> n&rsquo;apparait que si la médiathèque utilise des dossiers situés hors de son propre dossier. Pour chaque dossier, <em>Choisir</em> accorde l&rsquo;accès et <em>Supprimer</em> le retire.</li>
+<li><strong>Dossier des illustrations :</strong> Les images de pochette se trouvent normalement dans un dossier &laquo; Artworks &raquo; au sein de la bibliothèque. Avec <em>Choisir&hellip;</em>, vous indiquez un autre dossier ; il ne s&rsquo;applique qu&rsquo;à la bibliothèque chargée, et <em>Supprimer</em> le détache à nouveau.</li>
+<li><strong>Dossier média :</strong> n&rsquo;apparait que si la bibliothèque utilise des dossiers situés hors de son propre dossier. Pour chaque dossier, <em>Choisir</em> accorde l&rsquo;accès et <em>Supprimer</em> le retire.</li>
 </ul>
 <p>En dessous suivent, en gris, les réglages que seul sCollect peut modifier (par exemple Pochette, Livres et PDF, Valeurs multiples, Doublons).</p>
 
@@ -287,10 +288,10 @@
 </ul>
 
 <h3>Libellés de catégories et libellés de champs</h3>
-<p>Ces deux onglets affichent les noms des catégories et des types de médias, ainsi que ceux des champs, tels que la médiathèque sCollect chargée les définit. Ils ne peuvent être modifiés que dans sCollect.</p>
+<p>Ces deux onglets affichent les noms des catégories et des types de média, ainsi que ceux des champs, tels que la bibliothèque sCollect chargée les définit. Ils ne peuvent être modifiés que dans sCollect.</p>
 
 <h3>Statistiques</h3>
-<p>Le nombre de titres par type de médias et de playlists par catégorie, ainsi que le nombre total de titres.</p>
+<p>Le nombre de titres par type de média et de playlists par catégorie, ainsi que le nombre total de titres.</p>
 
 <aside>
 <strong>Note :</strong> Les champs désactivés montrent des réglages disponibles dans sCollect (l&rsquo;application principale) mais absents de sCollectPlay &ndash; par exemple la modification des tags, les modes d&rsquo;import ou les options de synchronisation.
@@ -302,7 +303,7 @@
 <h3>Général</h3>
 <table class="shortcut-table">
 <tr><td><kbd>&#8984;,</kbd></td><td>Ouvrir les réglages</td></tr>
-<tr><td><kbd>&#8984;&#8679;O</kbd></td><td>Choisir la médiathèque sCollect&hellip;</td></tr>
+<tr><td><kbd>&#8984;&#8679;O</kbd></td><td>Choisir la bibliothèque sCollect&hellip;</td></tr>
 <tr><td><kbd>&#8984;R</kbd></td><td>Actualiser les dossiers scannés</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>Quitter sCollectPlay</td></tr>
 <tr><td><kbd>&#8984;Z</kbd></td><td>Annuler (par exemple récupérer un fichier supprimé)</td></tr>
@@ -324,10 +325,10 @@
 
 
   </article>
-  <p class="zurueck"><a href="../../../fr/#apps">← Toutes les apps →</a></p>
+  <p class="zurueck"><a href="../../../fr/#apps">← Toutes les apps →</a> · <a href="https://apps.apple.com/app/id6792676949" target="_blank" rel="noopener">Mac App Store</a></p>
 </main>
 <footer class="site"><div class="wrap">
-  <a href="../../../impressum.html">Mentions légales</a><a href="../../../privacy.html">Confidentialité du site</a>
+  <a href="../../../impressum.html">Mentions légales</a><a href="../../../privacy.html">Confidentialité du site</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
   <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
 </div></footer>
 </body>

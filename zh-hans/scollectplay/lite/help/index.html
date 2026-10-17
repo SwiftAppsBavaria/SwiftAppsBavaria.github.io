@@ -95,17 +95,18 @@
 <h2 id="browse">3. 浏览媒体库</h2>
 
 <h3>边栏</h3>
-<p>边栏以两级折叠的形式显示类别和媒体类型（例如 音频 &gt; 音乐 / 有声书 / 播客），以及所有已加载的播放列表。在媒体类型或播放列表之间切换时，右侧的曲目列表会随之更新。</p>
+<p>边栏以两级折叠的形式显示类别和媒体类型（例如 音频 &gt; 音乐 / 有声书 / 播客）；每个媒体类型旁边显示其项目数。sCollect 媒体库的播放列表显示在各自类别下的<strong>播放列表</strong>中，文件夹可以展开。没有类别的播放列表 &ndash; 以及来自扫描文件夹或 XML 媒体库的所有播放列表 &ndash; 显示在下方的<strong>播放列表</strong>部分中。在媒体类型或播放列表之间切换时，右侧的曲目列表会随之更新；窗口标题显示列表当前包含多少首曲目，有选择时还会显示所选曲目的数量和总时长。</p>
 
 <h3>曲目列表</h3>
 <ul>
 <li><strong>列：</strong>在 sCollectPlay Lite 中，显示哪些列是固定的。</li>
-<li><strong>排序：</strong>点击列标题按该列排序；再次点击可反转排序顺序。</li>
+<li><strong>排序：</strong>点击列标题按该列排序；再次点击可反转排序顺序。每个播放列表各自排序；其<strong>编号</strong>列 &ndash; 即在播放列表中的位置 &ndash; 可恢复原始顺序。</li>
+<li><strong>当前曲目：</strong>标题前的扬声器表示正在播放的内容。只要选择位于正在播放的曲目上，切换到下一首时选择就会随之移动。</li>
 <li><strong>列宽：</strong>拖动列标题中的分隔线即可调整。</li>
 </ul>
 
 <h3>搜索</h3>
-<p>工具栏中的搜索栏可按标题、艺人、专辑、流派以及其他字段进行筛选。在播放列表中，搜索还会应用于播放列表的内容。</p>
+<p>工具栏中的搜索栏可按标题、艺人、专辑艺人、专辑、作曲、流派、评论、分组、作品、乐章名称和年份进行筛选。在播放列表中，搜索还会应用于播放列表的内容。</p>
 
 
 <h2 id="playback">4. 播放</h2>
@@ -121,14 +122,14 @@
 </ul>
 
 <h3>播放视频</h3>
-<p>电影会在单独的视频窗口中打开。音轨和字幕可以在<strong>播放</strong>菜单中切换。使用 <kbd>&#8984;&#8963;F</kbd> 可切换到全屏模式。</p>
+<p>电影会在单独的视频窗口中打开；一部电影结束后，会继续播放下一首曲目。音轨和字幕可以在<strong>播放</strong>菜单中切换。使用 <kbd>&#8984;&#8963;F</kbd> 可切换到全屏模式。</p>
 
 <h3>外部播放</h3>
 <p>某些格式不被 macOS 或 AVFoundation 直接支持。sCollectPlay Lite 会检测到这种情况，并自动在外部播放器中打开这些文件：</p>
 <ul>
 <li><strong>视频特殊格式：</strong>MKV、AVI、FLV、MPG、MPEG、VOB、DivX</li>
 <li><strong>现代编解码器：</strong>MP4 中的 AV1（在没有硬件解码器的较旧 Mac 上）</li>
-<li><strong>高解析度音频：</strong>DSD（DFF、DSF）</li>
+<li><strong>高解析度音频：</strong>DSD（DFF、DSF）、WavPack（WV）</li>
 <li><strong>其他音频格式：</strong>OGG Vorbis、WMA</li>
 </ul>
 <p>首选播放器会自动检测：<strong>VLC</strong>、<strong>IINA</strong> 或 <strong>MPV</strong>（按此顺序）。你可以在<strong>设置 &gt; 播放/播放列表 &gt; 用于不支持的编解码器的外部播放器</strong>中指定。如果这些播放器都未安装，则使用该格式的默认程序 &ndash; 推荐使用 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a>（免费、开源）。</p>
@@ -155,7 +156,7 @@
 
 <h2 id="playlists">5. 播放列表</h2>
 
-<p>sCollectPlay Lite 会显示已加载媒体库中的所有播放列表 &ndash; 标准播放列表和智能播放列表都包括在内。当项目集合发生变化时，智能播放列表会依据已保存的条件重新求值。这里无法编辑；编辑请使用 sCollect。</p>
+<p>sCollectPlay Lite 会显示已加载媒体库中的所有播放列表 &ndash; 标准播放列表和智能播放列表都包括在内。当项目集合发生变化时，智能播放列表会依据已保存的条件重新求值；在 sCollect 中创建于某个类别下的智能播放列表只对该类别的曲目求值。这里无法编辑；编辑请使用 sCollect。</p>
 <p>加载 XML 媒体库时，标准播放列表和智能播放列表也会一并导入。系统播放列表（Master、Distinguished Kind）会被跳过。</p>
 
 
@@ -238,7 +239,7 @@
   <p class="zurueck"><a href="../../../../zh-hans/#apps">← 全部 App →</a></p>
 </main>
 <footer class="site"><div class="wrap">
-  <a href="../../../../impressum.html">法律声明</a><a href="../../../../privacy.html">网站隐私</a>
+  <a href="../../../../impressum.html">法律声明</a><a href="../../../../privacy.html">网站隐私</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
   <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
 </div></footer>
 </body>

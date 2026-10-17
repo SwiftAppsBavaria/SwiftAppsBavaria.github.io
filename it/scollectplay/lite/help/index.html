@@ -95,17 +95,18 @@
 <h2 id="browse">3. Esplorare la libreria</h2>
 
 <h3>Barra laterale</h3>
-<p>La barra laterale mostra categorie e tipi di contenuto come fisarmonica a due livelli (ad es. Audio &gt; Musica / Audiolibro / Podcast) e tutte le playlist caricate. Passando da un tipo di contenuto o da una playlist all'altra, l'elenco dei brani a destra si aggiorna.</p>
+<p>La barra laterale mostra categorie e tipi di media come fisarmonica a due livelli (ad es. Audio &gt; Musica / Audiolibro / Podcast); accanto a ogni tipo di media c'è il numero dei suoi oggetti. Le playlist di una libreria sCollect si trovano presso la loro categoria sotto <strong>Playlist</strong>, e le cartelle si possono espandere. Le playlist senza categoria &ndash; e tutte quelle di una cartella scansionata o di una libreria XML &ndash; si trovano più sotto, nella sezione <strong>Playlist</strong>. Passando da un tipo di media o da una playlist all'altra, l'elenco dei brani a destra si aggiorna; il titolo della finestra mostra quanti brani contiene in quel momento e, per una selezione, il loro numero e la durata complessiva.</p>
 
 <h3>Elenco dei brani</h3>
 <ul>
 <li><strong>Colonne:</strong> In sCollectPlay Lite le colonne visibili sono predefinite.</li>
-<li><strong>Ordinare:</strong> Un clic su un'intestazione ordina in base a quella colonna; un secondo clic inverte l'ordine.</li>
+<li><strong>Ordinare:</strong> Un clic su un'intestazione ordina in base a quella colonna; un secondo clic inverte l'ordine. Ogni playlist si ordina per conto proprio; la sua colonna <strong>N.</strong> &ndash; la posizione nella playlist &ndash; riporta all'ordine originale.</li>
+<li><strong>Brano in riproduzione:</strong> Un altoparlante davanti al titolo indica cosa è in riproduzione. La selezione segue il passaggio al brano successivo, purché fosse sul brano in riproduzione.</li>
 <li><strong>Larghezza delle colonne:</strong> Trascinando la linea di separazione nell'intestazione della colonna.</li>
 </ul>
 
 <h3>Ricerca</h3>
-<p>Il campo di ricerca nella barra degli strumenti filtra per titolo, artista, album, genere e altri campi. Nelle playlist la ricerca viene applicata anche al contenuto della playlist.</p>
+<p>Il campo di ricerca nella barra degli strumenti filtra per titolo, artista, artista dell'album, album, compositore, genere, commento, raggruppamento, opera, nome del movimento e anno. Nelle playlist la ricerca viene applicata anche al contenuto della playlist.</p>
 
 
 <h2 id="playback">4. Riproduzione</h2>
@@ -121,14 +122,14 @@
 </ul>
 
 <h3>Riprodurre video</h3>
-<p>I film vengono aperti in una finestra video separata. Puoi cambiare traccia audio e sottotitoli nel menu <strong>Riproduzione</strong>. Con <kbd>&#8984;&#8963;F</kbd> passi alla modalità a schermo intero.</p>
+<p>I film vengono aperti in una finestra video separata; alla fine di un film la riproduzione prosegue con il brano successivo. Puoi cambiare traccia audio e sottotitoli nel menu <strong>Riproduzione</strong>. Con <kbd>&#8984;&#8963;F</kbd> passi alla modalità a schermo intero.</p>
 
 <h3>Riproduzione esterna</h3>
 <p>Alcuni formati non sono supportati direttamente da macOS o AVFoundation. sCollectPlay Lite lo rileva e apre questi file automaticamente in un lettore esterno:</p>
 <ul>
 <li><strong>Formati video speciali:</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
 <li><strong>Codec moderni:</strong> AV1 in MP4 (su Mac più vecchi senza decodificatore hardware)</li>
-<li><strong>Audio ad alta risoluzione:</strong> DSD (DFF, DSF)</li>
+<li><strong>Audio ad alta risoluzione:</strong> DSD (DFF, DSF), WavPack (WV)</li>
 <li><strong>Altri formati audio:</strong> OGG Vorbis, WMA</li>
 </ul>
 <p>Il lettore preferito viene rilevato automaticamente: <strong>VLC</strong>, <strong>IINA</strong> o <strong>MPV</strong> (in questo ordine). Puoi definire la tua scelta in <strong>Impostazioni &gt; Riproduzione/Playlist &gt; Lettore esterno per codec non supportati</strong>. Se nessuno di questi lettori è installato, viene usata l'app predefinita per il formato &ndash; consigliamo <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, open source).</p>
@@ -155,7 +156,7 @@
 
 <h2 id="playlists">5. Playlist</h2>
 
-<p>sCollectPlay Lite mostra tutte le playlist della libreria caricata &ndash; sia quelle standard sia quelle intelligenti. Le playlist intelligenti vengono rivalutate in base ai criteri memorizzati quando cambia l'insieme degli oggetti. Non è possibile modificarle; per questo c'è sCollect.</p>
+<p>sCollectPlay Lite mostra tutte le playlist della libreria caricata &ndash; sia quelle standard sia quelle intelligenti. Le playlist intelligenti vengono rivalutate in base ai criteri memorizzati quando cambia l'insieme degli oggetti; una playlist intelligente creata in sCollect sotto una categoria valuta solo i brani di quella categoria. Non è possibile modificarle; per questo c'è sCollect.</p>
 <p>Durante il caricamento di una libreria XML vengono importate sia le playlist standard sia quelle intelligenti. Le playlist di sistema (Master, Distinguished Kind) vengono saltate.</p>
 
 
@@ -198,10 +199,10 @@
 </ul>
 
 <h3>Etichette categorie ed Etichette campi</h3>
-<p>Le due schede mostrano i nomi delle categorie e dei tipi di contenuto, oppure dei campi, così come li definisce la libreria sCollect caricata. Si possono modificare solo in sCollect.</p>
+<p>Le due schede mostrano i nomi delle categorie e dei tipi di media, oppure dei campi, così come li definisce la libreria sCollect caricata. Si possono modificare solo in sCollect.</p>
 
 <h3>Statistiche</h3>
-<p>Il numero di brani per tipo di contenuto e di playlist per categoria, più il numero totale di brani.</p>
+<p>Il numero di brani per tipo di media e di playlist per categoria, più il numero totale di brani.</p>
 
 <aside>
 <strong>Nota:</strong> I campi disattivati mostrano impostazioni disponibili in sCollect (l'app principale) ma non in sCollectPlay Lite &ndash; ad esempio la modifica dei tag, le modalità di importazione o le opzioni di sincronizzazione.
@@ -238,7 +239,7 @@
   <p class="zurueck"><a href="../../../../it/#apps">← Tutte le app →</a></p>
 </main>
 <footer class="site"><div class="wrap">
-  <a href="../../../../impressum.html">Note legali</a><a href="../../../../privacy.html">Privacy del sito</a>
+  <a href="../../../../impressum.html">Note legali</a><a href="../../../../privacy.html">Privacy del sito</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
   <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
 </div></footer>
 </body>

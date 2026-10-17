@@ -36,14 +36,14 @@
 
 
 <h1>Manuel de sCollectPlay Lite</h1>
-<p class="subtitle">Lecteur pour les médiathèques sCollect, les dossiers et les exports XML d&rsquo;iTunes</p>
+<p class="subtitle">Lecteur pour les bibliothèques sCollect, les dossiers et les exports XML d&rsquo;iTunes</p>
 
 <nav class="toc">
 <h2>Sommaire</h2>
 <ol>
 <li><a href="#start">Premiers pas</a></li>
 <li><a href="#sources">Choisir une source</a></li>
-<li><a href="#browse">Parcourir la médiathèque</a></li>
+<li><a href="#browse">Parcourir la bibliothèque</a></li>
 <li><a href="#playback">Lecture</a></li>
 <li><a href="#playlists">Playlists</a></li>
 <li><a href="#delete">Supprimer des fichiers multimédias</a></li>
@@ -56,10 +56,10 @@
 <h2 id="start">1. Premiers pas</h2>
 
 <h3>Qu&rsquo;est-ce que sCollectPlay Lite ?</h3>
-<p>sCollectPlay Lite est une application compagnon de <strong>sCollect</strong>. Elle est spécialisée dans la seule lecture : pas d&rsquo;import, pas de modification des métadonnées, pas de synchronisation. En contrepartie, elle lit trois sources : des dossiers, le XML iTunes/Apple Music et les médiathèques sCollect.</p>
+<p>sCollectPlay Lite est une application compagnon de <strong>sCollect</strong>. Elle est spécialisée dans la seule lecture : pas d&rsquo;import, pas de modification des métadonnées, pas de synchronisation. En contrepartie, elle lit trois sources : des dossiers, le XML iTunes/Apple Music et les bibliothèques sCollect.</p>
 
 <h3>Au premier lancement</h3>
-<p>Au premier lancement, sCollectPlay Lite affiche une fenêtre de bienvenue avec des indications sur la lecture des formats particuliers (voir section 4). Ensuite apparait le sélecteur de source, où vous pouvez choisir une médiathèque.</p>
+<p>Au premier lancement, sCollectPlay Lite affiche une fenêtre de bienvenue avec des indications sur la lecture des formats particuliers (voir section 4). Ensuite apparait le sélecteur de source, où vous pouvez choisir une bibliothèque.</p>
 
 <aside>
 <strong>Astuce :</strong> sCollectPlay Lite est compatible avec macOS 14.0 ou plus récent et disponible en 24 langues.
@@ -71,19 +71,19 @@
 <p>sCollectPlay Lite connait trois types de sources, que vous pouvez ouvrir au démarrage ou plus tard via le menu <strong>Fichier</strong> :</p>
 
 <h3>Scanner un dossier</h3>
-<p>Choisissez un dossier quelconque &ndash; sCollectPlay Lite le parcourt récursivement à la recherche de fichiers multimédias et lit les métadonnées directement dans les fichiers (AVFoundation pour l&rsquo;audio et la vidéo, EbookTagKit pour EPUB et PDF). C&rsquo;est la manière la plus simple de commencer sans médiathèque sCollect.</p>
+<p>Choisissez un dossier quelconque &ndash; sCollectPlay Lite le parcourt récursivement à la recherche de fichiers multimédias et lit les métadonnées directement dans les fichiers (AVFoundation pour l&rsquo;audio et la vidéo, EbookTagKit pour EPUB et PDF). C&rsquo;est la manière la plus simple de commencer sans bibliothèque sCollect.</p>
 <ul>
 <li><strong>Une source par session :</strong> Dans sCollectPlay Lite, un nouveau dossier remplace le précédent, et rien n&rsquo;est restauré au lancement suivant de l&rsquo;app.</li>
 <li><strong>Détection MKV :</strong> Les fichiers portant l&rsquo;extension <code>.mp4</code> qui sont en réalité des MKV sont reconnus grâce à leur signature EBML et marqués comme tels.</li>
 <li><strong>Classement selon la durée :</strong> Un dossier ne révèle pas si un fichier est de la musique ou un livre audio. sCollectPlay Lite classe donc l&rsquo;audio et la vidéo selon leur durée &ndash; audio : jusqu&rsquo;à 10, 10&ndash;30, 30&ndash;60 et plus de 60 min ; vidéo : jusqu&rsquo;à 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 et plus de 210 min. Les e-books et les PDF sont reconnus à leur extension de fichier. Si la durée ne peut pas être déterminée, le titre est classé sous « durée inconnue ».</li>
 </ul>
-<p>Dans <strong>Réglages &gt; Bibliothèque &gt; Dossiers scannés</strong>, <em>Actualiser</em> ne relit que ce qui a changé depuis la dernière lecture : fichiers nouveaux, modifiés et supprimés. Plus rapide : <strong>Fichier &gt; Actualiser les dossiers scannés</strong> (<kbd>&#8984;R</kbd>) ou le bouton <strong>&#8635;</strong> à droite du champ de recherche. À la fin, un message indique ce qui est nouveau, modifié ou supprimé.</p>
+<p>Dans <strong>Réglages &gt; Bibliothèque &gt; Dossiers scannés</strong>, <em>Actualiser</em> ne relit que ce qui a changé depuis la dernière lecture : fichiers nouveaux, modifiés et supprimés. Plus rapide : <strong>Fichier &gt; Actualiser les dossiers scannés</strong> (<kbd>&#8984;R</kbd>) ou le bouton <strong>&#8635;</strong> à droite du champ de recherche. À la fin, un message indique ce qui est nouveau, modifié ou supprimé.</p>
 
-<h3>Médiathèque sCollect</h3>
-<p>Choisissez le dossier principal d&rsquo;une médiathèque sCollect (le dossier qui contient le paquet <code>.scollect</code> ; pour les médiathèques plus anciennes, le dossier contenant <code>settings.json</code>). sCollectPlay Lite lit directement les fichiers de la médiathèque, les playlists et les réglages &ndash; y compris les libellés de champs personnalisés et les playlists intelligentes. Le choix d&rsquo;une médiathèque remplace un scan de dossier actif. Vous pouvez aussi ouvrir la médiathèque en double-cliquant sur le paquet <code>.scollect</code> dans le Finder.</p>
+<h3>Bibliothèque sCollect</h3>
+<p>Choisissez le dossier principal d&rsquo;une bibliothèque sCollect (le dossier qui contient le paquet <code>.scollect</code> ; pour les bibliothèques plus anciennes, le dossier contenant <code>settings.json</code>). sCollectPlay Lite lit directement les fichiers de la bibliothèque, les playlists et les réglages &ndash; y compris les libellés de champs personnalisés et les playlists intelligentes. Le choix d&rsquo;une bibliothèque remplace un scan de dossier actif. Vous pouvez aussi ouvrir la bibliothèque en double-cliquant sur le paquet <code>.scollect</code> dans le Finder.</p>
 
 <h3>XML iTunes/Apple Music</h3>
-<p>Choisissez un fichier <code>Library.xml</code> ou un paquet <code>.musiclibrary</code>. sCollectPlay Lite analyse les pistes et les listes de lecture (standard et intelligentes). Les playlists système (Master, Distinguished Kind) sont ignorées. sCollectPlay Lite reprend les types de média du XML lui-même : Musique, Livre audio, Podcast, Vidéo personnelle, Long métrage, Série et Clip vidéo. À l&rsquo;ouverture, le dossier de médias correspondant vous est demandé une seule fois, afin que sCollectPlay Lite puisse accéder aux fichiers.</p>
+<p>Choisissez un fichier <code>Library.xml</code> ou un paquet <code>.musiclibrary</code>. sCollectPlay Lite analyse les pistes et les listes de lecture (standard et intelligentes). Les playlists système (Master, Distinguished Kind) sont ignorées. sCollectPlay Lite reprend les types de média du XML lui-même : Musique, Livre audio, Podcast, Vidéo personnelle, Long métrage, Série et Clip vidéo. À l&rsquo;ouverture, le dossier média correspondant vous est demandé une seule fois, afin que sCollectPlay Lite puisse accéder aux fichiers.</p>
 
 <aside>
 <strong>Note :</strong> Un seul type de source est chargé à la fois. Chaque source nouvellement ouverte remplace la précédente, y compris un dossier supplémentaire. La barre de titre de la fenêtre indique le type et le nom de la source, par exemple Dossier « Musique » ou Bibliothèque « sCollect » ; placez le pointeur sur le titre pour afficher le chemin complet.
@@ -92,20 +92,21 @@
 <p>sCollectPlay Lite ne mémorise aucune source : au lancement suivant, le sélecteur de source réapparait.</p>
 
 
-<h2 id="browse">3. Parcourir la médiathèque</h2>
+<h2 id="browse">3. Parcourir la bibliothèque</h2>
 
 <h3>Barre latérale</h3>
-<p>La barre latérale affiche les catégories et les types de médias sous forme d&rsquo;accordéon à deux niveaux (par ex. Audio &gt; Musique / Livre audio / Podcast) ainsi que toutes les playlists chargées. Lorsque vous passez d&rsquo;un type de médias ou d&rsquo;une playlist à l&rsquo;autre, la liste des médias à droite se met à jour.</p>
+<p>La barre latérale affiche les catégories et les types de média sous forme d&rsquo;accordéon à deux niveaux (par ex. Audio &gt; Musique / Livre audio / Podcast)  ; à côté de chaque type de média figure le nombre de ses objets. Les playlists d&rsquo;une bibliothèque sCollect figurent sous leur catégorie, dans <strong>Playlists</strong> ; les dossiers peuvent être dépliés. Les playlists sans catégorie &ndash; et toutes celles d&rsquo;un dossier scanné ou d&rsquo;une bibliothèque XML &ndash; figurent plus bas, dans la section <strong>Playlists</strong>. Lorsque vous passez d&rsquo;un type de média ou d&rsquo;une playlist à l&rsquo;autre, la liste des médias à droite se met à jour ; le titre de la fenêtre indique combien de titres elle contient actuellement et, pour une sélection, leur nombre et leur durée totale.</p>
 
 <h3>Liste des médias</h3>
 <ul>
 <li><strong>Colonnes :</strong> Les colonnes affichées sont fixes dans sCollectPlay Lite.</li>
-<li><strong>Trier :</strong> Un clic sur un en-tête de colonne trie selon cette colonne ; un nouveau clic inverse l&rsquo;ordre.</li>
+<li><strong>Trier :</strong> Un clic sur un en-tête de colonne trie selon cette colonne ; un nouveau clic inverse l&rsquo;ordre. Chaque playlist se trie indépendamment ; sa colonne <strong>N°</strong> &ndash; la position dans la playlist &ndash; rétablit l&rsquo;ordre d&rsquo;origine.</li>
+<li><strong>Titre en cours :</strong> Un haut-parleur devant le titre indique ce qui est en cours de lecture. La sélection suit le passage au titre suivant, tant qu&rsquo;elle se trouvait sur le titre en cours de lecture.</li>
 <li><strong>Largeur des colonnes :</strong> En faisant glisser la ligne de séparation dans l&rsquo;en-tête de colonne.</li>
 </ul>
 
 <h3>Recherche</h3>
-<p>Le champ de recherche de la barre d&rsquo;outils filtre par titre, artiste, album, genre et d&rsquo;autres champs. Dans les playlists, la recherche s&rsquo;applique en outre au contenu de la playlist.</p>
+<p>Le champ de recherche de la barre d&rsquo;outils filtre par titre, artiste, artiste de l&rsquo;album, album, compositeur, genre, commentaire, regroupement, œuvre, nom du mouvement et année. Dans les playlists, la recherche s&rsquo;applique en outre au contenu de la playlist.</p>
 
 
 <h2 id="playback">4. Lecture</h2>
@@ -121,14 +122,14 @@
 </ul>
 
 <h3>Lecture vidéo</h3>
-<p>Les films s&rsquo;ouvrent dans une fenêtre vidéo séparée. Vous pouvez changer de piste audio et de sous-titres dans le menu <strong>Lecture</strong>. Avec <kbd>&#8984;&#8963;F</kbd>, vous passez en mode plein écran.</p>
+<p>Les films s&rsquo;ouvrent dans une fenêtre vidéo séparée ; à la fin d&rsquo;un film, la lecture se poursuit avec le titre suivant. Vous pouvez changer de piste audio et de sous-titres dans le menu <strong>Lecture</strong>. Avec <kbd>&#8984;&#8963;F</kbd>, vous passez en mode plein écran.</p>
 
 <h3>Lecture externe</h3>
 <p>Certains formats ne sont pas pris en charge directement par macOS ou AVFoundation. sCollectPlay Lite le détecte et ouvre ces fichiers automatiquement dans un lecteur externe :</p>
 <ul>
 <li><strong>Formats vidéo particuliers :</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
 <li><strong>Codecs modernes :</strong> AV1 dans MP4 (sur des Mac plus anciens sans décodeur matériel)</li>
-<li><strong>Audio haute résolution :</strong> DSD (DFF, DSF)</li>
+<li><strong>Audio haute résolution :</strong> DSD (DFF, DSF), WavPack (WV)</li>
 <li><strong>Autres formats audio :</strong> OGG Vorbis, WMA</li>
 </ul>
 <p>Le lecteur préféré est détecté automatiquement : <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (dans cet ordre). Vous pouvez définir votre choix sous <strong>Réglages &gt; Lecture/Playlist &gt; Lecteur externe pour les codecs non pris en charge</strong>. Si aucun de ces lecteurs n&rsquo;est installé, l&rsquo;application par défaut du format est utilisée &ndash; nous recommandons <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuit, open source).</p>
@@ -155,13 +156,13 @@
 
 <h2 id="playlists">5. Playlists</h2>
 
-<p>sCollectPlay Lite affiche toutes les playlists de la médiathèque chargée &ndash; aussi bien les playlists standard que les playlists intelligentes. Les playlists intelligentes sont réévaluées selon les critères enregistrés dès que l&rsquo;ensemble des éléments change. Aucune modification n&rsquo;est possible ; c&rsquo;est le rôle de sCollect.</p>
-<p>Lors du chargement d&rsquo;une médiathèque XML, les playlists standard et intelligentes sont également importées. Les playlists système (Master, Distinguished Kind) sont ignorées.</p>
+<p>sCollectPlay Lite affiche toutes les playlists de la bibliothèque chargée &ndash; aussi bien les playlists standard que les playlists intelligentes. Les playlists intelligentes sont réévaluées selon les critères enregistrés dès que l&rsquo;ensemble des éléments change ; une playlist intelligente créée dans sCollect sous une catégorie n&rsquo;évalue que les titres de celle-ci. Aucune modification n&rsquo;est possible ; c&rsquo;est le rôle de sCollect.</p>
+<p>Lors du chargement d&rsquo;une bibliothèque XML, les playlists standard et intelligentes sont également importées. Les playlists système (Master, Distinguished Kind) sont ignorées.</p>
 
 
 <h2 id="delete">6. Supprimer des fichiers multimédias</h2>
 
-<p>Le menu contextuel des pistes contient l&rsquo;entrée <strong>Supprimer le fichier multimédia</strong>. Par défaut, une boite de dialogue de confirmation apparait au préalable (elle peut être désactivée dans les réglages). Le fichier est déplacé vers la corbeille et l&rsquo;entrée est retirée de la médiathèque.</p>
+<p>Le menu contextuel des pistes contient l&rsquo;entrée <strong>Supprimer le fichier multimédia</strong>. Par défaut, une boite de dialogue de confirmation apparait au préalable (elle peut être désactivée dans les réglages). Le fichier est déplacé vers la corbeille et l&rsquo;entrée est retirée de la bibliothèque.</p>
 <p>Avec <strong>Édition &gt; Annuler</strong> (<kbd>&#8984;Z</kbd>), vous récupérez le fichier depuis la corbeille, avec son entrée ; <strong>Édition &gt; Rétablir</strong> (<kbd>&#8679;&#8984;Z</kbd>) le supprime à nouveau.</p>
 
 <aside>
@@ -170,14 +171,14 @@
 
 
 <h2 id="settings">7. Réglages</h2>
-<p>Ouvrez les réglages via <strong>sCollectPlay Lite &gt; Réglages&hellip;</strong> (<kbd>&#8984;,</kbd>). Ils sont repartis en plusieurs onglets ; certains champs sont en lecture seule (valeurs issues de la médiathèque sCollect chargée ou valeurs par défaut) &ndash; ils montrent ce qui serait disponible dans sCollect.</p>
+<p>Ouvrez les réglages via <strong>sCollectPlay Lite &gt; Réglages&hellip;</strong> (<kbd>&#8984;,</kbd>). Ils sont repartis en plusieurs onglets ; certains champs sont en lecture seule (valeurs issues de la bibliothèque sCollect chargée ou valeurs par défaut) &ndash; ils montrent ce qui serait disponible dans sCollect.</p>
 
 <h3>Général</h3>
 <ul>
 <li><strong>Confirmer la suppression :</strong> Demander avant de déplacer vers la corbeille.</li>
 <li><strong>Langue :</strong> L&rsquo;application suit la langue du système. Le bouton <em>Ouvrir les réglages de langue dans Réglages Système</em> mène à <strong>Général &gt; Langue et région</strong> ; dans la section &laquo; Applications &raquo;, vous y choisissez une langue propre à sCollectPlay Lite.</li>
-<li><strong>Dossier des illustrations :</strong> Les images de pochette se trouvent normalement dans un dossier &laquo; Artworks &raquo; au sein de la médiathèque. Avec <em>Choisir&hellip;</em>, vous indiquez un autre dossier ; il ne s&rsquo;applique qu&rsquo;à la médiathèque chargée, et <em>Supprimer</em> le détache à nouveau.</li>
-<li><strong>Dossier média :</strong> n&rsquo;apparait que si la médiathèque utilise des dossiers situés hors de son propre dossier. Pour chaque dossier, <em>Choisir</em> accorde l&rsquo;accès et <em>Supprimer</em> le retire.</li>
+<li><strong>Dossier des illustrations :</strong> Les images de pochette se trouvent normalement dans un dossier &laquo; Artworks &raquo; au sein de la bibliothèque. Avec <em>Choisir&hellip;</em>, vous indiquez un autre dossier ; il ne s&rsquo;applique qu&rsquo;à la bibliothèque chargée, et <em>Supprimer</em> le détache à nouveau.</li>
+<li><strong>Dossier média :</strong> n&rsquo;apparait que si la bibliothèque utilise des dossiers situés hors de son propre dossier. Pour chaque dossier, <em>Choisir</em> accorde l&rsquo;accès et <em>Supprimer</em> le retire.</li>
 </ul>
 <p>En dessous suivent, en gris, les réglages que seul sCollect peut modifier (par exemple Pochette, Livres et PDF, Valeurs multiples, Doublons).</p>
 
@@ -198,10 +199,10 @@
 </ul>
 
 <h3>Libellés de catégories et libellés de champs</h3>
-<p>Ces deux onglets affichent les noms des catégories et des types de médias, ainsi que ceux des champs, tels que la médiathèque sCollect chargée les définit. Ils ne peuvent être modifiés que dans sCollect.</p>
+<p>Ces deux onglets affichent les noms des catégories et des types de média, ainsi que ceux des champs, tels que la bibliothèque sCollect chargée les définit. Ils ne peuvent être modifiés que dans sCollect.</p>
 
 <h3>Statistiques</h3>
-<p>Le nombre de titres par type de médias et de playlists par catégorie, ainsi que le nombre total de titres.</p>
+<p>Le nombre de titres par type de média et de playlists par catégorie, ainsi que le nombre total de titres.</p>
 
 <aside>
 <strong>Note :</strong> Les champs désactivés montrent des réglages disponibles dans sCollect (l&rsquo;application principale) mais absents de sCollectPlay Lite &ndash; par exemple la modification des tags, les modes d&rsquo;import ou les options de synchronisation.
@@ -213,7 +214,7 @@
 <h3>Général</h3>
 <table class="shortcut-table">
 <tr><td><kbd>&#8984;,</kbd></td><td>Ouvrir les réglages</td></tr>
-<tr><td><kbd>&#8984;&#8679;O</kbd></td><td>Choisir la médiathèque sCollect&hellip;</td></tr>
+<tr><td><kbd>&#8984;&#8679;O</kbd></td><td>Choisir la bibliothèque sCollect&hellip;</td></tr>
 <tr><td><kbd>&#8984;R</kbd></td><td>Actualiser les dossiers scannés</td></tr>
 <tr><td><kbd>&#8984;Q</kbd></td><td>Quitter sCollectPlay Lite</td></tr>
 <tr><td><kbd>&#8984;Z</kbd></td><td>Annuler (par exemple récupérer un fichier supprimé)</td></tr>
@@ -238,7 +239,7 @@
   <p class="zurueck"><a href="../../../../fr/#apps">← Toutes les apps →</a></p>
 </main>
 <footer class="site"><div class="wrap">
-  <a href="../../../../impressum.html">Mentions légales</a><a href="../../../../privacy.html">Confidentialité du site</a>
+  <a href="../../../../impressum.html">Mentions légales</a><a href="../../../../privacy.html">Confidentialité du site</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
   <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
 </div></footer>
 </body>

@@ -31,7 +31,7 @@
 </div></header>
 
 <main class="wrap">
-  <p class="zurueck"><a href="../../#apps">← All apps →</a></p>
+  <p class="zurueck"><a href="../../#apps">← All apps →</a> · <a href="https://apps.apple.com/app/id6792676949" target="_blank" rel="noopener">Mac App Store</a></p>
   <article class="hilfe">
 
 
@@ -102,7 +102,7 @@
 <h2 id="browse">3. Browsing Your Library</h2>
 
 <h3>Sidebar</h3>
-<p>The sidebar shows categories and media types as a two-level accordion (e.g. Audio &gt; Music / Audiobook / Podcast) along with all loaded playlists. Switching between media types or playlists updates the track list on the right.</p>
+<p>The sidebar shows categories and media types as a two-level accordion (e.g. Audio &gt; Music / Audiobook / Podcast); next to each media type is the number of its items. The playlists of an sCollect library appear with their category under <strong>Playlists</strong>, and folders can be expanded. Playlists without a category &ndash; and all playlists from a scanned folder or an XML library &ndash; appear in the <strong>Playlists</strong> section below. Switching between media types or playlists updates the track list on the right; the window title shows how many tracks it currently contains and, for a selection, their number and total duration.</p>
 
 <h3>Track List</h3>
 <ul>
@@ -110,7 +110,8 @@
 <li><strong>Customize columns:</strong> Right-click a column header &gt; <em>Customize Columns&hellip;</em> to choose the visible columns. Visibility, order, and widths apply per media type or playlist; with a sCollect library, sCollectPlay takes the columns from there as a starting point and remembers your changes on this Mac.</li>
 
 
-<li><strong>Sort:</strong> Click a column header to sort by that column; click again to reverse the order.</li>
+<li><strong>Sort:</strong> Click a column header to sort by that column; click again to reverse the order. Each playlist sorts on its own; its <strong>No.</strong> column &ndash; the position in the playlist &ndash; returns to the original order.</li>
+<li><strong>Current track:</strong> A speaker in front of the title shows what is playing. The selection moves along when the next track starts, as long as it was on the playing track.</li>
 <li><strong>Column width:</strong> Drag the divider in the column header.</li>
 
 <li><strong>Column order:</strong> Drag a column header to a different position.</li>
@@ -124,7 +125,7 @@
 
 
 <h3>Column Browser</h3>
-<p>The column browser adds several selection columns above the track list &ndash; similar to the column browser in Apple Music. The button with the three columns on the right of the toolbar shows and hides it. It appears in the media type views; in playlists it stays hidden.</p>
+<p>The column browser adds several selection columns above the track list &ndash; similar to the column browser in Apple Music. The button with the three columns on the right of the toolbar shows and hides it. It is available in the media type views and in playlists; in a playlist it shows the values of its tracks.</p>
 <ul>
 <li><strong>Columns:</strong> Genre, artist, album, composer, and grouping. Which of them are shown is taken from the settings of the sCollect library &ndash; change it in sCollect.</li>
 <li><strong>Selecting:</strong> Clicking a value filters by it, <kbd>&#8984;</kbd>-click adds a value to the selection or removes it. Within one column several values act as &laquo;or&raquo;, between columns as &laquo;and&raquo;. The topmost row <strong>All</strong> clears that column's selection again.</li>
@@ -136,7 +137,7 @@
 
 
 <h3>Search</h3>
-<p>The search field in the toolbar filters by title, artist, album, genre, and other fields. In playlists, the search additionally applies to the playlist contents.</p>
+<p>The search field in the toolbar filters by title, artist, album artist, album, composer, genre, comment, grouping, work, movement name, and year. In playlists, the search additionally applies to the playlist contents.</p>
 
 
 <h2 id="playback">4. Playback</h2>
@@ -152,14 +153,14 @@
 </ul>
 
 <h3>Playing Video</h3>
-<p>Movies open in a separate video window. Audio tracks and subtitles can be switched in the <strong>Playback</strong> menu. Use <kbd>&#8984;&#8963;F</kbd> to toggle full-screen mode.</p>
+<p>Movies open in a separate video window; at the end of a movie, playback continues with the next track. Audio tracks and subtitles can be switched in the <strong>Playback</strong> menu. Use <kbd>&#8984;&#8963;F</kbd> to toggle full-screen mode.</p>
 
 <h3>External Playback</h3>
 <p>Some formats are not natively supported by macOS / AVFoundation. sCollectPlay detects this and opens these files automatically in an external player:</p>
 <ul>
 <li><strong>Special video formats:</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
 <li><strong>Modern codecs:</strong> AV1 in MP4 (on older Macs without a hardware decoder)</li>
-<li><strong>High-resolution audio:</strong> DSD (DFF, DSF)</li>
+<li><strong>High-resolution audio:</strong> DSD (DFF, DSF), WavPack (WV)</li>
 <li><strong>Other audio formats:</strong> OGG Vorbis, WMA</li>
 </ul>
 <p>The preferred player is detected automatically: <strong>VLC</strong>, <strong>IINA</strong>, or <strong>MPV</strong> (in that order). You can override the choice in <strong>Settings &gt; Playback/Playlist &gt; External player for unsupported codecs</strong>. If none of these players are installed, the default app for the format is used &ndash; we recommend <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (free, open source).</p>
@@ -197,7 +198,7 @@
 
 <h2 id="playlists">5. Playlists</h2>
 
-<p>sCollectPlay shows all playlists from the loaded library &ndash; both standard and smart playlists. Smart playlists are re-evaluated against their stored criteria whenever the item set changes. They can only be changed in sCollect; in addition, you can create your own playlists.</p>
+<p>sCollectPlay shows all playlists from the loaded library &ndash; both standard and smart playlists. Smart playlists are re-evaluated against their stored criteria whenever the item set changes; a smart playlist created in sCollect under a category only evaluates that category&rsquo;s tracks. They can only be changed in sCollect; in addition, you can create your own playlists.</p>
 <p>When loading an XML library, both standard and smart playlists are imported. System playlists (Master, Distinguished Kind) are skipped.</p>
 
 
@@ -324,10 +325,10 @@
 
 
   </article>
-  <p class="zurueck"><a href="../../#apps">← All apps →</a></p>
+  <p class="zurueck"><a href="../../#apps">← All apps →</a> · <a href="https://apps.apple.com/app/id6792676949" target="_blank" rel="noopener">Mac App Store</a></p>
 </main>
 <footer class="site"><div class="wrap">
-  <a href="../../impressum.html">Legal Notice</a><a href="../../privacy.html">Website Privacy</a>
+  <a href="../../impressum.html">Legal Notice</a><a href="../../privacy.html">Website Privacy</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
   <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
 </div></footer>
 </body>

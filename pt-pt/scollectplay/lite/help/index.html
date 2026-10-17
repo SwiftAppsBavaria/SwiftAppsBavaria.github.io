@@ -95,17 +95,18 @@
 <h2 id="browse">3. Explorar a biblioteca</h2>
 
 <h3>Barra lateral</h3>
-<p>A barra lateral mostra as categorias e os tipos de multimédia como um acordeão de dois níveis (por exemplo, Áudio &gt; Música / Audiolivro / Podcast), bem como todas as playlists carregadas. Ao mudar de tipo de multimédia ou de playlist, a lista de faixas à direita é atualizada.</p>
+<p>A barra lateral mostra as categorias e os tipos de multimédia como um acordeão de dois níveis (por exemplo, Áudio &gt; Música / Audiolivro / Podcast); ao lado de cada tipo de multimédia surge o número dos seus elementos. As playlists de uma biblioteca do sCollect surgem junto da respetiva categoria em <strong>Playlists</strong>, e as pastas podem ser expandidas. As playlists sem categoria &ndash; e todas as de uma pasta analisada ou de uma biblioteca XML &ndash; surgem abaixo, na secção <strong>Playlists</strong>. Ao mudar de tipo de multimédia ou de playlist, a lista de faixas à direita é atualizada; o título da janela indica quantas faixas contém nesse momento e, numa seleção, o respetivo número e a duração total.</p>
 
 <h3>Lista de faixas</h3>
 <ul>
 <li><strong>Colunas:</strong> No sCollectPlay Lite, as colunas visíveis são fixas.</li>
-<li><strong>Ordenar:</strong> Um clique num cabeçalho de coluna ordena por essa coluna; um novo clique inverte a ordem.</li>
+<li><strong>Ordenar:</strong> Um clique num cabeçalho de coluna ordena por essa coluna; um novo clique inverte a ordem. Cada playlist é ordenada de forma independente; a sua coluna <strong>N.º</strong> &ndash; a posição na playlist &ndash; repõe a ordem original.</li>
+<li><strong>Faixa em reprodução:</strong> Um altifalante antes do título indica o que está a tocar. A seleção acompanha a passagem para a faixa seguinte, desde que estivesse na faixa em reprodução.</li>
 <li><strong>Largura das colunas:</strong> Arrastando a linha divisória no cabeçalho da coluna.</li>
 </ul>
 
 <h3>Pesquisa</h3>
-<p>O campo de pesquisa na barra de ferramentas filtra por título, artista, álbum, género e outros campos. Nas playlists, a pesquisa é aplicada adicionalmente ao conteúdo da playlist.</p>
+<p>O campo de pesquisa na barra de ferramentas filtra por título, artista, artista do álbum, álbum, compositor, género, comentário, agrupamento, obra, nome do andamento e ano. Nas playlists, a pesquisa é aplicada adicionalmente ao conteúdo da playlist.</p>
 
 
 <h2 id="playback">4. Reprodução</h2>
@@ -121,14 +122,14 @@
 </ul>
 
 <h3>Reproduzir vídeo</h3>
-<p>Os filmes são abertos numa janela de vídeo separada. As faixas de áudio e as legendas podem ser alternadas no menu <strong>Reprodução</strong>. Com <kbd>&#8984;&#8963;F</kbd> passa-se para o modo de ecrã completo.</p>
+<p>Os filmes são abertos numa janela de vídeo separada; no fim de um filme, a reprodução continua com a faixa seguinte. As faixas de áudio e as legendas podem ser alternadas no menu <strong>Reprodução</strong>. Com <kbd>&#8984;&#8963;F</kbd> passa-se para o modo de ecrã completo.</p>
 
 <h3>Reprodução externa</h3>
 <p>Alguns formatos não são suportados diretamente pelo macOS ou pelo AVFoundation. O sCollectPlay Lite deteta isso e abre esses ficheiros automaticamente num leitor externo:</p>
 <ul>
 <li><strong>Formatos de vídeo especiais:</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
 <li><strong>Codecs modernos:</strong> AV1 em MP4 (em Macs mais antigos sem descodificador de hardware)</li>
-<li><strong>Áudio de alta resolução:</strong> DSD (DFF, DSF)</li>
+<li><strong>Áudio de alta resolução:</strong> DSD (DFF, DSF), WavPack (WV)</li>
 <li><strong>Outros formatos de áudio:</strong> OGG Vorbis, WMA</li>
 </ul>
 <p>O leitor preferido é detetado automaticamente: <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (por esta ordem). A escolha pode ser definida em <strong>Definições &gt; Reprodução/Playlist &gt; Leitor externo para codecs não suportados</strong>. Se nenhum destes leitores estiver instalado, é usada a aplicação predefinida para o formato &ndash; recomenda-se o <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, código aberto).</p>
@@ -155,7 +156,7 @@
 
 <h2 id="playlists">5. Playlists</h2>
 
-<p>O sCollectPlay Lite mostra todas as playlists da biblioteca carregada &ndash; tanto as normais como as inteligentes. As playlists inteligentes são reavaliadas com base nos critérios guardados sempre que o conjunto de elementos muda. Não é possível editá-las; para isso serve o sCollect.</p>
+<p>O sCollectPlay Lite mostra todas as playlists da biblioteca carregada &ndash; tanto as normais como as inteligentes. As playlists inteligentes são reavaliadas com base nos critérios guardados sempre que o conjunto de elementos muda; uma playlist inteligente criada no sCollect numa categoria avalia apenas as faixas dessa categoria. Não é possível editá-las; para isso serve o sCollect.</p>
 <p>Ao carregar uma biblioteca XML, são igualmente importadas as playlists normais e inteligentes. As playlists de sistema (Master, Distinguished Kind) são ignoradas.</p>
 
 
@@ -238,7 +239,7 @@
   <p class="zurueck"><a href="../../../../pt-pt/#apps">← Todas as apps →</a></p>
 </main>
 <footer class="site"><div class="wrap">
-  <a href="../../../../impressum.html">Aviso legal</a><a href="../../../../privacy.html">Privacidade do site</a>
+  <a href="../../../../impressum.html">Aviso legal</a><a href="../../../../privacy.html">Privacidade do site</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
   <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
 </div></footer>
 </body>

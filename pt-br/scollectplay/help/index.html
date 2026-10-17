@@ -31,7 +31,7 @@
 </div></header>
 
 <main class="wrap">
-  <p class="zurueck"><a href="../../../pt-br/#apps">← Todos os apps →</a></p>
+  <p class="zurueck"><a href="../../../pt-br/#apps">← Todos os apps →</a> · <a href="https://apps.apple.com/app/id6792676949" target="_blank" rel="noopener">Mac App Store</a></p>
   <article class="hilfe">
 
 
@@ -102,7 +102,7 @@
 <h2 id="browse">3. Navegar pela biblioteca</h2>
 
 <h3>Barra lateral</h3>
-<p>A barra lateral mostra as categorias e os tipos de mídia como um acordeão de dois níveis (por exemplo, Áudio &gt; Música / Audiolivro / Podcast), além de todas as playlists carregadas. Ao alternar entre tipos de mídia ou playlists, a lista de faixas à direita é atualizada.</p>
+<p>A barra lateral mostra as categorias e os tipos de mídia como um acordeão de dois níveis (por exemplo, Áudio &gt; Música / Audiolivro / Podcast); ao lado de cada tipo de mídia aparece o número de seus itens. As playlists de uma biblioteca do sCollect aparecem junto à sua categoria em <strong>Playlists</strong>, e as pastas podem ser expandidas. As playlists sem categoria &ndash; e todas as de uma pasta escaneada ou de uma biblioteca XML &ndash; aparecem abaixo, na seção <strong>Playlists</strong>. Ao alternar entre tipos de mídia ou playlists, a lista de faixas à direita é atualizada; o título da janela mostra quantas faixas ela contém no momento e, quando há uma seleção, o número e a duração total delas.</p>
 
 <h3>Lista de faixas</h3>
 <ul>
@@ -110,7 +110,8 @@
 <li><strong>Personalizar colunas:</strong> Clique com o botão direito em um cabeçalho de coluna &gt; <em>Personalizar colunas&hellip;</em> para escolher as colunas visíveis. Visibilidade, ordem e larguras valem para cada tipo de mídia ou playlist; com uma biblioteca do sCollect, o sCollectPlay adota as colunas de lá como ponto de partida e lembra suas alterações neste Mac.</li>
 
 
-<li><strong>Ordenar:</strong> Clique em um cabeçalho de coluna para ordenar por essa coluna; um novo clique inverte a ordem.</li>
+<li><strong>Ordenar:</strong> Clique em um cabeçalho de coluna para ordenar por essa coluna; um novo clique inverte a ordem. Cada playlist é ordenada separadamente; sua coluna <strong>N.º</strong> &ndash; a posição na playlist &ndash; volta à ordem original.</li>
+<li><strong>Faixa em reprodução:</strong> Um alto-falante antes do título mostra o que está tocando. A seleção acompanha a passagem para a próxima faixa, desde que estivesse na faixa em reprodução.</li>
 <li><strong>Largura das colunas:</strong> Arrastando a linha divisória no cabeçalho da coluna.</li>
 
 <li><strong>Ordem das colunas:</strong> Arraste um cabeçalho de coluna para outra posição.</li>
@@ -124,7 +125,7 @@
 
 
 <h3>Navegador de colunas</h3>
-<p>O navegador de colunas exibe várias colunas de seleção acima da lista de faixas &ndash; semelhante ao navegador de colunas do Apple Music. O botão com as três colunas, à direita na barra de ferramentas, mostra e oculta o navegador. Ele aparece nas visualizações por tipo de mídia; nas playlists, permanece oculto.</p>
+<p>O navegador de colunas exibe várias colunas de seleção acima da lista de faixas &ndash; semelhante ao navegador de colunas do Apple Music. O botão com as três colunas, à direita na barra de ferramentas, mostra e oculta o navegador. Ele está disponível nas visualizações por tipo de mídia e nas playlists; em uma playlist, mostra os valores das suas faixas.</p>
 <ul>
 <li><strong>Colunas:</strong> Gênero, artista, álbum, compositor e agrupamento. Quais delas ficam visíveis, o sCollectPlay adota dos ajustes da biblioteca do sCollect &ndash; a alteração é feita no sCollect.</li>
 <li><strong>Selecionar:</strong> Um clique em um valor filtra por ele; <kbd>&#8984;</kbd>-clique adiciona ou remove um valor da seleção. Dentro de uma coluna, vários valores funcionam como &ldquo;ou&rdquo;; entre colunas, como &ldquo;e&rdquo;. A linha superior <strong>Todos</strong> desfaz a seleção daquela coluna.</li>
@@ -136,7 +137,7 @@
 
 
 <h3>Busca</h3>
-<p>O campo de busca na barra de ferramentas filtra por título, artista, álbum, gênero e outros campos. Nas playlists, a busca também é aplicada ao conteúdo da playlist.</p>
+<p>O campo de busca na barra de ferramentas filtra por título, artista, artista do álbum, álbum, compositor, gênero, comentário, agrupamento, obra, nome do movimento e ano. Nas playlists, a busca também é aplicada ao conteúdo da playlist.</p>
 
 
 <h2 id="playback">4. Reprodução</h2>
@@ -152,14 +153,14 @@
 </ul>
 
 <h3>Reproduzir vídeo</h3>
-<p>Os filmes são abertos em uma janela de vídeo separada. Você pode trocar as faixas de áudio e as legendas no menu <strong>Reprodução</strong>. Com <kbd>&#8984;&#8963;F</kbd> você entra no modo de tela cheia.</p>
+<p>Os filmes são abertos em uma janela de vídeo separada; ao final de um filme, a reprodução continua com a próxima faixa. Você pode trocar as faixas de áudio e as legendas no menu <strong>Reprodução</strong>. Com <kbd>&#8984;&#8963;F</kbd> você entra no modo de tela cheia.</p>
 
 <h3>Reprodução externa</h3>
 <p>Alguns formatos não são compatíveis diretamente com o macOS ou com o AVFoundation. O sCollectPlay detecta isso e abre esses arquivos automaticamente em um player externo:</p>
 <ul>
 <li><strong>Formatos de vídeo especiais:</strong> MKV, AVI, FLV, MPG, MPEG, VOB, DivX</li>
 <li><strong>Codecs modernos:</strong> AV1 em MP4 (em Macs mais antigos sem decodificador de hardware)</li>
-<li><strong>Áudio de alta resolução:</strong> DSD (DFF, DSF)</li>
+<li><strong>Áudio de alta resolução:</strong> DSD (DFF, DSF), WavPack (WV)</li>
 <li><strong>Outros formatos de áudio:</strong> OGG Vorbis, WMA</li>
 </ul>
 <p>O player preferido é detectado automaticamente: <strong>VLC</strong>, <strong>IINA</strong> ou <strong>MPV</strong> (nesta ordem). Você pode definir sua escolha em <strong>Ajustes &gt; Reprodução/Playlist &gt; Reprodutor externo para codecs não suportados</strong>. Se nenhum desses players estiver instalado, será usado o app padrão para o formato &ndash; recomendamos o <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (gratuito, de código aberto).</p>
@@ -197,7 +198,7 @@
 
 <h2 id="playlists">5. Playlists</h2>
 
-<p>O sCollectPlay mostra todas as playlists da biblioteca carregada &ndash; tanto as padrão quanto as inteligentes. As playlists inteligentes são reavaliadas com base nos critérios salvos sempre que o conjunto de itens muda. Elas só podem ser alteradas no sCollect; além disso, você pode criar suas próprias playlists.</p>
+<p>O sCollectPlay mostra todas as playlists da biblioteca carregada &ndash; tanto as padrão quanto as inteligentes. As playlists inteligentes são reavaliadas com base nos critérios salvos sempre que o conjunto de itens muda; uma playlist inteligente criada no sCollect em uma categoria avalia apenas as faixas dessa categoria. Elas só podem ser alteradas no sCollect; além disso, você pode criar suas próprias playlists.</p>
 <p>Ao carregar uma biblioteca XML, as playlists padrão e inteligentes também são importadas. As playlists do sistema (Master, Distinguished Kind) são ignoradas.</p>
 
 
@@ -324,10 +325,10 @@
 
 
   </article>
-  <p class="zurueck"><a href="../../../pt-br/#apps">← Todos os apps →</a></p>
+  <p class="zurueck"><a href="../../../pt-br/#apps">← Todos os apps →</a> · <a href="https://apps.apple.com/app/id6792676949" target="_blank" rel="noopener">Mac App Store</a></p>
 </main>
 <footer class="site"><div class="wrap">
-  <a href="../../../impressum.html">Aviso legal</a><a href="../../../privacy.html">Privacidade do site</a>
+  <a href="../../../impressum.html">Aviso legal</a><a href="../../../privacy.html">Privacidade do site</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
   <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc.</p>
 </div></footer>
 </body>
