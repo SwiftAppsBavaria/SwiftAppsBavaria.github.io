@@ -1,0 +1,8 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SwiftAppsBavaria</title><meta name="robots" content="noindex">
+<script>
+// Netz für alte Adressen ohne Zweig (s. build.py): /de/xyz/ → /mac/de/xyz/. Was schon im Zweig liegt, bleibt hier.
+var p = location.pathname;
+if (!/^\/(mac|win|assets)\//.test(p)) location.replace("/mac" + p + location.search + location.hash);
+</script></head>
+<body><p>Seite nicht gefunden · Page not found — <a href="/">swiftappsbavaria.github.io</a></p></body></html>

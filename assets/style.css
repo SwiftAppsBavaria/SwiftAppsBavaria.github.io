@@ -50,6 +50,7 @@ header.site .wrap { display: flex; align-items: center; justify-content: space-b
 header.site .brand { font-weight: 600; color: var(--text); }
 header.site nav a { margin-left: 20px; font-size: 15px; color: var(--text-soft); }
 header.site nav a:hover { color: var(--text); text-decoration: none; }
+header.site nav > a[aria-current] { color: var(--text); font-weight: 600; }   /* Zweig Mac/Windows (2026-10-19) */
 
 /* Startseite */
 .banner { margin: 32px 0 8px; }  /* Rundung und Rand trägt das Bild selbst (transparente Ecken) */

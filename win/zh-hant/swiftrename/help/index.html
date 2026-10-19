@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SwiftRename 手冊</title>
+<meta name="description" content="SwiftRename 手冊">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/win/swiftrename/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/win/de/swiftrename/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/win/es/swiftrename/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/win/fr/swiftrename/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/win/it/swiftrename/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/win/ja/swiftrename/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/win/ko/swiftrename/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/win/pt-br/swiftrename/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/win/pt-pt/swiftrename/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/win/ru/swiftrename/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/win/zh-hans/swiftrename/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/win/zh-hant/swiftrename/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/win/swiftrename/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../../zh-hant/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../../mac/zh-hant/">Mac</a><a href="../../../../win/zh-hant/" aria-current="true">Windows</a><a href="../../../../win/zh-hant/#apps">App</a>
+    <details class="sprache"><summary aria-label="語言">繁體中文</summary><div><a href="../../../../win/swiftrename/help/" lang="en">English</a><a href="../../../../win/de/swiftrename/help/" lang="de">Deutsch</a><a href="../../../../win/es/swiftrename/help/" lang="es">Español</a><a href="../../../../win/fr/swiftrename/help/" lang="fr">Français</a><a href="../../../../win/it/swiftrename/help/" lang="it">Italiano</a><a href="../../../../win/ja/swiftrename/help/" lang="ja">日本語</a><a href="../../../../win/ko/swiftrename/help/" lang="ko">한국어</a><a href="../../../../win/pt-br/swiftrename/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../../win/pt-pt/swiftrename/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../../win/ru/swiftrename/help/" lang="ru">Русский</a><a href="../../../../win/zh-hans/swiftrename/help/" lang="zh-Hans">简体中文</a><a href="../../../../win/zh-hant/swiftrename/help/" aria-current="true" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../">← SwiftRename</a></p>
+  <article class="hilfe">
+<h1>SwiftRename 手冊</h1>
+<h2>概覽</h2>
+<p>SwiftRename 是一款用於同時重命名和整理多個檔案的工具。您可以按日期重命名檔案、連續編號、添加前綴，並自動將檔案整理到資料夾結構中。</p>
+<h2>選擇資料夾</h2>
+<p>1. 在輸入資料夾旁點擊資料夾圖示，選擇包含待重命名檔案的資料夾。或者，您也可以將資料夾從檔案總管拖放到資料夾欄位中。點擊資料夾圖示上的小箭頭，可快速重新選擇最近使用過的資料夾。<br>2. 勾選「包含子資料夾」，以同時處理子資料夾中的檔案。<br>3. 選擇一個輸出資料夾，用於複製或移動重命名後的檔案。輸入資料夾和輸出資料夾可以相同（在原位置重命名）。<br>4. 點擊「交換」可互換輸入與輸出資料夾；點擊「更新」可重新載入兩個檔案清單。</p>
+<h2>重新命名模式</h2>
+<p>• 僅日期：依檔案的日期命名——若「使用相機日期」已開啟且檔案帶有相機日期，則使用相機日期，否則使用檔案日期（例如「2024-01-15 - 14-30-00.jpg」）<br>• 日期 + 原始檔名：在原始檔名前加上日期（例如「2024-01-15 - 14-30-00 - IMG_4523.jpg」）<br>• 帶前綴編號：使用可選前綴對檔案進行連續編號（例如「假期_0001.jpg」）<br>• 保留原始檔名：僅將檔案整理到資料夾結構中，不更改檔名</p>
+<p>如果出現相同檔名，將自動附加計數器（例如「_1」、「_2」）。Windows 不允許在檔名中使用的字元會被替換為「_」。</p>
+<h2>資料夾結構</h2>
+<p>檔案可以按日期自動排序到子資料夾：<br>• 無：所有檔案直接放入輸出資料夾<br>• 保留：在輸出資料夾中重現輸入資料夾的子資料夾結構<br>• 年：例如「2024/」<br>• 年/月：例如「2024/01/」<br>• 年/月/日：例如「2024/01/15/」</p>
+<p>如果檔案跨越多個十年，將建立額外的十年資料夾（例如「2011-2020/2015/…」）。</p>
+<p>在「年/月」和「年/月/日」結構下，資料夾結構選擇的正下方會顯示「子資料夾名稱中使用完整日期」選項。啟用後，月份和日期資料夾將包含完整日期（例如「2024/2024-01/2024-01-15/」而不是「2024/01/15/」）。</p>
+<h2>名稱預覽</h2>
+<p>在輸入列表的標題列中可以選擇三種顯示方式：列表、樹狀與名稱預覽（眼睛圖示）。在預覽中，每個現有檔案名稱下方會顯示計畫中的新名稱及其目標資料夾——相對於輸出資料夾，因此也包含日期資料夾與年代資料夾。</p>
+<p>預覽需要已選擇的輸出資料夾，只要變更模式、前綴、資料夾結構或「使用相機日期」選項，就會重新計算。檔案較多時會逐步填入，因為必須讀取每個檔案的拍攝日期。</p>
+<p>這些都是計畫中的名稱：檔案是否會因重複而略過，以及目標名稱相同時是否需要附加計數器（「_1」），要到執行時才會確定。</p>
+<h2>相機日期（EXIF）</h2>
+<p>如果啟用「使用相機日期」，照片會從 EXIF 資料中讀取拍攝日期，影片則從影片本身的資訊中讀取。這比複製時可能改變的檔案日期更準確。</p>
+<p>支援多種照片格式，包括 JPEG、HEIC、PNG、TIFF 以及常見的 RAW 格式（CR2、CR3、NEF、ARW、DNG、RAF 等）。</p>
+<p>如果沒有拍攝日期，將使用檔案日期——即建立日期與修改日期中較早的一個。</p>
+<h2>副檔名篩選</h2>
+<p>使用「副檔名」下拉選單按類型篩選顯示的檔案：<br>• 可用的副檔名會自動從輸入資料夾中偵測。<br>• 點擊選擇一個或多個副檔名。<br>• 「所有副檔名」重設篩選器並顯示所有檔案。<br>• 切換資料夾時，只要該資料夾中存在這些副檔名，篩選器就會保留。</p>
+<h2>重複檔案檢測</h2>
+<p>如果啟用「檢查重複檔案」，在複製或移動之前會偵測重複檔案——包括輸入資料夾和輸出資料夾中的檔案（整個目標目錄樹）。偵測依據檔案大小以及檔案內容的逐位元組比對；對於 JPEG 圖片和影片，會略過 EXIF 等中繼資料，其他格式則比對每個位元組。日期僅在附加的圖片內容比對中才有作用。</p>
+<p>偵測到的重複檔案會以帶預覽圖的清單顯示。您可以決定是否繼續操作（重複檔案將被略過），或取消該操作。</p>
+<p>使用附加選項「僅比較圖片內容（緩慢）」時，僅比較圖片的解碼像素資料。關鍵字、標籤或 EXIF 項目等中繼資料將被忽略。這樣也能偵測到中繼資料不同的相同圖片。此選項速度慢得多，僅在啟用重複檢查時才生效。只有相同檔案格式且檔案大小相近的圖片才會被視為候選項。允許的最大大小差異可以在設定（Ctrl+,）中的「圖片比較的大小容差」中調整（預設：128 KB）。RAW 格式通常需要較大的值，因為關鍵字等中繼資料每個項目可能佔用數十 KB。Windows 無法解碼的圖片（例如未安裝相應延伸模組的 RAW）不會被判定為相同。</p>
+<p class="notiz">如果某個程式重新封裝或重新輸出了影片，即使畫面與聲音完全相同，它也會被視為獨立檔案。影片沒有像圖片那樣的內容比對。</p>
+<h2>複製與移動</h2>
+<p>• 複製：保留原始檔案，並在輸出資料夾中建立副本。<br>• 移動：將檔案移到輸出資料夾。</p>
+<p>在執行前，SwiftRename 會檢查目標磁碟是否有足夠的可用空間。如果空間不足，將顯示警告。您仍然可以繼續操作。</p>
+<p>在輸入清單下方會顯示檔案的總大小，在輸出清單下方會顯示目標磁碟的可用空間。</p>
+<h2>復原與重做</h2>
+<p>每個操作都可以復原：<br>• Ctrl+Z：復原上一次操作<br>• Ctrl+Y：重做已復原的操作</p>
+<p>復原複製操作時，若複製的檔案未經變更，會將其刪除；若在此期間已變更，則會移到資源回收筒。復原移動操作時，檔案會被移回原來的位置。</p>
+<h2>進度與取消</h2>
+<p>處理過程中會顯示帶百分比的進度條。您可以隨時點擊「取消」或按 Esc 鍵停止操作。已處理的檔案將保留，並可以使用 Ctrl+Z 復原。</p>
+<h2>鍵盤快捷鍵</h2>
+<p>• Ctrl+O：選擇輸入資料夾<br>• Ctrl+Shift+O：選擇輸出資料夾<br>• Ctrl+Z：復原<br>• Ctrl+Y：重做<br>• Ctrl+,：設定<br>• F1：顯示說明<br>• Esc：取消正在進行的操作<br>• Alt+F4：結束應用程式</p>
+<h2>小貼士</h2>
+<p>• 在進行大規模重命名前，請先備份您的檔案。<br>• 使用名稱預覽（輸入列表上方的眼睛圖示），在執行前檢查結果。<br>• 在清單中右鍵點擊檔案，可以在檔案總管中顯示該檔案。<br>• 在設定（Ctrl+,）中可以調整「圖片比較的大小容差」。如遇問題，可在同一處透過「儲存記錄…」將最近七天的訊息儲存為文字檔。</p>
+  </article>
+  <p class="zurueck"><a href="../">← SwiftRename</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../../impressum.html">法律聲明</a><a href="../../../../privacy.html">網站隱私權</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc. Windows and Microsoft Store are trademarks of the Microsoft group of companies.</p>
+</div></footer>
+</body>
+</html>
