@@ -208,3 +208,16 @@ a.film span {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 18px; font-weight: 600; font-size: 17px;
   background: linear-gradient(transparent, rgba(0,0,0,.7));
 }
+/* Werbefilm und Short nebeneinander: der Film doppelt so breit; schmal untereinander */
+.filme { display: flex; gap: 20px; align-items: flex-start; margin: 0 0 32px; }
+.filme a.film { flex: 2 1 0; min-width: 0; margin: 0; }
+.filme a.film.kurz { flex: 1 1 0; }
+/* Short: kleines Bild, der Text steht darunter (über dem Bild verdeckte er es in den langen Sprachen) */
+a.film.kurz { overflow: visible; border-radius: 0; box-shadow: none; color: var(--text); }
+a.film.kurz img { border-radius: 14px; box-shadow: var(--shadow); }
+a.film.kurz::after { top: 0; margin: 0; width: 100%; aspect-ratio: 16 / 9; height: auto; border-radius: 14px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E%3Ccircle cx='26' cy='26' r='26' fill='black' fill-opacity='.55'/%3E%3Cpath d='M20 15v22l18-11z' fill='white'/%3E%3C/svg%3E")
+    center / 52px no-repeat; left: 0; }
+a.film.kurz:hover::after { background-color: rgba(0,0,0,.12); }
+a.film.kurz span { position: static; display: block; padding: 10px 2px 0; font-size: 15px; background: none; }
+@media (max-width: 600px) { .filme { flex-direction: column; } .filme a.film, .filme a.film.kurz { flex: none; width: 100%; } }
