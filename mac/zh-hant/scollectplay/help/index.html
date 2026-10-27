@@ -78,12 +78,14 @@
 
 
 <li><strong>MKV 偵測：</strong>副檔名為 <code>.mp4</code> 但實際上是 MKV 的檔案，會依 EBML 簽名辨識出來並另外標示。</li>
-<li><strong>依播放時間分類：</strong>僅憑資料夾無法判斷檔案是音樂還是有聲書。因此，sCollectPlay 會依長度為音訊和影片分類 &ndash; 音訊：10 分鐘以內、10&ndash;30 分鐘、30&ndash;60 分鐘、超過 60 分鐘；影片：5 分鐘以內、5&ndash;20 分鐘、20&ndash;70 分鐘、70&ndash;210 分鐘、超過 210 分鐘。電子書和 PDF 則依副檔名辨識。無法判斷長度的項目會列在「時長未知」下。</li>
+<li><strong>依內容分類：</strong>sCollectPlay 會依檔案對自身的描述為音訊分類：<code>.m4b</code> 檔案以及風格為 Audiobook、Audio Theatre 或 Spoken Word（也包括德文，例如 Hörbuch、Hörspiel 或 Kabarett）的項目會列在「有聲書」下，Podcast 以及風格為 Podcast 或 Speech 的項目列在「Podcast」下，其餘全部列在「音樂」下。音樂影片、電影和影集依媒體種類辨識（例如 iTunes 寫入檔案的媒體種類），影集也可依檔名中的「S01E02」辨識。註明攝影機或帶有 <code>IMG_1234</code> 這類相機檔名的影片會列在「攝影機」下，其餘影片列在「家庭錄影」下。電子書和 PDF 則依副檔名辨識。側邊欄只會顯示有內容的類型。</li>
+<li><strong>自行選擇類型：</strong>如果某個項目分類有誤，請將它從列表拖到側邊欄中的另一個類型上 &ndash; 拖移時，空的類型也會出現在那裡。sCollectPlay 會為該檔案記住這項設定，下次讀取資料夾時同樣有效；檔案本身不會變更。</li>
 </ul>
 <p>在<strong>設定 &gt; 媒體庫 &gt; 已掃描的資料夾</strong>中，<em>更新</em>只會讀取自上次讀取以來有所變動的內容：新增、變更和移除的檔案。使用<em>移除</em>可以將資料夾連同其中的曲目一併移出。更快的方式是<strong>檔案 &gt; 更新已掃描的資料夾</strong>（<kbd>&#8984;R</kbd>）或搜尋欄位右側的<strong>&#8635;</strong>按鈕。兩者都會依序更新所有資料夾；在設定中，<em>全部更新</em>也能做到。完成後，會有一則訊息列出新增、變更和移除的內容。</p>
 
 <h3>sCollect 媒體庫</h3>
 <p>選擇 sCollect 媒體庫的主資料夾（存放 <code>.scollect</code> 套件的資料夾；較舊的媒體庫則是包含 <code>settings.json</code> 的資料夾）。sCollectPlay 會直接讀取資料庫檔案、播放清單與設定 &ndash; 包含可自訂的欄位名稱與智慧型播放清單。選擇媒體庫會取代先前使用中的資料夾掃描。你也可以在 Finder 中連按兩下 <code>.scollect</code> 套件來開啟媒體庫。</p>
+<p>sCollectPlay 不會更改媒體庫本身。當你為曲目評分，或把音樂、有聲書或影片播放到結束時，sCollectPlay 會連同日期和時間把這一點記錄在媒體庫資料夾中的 <code>rueckmeldungen.json</code> 檔案裡 &ndash; 無論你開啟的是主媒體庫還是副本。sCollect 會在打開主媒體庫時、在<strong>投影</strong>之前以及在<strong>修復同步錯誤&hellip;</strong>之前接收這些資訊：評分以較新的為準，播放次數相加。隨後 sCollect 把評分寫入檔案，並把一切傳給所有副本。在此之前，sCollectPlay 就已經顯示它自己的評分和播放次數。</p>
 
 <h3>iTunes/Apple Music XML</h3>
 <p>選擇一個 <code>Library.xml</code> 或 <code>.musiclibrary</code> 套件。sCollectPlay 會解析曲目與播放清單（標準與智慧型）。系統播放清單（Master、Distinguished Kind）會被略過。媒體類型直接取自 XML 本身：音樂、有聲書、Podcast、家庭錄影、電影、影集和音樂影片。開啟時會一次性詢問對應的媒體資料夾，讓 sCollectPlay 能夠取用這些檔案。</p>
@@ -110,9 +112,10 @@
 <li><strong>自訂直欄：</strong>按右鍵點選欄位標題 &gt; <em>自訂直欄&hellip;</em>即可選擇要顯示的欄位。顯示狀態、順序與寬度會依媒體類型或播放清單分別套用；若是 sCollect 媒體庫，sCollectPlay 會沿用那裡的欄位設定作為初始值，你的變更則會記在這部 Mac 上。</li>
 
 
-<li><strong>排序：</strong>點一下欄位標題即可依該欄位排序；再次點選會反轉順序。每個播放清單各自排序；其<strong>編號</strong>欄位 &ndash; 即在播放清單中的位置 &ndash; 可恢復原始順序。</li>
+<li><strong>排序：</strong>點一下欄位標題即可依該欄位排序；再次點選會反轉順序。按住 <strong>Shift</strong> 可再加入一欄作為次級排序 &ndash; 處於排序中的欄會顯示箭頭和順序編號（例如 <code>專輯&darr;1</code>、<code>演出者&uarr;2</code>）。在處於排序中的欄標題上 <strong>Option-點按</strong>，可把該欄重新移出排序。按右鍵點按欄標題會提供<em>重設排序</em>，以便重新只依主欄排序。每個播放清單各自排序；其<strong>編號</strong>欄位 &ndash; 即在播放清單中的位置 &ndash; 可恢復原始順序。</li>
 <li><strong>目前曲目：</strong>標題前的揚聲器表示正在播放的內容。只要選取位於正在播放的曲目上，切換到下一首時選取就會隨之移動。</li>
-<li><strong>欄位寬度：</strong>拖移欄位標題中的分隔線即可調整。</li>
+<li><strong>欄位寬度：</strong>拖移欄位標題中的分隔線即可調整。按右鍵點選欄位標題 &gt; <em>最佳寬度</em>可讓所有文字欄位配合其內容調整寬度。</li>
+<li><strong>評分：</strong>使用 sCollect 媒體庫時，點一下<strong>評分</strong>欄位中的星星：第一次點按設為一顆完整的星，第二次設為半顆星，第三次清除評分。若要同時為多首曲目評分，請先選取它們，然後按右鍵點選 &gt; <em>評分</em>。對於掃描的資料夾和 XML 媒體庫，星星僅供顯示。</li>
 
 <li><strong>欄位順序：</strong>將欄位標題拖移到其他位置。</li>
 
@@ -153,7 +156,7 @@
 </ul>
 
 <h3>播放影片</h3>
-<p>電影會在獨立的影片視窗中開啟；一部電影結束後，會繼續播放下一首曲目。音軌和字幕可以在<strong>播放</strong>選單中切換。按 <kbd>&#8984;&#8963;F</kbd> 可切換到全螢幕模式。</p>
+<p>電影會在獨立的影片視窗中開啟；一部電影結束後，如果其媒體類型開啟了<strong>結束後繼續播放</strong>，會繼續播放下一首曲目。音軌和字幕可以在<strong>播放</strong>選單中切換。按 <kbd>&#8984;&#8963;F</kbd> 可切換到全螢幕模式。</p>
 
 <h3>外部播放</h3>
 <p>某些格式不被 macOS 或 AVFoundation 直接支援。sCollectPlay 偵測到這種情況，並自動在外部播放器中開啟這些檔案：</p>
@@ -183,6 +186,9 @@
 <li><strong>重複（列表）：</strong>在最後一首之後重複整個列表。</li>
 <li><strong>重複（單首）：</strong>循環播放目前曲目。</li>
 </ul>
+
+<h3>結束後繼續播放</h3>
+<p>一首曲目結束後是否繼續播放下一首，由你<strong>按媒體類型</strong>設定，位於<strong>設定 &gt; 播放/播放清單 &gt; 結束後繼續播放</strong>。預設情況下，所有音訊類型和音樂影片為開啟，電影、影集、家庭錄影和攝影機影片為關閉 &ndash; 此時影片會停在結尾（或停止標記處）。<strong>重複（單首）</strong>仍會重複播放。sCollectPlay 會記住你在這裡所做的變更；其他所有媒體類型沿用媒體庫的設定。</p>
 
 
 <h3>輸出到 Apple Music</h3>

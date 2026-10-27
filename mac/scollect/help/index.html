@@ -180,6 +180,8 @@
 
 <p>If a file cannot be taken into the library while copying or moving, sCollect creates <strong>no entry</strong> for it. The file stays unchanged where it is, and a message names it together with the reason.</p>
 
+<p>If an audio file names no track or disc number, sCollect reads it from the file or folder name during import &ndash; such as &ldquo;&hellip; - 01-04&rdquo; (disc 1, track 4), &ldquo;04 - Song&rdquo; or a folder &ldquo;CD 2&rdquo; &ndash; and writes it into the file. This way the parts of an audiobook that all carry the same title are not treated as duplicates. Numbers the file already names are kept.</p>
+
 <h3>Duplicate Detection</h3>
 <p>During import, sCollect automatically checks for duplicates (same title + artist, or same filename). If duplicates are found, a dialog appears where you can decide:</p>
 <ul>
@@ -318,6 +320,7 @@
 <li><strong>Date to Title:</strong> Insert the file&rsquo;s modification date into the title.</li>
 <li><strong>Split:</strong> Split a field&rsquo;s content at a separator into two target fields (copy or cut the source field). Numeric fields (track/disc/movement number, year) are supported; entries without a parseable number are skipped.</li>
 <li><strong>Separate name &amp; sorting:</strong> Resolves a comma sort form (e.g. &laquo;Lennon, John&raquo;) in entries with an empty sort field: the original value moves into the sort field, and the name field (Title, Artist, Album Artist, Album or Composer) is flipped into natural order (&laquo;John Lennon&raquo;). Ambiguous cases with multiple commas are unchecked initially.</li>
+<li><strong>Numbers from File Name:</strong> The same for tracks that are already in the library: fills empty track and disc numbers from the file and folder name and writes them into the file. It reads the name of the original; a copied file carries the name sCollect gave it in the library &ndash; if the number was only in the old name, import the folder again.</li>
 </ul>
 
 <h3>Rating and Favorites</h3>
@@ -349,7 +352,7 @@
 </ul>
 
 <h3>Playing Video</h3>
-<p>Movies open in a separate video window; at the end of a movie, playback continues with the next track. The controls appear automatically when you move the mouse. You can switch audio tracks and subtitles in the &laquo;Playback&raquo; menu if the file contains multiple tracks. If you resize the video window by hand, sCollect keeps that width for the following movies as well; the height follows the aspect ratio of each movie. <strong>Playback &gt; 100 %</strong> returns to the original size.</p>
+<p>Movies open in a separate video window; at the end of a movie, playback continues with the next track, provided <strong>Continue playing at end</strong> is turned on for its media type. The controls appear automatically when you move the mouse. You can switch audio tracks and subtitles in the &laquo;Playback&raquo; menu if the file contains multiple tracks. If you resize the video window by hand, sCollect keeps that width for the following movies as well; the height follows the aspect ratio of each movie. <strong>Playback &gt; 100 %</strong> returns to the original size.</p>
 
 <h3>External Playback</h3>
 <p>Some formats are not natively supported by macOS / AVFoundation. sCollect detects this and opens these files automatically in an external player:</p>
@@ -389,6 +392,9 @@
 <li><strong>Repeat (Track):</strong> Repeats the current track endlessly.</li>
 </ul>
 
+<h3>Continue playing at end</h3>
+<p>Whether playback continues with the next track after one ends is set <strong>per media type</strong> under <strong>Settings &gt; Playback/Playlist &gt; Continue playing at end</strong>. By default it is on for all audio types and for music videos, and off for feature films, series, home videos and camera videos &ndash; a movie then stops at its end (or at its stop marker). <strong>Repeat (Track)</strong> repeats regardless.</p>
+
 <h3>Remember playback position</h3>
 <p>sCollect can remember the last playback position for each entry and resume there next time &ndash; just like an audiobook or Podcast. Whether a position is remembered is set <strong>globally per media type</strong> under <strong>Settings &gt; Playback/Playlist &gt; Remember playback position</strong> (on by default for audiobooks, podcasts, and movies; off for music).</p>
 <p>When playback resumes at a remembered position, the <strong>&laquo;From the beginning&raquo;</strong> button appears briefly &ndash; one click starts the track from the beginning instead.</p>
@@ -403,6 +409,12 @@
 <p>From the start/stop markers you have set, sCollect can create a <strong>trimmed copy</strong> as a new entry next to the original &ndash; the original stays unchanged. In the metadata editor you will find the <strong>&laquo;Create trimmed copy&raquo;</strong> button under <strong>File Info &gt; Playback</strong>. Alternatively, right-click one or more entries and choose <strong>&laquo;Trim to start/stop…&raquo;</strong>.</p>
 <p>Supported formats are MP4/M4V/MOV (video) as well as MP3, M4A/M4B, AIFF, WAV, and CAF (audio). Trimming is lossless &ndash; without re-encoding and therefore without loss of quality.</p>
 <p>For the PCM formats AIFF and WAV you can additionally specify a gentle <strong>fade-in</strong> and <strong>fade-out</strong> &ndash; in seconds (<code>5</code>, <code>2.5</code>) or like start and stop (<code>0:05</code>). A value that sCollect does not understand is marked red, and trimming only happens once both fields are valid. For the compressed formats <strong>MP3, M4A, and M4B</strong>, a dialog with two options opens before trimming: <strong>&laquo;Lossless (keep original format)&raquo;</strong> trims without re-encoding but does not allow fading. <strong>&laquo;M4A (AAC)&raquo;</strong> re-encodes instead &ndash; with a selectable <strong>bit rate</strong> (128 to 320 kbps) and optional fade-in/out, at the cost of a slight loss of quality.</p>
+
+
+<h3>Combining movies and tracks</h3>
+<p>sCollect can combine several movies &ndash; say, the clips from a day out &ndash; into one new movie, and several audio files &ndash; say, the parts of an audiobook &ndash; into one track. Select at least two entries of the same category, right-click them and choose <strong>&laquo;Combine into One Movie…&raquo;</strong> or <strong>&laquo;Combine into One Track…&raquo;</strong>. In the window that follows, you set the title and the order; the suggested order is by date, then by title.</p>
+<p>Combining is always <strong>lossless</strong>, without re-encoding. That works when the files match technically: the same format group (MP4/M4V/MOV, M4A/M4B, AIFF, WAV or CAF), the same codec, the same resolution and the same audio format &ndash; typical for recordings from the same camera. If they don’t match, sCollect tells you why. For MP3 and formats such as MKV, AVI or WebM the menu item is dimmed.</p>
+<p>The new entry takes its info, artwork and capture date from the first one; the individual files remain unchanged. With AAC audio (M4A/M4B) a tiny pause of about 0.05 seconds remains at each join &ndash; the encoder’s lead-in, which can’t be removed without re-encoding.</p>
 
 <h3>Apple Music Export</h3>
 <p>Playlists can be sent to Apple Music: right-click a playlist in the sidebar and choose &laquo;Send Playlist to Apple Music&raquo;. Alternatively, you can find this option in the menu under <strong>File &gt; Send Playlist to Apple Music&hellip;</strong></p>
@@ -646,6 +658,11 @@
 
 <h3>Read-Only Copies</h3>
 <p>A copy can be marked as read-only &ndash; then import, delete, and tag edits in the copy are blocked, so changes won&rsquo;t be overwritten on the next sync.</p>
+<p>Rating remains possible even on a read-only copy; the master picks up the rating (next section).</p>
+
+<h3>Ratings and Plays from a Copy</h3>
+<p>If you rate on a copy, or play music, an audiobook or a film there to the end, the copy remembers it with date and time &ndash; the master does not need to be running for this. When the master is opened, before <strong>Project</strong>, and before <strong>Resolve Sync Errors&hellip;</strong>, the master checks all reachable copies and takes this over: for the rating the newer one wins, plays are added together, &laquo;Last Played&raquo; takes the later time. It then passes everything on to all copies. A copy that is not connected at the moment gets its turn next time.</p>
+<p>sCollectPlay reports the same way &ndash; even when you opened the master there: the master picks up its ratings and plays at the same moments.</p>
 
 <h3>Organize Library</h3>
 <p>Via <strong>Settings &gt; Library &gt; Organize Library</strong> (or the button above the media list), sCollect tidies the managed files. A dialog asks for the scope and the options first.</p>

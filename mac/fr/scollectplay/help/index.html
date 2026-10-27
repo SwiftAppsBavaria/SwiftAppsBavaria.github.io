@@ -78,12 +78,14 @@
 
 
 <li><strong>Détection MKV :</strong> Les fichiers portant l&rsquo;extension <code>.mp4</code> qui sont en réalité des MKV sont reconnus grâce à leur signature EBML et marqués comme tels.</li>
-<li><strong>Classement selon la durée :</strong> Un dossier ne révèle pas si un fichier est de la musique ou un livre audio. sCollectPlay classe donc l&rsquo;audio et la vidéo selon leur durée &ndash; audio : jusqu&rsquo;à 10, 10&ndash;30, 30&ndash;60 et plus de 60 min ; vidéo : jusqu&rsquo;à 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 et plus de 210 min. Les e-books et les PDF sont reconnus à leur extension de fichier. Si la durée ne peut pas être déterminée, le titre est classé sous « durée inconnue ».</li>
+<li><strong>Classement selon le contenu :</strong> sCollectPlay classe l&rsquo;audio d&rsquo;après ce que le fichier dit de lui-même : les fichiers <code>.m4b</code> et les titres du genre Audiobook, Audio Theatre ou Spoken Word (aussi en allemand, par exemple Hörbuch, Hörspiel ou Kabarett) sont classés sous « Livre audio », les podcasts et les titres du genre Podcast ou Speech sous « Podcast », tout le reste sous « Musique ». Il reconnaît les clips vidéo, les longs métrages et les séries au type de média qu&rsquo;iTunes, par exemple, inscrit dans le fichier, et les séries aussi à « S01E02 » dans le nom du fichier. Les films qui nomment une caméra ou portent un nom de fichier de caméra comme <code>IMG_1234</code> sont classés sous « Caméra », tous les autres sous « Vidéo personnelle ». Les e-books et les PDF sont reconnus à leur extension de fichier. La barre latérale n&rsquo;affiche que les types qui contiennent quelque chose.</li>
+<li><strong>Choisir vous-même le type :</strong> Si un titre est mal classé, faites-le glisser de la liste vers un autre type dans la barre latérale &ndash; pendant le glissement, les types vides y apparaissent aussi. sCollectPlay s&rsquo;en souvient pour ce fichier, y compris lors de la prochaine lecture du dossier ; le fichier lui-même n&rsquo;est pas modifié.</li>
 </ul>
 <p>Dans <strong>Réglages &gt; Bibliothèque &gt; Dossiers scannés</strong>, <em>Actualiser</em> ne relit que ce qui a changé depuis la dernière lecture : fichiers nouveaux, modifiés et supprimés. <em>Supprimer</em> retire un dossier ainsi que ses titres. Plus rapide : <strong>Fichier &gt; Actualiser les dossiers scannés</strong> (<kbd>&#8984;R</kbd>) ou le bouton <strong>&#8635;</strong> à droite du champ de recherche. Les deux actualisent tous les dossiers l&rsquo;un après l&rsquo;autre ; dans les réglages, <em>Tout actualiser</em> fait de même. À la fin, un message indique ce qui est nouveau, modifié ou supprimé.</p>
 
 <h3>Bibliothèque sCollect</h3>
 <p>Choisissez le dossier principal d&rsquo;une bibliothèque sCollect (le dossier qui contient le paquet <code>.scollect</code> ; pour les bibliothèques plus anciennes, le dossier contenant <code>settings.json</code>). sCollectPlay lit directement les fichiers de la bibliothèque, les playlists et les réglages &ndash; y compris les libellés de champs personnalisés et les playlists intelligentes. Le choix d&rsquo;une bibliothèque remplace un scan de dossier actif. Vous pouvez aussi ouvrir la bibliothèque en double-cliquant sur le paquet <code>.scollect</code> dans le Finder.</p>
+<p>sCollectPlay ne modifie rien dans la bibliothèque elle-même. Lorsque vous notez un titre ou lisez de la musique, un livre audio ou un film jusqu&rsquo;au bout, il le retient avec la date et l&rsquo;heure dans le fichier <code>rueckmeldungen.json</code> du dossier de la bibliothèque &ndash; que vous ayez ouvert le master ou une copie. sCollect reprend ces données à l&rsquo;ouverture du master, avant <strong>Projeter</strong> et avant <strong>Résoudre les erreurs de synchronisation&hellip;</strong> : pour la note, la plus récente l&rsquo;emporte, les lectures s&rsquo;additionnent. sCollect écrit ensuite la note dans le fichier et transmet le tout à toutes les copies. D&rsquo;ici là, sCollectPlay affiche déjà ses propres notes et lectures.</p>
 
 <h3>XML iTunes/Apple Music</h3>
 <p>Choisissez un fichier <code>Library.xml</code> ou un paquet <code>.musiclibrary</code>. sCollectPlay analyse les pistes et les listes de lecture (standard et intelligentes). Les playlists système (Master, Distinguished Kind) sont ignorées. sCollectPlay reprend les types de média du XML lui-même : Musique, Livre audio, Podcast, Vidéo personnelle, Long métrage, Série et Clip vidéo. À l&rsquo;ouverture, le dossier média correspondant vous est demandé une seule fois, afin que sCollectPlay puisse accéder aux fichiers.</p>
@@ -110,9 +112,10 @@
 <li><strong>Personnaliser les colonnes :</strong> Un clic droit sur un en-tête de colonne &gt; <em>Personnaliser les colonnes&hellip;</em> permet de choisir les colonnes visibles. La visibilité, l&rsquo;ordre et la largeur des colonnes valent pour chaque type de média ou playlist ; avec une bibliothèque sCollect, sCollectPlay en reprend les colonnes comme point de départ et mémorise vos modifications sur ce Mac.</li>
 
 
-<li><strong>Trier :</strong> Un clic sur un en-tête de colonne trie selon cette colonne ; un nouveau clic inverse l&rsquo;ordre. Chaque playlist se trie indépendamment ; sa colonne <strong>N°</strong> &ndash; la position dans la playlist &ndash; rétablit l&rsquo;ordre d&rsquo;origine.</li>
+<li><strong>Trier :</strong> Un clic sur un en-tête de colonne trie selon cette colonne ; un nouveau clic inverse l&rsquo;ordre. Maintenez la touche <strong>Majuscule</strong> pour ajouter une autre colonne comme tri secondaire &ndash; les colonnes actives affichent une flèche et un numéro d'ordre (par ex. <code>Album&darr;1</code>, <code>Artiste&uarr;2</code>). Un <strong>Option-clic</strong> sur un en-tête actif retire cette colonne du tri. Un clic droit sur un en-tête propose <em>Réinitialiser le tri</em>, pour ne trier de nouveau que selon la colonne principale. Chaque playlist se trie indépendamment ; sa colonne <strong>N°</strong> &ndash; la position dans la playlist &ndash; rétablit l&rsquo;ordre d&rsquo;origine.</li>
 <li><strong>Titre en cours :</strong> Un haut-parleur devant le titre indique ce qui est en cours de lecture. La sélection suit le passage au titre suivant, tant qu&rsquo;elle se trouvait sur le titre en cours de lecture.</li>
-<li><strong>Largeur des colonnes :</strong> En faisant glisser la ligne de séparation dans l&rsquo;en-tête de colonne.</li>
+<li><strong>Largeur des colonnes :</strong> En faisant glisser la ligne de séparation dans l&rsquo;en-tête de colonne. Un clic droit sur un en-tête de colonne &gt; <em>Largeur optimale</em> ajuste toutes les colonnes de texte à leur contenu.</li>
+<li><strong>Noter :</strong> Dans une bibliothèque sCollect, cliquez sur une étoile dans la colonne <strong>Note</strong> : le premier clic attribue une étoile pleine, le deuxième une demi-étoile, le troisième efface la note. Pour noter plusieurs titres à la fois, sélectionnez-les, puis clic droit &gt; <em>Note</em>. Pour les dossiers scannés et les bibliothèques XML, les étoiles ne font qu&rsquo;afficher la note.</li>
 
 <li><strong>Ordre des colonnes :</strong> Faites glisser un en-tête de colonne vers un autre emplacement.</li>
 
@@ -153,7 +156,7 @@
 </ul>
 
 <h3>Lecture vidéo</h3>
-<p>Les films s&rsquo;ouvrent dans une fenêtre vidéo séparée ; à la fin d&rsquo;un film, la lecture se poursuit avec le titre suivant. Vous pouvez changer de piste audio et de sous-titres dans le menu <strong>Lecture</strong>. Avec <kbd>&#8984;&#8963;F</kbd>, vous passez en mode plein écran.</p>
+<p>Les films s&rsquo;ouvrent dans une fenêtre vidéo séparée ; à la fin d&rsquo;un film, la lecture se poursuit avec le titre suivant, à condition que <strong>Poursuivre la lecture à la fin</strong> soit activé pour son type de médias. Vous pouvez changer de piste audio et de sous-titres dans le menu <strong>Lecture</strong>. Avec <kbd>&#8984;&#8963;F</kbd>, vous passez en mode plein écran.</p>
 
 <h3>Lecture externe</h3>
 <p>Certains formats ne sont pas pris en charge directement par macOS ou AVFoundation. sCollectPlay le détecte et ouvre ces fichiers automatiquement dans un lecteur externe :</p>
@@ -183,6 +186,9 @@
 <li><strong>Répétition (liste) :</strong> Répète l&rsquo;intégralité de la liste après le dernier titre.</li>
 <li><strong>Répétition (titre) :</strong> Répète le titre en cours indéfiniment.</li>
 </ul>
+
+<h3>Poursuivre la lecture à la fin</h3>
+<p>Le fait que la lecture se poursuive avec le titre suivant à la fin d&rsquo;un titre se définit <strong>par type de médias</strong> sous <strong>Réglages &gt; Lecture/Playlist &gt; Poursuivre la lecture à la fin</strong>. Par défaut, c&rsquo;est activé pour tous les types audio et pour les clips musicaux, désactivé pour les longs métrages, les séries, les vidéos personnelles et les films de caméra &ndash; un film s&rsquo;arrête alors à sa fin (ou à sa marque de fin). <strong>Répétition (titre)</strong> répète malgré tout. sCollectPlay mémorise ce que vous modifiez ici ; pour tous les autres types de médias, c&rsquo;est le réglage de la bibliothèque qui s&rsquo;applique.</p>
 
 
 <h3>Export vers Apple Music</h3>

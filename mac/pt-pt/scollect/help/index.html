@@ -180,6 +180,8 @@
 
 <p>Se um ficheiro não puder ser incluído na biblioteca ao copiar ou mover, o sCollect <strong>não cria nenhuma entrada</strong> para ele. O ficheiro fica inalterado no seu lugar, e uma mensagem indica o ficheiro e o motivo.</p>
 
+<p>Se um ficheiro de áudio não indicar número da faixa nem do disco, o sCollect lê-o na importação a partir do nome do ficheiro ou da pasta &ndash; por exemplo &laquo;&hellip; - 01-04&raquo; (disco 1, faixa 4), &laquo;04 - Canção&raquo; ou uma pasta &laquo;CD 2&raquo; &ndash; e grava-o no ficheiro. Assim, as partes de um audiolivro que têm todas o mesmo título não são consideradas duplicados. Os números que o ficheiro já indica mantêm-se.</p>
+
 <h3>Deteção de duplicados</h3>
 <p>Durante a importação, o sCollect verifica automaticamente se existem duplicados (mesmo título + artista ou mesmo nome de ficheiro). Se forem detetados duplicados, aparece um diálogo em que pode decidir:</p>
 <ul>
@@ -317,6 +319,7 @@
 <li><strong>Data no título:</strong> Inserir a data de modificação do ficheiro no título.</li>
 <li><strong>Dividir:</strong> Dividir o conteúdo de um campo, num separador, em dois campos de destino (copiar ou cortar o campo de origem). Suporta campos numéricos (n.&ordm; da faixa/do disco/do andamento, ano); as entradas sem número reconhecível são saltadas.</li>
 <li><strong>Separar nome e ordenação:</strong> Resolve uma forma de ordenação com vírgula (por ex., &laquo;Lennon, John&raquo;) em entradas com o campo de ordenação vazio: o valor original vai para o campo de ordenação e o campo de nome (Título, Artista, Artista do álbum, Álbum ou Compositor) é invertido para a ordem natural (&laquo;John Lennon&raquo;). Os casos ambíguos com várias vírgulas não ficam inicialmente assinalados.</li>
+<li><strong>Números do nome do ficheiro:</strong> O mesmo para faixas que já estão na biblioteca: preenche números de faixa e de disco vazios a partir do nome do ficheiro e da pasta e grava-os no ficheiro. É lido o nome do original; na biblioteca, um ficheiro copiado tem o nome que o sCollect lhe deu &ndash; se o número constava apenas do nome antigo, importe novamente a pasta.</li>
 </ul>
 
 <h3>Avaliação e favoritos</h3>
@@ -348,7 +351,7 @@
 </ul>
 
 <h3>Reproduzir vídeo</h3>
-<p>Os filmes abrem-se numa janela de vídeo separada; no fim de um filme, a reprodução continua com a faixa seguinte. Os controlos aparecem automaticamente quando move o rato. Pode alternar entre faixas de áudio e legendas no menu &laquo;Reprodução&raquo;, se o ficheiro contiver várias faixas. Se redimensionar manualmente a janela de vídeo, o sCollect mantém essa largura também para os filmes seguintes; a altura acompanha a proporção de cada filme. <strong>Reprodução &gt; 100 %</strong> repõe o tamanho original.</p>
+<p>Os filmes abrem-se numa janela de vídeo separada; no fim de um filme, a reprodução continua com a faixa seguinte, desde que <strong>Continuar a reproduzir no fim</strong> esteja ativado para o respetivo tipo de multimédia. Os controlos aparecem automaticamente quando move o rato. Pode alternar entre faixas de áudio e legendas no menu &laquo;Reprodução&raquo;, se o ficheiro contiver várias faixas. Se redimensionar manualmente a janela de vídeo, o sCollect mantém essa largura também para os filmes seguintes; a altura acompanha a proporção de cada filme. <strong>Reprodução &gt; 100 %</strong> repõe o tamanho original.</p>
 
 <h3>Controlos de reprodução</h3>
 
@@ -369,6 +372,9 @@
 <li><strong>Repetir (faixa):</strong> Repete a faixa atual indefinidamente.</li>
 </ul>
 
+<h3>Continuar a reproduzir no fim</h3>
+<p>Se, após o fim de uma faixa, a reprodução continua com a seguinte, define-se <strong>por tipo de multimédia</strong> em <strong>Definições &gt; Reprodução/Playlist &gt; Continuar a reproduzir no fim</strong>. Por predefinição, está ativado para todos os tipos de áudio e para vídeos musicais, e desativado para longas-metragens, séries, vídeos caseiros e vídeos de câmara &ndash; um filme fica então parado no seu fim (ou na sua marca de fim). <strong>Repetir (faixa)</strong> repete mesmo assim.</p>
+
 <h3>Memorizar a posição de reprodução</h3>
 <p>O sCollect pode memorizar, para cada entrada, a última posição de reprodução alcançada e retomar a partir daí na vez seguinte &ndash; como num audiolivro ou podcast. Se uma posição é ou não memorizada, define-se <strong>globalmente por tipo de multimédia</strong> em <strong>Definições &gt; Reprodução/Playlist &gt; Memorizar a posição de reprodução</strong> (ativado por predefinição para audiolivros, podcasts e filmes, desativado para música).</p>
 <p>Ao retomar numa posição memorizada, aparece brevemente o botão <strong>&laquo;Desde o início&raquo;</strong> &ndash; um clique inicia a faixa desde o começo.</p>
@@ -383,6 +389,12 @@
 <p>A partir das marcas de início/fim definidas, o sCollect pode criar uma <strong>cópia cortada</strong> como nova entrada ao lado do original &ndash; o original permanece inalterado. No editor de metadados encontra para isso, em <strong>Informações do ficheiro &gt; Reprodução</strong>, o botão <strong>&laquo;Criar cópia cortada&raquo;</strong>. Em alternativa: clique com o botão direito numa ou em mais entradas e escolha <strong>&laquo;Cortar por início/fim…&raquo;</strong>.</p>
 <p>São suportados MP4/M4V/MOV (vídeo), bem como MP3, M4A/M4B, AIFF, WAV e CAF (áudio). O corte é feito sem perdas, ou seja, sem recodificação e sem perda de qualidade.</p>
 <p>Nos formatos PCM AIFF e WAV é ainda possível indicar um <strong>fade-in</strong> e um <strong>fade-out</strong> suaves &ndash; em segundos (<code>5</code>, <code>2,5</code>) ou tal como o início e o fim (<code>0:05</code>). Um valor introduzido que o sCollect não compreenda é assinalado a vermelho, e o corte só é feito quando ambos os campos estiverem corretos. Nos formatos comprimidos <strong>MP3, M4A e M4B</strong>, antes do corte abre-se um diálogo com duas opções: <strong>&laquo;Sem perdas (manter o formato original)&raquo;</strong> corta sem recodificação, mas não permite fade-in/out. <strong>&laquo;M4A (AAC)&raquo;</strong> recodifica em vez disso &ndash; com uma <strong>taxa de bits</strong> selecionável (128 a 320 kbps) e fade-in/out opcional, à custa de uma ligeira perda de qualidade.</p>
+
+
+<h3>Juntar filmes e faixas</h3>
+<p>O sCollect pode juntar vários filmes &ndash; por exemplo, os clipes de um passeio &ndash; num novo filme, e vários ficheiros de áudio &ndash; por exemplo, as partes de um audiolivro &ndash; numa única faixa. Selecione pelo menos duas entradas da mesma categoria, clique com o botão direito e escolha <strong>&laquo;Juntar num único filme…&raquo;</strong> ou <strong>&laquo;Juntar numa única faixa…&raquo;</strong>. Na janela seguinte, define o título e a ordem; a ordem sugerida é por data e depois por título.</p>
+<p>A junção é sempre <strong>sem perdas</strong>, sem recodificação. Funciona quando os ficheiros são tecnicamente compatíveis: o mesmo grupo de formatos (MP4/M4V/MOV, M4A/M4B, AIFF, WAV ou CAF), o mesmo codec, a mesma resolução e o mesmo formato de áudio &ndash; típico de gravações da mesma câmara. Se não forem, o sCollect indica o motivo. Para MP3 e formatos como MKV, AVI ou WebM, a opção de menu fica esbatida.</p>
+<p>A nova entrada recebe as informações, a capa e a data de captura do primeiro; os ficheiros individuais mantêm-se inalterados. Com áudio AAC (M4A/M4B), fica em cada junção uma pausa minúscula de cerca de 0,05 segundos &ndash; o atraso inicial do codificador, que não pode ser removido sem recodificação.</p>
 
 <h3>Exportar para o Apple Music</h3>
 <p>As playlists podem ser enviadas para o Apple Music: clique com o botão direito numa playlist na barra lateral e escolha &laquo;Enviar playlist para o Apple Music&raquo;. Em alternativa, encontra esta opção no menu <strong>Ficheiro &gt; Enviar playlist para o Apple Music&hellip;</strong></p>
@@ -642,6 +654,11 @@
 
 <h3>Cópias só de leitura</h3>
 <p>Uma cópia pode ser marcada como só de leitura &ndash; nesse caso, a importação, a eliminação e as edições de etiquetas na cópia ficam bloqueadas, para que as alterações não sejam substituídas na sincronização seguinte.</p>
+<p>Avaliar continua a ser possível numa cópia só de leitura; a avaliação é recolhida pelo master (secção seguinte).</p>
+
+<h3>Avaliações e reproduções a partir de uma cópia</h3>
+<p>Se avaliar numa cópia ou reproduzir aí música, um audiolivro ou um filme até ao fim, a cópia regista-o com data e hora &ndash; para isso, o master não tem de estar em execução. Ao abrir o master, antes de <strong>Projetar</strong> e antes de <strong>Corrigir erros de sincronização&hellip;</strong>, o master consulta todas as cópias acessíveis e assume esses dados: na avaliação prevalece a mais recente, as reproduções são somadas e &laquo;Última reprodução&raquo; fica com o momento mais tardio. Depois, transmite tudo a todas as cópias. Uma cópia que não esteja ligada nesse momento é tratada na vez seguinte.</p>
+<p>O sCollectPlay comunica-os da mesma forma &ndash; mesmo quando aí abriu o master: o master assume as respetivas avaliações e reproduções nos mesmos momentos.</p>
 
 <h3>Organizar biblioteca</h3>
 <p>Através de <strong>Definições &gt; Biblioteca &gt; Organizar biblioteca</strong> (ou do botão por cima da lista multimédia), o sCollect coloca os ficheiros geridos num estado limpo. Antes, uma janela pergunta pelo âmbito e pelas opções.</p>

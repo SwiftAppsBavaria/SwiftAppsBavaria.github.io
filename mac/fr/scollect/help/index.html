@@ -180,6 +180,8 @@
 
 <p>Si un fichier ne peut pas être repris dans la bibliothèque lors de la copie ou du déplacement, sCollect ne crée <strong>aucune entrée</strong> pour lui. Le fichier reste inchangé à son emplacement, et un message le mentionne avec la raison.</p>
 
+<p>Si un fichier audio n&rsquo;indique ni numéro de piste ni numéro de disque, sCollect le lit lors de l&rsquo;importation dans le nom du fichier ou du dossier &ndash; par exemple &laquo; &hellip; - 01-04 &raquo; (disque 1, piste 4), &laquo; 04 - Chanson &raquo; ou un dossier &laquo; CD 2 &raquo; &ndash; et l&rsquo;écrit dans le fichier. Ainsi, les parties d&rsquo;un livre audio qui portent toutes le même titre ne sont pas considérées comme des doublons. Les numéros que le fichier indique déjà sont conservés.</p>
+
 <h3>Détection des doublons</h3>
 <p>Lors de l&rsquo;import, sCollect vérifie automatiquement la présence de doublons (même titre + artiste ou même nom de fichier). Si des doublons sont détectés, une boîte de dialogue apparaît pour vous permettre de choisir :</p>
 <ul>
@@ -317,6 +319,7 @@
 <li><strong>Date dans le titre :</strong> Insérer la date de modification du fichier dans le titre.</li>
 <li><strong>Diviser :</strong> Diviser le contenu d&rsquo;un champ à un séparateur en deux champs cibles (copier ou couper le champ source). Champs numériques pris en charge (n&deg; de piste/disque/mouvement, année) ; les entrées sans nombre sont ignorées.</li>
 <li><strong>Séparer nom et tri :</strong> Résout une forme de tri avec virgule (par ex. &laquo; Lennon, John &raquo;) dans les entrées au champ de tri vide : la valeur d&rsquo;origine passe dans le champ de tri et le champ de nom (Titre, Artiste, Artiste de l&rsquo;album, Album ou Compositeur) est remis dans l&rsquo;ordre naturel (&laquo; John Lennon &raquo;). Les cas ambigus à plusieurs virgules ne sont pas cochés au départ.</li>
+<li><strong>Numéros depuis le nom de fichier :</strong> La même chose pour les titres déjà présents dans la bibliothèque : remplit les numéros de piste et de disque vides à partir du nom du fichier et du dossier et les écrit dans le fichier. C&rsquo;est le nom de l&rsquo;original qui est lu ; dans la bibliothèque, un fichier copié porte le nom que sCollect lui a donné &ndash; si le numéro ne figurait que dans l&rsquo;ancien nom, importez à nouveau le dossier.</li>
 </ul>
 
 <h3>Notes et favoris</h3>
@@ -348,7 +351,7 @@
 </ul>
 
 <h3>Lecture vidéo</h3>
-<p>Les films s&rsquo;ouvrent dans une fenêtre vidéo séparée ; à la fin d&rsquo;un film, la lecture se poursuit avec le titre suivant. Les commandes apparaissent automatiquement lorsque vous déplacez la souris. Vous pouvez changer de piste audio et de sous-titres dans le menu &laquo; Lecture &raquo; si le fichier en contient plusieurs. Si vous redimensionnez la fenêtre vidéo à la main, sCollect conserve cette largeur pour les films suivants ; la hauteur suit le format d&rsquo;image de chaque film. <strong>Lecture &gt; 100 %</strong> rétablit la taille d&rsquo;origine.</p>
+<p>Les films s&rsquo;ouvrent dans une fenêtre vidéo séparée ; à la fin d&rsquo;un film, la lecture se poursuit avec le titre suivant, à condition que <strong>Poursuivre la lecture à la fin</strong> soit activé pour son type de médias. Les commandes apparaissent automatiquement lorsque vous déplacez la souris. Vous pouvez changer de piste audio et de sous-titres dans le menu &laquo; Lecture &raquo; si le fichier en contient plusieurs. Si vous redimensionnez la fenêtre vidéo à la main, sCollect conserve cette largeur pour les films suivants ; la hauteur suit le format d&rsquo;image de chaque film. <strong>Lecture &gt; 100 %</strong> rétablit la taille d&rsquo;origine.</p>
 
 <h3>Commandes de lecture</h3>
 
@@ -369,6 +372,9 @@
 <li><strong>Répétition (titre) :</strong> Répète le titre en cours indéfiniment.</li>
 </ul>
 
+<h3>Poursuivre la lecture à la fin</h3>
+<p>Le fait que la lecture se poursuive avec le titre suivant à la fin d&rsquo;un titre se définit <strong>par type de médias</strong> sous <strong>Réglages &gt; Lecture/Playlist &gt; Poursuivre la lecture à la fin</strong>. Par défaut, c&rsquo;est activé pour tous les types audio et pour les clips musicaux, désactivé pour les longs métrages, les séries, les vidéos personnelles et les films de caméra &ndash; un film s&rsquo;arrête alors à sa fin (ou à sa marque de fin). <strong>Répétition (titre)</strong> répète malgré tout.</p>
+
 <h3>Mémoriser la position de lecture</h3>
 <p>sCollect peut mémoriser pour chaque entrée la dernière position de lecture atteinte et y reprendre la fois suivante &ndash; comme pour un livre audio ou un Podcast. Le fait de mémoriser une position se définit <strong>globalement par type de médias</strong> sous <strong>Réglages &gt; Lecture/Playlist &gt; Mémoriser la position de lecture</strong> (activé par défaut pour les livres audio, les podcasts et les films ; désactivé pour la musique).</p>
 <p>Lorsque la lecture reprend à une position mémorisée, le bouton <strong>&laquo; Depuis le début &raquo;</strong> apparaît brièvement &ndash; un clic démarre le titre depuis le début à la place.</p>
@@ -383,6 +389,12 @@
 <p>À partir des marques de début/fin définies, sCollect peut créer une <strong>copie raccourcie</strong> comme nouvelle entrée à côté de l&rsquo;original &ndash; l&rsquo;original reste inchangé. Dans l&rsquo;éditeur de métadonnées, vous trouvez sous <strong>Infos fichier &gt; Lecture</strong> le bouton <strong>&laquo; Créer une copie raccourcie &raquo;</strong>. Ou bien : clic droit sur une ou plusieurs entrées et choisir <strong>&laquo; Raccourcir selon début/fin… &raquo;</strong>.</p>
 <p>Les formats pris en charge sont MP4/M4V/MOV (vidéo) ainsi que MP3, M4A/M4B, AIFF, WAV et CAF (audio). La coupe s&rsquo;effectue sans perte &ndash; sans réencodage et donc sans perte de qualité.</p>
 <p>Pour les formats PCM AIFF et WAV, vous pouvez en plus indiquer un léger <strong>fondu d&rsquo;entrée</strong> et <strong>fondu de sortie</strong> &ndash; en secondes (<code>5</code>, <code>2,5</code>) ou comme les marques de début et de fin (<code>0:05</code>). Une valeur que sCollect ne comprend pas est marquée en rouge, et la coupe n&rsquo;a lieu que lorsque les deux champs sont corrects. Pour les formats compressés <strong>MP3, M4A et M4B</strong>, une boîte de dialogue avec deux options s&rsquo;ouvre avant la coupe : <strong>&laquo; Sans perte (conserver le format d'origine) &raquo;</strong> coupe sans réencodage mais n&rsquo;autorise pas de fondu. <strong>&laquo; M4A (AAC) &raquo;</strong> réencode à la place &ndash; avec un <strong>débit</strong> réglable (128 à 320 kbps) et un fondu optionnel, au prix d&rsquo;une légère perte de qualité.</p>
+
+
+<h3>Combiner des films et des titres</h3>
+<p>sCollect peut combiner plusieurs films &ndash; par exemple les clips d’une excursion &ndash; en un nouveau film, et plusieurs fichiers audio &ndash; par exemple les parties d’un livre audio &ndash; en un seul titre. Sélectionnez au moins deux entrées de la même catégorie, faites un clic droit et choisissez <strong>&laquo; Combiner en un seul film… &raquo;</strong> ou <strong>&laquo; Combiner en un seul titre… &raquo;</strong>. Dans la fenêtre suivante, vous définissez le titre et l’ordre ; l’ordre proposé est par date, puis par titre.</p>
+<p>La combinaison se fait toujours <strong>sans perte</strong>, sans réencodage. C’est possible lorsque les fichiers sont techniquement compatibles : même groupe de formats (MP4/M4V/MOV, M4A/M4B, AIFF, WAV ou CAF), même codec, même résolution et même format audio &ndash; typiquement pour des enregistrements de la même caméra. Sinon, sCollect en indique la raison. Pour le MP3 et les formats comme MKV, AVI ou WebM, l’option de menu est grisée.</p>
+<p>La nouvelle entrée reprend les informations, la pochette et la date de prise de vue du premier fichier ; les fichiers d’origine restent inchangés. Avec de l’audio AAC (M4A/M4B), une minuscule pause d’environ 0,05 seconde subsiste à chaque raccord &ndash; l’amorce de l’encodeur, qu’on ne peut pas retirer sans réencodage.</p>
 
 <h3>Export vers Apple Music</h3>
 <p>Les playlists peuvent être envoyées à Apple Music : faites un clic droit sur une playlist dans la barre latérale et choisissez &laquo; Envoyer la playlist à Apple Music &raquo;. Vous trouverez également cette option dans le menu <strong>Fichier &gt; Envoyer la playlist à Apple Music&hellip;</strong></p>
@@ -645,6 +657,11 @@
 
 <h3>Copies en lecture seule</h3>
 <p>Une copie peut être marquée en lecture seule &ndash; alors l&rsquo;import, la suppression et les modifications de tags dans la copie sont bloqués.</p>
+<p>Il reste possible de noter sur une copie en lecture seule ; le master récupère la note (section suivante).</p>
+
+<h3>Notes et lectures depuis une copie</h3>
+<p>Si vous notez sur une copie ou y lisez de la musique, un livre audio ou un film jusqu&rsquo;au bout, la copie le retient avec la date et l&rsquo;heure &ndash; le master n&rsquo;a pas besoin d&rsquo;être ouvert pour cela. À l&rsquo;ouverture du master, avant <strong>Projeter</strong> et avant <strong>Résoudre les erreurs de synchronisation&hellip;</strong>, le master consulte toutes les copies accessibles et reprend ces données : pour la note, la plus récente l&rsquo;emporte, les lectures s&rsquo;additionnent, &laquo; Dernière lecture &raquo; prend le moment le plus tardif. Il transmet ensuite le tout à toutes les copies. Une copie qui n&rsquo;est pas branchée à ce moment-là passe la fois suivante.</p>
+<p>sCollectPlay fait remonter ses données de la même façon &ndash; même si vous y avez ouvert le master : le master reprend ses notes et lectures aux mêmes moments.</p>
 
 <h3>Organiser la bibliothèque</h3>
 <p>Via <strong>Réglages &gt; Bibliothèque &gt; Organiser la bibliothèque</strong> (ou le bouton au-dessus de la liste des médias), sCollect remet les fichiers gérés dans un état propre. Auparavant, une fenêtre demande l&rsquo;étendue et les options.</p>

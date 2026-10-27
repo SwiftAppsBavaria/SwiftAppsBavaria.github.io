@@ -180,6 +180,8 @@
 
 <p>Lässt sich eine Datei beim Kopieren oder Verschieben nicht in die Mediathek übernehmen, legt sCollect für sie <strong>keinen Eintrag</strong> an. Die Datei bleibt unverändert an ihrem Ort, und eine Meldung nennt sie samt Grund.</p>
 
+<p>Nennt eine Tondatei keine Titel- oder CD-Nummer, liest sCollect sie beim Import aus dem Datei- oder Ordnernamen &ndash; etwa &bdquo;&hellip; - 01-04&ldquo; (CD 1, Titel 4), &bdquo;04 - Lied&ldquo; oder einen Ordner &bdquo;CD 2&ldquo; &ndash; und schreibt sie in die Datei. So gelten die Teile eines Hörbuchs, die alle denselben Titel tragen, nicht als Duplikate. Nummern, die die Datei schon nennt, bleiben stehen.</p>
+
 <h3>Duplikaterkennung</h3>
 <p>Beim Import prüft sCollect automatisch auf Duplikate (gleicher Titel + Künstler oder gleicher Dateiname). Falls Duplikate gefunden werden, erscheint ein Dialog, in dem du entscheiden kannst:</p>
 <ul>
@@ -318,6 +320,7 @@
 <li><strong>Datum in Titel:</strong> Änderungsdatum der Datei in den Titel übernehmen.</li>
 <li><strong>Aufteilen:</strong> Den Inhalt eines Feldes an einem Trennzeichen in zwei Zielfelder aufteilen (Quellfeld wahlweise kopieren oder ausschneiden). Auch Zahlenfelder (Titel-/CD-/Satz-Nr., Jahr) sind möglich; Einträge ohne erkennbare Zahl werden übersprungen.</li>
 <li><strong>Namen &amp; Sortierung trennen:</strong> Löst eine Komma-Sortierform (z.B. &laquo;Lennon, John&raquo;) in Einträgen mit leerem Sortierfeld auf: Der Originalwert wandert ins Sortierfeld, das Namensfeld (Titel, Künstler, Album-Künstler, Album oder Komponist) wird in die natürliche Reihenfolge gedreht (&laquo;John Lennon&raquo;). Mehrdeutige Fälle mit mehreren Kommata sind anfangs nicht angehakt.</li>
+<li><strong>Nummern aus Dateiname:</strong> Dasselbe für Titel, die schon in der Mediathek stehen: füllt leere Titel- und CD-Nummern aus dem Datei- und Ordnernamen und schreibt sie in die Datei. Gelesen wird der Name des Originals; eine kopierte Datei trägt in der Mediathek den Namen, den sCollect ihr gegeben hat &ndash; stand die Nummer nur im alten Namen, importiere den Ordner neu.</li>
 </ul>
 
 <h3>Bewertung und Favoriten</h3>
@@ -349,7 +352,7 @@
 </ul>
 
 <h3>Video abspielen</h3>
-<p>Filme werden in einem separaten Videofenster geöffnet; am Ende eines Films geht es mit dem nächsten Titel weiter. Die Steuerungselemente blenden sich automatisch ein, wenn du die Maus bewegst. Du kannst Tonspuren und Untertitel im Menü &laquo;Wiedergabe&raquo; umschalten, falls die Datei mehrere enthält. Ziehst du das Videofenster von Hand größer oder kleiner, behält sCollect diese Breite auch für die nächsten Filme bei; die Höhe richtet sich nach dem Bildformat des jeweiligen Films. <strong>Wiedergabe &gt; 100 %</strong> stellt wieder die Originalgröße ein.</p>
+<p>Filme werden in einem separaten Videofenster geöffnet; am Ende eines Films geht es mit dem nächsten Titel weiter, sofern <strong>Am Ende weiterspielen</strong> für seinen Medientyp eingeschaltet ist. Die Steuerungselemente blenden sich automatisch ein, wenn du die Maus bewegst. Du kannst Tonspuren und Untertitel im Menü &laquo;Wiedergabe&raquo; umschalten, falls die Datei mehrere enthält. Ziehst du das Videofenster von Hand größer oder kleiner, behält sCollect diese Breite auch für die nächsten Filme bei; die Höhe richtet sich nach dem Bildformat des jeweiligen Films. <strong>Wiedergabe &gt; 100 %</strong> stellt wieder die Originalgröße ein.</p>
 
 <h3>Externe Wiedergabe</h3>
 <p>Einige Formate werden von macOS bzw. AVFoundation nicht direkt unterstützt. sCollect erkennt das und öffnet diese Dateien automatisch in einem externen Player:</p>
@@ -389,6 +392,9 @@
 <li><strong>Wiederholen (Titel):</strong> Wiederholt den aktuellen Titel endlos.</li>
 </ul>
 
+<h3>Am Ende weiterspielen</h3>
+<p>Ob die Wiedergabe nach dem Ende eines Titels mit dem nächsten weitergeht, legst du <strong>pro Medientyp</strong> fest unter <strong>Einstellungen &gt; Wiedergabe/Playlist &gt; Am Ende weiterspielen</strong>. Standardmäßig ist das an für alle Tontypen und für Musikvideos, aus für Spielfilme, Serien, Heimvideos und Kamerafilme &ndash; ein Film bleibt dann an seinem Ende (oder an seiner Stopp-Marke) stehen. <strong>Wiederholen (Titel)</strong> wiederholt trotzdem.</p>
+
 <h3>Wiedergabeposition merken</h3>
 <p>sCollect kann sich für jeden Eintrag die zuletzt erreichte Wiedergabeposition merken und beim nächsten Mal dort fortsetzen &ndash; wie bei einem Hörbuch oder Podcast. Ob eine Position gemerkt wird, legst du <strong>global pro Medientyp</strong> fest unter <strong>Einstellungen &gt; Wiedergabe/Playlist &gt; Wiedergabeposition merken</strong> (standardmäßig an für Hörbücher, Podcasts und Filme, aus für Musik).</p>
 <p>Wird an einer gemerkten Position fortgesetzt, erscheint kurz die Schaltfläche <strong>&laquo;Von Anfang an&raquo;</strong> &ndash; ein Klick startet den Titel stattdessen von vorne.</p>
@@ -403,6 +409,12 @@
 <p>Aus den gesetzten Start-/Stopp-Marken kann sCollect eine <strong>gekürzte Kopie</strong> als neuen Eintrag neben dem Original anlegen &ndash; das Original bleibt unverändert. Im Metadaten-Editor findest du dazu unter <strong>Dateiinfo &gt; Wiedergabe</strong> die Schaltfläche <strong>&laquo;Gekürzte Kopie erstellen&raquo;</strong>. Alternativ: Rechtsklick auf einen oder mehrere Einträge und <strong>&laquo;Nach Start/Stopp kürzen&hellip;&raquo;</strong> wählen.</p>
 <p>Unterstützt werden MP4/M4V/MOV (Video) sowie MP3, M4A/M4B, AIFF, WAV und CAF (Audio). Der Schnitt erfolgt verlustfrei, also ohne Neukodierung und ohne Qualitätsverlust.</p>
 <p>Bei den PCM-Formaten AIFF und WAV kannst du zusätzlich ein sanftes <strong>Ein-</strong> und <strong>Ausblenden</strong> angeben &ndash; in Sekunden (<code>5</code>, <code>2,5</code>) oder wie Start und Stopp (<code>0:05</code>). Eine Eingabe, die sCollect nicht versteht, wird rot markiert, und gekürzt wird erst, wenn beide Felder stimmen. Bei den komprimierten Formaten <strong>MP3, M4A und M4B</strong> öffnet sich vor dem Kürzen ein Dialog mit zwei Möglichkeiten: <strong>&laquo;Verlustfrei (Originalformat behalten)&raquo;</strong> schneidet ohne Neukodierung, erlaubt aber kein Ein-/Ausblenden. <strong>&laquo;M4A (AAC)&raquo;</strong> kodiert stattdessen neu &ndash; mit wählbarer <strong>Datenrate</strong> (128 bis 320 kbps) und optionalem Ein-/Ausblenden, um den Preis eines leichten Qualitätsverlusts.</p>
+
+
+<h3>Filme und Titel zusammenfügen</h3>
+<p>Mehrere Filme &ndash; etwa die Clips eines Ausflugs &ndash; fügt sCollect zu einem neuen Film zusammen, mehrere Tondateien &ndash; etwa die Teile eines Hörbuchs &ndash; zu einem Titel. Markiere dazu mindestens zwei Einträge derselben Kategorie, klicke mit der rechten Maustaste darauf und wähle <strong>&laquo;Zu einem Film zusammenfügen&hellip;&raquo;</strong> bzw. <strong>&laquo;Zu einem Titel zusammenfügen&hellip;&raquo;</strong>. Im folgenden Fenster legst du Titel und Reihenfolge fest; vorgeschlagen wird die Reihenfolge nach Datum, dann nach Titel.</p>
+<p>Zusammengefügt wird nur <strong>verlustfrei</strong>, ohne Neukodierung. Das geht, wenn die Dateien technisch zusammenpassen: gleiche Formatgruppe (MP4/M4V/MOV, M4A/M4B, AIFF, WAV oder CAF), gleicher Codec, gleiche Auflösung und gleiches Tonformat &ndash; typisch bei Aufnahmen derselben Kamera. Passen sie nicht, nennt sCollect den Grund. Bei MP3 und bei Formaten wie MKV, AVI oder WebM ist der Menüpunkt grau.</p>
+<p>Der neue Eintrag übernimmt Angaben, Cover und Aufnahmedatum vom ersten; die Einzeldateien bleiben unverändert. Bei AAC-Ton (M4A/M4B) bleibt an jeder Naht eine winzige Pause von rund 0,05 Sekunden &ndash; der Vorlauf des Encoders, der sich ohne Neukodierung nicht entfernen lässt.</p>
 
 <h3>Apple Music Export</h3>
 <p>Playlists können an Apple Music gesendet werden: Rechtsklicke auf eine Playlist in der Seitenleiste und wähle &laquo;Playlist an Apple Music senden&raquo;. Alternativ findest du die Option im Menü <strong>Ablage &gt; Playlist an Apple Music senden&hellip;</strong></p>
@@ -646,6 +658,11 @@
 
 <h3>Schreibschutz auf Kopien</h3>
 <p>Eine Kopie kann als schreibgeschützt markiert werden &ndash; dann sind Import, Löschen und Tag-Edits in der Kopie blockiert, damit Änderungen beim nächsten Sync nicht überschrieben werden.</p>
+<p>Bewerten bleibt auch auf einer schreibgeschützten Kopie möglich; die Bewertung holt der Master ab (nächster Abschnitt).</p>
+
+<h3>Bewertungen und Wiedergaben von einer Kopie</h3>
+<p>Bewertest du auf einer Kopie oder spielst dort Musik, ein Hörbuch oder einen Film bis zum Ende ab, merkt sich die Kopie das mit Datum und Uhrzeit &ndash; der Master muss dafür nicht laufen. Beim Öffnen des Masters, vor <strong>Projizieren</strong> und vor <strong>Sync-Fehler beheben&hellip;</strong> sieht der Master bei allen erreichbaren Kopien nach und übernimmt es: Bei der Bewertung gewinnt die neuere, Wiedergaben werden zusammengezählt, &laquo;Zuletzt gespielt&raquo; nimmt den späteren Zeitpunkt. Danach gibt er alles an alle Kopien weiter. Eine Kopie, die gerade nicht angeschlossen ist, kommt beim nächsten Mal dran.</p>
+<p>sCollectPlay meldet auf demselben Weg &ndash; auch wenn du dort den Master geöffnet hast: Seine Bewertungen und Wiedergaben übernimmt der Master zu denselben Zeitpunkten.</p>
 
 <h3>Mediathek organisieren</h3>
 <p>Über <strong>Einstellungen &gt; Mediathek &gt; Mediathek organisieren</strong> (oder den Knopf über der Medienliste) bringt sCollect die verwalteten Dateien auf einen sauberen Stand. Vorher fragt ein Dialog nach dem Umfang und den Optionen.</p>

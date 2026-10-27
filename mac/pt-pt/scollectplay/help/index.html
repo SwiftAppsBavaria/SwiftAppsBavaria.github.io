@@ -78,12 +78,14 @@
 
 
 <li><strong>Deteção de MKV:</strong> Os ficheiros com a extensão <code>.mp4</code> que na realidade são MKV são reconhecidos pela assinatura EBML e assinalados à parte.</li>
-<li><strong>Classificação por duração:</strong> Uma pasta não revela se um ficheiro é música ou um audiolivro. Por isso, o sCollectPlay classifica o áudio e o vídeo pela duração &ndash; áudio: até 10, 10&ndash;30, 30&ndash;60 e mais de 60 min; vídeo: até 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 e mais de 210 min. Os e-books e os PDFs são reconhecidos pela extensão do ficheiro. Se não for possível determinar a duração, o título aparece em «duração desconhecida».</li>
+<li><strong>Classificação por conteúdo:</strong> O sCollectPlay classifica o áudio pelo que o próprio ficheiro indica: os ficheiros <code>.m4b</code> e os títulos com o género Audiobook, Audio Theatre ou Spoken Word (também em alemão, como Hörbuch, Hörspiel ou Kabarett) aparecem em «Audiolivro», os podcasts e os títulos com o género Podcast ou Speech em «Podcast», e tudo o resto em «Música». Os videoclipes, as longas-metragens e as séries são reconhecidos pelo tipo de multimédia que, por exemplo, o iTunes grava no ficheiro, e as séries também por «S01E02» no nome do ficheiro. Os filmes que indicam uma câmara ou têm um nome de ficheiro de câmara como <code>IMG_1234</code> aparecem em «Câmara», todos os outros em «Vídeo caseiro». Os e-books e os PDFs são reconhecidos pela extensão do ficheiro. A barra lateral mostra apenas os tipos que contêm algo.</li>
+<li><strong>Escolher o tipo manualmente:</strong> Se um título estiver no sítio errado, arraste-o da lista para outro tipo na barra lateral &ndash; enquanto arrasta, os tipos vazios também aparecem aí. O sCollectPlay memoriza esta escolha para esse ficheiro, também na próxima leitura da pasta; o ficheiro em si não é alterado.</li>
 </ul>
 <p>Em <strong>Definições &gt; Biblioteca &gt; Pastas analisadas</strong>, <em>Atualizar</em> lê apenas o que mudou desde a última leitura: ficheiros novos, alterados e removidos. Com <em>Remover</em>, retira uma pasta juntamente com as respetivas faixas. É mais rápido com <strong>Ficheiro &gt; Atualizar pastas analisadas</strong> (<kbd>&#8984;R</kbd>) ou com o botão <strong>&#8635;</strong> à direita do campo de pesquisa: Ambos atualizam todas as pastas, uma após a outra; nas Definições, <em>Atualizar todas</em> faz o mesmo. No final, uma mensagem indica o que é novo, foi alterado ou removido.</p>
 
 <h3>Biblioteca do sCollect</h3>
 <p>Selecione a pasta principal de uma biblioteca do sCollect (a pasta onde se encontra o pacote <code>.scollect</code>; em bibliotecas mais antigas, a pasta com <code>settings.json</code>). O sCollectPlay lê diretamente os ficheiros da biblioteca, as playlists e as definições &ndash; incluindo as designações de campos configuráveis e as playlists inteligentes. A escolha de uma biblioteca substitui uma análise de pasta que estivesse ativa. A biblioteca também pode ser aberta com um duplo clique no pacote <code>.scollect</code> no Finder.</p>
+<p>O sCollectPlay não altera nada na própria biblioteca. Quando avalia uma faixa ou reproduz música, um audiolivro ou um filme até ao fim, regista-o com data e hora no ficheiro <code>rueckmeldungen.json</code> na pasta da biblioteca &ndash; quer tenha aberto o master, quer uma cópia. O sCollect assume esses dados ao abrir o master, antes de <strong>Projetar</strong> e antes de <strong>Corrigir erros de sincronização&hellip;</strong>: na avaliação prevalece a mais recente e as reproduções são somadas. Depois, o sCollect escreve a avaliação no ficheiro e transmite tudo a todas as cópias. Até lá, o sCollectPlay já mostra as suas próprias avaliações e reproduções.</p>
 
 <h3>XML do iTunes/Apple Music</h3>
 <p>Selecione um ficheiro <code>Library.xml</code> ou um pacote <code>.musiclibrary</code>. O sCollectPlay analisa as faixas e as playlists (normais e inteligentes). As playlists de sistema (Master, Distinguished Kind) são ignoradas. O sCollectPlay obtém os tipos de multimédia do próprio ficheiro XML: Música, Audiolivro, Podcast, Vídeo caseiro, Longa-metragem, Série e Videoclipe. Ao abrir, o acesso à pasta de multimédia correspondente é pedido uma única vez, para que o sCollectPlay possa aceder aos ficheiros.</p>
@@ -110,9 +112,10 @@
 <li><strong>Personalizar colunas:</strong> Um clique com o botão direito num cabeçalho de coluna &gt; <em>Personalizar colunas&hellip;</em> permite escolher as colunas visíveis. A visibilidade, a ordem e as larguras aplicam-se por tipo de multimédia ou por playlist; numa biblioteca do sCollect, o sCollectPlay adota as colunas definidas aí como ponto de partida e memoriza as suas alterações neste Mac.</li>
 
 
-<li><strong>Ordenar:</strong> Um clique num cabeçalho de coluna ordena por essa coluna; um novo clique inverte a ordem. Cada playlist é ordenada de forma independente; a sua coluna <strong>N.º</strong> &ndash; a posição na playlist &ndash; repõe a ordem original.</li>
+<li><strong>Ordenar:</strong> Um clique num cabeçalho de coluna ordena por essa coluna; um novo clique inverte a ordem. Mantenha premida a tecla <strong>Shift</strong> para acrescentar outra coluna como ordenação secundária &ndash; as colunas ativas mostram uma seta e um número de ordem (por ex., <code>Álbum&darr;1</code>, <code>Artista&uarr;2</code>). Com <strong>clique com Option</strong> num cabeçalho ativo, essa coluna é retirada da ordenação. Clicar com o botão direito num cabeçalho oferece <em>Repor ordenação</em>, para voltar a ordenar apenas pela coluna principal. Cada playlist é ordenada de forma independente; a sua coluna <strong>N.º</strong> &ndash; a posição na playlist &ndash; repõe a ordem original.</li>
 <li><strong>Faixa em reprodução:</strong> Um altifalante antes do título indica o que está a tocar. A seleção acompanha a passagem para a faixa seguinte, desde que estivesse na faixa em reprodução.</li>
-<li><strong>Largura das colunas:</strong> Arrastando a linha divisória no cabeçalho da coluna.</li>
+<li><strong>Largura das colunas:</strong> Arrastando a linha divisória no cabeçalho da coluna. Um clique com o botão direito num cabeçalho de coluna &gt; <em>Largura ideal</em> ajusta todas as colunas de texto ao respetivo conteúdo.</li>
+<li><strong>Avaliar:</strong> Numa biblioteca do sCollect, clique numa estrela na coluna <strong>Avaliação</strong>: o primeiro clique atribui uma estrela inteira, o segundo meia estrela, o terceiro apaga a avaliação. Para avaliar várias faixas de uma só vez, selecione-as e, em seguida, clique com o botão direito &gt; <em>Avaliação</em>. Em pastas analisadas e bibliotecas XML, as estrelas servem apenas para mostrar a avaliação.</li>
 
 <li><strong>Ordem das colunas:</strong> Arraste um cabeçalho de coluna para outra posição.</li>
 
@@ -153,7 +156,7 @@
 </ul>
 
 <h3>Reproduzir vídeo</h3>
-<p>Os filmes são abertos numa janela de vídeo separada; no fim de um filme, a reprodução continua com a faixa seguinte. As faixas de áudio e as legendas podem ser alternadas no menu <strong>Reprodução</strong>. Com <kbd>&#8984;&#8963;F</kbd> passa-se para o modo de ecrã completo.</p>
+<p>Os filmes são abertos numa janela de vídeo separada; no fim de um filme, a reprodução continua com a faixa seguinte, desde que <strong>Continuar a reproduzir no fim</strong> esteja ativado para o respetivo tipo de multimédia. As faixas de áudio e as legendas podem ser alternadas no menu <strong>Reprodução</strong>. Com <kbd>&#8984;&#8963;F</kbd> passa-se para o modo de ecrã completo.</p>
 
 <h3>Reprodução externa</h3>
 <p>Alguns formatos não são suportados diretamente pelo macOS ou pelo AVFoundation. O sCollectPlay deteta isso e abre esses ficheiros automaticamente num leitor externo:</p>
@@ -183,6 +186,9 @@
 <li><strong>Repetir (lista):</strong> Repete toda a lista após a última faixa.</li>
 <li><strong>Repetir (faixa):</strong> Repete a faixa atual indefinidamente.</li>
 </ul>
+
+<h3>Continuar a reproduzir no fim</h3>
+<p>Se, após o fim de uma faixa, a reprodução continua com a seguinte, define-se <strong>por tipo de multimédia</strong> em <strong>Definições &gt; Reprodução/Playlist &gt; Continuar a reproduzir no fim</strong>. Por predefinição, está ativado para todos os tipos de áudio e para vídeos musicais, e desativado para longas-metragens, séries, vídeos caseiros e vídeos de câmara &ndash; um filme fica então parado no seu fim (ou na sua marca de fim). <strong>Repetir (faixa)</strong> repete mesmo assim. O sCollectPlay memoriza o que alterar aqui; para todos os outros tipos de multimédia aplica-se a definição da biblioteca.</p>
 
 
 <h3>Exportar para o Apple Music</h3>

@@ -78,12 +78,14 @@
 
 
 <li><strong>MKV-Erkennung:</strong> Dateien mit der Endung <code>.mp4</code>, die in Wirklichkeit MKV sind, werden anhand der EBML-Signatur erkannt und gesondert markiert.</li>
-<li><strong>Einteilung nach Spieldauer:</strong> Ein Ordner verrät nicht, ob eine Datei Musik oder ein Hörbuch ist. Audio und Video ordnet sCollectPlay deshalb nach ihrer Länge ein &ndash; Audio: bis 10, 10&ndash;30, 30&ndash;60 und über 60 Min.; Video: bis 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 und über 210 Min. E-Books und PDFs erkennt es an der Dateiendung. Lässt sich die Dauer nicht ermitteln, steht ein Titel unter „Dauer unbekannt“.</li>
+<li><strong>Einteilung nach Inhalt:</strong> Audio ordnet sCollectPlay nach dem, was die Datei über sich sagt: <code>.m4b</code>-Dateien und Titel mit dem Genre Hörbuch, Hörspiel oder Kabarett (auch englisch, etwa Audiobook oder Spoken Word) stehen unter „Hörbuch“, Podcasts und Titel mit dem Genre Podcast, Dialog oder Vortrag unter „Podcast“, alles andere unter „Musik“. Musikvideos, Spielfilme und Serien erkennt es an der Medienart, die etwa iTunes in die Datei schreibt, Serien auch an „S01E02“ im Dateinamen. Filme, die eine Kamera nennen oder einen Kameranamen wie <code>IMG_1234</code> tragen, stehen unter „Kamera“, alle übrigen unter „Heimvideo“. E-Books und PDFs erkennt es an der Dateiendung. Die Seitenleiste zeigt nur Typen, unter denen etwas steht.</li>
+<li><strong>Typ selbst wählen:</strong> Steht ein Titel falsch, ziehe ihn aus der Liste auf einen anderen Typ in der Seitenleiste &ndash; während du ziehst, erscheinen dort auch die leeren Typen. sCollectPlay merkt sich das für diese Datei, auch beim nächsten Einlesen; an der Datei selbst ändert sich nichts.</li>
 </ul>
 <p>Unter <strong>Einstellungen &gt; Mediathek &gt; Gescannte Ordner</strong> liest <em>Aktualisieren</em> nur ein, was sich seit dem letzten Einlesen geändert hat: neue, geänderte und entfernte Dateien. Mit <em>Entfernen</em> nimmst du einen Ordner samt seinen Titeln wieder heraus. Schneller geht es mit <strong>Ablage &gt; Gescannte Ordner aktualisieren</strong> (<kbd>&#8984;R</kbd>) oder dem Knopf <strong>&#8635;</strong> rechts neben dem Suchfeld: Beides aktualisiert alle Ordner nacheinander, in den Einstellungen tut das auch <em>Alle aktualisieren</em>. Am Ende nennt eine Meldung, was neu, geändert oder entfernt ist.</p>
 
 <h3>sCollect-Mediathek</h3>
 <p>Wähle den Hauptordner einer sCollect-Mediathek (den Ordner, in dem das <code>.scollect</code>-Bündel liegt; bei älteren Mediatheken der Ordner mit <code>settings.json</code>). sCollectPlay liest die Library-Dateien, Playlists und Settings direkt &ndash; inklusive konfigurierbarer Feldbezeichner und Smart-Playlists. Die Mediathek-Auswahl ersetzt einen vorher aktiven Ordner-Scan. Du kannst die Mediathek auch per Doppelklick auf das <code>.scollect</code>-Bündel im Finder öffnen.</p>
+<p>An der Mediathek selbst ändert sCollectPlay nichts. Bewertest du einen Titel oder spielst du Musik, ein Hörbuch oder einen Film bis zum Ende, merkt es sich das mit Datum und Uhrzeit in der Datei <code>rueckmeldungen.json</code> im Mediathek-Ordner &ndash; gleich, ob du den Master oder eine Kopie geöffnet hast. sCollect übernimmt es beim Öffnen des Masters, vor <strong>Projizieren</strong> und vor <strong>Sync-Fehler beheben&hellip;</strong>: Bei der Bewertung gewinnt die neuere, Wiedergaben werden zusammengezählt. Dann schreibt sCollect die Bewertung in die Datei und gibt alles an alle Kopien weiter. Bis dahin zeigt sCollectPlay seine eigenen Bewertungen und Wiedergaben schon an.</p>
 
 <h3>iTunes/Apple-Music-XML</h3>
 <p>Wähle eine <code>Library.xml</code> oder ein <code>.musiclibrary</code>-Bundle. sCollectPlay parst Tracks und Wiedergabelisten (Standard und Smart). System-Playlists (Master, Distinguished Kind) werden übersprungen. Die Medientypen übernimmt sCollectPlay aus der XML selbst: Musik, Hörbuch, Podcast, Heimvideo, Spielfilm, Serie und Musikvideo. Beim Öffnen wird einmalig der zugehörige Medienordner abgefragt, damit sCollectPlay auf die Dateien zugreifen kann.</p>
@@ -110,9 +112,10 @@
 <li><strong>Spalten anpassen:</strong> Rechtsklick auf einen Spaltenkopf &gt; <em>Spalten anpassen&hellip;</em> wählt die sichtbaren Spalten. Sichtbarkeit, Reihenfolge und Breiten gelten je Medientyp bzw. Playlist; bei einer sCollect-Mediathek übernimmt sCollectPlay die Spalten von dort als Ausgangswert, deine Änderungen merkt es sich auf diesem Mac.</li>
 
 
-<li><strong>Sortieren:</strong> Klick auf einen Spaltenkopf sortiert nach dieser Spalte; erneutes Klicken kehrt die Reihenfolge um. Jede Playlist sortiert für sich; ihre Spalte <strong>Nr.</strong> &ndash; die Position in der Playlist &ndash; führt zur ursprünglichen Reihenfolge zurück.</li>
+<li><strong>Sortieren:</strong> Klick auf einen Spaltenkopf sortiert nach dieser Spalte; erneutes Klicken kehrt die Reihenfolge um. Halte die <strong>Umschalttaste</strong> gedrückt, um eine weitere Spalte als Sekundär-Sortierung hinzuzufügen &ndash; aktive Spalten zeigen Pfeil und Reihenfolge-Nummer (z.B. <code>Album&darr;1</code>, <code>Künstler&uarr;2</code>). Mit <strong>Alt-Klick</strong> (Option) auf einen aktiven Spaltenkopf wird diese Spalte wieder aus der Sortierung entfernt. Rechtsklick auf einen Spaltenkopf bietet <em>Sortierung zurücksetzen</em>, um wieder nur nach der Hauptspalte zu sortieren. Jede Playlist sortiert für sich; ihre Spalte <strong>Nr.</strong> &ndash; die Position in der Playlist &ndash; führt zur ursprünglichen Reihenfolge zurück.</li>
 <li><strong>Laufender Titel:</strong> Ein Lautsprecher vor dem Titel zeigt, was gerade spielt. Die Markierung wandert beim Weiterschalten mit, solange sie auf dem laufenden Titel stand.</li>
-<li><strong>Spaltenbreite:</strong> Durch Ziehen an der Trennlinie im Spaltenkopf.</li>
+<li><strong>Spaltenbreite:</strong> Durch Ziehen an der Trennlinie im Spaltenkopf. Rechtsklick auf einen Spaltenkopf &gt; <em>Optimale Breite</em> passt alle Textspalten an ihren Inhalt an.</li>
+<li><strong>Bewerten:</strong> Bei einer sCollect-Mediathek klickst du in der Spalte <strong>Bewertung</strong> auf einen Stern: Der erste Klick setzt einen vollen Stern, der zweite einen halben, der dritte löscht die Bewertung. Mehrere Titel bewertest du zugleich: markieren, dann Rechtsklick &gt; <em>Bewertung</em>. Bei gescannten Ordnern und XML-Mediatheken zeigen die Sterne nur an.</li>
 
 <li><strong>Spaltenreihenfolge:</strong> Einen Spaltenkopf an eine andere Stelle ziehen.</li>
 
@@ -153,7 +156,7 @@
 </ul>
 
 <h3>Video abspielen</h3>
-<p>Filme werden in einem separaten Videofenster geöffnet; am Ende eines Films geht es mit dem nächsten Titel weiter. Tonspuren und Untertitel kannst du im Menü <strong>Wiedergabe</strong> umschalten. Mit <kbd>&#8984;&#8963;F</kbd> wechselst du in den Vollbildmodus.</p>
+<p>Filme werden in einem separaten Videofenster geöffnet; am Ende eines Films geht es mit dem nächsten Titel weiter, sofern <strong>Am Ende weiterspielen</strong> für seinen Medientyp eingeschaltet ist. Tonspuren und Untertitel kannst du im Menü <strong>Wiedergabe</strong> umschalten. Mit <kbd>&#8984;&#8963;F</kbd> wechselst du in den Vollbildmodus.</p>
 
 <h3>Externe Wiedergabe</h3>
 <p>Einige Formate werden von macOS bzw. AVFoundation nicht direkt unterstützt. sCollectPlay erkennt das und öffnet diese Dateien automatisch in einem externen Player:</p>
@@ -183,6 +186,9 @@
 <li><strong>Wiederholen (Liste):</strong> Wiederholt die gesamte Liste nach dem letzten Titel.</li>
 <li><strong>Wiederholen (Titel):</strong> Wiederholt den aktuellen Titel endlos.</li>
 </ul>
+
+<h3>Am Ende weiterspielen</h3>
+<p>Ob die Wiedergabe nach dem Ende eines Titels mit dem nächsten weitergeht, legst du <strong>pro Medientyp</strong> fest unter <strong>Einstellungen &gt; Wiedergabe/Playlist &gt; Am Ende weiterspielen</strong>. Standardmäßig ist das an für alle Tontypen und für Musikvideos, aus für Spielfilme, Serien, Heimvideos und Kamerafilme &ndash; ein Film bleibt dann an seinem Ende (oder an seiner Stopp-Marke) stehen. <strong>Wiederholen (Titel)</strong> wiederholt trotzdem. sCollectPlay merkt sich, was du hier umstellst; für alle anderen Medientypen gilt die Einstellung der Mediathek.</p>
 
 
 <h3>Apple Music Export</h3>

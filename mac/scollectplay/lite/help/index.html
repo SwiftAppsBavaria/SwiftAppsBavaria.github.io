@@ -75,12 +75,14 @@
 <ul>
 <li><strong>One source per session:</strong> In sCollectPlay Lite, a new folder replaces the current one, and nothing is restored on the next app launch.</li>
 <li><strong>MKV detection:</strong> Files with an <code>.mp4</code> extension that are actually MKV are detected by their EBML signature and tagged accordingly.</li>
-<li><strong>Classification by duration:</strong> A folder doesn&rsquo;t reveal whether a file is music or an audiobook. sCollectPlay Lite therefore sorts audio and video by length &ndash; audio: up to 10, 10&ndash;30, 30&ndash;60 and over 60 min; video: up to 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 and over 210 min. E-books and PDFs are recognized by their file extension. If the length can&rsquo;t be determined, a title is listed under “unknown length”.</li>
+<li><strong>Classification by content:</strong> sCollectPlay Lite sorts audio by what the file says about itself: <code>.m4b</code> files and titles with the genre Audiobook, Audio Theatre or Spoken Word (also in German, such as Hörbuch, Hörspiel or Kabarett) appear under “Audiobook”, podcasts and titles with the genre Podcast or Speech under “Podcast”, everything else under “Music”. It recognizes music videos, feature films and series by the media kind that iTunes, for example, writes into the file, and series also by “S01E02” in the file name. Movies that name a camera or carry a camera file name such as <code>IMG_1234</code> appear under “Camera”, all others under “Home Video”. E-books and PDFs are recognized by their file extension. The sidebar shows only types that contain something.</li>
+<li><strong>Choosing the type yourself:</strong> If a title is in the wrong place, drag it from the list onto another type in the sidebar &ndash; while you drag, the empty types appear there as well. sCollectPlay Lite remembers this for that file, including the next time it reads the folder; the file itself is not changed.</li>
 </ul>
 <p>Under <strong>Settings &gt; Library &gt; Scanned Folders</strong>, <em>Refresh</em> reads in only what has changed since the last read: new, modified and removed files. Faster: <strong>File &gt; Refresh Scanned Folders</strong> (<kbd>&#8984;R</kbd>) or the <strong>&#8635;</strong> button to the right of the search field. At the end, a message tells you what is new, changed or removed.</p>
 
 <h3>sCollect Library</h3>
 <p>Choose the main folder of a sCollect library (the folder that contains the <code>.scollect</code> bundle; for older libraries, the folder with <code>settings.json</code>). sCollectPlay Lite reads the library files, playlists, and settings directly &ndash; including configurable field labels and smart playlists. Selecting a sCollect library replaces an active folder scan. You can also double-click the <code>.scollect</code> bundle in the Finder to open the library.</p>
+<p>sCollectPlay Lite changes nothing in the library itself. When you rate a track or play music, an audiobook or a film to the end, it notes this with date and time in the file <code>rueckmeldungen.json</code> in the library folder &ndash; whether you opened the master or a copy. sCollect takes it over when the master is opened, before <strong>Project</strong>, and before <strong>Resolve Sync Errors&hellip;</strong>: for the rating the newer one wins, plays are added up. sCollect then writes the rating into the file and passes everything on to all copies. Until then, sCollectPlay Lite already shows its own ratings and plays.</p>
 
 <h3>iTunes/Apple Music XML</h3>
 <p>Choose a <code>Library.xml</code> file or a <code>.musiclibrary</code> bundle. sCollectPlay Lite parses tracks and playlists (standard and smart). System playlists (Master, Distinguished Kind) are skipped. sCollectPlay Lite takes the media types from the XML itself: Music, Audiobook, Podcast, Home Video, Feature Film, Series and Music Video. On open, you&rsquo;re asked once for access to the corresponding media folder so sCollectPlay Lite can reach the files.</p>
@@ -100,9 +102,10 @@
 <h3>Track List</h3>
 <ul>
 <li><strong>Columns:</strong> Which columns are shown is fixed in sCollectPlay Lite.</li>
-<li><strong>Sort:</strong> Click a column header to sort by that column; click again to reverse the order. Each playlist sorts on its own; its <strong>No.</strong> column &ndash; the position in the playlist &ndash; returns to the original order.</li>
+<li><strong>Sort:</strong> Click a column header to sort by that column; click again to reverse the order. Hold <strong>Shift</strong> to add another column as a secondary sort &ndash; active columns show an arrow and an order number (e.g. <code>Album&darr;1</code>, <code>Artist&uarr;2</code>). <strong>Option-click</strong> an active column header to remove that column from the sort again. Right-clicking a column header offers <em>Reset Sorting</em> to sort by the main column only. Each playlist sorts on its own; its <strong>No.</strong> column &ndash; the position in the playlist &ndash; returns to the original order.</li>
 <li><strong>Current track:</strong> A speaker in front of the title shows what is playing. The selection moves along when the next track starts, as long as it was on the playing track.</li>
-<li><strong>Column width:</strong> Drag the divider in the column header.</li>
+<li><strong>Column width:</strong> Drag the divider in the column header. Right-click a column header &gt; <em>Optimal Width</em> fits all text columns to their content.</li>
+<li><strong>Rating:</strong> With a sCollect library, click a star in the <strong>Rating</strong> column: the first click sets a full star, the second a half star, the third clears the rating. To rate several tracks at once, select them, then right-click &gt; <em>Rating</em>. With scanned folders and XML libraries the stars only show the rating.</li>
 </ul>
 
 <h3>Search</h3>
@@ -122,7 +125,7 @@
 </ul>
 
 <h3>Playing Video</h3>
-<p>Movies open in a separate video window; at the end of a movie, playback continues with the next track. Audio tracks and subtitles can be switched in the <strong>Playback</strong> menu. Use <kbd>&#8984;&#8963;F</kbd> to toggle full-screen mode.</p>
+<p>Movies open in a separate video window; at the end of a movie, playback continues with the next track, provided <strong>Continue playing at end</strong> is turned on for its media type. Audio tracks and subtitles can be switched in the <strong>Playback</strong> menu. Use <kbd>&#8984;&#8963;F</kbd> to toggle full-screen mode.</p>
 
 <h3>External Playback</h3>
 <p>Some formats are not natively supported by macOS / AVFoundation. sCollectPlay Lite detects this and opens these files automatically in an external player:</p>
@@ -152,6 +155,9 @@
 <li><strong>Repeat (List):</strong> Repeats the entire list after the last track.</li>
 <li><strong>Repeat (Track):</strong> Repeats the current track endlessly.</li>
 </ul>
+
+<h3>Continue playing at end</h3>
+<p>Whether playback continues with the next track after one ends is set <strong>per media type</strong> under <strong>Settings &gt; Playback/Playlist &gt; Continue playing at end</strong>. By default it is on for all audio types and for music videos, and off for feature films, series, home videos and camera videos &ndash; a movie then stops at its end (or at its stop marker). <strong>Repeat (Track)</strong> repeats regardless. sCollectPlay Lite remembers what you change here; for all other media types, the library&rsquo;s setting applies.</p>
 
 
 <h2 id="playlists">5. Playlists</h2>

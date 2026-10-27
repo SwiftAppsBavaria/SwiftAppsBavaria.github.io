@@ -75,12 +75,14 @@
 <ul>
 <li><strong>Una fuente por sesión:</strong> En sCollectPlay Lite, una carpeta nueva sustituye a la anterior y al iniciar de nuevo la aplicación no se restaura nada.</li>
 <li><strong>Detección de MKV:</strong> Los archivos con la extensión <code>.mp4</code> que en realidad son MKV se reconocen por su firma EBML y se marcan aparte.</li>
-<li><strong>Clasificación por duración:</strong> Una carpeta no revela si un archivo es música o un audiolibro. Por eso sCollectPlay Lite clasifica el audio y el vídeo según su duración &ndash; audio: hasta 10, 10&ndash;30, 30&ndash;60 y más de 60 min; vídeo: hasta 5, 5&ndash;20, 20&ndash;70, 70&ndash;210 y más de 210 min. Los e-books y los PDF se reconocen por la extensión del archivo. Si no se puede determinar la duración, el título aparece en «duración desconocida».</li>
+<li><strong>Clasificación por contenido:</strong> sCollectPlay Lite clasifica el audio según lo que el archivo dice de sí mismo: los archivos <code>.m4b</code> y los títulos con el género Audiobook, Audio Theatre o Spoken Word (también en alemán, como Hörbuch, Hörspiel o Kabarett) aparecen en «Audiolibro», los podcasts y los títulos con el género Podcast o Speech en «Podcast», y todo lo demás en «Música». Reconoce los videoclips, largometrajes y series por el tipo de medio que, por ejemplo, iTunes escribe en el archivo, y las series también por «S01E02» en el nombre del archivo. Las películas que indican una cámara o llevan un nombre de archivo de cámara como <code>IMG_1234</code> aparecen en «Cámara», todas las demás en «Vídeo casero». Los e-books y los PDF se reconocen por la extensión del archivo. La barra lateral solo muestra los tipos que contienen algo.</li>
+<li><strong>Elegir el tipo tú mismo:</strong> Si un título está en el lugar equivocado, arrástralo desde la lista a otro tipo de la barra lateral &ndash; mientras arrastras, allí aparecen también los tipos vacíos. sCollectPlay Lite lo recuerda para ese archivo, también la próxima vez que lea la carpeta; el archivo en sí no se modifica.</li>
 </ul>
 <p>En <strong>Ajustes &gt; Biblioteca &gt; Carpetas escaneadas</strong>, <em>Actualizar</em> solo lee lo que ha cambiado desde la última lectura: archivos nuevos, modificados y eliminados. Más rápido: <strong>Archivo &gt; Actualizar carpetas escaneadas</strong> (<kbd>&#8984;R</kbd>) o el botón <strong>&#8635;</strong> a la derecha del campo de búsqueda. Al final, un mensaje indica qué es nuevo, qué ha cambiado y qué se ha eliminado.</p>
 
 <h3>Biblioteca de sCollect</h3>
 <p>Elige la carpeta principal de una biblioteca de sCollect (la carpeta en la que se encuentra el paquete <code>.scollect</code>; en bibliotecas antiguas, la carpeta con <code>settings.json</code>). sCollectPlay Lite lee directamente los archivos de la biblioteca, las playlists y los ajustes &ndash; incluidas las etiquetas de campo configurables y las playlists inteligentes. La selección de una biblioteca sustituye un escaneo de carpetas activo. También puedes abrir la biblioteca haciendo doble clic en el paquete <code>.scollect</code> en el Finder.</p>
+<p>sCollectPlay Lite no cambia nada en la propia biblioteca. Si valoras una pista o reproduces música, un audiolibro o una película hasta el final, lo anota con fecha y hora en el archivo <code>rueckmeldungen.json</code> de la carpeta de la biblioteca &ndash; da igual que hayas abierto el master o una copia. sCollect lo adopta al abrir el master, antes de <strong>Proyectar</strong> y antes de <strong>Resolver errores de sincronización&hellip;</strong>: en la valoración gana la más reciente, las reproducciones se suman. Después sCollect escribe la valoración en el archivo y lo transmite todo a todas las copias. Hasta entonces, sCollectPlay Lite ya muestra sus propias valoraciones y reproducciones.</p>
 
 <h3>XML de iTunes/Apple Music</h3>
 <p>Elige un archivo <code>Library.xml</code> o un paquete <code>.musiclibrary</code>. sCollectPlay Lite analiza las pistas y las listas de reproducción (estándar e inteligentes). Las playlists del sistema (Master, Distinguished Kind) se omiten. sCollectPlay Lite toma los tipos de medio del propio XML: Música, Audiolibro, Podcast, Vídeo casero, Largometraje, Serie y Videoclip. Al abrirlo se te pide una sola vez la carpeta de medios correspondiente, para que sCollectPlay Lite pueda acceder a los archivos.</p>
@@ -100,9 +102,10 @@
 <h3>Lista de pistas</h3>
 <ul>
 <li><strong>Columnas:</strong> Las columnas visibles están predefinidas en sCollectPlay Lite.</li>
-<li><strong>Ordenar:</strong> Haz clic en un encabezado de columna para ordenar por esa columna; al volver a hacer clic se invierte el orden. Cada playlist se ordena por separado; su columna <strong>N.º</strong> &ndash; la posición en la playlist &ndash; vuelve al orden original.</li>
+<li><strong>Ordenar:</strong> Haz clic en un encabezado de columna para ordenar por esa columna; al volver a hacer clic se invierte el orden. Mantén pulsada la tecla <strong>Mayúsculas</strong> para añadir otra columna como orden secundario &ndash; las columnas activas muestran una flecha y un número de orden (por ej. <code>Álbum&darr;1</code>, <code>Artista&uarr;2</code>). Con <strong>Opción-clic</strong> en una cabecera activa, esa columna se quita de nuevo del orden. Al hacer clic derecho en una cabecera se ofrece <em>Restablecer orden</em>, para ordenar de nuevo solo por la columna principal. Cada playlist se ordena por separado; su columna <strong>N.º</strong> &ndash; la posición en la playlist &ndash; vuelve al orden original.</li>
 <li><strong>Pista en reproducción:</strong> Un altavoz delante del título indica lo que se está reproduciendo. La selección avanza al pasar a la pista siguiente, siempre que estuviera en la pista en reproducción.</li>
-<li><strong>Ancho de columna:</strong> Arrastrando la línea divisoria en el encabezado de columna.</li>
+<li><strong>Ancho de columna:</strong> Arrastrando la línea divisoria en el encabezado de columna. Clic derecho en un encabezado de columna &gt; <em>Ancho óptimo</em> ajusta todas las columnas de texto a su contenido.</li>
+<li><strong>Valorar:</strong> En una biblioteca de sCollect, haz clic en una estrella de la columna <strong>Valoración</strong>: el primer clic pone una estrella entera, el segundo media estrella, el tercero borra la valoración. Para valorar varias pistas a la vez, márcalas y luego clic derecho &gt; <em>Valoración</em>. En carpetas escaneadas y bibliotecas XML, las estrellas solo muestran la valoración.</li>
 </ul>
 
 <h3>Búsqueda</h3>
@@ -122,7 +125,7 @@
 </ul>
 
 <h3>Reproducir vídeo</h3>
-<p>Las películas se abren en una ventana de vídeo separada; al terminar una película, la reproducción continúa con la pista siguiente. Puedes cambiar las pistas de audio y los subtítulos en el menú <strong>Reproducción</strong>. Con <kbd>&#8984;&#8963;F</kbd> pasas al modo de pantalla completa.</p>
+<p>Las películas se abren en una ventana de vídeo separada; al terminar una película, la reproducción continúa con la pista siguiente, siempre que <strong>Seguir reproduciendo al final</strong> esté activado para su tipo de medios. Puedes cambiar las pistas de audio y los subtítulos en el menú <strong>Reproducción</strong>. Con <kbd>&#8984;&#8963;F</kbd> pasas al modo de pantalla completa.</p>
 
 <h3>Reproducción externa</h3>
 <p>Algunos formatos no son compatibles directamente con macOS o AVFoundation. sCollectPlay Lite lo detecta y abre estos archivos automáticamente en un reproductor externo:</p>
@@ -152,6 +155,9 @@
 <li><strong>Repetir (lista):</strong> Repite toda la lista después de la última pista.</li>
 <li><strong>Repetir (pista):</strong> Repite la pista actual indefinidamente.</li>
 </ul>
+
+<h3>Seguir reproduciendo al final</h3>
+<p>Si la reproducción continúa con la pista siguiente al terminar una, lo defines <strong>por tipo de medios</strong> en <strong>Ajustes &gt; Reproducción/Playlist &gt; Seguir reproduciendo al final</strong>. Por defecto está activado para todos los tipos de audio y para los vídeos musicales, y desactivado para largometrajes, series, vídeos caseros y vídeos de cámara &ndash; una película se detiene entonces en su final (o en su marca de fin). <strong>Repetir (pista)</strong> repite igualmente. sCollectPlay Lite recuerda lo que cambies aquí; para todos los demás tipos de medios se aplica el ajuste de la biblioteca.</p>
 
 
 <h2 id="playlists">5. Playlists</h2>
