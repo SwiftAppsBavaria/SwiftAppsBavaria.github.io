@@ -70,7 +70,7 @@
 <h3>Creating a New Library</h3>
 <div class="steps">
 <div class="step"><strong>Choose a folder:</strong> On first launch, you will be asked to choose a storage location. Select a folder where sCollect should store the library data. A <code>Media</code> subfolder will be created for your files; the library itself (entries, playlists, settings) is stored as a <code>.scollect</code> bundle in the same folder.</div>
-<div class="step"><strong>Review settings:</strong> The settings will open automatically on the &laquo;Library&raquo; tab. Here you can change the default media folder or set up separate folders for individual categories (e.g. a dedicated folder for movies on an external drive).</div>
+<div class="step"><strong>Review settings:</strong> The settings will open automatically on the &laquo;Library&raquo; tab. Under &laquo;Media Folder&raquo; you set separate folders for individual media types (e.g. a dedicated folder for movies on an external drive); without a folder of its own, the library&rsquo;s <code>Media</code> folder applies.</div>
 <div class="step"><strong>Import media:</strong> Import your first files via <strong>File &gt; Import Files&hellip;</strong> (<kbd>&#8984;O</kbd>) or <strong>File &gt; Import Folder&hellip;</strong> (<kbd>&#8679;&#8984;O</kbd>).</div>
 </div>
 
@@ -82,7 +82,7 @@
 </aside>
 
 <aside>
-<strong>Note:</strong> If the new library folder you pick contains leftovers from a previous library (detected by the presence of a <code>.slaves/</code> directory), sCollect shows a confirmation dialog with the number of formerly registered copies. On confirmation, reachable copies are detached automatically from the old master, and the <code>.slaves/</code> registry is then removed. Unreachable copies keep their binding to the old master and may need to be repaired manually.
+<strong>Note:</strong> If the new library folder you pick contains leftovers from a previous library (detected by the list of its copies still stored there), sCollect shows a confirmation dialog with the number of formerly connected copies. On confirmation, reachable copies are detached automatically from the old master, and the list of copies is then removed. Unreachable copies keep their binding to the old master and may need to be repaired manually.
 </aside>
 
 
@@ -94,12 +94,12 @@
 <tr><th>Category</th><th>Default Media Types</th></tr>
 <tr><td>Audio</td><td>Music, Audiobook, Podcast, Sound Recording (+ 6 customizable)</td></tr>
 <tr><td>Book</td><td>E-book, PDF (+ 8 customizable)</td></tr>
-<tr><td>Movie</td><td>Home Video, Feature Film, Series, Camera (+ 6 customizable)</td></tr>
+<tr><td>Movie</td><td>Home Video, Feature Film, Series, Camera, Music Video (+ 5 customizable)</td></tr>
 <tr><td>Miscellaneous</td><td>Coin, Model, Stamp, Photo (+ 6 customizable)</td></tr>
 </table>
 <p>The labels can be changed in the settings (tabs &laquo;Category Labels&raquo; and &laquo;Field Labels&raquo;).</p>
 
-<p><strong>Camera</strong> and <strong>Photo</strong> are meant for your own recordings &ndash; camera and phone videos, and photos including RAW. Photos sit under <em>Miscellaneous</em> because only that category takes images. Both file their files by capture date from the start, and both carry the fields <em>Camera</em> and <em>Lens</em> (see <a href="#metadata">section 5</a>). You can rename them: where the import puts camera videos and images does not depend on the name but on filing by date (see <a href="#import">section 3</a>). For your own sound recordings there is the <strong>Sound Recording</strong> type under <em>Audio</em>, likewise filed by capture date from the start; there the fields include <em>Device</em> and <em>Microphone</em>.</p>
+<p><strong>Camera</strong> and <strong>Photo</strong> are meant for your own recordings &ndash; camera and phone videos, and photos including RAW. Photos sit under <em>Miscellaneous</em> because only that category takes images. Both file their files by capture date from the start, and both carry the fields <em>Camera</em> and <em>Lens</em> (see <a href="#metadata">section 5</a>). You can rename them: where the import puts camera videos and images does not depend on the name but on filing by date (see <a href="#import">section 3</a>). For your own sound recordings there is the <strong>Sound Recording</strong> type under <em>Audio</em>, likewise filed by capture date from the start; there the fields include <em>Device</em> and <em>Microphone</em>. Music videos have their own type <strong>Music Video</strong> under <em>Movie</em>; its fields are named as for music (Artist, Album, Composer).</p>
 <p><strong>The two terms precisely:</strong> A <em>category</em> is one of the four fixed umbrella terms &ndash; Audio, Book, Film, Miscellaneous. A <em>media type</em> (type for short) is what you actually collect: Music, Audiobook, Podcast, E-Book, Feature Film and so on. Music, Audiobook and Podcast therefore all sit in the same <em>Audio</em> category. Wherever a function asks you for a scope &ndash; such as &laquo;Organize Library&raquo; or &laquo;Check for Missing Files&raquo; &ndash; you pick <strong>types</strong>: that is the only way to treat music separately from audiobooks. The category above them is there for expanding and collapsing, and toggles all of its types at once.</p>
 
 <h3>Sidebar</h3>
@@ -129,10 +129,22 @@
 <ul>
 <li><strong>Metadata:</strong> same title and artist with a similar duration. Differing disc or track numbers within the same album rule out a duplicate; for audiobooks, differing album titles do as well.</li>
 <li><strong>File content:</strong> same file size and same beginning of the file.</li>
-<li><strong>Deep scan for identical audio:</strong> recognises the same recording even when the tags differ completely. It reads considerably more from disk and can therefore be controlled in the settings under <strong>Duplicates</strong> &ndash; &laquo;automatic&raquo; turns it off on network volumes.</li>
+<li><strong>Deep scan for identical audio:</strong> recognises the same recording even when the tags differ completely. It reads considerably more from disk and can therefore be controlled under <strong>Settings &gt; General &gt; Duplicates</strong> &ndash; &laquo;automatic&raquo; turns it off on network volumes.</li>
 <li><strong>Orphaned entries:</strong> an entry whose file is missing is attached to an existing sibling with the same base title in the same folder. That is the typical leftover after renaming &laquo;Title&raquo; to &laquo;Title (2)&raquo;.</li>
 </ul>
 <p>So that the comparison does not rest on wrong information, sCollect reads the tags of the candidate files beforehand and corrects diverging library values. Without this, faulty disc numbers could make different discs of an audiobook look identical.</p>
+
+<h4>Which entry stays</h4>
+<p>For each group, sCollect proposes keeping the entry that comes first in the following order. The sorting of the list plays no part in this.</p>
+<ol>
+<li><strong>File present</strong> beats file missing.</li>
+<li><strong>Resolution:</strong> a version below CD quality &ndash; below 44.1&nbsp;kHz or below 16&nbsp;bit &ndash; loses, even if it is lossless. Lossless only means that the file reproduces its source unchanged; if the source was worse, so is the file.</li>
+<li><strong>Lossless</strong> (WAV, AIFF, FLAC, ALAC &ndash; also inside an .m4a file) beats lossy (MP3, AAC and others).</li>
+<li>Between two lossy versions, the higher <strong>bitrate</strong> wins, then the higher sample rate. Between two lossless ones, the higher <strong>sample rate</strong> wins, then the greater <strong>bit depth</strong>.</li>
+<li>At equal quality, an entry in the library stays ahead of a linked one, then the one with more traces of editing (rating, plays, maintained fields), and finally the one added earlier.</li>
+</ol>
+<p>If a group holds a linked entry and an entry in the library of differing quality, sCollect proposes neither &ndash; usually that is intentional. Rules 2 to 4 also determine the preselection in the &laquo;Duplicates found during import&raquo; window.</p>
+<p>sCollect reads bit depth and codec during import. For older entries, <strong>File &gt; Library &gt; Fill In Bitrate Mode</strong> adds them; until then, the file extension decides for them. A lossless file that was created from an MP3 is not given away by anything in the file.</p>
 
 <h4>The duplicates view</h4>
 <p>In the list, every entry proposed as a duplicate is <strong>tinted</strong> &ndash; one entry per group stays. The proposals are also <strong>selected</strong>; you can change the selection freely. A narrow status column adds two hints: a <strong>chain</strong> when several entries point at the same file, and a <strong>warning triangle</strong> when an entry's file is missing. The two can overlap.</p>
@@ -140,7 +152,7 @@
 
 <p><strong>Delete selection</strong> asks first and then moves the selected entries together with their files to the App Trash (undo with <kbd>&#8984;Z</kbd>). If a selected entry points at a file that a remaining entry still needs, or if its file is missing, only the entry goes &ndash; the confirmation names these cases separately. If the selection covers a group completely, the button is disabled.</p>
 <p>You can also select entries yourself and delete them. Which entry stays per group is decided continuously &ndash; if you delete some by hand in between, another one takes its place, and no group ever loses all of its entries. &laquo;Exit Duplicates View&raquo; returns to the normal list.</p>
-<p>The <strong>duration tolerance</strong> can be changed right in the blue bar (0 to 5 seconds). After a change, <strong>Search</strong> next to it becomes active; only a click on it or <kbd>&#8617;</kbd> searches the same set again &ndash; the whole category or the selection the duplicates view came from. The value also applies in Settings under <strong>Duplicates</strong> and to the check during import.</p>
+<p>The <strong>duration tolerance</strong> can be changed right in the blue bar (0 to 5 seconds). After a change, <strong>Search</strong> next to it becomes active; only a click on it or <kbd>&#8617;</kbd> searches the same set again &ndash; the whole category or the selection the duplicates view came from. The value also applies under <strong>Settings &gt; General &gt; Duplicates</strong> and to the check during import.</p>
 
 
 <h2 id="import">3. Importing Media</h2>
@@ -148,8 +160,8 @@
 <h3>Importing Files</h3>
 <p>Choose <strong>File &gt; Import Files&hellip;</strong> (<kbd>&#8984;O</kbd>) to select individual files. Supported formats:</p>
 <ul>
-<li><strong>Audio:</strong> MP3, M4A, AAC, FLAC, WAV, AIFF, AIF, ALAC, CAF</li>
-<li><strong>Video:</strong> MP4, M4V, MOV</li>
+<li><strong>Audio:</strong> MP3, M4A, M4B, AAC, ALAC, FLAC, WAV, AIFF, CAF, OGG, Opus, WavPack, DSD (DSF, DFF), WMA</li>
+<li><strong>Video:</strong> MP4, M4V, MOV, plus MKV, WebM, AVI, WMV, FLV, MPEG, VOB and DivX (these are played by an external player, see <a href="#playback">section 6</a>)</li>
 <li><strong>Books:</strong> PDF, EPUB</li>
 <li><strong>Miscellaneous:</strong> images of every kind (JPG, HEIC, PNG, TIFF, WEBP, GIF, BMP, RAW as well), comics (CBZ, CBR), e-books (MOBI, AZW, DJVU) and texts (TXT, RTF, DOC, DOCX). sCollect sorts music, films and books you import here into their own category. Other files can be added to an item in the editor under <strong>Attachments</strong>.</li>
 </ul>
@@ -180,10 +192,10 @@
 
 <p>If a file cannot be taken into the library while copying or moving, sCollect creates <strong>no entry</strong> for it. The file stays unchanged where it is, and a message names it together with the reason.</p>
 
-<p>If an audio file names no track or disc number, sCollect reads it from the file or folder name during import &ndash; such as &ldquo;&hellip; - 01-04&rdquo; (disc 1, track 4), &ldquo;04 - Song&rdquo; or a folder &ldquo;CD 2&rdquo; &ndash; and writes it into the file. This way the parts of an audiobook that all carry the same title are not treated as duplicates. Numbers the file already names are kept.</p>
+<p>If an audio file names no track or disc number, sCollect reads it from the file or folder name during import &ndash; such as &ldquo;&hellip; - 01-04&rdquo; (disc 1, track 4), &ldquo;04 - Song&rdquo; or a folder &ldquo;CD 2&rdquo; &ndash; and writes it into the file, except for files that were added with <strong>Leave in Place</strong>. <strong>Organize Library</strong> does the same for audio files it newly takes in from the media folder. This way the parts of an audiobook that all carry the same title are not treated as duplicates. Numbers the file already names are kept.</p>
 
 <h3>Duplicate Detection</h3>
-<p>During import, sCollect automatically checks for duplicates (same title + artist, or same filename). If duplicates are found, a dialog appears where you can decide:</p>
+<p>During import, sCollect automatically checks for duplicates: same title and artist with a similar duration, or same file size and same beginning of the file. The check can be turned off under <strong>Settings &gt; General &gt; Duplicates</strong>. If duplicates are found, a dialog appears where you can decide:</p>
 <ul>
 <li><strong>Import all:</strong> Imports all files, including duplicates.</li>
 <li><strong>Skip duplicates:</strong> Only imports files that are not already in the library.</li>
@@ -196,7 +208,7 @@
 
 <p><strong>Date-sorted filing:</strong> For media types where the moment matters more than the artist &ndash; photos, home videos, collections &ndash; you can choose filing by date in the settings instead. The files then land in year and month folders, and the file name carries the moment. The capture date governs where the file carries one; otherwise the item's date. For the <strong>Camera</strong>, <strong>Photo</strong> and <strong>Sound Recording</strong> types this filing is set from the start. It also decides where camera videos and images go when you have not chosen a type: into the topmost type of their category that is filed by date. Under <strong>Settings &gt; Library</strong> a symbol next to the media folder marks that type.</p>
 
-<p><strong>Tidying up titles on import:</strong> When sCollect derives a title from the file name, the camera's name often sits in front and a date behind it &ndash; something like <code>IMG_20240115 Urlaub</code>. Four switches under <strong>Settings &gt; Import (when sorting by date)</strong> tidy that up. They only take effect <em>for media types with date-sorted filing</em>: anyone who wants to keep <code>IMG</code> or <code>20250401</code> in the name sorts alphabetically anyway.</p>
+<p><strong>Tidying up titles on import:</strong> When sCollect derives a title from the file name, the camera's name often sits in front and a date behind it &ndash; something like <code>IMG_20240115 Urlaub</code>. Four switches under <strong>Settings &gt; Library &gt; Import (when sorting by date)</strong> tidy that up. They only take effect <em>for media types with date-sorted filing</em>: anyone who wants to keep <code>IMG</code> or <code>20250401</code> in the name sorts alphabetically anyway.</p>
 <ul>
 <li><strong>Remove camera prefix from derived titles</strong> &ndash; on by default. <code>IMG_20240115 Urlaub</code> becomes <code>20240115 Urlaub</code>. Only what sticks to the date without a space <em>and</em> appears in the list of known camera names is removed: <code>Sam 2024-01-15 Konzert</code> stays untouched.</li>
 <li><strong>Remove date from derived titles</strong> &ndash; on by default. That becomes <code>Urlaub</code>.</li>
@@ -277,7 +289,13 @@
 </ul>
 
 <p>For movies, a note about the <em>time zone</em> sometimes appears next to the source. The moment in the container carries no zone information: the standard reads it as UTC, but not every camera writes it that way. On import, sCollect therefore compares the time in the container with the file's creation date &ndash; both come from the same camera clock, and their distance yields the reading. &laquo;no time zone&raquo; means: the case is open, the date is right, the time of day may be off by the zone offset. &laquo;local time&raquo; means: the camera has been recognised, and the moment meant stands right beside it. <strong>The file is not changed in the process</strong> &ndash; the reading is a piece of information, not an intervention.</p>
+
+<p><strong>Time of camera films:</strong> How a camera means its recording time is recalculated by sCollect from the camera data on every import and every organize run. iPhone and Sony store UTC plus the local time with time zone; Panasonic and Nikon store the time set on the camera. This yields the time in the file name of date-sorted filing and the addition to the title &ndash; as local time or, when the switch <strong>Convert film times to local time</strong> under <strong>Settings &gt; Library &gt; Import (when sorting by date)</strong> is off, as UTC. The comparison with the creation date now only applies to cameras whose file says nothing about it. If the time in the file name does not match the recording, the File tab shows it (&laquo;in the file name&raquo;); <strong>Organize Library</strong> then renames the file, the title stays. <strong>The film file is never changed in the process</strong> &ndash; its recording date only changes when it is set by hand here in the File tab.</p>
 <p>All four are written only when you <strong>save</strong>, like any other field.</p>
+
+
+<h3>Checking and Correcting the Timeline</h3>
+<p>Some movies &ndash; often from cameras or from interrupted recordings &ndash; contain stretches without picture or sound data. The displayed length is then wrong, and a player is off at the end. On the <strong>File Info</strong> tab, <strong>Check</strong> under <strong>Timeline</strong> measures the movie; the line next to it gives the result (&laquo;Checked: no stalls.&raquo; or the length of the idle stretch). If there is something to correct, the button reads <strong>Apply correction</strong>: the movie becomes shorter by the idle stretch, picture and sound stay complete, on all connected copies too; this cannot be undone. For several movies, the context menu offers <strong>Correct Timeline&hellip;</strong>. Linked and copy-protected movies are not changed.</p>
 
 
 <h3>Camera and Lens</h3>
@@ -286,7 +304,7 @@
 
 
 <h3>Copy-Protected Media</h3>
-<p>A purchased audiobook, a rented movie, a book with DRM: nobody may write into such files &ndash; a tag write would at best leave them unusable. sCollect detects the protection when opening the item and <strong>does not touch the file</strong>. Detected are, for books, the encryption of a PDF, Adobe DRM, Apple FairPlay, Readium LCP and EPUBs whose chapters are not readable text; for music and movies, Apple FairPlay and the widespread container encryption (Common Encryption).</p>
+<p>A purchased audiobook, a rented movie, a book with DRM: nobody may write into such files &ndash; writing into the file would at best leave it unusable. sCollect detects the protection when opening the item and <strong>does not touch the file</strong>. Detected are, for books, the encryption of a PDF, Adobe DRM, Apple FairPlay, Readium LCP and EPUBs whose chapters are not readable text; for music and movies, Apple FairPlay and the widespread container encryption (Common Encryption).</p>
 <p>You can still edit such an item. What you enter goes into a <strong>sidecar file</strong> with the extension <strong>.xmp</strong> that sits next to the file. In the editor you see this in two places on the <strong>File Info</strong> tab: in the note &ndash; <em>&laquo;Copy-protected file: the details are stored in a sidecar file (.xmp) next to it; the file itself stays unchanged.&raquo;</em>, for a book <em>&laquo;Protected book: the details are stored in a sidecar file (.xmp) next to it; the book itself stays unchanged.&raquo;</em> &ndash; and in the tag format, which then reads <strong>Sidecar (XMP)</strong> together with the kind of protection.</p>
 <p>The sidecar file belongs to the item and stays with it: if you rename the title, it travels along; it lies on every copy of the library just the same. Because nothing is stored in the file itself, the comparison with the file reports no deviation here either. sCollect places artwork next to it in the same way, as <code>&lt;name&gt;-cover.jpg</code> (for movies <code>&lt;name&gt;-poster.jpg</code>), and it belongs to the item just the same.</p>
 <p>Two things are missing for protected media, and both for the same reason &ndash; they require the content to be readable: the <strong>capture date from the file</strong> and the <strong>thumbnail from a movie frame</strong>. On playing them see <a href="#playback">Playback</a> (section 6).</p>
@@ -312,15 +330,15 @@
 <p>Select multiple entries and press <kbd>&#8984;I</kbd>. The batch editor shows only fields that can be changed for all selected entries at once. A checkbox next to each field controls whether it will be written &ndash; only checked fields are saved.</p>
 
 <h3>Field Operations</h3>
-<p>For advanced editing, select the entries and choose <strong>Edit &gt; Find/Replace&hellip;</strong> (<kbd>&#8997;&#8984;F</kbd>) or use the context menu. This opens the <strong>Field Operations</strong> window with the following tools:</p>
+<p>For advanced editing, select the entries and choose <strong>Edit &gt; Find/Replace&hellip;</strong> (<kbd>&#8997;&#8984;F</kbd>) or use the context menu. This opens the <strong>Field Operations</strong> window. On the left you choose the tool:</p>
 <ul>
-<li><strong>Find &amp; Replace:</strong> Search and replace text in one or more fields.</li>
+<li><strong>Find/Replace:</strong> Search and replace text in one or more fields.</li>
 <li><strong>Swap/Copy Fields:</strong> Swap the contents of two fields (e.g. Artist &#8596; Album Artist) &ndash; or take the value of one field <em>one-way</em> into the other. The button names the direction (e.g. &laquo;Title &#8594; Comment&raquo;) so it is visible which field gets overwritten. Associated sort fields are carried along automatically. <strong>Copying asks first</strong>, because it cannot be undone: the target loses its previous content, and where the source is empty the target is emptied too.</li>
 <li><strong>Append to Title:</strong> Add text to the beginning or end of the title.</li>
 <li><strong>Date to Title:</strong> Insert the file&rsquo;s modification date into the title.</li>
 <li><strong>Split:</strong> Split a field&rsquo;s content at a separator into two target fields (copy or cut the source field). Numeric fields (track/disc/movement number, year) are supported; entries without a parseable number are skipped.</li>
 <li><strong>Separate name &amp; sorting:</strong> Resolves a comma sort form (e.g. &laquo;Lennon, John&raquo;) in entries with an empty sort field: the original value moves into the sort field, and the name field (Title, Artist, Album Artist, Album or Composer) is flipped into natural order (&laquo;John Lennon&raquo;). Ambiguous cases with multiple commas are unchecked initially.</li>
-<li><strong>Numbers from File Name:</strong> The same for tracks that are already in the library: fills empty track and disc numbers from the file and folder name and writes them into the file. It reads the name of the original; a copied file carries the name sCollect gave it in the library &ndash; if the number was only in the old name, import the folder again.</li>
+<li><strong>Numbers from File Name:</strong> for audio files that are already in the library, fills empty track and disc numbers from the file and folder name (like the import, see <a href="#import">section 3</a>) and writes them into the file &ndash; except for files that were added with <strong>Leave in Place</strong>. It reads the name of the original; a copied file carries the name sCollect gave it in the library &ndash; if the number was only in the old name, import the folder again.</li>
 </ul>
 
 <h3>Rating and Favorites</h3>
@@ -352,7 +370,7 @@
 </ul>
 
 <h3>Playing Video</h3>
-<p>Movies open in a separate video window; at the end of a movie, playback continues with the next track, provided <strong>Continue playing at end</strong> is turned on for its media type. The controls appear automatically when you move the mouse. You can switch audio tracks and subtitles in the &laquo;Playback&raquo; menu if the file contains multiple tracks. If you resize the video window by hand, sCollect keeps that width for the following movies as well; the height follows the aspect ratio of each movie. <strong>Playback &gt; 100 %</strong> returns to the original size.</p>
+<p>Movies open in a separate video window; at the end of a movie, playback continues with the next track, provided <strong>Continue playing at end</strong> is turned on for its media type. The controls appear automatically when you move the mouse. You choose the audio track and subtitles under <strong>Playback &gt; Audio Track</strong> or <strong>Playback &gt; Subtitles</strong>, or with the two buttons in the video window&rsquo;s control bar. The audio track choice appears from two audio tracks on, the subtitle choice from a single subtitle track on; there <strong>Off</strong> turns them off. While the control bar is shown, subtitles move up above it. <kbd>&#8984;W</kbd> closes the video window like its close button. If you resize the video window by hand, sCollect keeps that width for the following movies as well; the height follows the aspect ratio of each movie. <strong>Playback &gt; 100 %</strong> returns to the original size.</p>
 
 <h3>External Playback</h3>
 <p>Some formats are not natively supported by macOS / AVFoundation. sCollect detects this and opens these files automatically in an external player:</p>
@@ -367,7 +385,7 @@
 <p>One common case of this kind sCollect corrects right at import: MP3 audio in an MP4 container missing a descriptor field macOS expects. The change touches <strong>19 bytes</strong> in the container &ndash; picture, sound, length, chapters and all tags stay untouched &ndash; and afterwards the file plays everywhere, not only in sCollect. A line in the log names every such case.</p>
 
 <p><strong>Copy-protected files</strong> sCollect always hands outside without checking them first: to the application macOS provides for them &ndash; for purchased titles, for example, to <strong>TV</strong> or <strong>Music</strong>. Only there is the key with which they can be played at all.</p>
-<p>The preferred player is detected automatically: <strong>VLC</strong>, <strong>IINA</strong> or <strong>MPV</strong> (in that order). You can override the choice in <strong>Settings &gt; Playback/Playlist &gt; External player for unsupported codecs</strong>. If none of these players are installed, sCollect falls back to the default app for the format &ndash; we recommend <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (free, open source).</p>
+<p>Without a choice of your own, sCollect opens such files with the application the Finder provides for them. If <strong>VLC</strong>, <strong>IINA</strong> or <strong>MPV</strong> is installed, sCollect offers it for selection in the welcome window and under <strong>Settings &gt; Playback/Playlist &gt; External player for unsupported codecs</strong> &ndash; we recommend <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (free, open source).</p>
 
 <aside>
 <strong>Note:</strong> On first launch, sCollect shows a welcome text with this information. Tick &laquo;Don&rsquo;t show again&raquo; to suppress it in future.
@@ -382,6 +400,7 @@
 <tr><td><kbd>&#8997;&#8984;&#8593;</kbd></td><td>Volume Up</td></tr>
 <tr><td><kbd>&#8997;&#8984;&#8595;</kbd></td><td>Volume Down</td></tr>
 <tr><td><kbd>&#8963;&#8984;F</kbd></td><td>Full Screen</td></tr>
+<tr><td><kbd>&#8984;W</kbd></td><td>Close Video Window</td></tr>
 </table>
 <p>These commands are also available in the <strong>Playback</strong> menu; you can find all keyboard shortcuts in <a href="#shortcuts">Chapter 12</a>.</p>
 
@@ -393,16 +412,16 @@
 </ul>
 
 <h3>Continue playing at end</h3>
-<p>Whether playback continues with the next track after one ends is set <strong>per media type</strong> under <strong>Settings &gt; Playback/Playlist &gt; Continue playing at end</strong>. By default it is on for all audio types and for music videos, and off for feature films, series, home videos and camera videos &ndash; a movie then stops at its end (or at its stop marker). <strong>Repeat (Track)</strong> repeats regardless.</p>
+<p>Whether playback continues with the next track after one ends is set <strong>per media type</strong> under <strong>Settings &gt; Playback/Playlist &gt; Continue playing at end</strong>. By default it is on for all audio types and for music videos, and off for all other movie types (Feature Film, Series, Home Video, Camera and your own) &ndash; a movie then stops at its end (or at its stop marker). <strong>Repeat (Track)</strong> repeats regardless.</p>
 
 <h3>Remember playback position</h3>
-<p>sCollect can remember the last playback position for each entry and resume there next time &ndash; just like an audiobook or Podcast. Whether a position is remembered is set <strong>globally per media type</strong> under <strong>Settings &gt; Playback/Playlist &gt; Remember playback position</strong> (on by default for audiobooks, podcasts, and movies; off for music).</p>
+<p>sCollect can remember the last playback position for each entry and resume there next time &ndash; just like an audiobook or Podcast. Whether a position is remembered is set <strong>globally per media type</strong> under <strong>Settings &gt; Playback/Playlist &gt; Remember playback position</strong> (on by default for all movie types and all audio types except music &ndash; so also for audiobooks, podcasts and sound recordings &ndash;; off for music).</p>
 <p>When playback resumes at a remembered position, the <strong>&laquo;From the beginning&raquo;</strong> button appears briefly &ndash; one click starts the track from the beginning instead.</p>
 
 <h3>Fixed start and stop markers</h3>
 <p>In the metadata editor, on the <strong>File Info</strong> tab, section <strong>Playback</strong>, you can set fixed markers: the entry then plays only from <strong>Start</strong> to <strong>Stop</strong> &ndash; handy for skipping an intro or silence at the end. Enter times in <code>MMM:SS</code> format, with thousandths after the comma (e.g. <code>3:45,500</code>). The <strong>&laquo;Apply&raquo;</strong> button sets the respective field to the current playback position.</p>
 <aside>
-<strong>Note:</strong> The playback position and start/stop also apply to external playback (VLC, IINA, MPV). If copies of this library are set up, the position and markers are synced with them automatically &ndash; you can pause on one device and resume on another.
+<strong>Note:</strong> Start/stop and the remembered position also apply to external playback of movies when VLC, IINA or MPV is selected under <strong>Settings &gt; Playback/Playlist</strong>. If copies of this library are set up, the position and markers are synced with them automatically &ndash; you can pause on one device and resume on another.
 </aside>
 
 <h3>Create trimmed copy</h3>
@@ -412,9 +431,9 @@
 
 
 <h3>Combining movies and tracks</h3>
-<p>sCollect can combine several movies &ndash; say, the clips from a day out &ndash; into one new movie, and several audio files &ndash; say, the parts of an audiobook &ndash; into one track. Select at least two entries of the same category, right-click them and choose <strong>&laquo;Combine into One Movie…&raquo;</strong> or <strong>&laquo;Combine into One Track…&raquo;</strong>. In the window that follows, you set the title and the order; the suggested order is by date, then by title.</p>
-<p>Combining is always <strong>lossless</strong>, without re-encoding. That works when the files match technically: the same format group (MP4/M4V/MOV, M4A/M4B, AIFF, WAV or CAF), the same codec, the same resolution and the same audio format &ndash; typical for recordings from the same camera. If they don’t match, sCollect tells you why. For MP3 and formats such as MKV, AVI or WebM the menu item is dimmed.</p>
-<p>The new entry takes its info, artwork and capture date from the first one; the individual files remain unchanged. With AAC audio (M4A/M4B) a tiny pause of about 0.05 seconds remains at each join &ndash; the encoder’s lead-in, which can’t be removed without re-encoding.</p>
+<p>sCollect can combine several movies &ndash; say, the clips from a day out &ndash; into one new movie, and several audio files &ndash; say, the parts of an audiobook &ndash; into one track. Select at least two movies or at least two audio files, right-click them and choose <strong>&laquo;Combine into One Movie…&raquo;</strong> or <strong>&laquo;Combine into One Track…&raquo;</strong>. In the window that follows, you set the title and the order; the suggested order is by date, then by title.</p>
+<p>Combining is always <strong>lossless</strong>, without converting. That works when the files match technically: the same format group (MP4/M4V/MOV, M4A/M4B, AIFF, WAV or CAF), the same codec, the same resolution and the same audio format &ndash; typical for recordings from the same camera. If they don’t match, sCollect tells you why. Apple Lossless (ALAC) cannot be combined losslessly; sCollect tells you that, too, after the click. For MP3 and formats such as MKV, AVI or WebM the menu item is dimmed.</p>
+<p>The new entry takes its info, artwork and capture date from the first one; the individual files remain unchanged. With AAC audio (M4A/M4B) a tiny pause of about 0.05 seconds remains at each join &ndash; the encoder’s lead-in, which can’t be removed without converting.</p>
 
 <h3>Apple Music Export</h3>
 <p>Playlists can be sent to Apple Music: right-click a playlist in the sidebar and choose &laquo;Send Playlist to Apple Music&raquo;. Alternatively, you can find this option in the menu under <strong>File &gt; Send Playlist to Apple Music&hellip;</strong></p>
@@ -423,7 +442,7 @@
 <h2 id="playlists">7. Playlists</h2>
 
 <h3>Standard Playlists</h3>
-<p>You create a new playlist with the <strong>+</strong> next to the &laquo;Playlists&raquo; heading in the sidebar, and a folder for playlists with the folder icon beside it. Entries go in by drag &amp; drop from the media list or via the context menu &laquo;Add to Playlist&raquo;; &laquo;Remove from playlist only&raquo; takes them out again without deleting them from the library.</p>
+<p>When you point at the &laquo;Playlists&raquo; heading in the sidebar, three buttons appear next to it: <strong>+</strong> for a new playlist, the gear for a smart playlist and the folder icon for a folder. Entries go in by drag &amp; drop from the media list or via the context menu &laquo;Add to Playlist&raquo;; &laquo;Remove from playlist only&raquo; takes them out again without deleting them from the library.</p>
 
 <p>A playlist under a category (such as Audio) only accepts entries of that category. For a mixed list, use the playlists at the very bottom of the sidebar. When you delete a playlist or a folder, sCollect asks first; a folder takes its playlists with it, while the entries themselves remain in the library.</p>
 
@@ -448,7 +467,7 @@
 <p>The column browser can be shown in a playlist too &ndash; with the toggle at the top right above the list or with <strong>View &gt; Show/Hide Column Browser</strong> (<kbd>&#8984;B</kbd>). It only shows values from the tracks in that playlist. Each playlist remembers its selection in the browser; whether the browser is shown, however, applies to all lists together.</p>
 
 <h3>Smart Playlists</h3>
-<p>Smart playlists are automatically populated based on rules. Create one via <strong>File &gt; New Smart Playlist&hellip;</strong> (<kbd>&#8997;&#8984;N</kbd>) or the gear button next to the &laquo;Playlists&raquo; heading &ndash; at the very bottom of the sidebar or under a category. A smart playlist under a category only evaluates that category&rsquo;s entries. Rules can be combined:</p>
+<p>Smart playlists are automatically populated based on rules. Create one via <strong>File &gt; New Smart Playlist&hellip;</strong> (<kbd>&#8997;&#8984;N</kbd>) or the gear button that appears next to the &laquo;Playlists&raquo; heading as soon as you point at it &ndash; at the very bottom of the sidebar or under a category. A smart playlist under a category only evaluates that category&rsquo;s entries. Rules can be combined:</p>
 <ul>
 <li><strong>Text fields:</strong> Title, Artist, Album, Genre, etc. (contains, starts with, ends with, is&hellip;)</li>
 <li><strong>Numeric fields:</strong> Year, Rating, Plays, Duration (is, is greater than, is less than&hellip;)</li>
@@ -502,7 +521,7 @@
 <p><strong>If such a folder is unreachable</strong> &ndash; the drive is disconnected, the network volume not mounted &ndash; sCollect <em>locks</em> that media type: nothing is written, nothing moved and nothing synchronised, and the entries stay unchanged. That is deliberate. A media type whose folder is missing would otherwise silently end up in the default folder, and afterwards the library would no longer know where the files belong.</p>
 <p>A warning banner names the affected types, and in the settings the folder is shown with a note that it is currently unreachable. Reconnect the drive and the lock ends by itself.</p>
 
-<p><strong>Redirecting:</strong> If you choose a <em>different</em> folder for a media type while the previous one is unreachable, nothing can be moved &ndash; the files are out of reach. sCollect then offers to redirect the <em>entries</em> to the new folder: it searches there for every file, first by the previous path, then by file name, and shows you a preview with three numbers beforehand &ndash; found by path, found by file name, still without a file. <strong>Redirecting changes only the library, not a single file.</strong></p>
+<p><strong>Redirect to New Folder:</strong> If you choose a <em>different</em> folder for a media type while the previous one is unreachable, nothing can be moved &ndash; the files are out of reach. sCollect then offers to redirect the <em>entries</em> to the new folder: it searches there for every file, first by the previous path, then by file name, and shows you a preview with three numbers beforehand &ndash; found by path, found by file name, still without a file. <strong>Redirecting changes only the library, not a single file.</strong> sCollect offers the same when opening the library if entries of a type still point to the old folder although a new one is set: <strong>Redirect to New Folder&hellip;</strong> takes you through the same preview for each type, <strong>Later</strong> asks again at the next opening. If the preview finds nothing, first move the contents of the old folder into the new one in the Finder and then redirect.</p>
 
 <h3>Finding Missing Files</h3>
 <p>If files have been moved or the drive was not connected, you can run a check via <strong>Settings &gt; Library &gt; Check for Missing Files</strong>. sCollect will show all unreachable entries; <strong>Search Folder&hellip;</strong> looks for them in a folder of your choice (see below).</p>
@@ -510,7 +529,7 @@
 
 
 <h3>Marking and Showing Missing Items</h3>
-<p><strong>File &gt; Library &gt; Mark Missing Items</strong> checks the whole collection once and remembers the result on the entry. After that the list only reads this mark &ndash; it checks nothing while you scroll, because in a large library that would take too long. An entry without a file gets an <strong>orange warning triangle</strong> in front of the title.</p>
+<p><strong>File &gt; Library &gt; Mark Missing Items&hellip;</strong> checks the whole collection once and remembers the result on the entry. After that the list only reads this mark &ndash; it checks nothing while you scroll, because in a large library that would take too long. An entry without a file gets an <strong>orange warning triangle</strong> in front of the title.</p>
 <p><strong>A disconnected drive does not mean that the file is missing.</strong> What is not connected, sCollect cannot check either. The report counts such entries separately as <em>not checkable</em>, and their mark stays as it was &ndash; it is neither set nor removed. The report after the run therefore names checked, missing and not checkable entries, and in addition how many marks were newly set and how many were removed.</p>
 <p><strong>File &gt; Library &gt; Show Missing Items</strong> (<kbd>&#8679;&#8984;F</kbd>) is a toggle: the list then shows only the marked entries. A banner above the list says why it is so short and offers the way out in the same place with <strong>Exit Missing Items View</strong>. As long as no mark is set, the toggle is dimmed.</p>
 <p>The view <strong>freezes on being switched on</strong> which entries it shows. If you relink one of them, its row stays where it is and gets a <strong>green check mark</strong> &ndash; that way you do not lose track of what you have already managed while working through the list. The counter in the banner shows both: how many are still without a file and how many are done. In the normal view the marking disappears.</p>
@@ -541,6 +560,8 @@
 <ul>
 <li><strong>When opening:</strong> If the volume is offline, no automount attempt is made &ndash; sCollect shows a warning. You can still open the library, or connect the volume manually first.</li>
 <li><strong>When deleting:</strong> On network shares too, deleted files first go into the App Trash (the <code>.Deleted</code> folder in the respective media folder) and can be restored from there. They are removed permanently only when you empty the App Trash (see section 2). Since shares usually have no System Trash, they are then deleted directly.</li>
+<li><strong>On several Macs:</strong> Always open a library in sCollect on <strong>one</strong> Mac only. If it is open in sCollect on a second Mac at the same time, changes can overwrite each other. sCollectPlay may play the same library on other Macs; sCollect picks up ratings and plays from there the next time the library is opened or synced.</li>
+<li><strong>When library files cannot be read:</strong> If sCollect cannot fully read some of the library files &ndash; after a brief loss of connection, say &ndash;, it opens the library <strong>read-only</strong> and names the affected files. Nothing is then saved and no copy is synced, so that no entries are lost. Check the connection and open the library again.</li>
 </ul>
 
 
@@ -549,18 +570,23 @@
 
 <h3>General</h3>
 <ul>
-<li><strong>Import mode:</strong> Copy, Move, or Leave in Place (default for future imports).</li>
-<li><strong>Multi-value separators:</strong> Characters used as separators for multiple artists/genres in a single field (default: &amp;, /, ;).</li>
+<li><strong>General:</strong> Show album artwork, Confirm deletion, Only one category expanded at a time.</li>
+<li><strong>Convert Format:</strong> whether the window closes after a successful conversion.</li>
+<li><strong>Books &amp; PDFs:</strong> Always use title and author from filename.</li>
+<li><strong>Multi-Values:</strong> Characters used as separators for multiple artists/genres in a single field (default: &amp;, /, ;).</li>
+<li><strong>Duplicates:</strong> check on import, duration tolerance and deep scan (see <a href="#library">section 2</a>).</li>
+<li><strong>Language:</strong> The app’s language follows the system settings. To change it: System Settings → General → Language &amp; Region, then scroll all the way down to the “Applications” section.</li>
 </ul>
 
 <h3>Library</h3>
 <ul>
-<li><strong>Default media folder:</strong> The main folder where imported files are stored.</li>
-<li><strong>Folders per media type:</strong> Optional custom folders for specific media types.</li>
-<li><strong>Library location:</strong> Shows the current storage location and allows switching.</li>
+<li><strong>Storage:</strong> Shows the library&rsquo;s current storage location and allows switching.</li>
 
 <li><strong>Import:</strong> How imported files are handled (see &laquo;Import Modes&raquo;).</li>
+<li><strong>Media Folder:</strong> a folder of its own for each media type; without a check mark, the library&rsquo;s <code>Media</code> folder applies. The camera symbol marks the destination for camera videos and images without a chosen type.</li>
 <li><strong>View &gt; Max. entries per folder:</strong> From this many values on, the column browser forms nodes by initial letters. Affects only the display, not the folders on disk.</li>
+<li><strong>Import (when sorting by date):</strong> the four switches for tidying up derived titles (see <a href="#import">section 3</a>).</li>
+<li><strong>Actions:</strong> Organize Library&hellip;, Check for Missing Files&hellip;, Relink folders&hellip;, Clean up artwork.</li>
 </ul>
 
 <h3>Category Labels</h3>
@@ -586,14 +612,19 @@
 <li><strong>Video window always on top:</strong> The video window always stays above all other windows.</li>
 <li><strong>Pause video when minimized:</strong> Pauses playback while the video window is minimized and resumes it when the window is restored.</li>
 <li><strong>Volume during slow motion / frame step:</strong> Volume reduction in dB during slow-motion and single-frame mode.</li>
-<li><strong>External player for unsupported codecs:</strong> Preferred player for codecs that AVFoundation cannot decode (MKV, AVI, AV1 without HW decoder, DivX, etc.). Detected: VLC, IINA, and MPV; if none are installed, the default app is used.</li>
+<li><strong>External player for unsupported codecs:</strong> Player for codecs that macOS cannot play (MKV, AVI, AV1 without HW decoder, DivX, etc.). The default is the application the Finder provides; installed players such as VLC, IINA and MPV are available for selection.</li>
+<li><strong>Remember playback position:</strong> per media type (see <a href="#playback">section 6</a>).</li>
+<li><strong>Continue playing at end:</strong> per media type, whether the next track follows when one ends (see <a href="#playback">section 6</a>).</li>
 </ul>
 
 <h3>Synchronization</h3>
-<p>Manages the connection to master and copy libraries. Connect another library as a copy, monitor pending sync operations, and project the master state onto a copy. See section 11 for details.</p>
+<p>Manages the connection to master and copy libraries. Connect another library as a copy, see what is still outstanding for each copy, and project the master state onto a copy. See section 11 for details.</p>
 
-<h3>Language</h3>
-<p>The app’s language follows the system settings. To change it: System Settings → General → Language &amp; Region, then scroll all the way down to the “Applications” section.</p>
+<h3>Trash</h3>
+<p>Settings for the app trash, where deleted entries and their files land first (see <a href="#library">section 2</a>).</p>
+
+<h3>Statistics</h3>
+<p>Shows how many items each media type contains, and the number of playlists.</p>
 
 
 <h2 id="convert">10. Convert Format</h2>
@@ -601,7 +632,7 @@
 <h3>Convert Audio or Extract Audio from Video</h3>
 <p>Select one or more audio or video entries in the list, right-click, and choose <strong>Convert Format&hellip;</strong> or <strong>Extract Audio As&hellip;</strong> for movies. The dialog offers the following settings:</p>
 <ul>
-<li><strong>Output format:</strong> AAC, MP3, HE-AAC, ALAC (lossless), WAV, or AIFF. &laquo;Audio passthrough&raquo; is also available &ndash; the audio bitstream is copied 1:1 into an MP4 container without re-encoding.</li>
+<li><strong>Output format:</strong> AAC, MP3, HE-AAC, ALAC (lossless), WAV, or AIFF. &laquo;Audio passthrough&raquo; is also available &ndash; the audio bitstream is copied 1:1 into an MP4 container without converting.</li>
 <li><strong>Audio parameters:</strong> Channel layout (as original / stereo / mono), sample rate (original / 22050 / 44100 / 48000 Hz), and for PCM/ALAC the bit depth.</li>
 <li><strong>Compression:</strong> For MP3/AAC/HE-AAC: choose between fixed bitrate or variable bitrate (VBR) with quality slider.</li>
 <li><strong>Target:</strong> Two choices &ndash; <strong>Library</strong> (the converted file lands in the chosen audio category of the library. The dialog suggests the category all selected items come from &ndash; so music stays music. Otherwise, for example when extracting the audio from movies, it suggests the category you chose last, initially &laquo;Podcast&raquo;, or &laquo;Audiobook&raquo;/&laquo;Music&raquo; if Podcast is not active) or <strong>External</strong> (use the <strong>Choose&hellip;</strong> button to pick a folder outside the library &ndash; the original stays untouched, the converted file is not added to the library). The full path of the chosen folder appears next to the button; if it is too long, the beginning is cut off (&laquo;&hellip;/Folder/Target&raquo;) so the target folder itself stays visible. Hover over it to see the whole path.</li>
@@ -621,7 +652,7 @@
 <h2 id="sync">11. Synchronization (Master/Copy)</h2>
 
 <h3>Concept</h3>
-<p>sCollect can synchronize multiple libraries: one library acts as the <em>master</em>, one or more others as <em>copies</em>. Changes to the master (tag edits, imports, reorganize) are automatically mirrored to the connected copies &ndash; with separate media folders and paths per copy. For example, the full library can live on a large external drive as the master, while a notebook holds a reduced or identical copy.</p>
+<p>sCollect can synchronize multiple libraries: one library acts as the <em>master</em>, one or more others as <em>copies</em>. Changes to the master (edited details, imports, Organize Library) are automatically mirrored to the connected copies &ndash; with separate media folders and paths per copy. For example, the full library can live on a large external drive as the master, while a notebook holds a reduced or identical copy.</p>
 
 
 <h3>Synchronization Is Not a Backup</h3>
@@ -632,17 +663,17 @@
 <p><strong>The best moment is when nothing is pending.</strong> A new copy first has to receive everything it lacks &ndash; if that coincides with a transfer already under way, both take longer, and in the worst case every copy ends up waiting for the others. A glance at the sync symbol in the sidebar is enough: if it shows no number, this is the right moment.</p>
 
 <h3>Initial File Mirroring</h3>
-<p>On Push, sCollect writes the copy&rsquo;s library database (items, playlists, settings), but does not automatically copy all media files during initial setup. For the initial bulk mirroring of files, an external tool such as FreeFileSync is recommended. Afterwards, sCollect handles all ongoing file operations (import, move, delete, tag write, artwork) itself.</p>
+<p>When projecting, sCollect rewrites the copy&rsquo;s library (entries, playlists, settings), but does not copy all media files during setup. For the first complete mirroring of the files, an external tool such as FreeFileSync is recommended. Afterwards, sCollect handles the ongoing file operations (import, move, delete, writing the details, artwork) itself.</p>
 
-<h3>Project (Push)</h3>
-<p>With <strong>Project</strong> in the slave row, the master rewrites the slave&rsquo;s <code>library.json</code> from scratch &ndash; all items, playlists, and content-relevant settings are taken from the master. The slave&rsquo;s pending sync queue is also reset.</p>
+<h3>Project</h3>
+<p>With <strong>Project</strong> in a copy&rsquo;s row, the master rewrites that copy&rsquo;s library completely &ndash; all entries, playlists and the settings that concern the content are taken from the master. Whatever was still outstanding for this copy is discarded.</p>
 
-<h3>Live Broadcast</h3>
-<p>During normal operation, every change to the master is automatically propagated to all connected copies. For unreachable copies, changes are stored in a queue and applied as soon as the copy becomes reachable again. The number of pending operations per copy is shown in the sync settings (&laquo;X pending&raquo; badge).</p>
+<h3>Ongoing Sync</h3>
+<p>During normal operation, every change to the master is automatically passed on to all connected copies. For unreachable copies, changes are noted and applied as soon as the copy becomes reachable again. How much is still outstanding for each copy is shown under <strong>Settings &gt; Synchronization</strong> (note &laquo;&hellip; pending&raquo;).</p>
 <p>A deletion on the master is mirrored so that each copy moves its own file locally into its <code>.Deleted</code> trash &ndash; with no transfer over the network. Restoring on the master brings the copies' files back locally too; only when entries are removed permanently on the master do the copies discard their trashed file.</p>
 
-<h3>Pending Operations</h3>
-<p>If a copy is offline or a synchronization has failed, pending operations accumulate. Per copy, two options are available:</p>
+<h3>Outstanding Transfers</h3>
+<p>If a copy is offline or a synchronization has failed, outstanding transfers accumulate. Per copy, two options are available:</p>
 <ul>
 <li><strong>Run Pending:</strong> Attempts to apply the backlog. If a transfer fails, it stays where it is and the run stops &ndash; nothing is lost, it is simply tried again next time.</li>
 <li><strong>Discard&hellip;:</strong> This copy skips its entire backlog. <strong>That is a forfeit, not a release:</strong> it counts as up to date afterwards without the changes ever having reached it &ndash; for this copy they are gone. That is why <strong>Project</strong> or <strong>Resolve Sync Errors&hellip;</strong> always belongs afterwards; only that establishes what it actually lacks and fetches it.</li>
@@ -654,10 +685,10 @@
 <p>If it stays that way, there are two routes: make the stuck copy reachable and use <strong>Run Pending</strong> &ndash; or choose <strong>Discard</strong> for it and then <strong>Project</strong>. The second route costs that one copy its backlog but releases the others immediately.</p>
 
 <h3>Resolve Sync Errors</h3>
-<p>With <strong>Resolve Sync Errors&hellip;</strong>, the tag data of each file in the copy is compared with the master and rewritten if different. Filters for rating, genre, and year allow stage-by-stage processing. Missing slave files are copied from the master. Useful after manual changes or after an initial mirroring with an external tool.</p>
+<p>With <strong>Resolve Sync Errors&hellip;</strong>, the tag data of each file in the copy is compared with the master and rewritten if different. Filters for type, rating, year and genre allow stage-by-stage processing. Only rated items are preselected &ndash; for all of them, turn on <strong>Include unrated items</strong>. Files missing on the copy are copied from the master. Useful after manual changes or after an initial mirroring with an external tool.</p>
 
 <h3>Read-Only Copies</h3>
-<p>A copy can be marked as read-only &ndash; then import, delete, and tag edits in the copy are blocked, so changes won&rsquo;t be overwritten on the next sync.</p>
+<p>A copy can be marked as read-only &ndash; then import, delete and editing the details in the copy are blocked, so changes won&rsquo;t be overwritten on the next sync.</p>
 <p>Rating remains possible even on a read-only copy; the master picks up the rating (next section).</p>
 
 <h3>Ratings and Plays from a Copy</h3>
@@ -665,7 +696,7 @@
 <p>sCollectPlay reports the same way &ndash; even when you opened the master there: the master picks up its ratings and plays at the same moments.</p>
 
 <h3>Organize Library</h3>
-<p>Via <strong>Settings &gt; Library &gt; Organize Library</strong> (or the button above the media list), sCollect tidies the managed files. A dialog asks for the scope and the options first.</p>
+<p>Via <strong>File &gt; Library &gt; Organize Library&hellip;</strong>, the button above the media list or <strong>Settings &gt; Library &gt; Actions</strong>, sCollect tidies the managed files. A dialog asks for the scope and the options first.</p>
 
 <h4>Scope</h4>
 <p>At the top you pick the <strong>media types</strong> to process &ndash; expandable under their category, with the number of objects per type. Everything is preselected. This matters because a grown library is rarely equally well kept everywhere: if you did a lot of find &amp; replace on music but hardly any on audiobooks, you are better off treating them separately.</p>
@@ -673,7 +704,7 @@
 <h4>What the run does</h4>
 <ul>
 <li><strong>Merge duplicate entries:</strong> If two entries point at the same file, that is not a duplicate but an error in the library &ndash; there is only one medium. The older entry stays and inherits whatever says more from the other: the higher rating, the favourite, the higher play count, a remembered playback position. Playlist slots of the abandoned entry then point at the remaining one.</li>
-<li><strong>Arrange:</strong> Entries whose file is not at its target path are moved there (Artist/Album, fixed folder levels). Sidecars, artwork and attachments come along.</li>
+<li><strong>Arrange:</strong> Entries whose file is not at its target path are moved there (Artist/Album, fixed folder levels). Sidecar files, artwork and attachments come along.</li>
 <li><strong>Reconcile folder:</strong> The media folders are scanned for files that were copied in by hand and have no entry yet. New files are added. If an existing entry has lost its file and a find matches it, the entry is healed onto that file and takes over its metadata. If the original is still there, the file is added as a genuine duplicate with a &laquo; (2)&raquo; suffix in title and file name.</li>
 <li><strong>Remove orphaned entries:</strong> Entries whose file is <em>demonstrably</em> gone are deleted &ndash; the entry only, since the file no longer exists. &laquo;Demonstrably&raquo; means: the volume is mounted, not <em>all</em> files on it are missing at once, and for managed objects the media folder is reachable. If any of these does not hold, the entry is left alone &ndash; a disconnected drive must not cost you entries.</li>
 </ul>
@@ -693,7 +724,7 @@
 <p>During the run, modifying actions are locked; a progress bar with a Cancel button is shown and the Mac is kept awake so external volumes do not disconnect. At the end a window summarizes what was moved, merged, newly added, healed, added as a duplicate and removed.</p>
 
 <aside>
-<strong>Tip:</strong> If you regularly update a copy with an external tool (e.g. FreeFileSync), you can simply run <strong>Project</strong> on the copy after each mirroring &ndash; the pending queue is reset automatically.
+<strong>Tip:</strong> If you regularly update a copy with an external tool (e.g. FreeFileSync), you can simply run <strong>Project</strong> on the copy after each mirroring &ndash; whatever was still outstanding for this copy is discarded.
 </aside>
 
 
@@ -737,6 +768,7 @@
 <tr><td><kbd>&#8997;&#8984;&#8593;</kbd></td><td>Volume Up</td></tr>
 <tr><td><kbd>&#8997;&#8984;&#8595;</kbd></td><td>Volume Down</td></tr>
 <tr><td><kbd>&#8963;&#8984;F</kbd></td><td>Full Screen</td></tr>
+<tr><td><kbd>&#8984;W</kbd></td><td>Close Video Window</td></tr>
 </table>
 
 <h3>Navigation</h3>

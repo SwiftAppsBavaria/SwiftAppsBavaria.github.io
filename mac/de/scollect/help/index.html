@@ -70,7 +70,7 @@
 <h3>Eine neue Mediathek anlegen</h3>
 <div class="steps">
 <div class="step"><strong>Ordner wählen:</strong> Beim ersten Start wirst du nach einem Speicherort gefragt. Wähle einen Ordner, in dem sCollect die Mediathek-Daten ablegen soll. Darin wird ein Unterordner <code>Media</code> für deine Dateien erstellt; die Mediathek selbst (Einträge, Playlists, Einstellungen) liegt als <code>.scollect</code>-Bündel im selben Ordner.</div>
-<div class="step"><strong>Einstellungen prüfen:</strong> Danach öffnen sich automatisch die Einstellungen im Tab &laquo;Mediathek&raquo;. Hier kannst du den Standard-Medienordner ändern oder zusätzliche Ordner für einzelne Kategorien festlegen (z.B. einen separaten Ordner für Filme auf einer externen Festplatte).</div>
+<div class="step"><strong>Einstellungen prüfen:</strong> Danach öffnen sich automatisch die Einstellungen im Tab &laquo;Mediathek&raquo;. Hier legst du unter &laquo;Medienordner&raquo; für einzelne Medientypen eigene Ordner fest (z.B. einen separaten Ordner für Filme auf einer externen Festplatte); ohne eigenen Ordner gilt der Ordner <code>Media</code> der Mediathek.</div>
 <div class="step"><strong>Medien importieren:</strong> Importiere deine ersten Dateien über <strong>Ablage &gt; Dateien importieren&hellip;</strong> (<kbd>&#8984;O</kbd>) oder <strong>Ablage &gt; Ordner importieren&hellip;</strong> (<kbd>&#8679;&#8984;O</kbd>).</div>
 </div>
 
@@ -82,7 +82,7 @@
 </aside>
 
 <aside>
-<strong>Hinweis:</strong> Fällt die Wahl des neuen Mediathek-Ordners auf einen Ordner, in dem Reste einer früheren Mediathek liegen (erkannt am Vorhandensein eines <code>.slaves/</code>-Verzeichnisses), zeigt sCollect einen Bestätigungsdialog mit der Anzahl der ehemals registrierten Kopien. Bei Fortfahren werden die erreichbaren Kopien automatisch vom alten Master entkoppelt; die <code>.slaves/</code>-Registry wird anschließend entfernt. Nicht erreichbare Kopien behalten ihre Bindung an den alten Master und müssen ggf. manuell repariert werden.
+<strong>Hinweis:</strong> Fällt die Wahl des neuen Mediathek-Ordners auf einen Ordner, in dem Reste einer früheren Mediathek liegen (erkannt an der dort noch gespeicherten Liste ihrer Kopien), zeigt sCollect einen Bestätigungsdialog mit der Anzahl der ehemals verbundenen Kopien. Bei Fortfahren werden die erreichbaren Kopien automatisch vom alten Master entkoppelt; die Liste der Kopien wird anschließend entfernt. Nicht erreichbare Kopien behalten ihre Bindung an den alten Master und müssen ggf. manuell repariert werden.
 </aside>
 
 
@@ -94,12 +94,12 @@
 <tr><th>Kategorie</th><th>Standard-Medientypen</th></tr>
 <tr><td>Audio</td><td>Musik, Hörbuch, Podcast, Tonaufnahme (+ 6 frei belegbare)</td></tr>
 <tr><td>Buch</td><td>E-Book, PDF (+ 8 frei belegbare)</td></tr>
-<tr><td>Film</td><td>Heimvideo, Spielfilm, Serie, Kamera (+ 6 frei belegbare)</td></tr>
+<tr><td>Film</td><td>Heimvideo, Spielfilm, Serie, Kamera, Musikvideo (+ 5 frei belegbare)</td></tr>
 <tr><td>Verschiedenes</td><td>Münze, Modell, Briefmarke, Foto (+ 6 frei belegbare)</td></tr>
 </table>
 <p>Die Bezeichnungen lassen sich in den Einstellungen (Tabs &laquo;Kategoriebezeichner&raquo; und &laquo;Feldbezeichner&raquo;) frei ändern.</p>
 
-<p><strong>Kamera</strong> und <strong>Foto</strong> sind für eigene Aufnahmen gedacht &ndash; Kamera- und Handyfilme bzw. Fotos, auch RAW. Fotos stehen unter <em>Verschiedenes</em>, weil nur diese Kategorie Bilder aufnimmt. Beide legen ihre Dateien von Anfang an nach Aufnahmedatum ab, und beide tragen die Felder <em>Kamera</em> und <em>Objektiv</em> (siehe <a href="#metadata">Abschnitt 5</a>). Du kannst sie umbenennen: Wohin der Import Kamerafilme und Bilder legt, hängt nicht am Namen, sondern an der Ablage nach Datum (siehe <a href="#import">Abschnitt 3</a>). Für eigene Tonaufnahmen gibt es unter <em>Audio</em> den Typ <strong>Tonaufnahme</strong>, ebenfalls von Anfang an nach Aufnahmedatum abgelegt; dort heißen die Felder unter anderem <em>Gerät</em> und <em>Mikrofon</em>.</p>
+<p><strong>Kamera</strong> und <strong>Foto</strong> sind für eigene Aufnahmen gedacht &ndash; Kamera- und Handyfilme bzw. Fotos, auch RAW. Fotos stehen unter <em>Verschiedenes</em>, weil nur diese Kategorie Bilder aufnimmt. Beide legen ihre Dateien von Anfang an nach Aufnahmedatum ab, und beide tragen die Felder <em>Kamera</em> und <em>Objektiv</em> (siehe <a href="#metadata">Abschnitt 5</a>). Du kannst sie umbenennen: Wohin der Import Kamerafilme und Bilder legt, hängt nicht am Namen, sondern an der Ablage nach Datum (siehe <a href="#import">Abschnitt 3</a>). Für eigene Tonaufnahmen gibt es unter <em>Audio</em> den Typ <strong>Tonaufnahme</strong>, ebenfalls von Anfang an nach Aufnahmedatum abgelegt; dort heißen die Felder unter anderem <em>Gerät</em> und <em>Mikrofon</em>. Musikvideos haben unter <em>Film</em> den eigenen Typ <strong>Musikvideo</strong>; seine Felder heißen wie bei Musik (Künstler, Album, Komponist).</p>
 <p><strong>Die beiden Begriffe genau:</strong> Eine <em>Kategorie</em> ist einer der vier festen Oberbegriffe &ndash; Audio, Buch, Film, Verschiedenes. Ein <em>Medientyp</em> (kurz: Typ) ist das, was du tatsächlich sammelst: Musik, Hörbuch, Podcast, E-Book, Spielfilm und so fort. Musik, Hörbuch und Podcast liegen also alle drei in derselben Kategorie <em>Audio</em>. Wo eine Funktion dich nach dem Umfang fragt &ndash; etwa &laquo;Mediathek organisieren&raquo; oder &laquo;Fehlende Dateien prüfen&raquo; &ndash;, wählst du deshalb <strong>Typen</strong> aus: nur so lässt sich Musik getrennt von Hörbüchern behandeln. Die Kategorie darüber dient zum Auf- und Zuklappen und schaltet alle ihre Typen gemeinsam.</p>
 
 <h3>Seitenleiste</h3>
@@ -129,10 +129,22 @@
 <ul>
 <li><strong>Metadaten:</strong> gleicher Titel und Interpret bei ähnlicher Laufzeit. Unterschiedliche CD- oder Titelnummern innerhalb desselben Albums schließen ein Duplikat aus, bei Hörbüchern zusätzlich unterschiedliche Albumtitel.</li>
 <li><strong>Dateiinhalt:</strong> gleiche Dateigröße und gleicher Dateianfang.</li>
-<li><strong>Tiefensuche nach identischem Audio:</strong> erkennt dieselbe Aufnahme auch dann, wenn die Tags völlig verschieden sind. Sie liest deutlich mehr von der Platte und ist deshalb in den Einstellungen unter <strong>Duplikate</strong> regelbar &ndash; &laquo;automatisch&raquo; schaltet sie auf Netzlaufwerken ab.</li>
+<li><strong>Tiefensuche nach identischem Audio:</strong> erkennt dieselbe Aufnahme auch dann, wenn die Tags völlig verschieden sind. Sie liest deutlich mehr von der Platte und ist deshalb unter <strong>Einstellungen &gt; Allgemein &gt; Duplikate</strong> regelbar &ndash; &laquo;automatisch&raquo; schaltet sie auf Netzlaufwerken ab.</li>
 <li><strong>Verwaiste Einträge:</strong> ein Eintrag, dessen Datei fehlt, wird an ein vorhandenes Geschwister mit gleichem Basistitel im selben Ordner angehängt. Das ist der typische Rest nach einem Umbenennen von &laquo;Titel&raquo; zu &laquo;Titel (2)&raquo;.</li>
 </ul>
 <p>Damit der Vergleich nicht auf falschen Angaben beruht, liest sCollect vor dem Suchen die Tags der in Frage kommenden Dateien und zieht abweichende Mediathek-Werte gerade. Ohne das könnten etwa fehlerhafte CD-Nummern dazu führen, dass verschiedene CDs eines Hörbuchs für identisch gehalten werden.</p>
+
+<h4>Welcher Eintrag bleibt</h4>
+<p>Je Gruppe schlägt sCollect den Eintrag zum Behalten vor, der in dieser Reihenfolge vorn liegt. Die Sortierung der Liste spielt dabei keine Rolle.</p>
+<ol>
+<li><strong>Datei vorhanden</strong> schlägt Datei fehlt.</li>
+<li><strong>Auflösung:</strong> Eine Fassung unter CD-Qualität &ndash; unter 44,1&nbsp;kHz oder unter 16&nbsp;Bit &ndash; unterliegt, auch wenn sie verlustfrei ist. Verlustfrei heißt nur, dass die Datei ihre Vorlage unverändert wiedergibt; war die Vorlage schlechter, ist es auch die Datei.</li>
+<li><strong>Verlustfrei</strong> (WAV, AIFF, FLAC, ALAC &ndash; auch in einer .m4a-Datei) schlägt verlustbehaftet (MP3, AAC und andere).</li>
+<li>Zwischen zwei verlustbehafteten Fassungen gewinnt die höhere <strong>Bitrate</strong>, dann die höhere Abtastrate. Zwischen zwei verlustfreien gewinnt die höhere <strong>Abtastrate</strong>, dann die größere <strong>Bittiefe</strong>.</li>
+<li>Bei gleicher Qualität bleibt ein Eintrag in der Mediathek vor einem verknüpften, dann der mit mehr Bearbeitungsspuren (Bewertung, Wiedergaben, gepflegte Felder), zuletzt der früher aufgenommene.</li>
+</ol>
+<p>Liegen ein verknüpfter und ein Eintrag in der Mediathek mit unterschiedlicher Qualität in einer Gruppe, schlägt sCollect keinen vor &ndash; meist ist das Absicht. Die Regeln 2 bis 4 bestimmen auch die Vorauswahl im Fenster &laquo;Duplikate beim Import gefunden&raquo;.</p>
+<p>Bittiefe und Codec liest sCollect beim Import. Für ältere Einträge trägt <strong>Ablage &gt; Mediathek &gt; Bitratenmodus nachtragen</strong> sie nach; bis dahin entscheidet bei ihnen die Dateiendung. Eine verlustfreie Datei, die aus einer MP3 erzeugt wurde, verrät keine Angabe in der Datei.</p>
 
 <h4>Die Duplikatsicht</h4>
 <p>In der Liste sind alle Einträge <strong>getönt</strong>, die als Duplikat vorgeschlagen werden &ndash; je Gruppe bleibt einer stehen. Die Vorschläge sind zugleich <strong>markiert</strong>; du kannst die Markierung frei ändern. Eine schmale Statusspalte zeigt zusätzlich zwei Hinweise: eine <strong>Kette</strong>, wenn mehrere Einträge auf dieselbe Datei zeigen, und ein <strong>Warndreieck</strong>, wenn die Datei eines Eintrags fehlt. Beides kann sich überschneiden.</p>
@@ -140,7 +152,7 @@
 
 <p><strong>Auswahl löschen</strong> fragt vorher nach und legt dann die markierten Einträge samt Datei in den App-Papierkorb (mit <kbd>&#8984;Z</kbd> widerrufbar). Zeigt ein markierter Eintrag auf eine Datei, die ein bleibender Eintrag noch braucht, oder fehlt seine Datei, geht nur der Eintrag &ndash; die Rückfrage nennt diese Fälle eigens. Deckt die Markierung eine Gruppe vollständig ab, ist der Knopf gesperrt.</p>
 <p>Du kannst auch einzelne Einträge markieren und löschen. Welcher Eintrag je Gruppe bleibt, wird dabei laufend neu bestimmt &ndash; löschst du zwischendurch von Hand, rückt automatisch ein anderer nach, und keine Gruppe verliert alle ihre Einträge. &laquo;Duplikatsicht beenden&raquo; kehrt zur normalen Liste zurück.</p>
-<p>Die <strong>Laufzeit-Toleranz</strong> lässt sich direkt im blauen Balken ändern (0 bis 5 Sekunden). Nach einer Änderung wird daneben <strong>Suchen</strong> aktiv; erst ein Klick darauf oder <kbd>&#8617;</kbd> sucht über dieselbe Menge neu &ndash; die ganze Kategorie oder die Auswahl, aus der die Duplikatsicht entstanden ist. Der Wert gilt zugleich in den Einstellungen unter <strong>Duplikate</strong> und für die Prüfung beim Import.</p>
+<p>Die <strong>Laufzeit-Toleranz</strong> lässt sich direkt im blauen Balken ändern (0 bis 5 Sekunden). Nach einer Änderung wird daneben <strong>Suchen</strong> aktiv; erst ein Klick darauf oder <kbd>&#8617;</kbd> sucht über dieselbe Menge neu &ndash; die ganze Kategorie oder die Auswahl, aus der die Duplikatsicht entstanden ist. Der Wert gilt zugleich unter <strong>Einstellungen &gt; Allgemein &gt; Duplikate</strong> und für die Prüfung beim Import.</p>
 
 
 <h2 id="import">3. Medien importieren</h2>
@@ -148,8 +160,8 @@
 <h3>Dateien importieren</h3>
 <p>Wähle <strong>Ablage &gt; Dateien importieren&hellip;</strong> (<kbd>&#8984;O</kbd>), um einzelne Dateien auszuwählen. Unterstützte Formate:</p>
 <ul>
-<li><strong>Audio:</strong> MP3, M4A, AAC, FLAC, WAV, AIFF, AIF, ALAC, CAF</li>
-<li><strong>Video:</strong> MP4, M4V, MOV</li>
+<li><strong>Audio:</strong> MP3, M4A, M4B, AAC, ALAC, FLAC, WAV, AIFF, CAF, OGG, Opus, WavPack, DSD (DSF, DFF), WMA</li>
+<li><strong>Video:</strong> MP4, M4V, MOV, dazu MKV, WebM, AVI, WMV, FLV, MPEG, VOB und DivX (diese spielt ein externer Player ab, siehe <a href="#playback">Abschnitt 6</a>)</li>
 <li><strong>Bücher:</strong> PDF, EPUB</li>
 <li><strong>Verschiedenes:</strong> Bilder aller Art (JPG, HEIC, PNG, TIFF, WEBP, GIF, BMP, auch RAW), Comics (CBZ, CBR), E-Books (MOBI, AZW, DJVU) und Texte (TXT, RTF, DOC, DOCX). Musik, Filme und Bücher, die du hierher importierst, sortiert sCollect in ihre eigene Kategorie ein. Andere Dateien fügst du einem Objekt im Editor unter <strong>Anhänge</strong> bei.</li>
 </ul>
@@ -180,10 +192,10 @@
 
 <p>Lässt sich eine Datei beim Kopieren oder Verschieben nicht in die Mediathek übernehmen, legt sCollect für sie <strong>keinen Eintrag</strong> an. Die Datei bleibt unverändert an ihrem Ort, und eine Meldung nennt sie samt Grund.</p>
 
-<p>Nennt eine Tondatei keine Titel- oder CD-Nummer, liest sCollect sie beim Import aus dem Datei- oder Ordnernamen &ndash; etwa &bdquo;&hellip; - 01-04&ldquo; (CD 1, Titel 4), &bdquo;04 - Lied&ldquo; oder einen Ordner &bdquo;CD 2&ldquo; &ndash; und schreibt sie in die Datei. So gelten die Teile eines Hörbuchs, die alle denselben Titel tragen, nicht als Duplikate. Nummern, die die Datei schon nennt, bleiben stehen.</p>
+<p>Nennt eine Tondatei keine Titel- oder CD-Nummer, liest sCollect sie beim Import aus dem Datei- oder Ordnernamen &ndash; etwa &bdquo;&hellip; - 01-04&ldquo; (CD 1, Titel 4), &bdquo;04 - Lied&ldquo; oder einen Ordner &bdquo;CD 2&ldquo; &ndash; und schreibt sie in die Datei, außer bei Dateien, die mit <strong>An Ort belassen</strong> übernommen wurden. Dasselbe tut <strong>Mediathek organisieren</strong> für Tondateien, die es im Medienordner neu aufnimmt. So gelten die Teile eines Hörbuchs, die alle denselben Titel tragen, nicht als Duplikate. Nummern, die die Datei schon nennt, bleiben stehen.</p>
 
 <h3>Duplikaterkennung</h3>
-<p>Beim Import prüft sCollect automatisch auf Duplikate (gleicher Titel + Künstler oder gleicher Dateiname). Falls Duplikate gefunden werden, erscheint ein Dialog, in dem du entscheiden kannst:</p>
+<p>Beim Import prüft sCollect automatisch auf Duplikate: gleicher Titel und Interpret bei ähnlicher Laufzeit oder gleiche Dateigröße und gleicher Dateianfang. Die Prüfung lässt sich unter <strong>Einstellungen &gt; Allgemein &gt; Duplikate</strong> abschalten. Falls Duplikate gefunden werden, erscheint ein Dialog, in dem du entscheiden kannst:</p>
 <ul>
 <li><strong>Alle importieren:</strong> Importiert alle Dateien, auch Duplikate.</li>
 <li><strong>Duplikate überspringen:</strong> Importiert nur die Dateien, die noch nicht in der Mediathek vorhanden sind.</li>
@@ -196,7 +208,7 @@
 
 <p><strong>Datumssortierte Ablage:</strong> Für Medientypen, bei denen der Zeitpunkt wichtiger ist als der Künstler &ndash; Fotos, Heimvideos, Sammlungen &ndash; kannst du in den Einstellungen stattdessen eine Ablage nach Datum wählen. Die Dateien landen dann in Jahres- und Monatsordnern, und der Dateiname trägt den Zeitpunkt. Maßgeblich ist das Aufnahmedatum, wo die Datei eines trägt; sonst das Datum des Objekts. Bei den Typen <strong>Kamera</strong>, <strong>Foto</strong> und <strong>Tonaufnahme</strong> ist diese Ablage von Anfang an eingestellt. Sie bestimmt auch, wohin Kamerafilme und Bilder kommen, für die du keinen Typ gewählt hast: in den obersten Typ ihrer Kategorie, der nach Datum abgelegt wird. Unter <strong>Einstellungen &gt; Mediathek</strong> steht bei den Medienordnern ein Zeichen neben diesem Typ.</p>
 
-<p><strong>Titel beim Import aufräumen:</strong> Leitet sCollect einen Titel aus dem Dateinamen ab, steht davor oft der Name der Kamera und dahinter ein Datum &ndash; etwa <code>IMG_20240115 Urlaub</code>. Vier Schalter unter <strong>Einstellungen &gt; Import (bei Sortierung nach Datum)</strong> räumen das auf. Sie greifen <em>nur bei Medientypen mit datumssortierter Ablage</em>: wer <code>IMG</code> oder <code>20250401</code> im Namen behalten möchte, sortiert ohnehin alphabetisch.</p>
+<p><strong>Titel beim Import aufräumen:</strong> Leitet sCollect einen Titel aus dem Dateinamen ab, steht davor oft der Name der Kamera und dahinter ein Datum &ndash; etwa <code>IMG_20240115 Urlaub</code>. Vier Schalter unter <strong>Einstellungen &gt; Mediathek &gt; Import (bei Sortierung nach Datum)</strong> räumen das auf. Sie greifen <em>nur bei Medientypen mit datumssortierter Ablage</em>: wer <code>IMG</code> oder <code>20250401</code> im Namen behalten möchte, sortiert ohnehin alphabetisch.</p>
 <ul>
 <li><strong>Kamerapräfix aus abgeleiteten Titeln entfernen</strong> &ndash; standardmäßig an. Aus <code>IMG_20240115 Urlaub</code> wird <code>20240115 Urlaub</code>. Entfernt wird nur, was ohne Leerzeichen am Datum klebt <em>und</em> auf der Liste bekannter Kameranamen steht: <code>Sam 2024-01-15 Konzert</code> bleibt unangetastet.</li>
 <li><strong>Datum aus abgeleiteten Titeln entfernen</strong> &ndash; standardmäßig an. Daraus wird <code>Urlaub</code>.</li>
@@ -277,7 +289,13 @@
 </ul>
 
 <p>Bei Filmen steht neben der Fundstelle manchmal noch ein Hinweis zur <em>Zeitzone</em>. Der Zeitpunkt im Container trägt nämlich keine Zonenangabe: die Norm liest ihn als UTC, aber nicht jede Kamera schreibt ihn so. Beim Import vergleicht sCollect deshalb die Zeit im Container mit dem Erstellungsdatum der Datei &ndash; beide stammen aus derselben Kamerauhr, und aus ihrem Abstand ergibt sich die Deutung. &laquo;ohne Zeitzone&raquo; heißt: der Fall ist offen, das Datum stimmt, die Uhrzeit kann um den Zonenversatz danebenliegen. &laquo;Ortszeit&raquo; heißt: die Kamera ist erkannt, und der gemeinte Zeitpunkt steht gleich daneben. <strong>Die Datei wird dabei nicht verändert</strong> &ndash; die Deutung ist eine Auskunft, kein Eingriff.</p>
+
+<p><strong>Uhrzeit von Kamerafilmen:</strong> Wie eine Kamera ihre Aufnahmezeit meint, berechnet sCollect bei jedem Import und jedem Organisieren neu aus den Kameradaten. iPhone und Sony speichern UTC und zusätzlich die Ortszeit mit Zeitzone; Panasonic und Nikon speichern die an der Kamera eingestellte Uhrzeit. Daraus entstehen die Uhrzeit im Dateinamen der datumssortierten Ablage und die Ergänzung im Titel &ndash; als Ortszeit oder, wenn unter <strong>Einstellungen &gt; Mediathek &gt; Import (bei Sortierung nach Datum)</strong> der Schalter <strong>Uhrzeit von Filmen in Ortszeit umrechnen</strong> aus ist, als UTC. Der Vergleich mit dem Erstellungsdatum gilt nur noch für Kameras, deren Datei selbst nichts darüber sagt. Passt die Uhrzeit im Dateinamen nicht zur Aufnahme, nennt sie der Datei-Tab (&laquo;im Dateinamen&raquo;); <strong>Mediathek organisieren</strong> benennt die Datei dann um, der Titel bleibt. <strong>Die Filmdatei wird dabei nie verändert</strong> &ndash; ihr Aufnahmedatum ändert sich nur, wenn es hier im Datei-Tab von Hand gesetzt wird.</p>
 <p>Alle vier werden erst beim <strong>Sichern</strong> geschrieben, wie jedes andere Feld auch.</p>
+
+
+<h3>Zeitachse prüfen und korrigieren</h3>
+<p>Manche Filme &ndash; oft aus Kameras oder von abgebrochenen Aufnahmen &ndash; enthalten Stellen ohne Bild- und Tondaten. Die angezeigte Länge stimmt dann nicht, und ein Player liegt am Ende daneben. Im Reiter <strong>Dateiinfo</strong> misst <strong>Prüfen</strong> unter <strong>Zeitachse</strong> den Film; die Zeile daneben nennt das Ergebnis (&laquo;Geprüft: lückenlos.&raquo; oder die Länge des Leerlaufs). Gibt es etwas zu korrigieren, heißt der Knopf <strong>Korrektur anwenden</strong>: der Film wird um den Leerlauf kürzer, Bild und Ton bleiben vollständig erhalten, auch auf allen angeschlossenen Kopien; das lässt sich nicht widerrufen. Für mehrere Filme gibt es im Kontextmenü <strong>Zeitachse korrigieren&hellip;</strong>. Verknüpfte und kopiergeschützte Filme werden nicht verändert.</p>
 
 
 <h3>Kamera und Objektiv</h3>
@@ -286,7 +304,7 @@
 
 
 <h3>Kopiergeschützte Medien</h3>
-<p>Ein gekauftes Hörbuch, ein geliehener Film, ein Buch mit DRM: In solche Dateien darf niemand hineinschreiben &ndash; ein Tag-Write würde sie im besten Fall unbrauchbar machen. sCollect erkennt den Schutz beim Öffnen und <strong>rührt die Datei nicht an</strong>. Erkannt werden bei Büchern die Verschlüsselung einer PDF, Adobe DRM, Apple FairPlay, Readium LCP und EPUBs, deren Kapitel kein lesbarer Text sind; bei Musik und Filmen Apple FairPlay und die verbreitete Container-Verschlüsselung (Common Encryption).</p>
+<p>Ein gekauftes Hörbuch, ein geliehener Film, ein Buch mit DRM: In solche Dateien darf niemand hineinschreiben &ndash; ein Schreiben in die Datei würde sie im besten Fall unbrauchbar machen. sCollect erkennt den Schutz beim Öffnen und <strong>rührt die Datei nicht an</strong>. Erkannt werden bei Büchern die Verschlüsselung einer PDF, Adobe DRM, Apple FairPlay, Readium LCP und EPUBs, deren Kapitel kein lesbarer Text sind; bei Musik und Filmen Apple FairPlay und die verbreitete Container-Verschlüsselung (Common Encryption).</p>
 <p>Bearbeiten kannst du ein solches Objekt trotzdem. Deine Angaben gehen in eine <strong>Begleitdatei</strong> mit der Endung <strong>.xmp</strong>, die neben der Datei liegt. Im Editor siehst du das an zwei Stellen im Reiter <strong>Dateiinfo</strong>: an dem Hinweis &ndash; <em>&laquo;Kopiergeschützte Datei: Die Angaben stehen in einer Begleitdatei (.xmp) daneben, die Datei selbst bleibt unverändert.&raquo;</em>, bei einem Buch <em>&laquo;Geschütztes Buch: Die Angaben stehen in einer Begleitdatei (.xmp) daneben, das Buch selbst bleibt unverändert.&raquo;</em> &ndash; und am Tag-Format, das dann <strong>Sidecar (XMP)</strong> samt Art des Schutzes nennt.</p>
 <p>Die Begleitdatei gehört zum Objekt und bleibt bei ihm: Benennst du den Titel um, wandert sie mit; auf jeder Kopie der Mediathek liegt sie ebenso. Weil in der Datei selbst nichts steht, meldet der Abgleich mit der Datei hier auch keine Abweichung. Ein Cover legt sCollect ebenso daneben, als <code>&lt;Name&gt;-cover.jpg</code> (bei Filmen <code>&lt;Name&gt;-poster.jpg</code>), und es gehört genauso zum Objekt.</p>
 <p>Zwei Dinge fehlen bei geschützten Medien, und beide aus demselben Grund &ndash; sie setzen voraus, dass sich der Inhalt lesen lässt: das <strong>Aufnahmedatum aus der Datei</strong> und das <strong>Vorschaubild aus einem Filmbild</strong>. Zum Abspielen siehe <a href="#playback">Wiedergabe</a> (Abschnitt 6).</p>
@@ -312,15 +330,15 @@
 <p>Wähle mehrere Einträge aus und drücke <kbd>&#8984;I</kbd>. Der Batch-Editor zeigt nur Felder, die für alle gewählten Einträge gleichzeitig geändert werden können. Neben jedem Feld befindet sich ein Häkchen &ndash; nur aktivierte Felder werden geschrieben.</p>
 
 <h3>Feldoperationen</h3>
-<p>Für erweiterte Bearbeitungen markierst du die gewünschten Einträge und öffnest über <strong>Bearbeiten &gt; Suchen/Ersetzen&hellip;</strong> (<kbd>&#8997;&#8984;F</kbd>) oder das Kontextmenü das Fenster <strong>Feldoperationen</strong> mit folgenden Werkzeugen:</p>
+<p>Für erweiterte Bearbeitungen markierst du die gewünschten Einträge und öffnest über <strong>Bearbeiten &gt; Suchen/Ersetzen&hellip;</strong> (<kbd>&#8997;&#8984;F</kbd>) oder das Kontextmenü das Fenster <strong>Feldoperationen</strong>. Links wählst du das Werkzeug:</p>
 <ul>
-<li><strong>Suchen &amp; Ersetzen:</strong> Text in einem oder mehreren Feldern suchen und ersetzen.</li>
+<li><strong>Suchen/Ersetzen:</strong> Text in einem oder mehreren Feldern suchen und ersetzen.</li>
 <li><strong>Felder tauschen/kopieren:</strong> Die Inhalte zweier Felder vertauschen (z.B. Künstler &#8596; Album-Künstler) &ndash; oder den Wert des einen <em>einseitig</em> in das andere übernehmen. Der Knopf nennt dabei die Richtung (z.B. &laquo;Titel &#8594; Kommentar&raquo;), damit sichtbar ist, welches Feld überschrieben wird. Zugehörige Sortierfelder werden automatisch mitgeführt. <strong>Kopieren fragt nach</strong>, denn es ist nicht umkehrbar: das Ziel verliert seinen bisherigen Inhalt, und wo die Quelle leer ist, wird auch das Ziel geleert.</li>
 <li><strong>Titel ergänzen:</strong> Text am Anfang oder Ende des Titels anfügen.</li>
 <li><strong>Datum in Titel:</strong> Änderungsdatum der Datei in den Titel übernehmen.</li>
 <li><strong>Aufteilen:</strong> Den Inhalt eines Feldes an einem Trennzeichen in zwei Zielfelder aufteilen (Quellfeld wahlweise kopieren oder ausschneiden). Auch Zahlenfelder (Titel-/CD-/Satz-Nr., Jahr) sind möglich; Einträge ohne erkennbare Zahl werden übersprungen.</li>
 <li><strong>Namen &amp; Sortierung trennen:</strong> Löst eine Komma-Sortierform (z.B. &laquo;Lennon, John&raquo;) in Einträgen mit leerem Sortierfeld auf: Der Originalwert wandert ins Sortierfeld, das Namensfeld (Titel, Künstler, Album-Künstler, Album oder Komponist) wird in die natürliche Reihenfolge gedreht (&laquo;John Lennon&raquo;). Mehrdeutige Fälle mit mehreren Kommata sind anfangs nicht angehakt.</li>
-<li><strong>Nummern aus Dateiname:</strong> Dasselbe für Titel, die schon in der Mediathek stehen: füllt leere Titel- und CD-Nummern aus dem Datei- und Ordnernamen und schreibt sie in die Datei. Gelesen wird der Name des Originals; eine kopierte Datei trägt in der Mediathek den Namen, den sCollect ihr gegeben hat &ndash; stand die Nummer nur im alten Namen, importiere den Ordner neu.</li>
+<li><strong>Nummern aus Dateiname:</strong> füllt bei Tondateien, die schon in der Mediathek stehen, leere Titel- und CD-Nummern aus dem Datei- und Ordnernamen (wie der Import, siehe <a href="#import">Abschnitt 3</a>) und schreibt sie in die Datei &ndash; außer bei Dateien, die mit <strong>An Ort belassen</strong> übernommen wurden. Gelesen wird der Name des Originals; eine kopierte Datei trägt in der Mediathek den Namen, den sCollect ihr gegeben hat &ndash; stand die Nummer nur im alten Namen, importiere den Ordner neu.</li>
 </ul>
 
 <h3>Bewertung und Favoriten</h3>
@@ -352,7 +370,7 @@
 </ul>
 
 <h3>Video abspielen</h3>
-<p>Filme werden in einem separaten Videofenster geöffnet; am Ende eines Films geht es mit dem nächsten Titel weiter, sofern <strong>Am Ende weiterspielen</strong> für seinen Medientyp eingeschaltet ist. Die Steuerungselemente blenden sich automatisch ein, wenn du die Maus bewegst. Du kannst Tonspuren und Untertitel im Menü &laquo;Wiedergabe&raquo; umschalten, falls die Datei mehrere enthält. Ziehst du das Videofenster von Hand größer oder kleiner, behält sCollect diese Breite auch für die nächsten Filme bei; die Höhe richtet sich nach dem Bildformat des jeweiligen Films. <strong>Wiedergabe &gt; 100 %</strong> stellt wieder die Originalgröße ein.</p>
+<p>Filme werden in einem separaten Videofenster geöffnet; am Ende eines Films geht es mit dem nächsten Titel weiter, sofern <strong>Am Ende weiterspielen</strong> für seinen Medientyp eingeschaltet ist. Die Steuerungselemente blenden sich automatisch ein, wenn du die Maus bewegst. Tonspur und Untertitel wählst du unter <strong>Wiedergabe &gt; Tonspur</strong> bzw. <strong>Wiedergabe &gt; Untertitel</strong> oder mit den beiden Knöpfen in der Bedienleiste des Videofensters. Die Tonspur-Wahl gibt es ab zwei Tonspuren, die Untertitel-Wahl schon ab einer Untertitelspur; dort schaltet <strong>Aus</strong> sie ab. Solange die Bedienleiste eingeblendet ist, rücken Untertitel über sie. <kbd>&#8984;W</kbd> schließt das Videofenster wie sein Schließknopf. Ziehst du das Videofenster von Hand größer oder kleiner, behält sCollect diese Breite auch für die nächsten Filme bei; die Höhe richtet sich nach dem Bildformat des jeweiligen Films. <strong>Wiedergabe &gt; 100 %</strong> stellt wieder die Originalgröße ein.</p>
 
 <h3>Externe Wiedergabe</h3>
 <p>Einige Formate werden von macOS bzw. AVFoundation nicht direkt unterstützt. sCollect erkennt das und öffnet diese Dateien automatisch in einem externen Player:</p>
@@ -367,7 +385,7 @@
 <p>Einen häufigen Fall dieser Art berichtigt sCollect gleich beim Import: MP3-Ton in einem MP4-Container, dem ein Beschreibungsfeld fehlt, das macOS erwartet. Der Eingriff ändert <strong>19 Byte</strong> im Container &ndash; Bild, Ton, Länge, Kapitel und alle Tags bleiben unangetastet &ndash; und danach spielt die Datei überall, nicht nur in sCollect. Eine Zeile im Protokoll nennt jeden solchen Fall.</p>
 
 <p><strong>Kopiergeschützte Dateien</strong> gibt sCollect immer nach außen, ohne sie vorher zu prüfen: an das Programm, das macOS für sie vorsieht &ndash; bei gekauften Titeln zum Beispiel an <strong>TV</strong> oder <strong>Musik</strong>. Nur dort liegt der Schlüssel, mit dem sie sich überhaupt abspielen lassen.</p>
-<p>Der bevorzugte Player wird automatisch erkannt: <strong>VLC</strong>, <strong>IINA</strong> oder <strong>MPV</strong> (in dieser Reihenfolge). Du kannst die Auswahl in <strong>Einstellungen &gt; Wiedergabe/Playlist &gt; Externer Player für nicht-unterstützte Codecs</strong> festlegen. Wenn keiner dieser Player installiert ist, wird auf das Standardprogramm zurückgegriffen &ndash; empfehlenswert ist <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (kostenlos, Open Source).</p>
+<p>Ohne eigene Wahl öffnet sCollect solche Dateien mit dem Programm, das der Finder für sie vorsieht. Ist <strong>VLC</strong>, <strong>IINA</strong> oder <strong>MPV</strong> installiert, bietet sCollect sie im Begrüßungsfenster und unter <strong>Einstellungen &gt; Wiedergabe/Playlist &gt; Externer Player für nicht-unterstützte Codecs</strong> zur Wahl an &ndash; empfehlenswert ist <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC Media Player</a> (kostenlos, Open Source).</p>
 
 <aside>
 <strong>Hinweis:</strong> Beim ersten Start zeigt sCollect einen Begrüßungstext mit diesen Hinweisen. Aktiviere &laquo;Nicht wieder anzeigen&raquo;, um ihn künftig zu unterdrücken.
@@ -382,6 +400,7 @@
 <tr><td><kbd>&#8997;&#8984;&#8593;</kbd></td><td>Lauter</td></tr>
 <tr><td><kbd>&#8997;&#8984;&#8595;</kbd></td><td>Leiser</td></tr>
 <tr><td><kbd>&#8963;&#8984;F</kbd></td><td>Vollbild</td></tr>
+<tr><td><kbd>&#8984;W</kbd></td><td>Videofenster schließen</td></tr>
 </table>
 <p>Diese Befehle stehen auch im Menü <strong>Wiedergabe</strong>; alle Tastaturkürzel findest du in <a href="#shortcuts">Kapitel 12</a>.</p>
 
@@ -393,16 +412,16 @@
 </ul>
 
 <h3>Am Ende weiterspielen</h3>
-<p>Ob die Wiedergabe nach dem Ende eines Titels mit dem nächsten weitergeht, legst du <strong>pro Medientyp</strong> fest unter <strong>Einstellungen &gt; Wiedergabe/Playlist &gt; Am Ende weiterspielen</strong>. Standardmäßig ist das an für alle Tontypen und für Musikvideos, aus für Spielfilme, Serien, Heimvideos und Kamerafilme &ndash; ein Film bleibt dann an seinem Ende (oder an seiner Stopp-Marke) stehen. <strong>Wiederholen (Titel)</strong> wiederholt trotzdem.</p>
+<p>Ob die Wiedergabe nach dem Ende eines Titels mit dem nächsten weitergeht, legst du <strong>pro Medientyp</strong> fest unter <strong>Einstellungen &gt; Wiedergabe/Playlist &gt; Am Ende weiterspielen</strong>. Standardmäßig ist das an für alle Ton-Typen und für Musikvideos, aus für alle übrigen Film-Typen (Spielfilm, Serie, Heimvideo, Kamera und eigene) &ndash; ein Film bleibt dann an seinem Ende (oder an seiner Stopp-Marke) stehen. <strong>Wiederholen (Titel)</strong> wiederholt trotzdem.</p>
 
 <h3>Wiedergabeposition merken</h3>
-<p>sCollect kann sich für jeden Eintrag die zuletzt erreichte Wiedergabeposition merken und beim nächsten Mal dort fortsetzen &ndash; wie bei einem Hörbuch oder Podcast. Ob eine Position gemerkt wird, legst du <strong>global pro Medientyp</strong> fest unter <strong>Einstellungen &gt; Wiedergabe/Playlist &gt; Wiedergabeposition merken</strong> (standardmäßig an für Hörbücher, Podcasts und Filme, aus für Musik).</p>
+<p>sCollect kann sich für jeden Eintrag die zuletzt erreichte Wiedergabeposition merken und beim nächsten Mal dort fortsetzen &ndash; wie bei einem Hörbuch oder Podcast. Ob eine Position gemerkt wird, legst du <strong>global pro Medientyp</strong> fest unter <strong>Einstellungen &gt; Wiedergabe/Playlist &gt; Wiedergabeposition merken</strong> (standardmäßig an für alle Film-Typen und alle Ton-Typen außer Musik &ndash; also auch Hörbuch, Podcast und Tonaufnahme &ndash;, aus für Musik).</p>
 <p>Wird an einer gemerkten Position fortgesetzt, erscheint kurz die Schaltfläche <strong>&laquo;Von Anfang an&raquo;</strong> &ndash; ein Klick startet den Titel stattdessen von vorne.</p>
 
 <h3>Feste Start- und Stopp-Marken</h3>
 <p>Im Metadaten-Editor kannst du im Tab <strong>Dateiinfo</strong>, Abschnitt <strong>Wiedergabe</strong>, feste Marken setzen: Der Eintrag wird dann nur noch von <strong>Start</strong> bis <strong>Stopp</strong> abgespielt &ndash; praktisch, um einen Vorspann oder Stille am Ende zu überspringen. Zeiten im Format <code>MMM:SS</code>, Tausendstel nach Komma (z.B. <code>3:45,500</code>). Der Button <strong>&laquo;Übernehmen&raquo;</strong> setzt das jeweilige Feld auf die aktuelle Wiedergabeposition.</p>
 <aside>
-<strong>Hinweis:</strong> Wiedergabeposition und Start/Stopp gelten auch bei externer Wiedergabe (VLC, IINA, MPV). Sind Kopien dieser Mediathek eingerichtet, werden Position und Marken automatisch mit ihnen abgeglichen &ndash; du kannst auf einem Gerät pausieren und auf einem anderen fortsetzen.
+<strong>Hinweis:</strong> Start/Stopp und die gemerkte Position gelten auch bei externer Wiedergabe von Filmen, wenn unter <strong>Einstellungen &gt; Wiedergabe/Playlist</strong> VLC, IINA oder MPV gewählt ist. Sind Kopien dieser Mediathek eingerichtet, werden Position und Marken automatisch mit ihnen abgeglichen &ndash; du kannst auf einem Gerät pausieren und auf einem anderen fortsetzen.
 </aside>
 
 <h3>Gekürzte Kopie erstellen</h3>
@@ -412,8 +431,8 @@
 
 
 <h3>Filme und Titel zusammenfügen</h3>
-<p>Mehrere Filme &ndash; etwa die Clips eines Ausflugs &ndash; fügt sCollect zu einem neuen Film zusammen, mehrere Tondateien &ndash; etwa die Teile eines Hörbuchs &ndash; zu einem Titel. Markiere dazu mindestens zwei Einträge derselben Kategorie, klicke mit der rechten Maustaste darauf und wähle <strong>&laquo;Zu einem Film zusammenfügen&hellip;&raquo;</strong> bzw. <strong>&laquo;Zu einem Titel zusammenfügen&hellip;&raquo;</strong>. Im folgenden Fenster legst du Titel und Reihenfolge fest; vorgeschlagen wird die Reihenfolge nach Datum, dann nach Titel.</p>
-<p>Zusammengefügt wird nur <strong>verlustfrei</strong>, ohne Neukodierung. Das geht, wenn die Dateien technisch zusammenpassen: gleiche Formatgruppe (MP4/M4V/MOV, M4A/M4B, AIFF, WAV oder CAF), gleicher Codec, gleiche Auflösung und gleiches Tonformat &ndash; typisch bei Aufnahmen derselben Kamera. Passen sie nicht, nennt sCollect den Grund. Bei MP3 und bei Formaten wie MKV, AVI oder WebM ist der Menüpunkt grau.</p>
+<p>Mehrere Filme &ndash; etwa die Clips eines Ausflugs &ndash; fügt sCollect zu einem neuen Film zusammen, mehrere Tondateien &ndash; etwa die Teile eines Hörbuchs &ndash; zu einem Titel. Markiere dazu mindestens zwei Filme oder mindestens zwei Tondateien, klicke mit der rechten Maustaste darauf und wähle <strong>&laquo;Zu einem Film zusammenfügen&hellip;&raquo;</strong> bzw. <strong>&laquo;Zu einem Titel zusammenfügen&hellip;&raquo;</strong>. Im folgenden Fenster legst du Titel und Reihenfolge fest; vorgeschlagen wird die Reihenfolge nach Datum, dann nach Titel.</p>
+<p>Zusammengefügt wird nur <strong>verlustfrei</strong>, ohne Neukodierung. Das geht, wenn die Dateien technisch zusammenpassen: gleiche Formatgruppe (MP4/M4V/MOV, M4A/M4B, AIFF, WAV oder CAF), gleicher Codec, gleiche Auflösung und gleiches Tonformat &ndash; typisch bei Aufnahmen derselben Kamera. Passen sie nicht, nennt sCollect den Grund. Apple Lossless (ALAC) lässt sich nicht verlustfrei zusammenfügen; auch das sagt sCollect nach dem Klick. Bei MP3 und bei Formaten wie MKV, AVI oder WebM ist der Menüpunkt grau.</p>
 <p>Der neue Eintrag übernimmt Angaben, Cover und Aufnahmedatum vom ersten; die Einzeldateien bleiben unverändert. Bei AAC-Ton (M4A/M4B) bleibt an jeder Naht eine winzige Pause von rund 0,05 Sekunden &ndash; der Vorlauf des Encoders, der sich ohne Neukodierung nicht entfernen lässt.</p>
 
 <h3>Apple Music Export</h3>
@@ -423,7 +442,7 @@
 <h2 id="playlists">7. Playlists</h2>
 
 <h3>Standard-Playlists</h3>
-<p>Eine neue Playlist legst du mit dem <strong>+</strong> neben der Überschrift &laquo;Playlisten&raquo; in der Seitenleiste an, einen Ordner für Playlists mit dem Ordnersymbol daneben. Einträge kommen per Drag&amp;Drop aus der Medienliste hinein oder über das Kontextmenü &laquo;Zur Playlist hinzufügen&raquo;; &laquo;Nur aus Playlist entfernen&raquo; nimmt sie wieder heraus, ohne sie aus der Mediathek zu löschen.</p>
+<p>Zeigst du in der Seitenleiste auf die Überschrift &laquo;Playlisten&raquo;, erscheinen daneben drei Knöpfe: <strong>+</strong> für eine neue Playlist, das Zahnrad für eine intelligente Playlist und das Ordnersymbol für einen Ordner. Einträge kommen per Drag&amp;Drop aus der Medienliste hinein oder über das Kontextmenü &laquo;Zur Playlist hinzufügen&raquo;; &laquo;Nur aus Playlist entfernen&raquo; nimmt sie wieder heraus, ohne sie aus der Mediathek zu löschen.</p>
 
 <p>Eine Playlist unter einer Kategorie (etwa Audio) nimmt nur Einträge dieser Kategorie auf. Für eine gemischte Liste nimmst du die Playlisten ganz unten in der Seitenleiste. Beim Löschen einer Playlist oder eines Ordners fragt sCollect nach; ein Ordner nimmt seine Playlists mit, die Einträge selbst bleiben in der Mediathek.</p>
 
@@ -448,7 +467,7 @@
 <p>Auch in einer Playlist lässt sich der Spaltenbrowser einblenden &ndash; mit dem Schalter rechts über der Liste oder mit <strong>Darstellung &gt; Spaltenbrowser ein-/ausblenden</strong> (<kbd>&#8984;B</kbd>). Er zeigt nur Werte aus den Titeln dieser Playlist. Jede Playlist merkt sich ihre Auswahl im Browser; ob er eingeblendet ist, gilt dagegen für alle Listen gemeinsam.</p>
 
 <h3>Intelligente Playlists</h3>
-<p>Intelligente Playlists werden automatisch anhand von Regeln befüllt. Erstelle eine über <strong>Ablage &gt; Neue intelligente Playlist&hellip;</strong> (<kbd>&#8997;&#8984;N</kbd>) oder das Zahnrad neben der Überschrift &laquo;Playlisten&raquo; &ndash; ganz unten in der Seitenleiste oder unter einer Kategorie. Eine intelligente Playlist unter einer Kategorie wertet nur deren Einträge aus. Regeln können kombiniert werden:</p>
+<p>Intelligente Playlists werden automatisch anhand von Regeln befüllt. Erstelle eine über <strong>Ablage &gt; Neue intelligente Playlist&hellip;</strong> (<kbd>&#8997;&#8984;N</kbd>) oder das Zahnrad, das neben der Überschrift &laquo;Playlisten&raquo; erscheint, sobald du darauf zeigst &ndash; ganz unten in der Seitenleiste oder unter einer Kategorie. Eine intelligente Playlist unter einer Kategorie wertet nur deren Einträge aus. Regeln können kombiniert werden:</p>
 <ul>
 <li><strong>Textfelder:</strong> Titel, Künstler, Album, Genre usw. (enthält, beginnt mit, endet mit, ist&hellip;)</li>
 <li><strong>Zahlenfelder:</strong> Jahr, Bewertung, Wiedergaben, Dauer (ist, ist größer als, ist kleiner als&hellip;)</li>
@@ -502,7 +521,7 @@
 <p><strong>Wenn ein solcher Ordner nicht erreichbar ist</strong> &ndash; die Platte ist abgezogen, das Netzlaufwerk nicht verbunden &ndash;, dann <em>sperrt</em> sCollect diesen Medientyp: es wird nichts geschrieben, nichts verschoben und nichts abgeglichen, und die Einträge bleiben unverändert. Das ist Absicht. Ein Medientyp, dessen Ordner fehlt, würde sonst stillschweigend im Standardordner landen, und die Mediathek wüsste hinterher nicht mehr, wohin die Dateien gehören.</p>
 <p>Ein Warnband nennt die betroffenen Typen, und in den Einstellungen steht der Ordner mit dem Vermerk, dass er gerade nicht erreichbar ist. Schließt du die Platte wieder an, ist die Sperre von selbst vorbei.</p>
 
-<p><strong>Umbiegen:</strong> Wählst du für einen Medientyp einen <em>anderen</em> Ordner, während der bisherige nicht erreichbar ist, kann nichts verschoben werden &ndash; die Dateien sind ja nicht greifbar. sCollect bietet dann an, die <em>Einträge</em> auf den neuen Ordner umzubiegen: es sucht dort nach jeder Datei, erst über den bisherigen Pfad, dann über den Dateinamen, und zeigt dir vorher eine Vorschau mit drei Zahlen &ndash; über den Pfad gefunden, über den Dateinamen gefunden, weiterhin ohne Datei. <strong>Umbiegen ändert nur die Mediathek, keine einzige Datei.</strong></p>
+<p><strong>Auf neuen Ordner umstellen:</strong> Wählst du für einen Medientyp einen <em>anderen</em> Ordner, während der bisherige nicht erreichbar ist, kann nichts verschoben werden &ndash; die Dateien sind ja nicht greifbar. sCollect bietet dann an, die <em>Einträge</em> auf den neuen Ordner umzustellen: es sucht dort nach jeder Datei, erst über den bisherigen Pfad, dann über den Dateinamen, und zeigt dir vorher eine Vorschau mit drei Zahlen &ndash; über den Pfad gefunden, über den Dateinamen gefunden, weiterhin ohne Datei. <strong>Das Umstellen ändert nur die Mediathek, keine einzige Datei.</strong> Dasselbe bietet sCollect beim Öffnen der Mediathek an, wenn Einträge eines Typs noch auf den alten Ordner zeigen, obwohl ein neuer eingestellt ist: <strong>Auf neuen Ordner umstellen&hellip;</strong> führt je Typ durch dieselbe Vorschau, <strong>Später</strong> fragt beim nächsten Öffnen wieder. Findet die Vorschau nichts, verschiebe zuerst den Inhalt des alten Ordners im Finder in den neuen und stelle dann um.</p>
 
 <h3>Fehlende Dateien finden</h3>
 <p>Falls Dateien verschoben oder die Festplatte nicht angeschlossen wurde, kannst du über <strong>Einstellungen &gt; Mediathek &gt; Fehlende Dateien prüfen</strong> eine Prüfung starten. sCollect zeigt alle nicht erreichbaren Einträge; <strong>Ordner durchsuchen&hellip;</strong> sucht sie in einem Ordner deiner Wahl (siehe unten).</p>
@@ -510,7 +529,7 @@
 
 
 <h3>Fehlende markieren und einblenden</h3>
-<p><strong>Ablage &gt; Mediathek &gt; Fehlende markieren</strong> prüft einmal den ganzen Bestand und merkt sich das Ergebnis am Eintrag. Danach liest die Liste nur noch diese Marke &ndash; sie prüft beim Blättern nichts nach, weil das bei einer großen Mediathek zu lange dauert. Ein Eintrag ohne Datei bekommt ein <strong>orangefarbenes Warndreieck</strong> vor dem Titel.</p>
+<p><strong>Ablage &gt; Mediathek &gt; Fehlende markieren&hellip;</strong> prüft einmal den ganzen Bestand und merkt sich das Ergebnis am Eintrag. Danach liest die Liste nur noch diese Marke &ndash; sie prüft beim Blättern nichts nach, weil das bei einer großen Mediathek zu lange dauert. Ein Eintrag ohne Datei bekommt ein <strong>orangefarbenes Warndreieck</strong> vor dem Titel.</p>
 <p><strong>Ein abgezogenes Laufwerk heißt nicht, dass die Datei fehlt.</strong> Was nicht angeschlossen ist, kann sCollect auch nicht prüfen. Solche Einträge zählt der Bericht getrennt als <em>nicht prüfbar</em>, und ihre Marke bleibt, wie sie war &ndash; sie wird weder gesetzt noch entfernt. Der Bericht nach dem Lauf nennt deshalb geprüfte, fehlende und nicht prüfbare Einträge und dazu, wie viele Marken neu gesetzt und wie viele entfernt wurden.</p>
 <p><strong>Ablage &gt; Mediathek &gt; Fehlende einblenden</strong> (<kbd>&#8679;&#8984;F</kbd>) ist ein Umschalter: die Liste zeigt dann nur noch die markierten Einträge. Ein Band über der Liste sagt, warum sie so kurz ist, und bietet mit <strong>Fehlende-Sicht beenden</strong> den Ausstieg an derselben Stelle an. Solange keine Marke gesetzt ist, ist der Umschalter abgeblendet.</p>
 <p>Die Sicht <strong>friert beim Einschalten ein</strong>, welche Einträge sie zeigt. Verknüpfst du einen davon neu, bleibt seine Zeile stehen und bekommt einen <strong>grünen Haken</strong> &ndash; so verlierst du beim Abarbeiten nicht den Überblick über das, was du schon geschafft hast. Der Zähler im Band zeigt beides: wie viele noch ohne Datei sind und wie viele erledigt. In der Normalansicht verschwindet die Markierung.</p>
@@ -541,6 +560,8 @@
 <ul>
 <li><strong>Beim Öffnen:</strong> Wenn das Volume offline ist, wird kein Automount-Versuch unternommen &ndash; sCollect zeigt eine Warnung. Du kannst die Mediathek dann trotzdem öffnen oder das Volume zuerst manuell verbinden.</li>
 <li><strong>Beim Löschen:</strong> Gelöschte Dateien wandern auch auf Netzwerk-Freigaben zunächst in den App-Papierkorb (Ordner <code>.Deleted</code> im jeweiligen Medienordner) und lassen sich von dort wiederherstellen. Endgültig entfernt werden sie erst beim Leeren des App-Papierkorbs (siehe Abschnitt 2). Da Freigaben meist keinen System-Papierkorb haben, werden sie dann direkt gelöscht.</li>
+<li><strong>Auf mehreren Macs:</strong> Öffne eine Mediathek immer nur auf <strong>einem</strong> Mac mit sCollect. Ist sie gleichzeitig auf einem zweiten Mac in sCollect geöffnet, können sich Änderungen gegenseitig überschreiben. sCollectPlay darf auf anderen Macs dieselbe Mediathek abspielen; Bewertungen und Wiedergaben von dort übernimmt sCollect beim nächsten Öffnen oder Abgleich.</li>
+<li><strong>Wenn Mediathek-Dateien nicht lesbar sind:</strong> Kann sCollect einen Teil der Mediathek-Dateien nicht vollständig lesen &ndash; etwa nach einem kurzen Verbindungsabbruch &ndash;, öffnet es die Mediathek <strong>nur lesend</strong> und nennt die betroffenen Dateien. Dann wird nichts gesichert und keine Kopie abgeglichen, damit keine Einträge verloren gehen. Prüfe die Verbindung und öffne die Mediathek erneut.</li>
 </ul>
 
 
@@ -549,18 +570,23 @@
 
 <h3>Allgemein</h3>
 <ul>
-<li><strong>Import-Modus:</strong> Kopieren, Verschieben oder An Ort belassen (Standard für zukünftige Importe).</li>
-<li><strong>Mehrfachwert-Trennzeichen:</strong> Zeichen, die als Trennzeichen für mehrere Künstler/Genres in einem Feld interpretiert werden (Standard: &amp;, /, ;).</li>
+<li><strong>Allgemein:</strong> Albumcover anzeigen, Löschen bestätigen, immer nur eine Kategorie aufgeklappt.</li>
+<li><strong>Format konvertieren:</strong> ob das Fenster nach erfolgreicher Konvertierung schließt.</li>
+<li><strong>Bücher &amp; PDFs:</strong> Titel und Autor aus dem Dateinamen.</li>
+<li><strong>Mehrfachwerte:</strong> Zeichen, die als Trennzeichen für mehrere Künstler/Genres in einem Feld interpretiert werden (Standard: &amp;, /, ;).</li>
+<li><strong>Duplikate:</strong> Prüfung beim Import, Laufzeit-Toleranz und Tiefensuche (siehe <a href="#library">Abschnitt 2</a>).</li>
+<li><strong>Sprache:</strong> Die Sprache der App folgt den Systemeinstellungen. Zum Ändern: Systemeinstellungen → Allgemein → Sprache &amp; Region und dort ganz unten zum Abschnitt „Apps“ scrollen.</li>
 </ul>
 
 <h3>Mediathek</h3>
 <ul>
-<li><strong>Standard-Medienordner:</strong> Der Hauptordner, in den importierte Dateien abgelegt werden.</li>
-<li><strong>Ordner pro Medientyp:</strong> Optionale eigene Ordner für bestimmte Medientypen.</li>
-<li><strong>Mediathek-Speicherort:</strong> Zeigt den aktuellen Speicherort und ermöglicht den Wechsel.</li>
+<li><strong>Speicherort:</strong> Zeigt den aktuellen Speicherort der Mediathek und ermöglicht den Wechsel.</li>
 
 <li><strong>Import:</strong> Wie importierte Dateien behandelt werden (siehe &laquo;Import-Modi&raquo;).</li>
+<li><strong>Medienordner:</strong> je Medientyp ein eigener Ordner; ohne Haken gilt der Ordner <code>Media</code> der Mediathek. Das Kamerazeichen markiert das Ziel für Kamerafilme und Bilder ohne gewählten Typ.</li>
 <li><strong>Ansicht &gt; Max. Einträge pro Ordner:</strong> Ab so vielen Werten bildet der Spaltenbrowser Knoten nach Anfangsbuchstaben. Betrifft nur die Anzeige, nicht die Ordner auf der Festplatte.</li>
+<li><strong>Import (bei Sortierung nach Datum):</strong> die vier Schalter zum Aufräumen abgeleiteter Titel (siehe <a href="#import">Abschnitt 3</a>).</li>
+<li><strong>Aktionen:</strong> Mediathek organisieren&hellip;, Fehlende Dateien prüfen&hellip;, Ordner neu verknüpfen&hellip;, Artworks aufräumen.</li>
 </ul>
 
 <h3>Kategoriebezeichner</h3>
@@ -586,14 +612,19 @@
 <li><strong>Videofenster immer im Vordergrund:</strong> Das Videofenster bleibt stets über allen anderen Fenstern.</li>
 <li><strong>Video beim Minimieren anhalten:</strong> Hält die Wiedergabe an, solange das Videofenster minimiert ist, und setzt sie beim Wiederherstellen fort.</li>
 <li><strong>Lautstärke bei Zeitlupe/Einzelbild:</strong> Lautstärkereduzierung in dB während Zeitlupe und Einzelbild-Modus.</li>
-<li><strong>Externer Player für nicht-unterstützte Codecs:</strong> Bevorzugter Player für Codecs, die AVFoundation nicht abspielen kann (MKV, AVI, AV1 ohne HW-Decoder, DivX usw.). Erkannt werden VLC, IINA und MPV; ist keiner installiert, wird das Standardprogramm verwendet.</li>
+<li><strong>Externer Player für nicht-unterstützte Codecs:</strong> Player für Codecs, die macOS nicht abspielen kann (MKV, AVI, AV1 ohne HW-Decoder, DivX usw.). Vorgabe ist das Programm, das der Finder vorsieht; installierte Player wie VLC, IINA und MPV stehen zur Wahl.</li>
+<li><strong>Wiedergabeposition merken:</strong> je Medientyp (siehe <a href="#playback">Abschnitt 6</a>).</li>
+<li><strong>Am Ende weiterspielen:</strong> je Medientyp, ob nach dem Ende eines Titels der nächste folgt (siehe <a href="#playback">Abschnitt 6</a>).</li>
 </ul>
 
 <h3>Synchronisation</h3>
-<p>Verwaltet die Verbindung zu Master- und Kopie-Mediatheken. Hier verbindest du eine zweite Mediathek als Kopie, überwachst Pending-Sync-Operationen und projizierst den Master-Stand auf eine Kopie. Details siehe Abschnitt 11.</p>
+<p>Verwaltet die Verbindung zu Master- und Kopie-Mediatheken. Hier verbindest du eine zweite Mediathek als Kopie, siehst, was für jede Kopie noch offen ist, und projizierst den Master-Stand auf eine Kopie. Details siehe Abschnitt 11.</p>
 
-<h3>Sprache</h3>
-<p>Die Sprache der App folgt den Systemeinstellungen. Zum Ändern: Systemeinstellungen → Allgemein → Sprache &amp; Region und dort ganz unten zum Abschnitt „Apps“ scrollen.</p>
+<h3>Papierkorb</h3>
+<p>Einstellungen zum App-Papierkorb, in dem gelöschte Einträge samt Dateien zunächst landen (siehe <a href="#library">Abschnitt 2</a>).</p>
+
+<h3>Statistik</h3>
+<p>Zeigt, wie viele Objekte jeder Medientyp enthält, und die Zahl der Playlists.</p>
 
 
 <h2 id="convert">10. Format konvertieren</h2>
@@ -601,7 +632,7 @@
 <h3>Audio konvertieren oder aus Video extrahieren</h3>
 <p>Markiere einen oder mehrere Audio- oder Video-Einträge in der Liste, klicke mit der rechten Maustaste und wähle <strong>Format konvertieren&hellip;</strong> bzw. <strong>Audio extrahieren als&hellip;</strong> bei Filmen. Im Dialog lassen sich folgende Einstellungen festlegen:</p>
 <ul>
-<li><strong>Ausgabeformat:</strong> AAC, MP3, HE-AAC, ALAC (verlustfrei), WAV oder AIFF. Auch &laquo;Ton unverändert&raquo; (Passthrough) ist verfügbar &ndash; dabei wird der Audio-Bitstream ohne Re-Encoding 1:1 in einen MP4-Container kopiert.</li>
+<li><strong>Ausgabeformat:</strong> AAC, MP3, HE-AAC, ALAC (verlustfrei), WAV oder AIFF. Auch &laquo;Ton unverändert&raquo; (Passthrough) ist verfügbar &ndash; dabei wird der Audio-Bitstream ohne Neukodierung 1:1 in einen MP4-Container kopiert.</li>
 <li><strong>Audio-Parameter:</strong> Kanal-Layout (wie Original / Stereo / Mono), Sample-Rate (Original / 22050 / 44100 / 48000 Hz) und bei PCM/ALAC die Bit-Tiefe.</li>
 <li><strong>Komprimierung:</strong> Bei MP3/AAC/HE-AAC wählbar zwischen fester Bitrate oder variabler Bitrate (VBR) mit Qualitätsregler.</li>
 <li><strong>Ziel:</strong> Zwei Wahlmöglichkeiten &ndash; <strong>Mediathek</strong> (Konvertat landet in der gewählten Audio-Kategorie der Mediathek. Vorgeschlagen wird die Kategorie, aus der alle gewählten Einträge stammen &ndash; Musik bleibt also Musik. Sonst, etwa beim Herausholen des Tons aus Filmen, schlägt der Dialog die zuletzt gewählte Kategorie vor, anfangs &laquo;Podcast&raquo; bzw. &laquo;Hörbuch&raquo;/&laquo;Musik&raquo;, wenn Podcast nicht aktiv ist) oder <strong>Extern</strong> (mit Knopf <strong>Wählen&hellip;</strong> einen Ordner außerhalb der Mediathek wählen &ndash; das Original bleibt unverändert, das Konvertat wird nicht in die Mediathek aufgenommen). Neben dem Knopf steht der volle Pfad des gewählten Ordners; ist er zu lang, fällt der Anfang weg (&laquo;&hellip;/Ordner/Ziel&raquo;), damit der Zielordner selbst sichtbar bleibt. Zeigt der Mauszeiger darauf, erscheint der ganze Pfad.</li>
@@ -621,7 +652,7 @@
 <h2 id="sync">11. Synchronisation (Master/Kopie)</h2>
 
 <h3>Konzept</h3>
-<p>sCollect kann mehrere Mediatheken miteinander synchronisieren: Eine Mediathek wirkt als <em>Master</em>, eine oder mehrere weitere als <em>Kopien</em>. Änderungen am Master (Tag-Edits, Importe, Reorganize) werden automatisch auf die verbundenen Kopien gespiegelt &ndash; mit eigenen Medienordnern und Pfaden pro Kopie. So kann z.B. die volle Mediathek auf einer großen externen Festplatte als Master dienen, während ein Notebook eine reduzierte oder identische Kopie hat.</p>
+<p>sCollect kann mehrere Mediatheken miteinander synchronisieren: Eine Mediathek wirkt als <em>Master</em>, eine oder mehrere weitere als <em>Kopien</em>. Änderungen am Master (geänderte Angaben, Importe, Mediathek organisieren) werden automatisch auf die verbundenen Kopien gespiegelt &ndash; mit eigenen Medienordnern und Pfaden pro Kopie. So kann z.B. die volle Mediathek auf einer großen externen Festplatte als Master dienen, während ein Notebook eine reduzierte oder identische Kopie hat.</p>
 
 
 <h3>Synchronisation ist kein Backup</h3>
@@ -632,17 +663,17 @@
 <p><strong>Der günstigste Zeitpunkt ist, wenn nichts mehr offen ist.</strong> Eine neue Kopie muss zunächst alles bekommen, was ihr fehlt &ndash; kommt das mit einer noch laufenden Übertragung zusammen, dauert beides länger, und im Zweifel warten alle Kopien aufeinander. Ein Blick auf das Sync-Symbol in der Seitenleiste genügt: zeigt es keine Zahl, ist der richtige Moment.</p>
 
 <h3>Mediendateien initial spiegeln</h3>
-<p>Beim Push (Projizieren) schreibt sCollect die Mediathek-Datenbank der Kopie (Items, Playlists, Settings), kopiert aber bei der Initial-Einrichtung nicht alle Mediendateien automatisch. Für die initiale Bulk-Spiegelung der Dateien empfiehlt sich ein externes Tool wie FreeFileSync. Danach übernimmt sCollect die laufenden Datei-Operationen (Import, Verschieben, Löschen, Tag-Schreiben, Artwork) selbst.</p>
+<p>Beim Projizieren schreibt sCollect die Mediathek der Kopie (Einträge, Playlists, Einstellungen) neu, kopiert beim Einrichten aber nicht alle Mediendateien. Für das erste vollständige Spiegeln der Dateien empfiehlt sich ein externes Werkzeug wie FreeFileSync. Danach übernimmt sCollect die laufenden Datei-Operationen (Import, Verschieben, Löschen, Schreiben der Angaben, Cover) selbst.</p>
 
-<h3>Projizieren (Push)</h3>
-<p>Mit <strong>Projizieren</strong> in der Slave-Zeile schreibt der Master die Slave-<code>library.json</code> komplett neu &ndash; alle Items, Playlists und content-relevanten Settings werden vom Master übernommen. Dabei wird auch die Pending-Sync-Queue dieses Slaves zurückgesetzt.</p>
+<h3>Projizieren</h3>
+<p>Mit <strong>Projizieren</strong> in der Zeile einer Kopie schreibt der Master deren Mediathek vollständig neu &ndash; alle Einträge, Playlists und die Einstellungen, die den Inhalt betreffen, werden vom Master übernommen. Was für diese Kopie noch offen war, wird dabei verworfen.</p>
 
-<h3>Live-Broadcast</h3>
-<p>Im laufenden Betrieb wird jede Änderung am Master automatisch an alle verbundenen Kopien propagiert. Bei nicht erreichbaren Kopien werden die Änderungen in einer Queue gespeichert und nachgeholt, sobald die Kopie wieder erreichbar ist. Die Anzahl der ausstehenden Operationen pro Kopie wird in den Sync-Settings angezeigt (&laquo;X offen&raquo;-Badge).</p>
+<h3>Laufender Abgleich</h3>
+<p>Im laufenden Betrieb wird jede Änderung am Master automatisch an alle verbundenen Kopien weitergegeben. Bei nicht erreichbaren Kopien werden die Änderungen vorgemerkt und nachgeholt, sobald die Kopie wieder erreichbar ist. Wie viel für jede Kopie noch offen ist, steht unter <strong>Einstellungen &gt; Synchronisation</strong> (Hinweis &laquo;&hellip; offen&raquo;).</p>
 <p>Eine Löschung am Master wird so gespiegelt, dass jede Kopie ihre eigene Datei lokal in ihren <code>.Deleted</code>-Papierkorb verschiebt &ndash; ohne Übertragung übers Netz. Wiederherstellen am Master holt die Kopie-Dateien ebenso lokal zurück; erst beim endgültigen Entfernen am Master verwerfen die Kopien ihre Papierkorb-Datei.</p>
 
-<h3>Pending-Operationen</h3>
-<p>Wenn eine Kopie offline ist oder eine Synchronisation fehlgeschlagen ist, sammeln sich Pending-Operationen. Pro Kopie stehen zwei Optionen zur Verfügung:</p>
+<h3>Offene Übertragungen</h3>
+<p>Wenn eine Kopie offline ist oder eine Synchronisation fehlgeschlagen ist, sammeln sich offene Übertragungen. Pro Kopie stehen zwei Optionen zur Verfügung:</p>
 <ul>
 <li><strong>Offene nachholen:</strong> Versucht, den Rückstand anzuwenden. Scheitert eine Übertragung, bleibt sie stehen und der Lauf hält an &ndash; sie geht nicht verloren, sondern wird beim nächsten Versuch erneut probiert.</li>
 <li><strong>Verwerfen&hellip;:</strong> Diese Kopie überspringt ihren gesamten Rückstand. <strong>Das ist ein Verzicht, keine Freigabe:</strong> Sie gilt danach als auf Stand, ohne dass die Änderungen bei ihr angekommen sind &ndash; sie sind für sie verloren. Deshalb gehört danach immer <strong>Projizieren</strong> oder <strong>Sync-Fehler beheben&hellip;</strong> dazu; erst das stellt fest, was ihr wirklich fehlt, und holt es nach.</li>
@@ -654,10 +685,10 @@
 <p>Bleibt es dabei, hast du zwei Wege: die klemmende Kopie erreichbar machen und <strong>Offene nachholen</strong> &ndash; oder bei ihr <strong>Verwerfen</strong> und anschließend <strong>Projizieren</strong>. Der zweite Weg kostet dieser einen Kopie ihren Rückstand, gibt die übrigen aber sofort frei.</p>
 
 <h3>Sync-Fehler beheben</h3>
-<p>Mit <strong>Sync-Fehler beheben&hellip;</strong> werden für jede Datei der Kopie die Tag-Daten mit dem Master verglichen und bei Differenz neu geschrieben. Filter für Bewertung, Genre und Jahr ermöglichen es, etappenweise vorzugehen. Fehlende Slave-Dateien werden vom Master nachkopiert. Sinnvoll nach manuellen Eingriffen oder nach einer Initial-Spiegelung mit externem Tool.</p>
+<p>Mit <strong>Sync-Fehler beheben&hellip;</strong> werden für jede Datei der Kopie die Tag-Daten mit dem Master verglichen und bei Differenz neu geschrieben. Filter für Typ, Bewertung, Jahr und Genre ermöglichen es, etappenweise vorzugehen. Voreingestellt sind nur bewertete Objekte &ndash; für alle schalte <strong>Unbewertete Objekte einschließen</strong> ein. Dateien, die auf der Kopie fehlen, werden vom Master nachkopiert. Sinnvoll nach manuellen Eingriffen oder nach einer Initial-Spiegelung mit externem Tool.</p>
 
 <h3>Schreibschutz auf Kopien</h3>
-<p>Eine Kopie kann als schreibgeschützt markiert werden &ndash; dann sind Import, Löschen und Tag-Edits in der Kopie blockiert, damit Änderungen beim nächsten Sync nicht überschrieben werden.</p>
+<p>Eine Kopie kann als schreibgeschützt markiert werden &ndash; dann sind Import, Löschen und Bearbeiten der Angaben in der Kopie blockiert, damit Änderungen beim nächsten Sync nicht überschrieben werden.</p>
 <p>Bewerten bleibt auch auf einer schreibgeschützten Kopie möglich; die Bewertung holt der Master ab (nächster Abschnitt).</p>
 
 <h3>Bewertungen und Wiedergaben von einer Kopie</h3>
@@ -665,7 +696,7 @@
 <p>sCollectPlay meldet auf demselben Weg &ndash; auch wenn du dort den Master geöffnet hast: Seine Bewertungen und Wiedergaben übernimmt der Master zu denselben Zeitpunkten.</p>
 
 <h3>Mediathek organisieren</h3>
-<p>Über <strong>Einstellungen &gt; Mediathek &gt; Mediathek organisieren</strong> (oder den Knopf über der Medienliste) bringt sCollect die verwalteten Dateien auf einen sauberen Stand. Vorher fragt ein Dialog nach dem Umfang und den Optionen.</p>
+<p>Über <strong>Ablage &gt; Mediathek &gt; Mediathek organisieren&hellip;</strong>, den Knopf über der Medienliste oder <strong>Einstellungen &gt; Mediathek &gt; Aktionen</strong> bringt sCollect die verwalteten Dateien auf einen sauberen Stand. Vorher fragt ein Dialog nach dem Umfang und den Optionen.</p>
 
 <h4>Umfang</h4>
 <p>Oben wählst du die <strong>Medientypen</strong>, die bearbeitet werden sollen &ndash; aufgeklappt unter ihrer Kategorie, mit der Anzahl der Objekte je Typ. Voreingestellt ist alles. Das lohnt sich, weil eine gewachsene Mediathek selten überall gleich gepflegt ist: hast du in der Musik viel mit Suchen&nbsp;&amp;&nbsp;Ersetzen gearbeitet, bei den Hörbüchern dagegen kaum, dann behandelst du beide besser getrennt.</p>
@@ -673,7 +704,7 @@
 <h4>Was der Lauf tut</h4>
 <ul>
 <li><strong>Doppelte Einträge zusammenlegen:</strong> Zeigen zwei Einträge auf dieselbe Datei, ist das kein Duplikat, sondern ein Fehler in der Mediathek &ndash; es gibt ja nur ein Medium. Der ältere Eintrag bleibt und erbt vom anderen, was mehr aussagt: die höhere Bewertung, den Favoriten, den höheren Zählerstand, eine gemerkte Wiedergabeposition. Playlist-Plätze des aufgegebenen Eintrags zeigen danach auf den verbliebenen.</li>
-<li><strong>Einordnen:</strong> Einträge, deren Datei nicht am Soll-Pfad liegt, werden dorthin verschoben (Künstler/Album, feste Ordnerebenen). Sidecars, Cover und Anhänge ziehen mit.</li>
+<li><strong>Einordnen:</strong> Einträge, deren Datei nicht am Soll-Pfad liegt, werden dorthin verschoben (Künstler/Album, feste Ordnerebenen). Begleitdateien, Cover und Anhänge ziehen mit.</li>
 <li><strong>Ordner abgleichen:</strong> Die Medienordner werden nach Dateien durchsucht, die von Hand hineinkopiert wurden und noch keinen Eintrag haben. Neue Dateien werden aufgenommen. Fehlt zu einem vorhandenen Eintrag die Datei und passt ein Fund dazu, wird der Eintrag darauf geheilt und übernimmt dabei die Metadaten aus der gefundenen Datei. Ist das Original noch da, wird die Datei als echtes Duplikat mit Zusatz &laquo; (2)&raquo; in Titel und Dateiname aufgenommen.</li>
 <li><strong>Verwaiste Einträge entfernen:</strong> Einträge, deren Datei <em>nachweislich</em> weg ist, werden gelöscht &ndash; nur der Eintrag, denn die Datei gibt es ja nicht mehr. &laquo;Nachweislich&raquo; heißt: das Laufwerk ist angeschlossen, es fehlen nicht gleich <em>alle</em> Dateien darauf, und bei verwalteten Objekten ist der Medienordner erreichbar. Ist eine dieser Bedingungen nicht erfüllt, bleibt der Eintrag unangetastet &ndash; eine nicht angeschlossene Platte darf keine Einträge kosten.</li>
 </ul>
@@ -682,7 +713,7 @@
 <p>Diese Option ist <strong>voreingestellt aus</strong> und beantwortet die Frage, was gilt, wenn Mediathek und Datei auseinanderliegen:</p>
 <ul>
 <li><strong>Datei gewinnt:</strong> Der Tag der Datei zählt, die Mediathek wird berichtigt. Es wird keine Datei geschrieben.</li>
-<li><strong>Bibliothek gewinnt:</strong> Der gespeicherte Wert zählt und wird in die Datei geschrieben. <strong>Das lässt sich nicht widerrufen.</strong></li>
+<li><strong>Mediathek gewinnt:</strong> Der gespeicherte Wert zählt und wird in die Datei geschrieben. <strong>Das lässt sich nicht widerrufen.</strong></li>
 </ul>
 <p>Darunter wählst du die <strong>Felder</strong>, um die es gehen soll &ndash; alles ist angehakt, abgewählt wird bewusst. Der Lauf schreibt zunächst nichts: er sammelt nur die Abweichungen und zeigt sie anschließend in einer Vorschau, nach Feld gruppiert. Dort kannst du je Feld alles auf einmal oder aufgeklappt jede einzelne Zeile abwählen; ein Stift-Symbol markiert Dateien, die seit dem letzten Zugriff von außen verändert wurden. Erst &laquo;Übernehmen&raquo; schreibt.</p>
 <p><strong>Bpm und Songtext</strong> stehen nicht zur Wahl: sie werden in der Mediathek gar nicht gespeichert, es gibt also keinen Wert, gegen den zu vergleichen wäre. Sie leben ausschließlich in der Datei und bleiben beim Schreiben erhalten. Das <strong>Cover</strong> ist dabei, wird aber über seine Größe verglichen &ndash; zwei verschiedene Bilder mit zufällig gleicher Byte-Zahl erkennt der Vergleich nicht.</p>
@@ -693,7 +724,7 @@
 <p>Während des Laufs sind ändernde Aktionen gesperrt; ein Fortschrittsbalken mit Abbrechen-Knopf wird angezeigt und der Ruhezustand des Macs unterdrückt, damit externe Volumes nicht abkoppeln. Am Ende fasst ein Fenster zusammen, was verschoben, zusammengelegt, neu aufgenommen, geheilt, als Duplikat ergänzt und entfernt wurde.</p>
 
 <aside>
-<strong>Tipp:</strong> Falls du eine Kopie regelmäßig per externem Tool (z.B. FreeFileSync) aktualisierst, kannst du nach jedem Spiegelvorgang einfach <strong>Projizieren</strong> auf diese Kopie auslösen &ndash; dabei wird die Pending-Queue automatisch zurückgesetzt.
+<strong>Tipp:</strong> Falls du eine Kopie regelmäßig per externem Tool (z.B. FreeFileSync) aktualisierst, kannst du nach jedem Spiegelvorgang einfach <strong>Projizieren</strong> auf diese Kopie auslösen &ndash; dabei wird verworfen, was für diese Kopie noch offen war.
 </aside>
 
 
@@ -737,6 +768,7 @@
 <tr><td><kbd>&#8997;&#8984;&#8593;</kbd></td><td>Lauter</td></tr>
 <tr><td><kbd>&#8997;&#8984;&#8595;</kbd></td><td>Leiser</td></tr>
 <tr><td><kbd>&#8963;&#8984;F</kbd></td><td>Vollbild</td></tr>
+<tr><td><kbd>&#8984;W</kbd></td><td>Videofenster schließen</td></tr>
 </table>
 
 <h3>Navigation</h3>
