@@ -228,10 +228,17 @@ a.film.kurz span { position: static; display: block; padding: 10px 2px 0; font-s
 .filme.foto a.film.kurz, .filme.foto a.film.kurz:only-child { flex: none; width: calc((100% - 40px) / 3); min-width: 240px; }
 @media (max-width: 600px) { .filme.foto a.film.kurz, .filme.foto a.film.kurz:only-child { width: 100%; } }
 
-/* Handbuch in allen Sprachen: Flaggenleiste (07.11.2026; build.py sprachleiste, Flaggen assets/flags/, flag-icons MIT) */
-.sprachleiste { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; margin: 20px 0; font-size: 15px; }
-.sprachleiste > span { flex-basis: 100%; font-weight: 600; }
-.sprachleiste a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; white-space: nowrap; }
-.sprachleiste a:hover { text-decoration: underline; }
-.sprachleiste img { border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .15); }
-.sprachleiste a[aria-current] { font-weight: 700; }
+/* Handbuch in allen Sprachen: Flaggen (07.11.2026; build.py sprachleiste, Flaggen assets/flags/, flag-icons MIT).
+   Nur die Flagge ist der Link, der Sprachname steht im Tooltip; bricht mit der Fensterbreite um. */
+.hilfelink.mit-flaggen > a { margin-right: 10px; }                 /* Flaggen gleich daneben, brechen einzeln um */
+.hilfelink.mit-flaggen .flaggen { display: inline; }
+.hilfelink.mit-flaggen .flaggen a { display: inline-block; vertical-align: middle; margin: 3px 4px 3px 0; }
+.flaggen { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.flaggen a { display: block; line-height: 0; border-radius: 3px; }
+.flaggen img { display: block; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .15); transition: transform .1s; }
+.flaggen a:hover img { transform: scale(1.2); }
+.flaggen a[aria-current] { outline: 2px solid currentColor; outline-offset: 2px; }
+.sprachleiste { margin: 18px 0; font-size: 15px; }
+.sprachleiste > span:first-child { display: block; font-weight: 600; margin-bottom: 6px; }
+
+.hero .flaggen img { width: 24px; height: 18px; }   /* nicht wie das App-Symbol (.hero img) vergrößern */
