@@ -227,3 +227,11 @@ a.film.kurz span { position: static; display: block; padding: 10px 2px 0; font-s
 .fotografen h2 { margin: 0 0 12px; }
 .filme.foto a.film.kurz, .filme.foto a.film.kurz:only-child { flex: none; width: calc((100% - 40px) / 3); min-width: 240px; }
 @media (max-width: 600px) { .filme.foto a.film.kurz, .filme.foto a.film.kurz:only-child { width: 100%; } }
+
+/* Handbuch in allen Sprachen: Flaggenleiste (07.11.2026; build.py sprachleiste, Flaggen assets/flags/, flag-icons MIT) */
+.sprachleiste { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; margin: 20px 0; font-size: 15px; }
+.sprachleiste > span { flex-basis: 100%; font-weight: 600; }
+.sprachleiste a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; white-space: nowrap; }
+.sprachleiste a:hover { text-decoration: underline; }
+.sprachleiste img { border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .15); }
+.sprachleiste a[aria-current] { font-weight: 700; }
