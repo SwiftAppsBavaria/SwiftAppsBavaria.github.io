@@ -21,7 +21,8 @@ schreibt `index.html`, `scollect/`, `sname2date/` samt `help/` (Englisch, Wurzel
 | Hilfe sCollect (`…/scollect/help/`) | HelpBook im Projekt, `sCollect.help/…/<lproj>/index.html` — Inhalt ohne die Schlußzeile; PT-PT bekommt das brasilianische `pt.lproj` wie die App |
 | Hilfe sName2Date (`…/sname2date/help/`) | `HelpView.swift` (Abschnitte in Reihenfolge, Fassung der Vollversion) + Katalog der App |
 
-Von Hand und nur deutsch/englisch: `impressum.html`, `privacy.html`, `assets/style.css`, `assets/banner.webp`.
+Von Hand und nur deutsch/englisch: `impressum.html`, `privacy.html`, `open-source.html` (seit 17.11.2026: FFmpeg/LGPL je
+App-Version, Releases in `SwiftAppsBavaria/ffmpeg-source` — bei jedem neuen Release eine Zeile dazu; verlinkt aus dem Impressum), `assets/style.css`, `assets/banner.webp`.
 
 **Links nach außen öffnen in einem neuen Tab** (Nutzerwunsch 2026-09-24): `build.py` setzt
 `target="_blank" rel="noopener"` an jeden Link, der nicht auf `swiftappsbavaria.github.io` zeigt — auch in der
