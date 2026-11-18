@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sName2Date Lite Manual</title>
+<meta name="description" content="sName2Date Lite Manual">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/win/sname2date/lite/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/win/de/sname2date/lite/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/win/es/sname2date/lite/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/win/fr/sname2date/lite/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/win/it/sname2date/lite/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/win/ja/sname2date/lite/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/win/ko/sname2date/lite/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/win/pt-br/sname2date/lite/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/win/pt-pt/sname2date/lite/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/win/ru/sname2date/lite/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/win/zh-hans/sname2date/lite/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/win/zh-hant/sname2date/lite/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/win/sname2date/lite/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../../win/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../../mac/">Mac</a><a href="../../../../win/" aria-current="true">Windows</a><a href="../../../../win/#apps">Apps</a>
+    <details class="sprache"><summary aria-label="Language">English</summary><div><a href="../../../../win/sname2date/lite/help/" aria-current="true" lang="en">English</a><a href="../../../../win/de/sname2date/lite/help/" lang="de">Deutsch</a><a href="../../../../win/es/sname2date/lite/help/" lang="es">Español</a><a href="../../../../win/fr/sname2date/lite/help/" lang="fr">Français</a><a href="../../../../win/it/sname2date/lite/help/" lang="it">Italiano</a><a href="../../../../win/ja/sname2date/lite/help/" lang="ja">日本語</a><a href="../../../../win/ko/sname2date/lite/help/" lang="ko">한국어</a><a href="../../../../win/pt-br/sname2date/lite/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../../win/pt-pt/sname2date/lite/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../../win/ru/sname2date/lite/help/" lang="ru">Русский</a><a href="../../../../win/zh-hans/sname2date/lite/help/" lang="zh-Hans">简体中文</a><a href="../../../../win/zh-hant/sname2date/lite/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../">← sName2Date Lite</a></p>
+  <article class="hilfe">
+<h1>sName2Date Lite Manual</h1>
+<h2>What the app does</h2>
+<p>sName2Date looks for a date in the file name and writes it into the image, movie or audio file as the capture date; for PDFs and other files without a capture date, the app sets the creation and modification date. A capture date that is already there gets overwritten in the process — that is exactly what the app is for, because an export or a digitization usually carries the wrong date. In the list, the existing date appears after the name — for PDFs and similar files, the creation date — and the new one on the right.</p>
+<p class="notiz">If files that already have a capture date should stay untouched, you can change that in Settings.</p>
+<h2>The two checkboxes at the top of the window</h2>
+<p>At the top of the window there are two checkboxes, and they do not exclude one another. Write date into the file puts the date it found into the file itself as the capture date; where the format cannot hold one — a PDF, say, or a text file — the app sets the file&#x27;s creation and modification date instead, and the check mark in the row is then orange instead of green. Convert file names brings the name into the ISO notation. Both together are the normal case; if only the second one is set, no file is opened and it is only renamed.</p>
+<p class="notiz">The third checkbox, Put date first, belongs to the renaming: it places the date at the start of the name instead of replacing it where it was found. It is greyed out as long as nothing is being renamed.</p>
+<h2>Loading files</h2>
+<p>Files get into the list in three ways: with the button at the top of the window, by dragging it onto the window, or from the File menu (Ctrl+O). The line below the button shows which folder the file comes from.</p>
+<h2>Notations that are detected</h2>
+<p>Date and time are detected in the common forms, such as 2024-01-15 10-30-00, IMG_20240115_103000, 2024-01-15, 2024 01 15, 15.01.2024, 15-01-2024 and 15012024. Two-digit years are completed. The names given by SwiftRename are read as well.</p>
+<p class="notiz">If a name contains several dates, the first one wins — in IMG_20240115_bearbeitet_2019-03-02 that is the capture, not the later note. A date with a time always takes precedence over one without.</p>
+<h2>When only month and year are in the name</h2>
+<p>If the name carries only a year and a month, such as 2016 04 Blomberg, April 2016 is read and the first day of the month is assumed. The row then says “(day assumed)”; the exact day can be filled in in the field on the right.</p>
+<p class="notiz">The month has to be written with two digits for this. In a name like Bild 2 2016 there is usually a serial number instead — and a date read wrongly would be worse than one not read at all.</p>
+<h2>Day or month first?</h2>
+<p>April 3 is written 4/3 in the United States and 3/4 in Britain — the same two numbers, the opposite meaning. With 15-03-2024 that makes no difference: there is no month 15, so the date is unambiguous and is always read correctly. Only when both numbers could be a month, as in 03-05-2024, does it have to be decided.</p>
+<p class="notiz">If such a file is in the list, an orange bar above it offers the choice between both readings; the affected rows are marked. The default follows the Windows regional format. As long as no file is ambiguous, there is nothing to choose — which is why the bar is not shown then.</p>
+<h2>Time</h2>
+<p>If the name carries only a date, a time is assumed. You can change it in Settings.</p>
+<p class="notiz">12 noon is preset. That keeps the day from flipping over if the file later travels to another time zone. If the file name is changed too, the assumed time appears in it as well — name and capture date always say the same thing.</p>
+<h2>Setting the date by hand</h2>
+<p>On the right of every row there is a field with a date and time. What you enter there takes precedence over the date from the file name. That way even files whose names contain no date at all can be processed.</p>
+<p class="notiz">The arrow next to the field resets the row to the value from the file name.</p>
+<h2>A second date: when the content was created</h2>
+<p>Alongside the capture date, it is possible to record when the subject itself was created — for a photographed painting from 1650 that means 1650, not the day of the shot. The “Content date” switch at the top of the window shows the “Dated” column for this. It is hidden by default, because most files do not need one.</p>
+<p class="notiz">It can only be stored in JPEG, TIFF and HEIC. PNG, GIF and movies take no content date; there the column shows a note instead of a field.</p>
+<h2>Making file names consistent</h2>
+<p>If you like, the app replaces the date in the file name with the ISO notation including the time: 15.03.2024 Holiday.jpg becomes 2024-03-15 12-00-00 Holiday.jpg. That way the files sort by capture time in File Explorer. Turn it on with the Convert file names checkbox at the top of the window; the list then shows the new name below the old one.</p>
+<p class="notiz">If the name contains no date at all, the one set by hand is put in front. If the new name is already taken, a number is added. Ctrl+Z also undoes the renaming.</p>
+<h2>Undo and Redo</h2>
+<p>Ctrl+Z (Edit menu) undoes a run: the capture date and the file&#x27;s creation and modification dates are back to their previous values. Ctrl+Y redoes it.</p>
+<p class="notiz">Once the list is cleared or another folder is chosen, the last run can no longer be undone.</p>
+<h2>What gets changed</h2>
+<p>EXIF DateTimeOriginal and DateTimeDigitized are written, as well as TIFF DateTime; for movies and audio recordings, the creation date inside the container. The image data itself is left untouched — a JPEG is not recompressed.</p>
+<p class="notiz">All the same, make a backup before you process a large collection.</p>
+<h2>When a row does not turn green</h2>
+<p>A blue checkmark means: the capture date is not in the file itself but in an XMP sidecar file next to it, which many photo applications read as well — this is the case for WebP, GIF, AVI and RAW, for HEIC without the HEIF extension for Windows, and for movies that cannot be modified. An orange checkmark means: the capture date could not be written, so the file&#x27;s creation and modification dates now carry the value — the date is recorded, just in a different place. The row states the reason. A red triangle means that nothing could be written at all.</p>
+<p class="notiz">If anything remains unclear, the button in the settings under Diagnostics saves a log of the past seven days.</p>
+<h2>This edition and the full version</h2>
+<p>This edition takes one file per run and can do everything with it: read the date from the name, set it by hand, write it into an image, movie or audio file as the capture date, make the file name consistent and take every step back again.</p>
+<p class="notiz">The full version, sName2Date, takes a whole folder instead of a single file: it reads the folder in, with all its subfolders if you want, shows the date it found for every file and writes the whole batch in one run — a thousand shots from a trip just as well. For a single file this edition here is enough.</p>
+  </article>
+  <p class="zurueck"><a href="../">← sName2Date Lite</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../../impressum.html">Legal Notice</a><a href="../../../../privacy.html">Website Privacy</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc. Windows and Microsoft Store are trademarks of the Microsoft group of companies.</p>
+</div></footer>
+</body>
+</html>

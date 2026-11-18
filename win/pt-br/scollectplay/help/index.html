@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual do sCollectPlay</title>
+<meta name="description" content="Manual do sCollectPlay">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/win/scollectplay/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/win/de/scollectplay/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/win/es/scollectplay/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/win/fr/scollectplay/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/win/it/scollectplay/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/win/ja/scollectplay/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/win/ko/scollectplay/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/win/pt-br/scollectplay/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/win/pt-pt/scollectplay/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/win/ru/scollectplay/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/win/zh-hans/scollectplay/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/win/zh-hant/scollectplay/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/win/scollectplay/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../../win/pt-br/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../../mac/pt-br/">Mac</a><a href="../../../../win/pt-br/" aria-current="true">Windows</a><a href="../../../../win/pt-br/#apps">Apps</a>
+    <details class="sprache"><summary aria-label="Idioma">Português (Brasil)</summary><div><a href="../../../../win/scollectplay/help/" lang="en">English</a><a href="../../../../win/de/scollectplay/help/" lang="de">Deutsch</a><a href="../../../../win/es/scollectplay/help/" lang="es">Español</a><a href="../../../../win/fr/scollectplay/help/" lang="fr">Français</a><a href="../../../../win/it/scollectplay/help/" lang="it">Italiano</a><a href="../../../../win/ja/scollectplay/help/" lang="ja">日本語</a><a href="../../../../win/ko/scollectplay/help/" lang="ko">한국어</a><a href="../../../../win/pt-br/scollectplay/help/" aria-current="true" lang="pt-BR">Português (Brasil)</a><a href="../../../../win/pt-pt/scollectplay/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../../win/ru/scollectplay/help/" lang="ru">Русский</a><a href="../../../../win/zh-hans/scollectplay/help/" lang="zh-Hans">简体中文</a><a href="../../../../win/zh-hant/scollectplay/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../">← sCollectPlay</a></p>
+  <article class="hilfe">
+<h1>Manual do sCollectPlay</h1>
+<h2>Introdução</h2>
+<p>sCollectPlay reproduz suas mídias – de qualquer pasta, de arquivos XML do iTunes e de bibliotecas do sCollect. Importação, edição de metadados e sincronização não fazem parte dele; para isso existe o sCollect.</p>
+<p>Ao iniciar, aparece a seleção de fonte com três botões: Escanear pasta…, Abrir biblioteca XML… e Selecionar biblioteca do sCollect…. Os mesmos comandos estão no menu Arquivo.</p>
+<p>Na próxima inicialização, sCollectPlay carrega automaticamente a última fonte usada.</p>
+<p>Se você mantiver a tecla Shift pressionada ao iniciar, aparece a seleção de fonte em vez disso. Se a biblioteca ou uma pasta escaneada estiver na rede, o sCollectPlay pergunta antes se deve carregar a fonte – você pode desativar isso em Configurações &gt; Geral (Avisar sobre biblioteca de rede ao iniciar). Se a unidade não responder em 20 segundos, o sCollectPlay avisa e mostra a seleção de fonte.</p>
+<p>No menu Arquivo, abaixo de cada comando aparecem as pastas, bibliotecas e arquivos XML usados por último, até dez de cada. Limpar lista esvazia uma lista; o que não estiver mais acessível desaparece quando você clica nele.</p>
+<h2>Escanear pasta</h2>
+<p>Escolha qualquer pasta. sCollectPlay procura nela e nas subpastas arquivos de áudio, vídeo, e-book e PDF e lê título, artista, álbum e duração diretamente dos arquivos. Em alguns formatos – como WMA, OGG, AIFF ou AVI – ele lê apenas a duração; o nome do arquivo passa então a ser o título. Arquivos ocultos são ignorados.</p>
+<p>Classificação por conteúdo: O sCollectPlay classifica o áudio pelo que o próprio arquivo informa: arquivos .m4b e títulos com o gênero Audiobook, Audio Theatre ou Spoken Word (também em alemão, como Hörbuch, Hörspiel ou Kabarett) aparecem em “Audiolivro”, podcasts e títulos com o gênero Podcast ou Speech em “Podcast”, e todo o resto em “Música”. Videoclipes, longas-metragens e séries são reconhecidos pelo tipo de mídia que, por exemplo, o iTunes grava no arquivo, e as séries também por “S01E02” no nome do arquivo. Filmes que indicam uma câmera ou têm um nome de arquivo de câmera como IMG_1234 aparecem em “Câmera”, todos os outros em “Vídeo caseiro”. E-books e PDFs são reconhecidos pela extensão do arquivo. A barra lateral mostra apenas os tipos que contêm algo.</p>
+<p>Escolher o tipo manualmente: Se um título estiver no lugar errado, arraste-o da lista para outro tipo na barra lateral – enquanto você arrasta, os tipos vazios também aparecem ali. O sCollectPlay memoriza essa escolha para esse arquivo, inclusive na próxima leitura da pasta; o arquivo em si não é alterado.</p>
+<p>Se a varredura não encontrar nada que possa ser reproduzido ou lido, sCollectPlay avisa você.</p>
+<p>Arquivo &gt; Atualizar pastas escaneadas (Ctrl+R) lê apenas o que mudou desde a última leitura – arquivos novos, alterados e removidos – e informa o resultado. Uma pasta que não esteja acessível no momento mantém seu estado anterior.</p>
+<p>O botão ↻ na extremidade direita, acima da lista, faz o mesmo.</p>
+<p>Você pode escanear várias pastas, uma após a outra; o conteúdo delas aparece junto. A barra de título mostra a primeira pasta e conta as demais.</p>
+<p>Ao iniciar, sCollectPlay mostra as pastas escaneadas como estavam na última leitura, sem examiná-las novamente. Se você escanear uma pasta enquanto uma biblioteca ou um XML estiver carregado, as pastas escaneadas antes voltam junto.</p>
+<h2>Biblioteca do sCollect</h2>
+<p>Escolha a pasta principal de uma biblioteca do sCollect – a pasta onde está o pacote .scollect. sCollectPlay lê faixas, playlists e ajustes.</p>
+<p>O sCollectPlay não altera nada na própria biblioteca. Quando você avalia uma faixa ou reproduz música, um audiolivro ou um filme até o fim, ele registra isso com data e hora no arquivo rueckmeldungen.json na pasta da biblioteca – não importa se você abriu o master ou uma cópia. O sCollect assume esses dados ao abrir o master, antes de Projetar e antes de Corrigir erros de sincronização…: na avaliação vence a mais recente, as reproduções são somadas. Depois o sCollect grava a avaliação no arquivo e repassa tudo a todas as cópias. Até lá, o sCollectPlay já exibe suas próprias avaliações e reproduções.</p>
+<p>Se a biblioteca foi criada no Mac, ela contém caminhos do Mac. sCollectPlay encontra os arquivos pela pasta da biblioteca; para mídias fora dela, associa aos caminhos do Mac a pasta correspondente do Windows, na medida em que isso possa ser deduzido da biblioteca. Arquivos não encontrados permanecem na lista, mas não podem ser reproduzidos.</p>
+<h2>XML do iTunes</h2>
+<p>Escolha o arquivo XML que o iTunes para Windows cria (iTunes Music Library.xml – o iTunes o grava quando o compartilhamento do arquivo XML está ativado nas preferências avançadas dele) ou um Library.xml exportado do Apple Music. sCollectPlay carrega faixas e playlists – playlists inteligentes como lista fixa, do jeito que o iTunes as salvou por último; listas do sistema como “Biblioteca” ou “Música” são ignoradas. Os tipos de mídia vêm do próprio XML: Música, Audiolivro, Podcast, Vídeo caseiro, Longa-metragem, Série e Videoclipe.</p>
+<p>Um XML exportado no Mac aponta para caminhos do Mac; sCollectPlay não encontra esses arquivos no Windows.</p>
+<p>Sempre há exatamente um tipo de fonte carregado. Abrir uma biblioteca ou um XML substitui o conteúdo anterior. A barra de título da janela mostra o tipo e o nome da fonte, por exemplo: Pasta “Música” ou Biblioteca “sCollect”.</p>
+<h2>Navegar pela biblioteca</h2>
+<p>A barra lateral mostra categorias e tipos de mídia como um acordeão – apenas uma categoria fica expandida por vez. Abaixo da categoria aberta ficam as playlists dela, na seção “Playlists”; bem no final, as playlists sem categoria.</p>
+<p>Clicar no cabeçalho de uma coluna ordena por essa coluna; clicar de novo inverte a ordem. Com a tecla Shift pressionada, adiciona-se mais um nível de ordenação; com a tecla Alt pressionada, remove-se um; Redefinir ordenação no menu de contexto do cabeçalho da coluna mantém apenas o primeiro nível. sCollectPlay memoriza a ordenação para cada tipo de mídia.</p>
+<p>O campo de pesquisa filtra por título, artista, álbum, gênero e outros campos – também dentro de uma playlist.</p>
+<p>Avaliar: Em uma biblioteca do sCollect, clique em uma estrela na coluna Avaliação: o primeiro clique define uma estrela inteira, o segundo meia estrela, o terceiro apaga a avaliação. Para avaliar várias faixas de uma vez, selecione-as e depois clique com o botão direito &gt; Avaliação. Em pastas escaneadas e bibliotecas XML, as estrelas apenas exibem a avaliação.</p>
+<p>Excluir: Em pastas escaneadas, clique com o botão direito &gt; Excluir arquivo de mídia para mover o arquivo para a Lixeira e tirá-lo da lista – com várias faixas selecionadas, todas. Se sCollectPlay pergunta antes é definido em Configurações &gt; Geral &gt; Confirmar exclusão. Se um arquivo estiver em uma unidade sem Lixeira, por exemplo na rede ou em um pendrive, ele sempre pergunta, pois lá o arquivo é excluído para sempre. A exclusão só pode ser desfeita restaurando o arquivo da Lixeira; Atualizar pastas escaneadas o traz de volta à lista em seguida. Em uma biblioteca do sCollect e em uma biblioteca XML, sCollectPlay não exclui nada – lá os arquivos pertencem ao sCollect ou ao iTunes.</p>
+<p>Você escolhe as colunas visíveis com Personalizar colunas… no menu de contexto do cabeçalho da coluna; ali, Largura ideal ajusta a largura. Largura e ordem você altera arrastando com o mouse. sCollectPlay guarda isso neste PC; como padrão valem as colunas da biblioteca do sCollect.</p>
+<p>O navegador de colunas exibe colunas de seleção acima da lista de faixas: Gênero, Artista, Álbum, Compositor e Agrupamento. O botão no canto superior direito da lista o ativa e desativa; ele também funciona nas playlists.</p>
+<p>• Clicar em um valor filtra por ele; Ctrl+clique adiciona ou remove um valor. Dentro de uma coluna, vários valores funcionam como “ou”; entre colunas, como “e”. A primeira linha, “Todos”, desfaz a seleção da coluna.<br>• Se uma coluna tiver muitas entradas, sCollectPlay as reúne pela letra inicial em grupos expansíveis.</p>
+<h2>Reprodução</h2>
+<p>Clique duas vezes em uma faixa ou pressione Enter para reproduzi-la; a barra de espaço inicia e pausa. A barra do player mostra capa, título e artista, a linha do tempo para saltar e os botões Ordem aleatória, Faixa anterior, Voltar 10 segundos, Parar, Reproduzir, Avançar 10 segundos, Próxima faixa e Repetir (desativado, lista, faixa), além do volume; nos filmes, somam-se câmera lenta e quadro a quadro. A seleção na lista acompanha a faixa em reprodução enquanto você não selecionar outra coisa.</p>
+<p>Os filmes abrem em uma janela de vídeo própria. Ao mover o mouse, aparece a barra de controles dela: tempo, Faixa anterior e Próxima faixa, voltar e avançar 10 segundos, câmera lenta, quadro a quadro, Faixa de áudio (se houver várias), Legendas (se houver) e Tela cheia. F11 e os atalhos do menu Reprodução também funcionam aqui; Esc sai da tela cheia. Fechar a janela de vídeo encerra a reprodução. No fim de um filme, ela permanece aberta, a menos que Continuar a reprodução ao final esteja ativado para o tipo de mídia dele – então segue a próxima faixa, e no fim da lista ela se fecha sozinha.</p>
+<p>Continuar a reprodução ao final: Se a reprodução continua com a próxima faixa após o fim de uma faixa é definido por tipo de mídia em Configurações &gt; Reprodução/Playlist &gt; Continuar a reprodução ao final. Por padrão, isso fica ativado para todos os tipos de áudio e para videoclipes, e desativado para filmes, séries, vídeos caseiros e filmes de câmera – o filme então para no final (ou na sua marca de fim). Repetir (faixa) repete mesmo assim. O sCollectPlay memoriza o que você alterar aqui; para todos os outros tipos de mídia vale o ajuste da biblioteca.</p>
+<p>Pelo menu de contexto de uma faixa, você a reproduz imediatamente, como próxima ou a adiciona à fila. O menu de contexto também oferece Mostrar no Explorador de Arquivos e Abrir no app padrão.</p>
+<p>sCollectPlay reproduz por meio do serviço de reprodução do Windows, que reconhece a maioria dos formatos – MP3, AAC/M4A, FLAC, OGG, Opus e WMA, assim como MP4, MKV, AVI, WMV, MPG, TS e VOB. O que o Windows não reproduz sozinho – como AIFF, CAF, DSD (DSF, DFF), FLV ou filmes protegidos contra cópia – sCollectPlay abre no app padrão para esse tipo de arquivo. Livros e PDFs também abrem no app padrão.</p>
+<h2>Playlists</h2>
+<p>As playlists da fonte aparecem em “Playlists” na barra lateral – as normais na ordem salva, as inteligentes avaliadas segundo suas regras. Elas só podem ser alteradas no sCollect.</p>
+<p>Em “Minhas playlists” você cria suas próprias playlists, seja qual for a fonte carregada:</p>
+<p>• Criar: o sinal de mais ao lado de “Minhas playlists” oferece Nova playlist… e Nova playlist inteligente….<br>• Preencher: Adicionar à playlist no menu de contexto da lista de faixas adiciona as faixas selecionadas ou cria uma nova playlist; em uma playlist própria, Remover da playlist as retira novamente.<br>• Playlists inteligentes se montam sozinhas segundo regras; Editar… no menu de contexto da playlist altera as regras.<br>• No menu de contexto da playlist também estão Renomear… (em playlists normais) e Excluir playlist. Na barra lateral, F2 renomeia a playlist selecionada; Del a exclui após confirmação, Ctrl+Del sem confirmação – como Excluir playlist no menu de contexto. Editar &gt; Desfazer (Ctrl+Z) recupera uma playlist excluída.</p>
+<p>sCollectPlay salva as playlists próprias neste PC, nunca na biblioteca ou no XML. Ele encontra as faixas delas pelo caminho do arquivo, mesmo após uma nova varredura.</p>
+<p>Exportar para VLC/dispositivo… no menu de contexto de uma playlist – ou Arquivo &gt; Exportar playlist para VLC/dispositivo… – copia os arquivos de áudio e vídeo de toda a playlist, mesmo que a pesquisa esteja filtrando no momento, para uma pasta de sua escolha, por exemplo, em um cartão SD ou pen drive. Nela é criada uma subpasta com o nome da playlist, organizada por artista e álbum, além da playlist como arquivo .m3u8 com caminhos relativos. Livros e itens diversos são ignorados e contados.</p>
+<p>• Se você exportar a mesma playlist novamente para o mesmo local, sCollectPlay copia apenas o que é novo ou tem outro tamanho e regrava a lista. Faixas que você retirou da playlist permanecem na pasta como arquivos.<br>• Cancelar interrompe a exportação; a lista contém então as faixas copiadas até aquele momento.</p>
+<p>Não separe a pasta exportada – a lista encontra suas faixas apenas em relação à própria localização. O VLC e qualquer outro player que leia listas M3U8 exibem então a playlist.</p>
+<h2>Configurações</h2>
+<p>Arquivo &gt; Configurações… (Ctrl+,) abre as configurações. Valores exibidos em cinza vêm da biblioteca do sCollect carregada – sem biblioteca, são os valores padrão – e só podem ser alterados no sCollect.</p>
+<p>• Geral: o idioma (segue o Windows) e – no caso de uma biblioteca criada no Mac – as pastas de mídia. Ali você associa a cada pasta do Mac da biblioteca a pasta do Windows onde estão os arquivos dela neste PC; o que ainda falta aparece em vermelho com o número de faixas.<br>• Biblioteca: os três tipos de fonte. Clicar em outro círculo troca a fonte. Nas pastas escaneadas, cada pasta mostra quantas faixas tem e quando foi lida; Atualizar lê apenas o que mudou.<br>• Reprodução/Playlist: Janela de vídeo sempre à frente e Pausar o vídeo ao minimizar.<br>• Rótulos de categorias, Rótulos de campos e Estatísticas mostram os nomes e números da fonte carregada.</p>
+<p>Na versão completa, ali você também remove pastas individuais, atualiza todas de uma vez com Atualizar todas e carrega uma das bibliotecas usadas recentemente. Clicar em um círculo abre a fonte desse tipo usada por último.</p>
+<h2>Atalhos de teclado</h2>
+<p>Barra de espaço – Reprodução / Pausa<br>Enter – reproduzir a faixa selecionada<br>Ctrl+→ – Próxima faixa<br>Ctrl+← – Faixa anterior<br>Ctrl+↑ – Aumentar volume<br>Ctrl+↓ – Diminuir volume<br>F11 – Vídeo em tela cheia ativar/desativar<br>Esc – sair da tela cheia do vídeo<br>Ctrl+R – Atualizar pastas escaneadas<br>Ctrl+Shift+O – Selecionar biblioteca do sCollect…<br>Ctrl+, – Ajustes<br>F1 – Ajuda<br>Alt+F4 – Sair</p>
+  </article>
+  <p class="zurueck"><a href="../">← sCollectPlay</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../../impressum.html">Aviso legal</a><a href="../../../../privacy.html">Privacidade do site</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc. Windows and Microsoft Store are trademarks of the Microsoft group of companies.</p>
+</div></footer>
+</body>
+</html>

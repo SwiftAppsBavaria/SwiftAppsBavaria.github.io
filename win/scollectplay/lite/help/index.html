@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sCollectPlay Lite Manual</title>
+<meta name="description" content="sCollectPlay Lite Manual">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/win/scollectplay/lite/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/win/de/scollectplay/lite/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/win/es/scollectplay/lite/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/win/fr/scollectplay/lite/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/win/it/scollectplay/lite/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/win/ja/scollectplay/lite/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/win/ko/scollectplay/lite/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/win/pt-br/scollectplay/lite/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/win/pt-pt/scollectplay/lite/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/win/ru/scollectplay/lite/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/win/zh-hans/scollectplay/lite/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/win/zh-hant/scollectplay/lite/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/win/scollectplay/lite/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../../win/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../../mac/">Mac</a><a href="../../../../win/" aria-current="true">Windows</a><a href="../../../../win/#apps">Apps</a>
+    <details class="sprache"><summary aria-label="Language">English</summary><div><a href="../../../../win/scollectplay/lite/help/" aria-current="true" lang="en">English</a><a href="../../../../win/de/scollectplay/lite/help/" lang="de">Deutsch</a><a href="../../../../win/es/scollectplay/lite/help/" lang="es">Español</a><a href="../../../../win/fr/scollectplay/lite/help/" lang="fr">Français</a><a href="../../../../win/it/scollectplay/lite/help/" lang="it">Italiano</a><a href="../../../../win/ja/scollectplay/lite/help/" lang="ja">日本語</a><a href="../../../../win/ko/scollectplay/lite/help/" lang="ko">한국어</a><a href="../../../../win/pt-br/scollectplay/lite/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../../win/pt-pt/scollectplay/lite/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../../win/ru/scollectplay/lite/help/" lang="ru">Русский</a><a href="../../../../win/zh-hans/scollectplay/lite/help/" lang="zh-Hans">简体中文</a><a href="../../../../win/zh-hant/scollectplay/lite/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../">← sCollectPlay Lite</a></p>
+  <article class="hilfe">
+<h1>sCollectPlay Lite Manual</h1>
+<h2>Getting Started</h2>
+<p>sCollectPlay Lite plays your media – from any folder, from iTunes XML files and from sCollect libraries. Importing, editing metadata and syncing are not part of it; that is what sCollect is for.</p>
+<p>At startup you see the source selection with three buttons: Scan Folder…, Open XML Library… and Choose sCollect Library…. The same commands are in the File menu.</p>
+<p>Every session starts with the source selection; sCollectPlay Lite does not remember a source after you quit.</p>
+<h2>Scan Folder</h2>
+<p>Choose any folder. sCollectPlay Lite searches it and its subfolders for audio, video, e-book and PDF files and reads title, artist, album and duration from the files themselves. For some formats – such as WMA, OGG, AIFF or AVI – it reads only the duration; the file name then serves as the title. Hidden files are left out.</p>
+<p>Classification by content: sCollectPlay Lite sorts audio by what the file says about itself: .m4b files and titles with the genre Audiobook, Audio Theatre or Spoken Word (also in German, such as Hörbuch, Hörspiel or Kabarett) appear under “Audiobook”, podcasts and titles with the genre Podcast or Speech under “Podcast”, everything else under “Music”. It recognizes music videos, feature films and series by the media kind that iTunes, for example, writes into the file, and series also by “S01E02” in the file name. Movies that name a camera or carry a camera file name such as IMG_1234 appear under “Camera”, all others under “Home Video”. E-books and PDFs are recognized by their file extension. The sidebar shows only types that contain something.</p>
+<p>Choosing the type yourself: If a title is in the wrong place, drag it from the list onto another type in the sidebar – while you drag, the empty types appear there as well. sCollectPlay Lite remembers this for that file, including the next time it reads the folder; the file itself is not changed.</p>
+<p>If the scan finds nothing that can be played or read, sCollectPlay Lite tells you so.</p>
+<p>File &gt; Refresh Scanned Folders (Ctrl+R) reads in only what has changed since the last scan – new, changed and removed files – and reports the result. A folder that cannot be reached at the moment keeps its previous state.</p>
+<p>The ↻ button at the far right above the list does the same.</p>
+<p>A new folder replaces the previous one.</p>
+<h2>sCollect Library</h2>
+<p>Choose the main folder of an sCollect library – the folder that contains the .scollect bundle. sCollectPlay Lite reads items, playlists and settings.</p>
+<p>sCollectPlay Lite changes nothing in the library itself. When you rate a track or play music, an audiobook or a film to the end, it notes this with date and time in the file rueckmeldungen.json in the library folder – whether you opened the master or a copy. sCollect takes it over when the master is opened, before Project, and before Resolve Sync Errors…: for the rating the newer one wins, plays are added up. sCollect then writes the rating into the file and passes everything on to all copies. Until then, sCollectPlay Lite already shows its own ratings and plays.</p>
+<p>If the library was created on a Mac, it contains Mac paths. sCollectPlay Lite finds the files via the library folder; for media outside of it, it maps the Mac paths to the matching Windows folder as far as this can be derived from the library. Files that are not found stay in the list but cannot be played.</p>
+<h2>iTunes XML</h2>
+<p>Choose the XML file that iTunes for Windows creates (iTunes Music Library.xml – iTunes writes it when sharing the XML file is turned on in its advanced preferences), or a Library.xml exported from Apple Music. sCollectPlay Lite takes over items and playlists – smart playlists as a fixed list, the way iTunes last saved them; system lists such as “Library” or “Music” are skipped. The media types come from the XML itself: Music, Audiobook, Podcast, Home Video, Feature Film, Series and Music Video.</p>
+<p>An XML exported on a Mac points to Mac paths; sCollectPlay Lite cannot find those files on Windows.</p>
+<p>Exactly one kind of source is loaded at a time. Opening a library or an XML replaces what was loaded before. The window’s title bar shows the kind and name of the source, for example “Folder “Music”” or “Library “sCollect””.</p>
+<h2>Browsing the Library</h2>
+<p>The sidebar shows categories and media types as an accordion – only one category is expanded at a time. Below the open category, its playlists are listed under “Playlists”; playlists without a category are at the very bottom.</p>
+<p>Clicking a column header sorts by that column; clicking again reverses the order. Holding Shift adds another sort level, holding Alt removes one; Reset Sorting in the column header’s context menu keeps only the first level. sCollectPlay Lite remembers the sorting for each media type.</p>
+<p>The search field filters by title, artist, album, genre and other fields – inside a playlist, too.</p>
+<p>Rating: With a sCollect library, click a star in the Rating column: the first click sets a full star, the second a half star, the third clears the rating. To rate several tracks at once, select them, then right-click &gt; Rating. With scanned folders and XML libraries the stars only show the rating.</p>
+<p>Deleting: With scanned folders, right-click &gt; Delete media file moves the file to the Recycle Bin and removes it from the list – with several tracks selected, all of them. Whether sCollectPlay Lite asks first is set under Settings &gt; General &gt; Confirm deletion. If a file is on a drive without a Recycle Bin, such as on the network or on a USB stick, it always asks, because there the file is gone for good. Deleting can only be undone by restoring the file from the Recycle Bin; Refresh Scanned Folders then brings it back into the list. In a sCollect library and in an XML library sCollectPlay Lite deletes nothing – there the files belong to sCollect or iTunes.</p>
+<p>The visible columns are fixed in sCollectPlay Lite. The column browser is available in the full version.</p>
+<h2>Playback</h2>
+<p>Double-click an item or press Enter to play it; the Space bar starts and pauses. The player bar shows cover, title and artist, the timeline for jumping and the buttons Shuffle, Previous Track, Back 10 seconds, Stop, Play, Forward 10 seconds, Next Track and Repeat (off, list, item), plus the volume; for movies, slow motion and frame-by-frame are added. The selection in the list moves along with the playing item as long as you don’t select something else.</p>
+<p>Movies open in a separate video window. When you move the mouse, its control bar appears: time, Previous and Next Track, back and forward 10 seconds, slow motion, frame-by-frame, Audio Track (if there are several), Subtitles (if available) and Full Screen. F11 and the shortcuts of the Playback menu work here, too; Esc leaves full screen. Closing the video window stops playback. At the end of a movie it stays open, unless Continue playing at end is on for its media type – then the next track follows, and at the end of the list it closes by itself.</p>
+<p>Continue playing at end: Whether playback continues with the next track after one ends is set per media type under Settings &gt; Playback/Playlist &gt; Continue playing at end. By default it is on for all audio types and for music videos, and off for feature films, series, home videos and camera videos – a movie then stops at its end (or at its stop marker). Repeat (Track) repeats regardless. sCollectPlay Lite remembers what you change here; for all other media types, the library’s setting applies.</p>
+<p>Use an item’s context menu to play it now, play it next or add it to the queue. The context menu also offers Show in Explorer and Open in Default App.</p>
+<p>sCollectPlay Lite plays through the Windows media service, which handles most formats – MP3, AAC/M4A, FLAC, OGG, Opus and WMA as well as MP4, MKV, AVI, WMV, MPG, TS and VOB. Anything Windows does not play itself – such as AIFF, CAF, DSD (DSF, DFF), FLV or copy-protected movies – sCollectPlay Lite opens in the default app for that file type. Books and PDFs also open in the default app.</p>
+<h2>Playlists</h2>
+<p>The source’s playlists are listed under “Playlists” in the sidebar – regular ones in their saved order, smart ones evaluated by their rules. They can only be changed in sCollect.</p>
+<p>Your own playlists and the export for VLC are available in the full version.</p>
+<h2>Settings</h2>
+<p>File &gt; Settings… (Ctrl+,) opens the settings. Values shown in gray come from the loaded sCollect library – without a library they are the defaults – and can only be changed in sCollect.</p>
+<p>• General: the language (it follows Windows) and – for a library created on a Mac – the media folders. There you assign each Mac folder of the library the Windows folder where its files are located on this PC; anything still missing is shown in red with the number of items.<br>• Library: the three kinds of source. Clicking another circle switches the source. For scanned folders, each folder shows how many items it has and when it was read in; Refresh reads in only what has changed.<br>• Playback/Playlist: Video window always on top and Pause video when minimized.<br>• Category Labels, Field Labels and Statistics show the names and numbers of the loaded source.</p>
+<h2>Keyboard Shortcuts</h2>
+<p>Space – Play / Pause<br>Enter – Play selected item<br>Ctrl+→ – Next Track<br>Ctrl+← – Previous Track<br>Ctrl+↑ – Volume Up<br>Ctrl+↓ – Volume Down<br>F11 – Video full screen on/off<br>Esc – Leave video full screen<br>Ctrl+R – Refresh Scanned Folders<br>Ctrl+Shift+O – Choose sCollect Library…<br>Ctrl+, – Settings<br>F1 – Help<br>Alt+F4 – Exit</p>
+  </article>
+  <p class="zurueck"><a href="../">← sCollectPlay Lite</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../../impressum.html">Legal Notice</a><a href="../../../../privacy.html">Website Privacy</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc. Windows and Microsoft Store are trademarks of the Microsoft group of companies.</p>
+</div></footer>
+</body>
+</html>

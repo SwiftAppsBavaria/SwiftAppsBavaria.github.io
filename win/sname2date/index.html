@@ -34,7 +34,7 @@
   <div class="hero">
     <img src="../../assets/icons/AppIcon-sName2Date.png" width="128" height="128" alt="">
     <div><h1>sName2Date</h1><p class="subtitle">Reads the date from the file name – more than a dozen notations, month names in the app&#x27;s language and in English</p><p><a class="storelink" href="https://apps.microsoft.com/detail/9NZGQ1F479RW" target="_blank" rel="noopener">Microsoft Store</a></p>
-      </div>
+      <p class="hilfelink"><a href="help/">Read the full manual →</a></p></div>
   </div>
   <p class="promo">Takes the date from the file name and writes it into photos and videos as the capture date – so your photo library and File Explorer sort them correctly. Whole folders at once, everything undoable with Ctrl+Z.</p>
   
@@ -52,7 +52,7 @@
 <h2 class="kapitel">WHAT GETS CHANGED</h2>
 <p>sName2Date writes EXIF DateTimeOriginal and DateTimeDigitized as well as TIFF DateTime, and for videos and audio recordings the creation date inside the container. On request, the creation and modification date of the file itself as well.</p>
 <p>The image data stays untouched: a JPEG is not recompressed, a video is not re-encoded. For videos and audio recordings the app usually changes just a few bytes inside the container instead of rewriting it – even a large movie is done in an instant. After every write the app reads the date back; the color of the row tells you where it ended up.</p>
-<p>The capture date goes into the file itself for JPEG, TIFF and HEIC (with Microsoft&#x27;s HEIF Image Extensions), for the video formats MP4, MOV and M4V and for the audio formats M4A and M4B. PNG, GIF, WebP, AVI and RAW photos get an XMP sidecar file next to them, which many photo applications read as well – the row shows a blue check mark.</p>
+<p>The capture date goes into the file itself for JPEG, PNG, TIFF and HEIC (with Microsoft&#x27;s HEIF Image Extensions), for the video formats MP4, MOV and M4V and for the audio formats M4A and M4B. GIF, WebP, AVI and RAW photos get an XMP sidecar file next to them, which many photo applications read as well – the row shows a blue check mark.</p>
 <h2 class="kapitel">EVEN FILES THAT CANNOT HOLD A CAPTURE DATE</h2>
 <p>A PDF, a text file, a spreadsheet has no field for a capture date at all – and still comes into the list. sName2Date sets the file&#x27;s creation and modification date there, the only place the date can end up; the row shows it with an orange check mark instead of a green one. So here the extension does not matter – PDFs, text, spreadsheets, archives, anything.</p>
 <p>If the file is not to be touched at all, you clear the checkbox &quot;Write date into the file&quot; at the top of the window. sName2Date then only brings the name into ISO notation: Invoice 15.03.2024.pdf becomes 2024-03-15 12-00-00 Invoice.pdf, and in File Explorer the folder now sorts by date. If you prefer, the date stays where it stood in the name instead of moving to the front.</p>
@@ -63,7 +63,11 @@
 <h2 class="kapitel">ON YOUR PC, AND ONLY THERE</h2>
 <p>No accounts, no cloud, no analytics, no ads. The app only accesses the files and folders you give it. Full help in every language.</p>
   </div>
-  <div class="note" id="lite"><p><strong><a href="lite/">sName2Date Lite</a></strong> · Free — The edition for one file per run: write the date from the file name into a photo, a movie, or an audio recording as the capture date, set it by hand, put the name into ISO notation, and undo everything with ⌘Z — the same capabilities as sName2Date, just without entire folders.</p></div>
+  <a class="einladung" href="help/">
+    <strong>The complete manual, online</strong>
+    <span>Want to see exactly how sName2Date works before you buy? Read the same manual that comes with the app — in your language, step by step.</span>
+    <span class="knopf">Read the manual →</span>
+  </a><div class="note" id="lite"><p><strong><a href="lite/">sName2Date Lite</a></strong> · Free — The edition for one file per run: write the date from the file name into a photo, a movie, or an audio recording as the capture date, set it by hand, put the name into ISO notation, and undo everything with ⌘Z — the same capabilities as sName2Date, just without entire folders.</p></div>
   <ul class="facts">
     <li>Requires Windows 11 or later</li>
     <li>24 languages</li>

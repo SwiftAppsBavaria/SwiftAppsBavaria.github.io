@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sCollectPlay マニュアル</title>
+<meta name="description" content="sCollectPlay マニュアル">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://swiftappsbavaria.github.io/win/scollectplay/help/">
+<link rel="alternate" hreflang="de" href="https://swiftappsbavaria.github.io/win/de/scollectplay/help/">
+<link rel="alternate" hreflang="es" href="https://swiftappsbavaria.github.io/win/es/scollectplay/help/">
+<link rel="alternate" hreflang="fr" href="https://swiftappsbavaria.github.io/win/fr/scollectplay/help/">
+<link rel="alternate" hreflang="it" href="https://swiftappsbavaria.github.io/win/it/scollectplay/help/">
+<link rel="alternate" hreflang="ja" href="https://swiftappsbavaria.github.io/win/ja/scollectplay/help/">
+<link rel="alternate" hreflang="ko" href="https://swiftappsbavaria.github.io/win/ko/scollectplay/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://swiftappsbavaria.github.io/win/pt-br/scollectplay/help/">
+<link rel="alternate" hreflang="pt-PT" href="https://swiftappsbavaria.github.io/win/pt-pt/scollectplay/help/">
+<link rel="alternate" hreflang="ru" href="https://swiftappsbavaria.github.io/win/ru/scollectplay/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swiftappsbavaria.github.io/win/zh-hans/scollectplay/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://swiftappsbavaria.github.io/win/zh-hant/scollectplay/help/">
+<link rel="alternate" hreflang="x-default" href="https://swiftappsbavaria.github.io/win/scollectplay/help/">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../../../../win/ja/">SwiftAppsBavaria</a>
+  <nav>
+    <a href="../../../../mac/ja/">Mac</a><a href="../../../../win/ja/" aria-current="true">Windows</a><a href="../../../../win/ja/#apps">アプリ</a>
+    <details class="sprache"><summary aria-label="言語">日本語</summary><div><a href="../../../../win/scollectplay/help/" lang="en">English</a><a href="../../../../win/de/scollectplay/help/" lang="de">Deutsch</a><a href="../../../../win/es/scollectplay/help/" lang="es">Español</a><a href="../../../../win/fr/scollectplay/help/" lang="fr">Français</a><a href="../../../../win/it/scollectplay/help/" lang="it">Italiano</a><a href="../../../../win/ja/scollectplay/help/" aria-current="true" lang="ja">日本語</a><a href="../../../../win/ko/scollectplay/help/" lang="ko">한국어</a><a href="../../../../win/pt-br/scollectplay/help/" lang="pt-BR">Português (Brasil)</a><a href="../../../../win/pt-pt/scollectplay/help/" lang="pt-PT">Português (Portugal)</a><a href="../../../../win/ru/scollectplay/help/" lang="ru">Русский</a><a href="../../../../win/zh-hans/scollectplay/help/" lang="zh-Hans">简体中文</a><a href="../../../../win/zh-hant/scollectplay/help/" lang="zh-Hant">繁體中文</a></div></details>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <p class="zurueck"><a href="../">← sCollectPlay</a></p>
+  <article class="hilfe">
+<h1>sCollectPlay マニュアル</h1>
+<h2>はじめに</h2>
+<p>sCollectPlay は、任意のフォルダ、iTunes XML ファイル、sCollect ライブラリからメディアを再生します。読み込み、メタデータの編集、同期の機能はありません。それらには sCollect を使用してください。</p>
+<p>起動すると、3 つのボタンがあるソース選択画面が表示されます：「フォルダをスキャン…」、「XMLライブラリを開く…」、「sCollect ライブラリを選択…」。同じコマンドは「ファイル」メニューにもあります。</p>
+<p>次回の起動時、sCollectPlay は前回使用したソースを自動的に読み込みます。</p>
+<p>起動時に Shift キーを押したままにすると、代わりにソース選択画面が表示されます。ライブラリまたはスキャンしたフォルダがネットワーク上にある場合、sCollectPlay はソースを読み込む前に確認します。この確認は 設定 &gt; 一般 の「起動時にネットワークライブラリについて通知する」でオフにできます。ドライブが 20 秒以内に応答しない場合、sCollectPlay はその旨を表示し、ソース選択画面を表示します。</p>
+<p>「ファイル」メニューでは、各コマンドの下に最近使ったフォルダ、ライブラリ、XML ファイルがそれぞれ最大 10 件表示されます。「リストを消去」でリストを空にします。アクセスできなくなった項目は、クリックすると消えます。</p>
+<h2>フォルダをスキャン</h2>
+<p>任意のフォルダを選択してください。sCollectPlay はそのフォルダとサブフォルダからオーディオ、ビデオ、電子書籍、PDF の各ファイルを検索し、タイトル、アーティスト、アルバム、長さをファイル自体から読み取ります。WMA、OGG、AIFF、AVI など一部の形式では長さだけを読み取り、タイトルにはファイル名が表示されます。隠しファイルは対象外です。</p>
+<p>内容による分類：sCollectPlayはオーディオを、ファイル自身が示す情報で分類します。.m4bファイルと、ジャンルがAudiobook、Audio Theatre、Spoken Word（ドイツ語のHörbuch、Hörspiel、Kabarettなども含む）の項目は「オーディオブック」に、ポッドキャストとジャンルがPodcastまたはSpeechの項目は「ポッドキャスト」に、それ以外はすべて「ミュージック」に表示されます。ミュージックビデオ、映画、シリーズは、iTunesなどがファイルに書き込むメディアの種類で判別し、シリーズはファイル名の「S01E02」でも判別します。カメラ名が記録されている、またはIMG_1234のようなカメラのファイル名を持つムービーは「カメラ」に、それ以外は「ホームビデオ」に表示されます。電子書籍とPDFはファイル拡張子で判別します。サイドバーには、項目のある種類だけが表示されます。</p>
+<p>種類を自分で選ぶ：項目が間違った場所にある場合は、リストからサイドバーの別の種類へドラッグします – ドラッグ中は、空の種類もサイドバーに表示されます。sCollectPlayはこの指定をそのファイルについて記憶し、次にフォルダを読み込むときにも適用します。ファイル自体は変更されません。</p>
+<p>再生または閲覧できるものがスキャンで見つからなかった場合は、sCollectPlay がメッセージでお知らせします。</p>
+<p>「ファイル」&gt;「スキャンしたフォルダを更新」（Ctrl+R）は、前回の読み込み以降に変更されたもの（新しいファイル、変更されたファイル、削除されたファイル）だけを読み込み、結果を報告します。現在アクセスできないフォルダは、以前の状態を保ちます。</p>
+<p>リストの右上端にある ↻ ボタンでも同じことができます。</p>
+<p>複数のフォルダを順番にスキャンできます。それらの内容はまとめて表示されます。タイトルバーには最初のフォルダ名と、ほかのフォルダの数が表示されます。</p>
+<p>起動時、sCollectPlay はスキャンしたフォルダを前回読み込んだ状態で表示し、再検索は行いません。ライブラリまたは XML を読み込んでいるときにフォルダをスキャンすると、それまでにスキャンしたフォルダも一緒に戻ってきます。</p>
+<h2>sCollect ライブラリ</h2>
+<p>sCollect ライブラリのメインフォルダ（.scollect バンドルがあるフォルダ）を選択してください。sCollectPlay は項目、プレイリスト、設定を読み取ります。</p>
+<p>sCollectPlayはライブラリそのものには何も変更を加えません。トラックにレートを付けたり、音楽、オーディオブック、映画を最後まで再生したりすると、それを日付と時刻とともにライブラリフォルダ内のファイルrueckmeldungen.jsonに記録します – マスターとコピーのどちらを開いていても同じです。sCollectは、マスターを開いたとき、投影の前、そして同期エラーを解消…の前にそれを取り込みます: レートは新しいほうが優先され、再生回数は合算されます。その後、sCollectはレートをファイルに書き込み、すべてをすべてのコピーに伝えます。それまでの間も、sCollectPlayは自分のレートと再生回数をすでに表示します。</p>
+<p>Mac で作成されたライブラリには Mac のパスが記録されています。sCollectPlay はライブラリのフォルダを手がかりにファイルを見つけます。ライブラリの外にあるメディアについては、ライブラリから推定できる範囲で、Mac のパスに対応する Windows フォルダを割り当てます。見つからないファイルはリストに残りますが、再生できません。</p>
+<h2>iTunes XML</h2>
+<p>iTunes for Windows が作成する XML ファイル（iTunes Music Library.xml。iTunes の詳細設定で XML ファイルの共有がオンになっていると、iTunes がこのファイルを書き出します）、または Apple Music から書き出した Library.xml を選択してください。sCollectPlay は項目とプレイリストを取り込みます。スマートプレイリストは、iTunes が最後に保存した内容の固定リストとして取り込みます。「ライブラリ」や「ミュージック」などのシステムリストはスキップします。メディアの種類は XML 自体に記録されています：ミュージック、オーディオブック、ポッドキャスト、ホームビデオ、映画、シリーズ、ミュージックビデオ。</p>
+<p>Mac で書き出した XML は Mac のパスを参照しているため、Windows 上の sCollectPlay ではこれらのファイルが見つかりません。</p>
+<p>読み込まれるソースは常に 1 種類だけです。ライブラリや XML を開くと、それまでの内容は置き換えられます。ウィンドウのタイトルバーには、フォルダ「ミュージック」やライブラリ「sCollect」のように、ソースの種類と名前が表示されます。</p>
+<h2>ライブラリをブラウズ</h2>
+<p>サイドバーには、カテゴリとメディアの種類がアコーディオン形式で表示されます（一度に開くカテゴリは 1 つだけです）。開いているカテゴリの下には、そのカテゴリのプレイリストが「プレイリスト」の欄に表示され、カテゴリのないプレイリストは一番下に表示されます。</p>
+<p>列見出しをクリックするとその列で並べ替え、もう一度クリックすると順序が逆になります。Shift キーを押しながらクリックすると並べ替えの段階が 1 つ加わり、Alt キーを押しながらクリックすると 1 つ減ります。列見出しのコンテキストメニューの「ソートをリセット」を選ぶと、最初の段階だけが残ります。sCollectPlay はメディアの種類ごとに並べ替えを記憶します。</p>
+<p>検索フィールドでは、タイトル、アーティスト、アルバム、ジャンルなどのフィールドで絞り込めます。プレイリスト内でも使えます。</p>
+<p>レート：sCollectライブラリでは、レートカラムの星をクリックします。1回目のクリックでその星が満星に、2回目で半星になり、3回目でレートが消去されます。複数のトラックにまとめてレートを付けるには、トラックを選択してから右クリック &gt; レート。スキャンしたフォルダとXMLライブラリでは、星は表示のみです。</p>
+<p>削除：スキャンしたフォルダでは、右クリック &gt; メディアファイルを削除 でファイルがごみ箱に移動し、リストから消えます。複数のトラックを選択している場合はすべてが対象です。sCollectPlay が事前に確認するかどうかは、設定 &gt; 一般 &gt; 削除を確認 で設定します。ネットワーク上やUSBメモリなど、ごみ箱のないドライブにあるファイルは完全に削除されるため、常に確認します。削除を元に戻すには、ごみ箱からファイルを復元するしかありません。そのあと スキャンしたフォルダを更新 でリストに戻ります。sCollectライブラリとXMLライブラリでは sCollectPlay は何も削除しません。そこにあるファイルはsCollectまたはiTunesのものです。</p>
+<p>表示する列は、列見出しのコンテキストメニューの「列をカスタマイズ…」で選びます。そこにある「最適な幅」で幅を合わせます。幅と順序はマウスでドラッグして変更します。sCollectPlay はこの設定をこの PC に記憶します。既定では sCollect ライブラリの列が使われます。</p>
+<p>カラムブラウザは、項目リストの上に選択用の列を表示します：ジャンル、アーティスト、アルバム、作曲者、グループ。リストの右上にあるボタンでオン/オフを切り替えます。プレイリストでも使えます。</p>
+<p>• 値をクリックするとその値で絞り込み、Ctrl+クリックで値を追加または除外します。同じ列内の複数の値は「または」、列どうしは「かつ」として働きます。一番上の行「すべて」でその列の選択を解除します。<br>• 列の項目が非常に多い場合、sCollectPlay は頭文字ごとに展開できるグループにまとめます。</p>
+<h2>再生</h2>
+<p>項目をダブルクリックするか Enter キーを押すと再生します。スペース キーで再生と一時停止を切り替えます。プレーヤーバーには、カバー、タイトルとアーティスト、移動用のタイムライン、シャッフル、前のトラック、10 秒戻る、停止、再生、10 秒進む、次のトラック、リピート（オフ、リスト、1 項目）の各ボタン、そして音量が表示されます。映画ではスローモーションとコマ送りが加わります。ほかの項目を選択しない限り、リストの選択は再生中の項目に合わせて移動します。</p>
+<p>映画は別のビデオウィンドウで開きます。マウスを動かすと、そのコントロールバーが表示されます：時間、前のトラックと次のトラック、10 秒戻る/進む、スローモーション、コマ送り、オーディオトラック（複数ある場合）、字幕（ある場合）、フルスクリーン。F11 キーと「再生」メニューのショートカットもここで使えます。Esc キーで全画面表示を終了します。ビデオウィンドウを閉じると再生が終了します。映画が終わってもウィンドウは開いたままです。ただし、そのメディアの種類で「終了後に続けて再生」がオンになっている場合は次のトラックが続き、リストの最後に達するとウィンドウは自動的に閉じます。</p>
+<p>終了後に続けて再生：トラックの終了後に次のトラックへ進むかどうかは、メディアタイプごとに設定 &gt; 再生/プレイリスト &gt; 終了後に続けて再生で設定します。標準では、すべてのオーディオタイプとミュージックビデオでオン、長編映画、シリーズ、ホームビデオ、カメラ映像ではオフです – その場合、映画は終わり（または停止マーカー）で止まります。リピート（トラック）はそれでも繰り返します。sCollectPlayはここで変更した内容を記憶します。それ以外のメディアタイプには、ライブラリの設定が適用されます。</p>
+<p>項目のコンテキストメニューから、今すぐ再生、次に再生、キューに追加ができます。コンテキストメニューには「エクスプローラーで表示」と「デフォルトアプリで開く」もあります。</p>
+<p>sCollectPlay は Windows のメディア再生機能で再生します。MP3、AAC/M4A、FLAC、OGG、Opus、WMA のほか、MP4、MKV、AVI、WMV、MPG、TS、VOB など、ほとんどの形式に対応しています。AIFF、CAF、DSD（DSF、DFF）、FLV、コピー保護された映画など、Windows 自体が再生できないものは、sCollectPlay がそのファイルの種類の既定のアプリで開きます。書籍と PDF も既定のアプリで開きます。</p>
+<h2>プレイリスト</h2>
+<p>ソースのプレイリストは、サイドバーの「プレイリスト」の下にあります。通常のプレイリストは保存された順序で、スマートプレイリストはルールに従って評価されて表示されます。変更できるのは sCollect だけです。</p>
+<p>「マイプレイリスト」では、どのソースを読み込んでいても独自のプレイリストを作成できます：</p>
+<p>• 作成：「マイプレイリスト」の横にあるプラスボタンから「新規プレイリスト…」と「新規スマートプレイリスト…」を選べます。<br>• 追加：項目リストのコンテキストメニューの「プレイリストに追加」で、選択した項目を追加するか、新しいプレイリストを作成します。独自のプレイリストでは「プレイリストから削除」で項目を取り除きます。<br>• スマートプレイリストはルールに従って自動的に構成されます。プレイリストのコンテキストメニューの「編集…」でルールを変更します。<br>• プレイリストのコンテキストメニューには、ほかに「名前を変更…」（通常のプレイリストの場合）と「プレイリストを削除」があります。サイドバーでは F2 で選択したプレイリストの名前を変更できます。Delete は確認してから削除し、Ctrl+Delete はコンテキストメニューの「プレイリストを削除」と同じく確認なしで削除します。「編集」&gt;「取り消す」（Ctrl+Z）で削除したプレイリストを元に戻せます。</p>
+<p>独自のプレイリストは、sCollectPlay がこの PC に保存します。ライブラリや XML には保存しません。項目はファイルパスで探し直すため、再スキャン後も見つかります。</p>
+<p>プレイリストのコンテキストメニューの「VLC/デバイス用に書き出す…」、または「ファイル」&gt;「プレイリストをVLC/デバイス用に書き出す…」で、検索で絞り込み中であってもプレイリスト全体のオーディオファイルとビデオファイルを、SD カードや USB メモリなど任意のフォルダにコピーします。そこにプレイリスト名のサブフォルダが作成され、ファイルはアーティストとアルバムごとに整理され、プレイリストは相対パスの .m3u8 ファイルとして保存されます。書籍とその他の項目はスキップされ、その数が表示されます。</p>
+<p>• 同じプレイリストを同じ場所にもう一度書き出すと、sCollectPlay は新しいものやサイズが異なるものだけをコピーし、リストを書き直します。プレイリストから外した項目は、ファイルとしてフォルダに残ります。<br>• 「キャンセル」で書き出しを中止します。その場合、リストにはそれまでにコピーされた項目が含まれます。</p>
+<p>書き出したフォルダはばらばらにしないでください。リストは自身の場所からの相対位置でしか項目を見つけられません。そのままにしておけば、VLC など M3U8 リストを読み込めるプレーヤーでプレイリストが表示されます。</p>
+<h2>設定</h2>
+<p>「ファイル」&gt;「設定…」（Ctrl+,）で設定を開きます。グレーで表示されている値は読み込んだ sCollect ライブラリのもので（ライブラリがない場合は既定値）、sCollect でのみ変更できます。</p>
+<p>• 一般：言語（Windows に従います）と、Mac で作成されたライブラリの場合はメディアフォルダ。ここで、ライブラリの各 Mac フォルダに、この PC 上でファイルが置かれている Windows フォルダを割り当てます。まだ見つからないものは、項目数とともに赤で表示されます。<br>• ライブラリ：3 種類のソース。別の丸をクリックするとソースが切り替わります。スキャンしたフォルダでは、フォルダごとに項目数と読み込んだ日時が表示されます。「更新」は変更されたものだけを読み込みます。<br>• 再生/プレイリスト：「ビデオウィンドウを常に前面に」と「最小化したときにビデオを一時停止」。<br>• カテゴリラベル、フィールドラベル、統計には、読み込んだソースの名前と数値が表示されます。</p>
+<p>フルバージョンでは、ここで個々のフォルダを削除したり、「すべて更新」ですべてのフォルダを一度に更新したり、最近使ったライブラリを読み込んだりすることもできます。丸をクリックすると、その種類で最後に使ったソースが開きます。</p>
+<h2>キーボード ショートカット</h2>
+<p>スペース – 再生 / 一時停止<br>Enter – 選択した項目を再生<br>Ctrl+→ – 次のトラック<br>Ctrl+← – 前のトラック<br>Ctrl+↑ – 音量を上げる<br>Ctrl+↓ – 音量を下げる<br>F11 – ビデオの全画面表示オン/オフ<br>Esc – ビデオの全画面表示を終了<br>Ctrl+R – スキャンしたフォルダを更新<br>Ctrl+Shift+O – sCollect ライブラリを選択…<br>Ctrl+, – 設定<br>F1 – ヘルプ<br>Alt+F4 – 終了</p>
+  </article>
+  <p class="zurueck"><a href="../">← sCollectPlay</a></p>
+</main>
+<footer class="site"><div class="wrap">
+  <a href="../../../../impressum.html">運営者情報</a><a href="../../../../privacy.html">ウェブサイトのプライバシー</a><a href="https://www.youtube.com/@SwiftAppsBavaria/videos" target="_blank" rel="noopener">YouTube</a>
+  <p>Copyright © 2026 SwiftAppsBavaria, Andreas Heiligtag. Mac, macOS and Mac App Store are trademarks of Apple Inc. Windows and Microsoft Store are trademarks of the Microsoft group of companies.</p>
+</div></footer>
+</body>
+</html>

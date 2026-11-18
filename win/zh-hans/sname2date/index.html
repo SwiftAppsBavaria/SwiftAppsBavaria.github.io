@@ -34,7 +34,7 @@
   <div class="hero">
     <img src="../../../assets/icons/AppIcon-sName2Date.png" width="128" height="128" alt="">
     <div><h1>sName2Date</h1><p class="subtitle">从文件名中读出日期——十几种写法，月份名称按 App 的语言和英文识别</p><p><a class="storelink" href="https://apps.microsoft.com/detail/9NZGQ1F479RW" target="_blank" rel="noopener">Microsoft Store</a></p>
-      </div>
+      <p class="hilfelink"><a href="help/">阅读完整手册 →</a></p></div>
   </div>
   <p class="promo">从文件名中读出日期，作为拍摄日期写入照片和影片——让照片管理软件和文件资源管理器正确排序。整个文件夹一次处理，一切都可以用 Ctrl+Z 撤销。</p>
   
@@ -52,7 +52,7 @@
 <h2 class="kapitel">会改动什么</h2>
 <p>写入的是 EXIF DateTimeOriginal 和 DateTimeDigitized 以及 TIFF DateTime，影片和录音则是容器里的创建日期。需要的话，也一并设置文件本身的创建日期和修改日期。</p>
 <p>图像数据原封不动：JPEG 不会重新压缩，影片不会重新编码。对影片和录音，App 通常只改动容器里的几个字节，而不是整个重写——再大的影片也是一瞬间就好。写入之后，App 会把日期读回来核对；该行的颜色会告诉你日期落在了哪里。</p>
-<p>拍摄日期写进文件本身的格式有 JPEG、TIFF 和 HEIC（需要 Microsoft 的 HEIF 图像扩展），影片格式 MP4、MOV 和 M4V，以及音频格式 M4A 和 M4B。PNG、GIF、WebP、AVI 和 RAW 照片会在旁边得到一个 XMP 附属文件，许多照片程序都会一并读取——该行会显示蓝色对勾。</p>
+<p>拍摄日期写进文件本身的格式有 JPEG、PNG、TIFF 和 HEIC（需要 Microsoft 的 HEIF 图像扩展），影片格式 MP4、MOV 和 M4V，以及音频格式 M4A 和 M4B。GIF、WebP、AVI 和 RAW 照片会在旁边得到一个 XMP 附属文件，许多照片程序都会一并读取——该行会显示蓝色对勾。</p>
 <h2 class="kapitel">无法容纳拍摄日期的文件也能处理</h2>
 <p>PDF、文本文件、表格根本没有放拍摄日期的字段——但它们照样会进入列表。sName2Date 在这些文件上设置文件本身的创建日期和修改日期，那是这个日期唯一能落到的地方；该行会用橙色对勾而不是绿色对勾来表示。所以这里不看扩展名——PDF、文本、表格、压缩包，全都行。</p>
 <p>如果压根不想让文件被碰到，就把窗口上方的「把日期写入文件」勾去掉。这时 sName2Date 只把名称改成 ISO 写法：发票 15.03.2024.pdf 变成 2024-03-15 12-00-00 发票.pdf。在文件资源管理器里，文件夹就按日期排好了。需要的话，日期也可以留在名称中原来的位置，而不是移到最前面。</p>
@@ -63,7 +63,11 @@
 <h2 class="kapitel">在你的 PC 上，也仅在那里</h2>
 <p>没有账户，没有云，没有分析，没有广告。App 只访问你交给它的文件和文件夹。每种语言都配有完整的帮助文档。</p>
   </div>
-  <div class="note" id="lite"><p><strong><a href="lite/">sName2Date Lite</a></strong> · 免费 — 每次处理一个文件的版本：把文件名中的日期作为拍摄日期写入照片、视频或录音，手动设置日期，把名称改为 ISO 格式，并可用 ⌘Z 撤销全部操作——功能与 sName2Date 相同，只是不能处理整个文件夹。</p></div>
+  <a class="einladung" href="help/">
+    <strong>完整手册，在线阅读</strong>
+    <span>想在购买前详细了解 sName2Date 如何工作？阅读与 App 内置相同的手册——用你的语言，逐步讲解。</span>
+    <span class="knopf">阅读手册 →</span>
+  </a><div class="note" id="lite"><p><strong><a href="lite/">sName2Date Lite</a></strong> · 免费 — 每次处理一个文件的版本：把文件名中的日期作为拍摄日期写入照片、视频或录音，手动设置日期，把名称改为 ISO 格式，并可用 ⌘Z 撤销全部操作——功能与 sName2Date 相同，只是不能处理整个文件夹。</p></div>
   <ul class="facts">
     <li>需要 Windows 11 或更高版本</li>
     <li>支持 24 种语言</li>

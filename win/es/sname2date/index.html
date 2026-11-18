@@ -34,7 +34,7 @@
   <div class="hero">
     <img src="../../../assets/icons/AppIcon-sName2Date.png" width="128" height="128" alt="">
     <div><h1>sName2Date</h1><p class="subtitle">Lee la fecha del nombre del archivo: más de una docena de formatos, nombres de mes en el idioma de la app y en inglés</p><p><a class="storelink" href="https://apps.microsoft.com/detail/9NZGQ1F479RW" target="_blank" rel="noopener">Microsoft Store</a></p>
-      </div>
+      <p class="hilfelink"><a href="help/">Leer el manual completo →</a></p></div>
   </div>
   <p class="promo">Toma la fecha del nombre del archivo y la escribe como fecha de captura en fotos y vídeos, para que tu gestor de fotos y el Explorador de archivos los ordenen bien. Carpetas enteras de una vez, todo se deshace con Ctrl+Z.</p>
   
@@ -52,7 +52,7 @@
 <h2 class="kapitel">QUÉ SE MODIFICA</h2>
 <p>Se escriben EXIF DateTimeOriginal y DateTimeDigitized, además de TIFF DateTime; en los vídeos y las grabaciones de audio, la fecha de creación dentro del contenedor. Si lo deseas, también la fecha de creación y de modificación del archivo.</p>
 <p>Los datos de imagen quedan intactos: un JPEG no se vuelve a comprimir y un vídeo no se vuelve a codificar. En los vídeos y las grabaciones de audio, la app suele cambiar solo unos pocos bytes del contenedor en lugar de reescribirlo; así, incluso un vídeo grande queda listo en un instante. Tras cada escritura, la app vuelve a leer la fecha; el color de la fila indica dónde ha quedado.</p>
-<p>La fecha de captura queda dentro del propio archivo en JPEG, TIFF y HEIC (con la extensión de imagen HEIF de Microsoft), en los formatos de vídeo MP4, MOV y M4V y en los formatos de audio M4A y M4B. PNG, GIF, WebP, AVI y las fotos RAW reciben al lado un archivo XMP adjunto, que leen muchos programas de fotos; la fila lo muestra con una marca azul.</p>
+<p>La fecha de captura queda dentro del propio archivo en JPEG, PNG, TIFF y HEIC (con la extensión de imagen HEIF de Microsoft), en los formatos de vídeo MP4, MOV y M4V y en los formatos de audio M4A y M4B. GIF, WebP, AVI y las fotos RAW reciben al lado un archivo XMP adjunto, que leen muchos programas de fotos; la fila lo muestra con una marca azul.</p>
 <h2 class="kapitel">TAMBIÉN LOS ARCHIVOS QUE NO PUEDEN LLEVAR UNA FECHA DE CAPTURA</h2>
 <p>Un PDF, un archivo de texto, una hoja de cálculo no tiene ningún campo para una fecha de captura y, aun así, entra en la lista. Ahí sName2Date ajusta la fecha de creación y de modificación del archivo, el único sitio al que el dato puede llegar; la fila lo muestra con una marca naranja en vez de una verde. Aquí no cuenta ninguna extensión: PDF, texto, hojas de cálculo, archivos comprimidos, todo.</p>
 <p>Si no quieres que se toque el archivo, desactivas en la parte superior de la ventana la casilla «Escribir la fecha en el archivo». Entonces sName2Date se limita a poner el nombre en la escritura ISO: Factura 15.03.2024.pdf se convierte en 2024-03-15 12-00-00 Factura.pdf, y en el Explorador de archivos la carpeta se ordena así por fecha. Si lo prefieres, la fecha se queda donde estaba dentro del nombre en lugar de pasar al principio.</p>
@@ -63,7 +63,11 @@
 <h2 class="kapitel">EN TU PC, Y SOLO AHÍ</h2>
 <p>Sin cuentas, sin nube, sin analítica, sin publicidad. La app solo accede a los archivos y carpetas que le das. Cada idioma con ayuda completa.</p>
   </div>
-  <div class="note" id="lite"><p><strong><a href="lite/">sName2Date Lite</a></strong> · Gratis — La edición para un archivo por pasada: escribir la fecha del nombre de archivo como fecha de captura en una foto, un vídeo o una grabación de audio, ajustarla a mano, pasar el nombre a la notación ISO y deshacerlo todo con ⌘Z; las mismas capacidades que sName2Date, solo que sin carpetas enteras.</p></div>
+  <a class="einladung" href="help/">
+    <strong>El manual completo, en línea</strong>
+    <span>¿Quieres saber con detalle cómo funciona sName2Date antes de comprarla? Lee el mismo manual que incluye la app, en tu idioma y paso a paso.</span>
+    <span class="knopf">Leer el manual →</span>
+  </a><div class="note" id="lite"><p><strong><a href="lite/">sName2Date Lite</a></strong> · Gratis — La edición para un archivo por pasada: escribir la fecha del nombre de archivo como fecha de captura en una foto, un vídeo o una grabación de audio, ajustarla a mano, pasar el nombre a la notación ISO y deshacerlo todo con ⌘Z; las mismas capacidades que sName2Date, solo que sin carpetas enteras.</p></div>
   <ul class="facts">
     <li>Requiere Windows 11 o posterior</li>
     <li>24 idiomas</li>
